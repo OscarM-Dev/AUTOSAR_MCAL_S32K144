@@ -1,0 +1,54 @@
+Timer2_callback ()
+{
+  <bb 2> :
+  Dio_FlipChannel (75);
+  Sched_startTimer (&Sche, 2);
+  return;
+
+}
+
+
+Timer1_callback ()
+{
+  <bb 2> :
+  Dio_FlipChannel (74);
+  Sched_startTimer (&Sche, 1);
+  return;
+
+}
+
+
+Task2_callback ()
+{
+  <bb 2> :
+  Dio_FlipChannel (73);
+  return;
+
+}
+
+
+Task1_callback ()
+{
+  <bb 2> :
+  Dio_FlipChannel (72);
+  return;
+
+}
+
+
+Task2_init ()
+{
+  <bb 2> :
+  return;
+
+}
+
+
+Task1_init ()
+{
+  <bb 2> :
+  return;
+
+}
+
+

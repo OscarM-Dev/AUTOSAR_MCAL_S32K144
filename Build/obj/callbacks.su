@@ -1,0 +1,6 @@
+Autosar/Os/src/callbacks.c:14:6:Task1_init	0	static
+Autosar/Os/src/callbacks.c:21:6:Task2_init	0	static
+Autosar/Os/src/callbacks.c:31:6:Task1_callback	8	static
+Autosar/Os/src/callbacks.c:40:6:Task2_callback	8	static
+Autosar/Os/src/callbacks.c:50:6:Timer1_callback	8	static
+Autosar/Os/src/callbacks.c:60:6:Timer2_callback	8	static

@@ -1,0 +1,318 @@
+Symbol table:
+
+memcpy/5 (memcpy) @06915620
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: Queue_readData/4 Queue_writeData/3 
+  Calls: 
+Queue_readData/4 (Queue_readData) @06915a80
+  Type: function definition analyzed
+  Visibility: force_output externally_visible no_reorder public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: body
+  Called by: 
+  Calls: memcpy/5 
+Queue_writeData/3 (Queue_writeData) @069157e0
+  Type: function definition analyzed
+  Visibility: force_output externally_visible no_reorder public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: body
+  Called by: 
+  Calls: memcpy/5 
+Queue_flushQueue/2 (Queue_flushQueue) @06915540
+  Type: function definition analyzed
+  Visibility: force_output externally_visible no_reorder public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: body
+  Called by: 
+  Calls: Queue_initQueue/0 
+Queue_isQueueEmpty/1 (Queue_isQueueEmpty) @069152a0
+  Type: function definition analyzed
+  Visibility: force_output externally_visible no_reorder public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: body
+  Called by: 
+  Calls: 
+Queue_initQueue/0 (Queue_initQueue) @06915000
+  Type: function definition analyzed
+  Visibility: force_output externally_visible no_reorder public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: body
+  Called by: Queue_flushQueue/2 
+  Calls: 
+Queue_readData (struct Que_Queue * queue, void * data)
+{
+  uint8_t status;
+  uint64_t actual_add;
+  uint64_t base_add;
+  uint8_t D.5505;
+  void * _1;
+  int _2;
+  unsigned char _3;
+  unsigned char _4;
+  int _5;
+  unsigned char _6;
+  int _7;
+  int _8;
+  long long unsigned int _9;
+  int _10;
+  const void * _11;
+  unsigned char _12;
+  unsigned int _13;
+  unsigned char _14;
+  unsigned char _15;
+  unsigned char _16;
+  unsigned char _17;
+  long unsigned int _18;
+  long unsigned int _19;
+  long unsigned int _20;
+  unsigned char _21;
+  unsigned char _22;
+  _Bool _23;
+  unsigned char _24;
+  unsigned char _25;
+  unsigned char _26;
+  uint8_t _45;
+
+  <bb 2> :
+  _1 = queue_33(D)->Buffer;
+  _2 = (int) _1;
+  base_add_34 = (uint64_t) _2;
+  actual_add_35 = 0;
+  status_36 = 0;
+  _3 = queue_33(D)->Empty;
+  if (_3 == 0)
+    goto <bb 3>; [INV]
+  else
+    goto <bb 10>; [INV]
+
+  <bb 3> :
+  _4 = queue_33(D)->Tail;
+  _5 = (int) _4;
+  _6 = queue_33(D)->Size;
+  _7 = (int) _6;
+  _8 = _5 * _7;
+  _9 = (long long unsigned int) _8;
+  actual_add_37 = base_add_34 + _9;
+  _10 = (int) actual_add_37;
+  _11 = (const void *) _10;
+  _12 = queue_33(D)->Size;
+  _13 = (unsigned int) _12;
+  memcpy (data_38(D), _11, _13);
+  _14 = queue_33(D)->Tail;
+  _15 = _14;
+  _16 = _15 + 1;
+  queue_33(D)->Tail = _16;
+  _17 = queue_33(D)->Tail;
+  _18 = (long unsigned int) _17;
+  _19 = queue_33(D)->Elements;
+  _20 = _19 + 4294967295;
+  if (_18 > _20)
+    goto <bb 4>; [INV]
+  else
+    goto <bb 5>; [INV]
+
+  <bb 4> :
+  queue_33(D)->Tail = 0;
+
+  <bb 5> :
+  _21 = queue_33(D)->Full;
+  if (_21 != 0)
+    goto <bb 6>; [INV]
+  else
+    goto <bb 7>; [INV]
+
+  <bb 6> :
+  _22 = queue_33(D)->Full;
+  _23 = _22 == 0;
+  _24 = (unsigned char) _23;
+  queue_33(D)->Full = _24;
+
+  <bb 7> :
+  _25 = queue_33(D)->Tail;
+  _26 = queue_33(D)->Head;
+  if (_25 == _26)
+    goto <bb 8>; [INV]
+  else
+    goto <bb 9>; [INV]
+
+  <bb 8> :
+  queue_33(D)->Empty = 1;
+
+  <bb 9> :
+  status_44 = 1;
+
+  <bb 10> :
+  # status_27 = PHI <status_36(2), status_44(9)>
+  _45 = status_27;
+
+  <bb 11> :
+<L8>:
+  return _45;
+
+}
+
+
+Queue_writeData (struct Que_Queue * queue, void * data)
+{
+  uint8_t status;
+  uint64_t actual_add;
+  uint64_t base_add;
+  uint8_t D.5495;
+  void * _1;
+  int _2;
+  unsigned char _3;
+  unsigned char _4;
+  int _5;
+  unsigned char _6;
+  int _7;
+  int _8;
+  long long unsigned int _9;
+  int _10;
+  void * _11;
+  unsigned char _12;
+  unsigned int _13;
+  unsigned char _14;
+  unsigned char _15;
+  unsigned char _16;
+  unsigned char _17;
+  long unsigned int _18;
+  long unsigned int _19;
+  long unsigned int _20;
+  unsigned char _21;
+  unsigned char _22;
+  _Bool _23;
+  unsigned char _24;
+  unsigned char _25;
+  unsigned char _26;
+  uint8_t _45;
+
+  <bb 2> :
+  _1 = queue_33(D)->Buffer;
+  _2 = (int) _1;
+  base_add_34 = (uint64_t) _2;
+  actual_add_35 = 0;
+  status_36 = 0;
+  _3 = queue_33(D)->Full;
+  if (_3 == 0)
+    goto <bb 3>; [INV]
+  else
+    goto <bb 10>; [INV]
+
+  <bb 3> :
+  _4 = queue_33(D)->Head;
+  _5 = (int) _4;
+  _6 = queue_33(D)->Size;
+  _7 = (int) _6;
+  _8 = _5 * _7;
+  _9 = (long long unsigned int) _8;
+  actual_add_37 = base_add_34 + _9;
+  _10 = (int) actual_add_37;
+  _11 = (void *) _10;
+  _12 = queue_33(D)->Size;
+  _13 = (unsigned int) _12;
+  memcpy (_11, data_38(D), _13);
+  _14 = queue_33(D)->Head;
+  _15 = _14;
+  _16 = _15 + 1;
+  queue_33(D)->Head = _16;
+  _17 = queue_33(D)->Head;
+  _18 = (long unsigned int) _17;
+  _19 = queue_33(D)->Elements;
+  _20 = _19 + 4294967295;
+  if (_18 > _20)
+    goto <bb 4>; [INV]
+  else
+    goto <bb 5>; [INV]
+
+  <bb 4> :
+  queue_33(D)->Head = 0;
+
+  <bb 5> :
+  _21 = queue_33(D)->Empty;
+  if (_21 != 0)
+    goto <bb 6>; [INV]
+  else
+    goto <bb 7>; [INV]
+
+  <bb 6> :
+  _22 = queue_33(D)->Empty;
+  _23 = _22 == 0;
+  _24 = (unsigned char) _23;
+  queue_33(D)->Empty = _24;
+
+  <bb 7> :
+  _25 = queue_33(D)->Head;
+  _26 = queue_33(D)->Tail;
+  if (_25 == _26)
+    goto <bb 8>; [INV]
+  else
+    goto <bb 9>; [INV]
+
+  <bb 8> :
+  queue_33(D)->Full = 1;
+
+  <bb 9> :
+  status_44 = 1;
+
+  <bb 10> :
+  # status_27 = PHI <status_36(2), status_44(9)>
+  _45 = status_27;
+
+  <bb 11> :
+<L8>:
+  return _45;
+
+}
+
+
+Queue_flushQueue (struct Que_Queue * queue)
+{
+  <bb 2> :
+  Queue_initQueue (queue_2(D));
+  return;
+
+}
+
+
+Queue_isQueueEmpty (struct Que_Queue * queue)
+{
+  uint8_t D.5485;
+  uint8_t _3;
+
+  <bb 2> :
+  _3 = queue_2(D)->Empty;
+
+  <bb 3> :
+<L0>:
+  return _3;
+
+}
+
+
+Queue_initQueue (struct Que_Queue * queue)
+{
+  <bb 2> :
+  queue_2(D)->Empty = 1;
+  queue_2(D)->Full = 0;
+  queue_2(D)->Head = 0;
+  queue_2(D)->Tail = 0;
+  return;
+
+}
+
+

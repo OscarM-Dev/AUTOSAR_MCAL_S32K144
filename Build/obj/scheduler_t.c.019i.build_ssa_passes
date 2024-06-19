@@ -1,0 +1,1366 @@
+Sched_startScheduler (struct Sched_Scheduler * scheduler)
+{
+  uint8_t new_task;
+  uint8_t i;
+  uint32_t elapsed_time;
+  uint32_t count_value;
+  uint32_t tick_value;
+  long unsigned int D.6760;
+
+  <bb 2> :
+  _1 = scheduler->tick;
+  _2 = _1 * 1000;
+  tick_value = OsIf_MicrosToTicks (_2, 1);
+  _3 = OsIf_GetCounter (1);
+  count_value = _3;
+  elapsed_time = 0;
+  i = 0;
+  new_task = 0;
+  i = 0;
+  goto <bb 4>; [INV]
+
+  <bb 3> :
+  _4 = scheduler->taskPtr;
+  _5 = (unsigned int) i;
+  _6 = _5 * 16;
+  _7 = _4 + _6;
+  _7->elapsed = 0;
+  i.37_8 = i;
+  i = i.37_8 + 1;
+
+  <bb 4> :
+  _9 = scheduler->tasks;
+  if (i < _9)
+    goto <bb 3>; [INV]
+  else
+    goto <bb 5>; [INV]
+
+  <bb 5> :
+  i = 0;
+  goto <bb 7>; [INV]
+
+  <bb 6> :
+  _10 = scheduler->timerPtr;
+  _11 = (unsigned int) i;
+  _12 = _11 * 12;
+  _13 = _10 + _12;
+  _14 = scheduler->timerPtr;
+  _15 = (unsigned int) i;
+  _16 = _15 * 12;
+  _17 = _14 + _16;
+  _18 = _13->timeout;
+  _17->count = _18;
+  i.38_19 = i;
+  i = i.38_19 + 1;
+
+  <bb 7> :
+  _20 = scheduler->timers;
+  if (i < _20)
+    goto <bb 6>; [INV]
+  else
+    goto <bb 8>; [INV]
+
+  <bb 8> :
+  i = 0;
+  goto <bb 13>; [INV]
+
+  <bb 9> :
+  _21 = scheduler->tasks_startFlags;
+  _22 = Bfx_GetBit_u32u8_u8 (_21, i);
+  if (_22 != 0)
+    goto <bb 10>; [INV]
+  else
+    goto <bb 12>; [INV]
+
+  <bb 10> :
+  _23 = i + 1;
+  new_task = Sched_verifyTask_firstexe (scheduler, _23);
+  if (new_task != 0)
+    goto <bb 11>; [INV]
+  else
+    goto <bb 12>; [INV]
+
+  <bb 11> :
+  _24 = scheduler->taskPtr;
+  _25 = (unsigned int) i;
+  _26 = _25 * 16;
+  _27 = _24 + _26;
+  _28 = _27->initFunc;
+  _28 ();
+
+  <bb 12> :
+  i.39_29 = i;
+  i = i.39_29 + 1;
+
+  <bb 13> :
+  _30 = scheduler->tasks;
+  if (i < _30)
+    goto <bb 9>; [INV]
+  else
+    goto <bb 14>; [INV]
+
+  <bb 14> :
+  D.6760 = OsIf_GetElapsed (&count_value, 1);
+  elapsed_time = D.6760 + elapsed_time;
+  if (elapsed_time >= tick_value)
+    goto <bb 15>; [INV]
+  else
+    goto <bb 28>; [INV]
+
+  <bb 15> :
+  i = 0;
+  goto <bb 20>; [INV]
+
+  <bb 16> :
+  _31 = scheduler->timers_startFlags;
+  _32 = Bfx_GetBit_u32u8_u8 (_31, i);
+  if (_32 != 0)
+    goto <bb 17>; [INV]
+  else
+    goto <bb 19>; [INV]
+
+  <bb 17> :
+  _33 = scheduler->timerPtr;
+  _34 = (unsigned int) i;
+  _35 = _34 * 12;
+  _36 = _33 + _35;
+  _37 = _36->count;
+  _38 = scheduler->tick;
+  _39 = scheduler->timerPtr;
+  _40 = (unsigned int) i;
+  _41 = _40 * 12;
+  _42 = _39 + _41;
+  _43 = _37 - _38;
+  _42->count = _43;
+  _44 = i + 1;
+  _45 = Sched_getTimer (scheduler, _44);
+  if (_45 == 0)
+    goto <bb 18>; [INV]
+  else
+    goto <bb 19>; [INV]
+
+  <bb 18> :
+  _46 = scheduler->timerPtr;
+  _47 = (unsigned int) i;
+  _48 = _47 * 12;
+  _49 = _46 + _48;
+  _50 = _49->callbackPtr;
+  _50 ();
+
+  <bb 19> :
+  i.40_51 = i;
+  i = i.40_51 + 1;
+
+  <bb 20> :
+  _52 = scheduler->timers;
+  if (i < _52)
+    goto <bb 16>; [INV]
+  else
+    goto <bb 21>; [INV]
+
+  <bb 21> :
+  i = 0;
+  goto <bb 26>; [INV]
+
+  <bb 22> :
+  _53 = scheduler->taskPtr;
+  _54 = (unsigned int) i;
+  _55 = _54 * 16;
+  _56 = _53 + _55;
+  _57 = _56->elapsed;
+  _58 = scheduler->tick;
+  _59 = scheduler->taskPtr;
+  _60 = (unsigned int) i;
+  _61 = _60 * 16;
+  _62 = _59 + _61;
+  _63 = _57 + _58;
+  _62->elapsed = _63;
+  _64 = scheduler->taskPtr;
+  _65 = (unsigned int) i;
+  _66 = _65 * 16;
+  _67 = _64 + _66;
+  _68 = _67->elapsed;
+  _69 = scheduler->taskPtr;
+  _70 = (unsigned int) i;
+  _71 = _70 * 16;
+  _72 = _69 + _71;
+  _73 = _72->period;
+  if (_68 >= _73)
+    goto <bb 23>; [INV]
+  else
+    goto <bb 25>; [INV]
+
+  <bb 23> :
+  _74 = scheduler->tasks_startFlags;
+  _75 = Bfx_GetBit_u32u8_u8 (_74, i);
+  if (_75 != 0)
+    goto <bb 24>; [INV]
+  else
+    goto <bb 25>; [INV]
+
+  <bb 24> :
+  _76 = scheduler->taskPtr;
+  _77 = (unsigned int) i;
+  _78 = _77 * 16;
+  _79 = _76 + _78;
+  _80 = _79->taskFunc;
+  _80 ();
+  _81 = scheduler->taskPtr;
+  _82 = (unsigned int) i;
+  _83 = _82 * 16;
+  _84 = _81 + _83;
+  _84->elapsed = 0;
+
+  <bb 25> :
+  i.41_85 = i;
+  i = i.41_85 + 1;
+
+  <bb 26> :
+  _86 = scheduler->tasks;
+  if (i < _86)
+    goto <bb 22>; [INV]
+  else
+    goto <bb 27>; [INV]
+
+  <bb 27> :
+  elapsed_time = 0;
+
+  <bb 28> :
+  goto <bb 14>; [INV]
+
+}
+
+
+Sched_reloadTimer (struct Sched_Scheduler * scheduler, uint8_t timer, uint32_t timeout)
+{
+  uint8_t status;
+  uint8_t D.6754;
+
+  <bb 2> :
+  status = 0;
+  if (timer != 0)
+    goto <bb 3>; [INV]
+  else
+    goto <bb 12>; [INV]
+
+  <bb 3> :
+  _1 = scheduler->timers;
+  if (timer <= _1)
+    goto <bb 4>; [INV]
+  else
+    goto <bb 12>; [INV]
+
+  <bb 4> :
+  _2 = Sched_confirmTimer_register (1, timer);
+  if (_2 != 0)
+    goto <bb 5>; [INV]
+  else
+    goto <bb 10>; [INV]
+
+  <bb 5> :
+  _3 = scheduler->tick;
+  if (timeout >= _3)
+    goto <bb 6>; [INV]
+  else
+    goto <bb 8>; [INV]
+
+  <bb 6> :
+  _4 = scheduler->tick;
+  _5 = timeout % _4;
+  if (_5 == 0)
+    goto <bb 7>; [INV]
+  else
+    goto <bb 8>; [INV]
+
+  <bb 7> :
+  _6 = scheduler->timerPtr;
+  _7 = (unsigned int) timer;
+  _8 = _7 * 12;
+  _9 = _8 + 4294967284;
+  _10 = _6 + _9;
+  _10->timeout = timeout;
+  _11 = scheduler->timerPtr;
+  _12 = (unsigned int) timer;
+  _13 = _12 * 12;
+  _14 = _13 + 4294967284;
+  _15 = _11 + _14;
+  _15->count = timeout;
+  Sched_startTimer (scheduler, timer);
+  status = 1;
+  goto <bb 9>; [INV]
+
+  <bb 8> :
+  status = 0;
+
+  <bb 9> :
+  goto <bb 11>; [INV]
+
+  <bb 10> :
+  status = 0;
+
+  <bb 11> :
+  goto <bb 13>; [INV]
+
+  <bb 12> :
+  status = 0;
+
+  <bb 13> :
+  D.6754 = status;
+
+  <bb 14> :
+<L11>:
+  return D.6754;
+
+}
+
+
+Sched_getTimer (struct Sched_Scheduler * scheduler, uint8_t timer)
+{
+  uint32_t counter_value;
+  uint32_t D.6741;
+
+  <bb 2> :
+  counter_value = 0;
+  if (timer != 0)
+    goto <bb 3>; [INV]
+  else
+    goto <bb 8>; [INV]
+
+  <bb 3> :
+  _1 = scheduler->timers;
+  if (timer <= _1)
+    goto <bb 4>; [INV]
+  else
+    goto <bb 8>; [INV]
+
+  <bb 4> :
+  _2 = Sched_confirmTimer_register (1, timer);
+  if (_2 != 0)
+    goto <bb 5>; [INV]
+  else
+    goto <bb 6>; [INV]
+
+  <bb 5> :
+  _3 = scheduler->timerPtr;
+  _4 = (unsigned int) timer;
+  _5 = _4 * 12;
+  _6 = _5 + 4294967284;
+  _7 = _3 + _6;
+  counter_value = _7->count;
+  goto <bb 7>; [INV]
+
+  <bb 6> :
+  counter_value = 0;
+
+  <bb 7> :
+  goto <bb 9>; [INV]
+
+  <bb 8> :
+  counter_value = 0;
+
+  <bb 9> :
+  D.6741 = counter_value;
+
+  <bb 10> :
+<L7>:
+  return D.6741;
+
+}
+
+
+Sched_stopTimer (struct Sched_Scheduler * scheduler, uint8_t timer)
+{
+  uint8_t status;
+  uint8_t D.6732;
+
+  <bb 2> :
+  status = 0;
+  if (timer != 0)
+    goto <bb 3>; [INV]
+  else
+    goto <bb 8>; [INV]
+
+  <bb 3> :
+  _1 = scheduler->timers;
+  if (timer <= _1)
+    goto <bb 4>; [INV]
+  else
+    goto <bb 8>; [INV]
+
+  <bb 4> :
+  _2 = Sched_confirmTimer_register (1, timer);
+  if (_2 != 0)
+    goto <bb 5>; [INV]
+  else
+    goto <bb 6>; [INV]
+
+  <bb 5> :
+  _3 = &scheduler->timers_startFlags;
+  _4 = timer + 255;
+  Bfx_ClrBit_u32u8 (_3, _4);
+  status = 1;
+  goto <bb 7>; [INV]
+
+  <bb 6> :
+  status = 0;
+
+  <bb 7> :
+  goto <bb 9>; [INV]
+
+  <bb 8> :
+  status = 0;
+
+  <bb 9> :
+  D.6732 = status;
+
+  <bb 10> :
+<L7>:
+  return D.6732;
+
+}
+
+
+Sched_startTimer (struct Sched_Scheduler * scheduler, uint8_t timer)
+{
+  uint8_t status;
+  uint8_t D.6723;
+
+  <bb 2> :
+  status = 0;
+  if (timer != 0)
+    goto <bb 3>; [INV]
+  else
+    goto <bb 10>; [INV]
+
+  <bb 3> :
+  _1 = scheduler->timers;
+  if (timer <= _1)
+    goto <bb 4>; [INV]
+  else
+    goto <bb 10>; [INV]
+
+  <bb 4> :
+  _2 = Sched_confirmTimer_register (1, timer);
+  if (_2 != 0)
+    goto <bb 5>; [INV]
+  else
+    goto <bb 8>; [INV]
+
+  <bb 5> :
+  _3 = &scheduler->timers_startFlags;
+  _4 = timer + 255;
+  Bfx_SetBit_u32u8 (_3, _4);
+  _5 = scheduler->timerPtr;
+  _6 = (unsigned int) timer;
+  _7 = _6 * 12;
+  _8 = _7 + 4294967284;
+  _9 = _5 + _8;
+  _10 = _9->count;
+  if (_10 == 0)
+    goto <bb 6>; [INV]
+  else
+    goto <bb 7>; [INV]
+
+  <bb 6> :
+  _11 = scheduler->timerPtr;
+  _12 = (unsigned int) timer;
+  _13 = _12 * 12;
+  _14 = _13 + 4294967284;
+  _15 = _11 + _14;
+  _16 = scheduler->timerPtr;
+  _17 = (unsigned int) timer;
+  _18 = _17 * 12;
+  _19 = _18 + 4294967284;
+  _20 = _16 + _19;
+  _21 = _15->timeout;
+  _20->count = _21;
+
+  <bb 7> :
+  status = 1;
+  goto <bb 9>; [INV]
+
+  <bb 8> :
+  status = 0;
+
+  <bb 9> :
+  goto <bb 11>; [INV]
+
+  <bb 10> :
+  status = 0;
+
+  <bb 11> :
+  D.6723 = status;
+
+  <bb 12> :
+<L9>:
+  return D.6723;
+
+}
+
+
+Sched_registerTimer (struct Sched_Scheduler * scheduler, uint32_t timeout, void (*<T520>) (void) callbackPtr)
+{
+  uint8_t new_timer;
+  uint8_t i;
+  uint8_t timer_id;
+  static uint8_t first_call = 1;
+  static uint8_t index = 0;
+  uint8_t D.6712;
+
+  <bb 2> :
+  timer_id = 0;
+  i = 0;
+  new_timer = 1;
+  _1 = scheduler->tick;
+  if (timeout >= _1)
+    goto <bb 3>; [INV]
+  else
+    goto <bb 16>; [INV]
+
+  <bb 3> :
+  _2 = scheduler->tick;
+  _3 = timeout % _2;
+  if (_3 == 0)
+    goto <bb 4>; [INV]
+  else
+    goto <bb 16>; [INV]
+
+  <bb 4> :
+  first_call.27_4 = first_call;
+  if (first_call.27_4 != 0)
+    goto <bb 5>; [INV]
+  else
+    goto <bb 6>; [INV]
+
+  <bb 5> :
+  Sched_initBuffer (scheduler, 1);
+  first_call = 0;
+
+  <bb 6> :
+  i = 0;
+  goto <bb 11>; [INV]
+
+  <bb 7> :
+  _5 = scheduler->timerPtr;
+  _6 = (unsigned int) i;
+  _7 = _6 * 12;
+  _8 = _5 + _7;
+  _9 = _8->callbackPtr;
+  if (callbackPtr != _9)
+    goto <bb 8>; [INV]
+  else
+    goto <bb 9>; [INV]
+
+  <bb 8> :
+  _10 = new_timer != 0;
+  new_timer = (uint8_t) _10;
+  goto <bb 10>; [INV]
+
+  <bb 9> :
+  new_timer = 0;
+  timer_id = 0;
+  goto <bb 12>; [INV]
+
+  <bb 10> :
+  i.28_11 = i;
+  i = i.28_11 + 1;
+
+  <bb 11> :
+  _12 = scheduler->timers;
+  if (i < _12)
+    goto <bb 7>; [INV]
+  else
+    goto <bb 12>; [INV]
+
+  <bb 12> :
+  if (new_timer != 0)
+    goto <bb 13>; [INV]
+  else
+    goto <bb 15>; [INV]
+
+  <bb 13> :
+  _13 = scheduler->timerPtr;
+  index.29_14 = index;
+  _15 = (unsigned int) index.29_14;
+  _16 = _15 * 12;
+  _17 = _13 + _16;
+  _17->timeout = timeout;
+  _18 = scheduler->timerPtr;
+  index.30_19 = index;
+  _20 = (unsigned int) index.30_19;
+  _21 = _20 * 12;
+  _22 = _18 + _21;
+  _22->count = timeout;
+  _23 = scheduler->timerPtr;
+  index.31_24 = index;
+  _25 = (unsigned int) index.31_24;
+  _26 = _25 * 12;
+  _27 = _23 + _26;
+  _27->callbackPtr = callbackPtr;
+  _28 = &scheduler->timers_startFlags;
+  index.32_29 = index;
+  Bfx_ClrBit_u32u8 (_28, index.32_29);
+  index.33_30 = index;
+  timer_id = index.33_30 + 1;
+  Sched_confirmTimer_register (0, timer_id);
+  index.34_31 = index;
+  index.35_32 = index.34_31;
+  _33 = index.35_32 + 1;
+  index = _33;
+  _34 = scheduler->timers;
+  index.36_35 = index;
+  if (_34 <= index.36_35)
+    goto <bb 14>; [INV]
+  else
+    goto <bb 15>; [INV]
+
+  <bb 14> :
+  index = 0;
+
+  <bb 15> :
+  goto <bb 17>; [INV]
+
+  <bb 16> :
+  timer_id = 0;
+
+  <bb 17> :
+  D.6712 = timer_id;
+
+  <bb 18> :
+<L16>:
+  return D.6712;
+
+}
+
+
+Sched_confirmTimer_register (uint8_t operation, uint8_t timer)
+{
+  uint8_t status;
+  static uint8_t index = 0;
+  static uint8_t registered_IDs[2];
+  uint8_t D.6697;
+
+  <bb 2> :
+  status = 0;
+  _1 = (int) operation;
+  switch (_1) <default: <L5> [INV], case 0: <L0> [INV], case 1: <L1> [INV]>
+
+  <bb 3> :
+<L0>:
+  index.23_2 = index;
+  _3 = (int) index.23_2;
+  registered_IDs[_3] = timer;
+  index.24_4 = index;
+  index.25_5 = index.24_4;
+  _6 = index.25_5 + 1;
+  index = _6;
+  status = 1;
+  goto <bb 9>; [INV]
+
+  <bb 4> :
+<L1>:
+  _7 = (int) timer;
+  _8 = _7 + -1;
+  _9 = registered_IDs[_8];
+  if (timer != _9)
+    goto <bb 5>; [INV]
+  else
+    goto <bb 6>; [INV]
+
+  <bb 5> :
+  status = 0;
+  goto <bb 7>; [INV]
+
+  <bb 6> :
+  status = 1;
+
+  <bb 7> :
+  goto <bb 9>; [INV]
+
+  <bb 8> :
+<L5>:
+  status = 0;
+
+  <bb 9> :
+  index.26_10 = index;
+  if (index.26_10 > 1)
+    goto <bb 10>; [INV]
+  else
+    goto <bb 11>; [INV]
+
+  <bb 10> :
+  index = 0;
+
+  <bb 11> :
+  D.6697 = status;
+
+  <bb 12> :
+<L9>:
+  return D.6697;
+
+}
+
+
+Sched_verifyTask_firstexe (struct Sched_Scheduler * scheduler, uint8_t task)
+{
+  uint8_t status;
+  uint8_t i;
+  static uint8_t index = 0;
+  static uint64_t tasks_func_add[32];
+  uint8_t D.6690;
+
+  <bb 2> :
+  i = 0;
+  status = 1;
+  i = 0;
+  goto <bb 7>; [INV]
+
+  <bb 3> :
+  _1 = scheduler->taskPtr;
+  _2 = (sizetype) task;
+  _3 = _2 + 268435455;
+  _4 = _3 * 16;
+  _5 = _1 + _4;
+  _6 = _5->taskFunc;
+  _7 = (long unsigned int) _6;
+  _8 = (long long unsigned int) _7;
+  _9 = (int) i;
+  _10 = tasks_func_add[_9];
+  if (_8 != _10)
+    goto <bb 4>; [INV]
+  else
+    goto <bb 5>; [INV]
+
+  <bb 4> :
+  _11 = status != 0;
+  status = (uint8_t) _11;
+  goto <bb 6>; [INV]
+
+  <bb 5> :
+  status = 0;
+  goto <bb 8>; [INV]
+
+  <bb 6> :
+  i.17_12 = i;
+  i = i.17_12 + 1;
+
+  <bb 7> :
+  index.18_13 = index;
+  if (i <= index.18_13)
+    goto <bb 3>; [INV]
+  else
+    goto <bb 8>; [INV]
+
+  <bb 8> :
+  if (status != 0)
+    goto <bb 9>; [INV]
+  else
+    goto <bb 11>; [INV]
+
+  <bb 9> :
+  _14 = scheduler->taskPtr;
+  _15 = (sizetype) task;
+  _16 = _15 + 268435455;
+  _17 = _16 * 16;
+  _18 = _14 + _17;
+  _19 = _18->taskFunc;
+  _20 = (long unsigned int) _19;
+  index.19_21 = index;
+  _22 = (int) index.19_21;
+  _23 = (long long unsigned int) _20;
+  tasks_func_add[_22] = _23;
+  index.20_24 = index;
+  index.21_25 = index.20_24;
+  _26 = index.21_25 + 1;
+  index = _26;
+  index.22_27 = index;
+  if (index.22_27 > 31)
+    goto <bb 10>; [INV]
+  else
+    goto <bb 11>; [INV]
+
+  <bb 10> :
+  index = 31;
+
+  <bb 11> :
+  D.6690 = status;
+
+  <bb 12> :
+<L10>:
+  return D.6690;
+
+}
+
+
+Sched_periodTask (struct Sched_Scheduler * scheduler, uint8_t task, uint32_t period)
+{
+  uint8_t status;
+  uint8_t D.6681;
+
+  <bb 2> :
+  status = 0;
+  if (task != 0)
+    goto <bb 3>; [INV]
+  else
+    goto <bb 12>; [INV]
+
+  <bb 3> :
+  _1 = scheduler->tasks;
+  if (task <= _1)
+    goto <bb 4>; [INV]
+  else
+    goto <bb 12>; [INV]
+
+  <bb 4> :
+  _2 = Sched_confirmTask_register (1, task);
+  if (_2 != 0)
+    goto <bb 5>; [INV]
+  else
+    goto <bb 10>; [INV]
+
+  <bb 5> :
+  _3 = scheduler->tick;
+  if (period >= _3)
+    goto <bb 6>; [INV]
+  else
+    goto <bb 8>; [INV]
+
+  <bb 6> :
+  _4 = scheduler->tick;
+  _5 = period % _4;
+  if (_5 == 0)
+    goto <bb 7>; [INV]
+  else
+    goto <bb 8>; [INV]
+
+  <bb 7> :
+  _6 = scheduler->taskPtr;
+  _7 = (sizetype) task;
+  _8 = _7 + 268435455;
+  _9 = _8 * 16;
+  _10 = _6 + _9;
+  _10->period = period;
+  status = 1;
+  goto <bb 9>; [INV]
+
+  <bb 8> :
+  status = 0;
+
+  <bb 9> :
+  goto <bb 11>; [INV]
+
+  <bb 10> :
+  status = 0;
+
+  <bb 11> :
+  goto <bb 13>; [INV]
+
+  <bb 12> :
+  status = 0;
+
+  <bb 13> :
+  D.6681 = status;
+
+  <bb 14> :
+<L11>:
+  return D.6681;
+
+}
+
+
+Sched_startTask (struct Sched_Scheduler * scheduler, uint8_t task)
+{
+  uint8_t status;
+  uint8_t D.6668;
+
+  <bb 2> :
+  status = 0;
+  if (task != 0)
+    goto <bb 3>; [INV]
+  else
+    goto <bb 8>; [INV]
+
+  <bb 3> :
+  _1 = scheduler->tasks;
+  if (task <= _1)
+    goto <bb 4>; [INV]
+  else
+    goto <bb 8>; [INV]
+
+  <bb 4> :
+  _2 = Sched_confirmTask_register (1, task);
+  if (_2 != 0)
+    goto <bb 5>; [INV]
+  else
+    goto <bb 6>; [INV]
+
+  <bb 5> :
+  _3 = &scheduler->tasks_startFlags;
+  _4 = task + 255;
+  Bfx_SetBit_u32u8 (_3, _4);
+  status = 1;
+  goto <bb 7>; [INV]
+
+  <bb 6> :
+  status = 0;
+
+  <bb 7> :
+  goto <bb 9>; [INV]
+
+  <bb 8> :
+  status = 0;
+
+  <bb 9> :
+  D.6668 = status;
+
+  <bb 10> :
+<L7>:
+  return D.6668;
+
+}
+
+
+Sched_stopTask (struct Sched_Scheduler * scheduler, uint8_t task)
+{
+  uint8_t status;
+  uint8_t D.6659;
+
+  <bb 2> :
+  status = 0;
+  if (task != 0)
+    goto <bb 3>; [INV]
+  else
+    goto <bb 8>; [INV]
+
+  <bb 3> :
+  _1 = scheduler->tasks;
+  if (task <= _1)
+    goto <bb 4>; [INV]
+  else
+    goto <bb 8>; [INV]
+
+  <bb 4> :
+  _2 = Sched_confirmTask_register (1, task);
+  if (_2 != 0)
+    goto <bb 5>; [INV]
+  else
+    goto <bb 6>; [INV]
+
+  <bb 5> :
+  _3 = &scheduler->tasks_startFlags;
+  _4 = task + 255;
+  Bfx_ClrBit_u32u8 (_3, _4);
+  status = 1;
+  goto <bb 7>; [INV]
+
+  <bb 6> :
+  status = 0;
+
+  <bb 7> :
+  goto <bb 9>; [INV]
+
+  <bb 8> :
+  status = 0;
+
+  <bb 9> :
+  D.6659 = status;
+
+  <bb 10> :
+<L7>:
+  return D.6659;
+
+}
+
+
+Sched_registerTask (struct Sched_Scheduler * scheduler, void (*<T520>) (void) initPtr, void (*<T520>) (void) taskPtr, uint32_t period)
+{
+  uint8_t new_task;
+  uint8_t i;
+  uint8_t task_id;
+  static uint8_t first_call = 1;
+  static uint8_t index = 0;
+  uint8_t D.6650;
+
+  <bb 2> :
+  task_id = 0;
+  i = 0;
+  new_task = 1;
+  _1 = scheduler->tick;
+  if (period >= _1)
+    goto <bb 3>; [INV]
+  else
+    goto <bb 16>; [INV]
+
+  <bb 3> :
+  _2 = scheduler->tick;
+  _3 = period % _2;
+  if (_3 == 0)
+    goto <bb 4>; [INV]
+  else
+    goto <bb 16>; [INV]
+
+  <bb 4> :
+  first_call.6_4 = first_call;
+  if (first_call.6_4 != 0)
+    goto <bb 5>; [INV]
+  else
+    goto <bb 6>; [INV]
+
+  <bb 5> :
+  Sched_initBuffer (scheduler, 2);
+  first_call = 0;
+
+  <bb 6> :
+  i = 0;
+  goto <bb 11>; [INV]
+
+  <bb 7> :
+  _5 = scheduler->taskPtr;
+  _6 = (unsigned int) i;
+  _7 = _6 * 16;
+  _8 = _5 + _7;
+  _9 = _8->taskFunc;
+  if (taskPtr != _9)
+    goto <bb 8>; [INV]
+  else
+    goto <bb 9>; [INV]
+
+  <bb 8> :
+  _10 = new_task != 0;
+  new_task = (uint8_t) _10;
+  goto <bb 10>; [INV]
+
+  <bb 9> :
+  new_task = 0;
+  task_id = 0;
+  goto <bb 12>; [INV]
+
+  <bb 10> :
+  i.7_11 = i;
+  i = i.7_11 + 1;
+
+  <bb 11> :
+  _12 = scheduler->tasks;
+  if (i < _12)
+    goto <bb 7>; [INV]
+  else
+    goto <bb 12>; [INV]
+
+  <bb 12> :
+  if (new_task != 0)
+    goto <bb 13>; [INV]
+  else
+    goto <bb 15>; [INV]
+
+  <bb 13> :
+  _13 = scheduler->taskPtr;
+  index.8_14 = index;
+  _15 = (unsigned int) index.8_14;
+  _16 = _15 * 16;
+  _17 = _13 + _16;
+  _17->period = period;
+  _18 = scheduler->taskPtr;
+  index.9_19 = index;
+  _20 = (unsigned int) index.9_19;
+  _21 = _20 * 16;
+  _22 = _18 + _21;
+  _22->elapsed = 0;
+  _23 = scheduler->taskPtr;
+  index.10_24 = index;
+  _25 = (unsigned int) index.10_24;
+  _26 = _25 * 16;
+  _27 = _23 + _26;
+  _27->initFunc = initPtr;
+  _28 = scheduler->taskPtr;
+  index.11_29 = index;
+  _30 = (unsigned int) index.11_29;
+  _31 = _30 * 16;
+  _32 = _28 + _31;
+  _32->taskFunc = taskPtr;
+  _33 = &scheduler->tasks_startFlags;
+  index.12_34 = index;
+  Bfx_ClrBit_u32u8 (_33, index.12_34);
+  index.13_35 = index;
+  task_id = index.13_35 + 1;
+  Sched_confirmTask_register (0, task_id);
+  index.14_36 = index;
+  index.15_37 = index.14_36;
+  _38 = index.15_37 + 1;
+  index = _38;
+  _39 = scheduler->tasks;
+  index.16_40 = index;
+  if (_39 <= index.16_40)
+    goto <bb 14>; [INV]
+  else
+    goto <bb 15>; [INV]
+
+  <bb 14> :
+  index = 0;
+
+  <bb 15> :
+  goto <bb 17>; [INV]
+
+  <bb 16> :
+  task_id = 0;
+
+  <bb 17> :
+  D.6650 = task_id;
+
+  <bb 18> :
+<L16>:
+  return D.6650;
+
+}
+
+
+Sched_confirmTask_register (uint8_t operation, uint8_t task)
+{
+  uint8_t status;
+  static uint8_t index = 0;
+  static uint8_t registered_IDs[2];
+  uint8_t D.6635;
+
+  <bb 2> :
+  status = 0;
+  _1 = (int) operation;
+  switch (_1) <default: <L5> [INV], case 0: <L0> [INV], case 1: <L1> [INV]>
+
+  <bb 3> :
+<L0>:
+  index.2_2 = index;
+  _3 = (int) index.2_2;
+  registered_IDs[_3] = task;
+  index.3_4 = index;
+  index.4_5 = index.3_4;
+  _6 = index.4_5 + 1;
+  index = _6;
+  status = 1;
+  goto <bb 9>; [INV]
+
+  <bb 4> :
+<L1>:
+  _7 = (int) task;
+  _8 = _7 + -1;
+  _9 = registered_IDs[_8];
+  if (task != _9)
+    goto <bb 5>; [INV]
+  else
+    goto <bb 6>; [INV]
+
+  <bb 5> :
+  status = 0;
+  goto <bb 7>; [INV]
+
+  <bb 6> :
+  status = 1;
+
+  <bb 7> :
+  goto <bb 9>; [INV]
+
+  <bb 8> :
+<L5>:
+  status = 0;
+
+  <bb 9> :
+  index.5_10 = index;
+  if (index.5_10 > 1)
+    goto <bb 10>; [INV]
+  else
+    goto <bb 11>; [INV]
+
+  <bb 10> :
+  index = 0;
+
+  <bb 11> :
+  D.6635 = status;
+
+  <bb 12> :
+<L9>:
+  return D.6635;
+
+}
+
+
+Sched_initBuffer (struct Sched_Scheduler * scheduler, uint8_t buffer)
+{
+  uint8_t i;
+  uint8_t status;
+  uint8_t D.6628;
+
+  <bb 2> :
+  status = 0;
+  i = 0;
+  _1 = (int) buffer;
+  switch (_1) <default: <L8> [INV], case 1: <L0> [INV], case 2: <L4> [INV]>
+
+  <bb 3> :
+<L0>:
+  i = 0;
+  goto <bb 5>; [INV]
+
+  <bb 4> :
+  _2 = scheduler->timerPtr;
+  _3 = (unsigned int) i;
+  _4 = _3 * 12;
+  _5 = _2 + _4;
+  _5->callbackPtr = 0B;
+  i.0_6 = i;
+  i = i.0_6 + 1;
+
+  <bb 5> :
+  _7 = scheduler->timers;
+  if (i < _7)
+    goto <bb 4>; [INV]
+  else
+    goto <bb 6>; [INV]
+
+  <bb 6> :
+  status = 1;
+  goto <bb 12>; [INV]
+
+  <bb 7> :
+<L4>:
+  i = 0;
+  goto <bb 9>; [INV]
+
+  <bb 8> :
+  _8 = scheduler->taskPtr;
+  _9 = (unsigned int) i;
+  _10 = _9 * 16;
+  _11 = _8 + _10;
+  _11->taskFunc = 0B;
+  i.1_12 = i;
+  i = i.1_12 + 1;
+
+  <bb 9> :
+  _13 = scheduler->tasks;
+  if (i < _13)
+    goto <bb 8>; [INV]
+  else
+    goto <bb 10>; [INV]
+
+  <bb 10> :
+  status = 1;
+  goto <bb 12>; [INV]
+
+  <bb 11> :
+<L8>:
+  status = 0;
+
+  <bb 12> :
+  D.6628 = status;
+
+  <bb 13> :
+<L10>:
+  return D.6628;
+
+}
+
+
+Sched_initScheduler (struct Sched_Scheduler * scheduler, uint8_t n_tasks_c, uint8_t n_tasks_h, uint32_t tick, struct Sched_Task * buffer_ta, uint8_t n_timers_c, uint8_t n_timers_h, struct Sched_Timer * buffer_ti)
+{
+  uint8_t i;
+  uint8_t status;
+  uint8_t D.6626;
+
+  <bb 2> :
+  status = 1;
+  i = 0;
+  scheduler->tasksCount = n_tasks_c;
+  scheduler->tick = tick;
+  scheduler->taskPtr = buffer_ta;
+  _1 = scheduler->tasksCount;
+  if (n_tasks_h <= _1)
+    goto <bb 3>; [INV]
+  else
+    goto <bb 4>; [INV]
+
+  <bb 3> :
+  scheduler->tasks = n_tasks_h;
+  _2 = status != 0;
+  status = (uint8_t) _2;
+  goto <bb 5>; [INV]
+
+  <bb 4> :
+  status = 0;
+
+  <bb 5> :
+  scheduler->timersCount = n_timers_c;
+  scheduler->timerPtr = buffer_ti;
+  _3 = scheduler->timersCount;
+  if (n_timers_h <= _3)
+    goto <bb 6>; [INV]
+  else
+    goto <bb 7>; [INV]
+
+  <bb 6> :
+  scheduler->timers = n_timers_h;
+  _4 = status != 0;
+  status = (uint8_t) _4;
+  goto <bb 8>; [INV]
+
+  <bb 7> :
+  status = 0;
+
+  <bb 8> :
+  scheduler->tasks_startFlags = 0;
+  scheduler->timers_startFlags = 0;
+  D.6626 = status;
+
+  <bb 9> :
+<L6>:
+  return D.6626;
+
+}
+
+
+Bfx_GetBit_u32u8_u8 (uint32 Data, uint8 BitPn)
+{
+  boolean Result;
+  boolean D.6771;
+
+  <bb 2> :
+  Result = 0;
+  _1 = (int) BitPn;
+  _2 = 1 << _1;
+  _3 = (long unsigned int) _2;
+  _4 = Data & _3;
+  Result = _4 != 0;
+  D.6771 = Result;
+
+  <bb 3> :
+<L0>:
+  return D.6771;
+
+}
+
+
+Bfx_ClrBit_u32u8 (uint32 * Data, uint8 BitPn)
+{
+  <bb 2> :
+  _1 = *Data;
+  _2 = (int) BitPn;
+  _3 = 1 << _2;
+  _4 = ~_3;
+  _5 = (long unsigned int) _4;
+  _6 = _1 & _5;
+  *Data = _6;
+  return;
+
+}
+
+
+Bfx_SetBit_u32u8 (uint32 * Data, uint8 BitPn)
+{
+  <bb 2> :
+  _1 = *Data;
+  _2 = (int) BitPn;
+  _3 = 1 << _2;
+  _4 = (long unsigned int) _3;
+  _5 = _1 | _4;
+  *Data = _5;
+  return;
+
+}
+
+

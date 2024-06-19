@@ -1,0 +1,140 @@
+
+Reclaiming functions:
+Reclaiming variables:
+Clearing address taken flags:
+Symbol table:
+
+Sche/58 (Sche) @069a2090
+  Type: variable
+  Body removed by symtab_remove_unreachable_nodes
+  Visibility: external public
+  References: 
+  Referring: Timer1_callback/54 (addr) Timer2_callback/55 (addr) 
+  Availability: not_available
+  Varpool flags:
+Sched_startTimer/57 (Sched_startTimer) @0699fa80
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: Timer2_callback/55 Timer1_callback/54 
+  Calls: 
+Dio_FlipChannel/56 (Dio_FlipChannel) @0699f7e0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: Timer2_callback/55 Timer1_callback/54 Task2_callback/53 Task1_callback/52 
+  Calls: 
+Timer2_callback/55 (Timer2_callback) @0699f1c0
+  Type: function definition analyzed
+  Visibility: force_output externally_visible no_reorder public
+  References: Sche/58 (addr) 
+  Referring: 
+  Availability: available
+  Function flags: body
+  Called by: 
+  Calls: Sched_startTimer/57 Dio_FlipChannel/56 
+Timer1_callback/54 (Timer1_callback) @0699cd20
+  Type: function definition analyzed
+  Visibility: force_output externally_visible no_reorder public
+  References: Sche/58 (addr) 
+  Referring: 
+  Availability: available
+  Function flags: body
+  Called by: 
+  Calls: Sched_startTimer/57 Dio_FlipChannel/56 
+Task2_callback/53 (Task2_callback) @0699c7e0
+  Type: function definition analyzed
+  Visibility: force_output externally_visible no_reorder public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: body
+  Called by: 
+  Calls: Dio_FlipChannel/56 
+Task1_callback/52 (Task1_callback) @0699cee0
+  Type: function definition analyzed
+  Visibility: force_output externally_visible no_reorder public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: body
+  Called by: 
+  Calls: Dio_FlipChannel/56 
+Task2_init/51 (Task2_init) @0699cc40
+  Type: function definition analyzed
+  Visibility: force_output externally_visible no_reorder public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: body
+  Called by: 
+  Calls: 
+Task1_init/50 (Task1_init) @0699c9a0
+  Type: function definition analyzed
+  Visibility: force_output externally_visible no_reorder public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: body
+  Called by: 
+  Calls: 
+Timer2_callback ()
+{
+  <bb 2> :
+  Dio_FlipChannel (75);
+  Sched_startTimer (&Sche, 2);
+  return;
+
+}
+
+
+Timer1_callback ()
+{
+  <bb 2> :
+  Dio_FlipChannel (74);
+  Sched_startTimer (&Sche, 1);
+  return;
+
+}
+
+
+Task2_callback ()
+{
+  <bb 2> :
+  Dio_FlipChannel (73);
+  return;
+
+}
+
+
+Task1_callback ()
+{
+  <bb 2> :
+  Dio_FlipChannel (72);
+  return;
+
+}
+
+
+Task2_init ()
+{
+  <bb 2> :
+  return;
+
+}
+
+
+Task1_init ()
+{
+  <bb 2> :
+  return;
+
+}
+
+

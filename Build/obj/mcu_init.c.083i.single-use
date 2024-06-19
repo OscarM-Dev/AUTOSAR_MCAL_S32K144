@@ -1,0 +1,22 @@
+EcuM_Init ()
+{
+  <bb 2> :
+  MCU_clocks ();
+  OsIf_Init (0B);
+  Port_Init (&Port_Config);
+  return;
+
+}
+
+
+MCU_clocks ()
+{
+  <bb 2> :
+  Mcu_Init (&Mcu_Config);
+  Mcu_SetMode (0);
+  Mcu_InitClock (0);
+  return;
+
+}
+
+
