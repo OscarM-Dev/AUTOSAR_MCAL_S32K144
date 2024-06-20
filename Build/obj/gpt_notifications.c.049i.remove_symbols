@@ -1,0 +1,50 @@
+
+Reclaiming functions:
+Reclaiming variables:
+Clearing address taken flags:
+Symbol table:
+
+DoubleClick_stMachine/10 (DoubleClick_stMachine) @06d961c0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: Ftm0_ch0_callback/8 
+  Calls: 
+Ftm0_ch1_callback/9 (Ftm0_ch1_callback) @06d937e0
+  Type: function definition analyzed
+  Visibility: force_output externally_visible no_reorder public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: body
+  Called by: 
+  Calls: 
+Ftm0_ch0_callback/8 (Ftm0_ch0_callback) @06d93d20
+  Type: function definition analyzed
+  Visibility: force_output externally_visible no_reorder public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: body
+  Called by: 
+  Calls: DoubleClick_stMachine/10 
+Ftm0_ch1_callback ()
+{
+  <bb 2> :
+  return;
+
+}
+
+
+Ftm0_ch0_callback ()
+{
+  <bb 2> :
+  DoubleClick_stMachine ();
+  return;
+
+}
+
+

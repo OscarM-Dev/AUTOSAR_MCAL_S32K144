@@ -1,0 +1,11 @@
+Autosar/Mcal/Gpt/src/Gpt.c:622:30:Gpt_ValidateChannelStatus	24	static
+Autosar/Mcal/Gpt/src/Gpt.c:1086:31:Gpt_ConvertChannelIndexToChannel	16	static
+Autosar/Mcal/Gpt/src/Gpt.c:1309:6:Gpt_Init	32	static
+Autosar/Mcal/Gpt/src/Gpt.c:1403:6:Gpt_DeInit	24	static
+Autosar/Mcal/Gpt/src/Gpt.c:1505:15:Gpt_GetTimeElapsed	40	static
+Autosar/Mcal/Gpt/src/Gpt.c:1596:15:Gpt_GetTimeRemaining	40	static
+Autosar/Mcal/Gpt/src/Gpt.c:1695:6:Gpt_StartTimer	24	static
+Autosar/Mcal/Gpt/src/Gpt.c:1764:6:Gpt_StopTimer	40	static
+Autosar/Mcal/Gpt/src/Gpt.c:1838:6:Gpt_EnableNotification	24	static
+Autosar/Mcal/Gpt/src/Gpt.c:1893:6:Gpt_DisableNotification	24	static
+Autosar/Mcal/Gpt/src/Gpt.c:2234:6:Gpt_ProcessCommonInterrupt	24	static

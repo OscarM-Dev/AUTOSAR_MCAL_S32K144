@@ -1,6 +1,6 @@
 Symbol table:
 
-System_Ip_ConfigIrq/2 (System_Ip_ConfigIrq) @06c03ee0
+System_Ip_ConfigIrq/2 (System_Ip_ConfigIrq) @06c73ee0
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: 
@@ -9,7 +9,7 @@ System_Ip_ConfigIrq/2 (System_Ip_ConfigIrq) @06c03ee0
   Function flags: body
   Called by: 
   Calls: System_Ip_ConfigIrqPrivileged/1 
-System_Ip_ConfigIrqPrivileged/1 (System_Ip_ConfigIrqPrivileged) @06c03c40
+System_Ip_ConfigIrqPrivileged/1 (System_Ip_ConfigIrqPrivileged) @06c73c40
   Type: function definition analyzed
   Visibility: no_reorder prevailing_def_ironly
   References: 

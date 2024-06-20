@@ -1,6 +1,6 @@
 Symbol table:
 
-SchM_Exit_Dio_DIO_EXCLUSIVE_AREA_00/10 (SchM_Exit_Dio_DIO_EXCLUSIVE_AREA_00) @0697ab60
+SchM_Exit_Dio_DIO_EXCLUSIVE_AREA_00/10 (SchM_Exit_Dio_DIO_EXCLUSIVE_AREA_00) @0699ab60
   Type: function
   Visibility: external public
   References: 
@@ -9,7 +9,7 @@ SchM_Exit_Dio_DIO_EXCLUSIVE_AREA_00/10 (SchM_Exit_Dio_DIO_EXCLUSIVE_AREA_00) @06
   Function flags:
   Called by: Gpio_Dio_Ip_WritePin/1 
   Calls: 
-SchM_Enter_Dio_DIO_EXCLUSIVE_AREA_00/9 (SchM_Enter_Dio_DIO_EXCLUSIVE_AREA_00) @0697a8c0
+SchM_Enter_Dio_DIO_EXCLUSIVE_AREA_00/9 (SchM_Enter_Dio_DIO_EXCLUSIVE_AREA_00) @0699a8c0
   Type: function
   Visibility: external public
   References: 
@@ -18,7 +18,7 @@ SchM_Enter_Dio_DIO_EXCLUSIVE_AREA_00/9 (SchM_Enter_Dio_DIO_EXCLUSIVE_AREA_00) @0
   Function flags:
   Called by: Gpio_Dio_Ip_WritePin/1 
   Calls: 
-Gpio_Dio_Ip_ReadPin/8 (Gpio_Dio_Ip_ReadPin) @0697ad20
+Gpio_Dio_Ip_ReadPin/8 (Gpio_Dio_Ip_ReadPin) @0699ad20
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: 
@@ -27,7 +27,7 @@ Gpio_Dio_Ip_ReadPin/8 (Gpio_Dio_Ip_ReadPin) @0697ad20
   Function flags: body
   Called by: 
   Calls: 
-Gpio_Dio_Ip_ReadPins/7 (Gpio_Dio_Ip_ReadPins) @0697aa80
+Gpio_Dio_Ip_ReadPins/7 (Gpio_Dio_Ip_ReadPins) @0699aa80
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: 
@@ -36,7 +36,7 @@ Gpio_Dio_Ip_ReadPins/7 (Gpio_Dio_Ip_ReadPins) @0697aa80
   Function flags: body
   Called by: 
   Calls: 
-Gpio_Dio_Ip_TogglePins/6 (Gpio_Dio_Ip_TogglePins) @0697a7e0
+Gpio_Dio_Ip_TogglePins/6 (Gpio_Dio_Ip_TogglePins) @0699a7e0
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: 
@@ -45,7 +45,7 @@ Gpio_Dio_Ip_TogglePins/6 (Gpio_Dio_Ip_TogglePins) @0697a7e0
   Function flags: body
   Called by: 
   Calls: 
-Gpio_Dio_Ip_ClearPins/5 (Gpio_Dio_Ip_ClearPins) @0697a460
+Gpio_Dio_Ip_ClearPins/5 (Gpio_Dio_Ip_ClearPins) @0699a460
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: 
@@ -54,7 +54,7 @@ Gpio_Dio_Ip_ClearPins/5 (Gpio_Dio_Ip_ClearPins) @0697a460
   Function flags: body
   Called by: 
   Calls: 
-Gpio_Dio_Ip_SetPins/4 (Gpio_Dio_Ip_SetPins) @0697a0e0
+Gpio_Dio_Ip_SetPins/4 (Gpio_Dio_Ip_SetPins) @0699a0e0
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: 
@@ -63,7 +63,7 @@ Gpio_Dio_Ip_SetPins/4 (Gpio_Dio_Ip_SetPins) @0697a0e0
   Function flags: body
   Called by: 
   Calls: 
-Gpio_Dio_Ip_GetPinsOutput/3 (Gpio_Dio_Ip_GetPinsOutput) @0688cb60
+Gpio_Dio_Ip_GetPinsOutput/3 (Gpio_Dio_Ip_GetPinsOutput) @068c5b60
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: 
@@ -72,7 +72,7 @@ Gpio_Dio_Ip_GetPinsOutput/3 (Gpio_Dio_Ip_GetPinsOutput) @0688cb60
   Function flags: body
   Called by: 
   Calls: 
-Gpio_Dio_Ip_WritePins/2 (Gpio_Dio_Ip_WritePins) @0688ce00
+Gpio_Dio_Ip_WritePins/2 (Gpio_Dio_Ip_WritePins) @068c5e00
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: 
@@ -81,7 +81,7 @@ Gpio_Dio_Ip_WritePins/2 (Gpio_Dio_Ip_WritePins) @0688ce00
   Function flags: body
   Called by: 
   Calls: 
-Gpio_Dio_Ip_WritePin/1 (Gpio_Dio_Ip_WritePin) @0688ca80
+Gpio_Dio_Ip_WritePin/1 (Gpio_Dio_Ip_WritePin) @068c5a80
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: 
@@ -90,7 +90,7 @@ Gpio_Dio_Ip_WritePin/1 (Gpio_Dio_Ip_WritePin) @0688ca80
   Function flags: body
   Called by: 
   Calls: SchM_Exit_Dio_DIO_EXCLUSIVE_AREA_00/10 SchM_Enter_Dio_DIO_EXCLUSIVE_AREA_00/9 
-GpioBaseAdresses/0 (GpioBaseAdresses) @06891798
+GpioBaseAdresses/0 (GpioBaseAdresses) @068ca798
   Type: variable definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: 

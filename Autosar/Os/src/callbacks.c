@@ -29,7 +29,7 @@ void Task2_init( void ) {
  * This function toggles a led every 100ms.
  */
 void Task1_callback( void ) {
-    Dio_FlipChannel( DioConf_DioChannel_PTC8 );
+    //Dio_FlipChannel( DioConf_DioChannel_PTC8 );
 }
 
 /**
@@ -38,7 +38,7 @@ void Task1_callback( void ) {
  * This function toggles a led every 200ms.
  */
 void Task2_callback( void ) {
-    Dio_FlipChannel( DioConf_DioChannel_PTC9 );
+    //Dio_FlipChannel( DioConf_DioChannel_PTC9 );
 }
 
 //Callbacks.
@@ -48,7 +48,7 @@ void Task2_callback( void ) {
  * This function toggles a led every 300ms.
  */
 void Timer1_callback( void ) {
-    Dio_FlipChannel( DioConf_DioChannel_PTC10 );
+    //Dio_FlipChannel( DioConf_DioChannel_PTC10 );
     Sched_startTimer( &Sche, 1 );//Restarting timer.
 }
 
@@ -58,6 +58,6 @@ void Timer1_callback( void ) {
  * This function toggles a led every 400ms.
  */
 void Timer2_callback( void ) {
-    Dio_FlipChannel( DioConf_DioChannel_PTC11 );
+    //Dio_FlipChannel( DioConf_DioChannel_PTC11 );
     Sched_startTimer( &Sche, 2 );//Restarting timer.
 }

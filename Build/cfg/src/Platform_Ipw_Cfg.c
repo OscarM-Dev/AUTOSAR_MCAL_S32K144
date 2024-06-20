@@ -94,7 +94,7 @@ extern "C" {
 
 /* Definition of the configuration structure for Platform IPW */
 const Platform_Ipw_ConfigType ipwConfig = {
-     NULL_PTR  , /* Interrupt controller configuration */
+    &intCtrlConfig  , /* Interrupt controller configuration */
 #if ((INT_CTRL_IP_CORTEXM == STD_ON) && (INT_CTRL_IP_CORTEXM0PLUS == STD_OFF))
      NULL_PTR  ,/* System settings */
 #endif

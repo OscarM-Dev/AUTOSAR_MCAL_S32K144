@@ -1,6 +1,6 @@
 Symbol table:
 
-OsIf_GetElapsed/80 (OsIf_GetElapsed) @069d9380
+OsIf_GetElapsed/80 (OsIf_GetElapsed) @069c8380
   Type: function
   Visibility: external public
   References: 
@@ -9,7 +9,7 @@ OsIf_GetElapsed/80 (OsIf_GetElapsed) @069d9380
   Function flags:
   Called by: Sched_startScheduler/67 
   Calls: 
-OsIf_GetCounter/79 (OsIf_GetCounter) @069d9ee0
+OsIf_GetCounter/79 (OsIf_GetCounter) @069c8ee0
   Type: function
   Visibility: external public
   References: 
@@ -18,7 +18,7 @@ OsIf_GetCounter/79 (OsIf_GetCounter) @069d9ee0
   Function flags:
   Called by: Sched_startScheduler/67 
   Calls: 
-OsIf_MicrosToTicks/78 (OsIf_MicrosToTicks) @069d9e00
+OsIf_MicrosToTicks/78 (OsIf_MicrosToTicks) @069c8e00
   Type: function
   Visibility: external public
   References: 
@@ -27,77 +27,77 @@ OsIf_MicrosToTicks/78 (OsIf_MicrosToTicks) @069d9e00
   Function flags:
   Called by: Sched_startScheduler/67 
   Calls: 
-index.0/77 (index) @06a33af8
+index.0/77 (index) @06a22af8
   Type: variable definition analyzed
   Visibility: force_output no_reorder prevailing_def_ironly
   References: 
   Referring: Sched_registerTimer/62 (read) Sched_registerTimer/62 (read) Sched_registerTimer/62 (read) Sched_registerTimer/62 (read) Sched_registerTimer/62 (read) Sched_registerTimer/62 (read) Sched_registerTimer/62 (write) Sched_registerTimer/62 (read) Sched_registerTimer/62 (write) 
   Availability: available
   Varpool flags: initialized
-first_call.1/76 (first_call) @06a33a68
+first_call.1/76 (first_call) @06a22a68
   Type: variable definition analyzed
   Visibility: force_output no_reorder prevailing_def_ironly
   References: 
   Referring: Sched_registerTimer/62 (read) Sched_registerTimer/62 (write) 
   Availability: available
   Varpool flags: initialized
-registered_IDs.2/75 (registered_IDs) @06a331f8
+registered_IDs.2/75 (registered_IDs) @06a221f8
   Type: variable definition analyzed
   Visibility: force_output no_reorder prevailing_def_ironly
   References: 
   Referring: Sched_confirmTimer_register/61 (write) Sched_confirmTimer_register/61 (read) 
   Availability: available
   Varpool flags:
-index.3/74 (index) @06a331b0
+index.3/74 (index) @06a221b0
   Type: variable definition analyzed
   Visibility: force_output no_reorder prevailing_def_ironly
   References: 
   Referring: Sched_confirmTimer_register/61 (read) Sched_confirmTimer_register/61 (read) Sched_confirmTimer_register/61 (write) Sched_confirmTimer_register/61 (read) Sched_confirmTimer_register/61 (write) 
   Availability: available
   Varpool flags: initialized
-index.4/73 (index) @06a2dc60
+index.4/73 (index) @06a1cc60
   Type: variable definition analyzed
   Visibility: force_output no_reorder prevailing_def_ironly
   References: 
   Referring: Sched_verifyTask_firstexe/60 (read) Sched_verifyTask_firstexe/60 (read) Sched_verifyTask_firstexe/60 (read) Sched_verifyTask_firstexe/60 (write) Sched_verifyTask_firstexe/60 (read) Sched_verifyTask_firstexe/60 (write) 
   Availability: available
   Varpool flags: initialized
-tasks_func_add.5/72 (tasks_func_add) @06a2dc18
+tasks_func_add.5/72 (tasks_func_add) @06a1cc18
   Type: variable definition analyzed
   Visibility: force_output no_reorder prevailing_def_ironly
   References: 
   Referring: Sched_verifyTask_firstexe/60 (read) Sched_verifyTask_firstexe/60 (write) 
   Availability: available
   Varpool flags:
-index.6/71 (index) @069d4828
+index.6/71 (index) @069c3828
   Type: variable definition analyzed
   Visibility: force_output no_reorder prevailing_def_ironly
   References: 
   Referring: Sched_registerTask/56 (read) Sched_registerTask/56 (read) Sched_registerTask/56 (read) Sched_registerTask/56 (read) Sched_registerTask/56 (read) Sched_registerTask/56 (read) Sched_registerTask/56 (read) Sched_registerTask/56 (write) Sched_registerTask/56 (read) Sched_registerTask/56 (write) 
   Availability: available
   Varpool flags: initialized
-first_call.7/70 (first_call) @069d4798
+first_call.7/70 (first_call) @069c3798
   Type: variable definition analyzed
   Visibility: force_output no_reorder prevailing_def_ironly
   References: 
   Referring: Sched_registerTask/56 (read) Sched_registerTask/56 (write) 
   Availability: available
   Varpool flags: initialized
-registered_IDs.8/69 (registered_IDs) @069c8ea0
+registered_IDs.8/69 (registered_IDs) @069b7ea0
   Type: variable definition analyzed
   Visibility: force_output no_reorder prevailing_def_ironly
   References: 
   Referring: Sched_confirmTask_register/55 (write) Sched_confirmTask_register/55 (read) 
   Availability: available
   Varpool flags:
-index.9/68 (index) @069c8e58
+index.9/68 (index) @069b7e58
   Type: variable definition analyzed
   Visibility: force_output no_reorder prevailing_def_ironly
   References: 
   Referring: Sched_confirmTask_register/55 (read) Sched_confirmTask_register/55 (read) Sched_confirmTask_register/55 (write) Sched_confirmTask_register/55 (read) Sched_confirmTask_register/55 (write) 
   Availability: available
   Varpool flags: initialized
-Sched_startScheduler/67 (Sched_startScheduler) @069c49a0
+Sched_startScheduler/67 (Sched_startScheduler) @069b39a0
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: 
@@ -109,7 +109,7 @@ Sched_startScheduler/67 (Sched_startScheduler) @069c49a0
    Indirect call Num speculative call targets: 0
    Indirect call Num speculative call targets: 0
    Indirect call Num speculative call targets: 0
-Sched_reloadTimer/66 (Sched_reloadTimer) @069c4700
+Sched_reloadTimer/66 (Sched_reloadTimer) @069b3700
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: 
@@ -118,7 +118,7 @@ Sched_reloadTimer/66 (Sched_reloadTimer) @069c4700
   Function flags: body
   Called by: 
   Calls: Sched_startTimer/63 Sched_confirmTimer_register/61 
-Sched_getTimer/65 (Sched_getTimer) @069c4460
+Sched_getTimer/65 (Sched_getTimer) @069b3460
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: 
@@ -127,7 +127,7 @@ Sched_getTimer/65 (Sched_getTimer) @069c4460
   Function flags: body
   Called by: Sched_startScheduler/67 
   Calls: Sched_confirmTimer_register/61 
-Sched_stopTimer/64 (Sched_stopTimer) @069c41c0
+Sched_stopTimer/64 (Sched_stopTimer) @069b31c0
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: 
@@ -136,7 +136,7 @@ Sched_stopTimer/64 (Sched_stopTimer) @069c41c0
   Function flags: body
   Called by: 
   Calls: Bfx_ClrBit_u32u8/1 Sched_confirmTimer_register/61 
-Sched_startTimer/63 (Sched_startTimer) @069b3d20
+Sched_startTimer/63 (Sched_startTimer) @069a2d20
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: 
@@ -145,7 +145,7 @@ Sched_startTimer/63 (Sched_startTimer) @069b3d20
   Function flags: body
   Called by: Sched_reloadTimer/66 
   Calls: Bfx_SetBit_u32u8/0 Sched_confirmTimer_register/61 
-Sched_registerTimer/62 (Sched_registerTimer) @069b37e0
+Sched_registerTimer/62 (Sched_registerTimer) @069a27e0
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: first_call.1/76 (read) first_call.1/76 (write) index.0/77 (read) index.0/77 (read) index.0/77 (read) index.0/77 (read) index.0/77 (read) index.0/77 (read) index.0/77 (write) index.0/77 (read) index.0/77 (write) 
@@ -154,7 +154,7 @@ Sched_registerTimer/62 (Sched_registerTimer) @069b37e0
   Function flags: body
   Called by: 
   Calls: Sched_confirmTimer_register/61 Bfx_ClrBit_u32u8/1 Sched_initBuffer/54 
-Sched_confirmTimer_register/61 (Sched_confirmTimer_register) @069b32a0
+Sched_confirmTimer_register/61 (Sched_confirmTimer_register) @069a22a0
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: index.3/74 (read) registered_IDs.2/75 (write) index.3/74 (read) index.3/74 (write) registered_IDs.2/75 (read) index.3/74 (read) index.3/74 (write) 
@@ -163,7 +163,7 @@ Sched_confirmTimer_register/61 (Sched_confirmTimer_register) @069b32a0
   Function flags: body
   Called by: Sched_reloadTimer/66 Sched_getTimer/65 Sched_stopTimer/64 Sched_startTimer/63 Sched_registerTimer/62 
   Calls: 
-Sched_verifyTask_firstexe/60 (Sched_verifyTask_firstexe) @069b3ee0
+Sched_verifyTask_firstexe/60 (Sched_verifyTask_firstexe) @069a2ee0
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: tasks_func_add.5/72 (read) index.4/73 (read) index.4/73 (read) tasks_func_add.5/72 (write) index.4/73 (read) index.4/73 (write) index.4/73 (read) index.4/73 (write) 
@@ -172,7 +172,7 @@ Sched_verifyTask_firstexe/60 (Sched_verifyTask_firstexe) @069b3ee0
   Function flags: body
   Called by: Sched_startScheduler/67 
   Calls: 
-Sched_periodTask/59 (Sched_periodTask) @069b3c40
+Sched_periodTask/59 (Sched_periodTask) @069a2c40
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: 
@@ -181,7 +181,7 @@ Sched_periodTask/59 (Sched_periodTask) @069b3c40
   Function flags: body
   Called by: 
   Calls: Sched_confirmTask_register/55 
-Sched_startTask/58 (Sched_startTask) @069b39a0
+Sched_startTask/58 (Sched_startTask) @069a29a0
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: 
@@ -190,7 +190,7 @@ Sched_startTask/58 (Sched_startTask) @069b39a0
   Function flags: body
   Called by: 
   Calls: Bfx_SetBit_u32u8/0 Sched_confirmTask_register/55 
-Sched_stopTask/57 (Sched_stopTask) @069b3700
+Sched_stopTask/57 (Sched_stopTask) @069a2700
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: 
@@ -199,7 +199,7 @@ Sched_stopTask/57 (Sched_stopTask) @069b3700
   Function flags: body
   Called by: 
   Calls: Bfx_ClrBit_u32u8/1 Sched_confirmTask_register/55 
-Sched_registerTask/56 (Sched_registerTask) @069b3460
+Sched_registerTask/56 (Sched_registerTask) @069a2460
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: first_call.7/70 (read) first_call.7/70 (write) index.6/71 (read) index.6/71 (read) index.6/71 (read) index.6/71 (read) index.6/71 (read) index.6/71 (read) index.6/71 (read) index.6/71 (write) index.6/71 (read) index.6/71 (write) 
@@ -208,7 +208,7 @@ Sched_registerTask/56 (Sched_registerTask) @069b3460
   Function flags: body
   Called by: 
   Calls: Sched_confirmTask_register/55 Bfx_ClrBit_u32u8/1 Sched_initBuffer/54 
-Sched_confirmTask_register/55 (Sched_confirmTask_register) @069b31c0
+Sched_confirmTask_register/55 (Sched_confirmTask_register) @069a21c0
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: index.9/68 (read) registered_IDs.8/69 (write) index.9/68 (read) index.9/68 (write) registered_IDs.8/69 (read) index.9/68 (read) index.9/68 (write) 
@@ -217,7 +217,7 @@ Sched_confirmTask_register/55 (Sched_confirmTask_register) @069b31c0
   Function flags: body
   Called by: Sched_periodTask/59 Sched_startTask/58 Sched_stopTask/57 Sched_registerTask/56 
   Calls: 
-Sched_initBuffer/54 (Sched_initBuffer) @069a9ee0
+Sched_initBuffer/54 (Sched_initBuffer) @06998ee0
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: 
@@ -226,7 +226,7 @@ Sched_initBuffer/54 (Sched_initBuffer) @069a9ee0
   Function flags: body
   Called by: Sched_registerTimer/62 Sched_registerTask/56 
   Calls: 
-Sched_initScheduler/53 (Sched_initScheduler) @069a9e00
+Sched_initScheduler/53 (Sched_initScheduler) @06998e00
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: 
@@ -235,7 +235,7 @@ Sched_initScheduler/53 (Sched_initScheduler) @069a9e00
   Function flags: body
   Called by: 
   Calls: 
-Bfx_GetBit_u32u8_u8/2 (Bfx_GetBit_u32u8_u8) @0686e2a0
+Bfx_GetBit_u32u8_u8/2 (Bfx_GetBit_u32u8_u8) @0685c2a0
   Type: function definition analyzed
   Visibility: no_reorder prevailing_def_ironly
   References: 
@@ -244,7 +244,7 @@ Bfx_GetBit_u32u8_u8/2 (Bfx_GetBit_u32u8_u8) @0686e2a0
   Function flags: body local
   Called by: Sched_startScheduler/67 Sched_startScheduler/67 Sched_startScheduler/67 
   Calls: 
-Bfx_ClrBit_u32u8/1 (Bfx_ClrBit_u32u8) @0686e000
+Bfx_ClrBit_u32u8/1 (Bfx_ClrBit_u32u8) @0685c000
   Type: function definition analyzed
   Visibility: no_reorder prevailing_def_ironly
   References: 
@@ -253,7 +253,7 @@ Bfx_ClrBit_u32u8/1 (Bfx_ClrBit_u32u8) @0686e000
   Function flags: body local
   Called by: Sched_stopTimer/64 Sched_registerTimer/62 Sched_stopTask/57 Sched_registerTask/56 
   Calls: 
-Bfx_SetBit_u32u8/0 (Bfx_SetBit_u32u8) @0685dd20
+Bfx_SetBit_u32u8/0 (Bfx_SetBit_u32u8) @0684cd20
   Type: function definition analyzed
   Visibility: no_reorder prevailing_def_ironly
   References: 

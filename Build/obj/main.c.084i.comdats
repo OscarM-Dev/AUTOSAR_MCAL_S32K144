@@ -1,23 +1,12 @@
 main ()
 {
-  struct Sched_Timer timers[2];
-  struct Sched_Task tasks[2];
-  int D.6757;
+  int D.7294;
 
   <bb 2> :
   EcuM_Init ();
-  Sched_initScheduler (&Sche, 32, 2, 10, &tasks, 32, 2, &timers);
-  Sched_registerTask (&Sche, Task1_init, Task1_callback, 100);
-  Sched_registerTask (&Sche, Task2_init, Task2_callback, 200);
-  Sched_startTask (&Sche, 1);
-  Sched_startTask (&Sche, 2);
-  Sched_registerTimer (&Sche, 300, Timer1_callback);
-  Sched_registerTimer (&Sche, 400, Timer2_callback);
-  Sched_startTimer (&Sche, 1);
-  Sched_startTimer (&Sche, 2);
+  Gpt_StartTimer (0, 3125);
 
   <bb 3> :
-  Sched_startScheduler (&Sche);
   goto <bb 3>; [INV]
 
 }

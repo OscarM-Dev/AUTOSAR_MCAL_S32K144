@@ -1,6 +1,6 @@
 Symbol table:
 
-Power_Ip_CM4_DisableDeepSleep/4 (Power_Ip_CM4_DisableDeepSleep) @069342a0
+Power_Ip_CM4_DisableDeepSleep/4 (Power_Ip_CM4_DisableDeepSleep) @069a12a0
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: Power_Ip_pxCM4/0 (read) Power_Ip_pxCM4/0 (read) 
@@ -9,7 +9,7 @@ Power_Ip_CM4_DisableDeepSleep/4 (Power_Ip_CM4_DisableDeepSleep) @069342a0
   Function flags: body
   Called by: 
   Calls: 
-Power_Ip_CM4_EnableDeepSleep/3 (Power_Ip_CM4_EnableDeepSleep) @06934000
+Power_Ip_CM4_EnableDeepSleep/3 (Power_Ip_CM4_EnableDeepSleep) @069a1000
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: Power_Ip_pxCM4/0 (read) Power_Ip_pxCM4/0 (read) 
@@ -18,7 +18,7 @@ Power_Ip_CM4_EnableDeepSleep/3 (Power_Ip_CM4_EnableDeepSleep) @06934000
   Function flags: body
   Called by: 
   Calls: 
-Power_Ip_CM4_EnableSleepOnExit/2 (Power_Ip_CM4_EnableSleepOnExit) @06928b60
+Power_Ip_CM4_EnableSleepOnExit/2 (Power_Ip_CM4_EnableSleepOnExit) @06995b60
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: Power_Ip_pxCM4/0 (read) Power_Ip_pxCM4/0 (read) 
@@ -27,7 +27,7 @@ Power_Ip_CM4_EnableSleepOnExit/2 (Power_Ip_CM4_EnableSleepOnExit) @06928b60
   Function flags: body
   Called by: 
   Calls: 
-Power_Ip_CM4_DisableSleepOnExit/1 (Power_Ip_CM4_DisableSleepOnExit) @06928d20
+Power_Ip_CM4_DisableSleepOnExit/1 (Power_Ip_CM4_DisableSleepOnExit) @06995d20
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: Power_Ip_pxCM4/0 (read) Power_Ip_pxCM4/0 (read) 
@@ -36,7 +36,7 @@ Power_Ip_CM4_DisableSleepOnExit/1 (Power_Ip_CM4_DisableSleepOnExit) @06928d20
   Function flags: body
   Called by: 
   Calls: 
-Power_Ip_pxCM4/0 (Power_Ip_pxCM4) @069308b8
+Power_Ip_pxCM4/0 (Power_Ip_pxCM4) @0699d8b8
   Type: variable definition analyzed
   Visibility: force_output no_reorder prevailing_def_ironly
   References: 

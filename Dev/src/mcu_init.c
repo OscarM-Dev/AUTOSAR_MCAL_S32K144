@@ -5,7 +5,7 @@
  */
 
 //Headers
-#include "Mcu_init.h"
+#include "mcu_init.h"
 
 /**
  * @brief This function configures the clock signals of the MCU.
@@ -23,7 +23,7 @@
  *  -SPLLDIV2_CLK -->Disabled
  *  -FIRCDIV1_CLK -->Disabled
  *  -FIRCDIV2_CLK -->Disabled
- *  -SIRCDIV1_CLK -->Disabled
+ *  -SIRCDIV1_CLK -->1 Mhz.
  *  -SIRCDIV2_CLK -->Disabled
  *  -SOSCDIV1_CLK  -->Disabled
  *  -SOSCDIV2_CLK  -->Disabled
@@ -40,7 +40,18 @@ void MCU_clocks( void ) {
     Mcu_DistributePllClock();//Executing pll clock configuration established in container.*/
 }
 
+/**
+ * @brief This function configures the gpt driver.
+ * This function initialices the gpt driver and enables the notifications of the gpt channels configurated.
+ * 
+ * 
+ */
+void Gpt_conf( void ) {
+    Gpt_Init( &Gpt_Config );//Initializing gpt driver and configurations.
 
+    //Enabling notifications
+    Gpt_EnableNotification( GptConf_GptChannelConfiguration_Gpt_Ftm0_ch0 );
+}
 
 /**
  * @brief This function initialize the microcontroller and the peripherals
@@ -51,5 +62,7 @@ void EcuM_Init( void )
 {   
     MCU_clocks();
     OsIf_Init( NULL_PTR );//Init Osif timer.
+    Gpt_conf();
     Port_Init( &Port_Config );//Init port driver and configuration.
+    Platform_Init( NULL_PTR );//Initializing platform driver and configurations.
 }

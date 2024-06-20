@@ -1,6 +1,6 @@
 Symbol table:
 
-undefined_handler/9 (undefined_handler) @068661c0
+undefined_handler/9 (undefined_handler) @069311c0
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: 
@@ -9,7 +9,7 @@ undefined_handler/9 (undefined_handler) @068661c0
   Function flags: body
   Called by: 
   Calls: 
-SysTick_Handler/8 (SysTick_Handler) @06863d20
+SysTick_Handler/8 (SysTick_Handler) @0692ed20
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public weak
   References: 
@@ -18,7 +18,7 @@ SysTick_Handler/8 (SysTick_Handler) @06863d20
   Function flags: body
   Called by: 
   Calls: 
-PendSV_Handler/7 (PendSV_Handler) @06863700
+PendSV_Handler/7 (PendSV_Handler) @0692e700
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public weak
   References: 
@@ -27,7 +27,7 @@ PendSV_Handler/7 (PendSV_Handler) @06863700
   Function flags: body
   Called by: 
   Calls: 
-DebugMon_Handler/6 (DebugMon_Handler) @068631c0
+DebugMon_Handler/6 (DebugMon_Handler) @0692e1c0
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public weak
   References: 
@@ -36,7 +36,7 @@ DebugMon_Handler/6 (DebugMon_Handler) @068631c0
   Function flags: body
   Called by: 
   Calls: 
-SVC_Handler/5 (SVC_Handler) @06863ee0
+SVC_Handler/5 (SVC_Handler) @0692eee0
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public weak
   References: 
@@ -45,7 +45,7 @@ SVC_Handler/5 (SVC_Handler) @06863ee0
   Function flags: body
   Called by: 
   Calls: 
-UsageFault_Handler/4 (UsageFault_Handler) @06863b60
+UsageFault_Handler/4 (UsageFault_Handler) @0692eb60
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public weak
   References: 
@@ -54,7 +54,7 @@ UsageFault_Handler/4 (UsageFault_Handler) @06863b60
   Function flags: body
   Called by: 
   Calls: 
-BusFault_Handler/3 (BusFault_Handler) @068638c0
+BusFault_Handler/3 (BusFault_Handler) @0692e8c0
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public weak
   References: 
@@ -63,7 +63,7 @@ BusFault_Handler/3 (BusFault_Handler) @068638c0
   Function flags: body
   Called by: 
   Calls: 
-MemManage_Handler/2 (MemManage_Handler) @06863620
+MemManage_Handler/2 (MemManage_Handler) @0692e620
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public weak
   References: 
@@ -72,7 +72,7 @@ MemManage_Handler/2 (MemManage_Handler) @06863620
   Function flags: body
   Called by: 
   Calls: 
-HardFault_Handler/1 (HardFault_Handler) @06863380
+HardFault_Handler/1 (HardFault_Handler) @0692e380
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public weak
   References: 
@@ -81,7 +81,7 @@ HardFault_Handler/1 (HardFault_Handler) @06863380
   Function flags: body
   Called by: 
   Calls: 
-NMI_Handler/0 (NMI_Handler) @0685a7e0
+NMI_Handler/0 (NMI_Handler) @069257e0
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public weak section:.systeminit
   References: 

@@ -1,0 +1,17 @@
+Ftm0_ch1_callback ()
+{
+  <bb 2> :
+  return;
+
+}
+
+
+Ftm0_ch0_callback ()
+{
+  <bb 2> :
+  DoubleClick_stMachine ();
+  return;
+
+}
+
+

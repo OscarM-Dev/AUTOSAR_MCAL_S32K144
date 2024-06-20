@@ -1,5 +1,6 @@
-IPA summary for EcuM_Init/2 is missing.
-IPA summary for MCU_clocks/1 is missing.
+IPA summary for EcuM_Init/10 is missing.
+IPA summary for Gpt_conf/9 is missing.
+IPA summary for MCU_clocks/8 is missing.
 
 Flattening functions:
 Overall time estimate: 0.000000 weighted by profile: 0.000000
@@ -15,93 +16,138 @@ Deciding on functions to be inlined into all callers and removing useless specul
 Overall time estimate: 0.000000 weighted by profile: 0.000000
 
 Why inlining failed?
-function not considered for inlining              :        1 calls, 1.000000 freq, 0 count
-function body not available                       :        5 calls, 5.000000 freq, 0 count
-IPA summary for EcuM_Init/2 is missing.
-IPA summary for MCU_clocks/1 is missing.
+function not considered for inlining              :        2 calls, 2.000000 freq, 0 count
+function body not available                       :        8 calls, 8.000000 freq, 0 count
+IPA summary for EcuM_Init/10 is missing.
+IPA summary for Gpt_conf/9 is missing.
+IPA summary for MCU_clocks/8 is missing.
 Symbol table:
 
-Port_Config/9 (Port_Config) @06b8a990
+Platform_Init/21 (Platform_Init) @071602a0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: EcuM_Init/10 
+  Calls: 
+Port_Config/20 (Port_Config) @0715f438
   Type: variable
   Body removed by symtab_remove_unreachable_nodes
   Visibility: external public
   References: 
-  Referring: EcuM_Init/2 (addr) 
+  Referring: EcuM_Init/10 (addr) 
   Availability: not_available
   Varpool flags: read-only
-Port_Init/8 (Port_Init) @06b8f0e0
+Port_Init/19 (Port_Init) @071601c0
   Type: function
   Visibility: external public
   References: 
   Referring: 
   Availability: not_available
   Function flags:
-  Called by: EcuM_Init/2 
+  Called by: EcuM_Init/10 
   Calls: 
-OsIf_Init/7 (OsIf_Init) @06b8f000
+OsIf_Init/18 (OsIf_Init) @071600e0
   Type: function
   Visibility: external public
   References: 
   Referring: 
   Availability: not_available
   Function flags:
-  Called by: EcuM_Init/2 
+  Called by: EcuM_Init/10 
   Calls: 
-Mcu_InitClock/6 (Mcu_InitClock) @06b8b540
+Gpt_EnableNotification/17 (Gpt_EnableNotification) @07140700
   Type: function
   Visibility: external public
   References: 
   Referring: 
   Availability: not_available
   Function flags:
-  Called by: MCU_clocks/1 
+  Called by: Gpt_conf/9 
   Calls: 
-Mcu_SetMode/5 (Mcu_SetMode) @06b8bee0
-  Type: function
-  Visibility: external public
-  References: 
-  Referring: 
-  Availability: not_available
-  Function flags:
-  Called by: MCU_clocks/1 
-  Calls: 
-Mcu_Config/4 (Mcu_Config) @06b8a6c0
+Gpt_Config/16 (Gpt_Config) @0715f120
   Type: variable
   Body removed by symtab_remove_unreachable_nodes
   Visibility: external public
   References: 
-  Referring: MCU_clocks/1 (addr) 
+  Referring: Gpt_conf/9 (addr) 
   Availability: not_available
   Varpool flags: read-only
-Mcu_Init/3 (Mcu_Init) @06b8be00
+Gpt_Init/15 (Gpt_Init) @07140460
   Type: function
   Visibility: external public
   References: 
   Referring: 
   Availability: not_available
   Function flags:
-  Called by: MCU_clocks/1 
+  Called by: Gpt_conf/9 
   Calls: 
-EcuM_Init/2 (EcuM_Init) @06b8b9a0
+Mcu_InitClock/14 (Mcu_InitClock) @07140ee0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: MCU_clocks/8 
+  Calls: 
+Mcu_SetMode/13 (Mcu_SetMode) @07140e00
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: MCU_clocks/8 
+  Calls: 
+Mcu_Config/12 (Mcu_Config) @0713cee8
+  Type: variable
+  Body removed by symtab_remove_unreachable_nodes
+  Visibility: external public
+  References: 
+  Referring: MCU_clocks/8 (addr) 
+  Availability: not_available
+  Varpool flags: read-only
+Mcu_Init/11 (Mcu_Init) @07140d20
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: MCU_clocks/8 
+  Calls: 
+EcuM_Init/10 (EcuM_Init) @071408c0
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
-  References: Port_Config/9 (addr) 
+  References: Port_Config/20 (addr) 
   Referring: 
   Availability: available
   Function flags: body
   Called by: 
-  Calls: Port_Init/8 OsIf_Init/7 MCU_clocks/1 
-MCU_clocks/1 (MCU_clocks) @06b8b700
+  Calls: Platform_Init/21 Port_Init/19 Gpt_conf/9 OsIf_Init/18 MCU_clocks/8 
+Gpt_conf/9 (Gpt_conf) @07140620
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
-  References: Mcu_Config/4 (addr) 
+  References: Gpt_Config/16 (addr) 
   Referring: 
   Availability: available
   Function flags: body
-  Called by: EcuM_Init/2 
-  Calls: Mcu_InitClock/6 Mcu_SetMode/5 Mcu_Init/3 
+  Called by: EcuM_Init/10 
+  Calls: Gpt_EnableNotification/17 Gpt_Init/15 
+MCU_clocks/8 (MCU_clocks) @07140380
+  Type: function definition analyzed
+  Visibility: force_output externally_visible no_reorder public
+  References: Mcu_Config/12 (addr) 
+  Referring: 
+  Availability: available
+  Function flags: body
+  Called by: EcuM_Init/10 
+  Calls: Mcu_InitClock/14 Mcu_SetMode/13 Mcu_Init/11 
 
-;; Function MCU_clocks (MCU_clocks, funcdef_no=1, decl_uid=6064, cgraph_uid=2, symbol_order=1)
+;; Function MCU_clocks (MCU_clocks, funcdef_no=8, decl_uid=7266, cgraph_uid=9, symbol_order=8)
 
 MCU_clocks ()
 {
@@ -115,14 +161,29 @@ MCU_clocks ()
 
 
 
-;; Function EcuM_Init (EcuM_Init, funcdef_no=2, decl_uid=6066, cgraph_uid=3, symbol_order=2)
+;; Function Gpt_conf (Gpt_conf, funcdef_no=9, decl_uid=7268, cgraph_uid=10, symbol_order=9)
+
+Gpt_conf ()
+{
+  <bb 2> :
+  Gpt_Init (&Gpt_Config);
+  Gpt_EnableNotification (0);
+  return;
+
+}
+
+
+
+;; Function EcuM_Init (EcuM_Init, funcdef_no=10, decl_uid=7270, cgraph_uid=11, symbol_order=10)
 
 EcuM_Init ()
 {
   <bb 2> :
   MCU_clocks ();
   OsIf_Init (0B);
+  Gpt_conf ();
   Port_Init (&Port_Config);
+  Platform_Init (0B);
   return;
 
 }

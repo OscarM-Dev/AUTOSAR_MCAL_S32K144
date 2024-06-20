@@ -1,6 +1,6 @@
 Symbol table:
 
-Dio_Ipw_WriteChannelGroup/13 (Dio_Ipw_WriteChannelGroup) @068fe460
+Dio_Ipw_WriteChannelGroup/13 (Dio_Ipw_WriteChannelGroup) @0699c460
   Type: function
   Visibility: external public
   References: 
@@ -9,7 +9,7 @@ Dio_Ipw_WriteChannelGroup/13 (Dio_Ipw_WriteChannelGroup) @068fe460
   Function flags:
   Called by: Dio_WriteChannelGroup/6 
   Calls: 
-Dio_Ipw_ReadChannelGroup/12 (Dio_Ipw_ReadChannelGroup) @068fe2a0
+Dio_Ipw_ReadChannelGroup/12 (Dio_Ipw_ReadChannelGroup) @0699c2a0
   Type: function
   Visibility: external public
   References: 
@@ -18,7 +18,7 @@ Dio_Ipw_ReadChannelGroup/12 (Dio_Ipw_ReadChannelGroup) @068fe2a0
   Function flags:
   Called by: Dio_ReadChannelGroup/5 
   Calls: 
-Dio_Ipw_WritePort/11 (Dio_Ipw_WritePort) @068fe0e0
+Dio_Ipw_WritePort/11 (Dio_Ipw_WritePort) @0699c0e0
   Type: function
   Visibility: external public
   References: 
@@ -27,7 +27,7 @@ Dio_Ipw_WritePort/11 (Dio_Ipw_WritePort) @068fe0e0
   Function flags:
   Called by: Dio_WritePort/4 
   Calls: 
-Dio_Ipw_ReadPort/10 (Dio_Ipw_ReadPort) @068f8620
+Dio_Ipw_ReadPort/10 (Dio_Ipw_ReadPort) @06996620
   Type: function
   Visibility: external public
   References: 
@@ -36,7 +36,7 @@ Dio_Ipw_ReadPort/10 (Dio_Ipw_ReadPort) @068f8620
   Function flags:
   Called by: Dio_ReadPort/3 
   Calls: 
-Dio_Ipw_FlipChannel/9 (Dio_Ipw_FlipChannel) @068f80e0
+Dio_Ipw_FlipChannel/9 (Dio_Ipw_FlipChannel) @069960e0
   Type: function
   Visibility: external public
   References: 
@@ -45,7 +45,7 @@ Dio_Ipw_FlipChannel/9 (Dio_Ipw_FlipChannel) @068f80e0
   Function flags:
   Called by: Dio_FlipChannel/2 
   Calls: 
-Dio_Ipw_WriteChannel/8 (Dio_Ipw_WriteChannel) @068f8e00
+Dio_Ipw_WriteChannel/8 (Dio_Ipw_WriteChannel) @06996e00
   Type: function
   Visibility: external public
   References: 
@@ -54,7 +54,7 @@ Dio_Ipw_WriteChannel/8 (Dio_Ipw_WriteChannel) @068f8e00
   Function flags:
   Called by: Dio_WriteChannel/1 
   Calls: 
-Dio_Ipw_ReadChannel/7 (Dio_Ipw_ReadChannel) @068f8c40
+Dio_Ipw_ReadChannel/7 (Dio_Ipw_ReadChannel) @06996c40
   Type: function
   Visibility: external public
   References: 
@@ -63,7 +63,7 @@ Dio_Ipw_ReadChannel/7 (Dio_Ipw_ReadChannel) @068f8c40
   Function flags:
   Called by: Dio_ReadChannel/0 
   Calls: 
-Dio_WriteChannelGroup/6 (Dio_WriteChannelGroup) @068f87e0
+Dio_WriteChannelGroup/6 (Dio_WriteChannelGroup) @069967e0
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: 
@@ -72,7 +72,7 @@ Dio_WriteChannelGroup/6 (Dio_WriteChannelGroup) @068f87e0
   Function flags: body
   Called by: 
   Calls: Dio_Ipw_WriteChannelGroup/13 
-Dio_ReadChannelGroup/5 (Dio_ReadChannelGroup) @068f8540
+Dio_ReadChannelGroup/5 (Dio_ReadChannelGroup) @06996540
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: 
@@ -81,7 +81,7 @@ Dio_ReadChannelGroup/5 (Dio_ReadChannelGroup) @068f8540
   Function flags: body
   Called by: 
   Calls: Dio_Ipw_ReadChannelGroup/12 
-Dio_WritePort/4 (Dio_WritePort) @068f82a0
+Dio_WritePort/4 (Dio_WritePort) @069962a0
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: 
@@ -90,7 +90,7 @@ Dio_WritePort/4 (Dio_WritePort) @068f82a0
   Function flags: body
   Called by: 
   Calls: Dio_Ipw_WritePort/11 
-Dio_ReadPort/3 (Dio_ReadPort) @068f8000
+Dio_ReadPort/3 (Dio_ReadPort) @06996000
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: 
@@ -99,7 +99,7 @@ Dio_ReadPort/3 (Dio_ReadPort) @068f8000
   Function flags: body
   Called by: 
   Calls: Dio_Ipw_ReadPort/10 
-Dio_FlipChannel/2 (Dio_FlipChannel) @0692aa80
+Dio_FlipChannel/2 (Dio_FlipChannel) @069c9a80
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: 
@@ -108,7 +108,7 @@ Dio_FlipChannel/2 (Dio_FlipChannel) @0692aa80
   Function flags: body
   Called by: 
   Calls: Dio_Ipw_FlipChannel/9 
-Dio_WriteChannel/1 (Dio_WriteChannel) @0692aee0
+Dio_WriteChannel/1 (Dio_WriteChannel) @069c9ee0
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: 
@@ -117,7 +117,7 @@ Dio_WriteChannel/1 (Dio_WriteChannel) @0692aee0
   Function flags: body
   Called by: 
   Calls: Dio_Ipw_WriteChannel/8 
-Dio_ReadChannel/0 (Dio_ReadChannel) @0692ac40
+Dio_ReadChannel/0 (Dio_ReadChannel) @069c9c40
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: 

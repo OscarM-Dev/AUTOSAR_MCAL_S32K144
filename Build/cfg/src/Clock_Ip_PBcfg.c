@@ -178,11 +178,11 @@ const Clock_Ip_ClockConfigType Mcu_aClockConfigPB[1U] = {
         0U,                                 /* clkConfigId */
         (NULL_PTR),                                 /* Register data if register value optimization is enabled */
 
-        1U,                                 /* ircoscsCount */
+        2U,                                 /* ircoscsCount */
         0U,                                 /* xoscsCount */
         0U,                                 /* pllsCount */
         20U,                                /* selectorsCount */
-        12U,                                /* dividersCount */
+        14U,                                /* dividersCount */
         0U,                                 /* dividerTriggersCount */
         0U,                                /* fracDivsCount */
         4U,                                /* extClksCount */
@@ -193,6 +193,16 @@ const Clock_Ip_ClockConfigType Mcu_aClockConfigPB[1U] = {
 
         /* IRCOSC initialization. */
         {
+            #if CLOCK_IP_IRCOSCS_NO > 0U
+            {
+                SIRC_CLK,    /* Clock name associated to Ircosc */
+                1U,                       /* Enable ircosc */
+                0U,              /* Enable regulator */
+                1U,                     /* Ircosc range  */
+                1U,        /* Ircosc enable in VLP mode  */
+                0U,                     /* Ircosc enable in STOP mode  */
+            },
+            #endif
             #if CLOCK_IP_IRCOSCS_NO > 1U
             {
                 FIRC_CLK,    /* Clock name associated to Ircosc */
@@ -203,14 +213,6 @@ const Clock_Ip_ClockConfigType Mcu_aClockConfigPB[1U] = {
                 0U,                     /* Ircosc enable in STOP mode  */
             },
             #endif
-            {
-                RESERVED_CLK,           /* Clock name associated to Ircosc */
-                0U,                     /* Enable ircosc */
-                0U,                     /* Enable regulator */
-                0U,                     /* Ircosc range  */
-                0U,                     /* Ircosc enable in VLP mode */
-                0U,                     /* Ircosc enable in STOP mode */
-            },
         },
 
         /* XOSC initialization. */
@@ -290,14 +292,14 @@ const Clock_Ip_ClockConfigType Mcu_aClockConfigPB[1U] = {
             #if CLOCK_IP_SELECTORS_NO > 3U
             {
                 SCG_CLKOUT_CLK,                     /* Clock name associated to selector */
-                SLOW_CLK,                       /* Name of the selected input source */
+                SIRC_CLK,                       /* Name of the selected input source */
             },
             #endif
         
             #if CLOCK_IP_SELECTORS_NO > 4U
             {
                 FTM0_CLK,                     /* Clock name associated to selector */
-                CLOCK_IS_OFF,                       /* Name of the selected input source */
+                SIRCDIV1_CLK,                       /* Name of the selected input source */
             },
             #endif
         
@@ -453,8 +455,8 @@ const Clock_Ip_ClockConfigType Mcu_aClockConfigPB[1U] = {
         
             #if CLOCK_IP_DIVIDERS_NO > 0U
             {
-                FIRCDIV1_CLK,
-                1U,
+                SIRCDIV1_CLK,
+                8U,
                 {
                     0U,
                 }
@@ -463,7 +465,7 @@ const Clock_Ip_ClockConfigType Mcu_aClockConfigPB[1U] = {
         
             #if CLOCK_IP_DIVIDERS_NO > 1U
             {
-                FIRCDIV2_CLK,
+                SIRCDIV2_CLK,
                 1U,
                 {
                     0U,
@@ -473,7 +475,7 @@ const Clock_Ip_ClockConfigType Mcu_aClockConfigPB[1U] = {
         
             #if CLOCK_IP_DIVIDERS_NO > 2U
             {
-                CORE_RUN_CLK,
+                FIRCDIV1_CLK,
                 1U,
                 {
                     0U,
@@ -483,8 +485,8 @@ const Clock_Ip_ClockConfigType Mcu_aClockConfigPB[1U] = {
         
             #if CLOCK_IP_DIVIDERS_NO > 3U
             {
-                CORE_VLPR_CLK,
-                2U,
+                FIRCDIV2_CLK,
+                1U,
                 {
                     0U,
                 }
@@ -493,7 +495,7 @@ const Clock_Ip_ClockConfigType Mcu_aClockConfigPB[1U] = {
         
             #if CLOCK_IP_DIVIDERS_NO > 4U
             {
-                CORE_HSRUN_CLK,
+                CORE_RUN_CLK,
                 1U,
                 {
                     0U,
@@ -503,8 +505,8 @@ const Clock_Ip_ClockConfigType Mcu_aClockConfigPB[1U] = {
         
             #if CLOCK_IP_DIVIDERS_NO > 5U
             {
-                BUS_RUN_CLK,
-                1U,
+                CORE_VLPR_CLK,
+                2U,
                 {
                     0U,
                 }
@@ -513,8 +515,8 @@ const Clock_Ip_ClockConfigType Mcu_aClockConfigPB[1U] = {
         
             #if CLOCK_IP_DIVIDERS_NO > 6U
             {
-                BUS_VLPR_CLK,
-                2U,
+                CORE_HSRUN_CLK,
+                1U,
                 {
                     0U,
                 }
@@ -523,7 +525,7 @@ const Clock_Ip_ClockConfigType Mcu_aClockConfigPB[1U] = {
         
             #if CLOCK_IP_DIVIDERS_NO > 7U
             {
-                BUS_HSRUN_CLK,
+                BUS_RUN_CLK,
                 1U,
                 {
                     0U,
@@ -533,7 +535,7 @@ const Clock_Ip_ClockConfigType Mcu_aClockConfigPB[1U] = {
         
             #if CLOCK_IP_DIVIDERS_NO > 8U
             {
-                SLOW_RUN_CLK,
+                BUS_VLPR_CLK,
                 2U,
                 {
                     0U,
@@ -543,8 +545,8 @@ const Clock_Ip_ClockConfigType Mcu_aClockConfigPB[1U] = {
         
             #if CLOCK_IP_DIVIDERS_NO > 9U
             {
-                SLOW_VLPR_CLK,
-                4U,
+                BUS_HSRUN_CLK,
+                1U,
                 {
                     0U,
                 }
@@ -553,7 +555,7 @@ const Clock_Ip_ClockConfigType Mcu_aClockConfigPB[1U] = {
         
             #if CLOCK_IP_DIVIDERS_NO > 10U
             {
-                SLOW_HSRUN_CLK,
+                SLOW_RUN_CLK,
                 2U,
                 {
                     0U,
@@ -563,6 +565,26 @@ const Clock_Ip_ClockConfigType Mcu_aClockConfigPB[1U] = {
         
             #if CLOCK_IP_DIVIDERS_NO > 11U
             {
+                SLOW_VLPR_CLK,
+                4U,
+                {
+                    0U,
+                }
+            },
+            #endif
+        
+            #if CLOCK_IP_DIVIDERS_NO > 12U
+            {
+                SLOW_HSRUN_CLK,
+                2U,
+                {
+                    0U,
+                }
+            },
+            #endif
+        
+            #if CLOCK_IP_DIVIDERS_NO > 13U
+            {
                 LPTMR0_CLK,
                 1U,
                 {
@@ -570,22 +592,6 @@ const Clock_Ip_ClockConfigType Mcu_aClockConfigPB[1U] = {
                 }
             },
             #endif
-        
-            {
-                RESERVED_CLK,
-                0U,
-                {
-                    0U,
-                },
-            },
-        
-            {
-                RESERVED_CLK,
-                0U,
-                {
-                    0U,
-                },
-            },
         
             {
                 RESERVED_CLK,
@@ -762,7 +768,7 @@ const Clock_Ip_ClockConfigType Mcu_aClockConfigPB[1U] = {
             #if CLOCK_IP_GATES_NO > 11U
             {
                 FTM0_CLK,                  /*!<     name;                    */
-                0U,                           /*!<     enable;                  */
+                1U,                           /*!<     enable;                  */
             },
             #endif
             #if CLOCK_IP_GATES_NO > 12U

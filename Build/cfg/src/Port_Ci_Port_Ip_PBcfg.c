@@ -146,11 +146,11 @@ const Port_Ci_Port_Ip_PinSettingsConfig g_pin_mux_InitConfigArr[NUM_OF_CONFIGURE
         .initValue                   = 0
     },
     {
-        .portBase                    = IP_PORTC,
-        .gpioBase                    = IP_PTC,
-        .pinPortIdx                  = 11,
+        .portBase                    = IP_PORTE,
+        .gpioBase                    = IP_PTE,
+        .pinPortIdx                  = 12,
         .mux                         = PORT_MUX_AS_GPIO,
-        .direction                   = PORT_CI_PORT_PIN_OUT,
+        .direction                   = PORT_CI_PORT_PIN_IN,
         .pullConfig                  = PORT_INTERNAL_PULL_NOT_ENABLED,
         .driveStrength               = PORT_DRIVE_STRENGTH_LOW,
         .passiveFilter               = (boolean)FALSE,

@@ -9,12 +9,16 @@
 
 //Headers.
 #include "Mcu.h"
+#include "Platform.h"
+#include "OsIf.h"
+#include "Gpt.h"
 #include "Port.h"
 #include "Dio.h"
-#include "OsIf.h"
+
 
 //Function declarations.
 void MCU_clocks( void );
+void Gpt_conf( void );
 void EcuM_Init( void );
 
 

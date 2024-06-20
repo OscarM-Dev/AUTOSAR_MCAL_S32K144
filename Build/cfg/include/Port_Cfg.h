@@ -704,7 +704,7 @@ PORT_CONFIG_PB
 #define PortConf_PortPin_PTC8  0
 #define PortConf_PortPin_PTC9  1
 #define PortConf_PortPin_PTC10  2
-#define PortConf_PortPin_PTC11  3
+#define PortConf_PortPin_PTE12  3
 
 
 /**

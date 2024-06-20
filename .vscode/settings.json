@@ -59,6 +59,7 @@
   "files.associations": {
     "platform_types.h": "c",
     "platformtypes.h": "c",
-    "std_types.h": "c"
+    "std_types.h": "c",
+    "mcu_init.h": "c"
   }
 }

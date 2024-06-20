@@ -52,7 +52,7 @@
                 </d:ctr>
                 <d:lst name="PortContainer" type="MAP">
                   <d:ctr name="PTC" type="IDENTIFIABLE">
-                    <d:var name="PortNumberOfPortPins" type="INTEGER" value="4"/>
+                    <d:var name="PortNumberOfPortPins" type="INTEGER" value="3"/>
                     <d:lst name="PortPin" type="MAP">
                       <d:ctr name="PTC8" type="IDENTIFIABLE">
                         <d:var name="PortPinPFE" type="BOOLEAN" value="false">
@@ -223,7 +223,12 @@
                         </d:var>
                         <d:lst name="PortPinEcucPartitionRef"/>
                       </d:ctr>
-                      <d:ctr name="PTC11" type="IDENTIFIABLE">
+                    </d:lst>
+                  </d:ctr>
+                  <d:ctr name="PTE" type="IDENTIFIABLE">
+                    <d:var name="PortNumberOfPortPins" type="INTEGER" value="1"/>
+                    <d:lst name="PortPin" type="MAP">
+                      <d:ctr name="PTE12" type="IDENTIFIABLE">
                         <d:var name="PortPinPFE" type="BOOLEAN" value="false">
                           <a:a name="IMPORTER_INFO" value="@DEF"/>
                         </d:var>
@@ -247,7 +252,7 @@
                             <a:v>@CALC</a:v>
                           </a:a>
                         </d:var>
-                        <d:var name="PortPinPcr" type="INTEGER" value="75"/>
+                        <d:var name="PortPinPcr" type="INTEGER" value="140"/>
                         <d:var name="PortPinMode" type="ENUMERATION" 
                                value="GPIO">
                           <a:a name="IMPORTER_INFO" value="@DEF"/>
@@ -269,7 +274,9 @@
                           <a:a name="IMPORTER_INFO" value="@DEF"/>
                         </d:var>
                         <d:var name="PortPinDirection" type="ENUMERATION" 
-                               value="PORT_PIN_OUT"/>
+                               value="PORT_PIN_IN">
+                          <a:a name="IMPORTER_INFO" value="@DEF"/>
+                        </d:var>
                         <d:var name="PortPinInitialMode" type="ENUMERATION" 
                                value="PORT_GPIO_MODE">
                           <a:a name="IMPORTER_INFO" value="@DEF"/>

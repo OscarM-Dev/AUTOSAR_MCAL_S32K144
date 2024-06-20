@@ -19,7 +19,7 @@ Deciding on functions to be inlined into all callers and removing useless specul
 Overall time estimate: 0.000000 weighted by profile: 0.000000
 
 Why inlining failed?
-function body not available                       :        6 calls, 6.000000 freq, 0 count
+function body not available                       :        2 calls, 2.000000 freq, 0 count
 IPA summary for Timer2_callback/55 is missing.
 IPA summary for Timer1_callback/54 is missing.
 IPA summary for Task2_callback/53 is missing.
@@ -28,7 +28,7 @@ IPA summary for Task2_init/51 is missing.
 IPA summary for Task1_init/50 is missing.
 Symbol table:
 
-Sche/58 (Sche) @069a2090
+Sche/57 (Sche) @06a1b000
   Type: variable
   Body removed by symtab_remove_unreachable_nodes
   Visibility: external public
@@ -36,7 +36,7 @@ Sche/58 (Sche) @069a2090
   Referring: Timer1_callback/54 (addr) Timer2_callback/55 (addr) 
   Availability: not_available
   Varpool flags:
-Sched_startTimer/57 (Sched_startTimer) @0699fa80
+Sched_startTimer/56 (Sched_startTimer) @06a189a0
   Type: function
   Visibility: external public
   References: 
@@ -45,52 +45,25 @@ Sched_startTimer/57 (Sched_startTimer) @0699fa80
   Function flags:
   Called by: Timer2_callback/55 Timer1_callback/54 
   Calls: 
-Dio_FlipChannel/56 (Dio_FlipChannel) @0699f7e0
-  Type: function
-  Visibility: external public
-  References: 
-  Referring: 
-  Availability: not_available
-  Function flags:
-  Called by: Timer2_callback/55 Timer1_callback/54 Task2_callback/53 Task1_callback/52 
-  Calls: 
-Timer2_callback/55 (Timer2_callback) @0699f1c0
+Timer2_callback/55 (Timer2_callback) @06a181c0
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
-  References: Sche/58 (addr) 
+  References: Sche/57 (addr) 
   Referring: 
   Availability: available
   Function flags: body
   Called by: 
-  Calls: Sched_startTimer/57 Dio_FlipChannel/56 
-Timer1_callback/54 (Timer1_callback) @0699cd20
+  Calls: Sched_startTimer/56 
+Timer1_callback/54 (Timer1_callback) @06a16d20
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
-  References: Sche/58 (addr) 
+  References: Sche/57 (addr) 
   Referring: 
   Availability: available
   Function flags: body
   Called by: 
-  Calls: Sched_startTimer/57 Dio_FlipChannel/56 
-Task2_callback/53 (Task2_callback) @0699c7e0
-  Type: function definition analyzed
-  Visibility: force_output externally_visible no_reorder public
-  References: 
-  Referring: 
-  Availability: available
-  Function flags: body
-  Called by: 
-  Calls: Dio_FlipChannel/56 
-Task1_callback/52 (Task1_callback) @0699cee0
-  Type: function definition analyzed
-  Visibility: force_output externally_visible no_reorder public
-  References: 
-  Referring: 
-  Availability: available
-  Function flags: body
-  Called by: 
-  Calls: Dio_FlipChannel/56 
-Task2_init/51 (Task2_init) @0699cc40
+  Calls: Sched_startTimer/56 
+Task2_callback/53 (Task2_callback) @06a167e0
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: 
@@ -99,7 +72,25 @@ Task2_init/51 (Task2_init) @0699cc40
   Function flags: body
   Called by: 
   Calls: 
-Task1_init/50 (Task1_init) @0699c9a0
+Task1_callback/52 (Task1_callback) @06a16ee0
+  Type: function definition analyzed
+  Visibility: force_output externally_visible no_reorder public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: body
+  Called by: 
+  Calls: 
+Task2_init/51 (Task2_init) @06a16c40
+  Type: function definition analyzed
+  Visibility: force_output externally_visible no_reorder public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: body
+  Called by: 
+  Calls: 
+Task1_init/50 (Task1_init) @06a169a0
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: 
@@ -136,7 +127,6 @@ Task2_init ()
 Task1_callback ()
 {
   <bb 2> :
-  Dio_FlipChannel (72);
   return;
 
 }
@@ -148,7 +138,6 @@ Task1_callback ()
 Task2_callback ()
 {
   <bb 2> :
-  Dio_FlipChannel (73);
   return;
 
 }
@@ -160,7 +149,6 @@ Task2_callback ()
 Timer1_callback ()
 {
   <bb 2> :
-  Dio_FlipChannel (74);
   Sched_startTimer (&Sche, 1);
   return;
 
@@ -173,7 +161,6 @@ Timer1_callback ()
 Timer2_callback ()
 {
   <bb 2> :
-  Dio_FlipChannel (75);
   Sched_startTimer (&Sche, 2);
   return;
 

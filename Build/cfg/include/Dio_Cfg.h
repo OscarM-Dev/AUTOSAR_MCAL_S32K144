@@ -268,13 +268,21 @@ extern "C" {
 */
 #define  DioConf_DioChannel_PTC10 ((uint16)0x004aU)
 
+/* ---------- PTE ---------- */
+
+/**
+* @brief          Symbolic name for the port PTE.
+*
+*/
+#define DioConf_DioPort_PTE  ((uint8)0x04U)
+
 
 
 /**
-* @brief          Symbolic name for the channel PTC11.
+* @brief          Symbolic name for the channel PTE12.
 *
 */
-#define  DioConf_DioChannel_PTC11 ((uint16)0x004bU)
+#define  DioConf_DioChannel_PTE12 ((uint16)0x008cU)
 
 
 /*=================================================================================================

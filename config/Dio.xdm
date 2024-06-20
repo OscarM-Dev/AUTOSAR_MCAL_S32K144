@@ -42,8 +42,15 @@
                         <d:var name="DioChannelId" type="INTEGER" value="10"/>
                         <d:lst name="DioChannelEcucPartitionRef"/>
                       </d:ctr>
-                      <d:ctr name="PTC11" type="IDENTIFIABLE">
-                        <d:var name="DioChannelId" type="INTEGER" value="11"/>
+                    </d:lst>
+                    <d:lst name="DioChannelGroup" type="MAP"/>
+                    <d:lst name="DioPortEcucPartitionRef"/>
+                  </d:ctr>
+                  <d:ctr name="PTE" type="IDENTIFIABLE">
+                    <d:var name="DioPortId" type="INTEGER" value="4"/>
+                    <d:lst name="DioChannel" type="MAP">
+                      <d:ctr name="PTE12" type="IDENTIFIABLE">
+                        <d:var name="DioChannelId" type="INTEGER" value="12"/>
                         <d:lst name="DioChannelEcucPartitionRef"/>
                       </d:ctr>
                     </d:lst>

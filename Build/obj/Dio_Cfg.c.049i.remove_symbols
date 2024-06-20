@@ -4,35 +4,35 @@ Reclaiming variables:
 Clearing address taken flags:
 Symbol table:
 
-Dio_Config/4 (Dio_Config) @068b37e0
+Dio_Config/4 (Dio_Config) @0689a828
   Type: variable definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: Dio_au32ChannelToPartitionMap/0 (addr) Dio_au32PortToPartitionMap/1 (addr) 
   Referring: 
   Availability: available
   Varpool flags: initialized read-only const-value-known
-Dio_aAvailablePinsForRead/3 (Dio_aAvailablePinsForRead) @068b3798
+Dio_aAvailablePinsForRead/3 (Dio_aAvailablePinsForRead) @0689a7e0
   Type: variable definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: 
   Referring: 
   Availability: available
   Varpool flags: initialized read-only const-value-known
-Dio_aAvailablePinsForWrite/2 (Dio_aAvailablePinsForWrite) @068b3708
+Dio_aAvailablePinsForWrite/2 (Dio_aAvailablePinsForWrite) @0689a750
   Type: variable definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: 
   Referring: 
   Availability: available
   Varpool flags: initialized read-only const-value-known
-Dio_au32PortToPartitionMap/1 (Dio_au32PortToPartitionMap) @068b3678
+Dio_au32PortToPartitionMap/1 (Dio_au32PortToPartitionMap) @0689a6c0
   Type: variable definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: 
   Referring: Dio_Config/4 (addr) 
   Availability: available
   Varpool flags: initialized read-only const-value-known
-Dio_au32ChannelToPartitionMap/0 (Dio_au32ChannelToPartitionMap) @068b35e8
+Dio_au32ChannelToPartitionMap/0 (Dio_au32ChannelToPartitionMap) @0689a630
   Type: variable definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: 
