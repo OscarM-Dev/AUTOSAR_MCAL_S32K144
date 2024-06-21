@@ -3,9 +3,7 @@ EcuM_Init ()
   <bb 2> :
   MCU_clocks ();
   OsIf_Init (0B);
-  Gpt_conf ();
   Port_Init (&Port_Config);
-  Platform_Init (0B);
   return;
 
 }
@@ -14,8 +12,6 @@ EcuM_Init ()
 Gpt_conf ()
 {
   <bb 2> :
-  Gpt_Init (&Gpt_Config);
-  Gpt_EnableNotification (0);
   return;
 
 }

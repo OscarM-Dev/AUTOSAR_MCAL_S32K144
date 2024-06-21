@@ -15,7 +15,7 @@ Overall time estimate: 0.000000 weighted by profile: 0.000000
 Why inlining failed?
 Symbol table:
 
-Power_Ip_HwIPsConfigPB/3 (Power_Ip_HwIPsConfigPB) @069d53a8
+Power_Ip_HwIPsConfigPB/3 (Power_Ip_HwIPsConfigPB) @069e73a8
   Type: variable
   Body removed by symtab_remove_unreachable_nodes
   Visibility: external public
@@ -23,7 +23,7 @@ Power_Ip_HwIPsConfigPB/3 (Power_Ip_HwIPsConfigPB) @069d53a8
   Referring: Mcu_Config/0 (addr) 
   Availability: not_available
   Varpool flags: read-only
-Mcu_aClockConfigPB/2 (Mcu_aClockConfigPB) @069d5360
+Mcu_aClockConfigPB/2 (Mcu_aClockConfigPB) @069e7360
   Type: variable
   Body removed by symtab_remove_unreachable_nodes
   Visibility: external public
@@ -31,7 +31,7 @@ Mcu_aClockConfigPB/2 (Mcu_aClockConfigPB) @069d5360
   Referring: Mcu_Config/0 (addr) 
   Availability: not_available
   Varpool flags: read-only
-Power_Ip_aModeConfigPB/1 (Power_Ip_aModeConfigPB) @069d5318
+Power_Ip_aModeConfigPB/1 (Power_Ip_aModeConfigPB) @069e7318
   Type: variable
   Body removed by symtab_remove_unreachable_nodes
   Visibility: external public
@@ -39,7 +39,7 @@ Power_Ip_aModeConfigPB/1 (Power_Ip_aModeConfigPB) @069d5318
   Referring: Mcu_Config/0 (addr) 
   Availability: not_available
   Varpool flags: read-only
-Mcu_Config/0 (Mcu_Config) @069d51f8
+Mcu_Config/0 (Mcu_Config) @069e71f8
   Type: variable definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: Power_Ip_aModeConfigPB/1 (addr) Mcu_aClockConfigPB/2 (addr) Power_Ip_HwIPsConfigPB/3 (addr) 

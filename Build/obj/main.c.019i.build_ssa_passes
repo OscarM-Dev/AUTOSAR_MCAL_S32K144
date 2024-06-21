@@ -1,12 +1,13 @@
 main ()
 {
-  int D.7294;
+  int D.6429;
 
   <bb 2> :
   EcuM_Init ();
-  Gpt_StartTimer (0, 3125);
+  Scheduler_Init (&Scheduler_Control);
 
   <bb 3> :
+  Scheduler_MainFunction ();
   goto <bb 3>; [INV]
 
 }

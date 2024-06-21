@@ -1,41 +1,24 @@
 Symbol table:
 
-Sche/57 (Sche) @06a1b000
-  Type: variable
-  Body removed by symtab_remove_unreachable_nodes
-  Visibility: external public
-  References: 
-  Referring: Timer1_callback/54 (addr) Timer2_callback/55 (addr) 
-  Availability: not_available
-  Varpool flags:
-Sched_startTimer/56 (Sched_startTimer) @06a189a0
+Scheduler_StartTimer/55 (Scheduler_StartTimer) @05d5b380
   Type: function
   Visibility: external public
   References: 
   Referring: 
   Availability: not_available
   Function flags:
-  Called by: Timer2_callback/55 Timer1_callback/54 
+  Called by: Timer2_callback/53 Timer1_callback/52 
   Calls: 
-Timer2_callback/55 (Timer2_callback) @06a181c0
-  Type: function definition analyzed
-  Visibility: force_output externally_visible no_reorder public
-  References: Sche/57 (addr) 
+Dio_FlipChannel/54 (Dio_FlipChannel) @05d5b0e0
+  Type: function
+  Visibility: external public
+  References: 
   Referring: 
-  Availability: available
-  Function flags: body
-  Called by: 
-  Calls: Sched_startTimer/56 
-Timer1_callback/54 (Timer1_callback) @06a16d20
-  Type: function definition analyzed
-  Visibility: force_output externally_visible no_reorder public
-  References: Sche/57 (addr) 
-  Referring: 
-  Availability: available
-  Function flags: body
-  Called by: 
-  Calls: Sched_startTimer/56 
-Task2_callback/53 (Task2_callback) @06a167e0
+  Availability: not_available
+  Function flags:
+  Called by: Timer2_callback/53 Timer1_callback/52 Task2_callback/51 Task1_callback/50 
+  Calls: 
+Timer2_callback/53 (Timer2_callback) @05d557e0
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: 
@@ -43,8 +26,8 @@ Task2_callback/53 (Task2_callback) @06a167e0
   Availability: available
   Function flags: body
   Called by: 
-  Calls: 
-Task1_callback/52 (Task1_callback) @06a16ee0
+  Calls: Scheduler_StartTimer/55 Dio_FlipChannel/54 
+Timer1_callback/52 (Timer1_callback) @05d559a0
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: 
@@ -52,8 +35,8 @@ Task1_callback/52 (Task1_callback) @06a16ee0
   Availability: available
   Function flags: body
   Called by: 
-  Calls: 
-Task2_init/51 (Task2_init) @06a16c40
+  Calls: Scheduler_StartTimer/55 Dio_FlipChannel/54 
+Task2_callback/51 (Task2_callback) @05d550e0
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: 
@@ -61,8 +44,8 @@ Task2_init/51 (Task2_init) @06a16c40
   Availability: available
   Function flags: body
   Called by: 
-  Calls: 
-Task1_init/50 (Task1_init) @06a169a0
+  Calls: Dio_FlipChannel/54 
+Task1_callback/50 (Task1_callback) @05d55d20
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: 
@@ -70,11 +53,12 @@ Task1_init/50 (Task1_init) @06a169a0
   Availability: available
   Function flags: body
   Called by: 
-  Calls: 
+  Calls: Dio_FlipChannel/54 
 Timer2_callback ()
 {
   <bb 2> :
-  Sched_startTimer (&Sche, 2);
+  Dio_FlipChannel (75);
+  Scheduler_StartTimer (2);
   return;
 
 }
@@ -83,7 +67,8 @@ Timer2_callback ()
 Timer1_callback ()
 {
   <bb 2> :
-  Sched_startTimer (&Sche, 1);
+  Dio_FlipChannel (74);
+  Scheduler_StartTimer (1);
   return;
 
 }
@@ -92,6 +77,7 @@ Timer1_callback ()
 Task2_callback ()
 {
   <bb 2> :
+  Dio_FlipChannel (73);
   return;
 
 }
@@ -100,22 +86,7 @@ Task2_callback ()
 Task1_callback ()
 {
   <bb 2> :
-  return;
-
-}
-
-
-Task2_init ()
-{
-  <bb 2> :
-  return;
-
-}
-
-
-Task1_init ()
-{
-  <bb 2> :
+  Dio_FlipChannel (72);
   return;
 
 }

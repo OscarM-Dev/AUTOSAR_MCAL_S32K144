@@ -268,6 +268,14 @@ extern "C" {
 */
 #define  DioConf_DioChannel_PTC10 ((uint16)0x004aU)
 
+
+
+/**
+* @brief          Symbolic name for the channel PTC11.
+*
+*/
+#define  DioConf_DioChannel_PTC11 ((uint16)0x004bU)
+
 /* ---------- PTE ---------- */
 
 /**

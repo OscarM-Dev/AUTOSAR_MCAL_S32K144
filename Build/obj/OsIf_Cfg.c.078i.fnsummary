@@ -1,13 +1,13 @@
 Symbol table:
 
-OsIf_apxPredefinedConfig/1 (OsIf_apxPredefinedConfig) @05e11990
+OsIf_apxPredefinedConfig/1 (OsIf_apxPredefinedConfig) @0686d990
   Type: variable definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: OsIf_xPredefinedConfig/0 (addr) 
   Referring: 
   Availability: available
   Varpool flags: initialized read-only const-value-known
-OsIf_xPredefinedConfig/0 (OsIf_xPredefinedConfig) @05e11900
+OsIf_xPredefinedConfig/0 (OsIf_xPredefinedConfig) @0686d900
   Type: variable definition analyzed
   Visibility: force_output no_reorder prevailing_def_ironly
   References: 

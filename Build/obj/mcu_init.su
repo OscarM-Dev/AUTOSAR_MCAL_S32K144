@@ -1,3 +1,3 @@
 Dev/src/mcu_init.c:31:6:MCU_clocks	8	static
-Dev/src/mcu_init.c:49:6:Gpt_conf	8	static
+Dev/src/mcu_init.c:49:6:Gpt_conf	0	static
 Dev/src/mcu_init.c:61:6:EcuM_Init	8	static

@@ -34,7 +34,7 @@ IPA summary for sys_disableAllInterrupts/1 is missing.
 IPA summary for sys_enableAllInterrupts/0 is missing.
 Symbol table:
 
-Sys_GetCoreID/13 (Sys_GetCoreID) @06cc4d20
+Sys_GetCoreID/13 (Sys_GetCoreID) @06be4d20
   Type: function
   Visibility: external public
   References: 
@@ -43,7 +43,7 @@ Sys_GetCoreID/13 (Sys_GetCoreID) @06cc4d20
   Function flags:
   Called by: EUnit_GetCoreID/9 
   Calls: 
-NVIC_EnableIRQ/12 (NVIC_EnableIRQ) @06cc4700
+NVIC_EnableIRQ/12 (NVIC_EnableIRQ) @06be4700
   Type: function
   Visibility: external public
   References: 
@@ -52,7 +52,7 @@ NVIC_EnableIRQ/12 (NVIC_EnableIRQ) @06cc4700
   Function flags:
   Called by: sys_enableIsrSource/3 
   Calls: 
-NVIC_SetPriority/11 (NVIC_SetPriority) @06cc4620
+NVIC_SetPriority/11 (NVIC_SetPriority) @06be4620
   Type: function
   Visibility: external public
   References: 
@@ -61,7 +61,7 @@ NVIC_SetPriority/11 (NVIC_SetPriority) @06cc4620
   Function flags:
   Called by: sys_enableIsrSource/3 
   Calls: 
-NVIC_DisableIRQ/10 (NVIC_DisableIRQ) @06cc4460
+NVIC_DisableIRQ/10 (NVIC_DisableIRQ) @06be4460
   Type: function
   Visibility: external public
   References: 
@@ -70,7 +70,7 @@ NVIC_DisableIRQ/10 (NVIC_DisableIRQ) @06cc4460
   Function flags:
   Called by: sys_disableIsrSource/2 
   Calls: 
-EUnit_GetCoreID/9 (EUnit_GetCoreID) @06ca4b60
+EUnit_GetCoreID/9 (EUnit_GetCoreID) @06bc4b60
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: 
@@ -79,7 +79,7 @@ EUnit_GetCoreID/9 (EUnit_GetCoreID) @06ca4b60
   Function flags: body
   Called by: 
   Calls: Sys_GetCoreID/13 
-sys_stop/8 (sys_stop) @06ca48c0
+sys_stop/8 (sys_stop) @06bc48c0
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: 
@@ -88,7 +88,7 @@ sys_stop/8 (sys_stop) @06ca48c0
   Function flags: body
   Called by: 
   Calls: 
-sys_halt/7 (sys_halt) @06ca4380
+sys_halt/7 (sys_halt) @06bc4380
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: 
@@ -97,7 +97,7 @@ sys_halt/7 (sys_halt) @06ca4380
   Function flags: body
   Called by: 
   Calls: 
-sys_init/6 (sys_init) @06ca4d20
+sys_init/6 (sys_init) @06bc4d20
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public section:.systeminit
   References: 
@@ -106,7 +106,7 @@ sys_init/6 (sys_init) @06ca4d20
   Function flags: body
   Called by: 
   Calls: 
-sys_registerIsrHandler/4 (sys_registerIsrHandler) @06ca4a80
+sys_registerIsrHandler/4 (sys_registerIsrHandler) @06bc4a80
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: 
@@ -115,7 +115,7 @@ sys_registerIsrHandler/4 (sys_registerIsrHandler) @06ca4a80
   Function flags: body
   Called by: 
   Calls: 
-sys_enableIsrSource/3 (sys_enableIsrSource) @06ca47e0
+sys_enableIsrSource/3 (sys_enableIsrSource) @06bc47e0
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: 
@@ -124,7 +124,7 @@ sys_enableIsrSource/3 (sys_enableIsrSource) @06ca47e0
   Function flags: body
   Called by: 
   Calls: NVIC_EnableIRQ/12 NVIC_SetPriority/11 
-sys_disableIsrSource/2 (sys_disableIsrSource) @06ca4540
+sys_disableIsrSource/2 (sys_disableIsrSource) @06bc4540
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: 
@@ -133,7 +133,7 @@ sys_disableIsrSource/2 (sys_disableIsrSource) @06ca4540
   Function flags: body
   Called by: 
   Calls: NVIC_DisableIRQ/10 
-sys_disableAllInterrupts/1 (sys_disableAllInterrupts) @06ca42a0
+sys_disableAllInterrupts/1 (sys_disableAllInterrupts) @06bc42a0
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: 
@@ -142,7 +142,7 @@ sys_disableAllInterrupts/1 (sys_disableAllInterrupts) @06ca42a0
   Function flags: body
   Called by: 
   Calls: 
-sys_enableAllInterrupts/0 (sys_enableAllInterrupts) @06ca4000
+sys_enableAllInterrupts/0 (sys_enableAllInterrupts) @06bc4000
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: 

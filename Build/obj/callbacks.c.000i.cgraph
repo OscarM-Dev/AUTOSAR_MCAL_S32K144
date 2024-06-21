@@ -1,78 +1,61 @@
-Trivially needed symbols: Timer2_callback/55 Timer1_callback/54 Task2_callback/53 Task1_callback/52 Task2_init/51 Task1_init/50
+Trivially needed symbols: Timer2_callback/53 Timer1_callback/52 Task2_callback/51 Task1_callback/50
 
 
 Initial Symbol table:
 
-Sche/57 (Sche) @06a1b000
-  Type: variable
-  Visibility: external public
-  References: 
-  Referring: Timer1_callback/54 (addr) Timer2_callback/55 (addr) 
-  Availability: not-ready
-  Varpool flags:
-Sched_startTimer/56 (Sched_startTimer) @06a189a0
+Scheduler_StartTimer/55 (Scheduler_StartTimer) @05d5b380
   Type: function
   Visibility: external public
   References: 
   Referring: 
   Function flags:
-  Called by: Timer2_callback/55 Timer1_callback/54 
+  Called by: Timer2_callback/53 Timer1_callback/52 
   Calls: 
-Timer2_callback/55 (Timer2_callback) @06a181c0
+Dio_FlipChannel/54 (Dio_FlipChannel) @05d5b0e0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: Timer2_callback/53 Timer1_callback/52 Task2_callback/51 Task1_callback/50 
+  Calls: 
+Timer2_callback/53 (Timer2_callback) @05d557e0
   Type: function definition analyzed
   Visibility: force_output no_reorder public
   Aux: @01981040
-  References: Sche/57 (addr) 
+  References: 
   Referring: 
   Function flags: body
   Called by: 
-  Calls: Sched_startTimer/56 
-Timer1_callback/54 (Timer1_callback) @06a16d20
+  Calls: Scheduler_StartTimer/55 Dio_FlipChannel/54 
+Timer1_callback/52 (Timer1_callback) @05d559a0
   Type: function definition analyzed
   Visibility: force_output no_reorder public
-  Aux: @06a181c0
-  References: Sche/57 (addr) 
+  Aux: @05d557e0
+  References: 
   Referring: 
   Function flags: body
   Called by: 
-  Calls: Sched_startTimer/56 
-Task2_callback/53 (Task2_callback) @06a167e0
+  Calls: Scheduler_StartTimer/55 Dio_FlipChannel/54 
+Task2_callback/51 (Task2_callback) @05d550e0
   Type: function definition analyzed
   Visibility: force_output no_reorder public
-  Aux: @06a16d20
+  Aux: @05d559a0
   References: 
   Referring: 
   Function flags: body
   Called by: 
-  Calls: 
-Task1_callback/52 (Task1_callback) @06a16ee0
+  Calls: Dio_FlipChannel/54 
+Task1_callback/50 (Task1_callback) @05d55d20
   Type: function definition analyzed
   Visibility: force_output no_reorder public
-  Aux: @06a167e0
+  Aux: @05d550e0
   References: 
   Referring: 
   Function flags: body
   Called by: 
-  Calls: 
-Task2_init/51 (Task2_init) @06a16c40
-  Type: function definition analyzed
-  Visibility: force_output no_reorder public
-  Aux: @06a16ee0
-  References: 
-  Referring: 
-  Function flags: body
-  Called by: 
-  Calls: 
-Task1_init/50 (Task1_init) @06a169a0
-  Type: function definition analyzed
-  Visibility: force_output no_reorder public
-  Aux: @06a16c40
-  References: 
-  Referring: 
-  Function flags: body
-  Called by: 
-  Calls: 
-Bfx_CountLeadingZeros_u8/49 (Bfx_CountLeadingZeros_u8) @0695e540
+  Calls: Dio_FlipChannel/54 
+Bfx_CountLeadingZeros_u8/49 (Bfx_CountLeadingZeros_u8) @05c9b540
   Type: function definition
   Visibility: no_reorder
   References: 
@@ -80,7 +63,7 @@ Bfx_CountLeadingZeros_u8/49 (Bfx_CountLeadingZeros_u8) @0695e540
   Function flags:
   Called by: 
   Calls: 
-Bfx_CountLeadingSigns_s8/48 (Bfx_CountLeadingSigns_s8) @0695e2a0
+Bfx_CountLeadingSigns_s8/48 (Bfx_CountLeadingSigns_s8) @05c9b2a0
   Type: function definition
   Visibility: no_reorder
   References: 
@@ -88,7 +71,7 @@ Bfx_CountLeadingSigns_s8/48 (Bfx_CountLeadingSigns_s8) @0695e2a0
   Function flags:
   Called by: 
   Calls: 
-Bfx_CountLeadingOnes_u8/47 (Bfx_CountLeadingOnes_u8) @0695e000
+Bfx_CountLeadingOnes_u8/47 (Bfx_CountLeadingOnes_u8) @05c9b000
   Type: function definition
   Visibility: no_reorder
   References: 
@@ -96,7 +79,7 @@ Bfx_CountLeadingOnes_u8/47 (Bfx_CountLeadingOnes_u8) @0695e000
   Function flags:
   Called by: 
   Calls: 
-Bfx_ShiftBitSat_s8s8_s8/46 (Bfx_ShiftBitSat_s8s8_s8) @06959d20
+Bfx_ShiftBitSat_s8s8_s8/46 (Bfx_ShiftBitSat_s8s8_s8) @05c96d20
   Type: function definition
   Visibility: no_reorder
   References: 
@@ -104,7 +87,7 @@ Bfx_ShiftBitSat_s8s8_s8/46 (Bfx_ShiftBitSat_s8s8_s8) @06959d20
   Function flags:
   Called by: 
   Calls: 
-Bfx_ShiftBitSat_u8s8_u8/45 (Bfx_ShiftBitSat_u8s8_u8) @06959a80
+Bfx_ShiftBitSat_u8s8_u8/45 (Bfx_ShiftBitSat_u8s8_u8) @05c96a80
   Type: function definition
   Visibility: no_reorder
   References: 
@@ -112,7 +95,7 @@ Bfx_ShiftBitSat_u8s8_u8/45 (Bfx_ShiftBitSat_u8s8_u8) @06959a80
   Function flags:
   Called by: 
   Calls: 
-Bfx_PutBits_u8u8u8u8/44 (Bfx_PutBits_u8u8u8u8) @069597e0
+Bfx_PutBits_u8u8u8u8/44 (Bfx_PutBits_u8u8u8u8) @05c967e0
   Type: function definition
   Visibility: no_reorder
   References: 
@@ -120,7 +103,7 @@ Bfx_PutBits_u8u8u8u8/44 (Bfx_PutBits_u8u8u8u8) @069597e0
   Function flags:
   Called by: 
   Calls: 
-Bfx_PutBitsMask_u8u8u8/43 (Bfx_PutBitsMask_u8u8u8) @06959540
+Bfx_PutBitsMask_u8u8u8/43 (Bfx_PutBitsMask_u8u8u8) @05c96540
   Type: function definition
   Visibility: no_reorder
   References: 
@@ -128,7 +111,7 @@ Bfx_PutBitsMask_u8u8u8/43 (Bfx_PutBitsMask_u8u8u8) @06959540
   Function flags:
   Called by: 
   Calls: 
-Bfx_PutBit_u8u8u8/42 (Bfx_PutBit_u8u8u8) @069592a0
+Bfx_PutBit_u8u8u8/42 (Bfx_PutBit_u8u8u8) @05c962a0
   Type: function definition
   Visibility: no_reorder
   References: 
@@ -136,7 +119,7 @@ Bfx_PutBit_u8u8u8/42 (Bfx_PutBit_u8u8u8) @069592a0
   Function flags:
   Called by: 
   Calls: 
-Bfx_CopyBit_u8u8u8u8/41 (Bfx_CopyBit_u8u8u8u8) @06959000
+Bfx_CopyBit_u8u8u8u8/41 (Bfx_CopyBit_u8u8u8u8) @05c96000
   Type: function definition
   Visibility: no_reorder
   References: 
@@ -144,7 +127,7 @@ Bfx_CopyBit_u8u8u8u8/41 (Bfx_CopyBit_u8u8u8u8) @06959000
   Function flags:
   Called by: 
   Calls: 
-Bfx_RotBitLt_u8u8/40 (Bfx_RotBitLt_u8u8) @06954d20
+Bfx_RotBitLt_u8u8/40 (Bfx_RotBitLt_u8u8) @05c92d20
   Type: function definition
   Visibility: no_reorder
   References: 
@@ -152,7 +135,7 @@ Bfx_RotBitLt_u8u8/40 (Bfx_RotBitLt_u8u8) @06954d20
   Function flags:
   Called by: 
   Calls: 
-Bfx_RotBitRt_u8u8/39 (Bfx_RotBitRt_u8u8) @06954a80
+Bfx_RotBitRt_u8u8/39 (Bfx_RotBitRt_u8u8) @05c92a80
   Type: function definition
   Visibility: no_reorder
   References: 
@@ -160,7 +143,7 @@ Bfx_RotBitRt_u8u8/39 (Bfx_RotBitRt_u8u8) @06954a80
   Function flags:
   Called by: 
   Calls: 
-Bfx_ShiftBitLt_u8u8/38 (Bfx_ShiftBitLt_u8u8) @069547e0
+Bfx_ShiftBitLt_u8u8/38 (Bfx_ShiftBitLt_u8u8) @05c927e0
   Type: function definition
   Visibility: no_reorder
   References: 
@@ -168,7 +151,7 @@ Bfx_ShiftBitLt_u8u8/38 (Bfx_ShiftBitLt_u8u8) @069547e0
   Function flags:
   Called by: 
   Calls: 
-Bfx_ShiftBitRt_u8u8/37 (Bfx_ShiftBitRt_u8u8) @06954540
+Bfx_ShiftBitRt_u8u8/37 (Bfx_ShiftBitRt_u8u8) @05c92540
   Type: function definition
   Visibility: no_reorder
   References: 
@@ -176,7 +159,7 @@ Bfx_ShiftBitRt_u8u8/37 (Bfx_ShiftBitRt_u8u8) @06954540
   Function flags:
   Called by: 
   Calls: 
-Bfx_ToggleBitMask_u8u8/36 (Bfx_ToggleBitMask_u8u8) @069542a0
+Bfx_ToggleBitMask_u8u8/36 (Bfx_ToggleBitMask_u8u8) @05c922a0
   Type: function definition
   Visibility: no_reorder
   References: 
@@ -184,7 +167,7 @@ Bfx_ToggleBitMask_u8u8/36 (Bfx_ToggleBitMask_u8u8) @069542a0
   Function flags:
   Called by: 
   Calls: 
-Bfx_ToggleBits_u8/35 (Bfx_ToggleBits_u8) @06954000
+Bfx_ToggleBits_u8/35 (Bfx_ToggleBits_u8) @05c92000
   Type: function definition
   Visibility: no_reorder
   References: 
@@ -192,7 +175,7 @@ Bfx_ToggleBits_u8/35 (Bfx_ToggleBits_u8) @06954000
   Function flags:
   Called by: 
   Calls: 
-Bfx_TstParityEven_u8_u8/34 (Bfx_TstParityEven_u8_u8) @06951d20
+Bfx_TstParityEven_u8_u8/34 (Bfx_TstParityEven_u8_u8) @05c8fd20
   Type: function definition
   Visibility: no_reorder
   References: 
@@ -200,7 +183,7 @@ Bfx_TstParityEven_u8_u8/34 (Bfx_TstParityEven_u8_u8) @06951d20
   Function flags:
   Called by: 
   Calls: 
-Bfx_TstBitLnMask_u8u8_u8/33 (Bfx_TstBitLnMask_u8u8_u8) @06951a80
+Bfx_TstBitLnMask_u8u8_u8/33 (Bfx_TstBitLnMask_u8u8_u8) @05c8fa80
   Type: function definition
   Visibility: no_reorder
   References: 
@@ -208,7 +191,7 @@ Bfx_TstBitLnMask_u8u8_u8/33 (Bfx_TstBitLnMask_u8u8_u8) @06951a80
   Function flags:
   Called by: 
   Calls: 
-Bfx_TstBitMask_u8u8_u8/32 (Bfx_TstBitMask_u8u8_u8) @069517e0
+Bfx_TstBitMask_u8u8_u8/32 (Bfx_TstBitMask_u8u8_u8) @05c8f7e0
   Type: function definition
   Visibility: no_reorder
   References: 
@@ -216,7 +199,7 @@ Bfx_TstBitMask_u8u8_u8/32 (Bfx_TstBitMask_u8u8_u8) @069517e0
   Function flags:
   Called by: 
   Calls: 
-Bfx_ClrBitMask_u8u8/31 (Bfx_ClrBitMask_u8u8) @06951540
+Bfx_ClrBitMask_u8u8/31 (Bfx_ClrBitMask_u8u8) @05c8f540
   Type: function definition
   Visibility: no_reorder
   References: 
@@ -224,7 +207,7 @@ Bfx_ClrBitMask_u8u8/31 (Bfx_ClrBitMask_u8u8) @06951540
   Function flags:
   Called by: 
   Calls: 
-Bfx_SetBitMask_u8u8/30 (Bfx_SetBitMask_u8u8) @069512a0
+Bfx_SetBitMask_u8u8/30 (Bfx_SetBitMask_u8u8) @05c8f2a0
   Type: function definition
   Visibility: no_reorder
   References: 
@@ -232,7 +215,7 @@ Bfx_SetBitMask_u8u8/30 (Bfx_SetBitMask_u8u8) @069512a0
   Function flags:
   Called by: 
   Calls: 
-Bfx_GetBits_u8u8u8_u8/29 (Bfx_GetBits_u8u8u8_u8) @06951000
+Bfx_GetBits_u8u8u8_u8/29 (Bfx_GetBits_u8u8u8_u8) @05c8f000
   Type: function definition
   Visibility: no_reorder
   References: 
@@ -240,7 +223,7 @@ Bfx_GetBits_u8u8u8_u8/29 (Bfx_GetBits_u8u8u8_u8) @06951000
   Function flags:
   Called by: 
   Calls: 
-Bfx_SetBits_u8u8u8u8/28 (Bfx_SetBits_u8u8u8u8) @0694dd20
+Bfx_SetBits_u8u8u8u8/28 (Bfx_SetBits_u8u8u8u8) @05c8bd20
   Type: function definition
   Visibility: no_reorder
   References: 
@@ -248,7 +231,7 @@ Bfx_SetBits_u8u8u8u8/28 (Bfx_SetBits_u8u8u8u8) @0694dd20
   Function flags:
   Called by: 
   Calls: 
-Bfx_GetBit_u8u8_u8/27 (Bfx_GetBit_u8u8_u8) @0694da80
+Bfx_GetBit_u8u8_u8/27 (Bfx_GetBit_u8u8_u8) @05c8ba80
   Type: function definition
   Visibility: no_reorder
   References: 
@@ -256,7 +239,7 @@ Bfx_GetBit_u8u8_u8/27 (Bfx_GetBit_u8u8_u8) @0694da80
   Function flags:
   Called by: 
   Calls: 
-Bfx_ClrBit_u8u8/26 (Bfx_ClrBit_u8u8) @0694d7e0
+Bfx_ClrBit_u8u8/26 (Bfx_ClrBit_u8u8) @05c8b7e0
   Type: function definition
   Visibility: no_reorder
   References: 
@@ -264,7 +247,7 @@ Bfx_ClrBit_u8u8/26 (Bfx_ClrBit_u8u8) @0694d7e0
   Function flags:
   Called by: 
   Calls: 
-Bfx_SetBit_u8u8/25 (Bfx_SetBit_u8u8) @0694d540
+Bfx_SetBit_u8u8/25 (Bfx_SetBit_u8u8) @05c8b540
   Type: function definition
   Visibility: no_reorder
   References: 
@@ -272,7 +255,7 @@ Bfx_SetBit_u8u8/25 (Bfx_SetBit_u8u8) @0694d540
   Function flags:
   Called by: 
   Calls: 
-Bfx_CountLeadingZeros_u32/24 (Bfx_CountLeadingZeros_u32) @0694d2a0
+Bfx_CountLeadingZeros_u32/24 (Bfx_CountLeadingZeros_u32) @05c8b2a0
   Type: function definition
   Visibility: no_reorder
   References: 
@@ -280,7 +263,7 @@ Bfx_CountLeadingZeros_u32/24 (Bfx_CountLeadingZeros_u32) @0694d2a0
   Function flags:
   Called by: 
   Calls: 
-Bfx_CountLeadingSigns_s32/23 (Bfx_CountLeadingSigns_s32) @0694d000
+Bfx_CountLeadingSigns_s32/23 (Bfx_CountLeadingSigns_s32) @05c8b000
   Type: function definition
   Visibility: no_reorder
   References: 
@@ -288,7 +271,7 @@ Bfx_CountLeadingSigns_s32/23 (Bfx_CountLeadingSigns_s32) @0694d000
   Function flags:
   Called by: 
   Calls: 
-Bfx_CountLeadingOnes_u32/22 (Bfx_CountLeadingOnes_u32) @06941d20
+Bfx_CountLeadingOnes_u32/22 (Bfx_CountLeadingOnes_u32) @05c7ed20
   Type: function definition
   Visibility: no_reorder
   References: 
@@ -296,7 +279,7 @@ Bfx_CountLeadingOnes_u32/22 (Bfx_CountLeadingOnes_u32) @06941d20
   Function flags:
   Called by: 
   Calls: 
-Bfx_ShiftBitSat_s32s8_s32/21 (Bfx_ShiftBitSat_s32s8_s32) @06941a80
+Bfx_ShiftBitSat_s32s8_s32/21 (Bfx_ShiftBitSat_s32s8_s32) @05c7ea80
   Type: function definition
   Visibility: no_reorder
   References: 
@@ -304,7 +287,7 @@ Bfx_ShiftBitSat_s32s8_s32/21 (Bfx_ShiftBitSat_s32s8_s32) @06941a80
   Function flags:
   Called by: 
   Calls: 
-Bfx_ShiftBitSat_u32s8_u32/20 (Bfx_ShiftBitSat_u32s8_u32) @069417e0
+Bfx_ShiftBitSat_u32s8_u32/20 (Bfx_ShiftBitSat_u32s8_u32) @05c7e7e0
   Type: function definition
   Visibility: no_reorder
   References: 
@@ -312,7 +295,7 @@ Bfx_ShiftBitSat_u32s8_u32/20 (Bfx_ShiftBitSat_u32s8_u32) @069417e0
   Function flags:
   Called by: 
   Calls: 
-Bfx_PutBits_u32u8u8u32/19 (Bfx_PutBits_u32u8u8u32) @06941540
+Bfx_PutBits_u32u8u8u32/19 (Bfx_PutBits_u32u8u8u32) @05c7e540
   Type: function definition
   Visibility: no_reorder
   References: 
@@ -320,7 +303,7 @@ Bfx_PutBits_u32u8u8u32/19 (Bfx_PutBits_u32u8u8u32) @06941540
   Function flags:
   Called by: 
   Calls: 
-Bfx_PutBitsMask_u32u32u32/18 (Bfx_PutBitsMask_u32u32u32) @069412a0
+Bfx_PutBitsMask_u32u32u32/18 (Bfx_PutBitsMask_u32u32u32) @05c7e2a0
   Type: function definition
   Visibility: no_reorder
   References: 
@@ -328,7 +311,7 @@ Bfx_PutBitsMask_u32u32u32/18 (Bfx_PutBitsMask_u32u32u32) @069412a0
   Function flags:
   Called by: 
   Calls: 
-Bfx_PutBit_u32u8u8/17 (Bfx_PutBit_u32u8u8) @06941000
+Bfx_PutBit_u32u8u8/17 (Bfx_PutBit_u32u8u8) @05c7e000
   Type: function definition
   Visibility: no_reorder
   References: 
@@ -336,7 +319,7 @@ Bfx_PutBit_u32u8u8/17 (Bfx_PutBit_u32u8u8) @06941000
   Function flags:
   Called by: 
   Calls: 
-Bfx_CopyBit_u32u8u32u8/16 (Bfx_CopyBit_u32u8u32u8) @0693dd20
+Bfx_CopyBit_u32u8u32u8/16 (Bfx_CopyBit_u32u8u32u8) @05c7bd20
   Type: function definition
   Visibility: no_reorder
   References: 
@@ -344,7 +327,7 @@ Bfx_CopyBit_u32u8u32u8/16 (Bfx_CopyBit_u32u8u32u8) @0693dd20
   Function flags:
   Called by: 
   Calls: 
-Bfx_RotBitLt_u32u8/15 (Bfx_RotBitLt_u32u8) @0693da80
+Bfx_RotBitLt_u32u8/15 (Bfx_RotBitLt_u32u8) @05c7ba80
   Type: function definition
   Visibility: no_reorder
   References: 
@@ -352,7 +335,7 @@ Bfx_RotBitLt_u32u8/15 (Bfx_RotBitLt_u32u8) @0693da80
   Function flags:
   Called by: 
   Calls: 
-Bfx_RotBitRt_u32u8/14 (Bfx_RotBitRt_u32u8) @0693d7e0
+Bfx_RotBitRt_u32u8/14 (Bfx_RotBitRt_u32u8) @05c7b7e0
   Type: function definition
   Visibility: no_reorder
   References: 
@@ -360,7 +343,7 @@ Bfx_RotBitRt_u32u8/14 (Bfx_RotBitRt_u32u8) @0693d7e0
   Function flags:
   Called by: 
   Calls: 
-Bfx_ShiftBitLt_u32u8/13 (Bfx_ShiftBitLt_u32u8) @0693d540
+Bfx_ShiftBitLt_u32u8/13 (Bfx_ShiftBitLt_u32u8) @05c7b540
   Type: function definition
   Visibility: no_reorder
   References: 
@@ -368,7 +351,7 @@ Bfx_ShiftBitLt_u32u8/13 (Bfx_ShiftBitLt_u32u8) @0693d540
   Function flags:
   Called by: 
   Calls: 
-Bfx_ShiftBitRt_u32u8/12 (Bfx_ShiftBitRt_u32u8) @0693d2a0
+Bfx_ShiftBitRt_u32u8/12 (Bfx_ShiftBitRt_u32u8) @05c7b2a0
   Type: function definition
   Visibility: no_reorder
   References: 
@@ -376,7 +359,7 @@ Bfx_ShiftBitRt_u32u8/12 (Bfx_ShiftBitRt_u32u8) @0693d2a0
   Function flags:
   Called by: 
   Calls: 
-Bfx_ToggleBitMask_u32u32/11 (Bfx_ToggleBitMask_u32u32) @0693d000
+Bfx_ToggleBitMask_u32u32/11 (Bfx_ToggleBitMask_u32u32) @05c7b000
   Type: function definition
   Visibility: no_reorder
   References: 
@@ -384,7 +367,7 @@ Bfx_ToggleBitMask_u32u32/11 (Bfx_ToggleBitMask_u32u32) @0693d000
   Function flags:
   Called by: 
   Calls: 
-Bfx_ToggleBits_u32/10 (Bfx_ToggleBits_u32) @06939d20
+Bfx_ToggleBits_u32/10 (Bfx_ToggleBits_u32) @05c76d20
   Type: function definition
   Visibility: no_reorder
   References: 
@@ -392,7 +375,7 @@ Bfx_ToggleBits_u32/10 (Bfx_ToggleBits_u32) @06939d20
   Function flags:
   Called by: 
   Calls: 
-Bfx_TstParityEven_u32_u8/9 (Bfx_TstParityEven_u32_u8) @06939a80
+Bfx_TstParityEven_u32_u8/9 (Bfx_TstParityEven_u32_u8) @05c76a80
   Type: function definition
   Visibility: no_reorder
   References: 
@@ -400,7 +383,7 @@ Bfx_TstParityEven_u32_u8/9 (Bfx_TstParityEven_u32_u8) @06939a80
   Function flags:
   Called by: 
   Calls: 
-Bfx_TstBitLnMask_u32u32_u8/8 (Bfx_TstBitLnMask_u32u32_u8) @069397e0
+Bfx_TstBitLnMask_u32u32_u8/8 (Bfx_TstBitLnMask_u32u32_u8) @05c767e0
   Type: function definition
   Visibility: no_reorder
   References: 
@@ -408,7 +391,7 @@ Bfx_TstBitLnMask_u32u32_u8/8 (Bfx_TstBitLnMask_u32u32_u8) @069397e0
   Function flags:
   Called by: 
   Calls: 
-Bfx_TstBitMask_u32u32_u8/7 (Bfx_TstBitMask_u32u32_u8) @06939540
+Bfx_TstBitMask_u32u32_u8/7 (Bfx_TstBitMask_u32u32_u8) @05c76540
   Type: function definition
   Visibility: no_reorder
   References: 
@@ -416,7 +399,7 @@ Bfx_TstBitMask_u32u32_u8/7 (Bfx_TstBitMask_u32u32_u8) @06939540
   Function flags:
   Called by: 
   Calls: 
-Bfx_ClrBitMask_u32u32/6 (Bfx_ClrBitMask_u32u32) @069392a0
+Bfx_ClrBitMask_u32u32/6 (Bfx_ClrBitMask_u32u32) @05c762a0
   Type: function definition
   Visibility: no_reorder
   References: 
@@ -424,7 +407,7 @@ Bfx_ClrBitMask_u32u32/6 (Bfx_ClrBitMask_u32u32) @069392a0
   Function flags:
   Called by: 
   Calls: 
-Bfx_SetBitMask_u32u32/5 (Bfx_SetBitMask_u32u32) @06939000
+Bfx_SetBitMask_u32u32/5 (Bfx_SetBitMask_u32u32) @05c76000
   Type: function definition
   Visibility: no_reorder
   References: 
@@ -432,7 +415,7 @@ Bfx_SetBitMask_u32u32/5 (Bfx_SetBitMask_u32u32) @06939000
   Function flags:
   Called by: 
   Calls: 
-Bfx_GetBits_u32u8u8_u32/4 (Bfx_GetBits_u32u8u8_u32) @06920d20
+Bfx_GetBits_u32u8u8_u32/4 (Bfx_GetBits_u32u8u8_u32) @05c5cd20
   Type: function definition
   Visibility: no_reorder
   References: 
@@ -440,7 +423,7 @@ Bfx_GetBits_u32u8u8_u32/4 (Bfx_GetBits_u32u8u8_u32) @06920d20
   Function flags:
   Called by: 
   Calls: 
-Bfx_SetBits_u32u8u8u8/3 (Bfx_SetBits_u32u8u8u8) @06920a80
+Bfx_SetBits_u32u8u8u8/3 (Bfx_SetBits_u32u8u8u8) @05c5ca80
   Type: function definition
   Visibility: no_reorder
   References: 
@@ -448,7 +431,7 @@ Bfx_SetBits_u32u8u8u8/3 (Bfx_SetBits_u32u8u8u8) @06920a80
   Function flags:
   Called by: 
   Calls: 
-Bfx_GetBit_u32u8_u8/2 (Bfx_GetBit_u32u8_u8) @069207e0
+Bfx_GetBit_u32u8_u8/2 (Bfx_GetBit_u32u8_u8) @05c5c7e0
   Type: function definition
   Visibility: no_reorder
   References: 
@@ -456,7 +439,7 @@ Bfx_GetBit_u32u8_u8/2 (Bfx_GetBit_u32u8_u8) @069207e0
   Function flags:
   Called by: 
   Calls: 
-Bfx_ClrBit_u32u8/1 (Bfx_ClrBit_u32u8) @06920540
+Bfx_ClrBit_u32u8/1 (Bfx_ClrBit_u32u8) @05c5c540
   Type: function definition
   Visibility: no_reorder
   References: 
@@ -464,7 +447,7 @@ Bfx_ClrBit_u32u8/1 (Bfx_ClrBit_u32u8) @06920540
   Function flags:
   Called by: 
   Calls: 
-Bfx_SetBit_u32u8/0 (Bfx_SetBit_u32u8) @069202a0
+Bfx_SetBit_u32u8/0 (Bfx_SetBit_u32u8) @05c5c2a0
   Type: function definition
   Visibility: no_reorder
   References: 
@@ -477,246 +460,184 @@ Removing unused symbols: Bfx_CountLeadingZeros_u8/49 Bfx_CountLeadingSigns_s8/48
 
 Reclaimed Symbol table:
 
-Sche/57 (Sche) @06a1b000
-  Type: variable
-  Visibility: external public
-  References: 
-  Referring: Timer1_callback/54 (addr) Timer2_callback/55 (addr) 
-  Availability: not-ready
-  Varpool flags:
-Sched_startTimer/56 (Sched_startTimer) @06a189a0
+Scheduler_StartTimer/55 (Scheduler_StartTimer) @05d5b380
   Type: function
   Visibility: external public
   References: 
   Referring: 
   Function flags:
-  Called by: Timer2_callback/55 Timer1_callback/54 
+  Called by: Timer2_callback/53 Timer1_callback/52 
   Calls: 
-Timer2_callback/55 (Timer2_callback) @06a181c0
-  Type: function definition analyzed
-  Visibility: force_output no_reorder public
-  References: Sche/57 (addr) 
+Dio_FlipChannel/54 (Dio_FlipChannel) @05d5b0e0
+  Type: function
+  Visibility: external public
+  References: 
   Referring: 
-  Function flags: body
-  Called by: 
-  Calls: Sched_startTimer/56 
-Timer1_callback/54 (Timer1_callback) @06a16d20
-  Type: function definition analyzed
-  Visibility: force_output no_reorder public
-  References: Sche/57 (addr) 
-  Referring: 
-  Function flags: body
-  Called by: 
-  Calls: Sched_startTimer/56 
-Task2_callback/53 (Task2_callback) @06a167e0
+  Function flags:
+  Called by: Timer2_callback/53 Timer1_callback/52 Task2_callback/51 Task1_callback/50 
+  Calls: 
+Timer2_callback/53 (Timer2_callback) @05d557e0
   Type: function definition analyzed
   Visibility: force_output no_reorder public
   References: 
   Referring: 
   Function flags: body
   Called by: 
-  Calls: 
-Task1_callback/52 (Task1_callback) @06a16ee0
+  Calls: Scheduler_StartTimer/55 Dio_FlipChannel/54 
+Timer1_callback/52 (Timer1_callback) @05d559a0
   Type: function definition analyzed
   Visibility: force_output no_reorder public
   References: 
   Referring: 
   Function flags: body
   Called by: 
-  Calls: 
-Task2_init/51 (Task2_init) @06a16c40
+  Calls: Scheduler_StartTimer/55 Dio_FlipChannel/54 
+Task2_callback/51 (Task2_callback) @05d550e0
   Type: function definition analyzed
   Visibility: force_output no_reorder public
   References: 
   Referring: 
   Function flags: body
   Called by: 
-  Calls: 
-Task1_init/50 (Task1_init) @06a169a0
+  Calls: Dio_FlipChannel/54 
+Task1_callback/50 (Task1_callback) @05d55d20
   Type: function definition analyzed
   Visibility: force_output no_reorder public
   References: 
   Referring: 
   Function flags: body
   Called by: 
-  Calls: 
+  Calls: Dio_FlipChannel/54 
 
 
 Initial Symbol table:
 
-Sche/57 (Sche) @06a1b000
-  Type: variable
-  Visibility: external public
-  References: 
-  Referring: Timer1_callback/54 (addr) Timer2_callback/55 (addr) 
-  Availability: not-ready
-  Varpool flags:
-Sched_startTimer/56 (Sched_startTimer) @06a189a0
+Scheduler_StartTimer/55 (Scheduler_StartTimer) @05d5b380
   Type: function
   Visibility: external public
   References: 
   Referring: 
   Function flags:
-  Called by: Timer2_callback/55 Timer1_callback/54 
+  Called by: Timer2_callback/53 Timer1_callback/52 
   Calls: 
-Timer2_callback/55 (Timer2_callback) @06a181c0
-  Type: function definition analyzed
-  Visibility: force_output no_reorder public
-  References: Sche/57 (addr) 
+Dio_FlipChannel/54 (Dio_FlipChannel) @05d5b0e0
+  Type: function
+  Visibility: external public
+  References: 
   Referring: 
-  Function flags: body
-  Called by: 
-  Calls: Sched_startTimer/56 
-Timer1_callback/54 (Timer1_callback) @06a16d20
-  Type: function definition analyzed
-  Visibility: force_output no_reorder public
-  References: Sche/57 (addr) 
-  Referring: 
-  Function flags: body
-  Called by: 
-  Calls: Sched_startTimer/56 
-Task2_callback/53 (Task2_callback) @06a167e0
+  Function flags:
+  Called by: Timer2_callback/53 Timer1_callback/52 Task2_callback/51 Task1_callback/50 
+  Calls: 
+Timer2_callback/53 (Timer2_callback) @05d557e0
   Type: function definition analyzed
   Visibility: force_output no_reorder public
   References: 
   Referring: 
   Function flags: body
   Called by: 
-  Calls: 
-Task1_callback/52 (Task1_callback) @06a16ee0
+  Calls: Scheduler_StartTimer/55 Dio_FlipChannel/54 
+Timer1_callback/52 (Timer1_callback) @05d559a0
   Type: function definition analyzed
   Visibility: force_output no_reorder public
   References: 
   Referring: 
   Function flags: body
   Called by: 
-  Calls: 
-Task2_init/51 (Task2_init) @06a16c40
+  Calls: Scheduler_StartTimer/55 Dio_FlipChannel/54 
+Task2_callback/51 (Task2_callback) @05d550e0
   Type: function definition analyzed
   Visibility: force_output no_reorder public
   References: 
   Referring: 
   Function flags: body
   Called by: 
-  Calls: 
-Task1_init/50 (Task1_init) @06a169a0
+  Calls: Dio_FlipChannel/54 
+Task1_callback/50 (Task1_callback) @05d55d20
   Type: function definition analyzed
   Visibility: force_output no_reorder public
   References: 
   Referring: 
   Function flags: body
   Called by: 
-  Calls: 
+  Calls: Dio_FlipChannel/54 
 
 Removing unused symbols:
 
 Reclaimed Symbol table:
 
-Sche/57 (Sche) @06a1b000
-  Type: variable
-  Visibility: external public
-  References: 
-  Referring: Timer1_callback/54 (addr) Timer2_callback/55 (addr) 
-  Availability: not-ready
-  Varpool flags:
-Sched_startTimer/56 (Sched_startTimer) @06a189a0
+Scheduler_StartTimer/55 (Scheduler_StartTimer) @05d5b380
   Type: function
   Visibility: external public
   References: 
   Referring: 
   Function flags:
-  Called by: Timer2_callback/55 Timer1_callback/54 
+  Called by: Timer2_callback/53 Timer1_callback/52 
   Calls: 
-Timer2_callback/55 (Timer2_callback) @06a181c0
-  Type: function definition analyzed
-  Visibility: force_output no_reorder public
-  References: Sche/57 (addr) 
+Dio_FlipChannel/54 (Dio_FlipChannel) @05d5b0e0
+  Type: function
+  Visibility: external public
+  References: 
   Referring: 
-  Function flags: body
-  Called by: 
-  Calls: Sched_startTimer/56 
-Timer1_callback/54 (Timer1_callback) @06a16d20
-  Type: function definition analyzed
-  Visibility: force_output no_reorder public
-  References: Sche/57 (addr) 
-  Referring: 
-  Function flags: body
-  Called by: 
-  Calls: Sched_startTimer/56 
-Task2_callback/53 (Task2_callback) @06a167e0
+  Function flags:
+  Called by: Timer2_callback/53 Timer1_callback/52 Task2_callback/51 Task1_callback/50 
+  Calls: 
+Timer2_callback/53 (Timer2_callback) @05d557e0
   Type: function definition analyzed
   Visibility: force_output no_reorder public
   References: 
   Referring: 
   Function flags: body
   Called by: 
-  Calls: 
-Task1_callback/52 (Task1_callback) @06a16ee0
+  Calls: Scheduler_StartTimer/55 Dio_FlipChannel/54 
+Timer1_callback/52 (Timer1_callback) @05d559a0
   Type: function definition analyzed
   Visibility: force_output no_reorder public
   References: 
   Referring: 
   Function flags: body
   Called by: 
-  Calls: 
-Task2_init/51 (Task2_init) @06a16c40
+  Calls: Scheduler_StartTimer/55 Dio_FlipChannel/54 
+Task2_callback/51 (Task2_callback) @05d550e0
   Type: function definition analyzed
   Visibility: force_output no_reorder public
   References: 
   Referring: 
   Function flags: body
   Called by: 
-  Calls: 
-Task1_init/50 (Task1_init) @06a169a0
+  Calls: Dio_FlipChannel/54 
+Task1_callback/50 (Task1_callback) @05d55d20
   Type: function definition analyzed
   Visibility: force_output no_reorder public
   References: 
   Referring: 
   Function flags: body
   Called by: 
-  Calls: 
+  Calls: Dio_FlipChannel/54 
 
 Reclaiming functions:
 Reclaiming variables:
 Clearing address taken flags:
 Optimized Symbol table:
 
-Sche/57 (Sche) @06a1b000
-  Type: variable
-  Body removed by symtab_remove_unreachable_nodes
-  Visibility: external public
-  References: 
-  Referring: Timer1_callback/54 (addr) Timer2_callback/55 (addr) 
-  Availability: not_available
-  Varpool flags:
-Sched_startTimer/56 (Sched_startTimer) @06a189a0
+Scheduler_StartTimer/55 (Scheduler_StartTimer) @05d5b380
   Type: function
   Visibility: external public
   References: 
   Referring: 
   Availability: not_available
   Function flags:
-  Called by: Timer2_callback/55 Timer1_callback/54 
+  Called by: Timer2_callback/53 Timer1_callback/52 
   Calls: 
-Timer2_callback/55 (Timer2_callback) @06a181c0
-  Type: function definition analyzed
-  Visibility: force_output externally_visible no_reorder public
-  References: Sche/57 (addr) 
+Dio_FlipChannel/54 (Dio_FlipChannel) @05d5b0e0
+  Type: function
+  Visibility: external public
+  References: 
   Referring: 
-  Availability: available
-  Function flags: body
-  Called by: 
-  Calls: Sched_startTimer/56 
-Timer1_callback/54 (Timer1_callback) @06a16d20
-  Type: function definition analyzed
-  Visibility: force_output externally_visible no_reorder public
-  References: Sche/57 (addr) 
-  Referring: 
-  Availability: available
-  Function flags: body
-  Called by: 
-  Calls: Sched_startTimer/56 
-Task2_callback/53 (Task2_callback) @06a167e0
+  Availability: not_available
+  Function flags:
+  Called by: Timer2_callback/53 Timer1_callback/52 Task2_callback/51 Task1_callback/50 
+  Calls: 
+Timer2_callback/53 (Timer2_callback) @05d557e0
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: 
@@ -724,8 +645,8 @@ Task2_callback/53 (Task2_callback) @06a167e0
   Availability: available
   Function flags: body
   Called by: 
-  Calls: 
-Task1_callback/52 (Task1_callback) @06a16ee0
+  Calls: Scheduler_StartTimer/55 Dio_FlipChannel/54 
+Timer1_callback/52 (Timer1_callback) @05d559a0
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: 
@@ -733,8 +654,8 @@ Task1_callback/52 (Task1_callback) @06a16ee0
   Availability: available
   Function flags: body
   Called by: 
-  Calls: 
-Task2_init/51 (Task2_init) @06a16c40
+  Calls: Scheduler_StartTimer/55 Dio_FlipChannel/54 
+Task2_callback/51 (Task2_callback) @05d550e0
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: 
@@ -742,8 +663,8 @@ Task2_init/51 (Task2_init) @06a16c40
   Availability: available
   Function flags: body
   Called by: 
-  Calls: 
-Task1_init/50 (Task1_init) @06a169a0
+  Calls: Dio_FlipChannel/54 
+Task1_callback/50 (Task1_callback) @05d55d20
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: 
@@ -751,7 +672,7 @@ Task1_init/50 (Task1_init) @06a169a0
   Availability: available
   Function flags: body
   Called by: 
-  Calls: 
+  Calls: Dio_FlipChannel/54 
 Materializing clones
 Materialization Call site updates done.
 
@@ -763,15 +684,7 @@ Removing variables:
 
 Final Symbol table:
 
-Sche/57 (Sche) @06a1b000
-  Type: variable
-  Body removed by symtab_remove_unreachable_nodes
-  Visibility: external public
-  References: 
-  Referring: 
-  Availability: not_available
-  Varpool flags:
-Sched_startTimer/56 (Sched_startTimer) @06a189a0
+Scheduler_StartTimer/55 (Scheduler_StartTimer) @05d5b380
   Type: function
   Visibility: external public
   References: 
@@ -780,7 +693,16 @@ Sched_startTimer/56 (Sched_startTimer) @06a189a0
   Function flags:
   Called by: 
   Calls: 
-Timer2_callback/55 (Timer2_callback) @06a181c0
+Dio_FlipChannel/54 (Dio_FlipChannel) @05d5b0e0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+Timer2_callback/53 (Timer2_callback) @05d557e0
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder asm_written public section:.text.Timer2_callback (implicit_section)
   References: 
@@ -789,7 +711,7 @@ Timer2_callback/55 (Timer2_callback) @06a181c0
   Function flags:
   Called by: 
   Calls: 
-Timer1_callback/54 (Timer1_callback) @06a16d20
+Timer1_callback/52 (Timer1_callback) @05d559a0
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder asm_written public section:.text.Timer1_callback (implicit_section)
   References: 
@@ -798,7 +720,7 @@ Timer1_callback/54 (Timer1_callback) @06a16d20
   Function flags:
   Called by: 
   Calls: 
-Task2_callback/53 (Task2_callback) @06a167e0
+Task2_callback/51 (Task2_callback) @05d550e0
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder asm_written public section:.text.Task2_callback (implicit_section)
   References: 
@@ -807,27 +729,9 @@ Task2_callback/53 (Task2_callback) @06a167e0
   Function flags:
   Called by: 
   Calls: 
-Task1_callback/52 (Task1_callback) @06a16ee0
+Task1_callback/50 (Task1_callback) @05d55d20
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder asm_written public section:.text.Task1_callback (implicit_section)
-  References: 
-  Referring: 
-  Availability: available
-  Function flags:
-  Called by: 
-  Calls: 
-Task2_init/51 (Task2_init) @06a16c40
-  Type: function definition analyzed
-  Visibility: force_output externally_visible no_reorder asm_written public section:.text.Task2_init (implicit_section)
-  References: 
-  Referring: 
-  Availability: available
-  Function flags:
-  Called by: 
-  Calls: 
-Task1_init/50 (Task1_init) @06a169a0
-  Type: function definition analyzed
-  Visibility: force_output externally_visible no_reorder asm_written public section:.text.Task1_init (implicit_section)
   References: 
   Referring: 
   Availability: available

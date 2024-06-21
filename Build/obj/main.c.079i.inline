@@ -1,4 +1,4 @@
-IPA summary for main/9 is missing.
+IPA summary for main/51 is missing.
 
 Flattening functions:
 Overall time estimate: 0.000000 weighted by profile: 0.000000
@@ -14,56 +14,67 @@ Deciding on functions to be inlined into all callers and removing useless specul
 Overall time estimate: 0.000000 weighted by profile: 0.000000
 
 Why inlining failed?
-function body not available                       :        2 calls, 2.000000 freq, 0 count
-IPA summary for main/9 is missing.
+function body not available                       :        3 calls, 3.000000 freq, 0 count
+IPA summary for main/51 is missing.
 Symbol table:
 
-Gpt_StartTimer/11 (Gpt_StartTimer) @0716d2a0
+Scheduler_MainFunction/55 (Scheduler_MainFunction) @06c19000
   Type: function
   Visibility: external public
   References: 
   Referring: 
   Availability: not_available
   Function flags:
-  Called by: main/9 
+  Called by: main/51 
   Calls: 
-EcuM_Init/10 (EcuM_Init) @0716d1c0
+Scheduler_Control/54 (Scheduler_Control) @06c18240
+  Type: variable
+  Body removed by symtab_remove_unreachable_nodes
+  Visibility: external public
+  References: 
+  Referring: main/51 (addr) 
+  Availability: not_available
+  Varpool flags:
+Scheduler_Init/53 (Scheduler_Init) @06c17ee0
   Type: function
   Visibility: external public
   References: 
   Referring: 
   Availability: not_available
   Function flags:
-  Called by: main/9 
+  Called by: main/51 
   Calls: 
-main/9 (main) @0707be00
+EcuM_Init/52 (EcuM_Init) @06c17e00
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: main/51 
+  Calls: 
+main/51 (main) @06c179a0
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
-  References: 
+  References: Scheduler_Control/54 (addr) 
   Referring: 
   Availability: available
   Function flags: body
   Called by: 
-  Calls: Gpt_StartTimer/11 EcuM_Init/10 
-state/8 (state) @07077ee8
-  Type: variable definition analyzed
-  Visibility: force_output externally_visible no_reorder public
-  References: 
-  Referring: 
-  Availability: available
-  Varpool flags:
+  Calls: Scheduler_MainFunction/55 Scheduler_Init/53 EcuM_Init/52 
 
-;; Function main (main, funcdef_no=8, decl_uid=7287, cgraph_uid=9, symbol_order=9)
+;; Function main (main, funcdef_no=51, decl_uid=6422, cgraph_uid=52, symbol_order=51)
 
 main ()
 {
-  int D.7294;
+  int D.6429;
 
   <bb 2> :
   EcuM_Init ();
-  Gpt_StartTimer (0, 3125);
+  Scheduler_Init (&Scheduler_Control);
 
   <bb 3> :
+  Scheduler_MainFunction ();
   goto <bb 3>; [INV]
 
 }

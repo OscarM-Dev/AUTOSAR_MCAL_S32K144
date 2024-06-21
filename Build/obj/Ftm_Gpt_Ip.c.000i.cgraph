@@ -1,1449 +1,1170 @@
-Trivially needed symbols: FTM_0_CH_0_CH_1_ISR/31 Ftm_Gpt_Ip_SetHalfCycleReloadPoint/30 Ftm_Gpt_Ip_DisableChannelInterrupt/29 Ftm_Gpt_Ip_EnableChannelInterrupt/28 Ftm_Gpt_Ip_StopTimer/27 Ftm_Gpt_Ip_StartTimer/26 Ftm_Gpt_Ip_StartCounting/25 Ftm_Gpt_Ip_Deinit/24 Ftm_Gpt_Ip_InitChannel/23 Ftm_Gpt_Ip_Init/22 Ftm_Gpt_Ip_ProcessCommonInterrupt/21 Ftm_Gpt_Ip_u32ChState/6 Ftm_Gpt_Ip_u32InstanceState/5 ftmGptBase/4 Ftm_Gpt_Ip_u32TargetValue/3
+Trivially needed symbols: Ftm_Gpt_Ip_SetHalfCycleReloadPoint/26 Ftm_Gpt_Ip_DisableChannelInterrupt/25 Ftm_Gpt_Ip_EnableChannelInterrupt/24 Ftm_Gpt_Ip_StopTimer/23 Ftm_Gpt_Ip_StartTimer/22 Ftm_Gpt_Ip_StartCounting/21 Ftm_Gpt_Ip_Deinit/20 Ftm_Gpt_Ip_InitChannel/19 Ftm_Gpt_Ip_Init/18 Ftm_Gpt_Ip_u32InstanceState/5 ftmGptBase/4 Ftm_Gpt_Ip_u32TargetValue/3
 
 
 Initial Symbol table:
 
-SchM_Exit_Gpt_GPT_EXCLUSIVE_AREA_24/43 (SchM_Exit_Gpt_GPT_EXCLUSIVE_AREA_24) @069e30e0
+SchM_Exit_Gpt_GPT_EXCLUSIVE_AREA_24/36 (SchM_Exit_Gpt_GPT_EXCLUSIVE_AREA_24) @0698bb60
   Type: function
   Visibility: external public
   References: 
   Referring: 
   Function flags:
-  Called by: Ftm_Gpt_Ip_ModeSelectA/17 
+  Called by: Ftm_Gpt_Ip_ModeSelectA/16 
   Calls: 
-SchM_Enter_Gpt_GPT_EXCLUSIVE_AREA_24/42 (SchM_Enter_Gpt_GPT_EXCLUSIVE_AREA_24) @069e3000
+SchM_Enter_Gpt_GPT_EXCLUSIVE_AREA_24/35 (SchM_Enter_Gpt_GPT_EXCLUSIVE_AREA_24) @0698ba80
   Type: function
   Visibility: external public
   References: 
   Referring: 
   Function flags:
-  Called by: Ftm_Gpt_Ip_ModeSelectA/17 
+  Called by: Ftm_Gpt_Ip_ModeSelectA/16 
   Calls: 
-SchM_Exit_Gpt_GPT_EXCLUSIVE_AREA_23/41 (SchM_Exit_Gpt_GPT_EXCLUSIVE_AREA_23) @069d7c40
+SchM_Exit_Gpt_GPT_EXCLUSIVE_AREA_23/34 (SchM_Exit_Gpt_GPT_EXCLUSIVE_AREA_23) @0698b540
   Type: function
   Visibility: external public
   References: 
   Referring: 
   Function flags:
-  Called by: Ftm_Gpt_Ip_SetEnFtmModule/14 
+  Called by: Ftm_Gpt_Ip_SetEnFtmModule/13 
   Calls: 
-SchM_Enter_Gpt_GPT_EXCLUSIVE_AREA_23/40 (SchM_Enter_Gpt_GPT_EXCLUSIVE_AREA_23) @069d7b60
+SchM_Enter_Gpt_GPT_EXCLUSIVE_AREA_23/33 (SchM_Enter_Gpt_GPT_EXCLUSIVE_AREA_23) @0698b460
   Type: function
   Visibility: external public
   References: 
   Referring: 
   Function flags:
-  Called by: Ftm_Gpt_Ip_SetEnFtmModule/14 
+  Called by: Ftm_Gpt_Ip_SetEnFtmModule/13 
   Calls: 
-SchM_Exit_Gpt_GPT_EXCLUSIVE_AREA_17/39 (SchM_Exit_Gpt_GPT_EXCLUSIVE_AREA_17) @069d77e0
+SchM_Exit_Gpt_GPT_EXCLUSIVE_AREA_17/32 (SchM_Exit_Gpt_GPT_EXCLUSIVE_AREA_17) @0698b0e0
   Type: function
   Visibility: external public
   References: 
   Referring: 
   Function flags:
-  Called by: Ftm_Gpt_Ip_SetFreezeBits/7 
+  Called by: Ftm_Gpt_Ip_SetFreezeBits/6 
   Calls: 
-SchM_Enter_Gpt_GPT_EXCLUSIVE_AREA_17/38 (SchM_Enter_Gpt_GPT_EXCLUSIVE_AREA_17) @069d7700
+SchM_Enter_Gpt_GPT_EXCLUSIVE_AREA_17/31 (SchM_Enter_Gpt_GPT_EXCLUSIVE_AREA_17) @0698b000
   Type: function
   Visibility: external public
   References: 
   Referring: 
   Function flags:
-  Called by: Ftm_Gpt_Ip_SetFreezeBits/7 
+  Called by: Ftm_Gpt_Ip_SetFreezeBits/6 
   Calls: 
-SchM_Exit_Gpt_GPT_EXCLUSIVE_AREA_21/37 (SchM_Exit_Gpt_GPT_EXCLUSIVE_AREA_21) @069d7540
+SchM_Exit_Gpt_GPT_EXCLUSIVE_AREA_21/30 (SchM_Exit_Gpt_GPT_EXCLUSIVE_AREA_21) @06987380
   Type: function
   Visibility: external public
   References: 
   Referring: 
   Function flags:
-  Called by: Ftm_Gpt_Ip_SetClockSource/12 
+  Called by: Ftm_Gpt_Ip_SetClockSource/11 
   Calls: 
-SchM_Enter_Gpt_GPT_EXCLUSIVE_AREA_21/36 (SchM_Enter_Gpt_GPT_EXCLUSIVE_AREA_21) @069d7460
+SchM_Enter_Gpt_GPT_EXCLUSIVE_AREA_21/29 (SchM_Enter_Gpt_GPT_EXCLUSIVE_AREA_21) @069870e0
   Type: function
   Visibility: external public
   References: 
   Referring: 
   Function flags:
-  Called by: Ftm_Gpt_Ip_SetClockSource/12 
+  Called by: Ftm_Gpt_Ip_SetClockSource/11 
   Calls: 
-SchM_Exit_Gpt_GPT_EXCLUSIVE_AREA_22/35 (SchM_Exit_Gpt_GPT_EXCLUSIVE_AREA_22) @069d72a0
+SchM_Exit_Gpt_GPT_EXCLUSIVE_AREA_22/28 (SchM_Exit_Gpt_GPT_EXCLUSIVE_AREA_22) @06987e00
   Type: function
   Visibility: external public
   References: 
   Referring: 
   Function flags:
-  Called by: Ftm_Gpt_Ip_SetPrescaler/13 
+  Called by: Ftm_Gpt_Ip_SetPrescaler/12 
   Calls: 
-SchM_Enter_Gpt_GPT_EXCLUSIVE_AREA_22/34 (SchM_Enter_Gpt_GPT_EXCLUSIVE_AREA_22) @069d71c0
+SchM_Enter_Gpt_GPT_EXCLUSIVE_AREA_22/27 (SchM_Enter_Gpt_GPT_EXCLUSIVE_AREA_22) @06987d20
   Type: function
   Visibility: external public
   References: 
   Referring: 
   Function flags:
-  Called by: Ftm_Gpt_Ip_SetPrescaler/13 
+  Called by: Ftm_Gpt_Ip_SetPrescaler/12 
   Calls: 
-SchM_Exit_Gpt_GPT_EXCLUSIVE_AREA_25/33 (SchM_Exit_Gpt_GPT_EXCLUSIVE_AREA_25) @069d0b60
-  Type: function
-  Visibility: external public
-  References: 
-  Referring: 
-  Function flags:
-  Called by: Ftm_Gpt_Ip_ProcessCommonInterrupt/21 
-  Calls: 
-SchM_Enter_Gpt_GPT_EXCLUSIVE_AREA_25/32 (SchM_Enter_Gpt_GPT_EXCLUSIVE_AREA_25) @069d0a80
-  Type: function
-  Visibility: external public
-  References: 
-  Referring: 
-  Function flags:
-  Called by: Ftm_Gpt_Ip_ProcessCommonInterrupt/21 
-  Calls: 
-FTM_0_CH_0_CH_1_ISR/31 (FTM_0_CH_0_CH_1_ISR) @069d0540
+Ftm_Gpt_Ip_SetHalfCycleReloadPoint/26 (Ftm_Gpt_Ip_SetHalfCycleReloadPoint) @069877e0
   Type: function definition analyzed
   Visibility: force_output no_reorder public
   Aux: @01981040
-  References: 
-  Referring: 
-  Function flags: body
-  Called by: 
-  Calls: Ftm_Gpt_Ip_ProcessCommonInterrupt/21 Ftm_Gpt_Ip_GetChannelEventStatus/20 Ftm_Gpt_Ip_ProcessCommonInterrupt/21 Ftm_Gpt_Ip_GetChannelEventStatus/20 
-Ftm_Gpt_Ip_SetHalfCycleReloadPoint/30 (Ftm_Gpt_Ip_SetHalfCycleReloadPoint) @069d02a0
-  Type: function definition analyzed
-  Visibility: force_output no_reorder public
-  Aux: @069d0540
   References: ftmGptBase/4 (read) 
   Referring: 
   Function flags: body
   Called by: 
-  Calls: Ftm_Gpt_Ip_SetHalfCycleValue/18 
-Ftm_Gpt_Ip_DisableChannelInterrupt/29 (Ftm_Gpt_Ip_DisableChannelInterrupt) @069d0000
+  Calls: Ftm_Gpt_Ip_SetHalfCycleValue/17 
+Ftm_Gpt_Ip_DisableChannelInterrupt/25 (Ftm_Gpt_Ip_DisableChannelInterrupt) @06987540
   Type: function definition analyzed
   Visibility: force_output no_reorder public
-  Aux: @069d02a0
-  References: 
-  Referring: 
-  Function flags: body
-  Called by: Ftm_Gpt_Ip_ProcessCommonInterrupt/21 
-  Calls: Ftm_Gpt_Ip_ClearChInterruptStatusFlag/10 Ftm_Gpt_Ip_SetChannelEnableInterrupt/11 
-Ftm_Gpt_Ip_EnableChannelInterrupt/28 (Ftm_Gpt_Ip_EnableChannelInterrupt) @06a84b60
-  Type: function definition analyzed
-  Visibility: force_output no_reorder public
-  Aux: @069d0000
+  Aux: @069877e0
   References: 
   Referring: 
   Function flags: body
   Called by: 
-  Calls: Ftm_Gpt_Ip_SetChannelEnableInterrupt/11 Ftm_Gpt_Ip_ClearChInterruptStatusFlag/10 
-Ftm_Gpt_Ip_StopTimer/27 (Ftm_Gpt_Ip_StopTimer) @06a84620
+  Calls: Ftm_Gpt_Ip_ClearChInterruptStatusFlag/9 Ftm_Gpt_Ip_SetChannelEnableInterrupt/10 
+Ftm_Gpt_Ip_EnableChannelInterrupt/24 (Ftm_Gpt_Ip_EnableChannelInterrupt) @069872a0
   Type: function definition analyzed
   Visibility: force_output no_reorder public
-  Aux: @06a84b60
+  Aux: @06987540
   References: 
   Referring: 
   Function flags: body
   Called by: 
-  Calls: Ftm_Gpt_Ip_SetClockSource/12 Ftm_Gpt_Ip_SetEnFtmModule/14 
-Ftm_Gpt_Ip_StartTimer/26 (Ftm_Gpt_Ip_StartTimer) @06a840e0
+  Calls: Ftm_Gpt_Ip_SetChannelEnableInterrupt/10 Ftm_Gpt_Ip_ClearChInterruptStatusFlag/9 
+Ftm_Gpt_Ip_StopTimer/23 (Ftm_Gpt_Ip_StopTimer) @06987000
   Type: function definition analyzed
   Visibility: force_output no_reorder public
-  Aux: @06a84620
+  Aux: @069872a0
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: Ftm_Gpt_Ip_SetClockSource/11 Ftm_Gpt_Ip_SetEnFtmModule/13 
+Ftm_Gpt_Ip_StartTimer/22 (Ftm_Gpt_Ip_StartTimer) @0697ec40
+  Type: function definition analyzed
+  Visibility: force_output no_reorder public
+  Aux: @06987000
   References: Ftm_Gpt_Ip_u32InstanceState/5 (read) 
   Referring: 
   Function flags: body
   Called by: 
-  Calls: Ftm_Gpt_Ip_SetEnFtmModule/14 Ftm_Gpt_Ip_SetCounterInitVal/8 
-Ftm_Gpt_Ip_StartCounting/25 (Ftm_Gpt_Ip_StartCounting) @06a84d20
+  Calls: Ftm_Gpt_Ip_SetEnFtmModule/13 Ftm_Gpt_Ip_SetCounterInitVal/7 
+Ftm_Gpt_Ip_StartCounting/21 (Ftm_Gpt_Ip_StartCounting) @0697e700
   Type: function definition analyzed
   Visibility: force_output no_reorder public
-  Aux: @06a840e0
+  Aux: @0697ec40
   References: Ftm_Gpt_Ip_u32TargetValue/3 (write) 
   Referring: 
   Function flags: body
   Called by: 
-  Calls: Ftm_Gpt_Ip_SetChannelEnableInterrupt/11 Ftm_Gpt_Ip_ClearChInterruptStatusFlag/10 Ftm_Gpt_Ip_SetCompareValue/15 Ftm_Gpt_Ip_GetCntValue/1 
-Ftm_Gpt_Ip_Deinit/24 (Ftm_Gpt_Ip_Deinit) @06a84a80
+  Calls: Ftm_Gpt_Ip_SetChannelEnableInterrupt/10 Ftm_Gpt_Ip_ClearChInterruptStatusFlag/9 Ftm_Gpt_Ip_SetCompareValue/14 Ftm_Gpt_Ip_GetCntValue/1 
+Ftm_Gpt_Ip_Deinit/20 (Ftm_Gpt_Ip_Deinit) @0697ee00
   Type: function definition analyzed
   Visibility: force_output no_reorder public
-  Aux: @06a84d20
+  Aux: @0697e700
   References: Ftm_Gpt_Ip_u32InstanceState/5 (write) 
   Referring: 
   Function flags: body
   Called by: 
-  Calls: Ftm_Gpt_Ip_SetCounter/9 Ftm_Gpt_Ip_SetCounterInitVal/8 Ftm_Gpt_Ip_SetFreezeBits/7 Ftm_Gpt_Ip_SetEnFtmModule/14 Ftm_Gpt_Ip_SetClockSource/12 Ftm_Gpt_Ip_ClearChInterruptStatusFlag/10 Ftm_Gpt_Ip_SetChannelEnableInterrupt/11 
-Ftm_Gpt_Ip_InitChannel/23 (Ftm_Gpt_Ip_InitChannel) @06a847e0
+  Calls: Ftm_Gpt_Ip_SetCounter/8 Ftm_Gpt_Ip_SetCounterInitVal/7 Ftm_Gpt_Ip_SetFreezeBits/6 Ftm_Gpt_Ip_SetEnFtmModule/13 Ftm_Gpt_Ip_SetClockSource/11 Ftm_Gpt_Ip_ClearChInterruptStatusFlag/9 Ftm_Gpt_Ip_SetChannelEnableInterrupt/10 
+Ftm_Gpt_Ip_InitChannel/19 (Ftm_Gpt_Ip_InitChannel) @0697eb60
   Type: function definition analyzed
   Visibility: force_output no_reorder public
-  Aux: @06a84a80
-  References: Ftm_Gpt_Ip_u32ChState/6 (write) Ftm_Gpt_Ip_u32ChState/6 (write) Ftm_Gpt_Ip_u32ChState/6 (write) Ftm_Gpt_Ip_u32ChState/6 (write) 
+  Aux: @0697ee00
+  References: 
   Referring: 
   Function flags: body
   Called by: 
-  Calls: Ftm_Gpt_Ip_ModeSelectA/17 Ftm_Gpt_Ip_SetCompareValue/15 Ftm_Gpt_Ip_ClearChInterruptStatusFlag/10 Ftm_Gpt_Ip_SetChannelEnableInterrupt/11 
-Ftm_Gpt_Ip_Init/22 (Ftm_Gpt_Ip_Init) @06a84540
+  Calls: Ftm_Gpt_Ip_ModeSelectA/16 Ftm_Gpt_Ip_SetCompareValue/14 Ftm_Gpt_Ip_ClearChInterruptStatusFlag/9 Ftm_Gpt_Ip_SetChannelEnableInterrupt/10 
+Ftm_Gpt_Ip_Init/18 (Ftm_Gpt_Ip_Init) @0697e8c0
   Type: function definition analyzed
   Visibility: force_output no_reorder public
-  Aux: @06a847e0
+  Aux: @0697eb60
   References: Ftm_Gpt_Ip_u32InstanceState/5 (write) 
   Referring: 
   Function flags: body
   Called by: 
-  Calls: Ftm_Gpt_Ip_SetEnFtmModule/14 Ftm_Gpt_Ip_WriteModulo/16 Ftm_Gpt_Ip_SetCounterInitVal/8 Ftm_Gpt_Ip_SetFreezeBits/7 Ftm_Gpt_Ip_SetClockSource/12 Ftm_Gpt_Ip_SetPrescaler/13 
-Ftm_Gpt_Ip_ProcessCommonInterrupt/21 (Ftm_Gpt_Ip_ProcessCommonInterrupt) @06a842a0
-  Type: function definition analyzed
-  Visibility: force_output no_reorder
-  Aux: @06a84540
-  References: Ftm_Gpt_Ip_u32ChState/6 (read) Ftm_Gpt_Ip_u32ChState/6 (read) Ftm_Gpt_Ip_u32ChState/6 (read) Ftm_Gpt_Ip_u32ChState/6 (read) Ftm_Gpt_Ip_u32TargetValue/3 (read) 
-  Referring: 
-  Function flags: body
-  Called by: FTM_0_CH_0_CH_1_ISR/31 FTM_0_CH_0_CH_1_ISR/31 
-  Calls: Ftm_Gpt_Ip_SetCompareValue/15 Ftm_Gpt_Ip_SetCompareValue/15 Ftm_Gpt_Ip_DisableChannelInterrupt/29 SchM_Exit_Gpt_GPT_EXCLUSIVE_AREA_25/33 Ftm_Gpt_Ip_ClearChInterruptStatusFlag/10 Ftm_Gpt_Ip_GetChInterruptStatusFlag/0 Ftm_Gpt_Ip_GetChInterruptEnableFlag/19 SchM_Enter_Gpt_GPT_EXCLUSIVE_AREA_25/32 Ftm_Gpt_Ip_GetCompareValue/2 
-   Indirect call Num speculative call targets: 0
-Ftm_Gpt_Ip_GetChannelEventStatus/20 (Ftm_Gpt_Ip_GetChannelEventStatus) @06a84000
+  Calls: Ftm_Gpt_Ip_SetEnFtmModule/13 Ftm_Gpt_Ip_WriteModulo/15 Ftm_Gpt_Ip_SetCounterInitVal/7 Ftm_Gpt_Ip_SetFreezeBits/6 Ftm_Gpt_Ip_SetClockSource/11 Ftm_Gpt_Ip_SetPrescaler/12 
+Ftm_Gpt_Ip_SetHalfCycleValue/17 (Ftm_Gpt_Ip_SetHalfCycleValue) @0697e620
   Type: function definition analyzed
   Visibility: no_reorder
   Aux: @01981040
-  References: ftmGptBase/4 (read) 
-  Referring: 
-  Function flags: body
-  Called by: FTM_0_CH_0_CH_1_ISR/31 FTM_0_CH_0_CH_1_ISR/31 
-  Calls: 
-Ftm_Gpt_Ip_GetChInterruptEnableFlag/19 (Ftm_Gpt_Ip_GetChInterruptEnableFlag) @068a8460
-  Type: function definition analyzed
-  Visibility: no_reorder
-  Aux: @06883e00
-  References: ftmGptBase/4 (read) 
-  Referring: 
-  Function flags: body
-  Called by: Ftm_Gpt_Ip_ProcessCommonInterrupt/21 
-  Calls: 
-Ftm_Gpt_Ip_SetHalfCycleValue/18 (Ftm_Gpt_Ip_SetHalfCycleValue) @068a8e00
-  Type: function definition analyzed
-  Visibility: no_reorder
-  Aux: @069d0540
   References: 
   Referring: 
   Function flags: body
-  Called by: Ftm_Gpt_Ip_SetHalfCycleReloadPoint/30 
+  Called by: Ftm_Gpt_Ip_SetHalfCycleReloadPoint/26 
   Calls: 
-Ftm_Gpt_Ip_ModeSelectA/17 (Ftm_Gpt_Ip_ModeSelectA) @068a8b60
+Ftm_Gpt_Ip_ModeSelectA/16 (Ftm_Gpt_Ip_ModeSelectA) @0697e380
   Type: function definition analyzed
   Visibility: no_reorder
-  Aux: @06a84a80
+  Aux: @0697ee00
   References: ftmGptBase/4 (read) ftmGptBase/4 (read) ftmGptBase/4 (read) ftmGptBase/4 (read) 
   Referring: 
   Function flags: body
-  Called by: Ftm_Gpt_Ip_InitChannel/23 
-  Calls: SchM_Exit_Gpt_GPT_EXCLUSIVE_AREA_24/43 SchM_Enter_Gpt_GPT_EXCLUSIVE_AREA_24/42 
-Ftm_Gpt_Ip_WriteModulo/16 (Ftm_Gpt_Ip_WriteModulo) @068a88c0
+  Called by: Ftm_Gpt_Ip_InitChannel/19 
+  Calls: SchM_Exit_Gpt_GPT_EXCLUSIVE_AREA_24/36 SchM_Enter_Gpt_GPT_EXCLUSIVE_AREA_24/35 
+Ftm_Gpt_Ip_WriteModulo/15 (Ftm_Gpt_Ip_WriteModulo) @0697e0e0
   Type: function definition analyzed
   Visibility: no_reorder
-  Aux: @068a8380
+  Aux: @06977540
   References: ftmGptBase/4 (read) 
   Referring: 
   Function flags: body
-  Called by: Ftm_Gpt_Ip_Init/22 
+  Called by: Ftm_Gpt_Ip_Init/18 
   Calls: 
-Ftm_Gpt_Ip_SetCompareValue/15 (Ftm_Gpt_Ip_SetCompareValue) @068a8620
+Ftm_Gpt_Ip_SetCompareValue/14 (Ftm_Gpt_Ip_SetCompareValue) @06977b60
   Type: function definition analyzed
   Visibility: no_reorder
-  Aux: @06a84540
+  Aux: @0697e380
   References: ftmGptBase/4 (read) 
   Referring: 
   Function flags: body
-  Called by: Ftm_Gpt_Ip_StartCounting/25 Ftm_Gpt_Ip_InitChannel/23 Ftm_Gpt_Ip_ProcessCommonInterrupt/21 Ftm_Gpt_Ip_ProcessCommonInterrupt/21 
+  Called by: Ftm_Gpt_Ip_StartCounting/21 Ftm_Gpt_Ip_InitChannel/19 
   Calls: 
-Ftm_Gpt_Ip_SetEnFtmModule/14 (Ftm_Gpt_Ip_SetEnFtmModule) @068a8380
+Ftm_Gpt_Ip_SetEnFtmModule/13 (Ftm_Gpt_Ip_SetEnFtmModule) @06977540
   Type: function definition analyzed
   Visibility: no_reorder
-  Aux: @06a847e0
+  Aux: @0697eb60
   References: ftmGptBase/4 (read) ftmGptBase/4 (read) ftmGptBase/4 (read) ftmGptBase/4 (read) 
   Referring: 
   Function flags: body
-  Called by: Ftm_Gpt_Ip_StopTimer/27 Ftm_Gpt_Ip_StartTimer/26 Ftm_Gpt_Ip_Deinit/24 Ftm_Gpt_Ip_Init/22 
-  Calls: SchM_Exit_Gpt_GPT_EXCLUSIVE_AREA_23/41 SchM_Enter_Gpt_GPT_EXCLUSIVE_AREA_23/40 
-Ftm_Gpt_Ip_SetPrescaler/13 (Ftm_Gpt_Ip_SetPrescaler) @068a8000
+  Called by: Ftm_Gpt_Ip_StopTimer/23 Ftm_Gpt_Ip_StartTimer/22 Ftm_Gpt_Ip_Deinit/20 Ftm_Gpt_Ip_Init/18 
+  Calls: SchM_Exit_Gpt_GPT_EXCLUSIVE_AREA_23/34 SchM_Enter_Gpt_GPT_EXCLUSIVE_AREA_23/33 
+Ftm_Gpt_Ip_SetPrescaler/12 (Ftm_Gpt_Ip_SetPrescaler) @06977e00
   Type: function definition analyzed
   Visibility: no_reorder
-  Aux: @068a49a0
+  Aux: @06977a80
   References: ftmGptBase/4 (read) ftmGptBase/4 (read) 
   Referring: 
   Function flags: body
-  Called by: Ftm_Gpt_Ip_Init/22 
-  Calls: SchM_Exit_Gpt_GPT_EXCLUSIVE_AREA_22/35 SchM_Enter_Gpt_GPT_EXCLUSIVE_AREA_22/34 
-Ftm_Gpt_Ip_SetClockSource/12 (Ftm_Gpt_Ip_SetClockSource) @068a49a0
+  Called by: Ftm_Gpt_Ip_Init/18 
+  Calls: SchM_Exit_Gpt_GPT_EXCLUSIVE_AREA_22/28 SchM_Enter_Gpt_GPT_EXCLUSIVE_AREA_22/27 
+Ftm_Gpt_Ip_SetClockSource/11 (Ftm_Gpt_Ip_SetClockSource) @06977a80
   Type: function definition analyzed
   Visibility: no_reorder
-  Aux: @068a4380
+  Aux: @06972d20
   References: ftmGptBase/4 (read) ftmGptBase/4 (read) 
   Referring: 
   Function flags: body
-  Called by: Ftm_Gpt_Ip_StopTimer/27 Ftm_Gpt_Ip_Deinit/24 Ftm_Gpt_Ip_Init/22 
-  Calls: SchM_Exit_Gpt_GPT_EXCLUSIVE_AREA_21/37 SchM_Enter_Gpt_GPT_EXCLUSIVE_AREA_21/36 
-Ftm_Gpt_Ip_SetChannelEnableInterrupt/11 (Ftm_Gpt_Ip_SetChannelEnableInterrupt) @068a4e00
+  Called by: Ftm_Gpt_Ip_StopTimer/23 Ftm_Gpt_Ip_Deinit/20 Ftm_Gpt_Ip_Init/18 
+  Calls: SchM_Exit_Gpt_GPT_EXCLUSIVE_AREA_21/30 SchM_Enter_Gpt_GPT_EXCLUSIVE_AREA_21/29 
+Ftm_Gpt_Ip_SetChannelEnableInterrupt/10 (Ftm_Gpt_Ip_SetChannelEnableInterrupt) @06977700
   Type: function definition analyzed
   Visibility: no_reorder
-  Aux: @068a8b60
+  Aux: @06977460
   References: ftmGptBase/4 (read) ftmGptBase/4 (read) 
   Referring: 
   Function flags: body
-  Called by: Ftm_Gpt_Ip_DisableChannelInterrupt/29 Ftm_Gpt_Ip_EnableChannelInterrupt/28 Ftm_Gpt_Ip_StartCounting/25 Ftm_Gpt_Ip_Deinit/24 Ftm_Gpt_Ip_InitChannel/23 
+  Called by: Ftm_Gpt_Ip_DisableChannelInterrupt/25 Ftm_Gpt_Ip_EnableChannelInterrupt/24 Ftm_Gpt_Ip_StartCounting/21 Ftm_Gpt_Ip_Deinit/20 Ftm_Gpt_Ip_InitChannel/19 
   Calls: 
-Ftm_Gpt_Ip_ClearChInterruptStatusFlag/10 (Ftm_Gpt_Ip_ClearChInterruptStatusFlag) @068a4b60
+Ftm_Gpt_Ip_ClearChInterruptStatusFlag/9 (Ftm_Gpt_Ip_ClearChInterruptStatusFlag) @06977460
   Type: function definition analyzed
   Visibility: no_reorder
-  Aux: @068a8620
+  Aux: @06977b60
   References: ftmGptBase/4 (read) ftmGptBase/4 (read) 
   Referring: 
   Function flags: body
-  Called by: Ftm_Gpt_Ip_DisableChannelInterrupt/29 Ftm_Gpt_Ip_EnableChannelInterrupt/28 Ftm_Gpt_Ip_StartCounting/25 Ftm_Gpt_Ip_Deinit/24 Ftm_Gpt_Ip_InitChannel/23 Ftm_Gpt_Ip_ProcessCommonInterrupt/21 
+  Called by: Ftm_Gpt_Ip_DisableChannelInterrupt/25 Ftm_Gpt_Ip_EnableChannelInterrupt/24 Ftm_Gpt_Ip_StartCounting/21 Ftm_Gpt_Ip_Deinit/20 Ftm_Gpt_Ip_InitChannel/19 
   Calls: 
-Ftm_Gpt_Ip_SetCounter/9 (Ftm_Gpt_Ip_SetCounter) @068a48c0
+Ftm_Gpt_Ip_SetCounter/8 (Ftm_Gpt_Ip_SetCounter) @069771c0
   Type: function definition analyzed
   Visibility: no_reorder
-  Aux: @06a84d20
+  Aux: @0697e700
   References: ftmGptBase/4 (read) 
   Referring: 
   Function flags: body
-  Called by: Ftm_Gpt_Ip_Deinit/24 
+  Called by: Ftm_Gpt_Ip_Deinit/20 
   Calls: 
-Ftm_Gpt_Ip_SetCounterInitVal/8 (Ftm_Gpt_Ip_SetCounterInitVal) @068a4620
+Ftm_Gpt_Ip_SetCounterInitVal/7 (Ftm_Gpt_Ip_SetCounterInitVal) @06972a80
   Type: function definition analyzed
   Visibility: no_reorder
-  Aux: @068a88c0
+  Aux: @0697e0e0
   References: ftmGptBase/4 (read) 
   Referring: 
   Function flags: body
-  Called by: Ftm_Gpt_Ip_StartTimer/26 Ftm_Gpt_Ip_Deinit/24 Ftm_Gpt_Ip_Init/22 
+  Called by: Ftm_Gpt_Ip_StartTimer/22 Ftm_Gpt_Ip_Deinit/20 Ftm_Gpt_Ip_Init/18 
   Calls: 
-Ftm_Gpt_Ip_SetFreezeBits/7 (Ftm_Gpt_Ip_SetFreezeBits) @068a4380
+Ftm_Gpt_Ip_SetFreezeBits/6 (Ftm_Gpt_Ip_SetFreezeBits) @06972d20
   Type: function definition analyzed
   Visibility: no_reorder
-  Aux: @068a4620
+  Aux: @06972a80
   References: ftmGptBase/4 (read) ftmGptBase/4 (read) 
   Referring: 
   Function flags: body
-  Called by: Ftm_Gpt_Ip_Deinit/24 Ftm_Gpt_Ip_Init/22 
-  Calls: SchM_Exit_Gpt_GPT_EXCLUSIVE_AREA_17/39 SchM_Enter_Gpt_GPT_EXCLUSIVE_AREA_17/38 
-Ftm_Gpt_Ip_u32ChState/6 (Ftm_Gpt_Ip_u32ChState) @0689dbd0
+  Called by: Ftm_Gpt_Ip_Deinit/20 Ftm_Gpt_Ip_Init/18 
+  Calls: SchM_Exit_Gpt_GPT_EXCLUSIVE_AREA_17/32 SchM_Enter_Gpt_GPT_EXCLUSIVE_AREA_17/31 
+Ftm_Gpt_Ip_u32InstanceState/5 (Ftm_Gpt_Ip_u32InstanceState) @06970120
   Type: variable definition analyzed
   Visibility: force_output no_reorder
-  Aux: @06a842a0
+  Aux: @0697e8c0
   References: 
-  Referring: Ftm_Gpt_Ip_ProcessCommonInterrupt/21 (read) Ftm_Gpt_Ip_ProcessCommonInterrupt/21 (read) Ftm_Gpt_Ip_ProcessCommonInterrupt/21 (read) Ftm_Gpt_Ip_ProcessCommonInterrupt/21 (read) Ftm_Gpt_Ip_InitChannel/23 (write) Ftm_Gpt_Ip_InitChannel/23 (write) Ftm_Gpt_Ip_InitChannel/23 (write) Ftm_Gpt_Ip_InitChannel/23 (write) 
+  Referring: Ftm_Gpt_Ip_Init/18 (write) Ftm_Gpt_Ip_Deinit/20 (write) Ftm_Gpt_Ip_StartTimer/22 (read) 
   Availability: not-ready
   Varpool flags: initialized
-Ftm_Gpt_Ip_u32InstanceState/5 (Ftm_Gpt_Ip_u32InstanceState) @0689d1f8
-  Type: variable definition analyzed
-  Visibility: force_output no_reorder
-  Aux: @0689dbd0
-  References: 
-  Referring: Ftm_Gpt_Ip_Init/22 (write) Ftm_Gpt_Ip_Deinit/24 (write) Ftm_Gpt_Ip_StartTimer/26 (read) 
-  Availability: not-ready
-  Varpool flags: initialized
-ftmGptBase/4 (ftmGptBase) @0689d168
+ftmGptBase/4 (ftmGptBase) @06970090
   Type: variable definition analyzed
   Visibility: force_output no_reorder public
-  Aux: @0689d1f8
+  Aux: @06970120
   References: 
-  Referring: Ftm_Gpt_Ip_GetCompareValue/2 (read) Ftm_Gpt_Ip_GetChInterruptEnableFlag/19 (read) Ftm_Gpt_Ip_GetChInterruptStatusFlag/0 (read) Ftm_Gpt_Ip_ClearChInterruptStatusFlag/10 (read) Ftm_Gpt_Ip_ClearChInterruptStatusFlag/10 (read) Ftm_Gpt_Ip_SetCompareValue/15 (read) Ftm_Gpt_Ip_SetPrescaler/13 (read) Ftm_Gpt_Ip_SetPrescaler/13 (read) Ftm_Gpt_Ip_SetClockSource/12 (read) Ftm_Gpt_Ip_SetClockSource/12 (read) Ftm_Gpt_Ip_SetFreezeBits/7 (read) Ftm_Gpt_Ip_SetFreezeBits/7 (read) Ftm_Gpt_Ip_SetCounterInitVal/8 (read) Ftm_Gpt_Ip_WriteModulo/16 (read) Ftm_Gpt_Ip_SetEnFtmModule/14 (read) Ftm_Gpt_Ip_SetEnFtmModule/14 (read) Ftm_Gpt_Ip_SetEnFtmModule/14 (read) Ftm_Gpt_Ip_SetEnFtmModule/14 (read) Ftm_Gpt_Ip_SetChannelEnableInterrupt/11 (read) Ftm_Gpt_Ip_SetChannelEnableInterrupt/11 (read) Ftm_Gpt_Ip_ModeSelectA/17 (read) Ftm_Gpt_Ip_ModeSelectA/17 (read) Ftm_Gpt_Ip_ModeSelectA/17 (read) Ftm_Gpt_Ip_ModeSelectA/17 (read) Ftm_Gpt_Ip_SetCounter/9 (read) Ftm_Gpt_Ip_GetCntValue/1 (read) Ftm_Gpt_Ip_SetHalfCycleReloadPoint/30 (read) Ftm_Gpt_Ip_GetChannelEventStatus/20 (read) 
+  Referring: Ftm_Gpt_Ip_SetPrescaler/12 (read) Ftm_Gpt_Ip_SetPrescaler/12 (read) Ftm_Gpt_Ip_SetClockSource/11 (read) Ftm_Gpt_Ip_SetClockSource/11 (read) Ftm_Gpt_Ip_SetFreezeBits/6 (read) Ftm_Gpt_Ip_SetFreezeBits/6 (read) Ftm_Gpt_Ip_SetCounterInitVal/7 (read) Ftm_Gpt_Ip_WriteModulo/15 (read) Ftm_Gpt_Ip_SetEnFtmModule/13 (read) Ftm_Gpt_Ip_SetEnFtmModule/13 (read) Ftm_Gpt_Ip_SetEnFtmModule/13 (read) Ftm_Gpt_Ip_SetEnFtmModule/13 (read) Ftm_Gpt_Ip_SetChannelEnableInterrupt/10 (read) Ftm_Gpt_Ip_SetChannelEnableInterrupt/10 (read) Ftm_Gpt_Ip_ClearChInterruptStatusFlag/9 (read) Ftm_Gpt_Ip_ClearChInterruptStatusFlag/9 (read) Ftm_Gpt_Ip_SetCompareValue/14 (read) Ftm_Gpt_Ip_ModeSelectA/16 (read) Ftm_Gpt_Ip_ModeSelectA/16 (read) Ftm_Gpt_Ip_ModeSelectA/16 (read) Ftm_Gpt_Ip_ModeSelectA/16 (read) Ftm_Gpt_Ip_SetCounter/8 (read) Ftm_Gpt_Ip_GetCntValue/1 (read) Ftm_Gpt_Ip_SetHalfCycleReloadPoint/26 (read) 
   Availability: not-ready
   Varpool flags: initialized read-only const-value-known
-Ftm_Gpt_Ip_u32TargetValue/3 (Ftm_Gpt_Ip_u32TargetValue) @0689d0d8
+Ftm_Gpt_Ip_u32TargetValue/3 (Ftm_Gpt_Ip_u32TargetValue) @06970000
   Type: variable definition analyzed
   Visibility: force_output no_reorder public
-  Aux: @0689d168
+  Aux: @06970090
   References: 
-  Referring: Ftm_Gpt_Ip_ProcessCommonInterrupt/21 (read) Ftm_Gpt_Ip_StartCounting/25 (write) 
+  Referring: Ftm_Gpt_Ip_StartCounting/21 (write) 
   Availability: not-ready
   Varpool flags:
-Ftm_Gpt_Ip_GetCompareValue/2 (Ftm_Gpt_Ip_GetCompareValue) @068871c0
-  Type: function definition analyzed
+Ftm_Gpt_Ip_GetCompareValue/2 (Ftm_Gpt_Ip_GetCompareValue) @0695a1c0
+  Type: function definition
   Visibility: no_reorder
-  Aux: @068a8460
-  References: ftmGptBase/4 (read) 
+  References: 
   Referring: 
-  Function flags: body
-  Called by: Ftm_Gpt_Ip_ProcessCommonInterrupt/21 
+  Function flags:
+  Called by: 
   Calls: 
-Ftm_Gpt_Ip_GetCntValue/1 (Ftm_Gpt_Ip_GetCntValue) @06883b60
+Ftm_Gpt_Ip_GetCntValue/1 (Ftm_Gpt_Ip_GetCntValue) @06955b60
   Type: function definition analyzed
   Visibility: no_reorder
-  Aux: @06a840e0
+  Aux: @0697ec40
   References: ftmGptBase/4 (read) 
   Referring: 
   Function flags: body
-  Called by: Ftm_Gpt_Ip_StartCounting/25 
+  Called by: Ftm_Gpt_Ip_StartCounting/21 
   Calls: 
-Ftm_Gpt_Ip_GetChInterruptStatusFlag/0 (Ftm_Gpt_Ip_GetChInterruptStatusFlag) @06883e00
-  Type: function definition analyzed
+Ftm_Gpt_Ip_GetChInterruptStatusFlag/0 (Ftm_Gpt_Ip_GetChInterruptStatusFlag) @06955e00
+  Type: function definition
   Visibility: no_reorder
-  Aux: @068a4b60
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+
+Removing unused symbols: Ftm_Gpt_Ip_GetCompareValue/2 Ftm_Gpt_Ip_GetChInterruptStatusFlag/0
+
+Reclaimed Symbol table:
+
+SchM_Exit_Gpt_GPT_EXCLUSIVE_AREA_24/36 (SchM_Exit_Gpt_GPT_EXCLUSIVE_AREA_24) @0698bb60
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: Ftm_Gpt_Ip_ModeSelectA/16 
+  Calls: 
+SchM_Enter_Gpt_GPT_EXCLUSIVE_AREA_24/35 (SchM_Enter_Gpt_GPT_EXCLUSIVE_AREA_24) @0698ba80
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: Ftm_Gpt_Ip_ModeSelectA/16 
+  Calls: 
+SchM_Exit_Gpt_GPT_EXCLUSIVE_AREA_23/34 (SchM_Exit_Gpt_GPT_EXCLUSIVE_AREA_23) @0698b540
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: Ftm_Gpt_Ip_SetEnFtmModule/13 
+  Calls: 
+SchM_Enter_Gpt_GPT_EXCLUSIVE_AREA_23/33 (SchM_Enter_Gpt_GPT_EXCLUSIVE_AREA_23) @0698b460
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: Ftm_Gpt_Ip_SetEnFtmModule/13 
+  Calls: 
+SchM_Exit_Gpt_GPT_EXCLUSIVE_AREA_17/32 (SchM_Exit_Gpt_GPT_EXCLUSIVE_AREA_17) @0698b0e0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: Ftm_Gpt_Ip_SetFreezeBits/6 
+  Calls: 
+SchM_Enter_Gpt_GPT_EXCLUSIVE_AREA_17/31 (SchM_Enter_Gpt_GPT_EXCLUSIVE_AREA_17) @0698b000
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: Ftm_Gpt_Ip_SetFreezeBits/6 
+  Calls: 
+SchM_Exit_Gpt_GPT_EXCLUSIVE_AREA_21/30 (SchM_Exit_Gpt_GPT_EXCLUSIVE_AREA_21) @06987380
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: Ftm_Gpt_Ip_SetClockSource/11 
+  Calls: 
+SchM_Enter_Gpt_GPT_EXCLUSIVE_AREA_21/29 (SchM_Enter_Gpt_GPT_EXCLUSIVE_AREA_21) @069870e0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: Ftm_Gpt_Ip_SetClockSource/11 
+  Calls: 
+SchM_Exit_Gpt_GPT_EXCLUSIVE_AREA_22/28 (SchM_Exit_Gpt_GPT_EXCLUSIVE_AREA_22) @06987e00
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: Ftm_Gpt_Ip_SetPrescaler/12 
+  Calls: 
+SchM_Enter_Gpt_GPT_EXCLUSIVE_AREA_22/27 (SchM_Enter_Gpt_GPT_EXCLUSIVE_AREA_22) @06987d20
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: Ftm_Gpt_Ip_SetPrescaler/12 
+  Calls: 
+Ftm_Gpt_Ip_SetHalfCycleReloadPoint/26 (Ftm_Gpt_Ip_SetHalfCycleReloadPoint) @069877e0
+  Type: function definition analyzed
+  Visibility: force_output no_reorder public
   References: ftmGptBase/4 (read) 
   Referring: 
   Function flags: body
-  Called by: Ftm_Gpt_Ip_ProcessCommonInterrupt/21 
+  Called by: 
+  Calls: Ftm_Gpt_Ip_SetHalfCycleValue/17 
+Ftm_Gpt_Ip_DisableChannelInterrupt/25 (Ftm_Gpt_Ip_DisableChannelInterrupt) @06987540
+  Type: function definition analyzed
+  Visibility: force_output no_reorder public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: Ftm_Gpt_Ip_ClearChInterruptStatusFlag/9 Ftm_Gpt_Ip_SetChannelEnableInterrupt/10 
+Ftm_Gpt_Ip_EnableChannelInterrupt/24 (Ftm_Gpt_Ip_EnableChannelInterrupt) @069872a0
+  Type: function definition analyzed
+  Visibility: force_output no_reorder public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: Ftm_Gpt_Ip_SetChannelEnableInterrupt/10 Ftm_Gpt_Ip_ClearChInterruptStatusFlag/9 
+Ftm_Gpt_Ip_StopTimer/23 (Ftm_Gpt_Ip_StopTimer) @06987000
+  Type: function definition analyzed
+  Visibility: force_output no_reorder public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: Ftm_Gpt_Ip_SetClockSource/11 Ftm_Gpt_Ip_SetEnFtmModule/13 
+Ftm_Gpt_Ip_StartTimer/22 (Ftm_Gpt_Ip_StartTimer) @0697ec40
+  Type: function definition analyzed
+  Visibility: force_output no_reorder public
+  References: Ftm_Gpt_Ip_u32InstanceState/5 (read) 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: Ftm_Gpt_Ip_SetEnFtmModule/13 Ftm_Gpt_Ip_SetCounterInitVal/7 
+Ftm_Gpt_Ip_StartCounting/21 (Ftm_Gpt_Ip_StartCounting) @0697e700
+  Type: function definition analyzed
+  Visibility: force_output no_reorder public
+  References: Ftm_Gpt_Ip_u32TargetValue/3 (write) 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: Ftm_Gpt_Ip_SetChannelEnableInterrupt/10 Ftm_Gpt_Ip_ClearChInterruptStatusFlag/9 Ftm_Gpt_Ip_SetCompareValue/14 Ftm_Gpt_Ip_GetCntValue/1 
+Ftm_Gpt_Ip_Deinit/20 (Ftm_Gpt_Ip_Deinit) @0697ee00
+  Type: function definition analyzed
+  Visibility: force_output no_reorder public
+  References: Ftm_Gpt_Ip_u32InstanceState/5 (write) 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: Ftm_Gpt_Ip_SetCounter/8 Ftm_Gpt_Ip_SetCounterInitVal/7 Ftm_Gpt_Ip_SetFreezeBits/6 Ftm_Gpt_Ip_SetEnFtmModule/13 Ftm_Gpt_Ip_SetClockSource/11 Ftm_Gpt_Ip_ClearChInterruptStatusFlag/9 Ftm_Gpt_Ip_SetChannelEnableInterrupt/10 
+Ftm_Gpt_Ip_InitChannel/19 (Ftm_Gpt_Ip_InitChannel) @0697eb60
+  Type: function definition analyzed
+  Visibility: force_output no_reorder public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: Ftm_Gpt_Ip_ModeSelectA/16 Ftm_Gpt_Ip_SetCompareValue/14 Ftm_Gpt_Ip_ClearChInterruptStatusFlag/9 Ftm_Gpt_Ip_SetChannelEnableInterrupt/10 
+Ftm_Gpt_Ip_Init/18 (Ftm_Gpt_Ip_Init) @0697e8c0
+  Type: function definition analyzed
+  Visibility: force_output no_reorder public
+  References: Ftm_Gpt_Ip_u32InstanceState/5 (write) 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: Ftm_Gpt_Ip_SetEnFtmModule/13 Ftm_Gpt_Ip_WriteModulo/15 Ftm_Gpt_Ip_SetCounterInitVal/7 Ftm_Gpt_Ip_SetFreezeBits/6 Ftm_Gpt_Ip_SetClockSource/11 Ftm_Gpt_Ip_SetPrescaler/12 
+Ftm_Gpt_Ip_SetHalfCycleValue/17 (Ftm_Gpt_Ip_SetHalfCycleValue) @0697e620
+  Type: function definition analyzed
+  Visibility: no_reorder
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: Ftm_Gpt_Ip_SetHalfCycleReloadPoint/26 
+  Calls: 
+Ftm_Gpt_Ip_ModeSelectA/16 (Ftm_Gpt_Ip_ModeSelectA) @0697e380
+  Type: function definition analyzed
+  Visibility: no_reorder
+  References: ftmGptBase/4 (read) ftmGptBase/4 (read) ftmGptBase/4 (read) ftmGptBase/4 (read) 
+  Referring: 
+  Function flags: body
+  Called by: Ftm_Gpt_Ip_InitChannel/19 
+  Calls: SchM_Exit_Gpt_GPT_EXCLUSIVE_AREA_24/36 SchM_Enter_Gpt_GPT_EXCLUSIVE_AREA_24/35 
+Ftm_Gpt_Ip_WriteModulo/15 (Ftm_Gpt_Ip_WriteModulo) @0697e0e0
+  Type: function definition analyzed
+  Visibility: no_reorder
+  References: ftmGptBase/4 (read) 
+  Referring: 
+  Function flags: body
+  Called by: Ftm_Gpt_Ip_Init/18 
+  Calls: 
+Ftm_Gpt_Ip_SetCompareValue/14 (Ftm_Gpt_Ip_SetCompareValue) @06977b60
+  Type: function definition analyzed
+  Visibility: no_reorder
+  References: ftmGptBase/4 (read) 
+  Referring: 
+  Function flags: body
+  Called by: Ftm_Gpt_Ip_StartCounting/21 Ftm_Gpt_Ip_InitChannel/19 
+  Calls: 
+Ftm_Gpt_Ip_SetEnFtmModule/13 (Ftm_Gpt_Ip_SetEnFtmModule) @06977540
+  Type: function definition analyzed
+  Visibility: no_reorder
+  References: ftmGptBase/4 (read) ftmGptBase/4 (read) ftmGptBase/4 (read) ftmGptBase/4 (read) 
+  Referring: 
+  Function flags: body
+  Called by: Ftm_Gpt_Ip_StopTimer/23 Ftm_Gpt_Ip_StartTimer/22 Ftm_Gpt_Ip_Deinit/20 Ftm_Gpt_Ip_Init/18 
+  Calls: SchM_Exit_Gpt_GPT_EXCLUSIVE_AREA_23/34 SchM_Enter_Gpt_GPT_EXCLUSIVE_AREA_23/33 
+Ftm_Gpt_Ip_SetPrescaler/12 (Ftm_Gpt_Ip_SetPrescaler) @06977e00
+  Type: function definition analyzed
+  Visibility: no_reorder
+  References: ftmGptBase/4 (read) ftmGptBase/4 (read) 
+  Referring: 
+  Function flags: body
+  Called by: Ftm_Gpt_Ip_Init/18 
+  Calls: SchM_Exit_Gpt_GPT_EXCLUSIVE_AREA_22/28 SchM_Enter_Gpt_GPT_EXCLUSIVE_AREA_22/27 
+Ftm_Gpt_Ip_SetClockSource/11 (Ftm_Gpt_Ip_SetClockSource) @06977a80
+  Type: function definition analyzed
+  Visibility: no_reorder
+  References: ftmGptBase/4 (read) ftmGptBase/4 (read) 
+  Referring: 
+  Function flags: body
+  Called by: Ftm_Gpt_Ip_StopTimer/23 Ftm_Gpt_Ip_Deinit/20 Ftm_Gpt_Ip_Init/18 
+  Calls: SchM_Exit_Gpt_GPT_EXCLUSIVE_AREA_21/30 SchM_Enter_Gpt_GPT_EXCLUSIVE_AREA_21/29 
+Ftm_Gpt_Ip_SetChannelEnableInterrupt/10 (Ftm_Gpt_Ip_SetChannelEnableInterrupt) @06977700
+  Type: function definition analyzed
+  Visibility: no_reorder
+  References: ftmGptBase/4 (read) ftmGptBase/4 (read) 
+  Referring: 
+  Function flags: body
+  Called by: Ftm_Gpt_Ip_DisableChannelInterrupt/25 Ftm_Gpt_Ip_EnableChannelInterrupt/24 Ftm_Gpt_Ip_StartCounting/21 Ftm_Gpt_Ip_Deinit/20 Ftm_Gpt_Ip_InitChannel/19 
+  Calls: 
+Ftm_Gpt_Ip_ClearChInterruptStatusFlag/9 (Ftm_Gpt_Ip_ClearChInterruptStatusFlag) @06977460
+  Type: function definition analyzed
+  Visibility: no_reorder
+  References: ftmGptBase/4 (read) ftmGptBase/4 (read) 
+  Referring: 
+  Function flags: body
+  Called by: Ftm_Gpt_Ip_DisableChannelInterrupt/25 Ftm_Gpt_Ip_EnableChannelInterrupt/24 Ftm_Gpt_Ip_StartCounting/21 Ftm_Gpt_Ip_Deinit/20 Ftm_Gpt_Ip_InitChannel/19 
+  Calls: 
+Ftm_Gpt_Ip_SetCounter/8 (Ftm_Gpt_Ip_SetCounter) @069771c0
+  Type: function definition analyzed
+  Visibility: no_reorder
+  References: ftmGptBase/4 (read) 
+  Referring: 
+  Function flags: body
+  Called by: Ftm_Gpt_Ip_Deinit/20 
+  Calls: 
+Ftm_Gpt_Ip_SetCounterInitVal/7 (Ftm_Gpt_Ip_SetCounterInitVal) @06972a80
+  Type: function definition analyzed
+  Visibility: no_reorder
+  References: ftmGptBase/4 (read) 
+  Referring: 
+  Function flags: body
+  Called by: Ftm_Gpt_Ip_StartTimer/22 Ftm_Gpt_Ip_Deinit/20 Ftm_Gpt_Ip_Init/18 
+  Calls: 
+Ftm_Gpt_Ip_SetFreezeBits/6 (Ftm_Gpt_Ip_SetFreezeBits) @06972d20
+  Type: function definition analyzed
+  Visibility: no_reorder
+  References: ftmGptBase/4 (read) ftmGptBase/4 (read) 
+  Referring: 
+  Function flags: body
+  Called by: Ftm_Gpt_Ip_Deinit/20 Ftm_Gpt_Ip_Init/18 
+  Calls: SchM_Exit_Gpt_GPT_EXCLUSIVE_AREA_17/32 SchM_Enter_Gpt_GPT_EXCLUSIVE_AREA_17/31 
+Ftm_Gpt_Ip_u32InstanceState/5 (Ftm_Gpt_Ip_u32InstanceState) @06970120
+  Type: variable definition analyzed
+  Visibility: force_output no_reorder
+  References: 
+  Referring: Ftm_Gpt_Ip_Init/18 (write) Ftm_Gpt_Ip_Deinit/20 (write) Ftm_Gpt_Ip_StartTimer/22 (read) 
+  Availability: not-ready
+  Varpool flags: initialized
+ftmGptBase/4 (ftmGptBase) @06970090
+  Type: variable definition analyzed
+  Visibility: force_output no_reorder public
+  References: 
+  Referring: Ftm_Gpt_Ip_SetPrescaler/12 (read) Ftm_Gpt_Ip_SetPrescaler/12 (read) Ftm_Gpt_Ip_SetClockSource/11 (read) Ftm_Gpt_Ip_SetClockSource/11 (read) Ftm_Gpt_Ip_SetFreezeBits/6 (read) Ftm_Gpt_Ip_SetFreezeBits/6 (read) Ftm_Gpt_Ip_SetCounterInitVal/7 (read) Ftm_Gpt_Ip_WriteModulo/15 (read) Ftm_Gpt_Ip_SetEnFtmModule/13 (read) Ftm_Gpt_Ip_SetEnFtmModule/13 (read) Ftm_Gpt_Ip_SetEnFtmModule/13 (read) Ftm_Gpt_Ip_SetEnFtmModule/13 (read) Ftm_Gpt_Ip_SetChannelEnableInterrupt/10 (read) Ftm_Gpt_Ip_SetChannelEnableInterrupt/10 (read) Ftm_Gpt_Ip_ClearChInterruptStatusFlag/9 (read) Ftm_Gpt_Ip_ClearChInterruptStatusFlag/9 (read) Ftm_Gpt_Ip_SetCompareValue/14 (read) Ftm_Gpt_Ip_ModeSelectA/16 (read) Ftm_Gpt_Ip_ModeSelectA/16 (read) Ftm_Gpt_Ip_ModeSelectA/16 (read) Ftm_Gpt_Ip_ModeSelectA/16 (read) Ftm_Gpt_Ip_SetCounter/8 (read) Ftm_Gpt_Ip_GetCntValue/1 (read) Ftm_Gpt_Ip_SetHalfCycleReloadPoint/26 (read) 
+  Availability: not-ready
+  Varpool flags: initialized read-only const-value-known
+Ftm_Gpt_Ip_u32TargetValue/3 (Ftm_Gpt_Ip_u32TargetValue) @06970000
+  Type: variable definition analyzed
+  Visibility: force_output no_reorder public
+  References: 
+  Referring: Ftm_Gpt_Ip_StartCounting/21 (write) 
+  Availability: not-ready
+  Varpool flags:
+Ftm_Gpt_Ip_GetCntValue/1 (Ftm_Gpt_Ip_GetCntValue) @06955b60
+  Type: function definition analyzed
+  Visibility: no_reorder
+  References: ftmGptBase/4 (read) 
+  Referring: 
+  Function flags: body
+  Called by: Ftm_Gpt_Ip_StartCounting/21 
+  Calls: 
+
+
+Initial Symbol table:
+
+SchM_Exit_Gpt_GPT_EXCLUSIVE_AREA_24/36 (SchM_Exit_Gpt_GPT_EXCLUSIVE_AREA_24) @0698bb60
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: Ftm_Gpt_Ip_ModeSelectA/16 
+  Calls: 
+SchM_Enter_Gpt_GPT_EXCLUSIVE_AREA_24/35 (SchM_Enter_Gpt_GPT_EXCLUSIVE_AREA_24) @0698ba80
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: Ftm_Gpt_Ip_ModeSelectA/16 
+  Calls: 
+SchM_Exit_Gpt_GPT_EXCLUSIVE_AREA_23/34 (SchM_Exit_Gpt_GPT_EXCLUSIVE_AREA_23) @0698b540
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: Ftm_Gpt_Ip_SetEnFtmModule/13 
+  Calls: 
+SchM_Enter_Gpt_GPT_EXCLUSIVE_AREA_23/33 (SchM_Enter_Gpt_GPT_EXCLUSIVE_AREA_23) @0698b460
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: Ftm_Gpt_Ip_SetEnFtmModule/13 
+  Calls: 
+SchM_Exit_Gpt_GPT_EXCLUSIVE_AREA_17/32 (SchM_Exit_Gpt_GPT_EXCLUSIVE_AREA_17) @0698b0e0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: Ftm_Gpt_Ip_SetFreezeBits/6 
+  Calls: 
+SchM_Enter_Gpt_GPT_EXCLUSIVE_AREA_17/31 (SchM_Enter_Gpt_GPT_EXCLUSIVE_AREA_17) @0698b000
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: Ftm_Gpt_Ip_SetFreezeBits/6 
+  Calls: 
+SchM_Exit_Gpt_GPT_EXCLUSIVE_AREA_21/30 (SchM_Exit_Gpt_GPT_EXCLUSIVE_AREA_21) @06987380
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: Ftm_Gpt_Ip_SetClockSource/11 
+  Calls: 
+SchM_Enter_Gpt_GPT_EXCLUSIVE_AREA_21/29 (SchM_Enter_Gpt_GPT_EXCLUSIVE_AREA_21) @069870e0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: Ftm_Gpt_Ip_SetClockSource/11 
+  Calls: 
+SchM_Exit_Gpt_GPT_EXCLUSIVE_AREA_22/28 (SchM_Exit_Gpt_GPT_EXCLUSIVE_AREA_22) @06987e00
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: Ftm_Gpt_Ip_SetPrescaler/12 
+  Calls: 
+SchM_Enter_Gpt_GPT_EXCLUSIVE_AREA_22/27 (SchM_Enter_Gpt_GPT_EXCLUSIVE_AREA_22) @06987d20
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: Ftm_Gpt_Ip_SetPrescaler/12 
+  Calls: 
+Ftm_Gpt_Ip_SetHalfCycleReloadPoint/26 (Ftm_Gpt_Ip_SetHalfCycleReloadPoint) @069877e0
+  Type: function definition analyzed
+  Visibility: force_output no_reorder public
+  References: ftmGptBase/4 (read) 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: Ftm_Gpt_Ip_SetHalfCycleValue/17 
+Ftm_Gpt_Ip_DisableChannelInterrupt/25 (Ftm_Gpt_Ip_DisableChannelInterrupt) @06987540
+  Type: function definition analyzed
+  Visibility: force_output no_reorder public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: Ftm_Gpt_Ip_ClearChInterruptStatusFlag/9 Ftm_Gpt_Ip_SetChannelEnableInterrupt/10 
+Ftm_Gpt_Ip_EnableChannelInterrupt/24 (Ftm_Gpt_Ip_EnableChannelInterrupt) @069872a0
+  Type: function definition analyzed
+  Visibility: force_output no_reorder public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: Ftm_Gpt_Ip_SetChannelEnableInterrupt/10 Ftm_Gpt_Ip_ClearChInterruptStatusFlag/9 
+Ftm_Gpt_Ip_StopTimer/23 (Ftm_Gpt_Ip_StopTimer) @06987000
+  Type: function definition analyzed
+  Visibility: force_output no_reorder public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: Ftm_Gpt_Ip_SetClockSource/11 Ftm_Gpt_Ip_SetEnFtmModule/13 
+Ftm_Gpt_Ip_StartTimer/22 (Ftm_Gpt_Ip_StartTimer) @0697ec40
+  Type: function definition analyzed
+  Visibility: force_output no_reorder public
+  References: Ftm_Gpt_Ip_u32InstanceState/5 (read) 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: Ftm_Gpt_Ip_SetEnFtmModule/13 Ftm_Gpt_Ip_SetCounterInitVal/7 
+Ftm_Gpt_Ip_StartCounting/21 (Ftm_Gpt_Ip_StartCounting) @0697e700
+  Type: function definition analyzed
+  Visibility: force_output no_reorder public
+  References: Ftm_Gpt_Ip_u32TargetValue/3 (write) 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: Ftm_Gpt_Ip_SetChannelEnableInterrupt/10 Ftm_Gpt_Ip_ClearChInterruptStatusFlag/9 Ftm_Gpt_Ip_SetCompareValue/14 Ftm_Gpt_Ip_GetCntValue/1 
+Ftm_Gpt_Ip_Deinit/20 (Ftm_Gpt_Ip_Deinit) @0697ee00
+  Type: function definition analyzed
+  Visibility: force_output no_reorder public
+  References: Ftm_Gpt_Ip_u32InstanceState/5 (write) 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: Ftm_Gpt_Ip_SetCounter/8 Ftm_Gpt_Ip_SetCounterInitVal/7 Ftm_Gpt_Ip_SetFreezeBits/6 Ftm_Gpt_Ip_SetEnFtmModule/13 Ftm_Gpt_Ip_SetClockSource/11 Ftm_Gpt_Ip_ClearChInterruptStatusFlag/9 Ftm_Gpt_Ip_SetChannelEnableInterrupt/10 
+Ftm_Gpt_Ip_InitChannel/19 (Ftm_Gpt_Ip_InitChannel) @0697eb60
+  Type: function definition analyzed
+  Visibility: force_output no_reorder public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: Ftm_Gpt_Ip_ModeSelectA/16 Ftm_Gpt_Ip_SetCompareValue/14 Ftm_Gpt_Ip_ClearChInterruptStatusFlag/9 Ftm_Gpt_Ip_SetChannelEnableInterrupt/10 
+Ftm_Gpt_Ip_Init/18 (Ftm_Gpt_Ip_Init) @0697e8c0
+  Type: function definition analyzed
+  Visibility: force_output no_reorder public
+  References: Ftm_Gpt_Ip_u32InstanceState/5 (write) 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: Ftm_Gpt_Ip_SetEnFtmModule/13 Ftm_Gpt_Ip_WriteModulo/15 Ftm_Gpt_Ip_SetCounterInitVal/7 Ftm_Gpt_Ip_SetFreezeBits/6 Ftm_Gpt_Ip_SetClockSource/11 Ftm_Gpt_Ip_SetPrescaler/12 
+Ftm_Gpt_Ip_SetHalfCycleValue/17 (Ftm_Gpt_Ip_SetHalfCycleValue) @0697e620
+  Type: function definition analyzed
+  Visibility: no_reorder
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: Ftm_Gpt_Ip_SetHalfCycleReloadPoint/26 
+  Calls: 
+Ftm_Gpt_Ip_ModeSelectA/16 (Ftm_Gpt_Ip_ModeSelectA) @0697e380
+  Type: function definition analyzed
+  Visibility: no_reorder
+  References: ftmGptBase/4 (read) ftmGptBase/4 (read) ftmGptBase/4 (read) ftmGptBase/4 (read) 
+  Referring: 
+  Function flags: body
+  Called by: Ftm_Gpt_Ip_InitChannel/19 
+  Calls: SchM_Exit_Gpt_GPT_EXCLUSIVE_AREA_24/36 SchM_Enter_Gpt_GPT_EXCLUSIVE_AREA_24/35 
+Ftm_Gpt_Ip_WriteModulo/15 (Ftm_Gpt_Ip_WriteModulo) @0697e0e0
+  Type: function definition analyzed
+  Visibility: no_reorder
+  References: ftmGptBase/4 (read) 
+  Referring: 
+  Function flags: body
+  Called by: Ftm_Gpt_Ip_Init/18 
+  Calls: 
+Ftm_Gpt_Ip_SetCompareValue/14 (Ftm_Gpt_Ip_SetCompareValue) @06977b60
+  Type: function definition analyzed
+  Visibility: no_reorder
+  References: ftmGptBase/4 (read) 
+  Referring: 
+  Function flags: body
+  Called by: Ftm_Gpt_Ip_StartCounting/21 Ftm_Gpt_Ip_InitChannel/19 
+  Calls: 
+Ftm_Gpt_Ip_SetEnFtmModule/13 (Ftm_Gpt_Ip_SetEnFtmModule) @06977540
+  Type: function definition analyzed
+  Visibility: no_reorder
+  References: ftmGptBase/4 (read) ftmGptBase/4 (read) ftmGptBase/4 (read) ftmGptBase/4 (read) 
+  Referring: 
+  Function flags: body
+  Called by: Ftm_Gpt_Ip_StopTimer/23 Ftm_Gpt_Ip_StartTimer/22 Ftm_Gpt_Ip_Deinit/20 Ftm_Gpt_Ip_Init/18 
+  Calls: SchM_Exit_Gpt_GPT_EXCLUSIVE_AREA_23/34 SchM_Enter_Gpt_GPT_EXCLUSIVE_AREA_23/33 
+Ftm_Gpt_Ip_SetPrescaler/12 (Ftm_Gpt_Ip_SetPrescaler) @06977e00
+  Type: function definition analyzed
+  Visibility: no_reorder
+  References: ftmGptBase/4 (read) ftmGptBase/4 (read) 
+  Referring: 
+  Function flags: body
+  Called by: Ftm_Gpt_Ip_Init/18 
+  Calls: SchM_Exit_Gpt_GPT_EXCLUSIVE_AREA_22/28 SchM_Enter_Gpt_GPT_EXCLUSIVE_AREA_22/27 
+Ftm_Gpt_Ip_SetClockSource/11 (Ftm_Gpt_Ip_SetClockSource) @06977a80
+  Type: function definition analyzed
+  Visibility: no_reorder
+  References: ftmGptBase/4 (read) ftmGptBase/4 (read) 
+  Referring: 
+  Function flags: body
+  Called by: Ftm_Gpt_Ip_StopTimer/23 Ftm_Gpt_Ip_Deinit/20 Ftm_Gpt_Ip_Init/18 
+  Calls: SchM_Exit_Gpt_GPT_EXCLUSIVE_AREA_21/30 SchM_Enter_Gpt_GPT_EXCLUSIVE_AREA_21/29 
+Ftm_Gpt_Ip_SetChannelEnableInterrupt/10 (Ftm_Gpt_Ip_SetChannelEnableInterrupt) @06977700
+  Type: function definition analyzed
+  Visibility: no_reorder
+  References: ftmGptBase/4 (read) ftmGptBase/4 (read) 
+  Referring: 
+  Function flags: body
+  Called by: Ftm_Gpt_Ip_DisableChannelInterrupt/25 Ftm_Gpt_Ip_EnableChannelInterrupt/24 Ftm_Gpt_Ip_StartCounting/21 Ftm_Gpt_Ip_Deinit/20 Ftm_Gpt_Ip_InitChannel/19 
+  Calls: 
+Ftm_Gpt_Ip_ClearChInterruptStatusFlag/9 (Ftm_Gpt_Ip_ClearChInterruptStatusFlag) @06977460
+  Type: function definition analyzed
+  Visibility: no_reorder
+  References: ftmGptBase/4 (read) ftmGptBase/4 (read) 
+  Referring: 
+  Function flags: body
+  Called by: Ftm_Gpt_Ip_DisableChannelInterrupt/25 Ftm_Gpt_Ip_EnableChannelInterrupt/24 Ftm_Gpt_Ip_StartCounting/21 Ftm_Gpt_Ip_Deinit/20 Ftm_Gpt_Ip_InitChannel/19 
+  Calls: 
+Ftm_Gpt_Ip_SetCounter/8 (Ftm_Gpt_Ip_SetCounter) @069771c0
+  Type: function definition analyzed
+  Visibility: no_reorder
+  References: ftmGptBase/4 (read) 
+  Referring: 
+  Function flags: body
+  Called by: Ftm_Gpt_Ip_Deinit/20 
+  Calls: 
+Ftm_Gpt_Ip_SetCounterInitVal/7 (Ftm_Gpt_Ip_SetCounterInitVal) @06972a80
+  Type: function definition analyzed
+  Visibility: no_reorder
+  References: ftmGptBase/4 (read) 
+  Referring: 
+  Function flags: body
+  Called by: Ftm_Gpt_Ip_StartTimer/22 Ftm_Gpt_Ip_Deinit/20 Ftm_Gpt_Ip_Init/18 
+  Calls: 
+Ftm_Gpt_Ip_SetFreezeBits/6 (Ftm_Gpt_Ip_SetFreezeBits) @06972d20
+  Type: function definition analyzed
+  Visibility: no_reorder
+  References: ftmGptBase/4 (read) ftmGptBase/4 (read) 
+  Referring: 
+  Function flags: body
+  Called by: Ftm_Gpt_Ip_Deinit/20 Ftm_Gpt_Ip_Init/18 
+  Calls: SchM_Exit_Gpt_GPT_EXCLUSIVE_AREA_17/32 SchM_Enter_Gpt_GPT_EXCLUSIVE_AREA_17/31 
+Ftm_Gpt_Ip_u32InstanceState/5 (Ftm_Gpt_Ip_u32InstanceState) @06970120
+  Type: variable definition analyzed
+  Visibility: force_output no_reorder
+  References: 
+  Referring: Ftm_Gpt_Ip_Init/18 (write) Ftm_Gpt_Ip_Deinit/20 (write) Ftm_Gpt_Ip_StartTimer/22 (read) 
+  Availability: not-ready
+  Varpool flags: initialized
+ftmGptBase/4 (ftmGptBase) @06970090
+  Type: variable definition analyzed
+  Visibility: force_output no_reorder public
+  References: 
+  Referring: Ftm_Gpt_Ip_SetPrescaler/12 (read) Ftm_Gpt_Ip_SetPrescaler/12 (read) Ftm_Gpt_Ip_SetClockSource/11 (read) Ftm_Gpt_Ip_SetClockSource/11 (read) Ftm_Gpt_Ip_SetFreezeBits/6 (read) Ftm_Gpt_Ip_SetFreezeBits/6 (read) Ftm_Gpt_Ip_SetCounterInitVal/7 (read) Ftm_Gpt_Ip_WriteModulo/15 (read) Ftm_Gpt_Ip_SetEnFtmModule/13 (read) Ftm_Gpt_Ip_SetEnFtmModule/13 (read) Ftm_Gpt_Ip_SetEnFtmModule/13 (read) Ftm_Gpt_Ip_SetEnFtmModule/13 (read) Ftm_Gpt_Ip_SetChannelEnableInterrupt/10 (read) Ftm_Gpt_Ip_SetChannelEnableInterrupt/10 (read) Ftm_Gpt_Ip_ClearChInterruptStatusFlag/9 (read) Ftm_Gpt_Ip_ClearChInterruptStatusFlag/9 (read) Ftm_Gpt_Ip_SetCompareValue/14 (read) Ftm_Gpt_Ip_ModeSelectA/16 (read) Ftm_Gpt_Ip_ModeSelectA/16 (read) Ftm_Gpt_Ip_ModeSelectA/16 (read) Ftm_Gpt_Ip_ModeSelectA/16 (read) Ftm_Gpt_Ip_SetCounter/8 (read) Ftm_Gpt_Ip_GetCntValue/1 (read) Ftm_Gpt_Ip_SetHalfCycleReloadPoint/26 (read) 
+  Availability: not-ready
+  Varpool flags: initialized read-only const-value-known
+Ftm_Gpt_Ip_u32TargetValue/3 (Ftm_Gpt_Ip_u32TargetValue) @06970000
+  Type: variable definition analyzed
+  Visibility: force_output no_reorder public
+  References: 
+  Referring: Ftm_Gpt_Ip_StartCounting/21 (write) 
+  Availability: not-ready
+  Varpool flags:
+Ftm_Gpt_Ip_GetCntValue/1 (Ftm_Gpt_Ip_GetCntValue) @06955b60
+  Type: function definition analyzed
+  Visibility: no_reorder
+  References: ftmGptBase/4 (read) 
+  Referring: 
+  Function flags: body
+  Called by: Ftm_Gpt_Ip_StartCounting/21 
   Calls: 
 
 Removing unused symbols:
 
 Reclaimed Symbol table:
 
-SchM_Exit_Gpt_GPT_EXCLUSIVE_AREA_24/43 (SchM_Exit_Gpt_GPT_EXCLUSIVE_AREA_24) @069e30e0
+SchM_Exit_Gpt_GPT_EXCLUSIVE_AREA_24/36 (SchM_Exit_Gpt_GPT_EXCLUSIVE_AREA_24) @0698bb60
   Type: function
   Visibility: external public
   References: 
   Referring: 
   Function flags:
-  Called by: Ftm_Gpt_Ip_ModeSelectA/17 
+  Called by: Ftm_Gpt_Ip_ModeSelectA/16 
   Calls: 
-SchM_Enter_Gpt_GPT_EXCLUSIVE_AREA_24/42 (SchM_Enter_Gpt_GPT_EXCLUSIVE_AREA_24) @069e3000
+SchM_Enter_Gpt_GPT_EXCLUSIVE_AREA_24/35 (SchM_Enter_Gpt_GPT_EXCLUSIVE_AREA_24) @0698ba80
   Type: function
   Visibility: external public
   References: 
   Referring: 
   Function flags:
-  Called by: Ftm_Gpt_Ip_ModeSelectA/17 
+  Called by: Ftm_Gpt_Ip_ModeSelectA/16 
   Calls: 
-SchM_Exit_Gpt_GPT_EXCLUSIVE_AREA_23/41 (SchM_Exit_Gpt_GPT_EXCLUSIVE_AREA_23) @069d7c40
+SchM_Exit_Gpt_GPT_EXCLUSIVE_AREA_23/34 (SchM_Exit_Gpt_GPT_EXCLUSIVE_AREA_23) @0698b540
   Type: function
   Visibility: external public
   References: 
   Referring: 
   Function flags:
-  Called by: Ftm_Gpt_Ip_SetEnFtmModule/14 
+  Called by: Ftm_Gpt_Ip_SetEnFtmModule/13 
   Calls: 
-SchM_Enter_Gpt_GPT_EXCLUSIVE_AREA_23/40 (SchM_Enter_Gpt_GPT_EXCLUSIVE_AREA_23) @069d7b60
+SchM_Enter_Gpt_GPT_EXCLUSIVE_AREA_23/33 (SchM_Enter_Gpt_GPT_EXCLUSIVE_AREA_23) @0698b460
   Type: function
   Visibility: external public
   References: 
   Referring: 
   Function flags:
-  Called by: Ftm_Gpt_Ip_SetEnFtmModule/14 
+  Called by: Ftm_Gpt_Ip_SetEnFtmModule/13 
   Calls: 
-SchM_Exit_Gpt_GPT_EXCLUSIVE_AREA_17/39 (SchM_Exit_Gpt_GPT_EXCLUSIVE_AREA_17) @069d77e0
+SchM_Exit_Gpt_GPT_EXCLUSIVE_AREA_17/32 (SchM_Exit_Gpt_GPT_EXCLUSIVE_AREA_17) @0698b0e0
   Type: function
   Visibility: external public
   References: 
   Referring: 
   Function flags:
-  Called by: Ftm_Gpt_Ip_SetFreezeBits/7 
+  Called by: Ftm_Gpt_Ip_SetFreezeBits/6 
   Calls: 
-SchM_Enter_Gpt_GPT_EXCLUSIVE_AREA_17/38 (SchM_Enter_Gpt_GPT_EXCLUSIVE_AREA_17) @069d7700
+SchM_Enter_Gpt_GPT_EXCLUSIVE_AREA_17/31 (SchM_Enter_Gpt_GPT_EXCLUSIVE_AREA_17) @0698b000
   Type: function
   Visibility: external public
   References: 
   Referring: 
   Function flags:
-  Called by: Ftm_Gpt_Ip_SetFreezeBits/7 
+  Called by: Ftm_Gpt_Ip_SetFreezeBits/6 
   Calls: 
-SchM_Exit_Gpt_GPT_EXCLUSIVE_AREA_21/37 (SchM_Exit_Gpt_GPT_EXCLUSIVE_AREA_21) @069d7540
+SchM_Exit_Gpt_GPT_EXCLUSIVE_AREA_21/30 (SchM_Exit_Gpt_GPT_EXCLUSIVE_AREA_21) @06987380
   Type: function
   Visibility: external public
   References: 
   Referring: 
   Function flags:
-  Called by: Ftm_Gpt_Ip_SetClockSource/12 
+  Called by: Ftm_Gpt_Ip_SetClockSource/11 
   Calls: 
-SchM_Enter_Gpt_GPT_EXCLUSIVE_AREA_21/36 (SchM_Enter_Gpt_GPT_EXCLUSIVE_AREA_21) @069d7460
+SchM_Enter_Gpt_GPT_EXCLUSIVE_AREA_21/29 (SchM_Enter_Gpt_GPT_EXCLUSIVE_AREA_21) @069870e0
   Type: function
   Visibility: external public
   References: 
   Referring: 
   Function flags:
-  Called by: Ftm_Gpt_Ip_SetClockSource/12 
+  Called by: Ftm_Gpt_Ip_SetClockSource/11 
   Calls: 
-SchM_Exit_Gpt_GPT_EXCLUSIVE_AREA_22/35 (SchM_Exit_Gpt_GPT_EXCLUSIVE_AREA_22) @069d72a0
+SchM_Exit_Gpt_GPT_EXCLUSIVE_AREA_22/28 (SchM_Exit_Gpt_GPT_EXCLUSIVE_AREA_22) @06987e00
   Type: function
   Visibility: external public
   References: 
   Referring: 
   Function flags:
-  Called by: Ftm_Gpt_Ip_SetPrescaler/13 
+  Called by: Ftm_Gpt_Ip_SetPrescaler/12 
   Calls: 
-SchM_Enter_Gpt_GPT_EXCLUSIVE_AREA_22/34 (SchM_Enter_Gpt_GPT_EXCLUSIVE_AREA_22) @069d71c0
+SchM_Enter_Gpt_GPT_EXCLUSIVE_AREA_22/27 (SchM_Enter_Gpt_GPT_EXCLUSIVE_AREA_22) @06987d20
   Type: function
   Visibility: external public
   References: 
   Referring: 
   Function flags:
-  Called by: Ftm_Gpt_Ip_SetPrescaler/13 
+  Called by: Ftm_Gpt_Ip_SetPrescaler/12 
   Calls: 
-SchM_Exit_Gpt_GPT_EXCLUSIVE_AREA_25/33 (SchM_Exit_Gpt_GPT_EXCLUSIVE_AREA_25) @069d0b60
-  Type: function
-  Visibility: external public
-  References: 
-  Referring: 
-  Function flags:
-  Called by: Ftm_Gpt_Ip_ProcessCommonInterrupt/21 
-  Calls: 
-SchM_Enter_Gpt_GPT_EXCLUSIVE_AREA_25/32 (SchM_Enter_Gpt_GPT_EXCLUSIVE_AREA_25) @069d0a80
-  Type: function
-  Visibility: external public
-  References: 
-  Referring: 
-  Function flags:
-  Called by: Ftm_Gpt_Ip_ProcessCommonInterrupt/21 
-  Calls: 
-FTM_0_CH_0_CH_1_ISR/31 (FTM_0_CH_0_CH_1_ISR) @069d0540
-  Type: function definition analyzed
-  Visibility: force_output no_reorder public
-  References: 
-  Referring: 
-  Function flags: body
-  Called by: 
-  Calls: Ftm_Gpt_Ip_ProcessCommonInterrupt/21 Ftm_Gpt_Ip_GetChannelEventStatus/20 Ftm_Gpt_Ip_ProcessCommonInterrupt/21 Ftm_Gpt_Ip_GetChannelEventStatus/20 
-Ftm_Gpt_Ip_SetHalfCycleReloadPoint/30 (Ftm_Gpt_Ip_SetHalfCycleReloadPoint) @069d02a0
+Ftm_Gpt_Ip_SetHalfCycleReloadPoint/26 (Ftm_Gpt_Ip_SetHalfCycleReloadPoint) @069877e0
   Type: function definition analyzed
   Visibility: force_output no_reorder public
   References: ftmGptBase/4 (read) 
   Referring: 
   Function flags: body
   Called by: 
-  Calls: Ftm_Gpt_Ip_SetHalfCycleValue/18 
-Ftm_Gpt_Ip_DisableChannelInterrupt/29 (Ftm_Gpt_Ip_DisableChannelInterrupt) @069d0000
-  Type: function definition analyzed
-  Visibility: force_output no_reorder public
-  References: 
-  Referring: 
-  Function flags: body
-  Called by: Ftm_Gpt_Ip_ProcessCommonInterrupt/21 
-  Calls: Ftm_Gpt_Ip_ClearChInterruptStatusFlag/10 Ftm_Gpt_Ip_SetChannelEnableInterrupt/11 
-Ftm_Gpt_Ip_EnableChannelInterrupt/28 (Ftm_Gpt_Ip_EnableChannelInterrupt) @06a84b60
+  Calls: Ftm_Gpt_Ip_SetHalfCycleValue/17 
+Ftm_Gpt_Ip_DisableChannelInterrupt/25 (Ftm_Gpt_Ip_DisableChannelInterrupt) @06987540
   Type: function definition analyzed
   Visibility: force_output no_reorder public
   References: 
   Referring: 
   Function flags: body
   Called by: 
-  Calls: Ftm_Gpt_Ip_SetChannelEnableInterrupt/11 Ftm_Gpt_Ip_ClearChInterruptStatusFlag/10 
-Ftm_Gpt_Ip_StopTimer/27 (Ftm_Gpt_Ip_StopTimer) @06a84620
+  Calls: Ftm_Gpt_Ip_ClearChInterruptStatusFlag/9 Ftm_Gpt_Ip_SetChannelEnableInterrupt/10 
+Ftm_Gpt_Ip_EnableChannelInterrupt/24 (Ftm_Gpt_Ip_EnableChannelInterrupt) @069872a0
   Type: function definition analyzed
   Visibility: force_output no_reorder public
   References: 
   Referring: 
   Function flags: body
   Called by: 
-  Calls: Ftm_Gpt_Ip_SetClockSource/12 Ftm_Gpt_Ip_SetEnFtmModule/14 
-Ftm_Gpt_Ip_StartTimer/26 (Ftm_Gpt_Ip_StartTimer) @06a840e0
+  Calls: Ftm_Gpt_Ip_SetChannelEnableInterrupt/10 Ftm_Gpt_Ip_ClearChInterruptStatusFlag/9 
+Ftm_Gpt_Ip_StopTimer/23 (Ftm_Gpt_Ip_StopTimer) @06987000
+  Type: function definition analyzed
+  Visibility: force_output no_reorder public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: Ftm_Gpt_Ip_SetClockSource/11 Ftm_Gpt_Ip_SetEnFtmModule/13 
+Ftm_Gpt_Ip_StartTimer/22 (Ftm_Gpt_Ip_StartTimer) @0697ec40
   Type: function definition analyzed
   Visibility: force_output no_reorder public
   References: Ftm_Gpt_Ip_u32InstanceState/5 (read) 
   Referring: 
   Function flags: body
   Called by: 
-  Calls: Ftm_Gpt_Ip_SetEnFtmModule/14 Ftm_Gpt_Ip_SetCounterInitVal/8 
-Ftm_Gpt_Ip_StartCounting/25 (Ftm_Gpt_Ip_StartCounting) @06a84d20
+  Calls: Ftm_Gpt_Ip_SetEnFtmModule/13 Ftm_Gpt_Ip_SetCounterInitVal/7 
+Ftm_Gpt_Ip_StartCounting/21 (Ftm_Gpt_Ip_StartCounting) @0697e700
   Type: function definition analyzed
   Visibility: force_output no_reorder public
   References: Ftm_Gpt_Ip_u32TargetValue/3 (write) 
   Referring: 
   Function flags: body
   Called by: 
-  Calls: Ftm_Gpt_Ip_SetChannelEnableInterrupt/11 Ftm_Gpt_Ip_ClearChInterruptStatusFlag/10 Ftm_Gpt_Ip_SetCompareValue/15 Ftm_Gpt_Ip_GetCntValue/1 
-Ftm_Gpt_Ip_Deinit/24 (Ftm_Gpt_Ip_Deinit) @06a84a80
+  Calls: Ftm_Gpt_Ip_SetChannelEnableInterrupt/10 Ftm_Gpt_Ip_ClearChInterruptStatusFlag/9 Ftm_Gpt_Ip_SetCompareValue/14 Ftm_Gpt_Ip_GetCntValue/1 
+Ftm_Gpt_Ip_Deinit/20 (Ftm_Gpt_Ip_Deinit) @0697ee00
   Type: function definition analyzed
   Visibility: force_output no_reorder public
   References: Ftm_Gpt_Ip_u32InstanceState/5 (write) 
   Referring: 
   Function flags: body
   Called by: 
-  Calls: Ftm_Gpt_Ip_SetCounter/9 Ftm_Gpt_Ip_SetCounterInitVal/8 Ftm_Gpt_Ip_SetFreezeBits/7 Ftm_Gpt_Ip_SetEnFtmModule/14 Ftm_Gpt_Ip_SetClockSource/12 Ftm_Gpt_Ip_ClearChInterruptStatusFlag/10 Ftm_Gpt_Ip_SetChannelEnableInterrupt/11 
-Ftm_Gpt_Ip_InitChannel/23 (Ftm_Gpt_Ip_InitChannel) @06a847e0
+  Calls: Ftm_Gpt_Ip_SetCounter/8 Ftm_Gpt_Ip_SetCounterInitVal/7 Ftm_Gpt_Ip_SetFreezeBits/6 Ftm_Gpt_Ip_SetEnFtmModule/13 Ftm_Gpt_Ip_SetClockSource/11 Ftm_Gpt_Ip_ClearChInterruptStatusFlag/9 Ftm_Gpt_Ip_SetChannelEnableInterrupt/10 
+Ftm_Gpt_Ip_InitChannel/19 (Ftm_Gpt_Ip_InitChannel) @0697eb60
   Type: function definition analyzed
   Visibility: force_output no_reorder public
-  References: Ftm_Gpt_Ip_u32ChState/6 (write) Ftm_Gpt_Ip_u32ChState/6 (write) Ftm_Gpt_Ip_u32ChState/6 (write) Ftm_Gpt_Ip_u32ChState/6 (write) 
+  References: 
   Referring: 
   Function flags: body
   Called by: 
-  Calls: Ftm_Gpt_Ip_ModeSelectA/17 Ftm_Gpt_Ip_SetCompareValue/15 Ftm_Gpt_Ip_ClearChInterruptStatusFlag/10 Ftm_Gpt_Ip_SetChannelEnableInterrupt/11 
-Ftm_Gpt_Ip_Init/22 (Ftm_Gpt_Ip_Init) @06a84540
+  Calls: Ftm_Gpt_Ip_ModeSelectA/16 Ftm_Gpt_Ip_SetCompareValue/14 Ftm_Gpt_Ip_ClearChInterruptStatusFlag/9 Ftm_Gpt_Ip_SetChannelEnableInterrupt/10 
+Ftm_Gpt_Ip_Init/18 (Ftm_Gpt_Ip_Init) @0697e8c0
   Type: function definition analyzed
   Visibility: force_output no_reorder public
   References: Ftm_Gpt_Ip_u32InstanceState/5 (write) 
   Referring: 
   Function flags: body
   Called by: 
-  Calls: Ftm_Gpt_Ip_SetEnFtmModule/14 Ftm_Gpt_Ip_WriteModulo/16 Ftm_Gpt_Ip_SetCounterInitVal/8 Ftm_Gpt_Ip_SetFreezeBits/7 Ftm_Gpt_Ip_SetClockSource/12 Ftm_Gpt_Ip_SetPrescaler/13 
-Ftm_Gpt_Ip_ProcessCommonInterrupt/21 (Ftm_Gpt_Ip_ProcessCommonInterrupt) @06a842a0
-  Type: function definition analyzed
-  Visibility: force_output no_reorder
-  References: Ftm_Gpt_Ip_u32ChState/6 (read) Ftm_Gpt_Ip_u32ChState/6 (read) Ftm_Gpt_Ip_u32ChState/6 (read) Ftm_Gpt_Ip_u32ChState/6 (read) Ftm_Gpt_Ip_u32TargetValue/3 (read) 
-  Referring: 
-  Function flags: body
-  Called by: FTM_0_CH_0_CH_1_ISR/31 FTM_0_CH_0_CH_1_ISR/31 
-  Calls: Ftm_Gpt_Ip_SetCompareValue/15 Ftm_Gpt_Ip_SetCompareValue/15 Ftm_Gpt_Ip_DisableChannelInterrupt/29 SchM_Exit_Gpt_GPT_EXCLUSIVE_AREA_25/33 Ftm_Gpt_Ip_ClearChInterruptStatusFlag/10 Ftm_Gpt_Ip_GetChInterruptStatusFlag/0 Ftm_Gpt_Ip_GetChInterruptEnableFlag/19 SchM_Enter_Gpt_GPT_EXCLUSIVE_AREA_25/32 Ftm_Gpt_Ip_GetCompareValue/2 
-   Indirect call Num speculative call targets: 0
-Ftm_Gpt_Ip_GetChannelEventStatus/20 (Ftm_Gpt_Ip_GetChannelEventStatus) @06a84000
-  Type: function definition analyzed
-  Visibility: no_reorder
-  References: ftmGptBase/4 (read) 
-  Referring: 
-  Function flags: body
-  Called by: FTM_0_CH_0_CH_1_ISR/31 FTM_0_CH_0_CH_1_ISR/31 
-  Calls: 
-Ftm_Gpt_Ip_GetChInterruptEnableFlag/19 (Ftm_Gpt_Ip_GetChInterruptEnableFlag) @068a8460
-  Type: function definition analyzed
-  Visibility: no_reorder
-  References: ftmGptBase/4 (read) 
-  Referring: 
-  Function flags: body
-  Called by: Ftm_Gpt_Ip_ProcessCommonInterrupt/21 
-  Calls: 
-Ftm_Gpt_Ip_SetHalfCycleValue/18 (Ftm_Gpt_Ip_SetHalfCycleValue) @068a8e00
+  Calls: Ftm_Gpt_Ip_SetEnFtmModule/13 Ftm_Gpt_Ip_WriteModulo/15 Ftm_Gpt_Ip_SetCounterInitVal/7 Ftm_Gpt_Ip_SetFreezeBits/6 Ftm_Gpt_Ip_SetClockSource/11 Ftm_Gpt_Ip_SetPrescaler/12 
+Ftm_Gpt_Ip_SetHalfCycleValue/17 (Ftm_Gpt_Ip_SetHalfCycleValue) @0697e620
   Type: function definition analyzed
   Visibility: no_reorder
   References: 
   Referring: 
   Function flags: body
-  Called by: Ftm_Gpt_Ip_SetHalfCycleReloadPoint/30 
+  Called by: Ftm_Gpt_Ip_SetHalfCycleReloadPoint/26 
   Calls: 
-Ftm_Gpt_Ip_ModeSelectA/17 (Ftm_Gpt_Ip_ModeSelectA) @068a8b60
+Ftm_Gpt_Ip_ModeSelectA/16 (Ftm_Gpt_Ip_ModeSelectA) @0697e380
   Type: function definition analyzed
   Visibility: no_reorder
   References: ftmGptBase/4 (read) ftmGptBase/4 (read) ftmGptBase/4 (read) ftmGptBase/4 (read) 
   Referring: 
   Function flags: body
-  Called by: Ftm_Gpt_Ip_InitChannel/23 
-  Calls: SchM_Exit_Gpt_GPT_EXCLUSIVE_AREA_24/43 SchM_Enter_Gpt_GPT_EXCLUSIVE_AREA_24/42 
-Ftm_Gpt_Ip_WriteModulo/16 (Ftm_Gpt_Ip_WriteModulo) @068a88c0
+  Called by: Ftm_Gpt_Ip_InitChannel/19 
+  Calls: SchM_Exit_Gpt_GPT_EXCLUSIVE_AREA_24/36 SchM_Enter_Gpt_GPT_EXCLUSIVE_AREA_24/35 
+Ftm_Gpt_Ip_WriteModulo/15 (Ftm_Gpt_Ip_WriteModulo) @0697e0e0
   Type: function definition analyzed
   Visibility: no_reorder
   References: ftmGptBase/4 (read) 
   Referring: 
   Function flags: body
-  Called by: Ftm_Gpt_Ip_Init/22 
+  Called by: Ftm_Gpt_Ip_Init/18 
   Calls: 
-Ftm_Gpt_Ip_SetCompareValue/15 (Ftm_Gpt_Ip_SetCompareValue) @068a8620
+Ftm_Gpt_Ip_SetCompareValue/14 (Ftm_Gpt_Ip_SetCompareValue) @06977b60
   Type: function definition analyzed
   Visibility: no_reorder
   References: ftmGptBase/4 (read) 
   Referring: 
   Function flags: body
-  Called by: Ftm_Gpt_Ip_StartCounting/25 Ftm_Gpt_Ip_InitChannel/23 Ftm_Gpt_Ip_ProcessCommonInterrupt/21 Ftm_Gpt_Ip_ProcessCommonInterrupt/21 
+  Called by: Ftm_Gpt_Ip_StartCounting/21 Ftm_Gpt_Ip_InitChannel/19 
   Calls: 
-Ftm_Gpt_Ip_SetEnFtmModule/14 (Ftm_Gpt_Ip_SetEnFtmModule) @068a8380
+Ftm_Gpt_Ip_SetEnFtmModule/13 (Ftm_Gpt_Ip_SetEnFtmModule) @06977540
   Type: function definition analyzed
   Visibility: no_reorder
   References: ftmGptBase/4 (read) ftmGptBase/4 (read) ftmGptBase/4 (read) ftmGptBase/4 (read) 
   Referring: 
   Function flags: body
-  Called by: Ftm_Gpt_Ip_StopTimer/27 Ftm_Gpt_Ip_StartTimer/26 Ftm_Gpt_Ip_Deinit/24 Ftm_Gpt_Ip_Init/22 
-  Calls: SchM_Exit_Gpt_GPT_EXCLUSIVE_AREA_23/41 SchM_Enter_Gpt_GPT_EXCLUSIVE_AREA_23/40 
-Ftm_Gpt_Ip_SetPrescaler/13 (Ftm_Gpt_Ip_SetPrescaler) @068a8000
+  Called by: Ftm_Gpt_Ip_StopTimer/23 Ftm_Gpt_Ip_StartTimer/22 Ftm_Gpt_Ip_Deinit/20 Ftm_Gpt_Ip_Init/18 
+  Calls: SchM_Exit_Gpt_GPT_EXCLUSIVE_AREA_23/34 SchM_Enter_Gpt_GPT_EXCLUSIVE_AREA_23/33 
+Ftm_Gpt_Ip_SetPrescaler/12 (Ftm_Gpt_Ip_SetPrescaler) @06977e00
   Type: function definition analyzed
   Visibility: no_reorder
   References: ftmGptBase/4 (read) ftmGptBase/4 (read) 
   Referring: 
   Function flags: body
-  Called by: Ftm_Gpt_Ip_Init/22 
-  Calls: SchM_Exit_Gpt_GPT_EXCLUSIVE_AREA_22/35 SchM_Enter_Gpt_GPT_EXCLUSIVE_AREA_22/34 
-Ftm_Gpt_Ip_SetClockSource/12 (Ftm_Gpt_Ip_SetClockSource) @068a49a0
+  Called by: Ftm_Gpt_Ip_Init/18 
+  Calls: SchM_Exit_Gpt_GPT_EXCLUSIVE_AREA_22/28 SchM_Enter_Gpt_GPT_EXCLUSIVE_AREA_22/27 
+Ftm_Gpt_Ip_SetClockSource/11 (Ftm_Gpt_Ip_SetClockSource) @06977a80
   Type: function definition analyzed
   Visibility: no_reorder
   References: ftmGptBase/4 (read) ftmGptBase/4 (read) 
   Referring: 
   Function flags: body
-  Called by: Ftm_Gpt_Ip_StopTimer/27 Ftm_Gpt_Ip_Deinit/24 Ftm_Gpt_Ip_Init/22 
-  Calls: SchM_Exit_Gpt_GPT_EXCLUSIVE_AREA_21/37 SchM_Enter_Gpt_GPT_EXCLUSIVE_AREA_21/36 
-Ftm_Gpt_Ip_SetChannelEnableInterrupt/11 (Ftm_Gpt_Ip_SetChannelEnableInterrupt) @068a4e00
+  Called by: Ftm_Gpt_Ip_StopTimer/23 Ftm_Gpt_Ip_Deinit/20 Ftm_Gpt_Ip_Init/18 
+  Calls: SchM_Exit_Gpt_GPT_EXCLUSIVE_AREA_21/30 SchM_Enter_Gpt_GPT_EXCLUSIVE_AREA_21/29 
+Ftm_Gpt_Ip_SetChannelEnableInterrupt/10 (Ftm_Gpt_Ip_SetChannelEnableInterrupt) @06977700
   Type: function definition analyzed
   Visibility: no_reorder
   References: ftmGptBase/4 (read) ftmGptBase/4 (read) 
   Referring: 
   Function flags: body
-  Called by: Ftm_Gpt_Ip_DisableChannelInterrupt/29 Ftm_Gpt_Ip_EnableChannelInterrupt/28 Ftm_Gpt_Ip_StartCounting/25 Ftm_Gpt_Ip_Deinit/24 Ftm_Gpt_Ip_InitChannel/23 
+  Called by: Ftm_Gpt_Ip_DisableChannelInterrupt/25 Ftm_Gpt_Ip_EnableChannelInterrupt/24 Ftm_Gpt_Ip_StartCounting/21 Ftm_Gpt_Ip_Deinit/20 Ftm_Gpt_Ip_InitChannel/19 
   Calls: 
-Ftm_Gpt_Ip_ClearChInterruptStatusFlag/10 (Ftm_Gpt_Ip_ClearChInterruptStatusFlag) @068a4b60
+Ftm_Gpt_Ip_ClearChInterruptStatusFlag/9 (Ftm_Gpt_Ip_ClearChInterruptStatusFlag) @06977460
   Type: function definition analyzed
   Visibility: no_reorder
   References: ftmGptBase/4 (read) ftmGptBase/4 (read) 
   Referring: 
   Function flags: body
-  Called by: Ftm_Gpt_Ip_DisableChannelInterrupt/29 Ftm_Gpt_Ip_EnableChannelInterrupt/28 Ftm_Gpt_Ip_StartCounting/25 Ftm_Gpt_Ip_Deinit/24 Ftm_Gpt_Ip_InitChannel/23 Ftm_Gpt_Ip_ProcessCommonInterrupt/21 
+  Called by: Ftm_Gpt_Ip_DisableChannelInterrupt/25 Ftm_Gpt_Ip_EnableChannelInterrupt/24 Ftm_Gpt_Ip_StartCounting/21 Ftm_Gpt_Ip_Deinit/20 Ftm_Gpt_Ip_InitChannel/19 
   Calls: 
-Ftm_Gpt_Ip_SetCounter/9 (Ftm_Gpt_Ip_SetCounter) @068a48c0
+Ftm_Gpt_Ip_SetCounter/8 (Ftm_Gpt_Ip_SetCounter) @069771c0
   Type: function definition analyzed
   Visibility: no_reorder
   References: ftmGptBase/4 (read) 
   Referring: 
   Function flags: body
-  Called by: Ftm_Gpt_Ip_Deinit/24 
+  Called by: Ftm_Gpt_Ip_Deinit/20 
   Calls: 
-Ftm_Gpt_Ip_SetCounterInitVal/8 (Ftm_Gpt_Ip_SetCounterInitVal) @068a4620
+Ftm_Gpt_Ip_SetCounterInitVal/7 (Ftm_Gpt_Ip_SetCounterInitVal) @06972a80
   Type: function definition analyzed
   Visibility: no_reorder
   References: ftmGptBase/4 (read) 
   Referring: 
   Function flags: body
-  Called by: Ftm_Gpt_Ip_StartTimer/26 Ftm_Gpt_Ip_Deinit/24 Ftm_Gpt_Ip_Init/22 
+  Called by: Ftm_Gpt_Ip_StartTimer/22 Ftm_Gpt_Ip_Deinit/20 Ftm_Gpt_Ip_Init/18 
   Calls: 
-Ftm_Gpt_Ip_SetFreezeBits/7 (Ftm_Gpt_Ip_SetFreezeBits) @068a4380
+Ftm_Gpt_Ip_SetFreezeBits/6 (Ftm_Gpt_Ip_SetFreezeBits) @06972d20
   Type: function definition analyzed
   Visibility: no_reorder
   References: ftmGptBase/4 (read) ftmGptBase/4 (read) 
   Referring: 
   Function flags: body
-  Called by: Ftm_Gpt_Ip_Deinit/24 Ftm_Gpt_Ip_Init/22 
-  Calls: SchM_Exit_Gpt_GPT_EXCLUSIVE_AREA_17/39 SchM_Enter_Gpt_GPT_EXCLUSIVE_AREA_17/38 
-Ftm_Gpt_Ip_u32ChState/6 (Ftm_Gpt_Ip_u32ChState) @0689dbd0
+  Called by: Ftm_Gpt_Ip_Deinit/20 Ftm_Gpt_Ip_Init/18 
+  Calls: SchM_Exit_Gpt_GPT_EXCLUSIVE_AREA_17/32 SchM_Enter_Gpt_GPT_EXCLUSIVE_AREA_17/31 
+Ftm_Gpt_Ip_u32InstanceState/5 (Ftm_Gpt_Ip_u32InstanceState) @06970120
   Type: variable definition analyzed
   Visibility: force_output no_reorder
   References: 
-  Referring: Ftm_Gpt_Ip_ProcessCommonInterrupt/21 (read) Ftm_Gpt_Ip_ProcessCommonInterrupt/21 (read) Ftm_Gpt_Ip_ProcessCommonInterrupt/21 (read) Ftm_Gpt_Ip_ProcessCommonInterrupt/21 (read) Ftm_Gpt_Ip_InitChannel/23 (write) Ftm_Gpt_Ip_InitChannel/23 (write) Ftm_Gpt_Ip_InitChannel/23 (write) Ftm_Gpt_Ip_InitChannel/23 (write) 
+  Referring: Ftm_Gpt_Ip_Init/18 (write) Ftm_Gpt_Ip_Deinit/20 (write) Ftm_Gpt_Ip_StartTimer/22 (read) 
   Availability: not-ready
   Varpool flags: initialized
-Ftm_Gpt_Ip_u32InstanceState/5 (Ftm_Gpt_Ip_u32InstanceState) @0689d1f8
-  Type: variable definition analyzed
-  Visibility: force_output no_reorder
-  References: 
-  Referring: Ftm_Gpt_Ip_Init/22 (write) Ftm_Gpt_Ip_Deinit/24 (write) Ftm_Gpt_Ip_StartTimer/26 (read) 
-  Availability: not-ready
-  Varpool flags: initialized
-ftmGptBase/4 (ftmGptBase) @0689d168
+ftmGptBase/4 (ftmGptBase) @06970090
   Type: variable definition analyzed
   Visibility: force_output no_reorder public
   References: 
-  Referring: Ftm_Gpt_Ip_GetCompareValue/2 (read) Ftm_Gpt_Ip_GetChInterruptEnableFlag/19 (read) Ftm_Gpt_Ip_GetChInterruptStatusFlag/0 (read) Ftm_Gpt_Ip_ClearChInterruptStatusFlag/10 (read) Ftm_Gpt_Ip_ClearChInterruptStatusFlag/10 (read) Ftm_Gpt_Ip_SetCompareValue/15 (read) Ftm_Gpt_Ip_SetPrescaler/13 (read) Ftm_Gpt_Ip_SetPrescaler/13 (read) Ftm_Gpt_Ip_SetClockSource/12 (read) Ftm_Gpt_Ip_SetClockSource/12 (read) Ftm_Gpt_Ip_SetFreezeBits/7 (read) Ftm_Gpt_Ip_SetFreezeBits/7 (read) Ftm_Gpt_Ip_SetCounterInitVal/8 (read) Ftm_Gpt_Ip_WriteModulo/16 (read) Ftm_Gpt_Ip_SetEnFtmModule/14 (read) Ftm_Gpt_Ip_SetEnFtmModule/14 (read) Ftm_Gpt_Ip_SetEnFtmModule/14 (read) Ftm_Gpt_Ip_SetEnFtmModule/14 (read) Ftm_Gpt_Ip_SetChannelEnableInterrupt/11 (read) Ftm_Gpt_Ip_SetChannelEnableInterrupt/11 (read) Ftm_Gpt_Ip_ModeSelectA/17 (read) Ftm_Gpt_Ip_ModeSelectA/17 (read) Ftm_Gpt_Ip_ModeSelectA/17 (read) Ftm_Gpt_Ip_ModeSelectA/17 (read) Ftm_Gpt_Ip_SetCounter/9 (read) Ftm_Gpt_Ip_GetCntValue/1 (read) Ftm_Gpt_Ip_SetHalfCycleReloadPoint/30 (read) Ftm_Gpt_Ip_GetChannelEventStatus/20 (read) 
+  Referring: Ftm_Gpt_Ip_SetPrescaler/12 (read) Ftm_Gpt_Ip_SetPrescaler/12 (read) Ftm_Gpt_Ip_SetClockSource/11 (read) Ftm_Gpt_Ip_SetClockSource/11 (read) Ftm_Gpt_Ip_SetFreezeBits/6 (read) Ftm_Gpt_Ip_SetFreezeBits/6 (read) Ftm_Gpt_Ip_SetCounterInitVal/7 (read) Ftm_Gpt_Ip_WriteModulo/15 (read) Ftm_Gpt_Ip_SetEnFtmModule/13 (read) Ftm_Gpt_Ip_SetEnFtmModule/13 (read) Ftm_Gpt_Ip_SetEnFtmModule/13 (read) Ftm_Gpt_Ip_SetEnFtmModule/13 (read) Ftm_Gpt_Ip_SetChannelEnableInterrupt/10 (read) Ftm_Gpt_Ip_SetChannelEnableInterrupt/10 (read) Ftm_Gpt_Ip_ClearChInterruptStatusFlag/9 (read) Ftm_Gpt_Ip_ClearChInterruptStatusFlag/9 (read) Ftm_Gpt_Ip_SetCompareValue/14 (read) Ftm_Gpt_Ip_ModeSelectA/16 (read) Ftm_Gpt_Ip_ModeSelectA/16 (read) Ftm_Gpt_Ip_ModeSelectA/16 (read) Ftm_Gpt_Ip_ModeSelectA/16 (read) Ftm_Gpt_Ip_SetCounter/8 (read) Ftm_Gpt_Ip_GetCntValue/1 (read) Ftm_Gpt_Ip_SetHalfCycleReloadPoint/26 (read) 
   Availability: not-ready
   Varpool flags: initialized read-only const-value-known
-Ftm_Gpt_Ip_u32TargetValue/3 (Ftm_Gpt_Ip_u32TargetValue) @0689d0d8
+Ftm_Gpt_Ip_u32TargetValue/3 (Ftm_Gpt_Ip_u32TargetValue) @06970000
   Type: variable definition analyzed
   Visibility: force_output no_reorder public
   References: 
-  Referring: Ftm_Gpt_Ip_ProcessCommonInterrupt/21 (read) Ftm_Gpt_Ip_StartCounting/25 (write) 
+  Referring: Ftm_Gpt_Ip_StartCounting/21 (write) 
   Availability: not-ready
   Varpool flags:
-Ftm_Gpt_Ip_GetCompareValue/2 (Ftm_Gpt_Ip_GetCompareValue) @068871c0
+Ftm_Gpt_Ip_GetCntValue/1 (Ftm_Gpt_Ip_GetCntValue) @06955b60
   Type: function definition analyzed
   Visibility: no_reorder
   References: ftmGptBase/4 (read) 
   Referring: 
   Function flags: body
-  Called by: Ftm_Gpt_Ip_ProcessCommonInterrupt/21 
-  Calls: 
-Ftm_Gpt_Ip_GetCntValue/1 (Ftm_Gpt_Ip_GetCntValue) @06883b60
-  Type: function definition analyzed
-  Visibility: no_reorder
-  References: ftmGptBase/4 (read) 
-  Referring: 
-  Function flags: body
-  Called by: Ftm_Gpt_Ip_StartCounting/25 
-  Calls: 
-Ftm_Gpt_Ip_GetChInterruptStatusFlag/0 (Ftm_Gpt_Ip_GetChInterruptStatusFlag) @06883e00
-  Type: function definition analyzed
-  Visibility: no_reorder
-  References: ftmGptBase/4 (read) 
-  Referring: 
-  Function flags: body
-  Called by: Ftm_Gpt_Ip_ProcessCommonInterrupt/21 
-  Calls: 
-
-
-Initial Symbol table:
-
-SchM_Exit_Gpt_GPT_EXCLUSIVE_AREA_24/43 (SchM_Exit_Gpt_GPT_EXCLUSIVE_AREA_24) @069e30e0
-  Type: function
-  Visibility: external public
-  References: 
-  Referring: 
-  Function flags:
-  Called by: Ftm_Gpt_Ip_ModeSelectA/17 
-  Calls: 
-SchM_Enter_Gpt_GPT_EXCLUSIVE_AREA_24/42 (SchM_Enter_Gpt_GPT_EXCLUSIVE_AREA_24) @069e3000
-  Type: function
-  Visibility: external public
-  References: 
-  Referring: 
-  Function flags:
-  Called by: Ftm_Gpt_Ip_ModeSelectA/17 
-  Calls: 
-SchM_Exit_Gpt_GPT_EXCLUSIVE_AREA_23/41 (SchM_Exit_Gpt_GPT_EXCLUSIVE_AREA_23) @069d7c40
-  Type: function
-  Visibility: external public
-  References: 
-  Referring: 
-  Function flags:
-  Called by: Ftm_Gpt_Ip_SetEnFtmModule/14 
-  Calls: 
-SchM_Enter_Gpt_GPT_EXCLUSIVE_AREA_23/40 (SchM_Enter_Gpt_GPT_EXCLUSIVE_AREA_23) @069d7b60
-  Type: function
-  Visibility: external public
-  References: 
-  Referring: 
-  Function flags:
-  Called by: Ftm_Gpt_Ip_SetEnFtmModule/14 
-  Calls: 
-SchM_Exit_Gpt_GPT_EXCLUSIVE_AREA_17/39 (SchM_Exit_Gpt_GPT_EXCLUSIVE_AREA_17) @069d77e0
-  Type: function
-  Visibility: external public
-  References: 
-  Referring: 
-  Function flags:
-  Called by: Ftm_Gpt_Ip_SetFreezeBits/7 
-  Calls: 
-SchM_Enter_Gpt_GPT_EXCLUSIVE_AREA_17/38 (SchM_Enter_Gpt_GPT_EXCLUSIVE_AREA_17) @069d7700
-  Type: function
-  Visibility: external public
-  References: 
-  Referring: 
-  Function flags:
-  Called by: Ftm_Gpt_Ip_SetFreezeBits/7 
-  Calls: 
-SchM_Exit_Gpt_GPT_EXCLUSIVE_AREA_21/37 (SchM_Exit_Gpt_GPT_EXCLUSIVE_AREA_21) @069d7540
-  Type: function
-  Visibility: external public
-  References: 
-  Referring: 
-  Function flags:
-  Called by: Ftm_Gpt_Ip_SetClockSource/12 
-  Calls: 
-SchM_Enter_Gpt_GPT_EXCLUSIVE_AREA_21/36 (SchM_Enter_Gpt_GPT_EXCLUSIVE_AREA_21) @069d7460
-  Type: function
-  Visibility: external public
-  References: 
-  Referring: 
-  Function flags:
-  Called by: Ftm_Gpt_Ip_SetClockSource/12 
-  Calls: 
-SchM_Exit_Gpt_GPT_EXCLUSIVE_AREA_22/35 (SchM_Exit_Gpt_GPT_EXCLUSIVE_AREA_22) @069d72a0
-  Type: function
-  Visibility: external public
-  References: 
-  Referring: 
-  Function flags:
-  Called by: Ftm_Gpt_Ip_SetPrescaler/13 
-  Calls: 
-SchM_Enter_Gpt_GPT_EXCLUSIVE_AREA_22/34 (SchM_Enter_Gpt_GPT_EXCLUSIVE_AREA_22) @069d71c0
-  Type: function
-  Visibility: external public
-  References: 
-  Referring: 
-  Function flags:
-  Called by: Ftm_Gpt_Ip_SetPrescaler/13 
-  Calls: 
-SchM_Exit_Gpt_GPT_EXCLUSIVE_AREA_25/33 (SchM_Exit_Gpt_GPT_EXCLUSIVE_AREA_25) @069d0b60
-  Type: function
-  Visibility: external public
-  References: 
-  Referring: 
-  Function flags:
-  Called by: Ftm_Gpt_Ip_ProcessCommonInterrupt/21 
-  Calls: 
-SchM_Enter_Gpt_GPT_EXCLUSIVE_AREA_25/32 (SchM_Enter_Gpt_GPT_EXCLUSIVE_AREA_25) @069d0a80
-  Type: function
-  Visibility: external public
-  References: 
-  Referring: 
-  Function flags:
-  Called by: Ftm_Gpt_Ip_ProcessCommonInterrupt/21 
-  Calls: 
-FTM_0_CH_0_CH_1_ISR/31 (FTM_0_CH_0_CH_1_ISR) @069d0540
-  Type: function definition analyzed
-  Visibility: force_output no_reorder public
-  References: 
-  Referring: 
-  Function flags: body
-  Called by: 
-  Calls: Ftm_Gpt_Ip_ProcessCommonInterrupt/21 Ftm_Gpt_Ip_GetChannelEventStatus/20 Ftm_Gpt_Ip_ProcessCommonInterrupt/21 Ftm_Gpt_Ip_GetChannelEventStatus/20 
-Ftm_Gpt_Ip_SetHalfCycleReloadPoint/30 (Ftm_Gpt_Ip_SetHalfCycleReloadPoint) @069d02a0
-  Type: function definition analyzed
-  Visibility: force_output no_reorder public
-  References: ftmGptBase/4 (read) 
-  Referring: 
-  Function flags: body
-  Called by: 
-  Calls: Ftm_Gpt_Ip_SetHalfCycleValue/18 
-Ftm_Gpt_Ip_DisableChannelInterrupt/29 (Ftm_Gpt_Ip_DisableChannelInterrupt) @069d0000
-  Type: function definition analyzed
-  Visibility: force_output no_reorder public
-  References: 
-  Referring: 
-  Function flags: body
-  Called by: Ftm_Gpt_Ip_ProcessCommonInterrupt/21 
-  Calls: Ftm_Gpt_Ip_ClearChInterruptStatusFlag/10 Ftm_Gpt_Ip_SetChannelEnableInterrupt/11 
-Ftm_Gpt_Ip_EnableChannelInterrupt/28 (Ftm_Gpt_Ip_EnableChannelInterrupt) @06a84b60
-  Type: function definition analyzed
-  Visibility: force_output no_reorder public
-  References: 
-  Referring: 
-  Function flags: body
-  Called by: 
-  Calls: Ftm_Gpt_Ip_SetChannelEnableInterrupt/11 Ftm_Gpt_Ip_ClearChInterruptStatusFlag/10 
-Ftm_Gpt_Ip_StopTimer/27 (Ftm_Gpt_Ip_StopTimer) @06a84620
-  Type: function definition analyzed
-  Visibility: force_output no_reorder public
-  References: 
-  Referring: 
-  Function flags: body
-  Called by: 
-  Calls: Ftm_Gpt_Ip_SetClockSource/12 Ftm_Gpt_Ip_SetEnFtmModule/14 
-Ftm_Gpt_Ip_StartTimer/26 (Ftm_Gpt_Ip_StartTimer) @06a840e0
-  Type: function definition analyzed
-  Visibility: force_output no_reorder public
-  References: Ftm_Gpt_Ip_u32InstanceState/5 (read) 
-  Referring: 
-  Function flags: body
-  Called by: 
-  Calls: Ftm_Gpt_Ip_SetEnFtmModule/14 Ftm_Gpt_Ip_SetCounterInitVal/8 
-Ftm_Gpt_Ip_StartCounting/25 (Ftm_Gpt_Ip_StartCounting) @06a84d20
-  Type: function definition analyzed
-  Visibility: force_output no_reorder public
-  References: Ftm_Gpt_Ip_u32TargetValue/3 (write) 
-  Referring: 
-  Function flags: body
-  Called by: 
-  Calls: Ftm_Gpt_Ip_SetChannelEnableInterrupt/11 Ftm_Gpt_Ip_ClearChInterruptStatusFlag/10 Ftm_Gpt_Ip_SetCompareValue/15 Ftm_Gpt_Ip_GetCntValue/1 
-Ftm_Gpt_Ip_Deinit/24 (Ftm_Gpt_Ip_Deinit) @06a84a80
-  Type: function definition analyzed
-  Visibility: force_output no_reorder public
-  References: Ftm_Gpt_Ip_u32InstanceState/5 (write) 
-  Referring: 
-  Function flags: body
-  Called by: 
-  Calls: Ftm_Gpt_Ip_SetCounter/9 Ftm_Gpt_Ip_SetCounterInitVal/8 Ftm_Gpt_Ip_SetFreezeBits/7 Ftm_Gpt_Ip_SetEnFtmModule/14 Ftm_Gpt_Ip_SetClockSource/12 Ftm_Gpt_Ip_ClearChInterruptStatusFlag/10 Ftm_Gpt_Ip_SetChannelEnableInterrupt/11 
-Ftm_Gpt_Ip_InitChannel/23 (Ftm_Gpt_Ip_InitChannel) @06a847e0
-  Type: function definition analyzed
-  Visibility: force_output no_reorder public
-  References: Ftm_Gpt_Ip_u32ChState/6 (write) Ftm_Gpt_Ip_u32ChState/6 (write) Ftm_Gpt_Ip_u32ChState/6 (write) Ftm_Gpt_Ip_u32ChState/6 (write) 
-  Referring: 
-  Function flags: body
-  Called by: 
-  Calls: Ftm_Gpt_Ip_ModeSelectA/17 Ftm_Gpt_Ip_SetCompareValue/15 Ftm_Gpt_Ip_ClearChInterruptStatusFlag/10 Ftm_Gpt_Ip_SetChannelEnableInterrupt/11 
-Ftm_Gpt_Ip_Init/22 (Ftm_Gpt_Ip_Init) @06a84540
-  Type: function definition analyzed
-  Visibility: force_output no_reorder public
-  References: Ftm_Gpt_Ip_u32InstanceState/5 (write) 
-  Referring: 
-  Function flags: body
-  Called by: 
-  Calls: Ftm_Gpt_Ip_SetEnFtmModule/14 Ftm_Gpt_Ip_WriteModulo/16 Ftm_Gpt_Ip_SetCounterInitVal/8 Ftm_Gpt_Ip_SetFreezeBits/7 Ftm_Gpt_Ip_SetClockSource/12 Ftm_Gpt_Ip_SetPrescaler/13 
-Ftm_Gpt_Ip_ProcessCommonInterrupt/21 (Ftm_Gpt_Ip_ProcessCommonInterrupt) @06a842a0
-  Type: function definition analyzed
-  Visibility: force_output no_reorder
-  References: Ftm_Gpt_Ip_u32ChState/6 (read) Ftm_Gpt_Ip_u32ChState/6 (read) Ftm_Gpt_Ip_u32ChState/6 (read) Ftm_Gpt_Ip_u32ChState/6 (read) Ftm_Gpt_Ip_u32TargetValue/3 (read) 
-  Referring: 
-  Function flags: body
-  Called by: FTM_0_CH_0_CH_1_ISR/31 FTM_0_CH_0_CH_1_ISR/31 
-  Calls: Ftm_Gpt_Ip_SetCompareValue/15 Ftm_Gpt_Ip_SetCompareValue/15 Ftm_Gpt_Ip_DisableChannelInterrupt/29 SchM_Exit_Gpt_GPT_EXCLUSIVE_AREA_25/33 Ftm_Gpt_Ip_ClearChInterruptStatusFlag/10 Ftm_Gpt_Ip_GetChInterruptStatusFlag/0 Ftm_Gpt_Ip_GetChInterruptEnableFlag/19 SchM_Enter_Gpt_GPT_EXCLUSIVE_AREA_25/32 Ftm_Gpt_Ip_GetCompareValue/2 
-   Indirect call Num speculative call targets: 0
-Ftm_Gpt_Ip_GetChannelEventStatus/20 (Ftm_Gpt_Ip_GetChannelEventStatus) @06a84000
-  Type: function definition analyzed
-  Visibility: no_reorder
-  References: ftmGptBase/4 (read) 
-  Referring: 
-  Function flags: body
-  Called by: FTM_0_CH_0_CH_1_ISR/31 FTM_0_CH_0_CH_1_ISR/31 
-  Calls: 
-Ftm_Gpt_Ip_GetChInterruptEnableFlag/19 (Ftm_Gpt_Ip_GetChInterruptEnableFlag) @068a8460
-  Type: function definition analyzed
-  Visibility: no_reorder
-  References: ftmGptBase/4 (read) 
-  Referring: 
-  Function flags: body
-  Called by: Ftm_Gpt_Ip_ProcessCommonInterrupt/21 
-  Calls: 
-Ftm_Gpt_Ip_SetHalfCycleValue/18 (Ftm_Gpt_Ip_SetHalfCycleValue) @068a8e00
-  Type: function definition analyzed
-  Visibility: no_reorder
-  References: 
-  Referring: 
-  Function flags: body
-  Called by: Ftm_Gpt_Ip_SetHalfCycleReloadPoint/30 
-  Calls: 
-Ftm_Gpt_Ip_ModeSelectA/17 (Ftm_Gpt_Ip_ModeSelectA) @068a8b60
-  Type: function definition analyzed
-  Visibility: no_reorder
-  References: ftmGptBase/4 (read) ftmGptBase/4 (read) ftmGptBase/4 (read) ftmGptBase/4 (read) 
-  Referring: 
-  Function flags: body
-  Called by: Ftm_Gpt_Ip_InitChannel/23 
-  Calls: SchM_Exit_Gpt_GPT_EXCLUSIVE_AREA_24/43 SchM_Enter_Gpt_GPT_EXCLUSIVE_AREA_24/42 
-Ftm_Gpt_Ip_WriteModulo/16 (Ftm_Gpt_Ip_WriteModulo) @068a88c0
-  Type: function definition analyzed
-  Visibility: no_reorder
-  References: ftmGptBase/4 (read) 
-  Referring: 
-  Function flags: body
-  Called by: Ftm_Gpt_Ip_Init/22 
-  Calls: 
-Ftm_Gpt_Ip_SetCompareValue/15 (Ftm_Gpt_Ip_SetCompareValue) @068a8620
-  Type: function definition analyzed
-  Visibility: no_reorder
-  References: ftmGptBase/4 (read) 
-  Referring: 
-  Function flags: body
-  Called by: Ftm_Gpt_Ip_StartCounting/25 Ftm_Gpt_Ip_InitChannel/23 Ftm_Gpt_Ip_ProcessCommonInterrupt/21 Ftm_Gpt_Ip_ProcessCommonInterrupt/21 
-  Calls: 
-Ftm_Gpt_Ip_SetEnFtmModule/14 (Ftm_Gpt_Ip_SetEnFtmModule) @068a8380
-  Type: function definition analyzed
-  Visibility: no_reorder
-  References: ftmGptBase/4 (read) ftmGptBase/4 (read) ftmGptBase/4 (read) ftmGptBase/4 (read) 
-  Referring: 
-  Function flags: body
-  Called by: Ftm_Gpt_Ip_StopTimer/27 Ftm_Gpt_Ip_StartTimer/26 Ftm_Gpt_Ip_Deinit/24 Ftm_Gpt_Ip_Init/22 
-  Calls: SchM_Exit_Gpt_GPT_EXCLUSIVE_AREA_23/41 SchM_Enter_Gpt_GPT_EXCLUSIVE_AREA_23/40 
-Ftm_Gpt_Ip_SetPrescaler/13 (Ftm_Gpt_Ip_SetPrescaler) @068a8000
-  Type: function definition analyzed
-  Visibility: no_reorder
-  References: ftmGptBase/4 (read) ftmGptBase/4 (read) 
-  Referring: 
-  Function flags: body
-  Called by: Ftm_Gpt_Ip_Init/22 
-  Calls: SchM_Exit_Gpt_GPT_EXCLUSIVE_AREA_22/35 SchM_Enter_Gpt_GPT_EXCLUSIVE_AREA_22/34 
-Ftm_Gpt_Ip_SetClockSource/12 (Ftm_Gpt_Ip_SetClockSource) @068a49a0
-  Type: function definition analyzed
-  Visibility: no_reorder
-  References: ftmGptBase/4 (read) ftmGptBase/4 (read) 
-  Referring: 
-  Function flags: body
-  Called by: Ftm_Gpt_Ip_StopTimer/27 Ftm_Gpt_Ip_Deinit/24 Ftm_Gpt_Ip_Init/22 
-  Calls: SchM_Exit_Gpt_GPT_EXCLUSIVE_AREA_21/37 SchM_Enter_Gpt_GPT_EXCLUSIVE_AREA_21/36 
-Ftm_Gpt_Ip_SetChannelEnableInterrupt/11 (Ftm_Gpt_Ip_SetChannelEnableInterrupt) @068a4e00
-  Type: function definition analyzed
-  Visibility: no_reorder
-  References: ftmGptBase/4 (read) ftmGptBase/4 (read) 
-  Referring: 
-  Function flags: body
-  Called by: Ftm_Gpt_Ip_DisableChannelInterrupt/29 Ftm_Gpt_Ip_EnableChannelInterrupt/28 Ftm_Gpt_Ip_StartCounting/25 Ftm_Gpt_Ip_Deinit/24 Ftm_Gpt_Ip_InitChannel/23 
-  Calls: 
-Ftm_Gpt_Ip_ClearChInterruptStatusFlag/10 (Ftm_Gpt_Ip_ClearChInterruptStatusFlag) @068a4b60
-  Type: function definition analyzed
-  Visibility: no_reorder
-  References: ftmGptBase/4 (read) ftmGptBase/4 (read) 
-  Referring: 
-  Function flags: body
-  Called by: Ftm_Gpt_Ip_DisableChannelInterrupt/29 Ftm_Gpt_Ip_EnableChannelInterrupt/28 Ftm_Gpt_Ip_StartCounting/25 Ftm_Gpt_Ip_Deinit/24 Ftm_Gpt_Ip_InitChannel/23 Ftm_Gpt_Ip_ProcessCommonInterrupt/21 
-  Calls: 
-Ftm_Gpt_Ip_SetCounter/9 (Ftm_Gpt_Ip_SetCounter) @068a48c0
-  Type: function definition analyzed
-  Visibility: no_reorder
-  References: ftmGptBase/4 (read) 
-  Referring: 
-  Function flags: body
-  Called by: Ftm_Gpt_Ip_Deinit/24 
-  Calls: 
-Ftm_Gpt_Ip_SetCounterInitVal/8 (Ftm_Gpt_Ip_SetCounterInitVal) @068a4620
-  Type: function definition analyzed
-  Visibility: no_reorder
-  References: ftmGptBase/4 (read) 
-  Referring: 
-  Function flags: body
-  Called by: Ftm_Gpt_Ip_StartTimer/26 Ftm_Gpt_Ip_Deinit/24 Ftm_Gpt_Ip_Init/22 
-  Calls: 
-Ftm_Gpt_Ip_SetFreezeBits/7 (Ftm_Gpt_Ip_SetFreezeBits) @068a4380
-  Type: function definition analyzed
-  Visibility: no_reorder
-  References: ftmGptBase/4 (read) ftmGptBase/4 (read) 
-  Referring: 
-  Function flags: body
-  Called by: Ftm_Gpt_Ip_Deinit/24 Ftm_Gpt_Ip_Init/22 
-  Calls: SchM_Exit_Gpt_GPT_EXCLUSIVE_AREA_17/39 SchM_Enter_Gpt_GPT_EXCLUSIVE_AREA_17/38 
-Ftm_Gpt_Ip_u32ChState/6 (Ftm_Gpt_Ip_u32ChState) @0689dbd0
-  Type: variable definition analyzed
-  Visibility: force_output no_reorder
-  References: 
-  Referring: Ftm_Gpt_Ip_ProcessCommonInterrupt/21 (read) Ftm_Gpt_Ip_ProcessCommonInterrupt/21 (read) Ftm_Gpt_Ip_ProcessCommonInterrupt/21 (read) Ftm_Gpt_Ip_ProcessCommonInterrupt/21 (read) Ftm_Gpt_Ip_InitChannel/23 (write) Ftm_Gpt_Ip_InitChannel/23 (write) Ftm_Gpt_Ip_InitChannel/23 (write) Ftm_Gpt_Ip_InitChannel/23 (write) 
-  Availability: not-ready
-  Varpool flags: initialized
-Ftm_Gpt_Ip_u32InstanceState/5 (Ftm_Gpt_Ip_u32InstanceState) @0689d1f8
-  Type: variable definition analyzed
-  Visibility: force_output no_reorder
-  References: 
-  Referring: Ftm_Gpt_Ip_Init/22 (write) Ftm_Gpt_Ip_Deinit/24 (write) Ftm_Gpt_Ip_StartTimer/26 (read) 
-  Availability: not-ready
-  Varpool flags: initialized
-ftmGptBase/4 (ftmGptBase) @0689d168
-  Type: variable definition analyzed
-  Visibility: force_output no_reorder public
-  References: 
-  Referring: Ftm_Gpt_Ip_GetCompareValue/2 (read) Ftm_Gpt_Ip_GetChInterruptEnableFlag/19 (read) Ftm_Gpt_Ip_GetChInterruptStatusFlag/0 (read) Ftm_Gpt_Ip_ClearChInterruptStatusFlag/10 (read) Ftm_Gpt_Ip_ClearChInterruptStatusFlag/10 (read) Ftm_Gpt_Ip_SetCompareValue/15 (read) Ftm_Gpt_Ip_SetPrescaler/13 (read) Ftm_Gpt_Ip_SetPrescaler/13 (read) Ftm_Gpt_Ip_SetClockSource/12 (read) Ftm_Gpt_Ip_SetClockSource/12 (read) Ftm_Gpt_Ip_SetFreezeBits/7 (read) Ftm_Gpt_Ip_SetFreezeBits/7 (read) Ftm_Gpt_Ip_SetCounterInitVal/8 (read) Ftm_Gpt_Ip_WriteModulo/16 (read) Ftm_Gpt_Ip_SetEnFtmModule/14 (read) Ftm_Gpt_Ip_SetEnFtmModule/14 (read) Ftm_Gpt_Ip_SetEnFtmModule/14 (read) Ftm_Gpt_Ip_SetEnFtmModule/14 (read) Ftm_Gpt_Ip_SetChannelEnableInterrupt/11 (read) Ftm_Gpt_Ip_SetChannelEnableInterrupt/11 (read) Ftm_Gpt_Ip_ModeSelectA/17 (read) Ftm_Gpt_Ip_ModeSelectA/17 (read) Ftm_Gpt_Ip_ModeSelectA/17 (read) Ftm_Gpt_Ip_ModeSelectA/17 (read) Ftm_Gpt_Ip_SetCounter/9 (read) Ftm_Gpt_Ip_GetCntValue/1 (read) Ftm_Gpt_Ip_SetHalfCycleReloadPoint/30 (read) Ftm_Gpt_Ip_GetChannelEventStatus/20 (read) 
-  Availability: not-ready
-  Varpool flags: initialized read-only const-value-known
-Ftm_Gpt_Ip_u32TargetValue/3 (Ftm_Gpt_Ip_u32TargetValue) @0689d0d8
-  Type: variable definition analyzed
-  Visibility: force_output no_reorder public
-  References: 
-  Referring: Ftm_Gpt_Ip_ProcessCommonInterrupt/21 (read) Ftm_Gpt_Ip_StartCounting/25 (write) 
-  Availability: not-ready
-  Varpool flags:
-Ftm_Gpt_Ip_GetCompareValue/2 (Ftm_Gpt_Ip_GetCompareValue) @068871c0
-  Type: function definition analyzed
-  Visibility: no_reorder
-  References: ftmGptBase/4 (read) 
-  Referring: 
-  Function flags: body
-  Called by: Ftm_Gpt_Ip_ProcessCommonInterrupt/21 
-  Calls: 
-Ftm_Gpt_Ip_GetCntValue/1 (Ftm_Gpt_Ip_GetCntValue) @06883b60
-  Type: function definition analyzed
-  Visibility: no_reorder
-  References: ftmGptBase/4 (read) 
-  Referring: 
-  Function flags: body
-  Called by: Ftm_Gpt_Ip_StartCounting/25 
-  Calls: 
-Ftm_Gpt_Ip_GetChInterruptStatusFlag/0 (Ftm_Gpt_Ip_GetChInterruptStatusFlag) @06883e00
-  Type: function definition analyzed
-  Visibility: no_reorder
-  References: ftmGptBase/4 (read) 
-  Referring: 
-  Function flags: body
-  Called by: Ftm_Gpt_Ip_ProcessCommonInterrupt/21 
-  Calls: 
-
-Removing unused symbols:
-
-Reclaimed Symbol table:
-
-SchM_Exit_Gpt_GPT_EXCLUSIVE_AREA_24/43 (SchM_Exit_Gpt_GPT_EXCLUSIVE_AREA_24) @069e30e0
-  Type: function
-  Visibility: external public
-  References: 
-  Referring: 
-  Function flags:
-  Called by: Ftm_Gpt_Ip_ModeSelectA/17 
-  Calls: 
-SchM_Enter_Gpt_GPT_EXCLUSIVE_AREA_24/42 (SchM_Enter_Gpt_GPT_EXCLUSIVE_AREA_24) @069e3000
-  Type: function
-  Visibility: external public
-  References: 
-  Referring: 
-  Function flags:
-  Called by: Ftm_Gpt_Ip_ModeSelectA/17 
-  Calls: 
-SchM_Exit_Gpt_GPT_EXCLUSIVE_AREA_23/41 (SchM_Exit_Gpt_GPT_EXCLUSIVE_AREA_23) @069d7c40
-  Type: function
-  Visibility: external public
-  References: 
-  Referring: 
-  Function flags:
-  Called by: Ftm_Gpt_Ip_SetEnFtmModule/14 
-  Calls: 
-SchM_Enter_Gpt_GPT_EXCLUSIVE_AREA_23/40 (SchM_Enter_Gpt_GPT_EXCLUSIVE_AREA_23) @069d7b60
-  Type: function
-  Visibility: external public
-  References: 
-  Referring: 
-  Function flags:
-  Called by: Ftm_Gpt_Ip_SetEnFtmModule/14 
-  Calls: 
-SchM_Exit_Gpt_GPT_EXCLUSIVE_AREA_17/39 (SchM_Exit_Gpt_GPT_EXCLUSIVE_AREA_17) @069d77e0
-  Type: function
-  Visibility: external public
-  References: 
-  Referring: 
-  Function flags:
-  Called by: Ftm_Gpt_Ip_SetFreezeBits/7 
-  Calls: 
-SchM_Enter_Gpt_GPT_EXCLUSIVE_AREA_17/38 (SchM_Enter_Gpt_GPT_EXCLUSIVE_AREA_17) @069d7700
-  Type: function
-  Visibility: external public
-  References: 
-  Referring: 
-  Function flags:
-  Called by: Ftm_Gpt_Ip_SetFreezeBits/7 
-  Calls: 
-SchM_Exit_Gpt_GPT_EXCLUSIVE_AREA_21/37 (SchM_Exit_Gpt_GPT_EXCLUSIVE_AREA_21) @069d7540
-  Type: function
-  Visibility: external public
-  References: 
-  Referring: 
-  Function flags:
-  Called by: Ftm_Gpt_Ip_SetClockSource/12 
-  Calls: 
-SchM_Enter_Gpt_GPT_EXCLUSIVE_AREA_21/36 (SchM_Enter_Gpt_GPT_EXCLUSIVE_AREA_21) @069d7460
-  Type: function
-  Visibility: external public
-  References: 
-  Referring: 
-  Function flags:
-  Called by: Ftm_Gpt_Ip_SetClockSource/12 
-  Calls: 
-SchM_Exit_Gpt_GPT_EXCLUSIVE_AREA_22/35 (SchM_Exit_Gpt_GPT_EXCLUSIVE_AREA_22) @069d72a0
-  Type: function
-  Visibility: external public
-  References: 
-  Referring: 
-  Function flags:
-  Called by: Ftm_Gpt_Ip_SetPrescaler/13 
-  Calls: 
-SchM_Enter_Gpt_GPT_EXCLUSIVE_AREA_22/34 (SchM_Enter_Gpt_GPT_EXCLUSIVE_AREA_22) @069d71c0
-  Type: function
-  Visibility: external public
-  References: 
-  Referring: 
-  Function flags:
-  Called by: Ftm_Gpt_Ip_SetPrescaler/13 
-  Calls: 
-SchM_Exit_Gpt_GPT_EXCLUSIVE_AREA_25/33 (SchM_Exit_Gpt_GPT_EXCLUSIVE_AREA_25) @069d0b60
-  Type: function
-  Visibility: external public
-  References: 
-  Referring: 
-  Function flags:
-  Called by: Ftm_Gpt_Ip_ProcessCommonInterrupt/21 
-  Calls: 
-SchM_Enter_Gpt_GPT_EXCLUSIVE_AREA_25/32 (SchM_Enter_Gpt_GPT_EXCLUSIVE_AREA_25) @069d0a80
-  Type: function
-  Visibility: external public
-  References: 
-  Referring: 
-  Function flags:
-  Called by: Ftm_Gpt_Ip_ProcessCommonInterrupt/21 
-  Calls: 
-FTM_0_CH_0_CH_1_ISR/31 (FTM_0_CH_0_CH_1_ISR) @069d0540
-  Type: function definition analyzed
-  Visibility: force_output no_reorder public
-  References: 
-  Referring: 
-  Function flags: body
-  Called by: 
-  Calls: Ftm_Gpt_Ip_ProcessCommonInterrupt/21 Ftm_Gpt_Ip_GetChannelEventStatus/20 Ftm_Gpt_Ip_ProcessCommonInterrupt/21 Ftm_Gpt_Ip_GetChannelEventStatus/20 
-Ftm_Gpt_Ip_SetHalfCycleReloadPoint/30 (Ftm_Gpt_Ip_SetHalfCycleReloadPoint) @069d02a0
-  Type: function definition analyzed
-  Visibility: force_output no_reorder public
-  References: ftmGptBase/4 (read) 
-  Referring: 
-  Function flags: body
-  Called by: 
-  Calls: Ftm_Gpt_Ip_SetHalfCycleValue/18 
-Ftm_Gpt_Ip_DisableChannelInterrupt/29 (Ftm_Gpt_Ip_DisableChannelInterrupt) @069d0000
-  Type: function definition analyzed
-  Visibility: force_output no_reorder public
-  References: 
-  Referring: 
-  Function flags: body
-  Called by: Ftm_Gpt_Ip_ProcessCommonInterrupt/21 
-  Calls: Ftm_Gpt_Ip_ClearChInterruptStatusFlag/10 Ftm_Gpt_Ip_SetChannelEnableInterrupt/11 
-Ftm_Gpt_Ip_EnableChannelInterrupt/28 (Ftm_Gpt_Ip_EnableChannelInterrupt) @06a84b60
-  Type: function definition analyzed
-  Visibility: force_output no_reorder public
-  References: 
-  Referring: 
-  Function flags: body
-  Called by: 
-  Calls: Ftm_Gpt_Ip_SetChannelEnableInterrupt/11 Ftm_Gpt_Ip_ClearChInterruptStatusFlag/10 
-Ftm_Gpt_Ip_StopTimer/27 (Ftm_Gpt_Ip_StopTimer) @06a84620
-  Type: function definition analyzed
-  Visibility: force_output no_reorder public
-  References: 
-  Referring: 
-  Function flags: body
-  Called by: 
-  Calls: Ftm_Gpt_Ip_SetClockSource/12 Ftm_Gpt_Ip_SetEnFtmModule/14 
-Ftm_Gpt_Ip_StartTimer/26 (Ftm_Gpt_Ip_StartTimer) @06a840e0
-  Type: function definition analyzed
-  Visibility: force_output no_reorder public
-  References: Ftm_Gpt_Ip_u32InstanceState/5 (read) 
-  Referring: 
-  Function flags: body
-  Called by: 
-  Calls: Ftm_Gpt_Ip_SetEnFtmModule/14 Ftm_Gpt_Ip_SetCounterInitVal/8 
-Ftm_Gpt_Ip_StartCounting/25 (Ftm_Gpt_Ip_StartCounting) @06a84d20
-  Type: function definition analyzed
-  Visibility: force_output no_reorder public
-  References: Ftm_Gpt_Ip_u32TargetValue/3 (write) 
-  Referring: 
-  Function flags: body
-  Called by: 
-  Calls: Ftm_Gpt_Ip_SetChannelEnableInterrupt/11 Ftm_Gpt_Ip_ClearChInterruptStatusFlag/10 Ftm_Gpt_Ip_SetCompareValue/15 Ftm_Gpt_Ip_GetCntValue/1 
-Ftm_Gpt_Ip_Deinit/24 (Ftm_Gpt_Ip_Deinit) @06a84a80
-  Type: function definition analyzed
-  Visibility: force_output no_reorder public
-  References: Ftm_Gpt_Ip_u32InstanceState/5 (write) 
-  Referring: 
-  Function flags: body
-  Called by: 
-  Calls: Ftm_Gpt_Ip_SetCounter/9 Ftm_Gpt_Ip_SetCounterInitVal/8 Ftm_Gpt_Ip_SetFreezeBits/7 Ftm_Gpt_Ip_SetEnFtmModule/14 Ftm_Gpt_Ip_SetClockSource/12 Ftm_Gpt_Ip_ClearChInterruptStatusFlag/10 Ftm_Gpt_Ip_SetChannelEnableInterrupt/11 
-Ftm_Gpt_Ip_InitChannel/23 (Ftm_Gpt_Ip_InitChannel) @06a847e0
-  Type: function definition analyzed
-  Visibility: force_output no_reorder public
-  References: Ftm_Gpt_Ip_u32ChState/6 (write) Ftm_Gpt_Ip_u32ChState/6 (write) Ftm_Gpt_Ip_u32ChState/6 (write) Ftm_Gpt_Ip_u32ChState/6 (write) 
-  Referring: 
-  Function flags: body
-  Called by: 
-  Calls: Ftm_Gpt_Ip_ModeSelectA/17 Ftm_Gpt_Ip_SetCompareValue/15 Ftm_Gpt_Ip_ClearChInterruptStatusFlag/10 Ftm_Gpt_Ip_SetChannelEnableInterrupt/11 
-Ftm_Gpt_Ip_Init/22 (Ftm_Gpt_Ip_Init) @06a84540
-  Type: function definition analyzed
-  Visibility: force_output no_reorder public
-  References: Ftm_Gpt_Ip_u32InstanceState/5 (write) 
-  Referring: 
-  Function flags: body
-  Called by: 
-  Calls: Ftm_Gpt_Ip_SetEnFtmModule/14 Ftm_Gpt_Ip_WriteModulo/16 Ftm_Gpt_Ip_SetCounterInitVal/8 Ftm_Gpt_Ip_SetFreezeBits/7 Ftm_Gpt_Ip_SetClockSource/12 Ftm_Gpt_Ip_SetPrescaler/13 
-Ftm_Gpt_Ip_ProcessCommonInterrupt/21 (Ftm_Gpt_Ip_ProcessCommonInterrupt) @06a842a0
-  Type: function definition analyzed
-  Visibility: force_output no_reorder
-  References: Ftm_Gpt_Ip_u32ChState/6 (read) Ftm_Gpt_Ip_u32ChState/6 (read) Ftm_Gpt_Ip_u32ChState/6 (read) Ftm_Gpt_Ip_u32ChState/6 (read) Ftm_Gpt_Ip_u32TargetValue/3 (read) 
-  Referring: 
-  Function flags: body
-  Called by: FTM_0_CH_0_CH_1_ISR/31 FTM_0_CH_0_CH_1_ISR/31 
-  Calls: Ftm_Gpt_Ip_SetCompareValue/15 Ftm_Gpt_Ip_SetCompareValue/15 Ftm_Gpt_Ip_DisableChannelInterrupt/29 SchM_Exit_Gpt_GPT_EXCLUSIVE_AREA_25/33 Ftm_Gpt_Ip_ClearChInterruptStatusFlag/10 Ftm_Gpt_Ip_GetChInterruptStatusFlag/0 Ftm_Gpt_Ip_GetChInterruptEnableFlag/19 SchM_Enter_Gpt_GPT_EXCLUSIVE_AREA_25/32 Ftm_Gpt_Ip_GetCompareValue/2 
-   Indirect call Num speculative call targets: 0
-Ftm_Gpt_Ip_GetChannelEventStatus/20 (Ftm_Gpt_Ip_GetChannelEventStatus) @06a84000
-  Type: function definition analyzed
-  Visibility: no_reorder
-  References: ftmGptBase/4 (read) 
-  Referring: 
-  Function flags: body
-  Called by: FTM_0_CH_0_CH_1_ISR/31 FTM_0_CH_0_CH_1_ISR/31 
-  Calls: 
-Ftm_Gpt_Ip_GetChInterruptEnableFlag/19 (Ftm_Gpt_Ip_GetChInterruptEnableFlag) @068a8460
-  Type: function definition analyzed
-  Visibility: no_reorder
-  References: ftmGptBase/4 (read) 
-  Referring: 
-  Function flags: body
-  Called by: Ftm_Gpt_Ip_ProcessCommonInterrupt/21 
-  Calls: 
-Ftm_Gpt_Ip_SetHalfCycleValue/18 (Ftm_Gpt_Ip_SetHalfCycleValue) @068a8e00
-  Type: function definition analyzed
-  Visibility: no_reorder
-  References: 
-  Referring: 
-  Function flags: body
-  Called by: Ftm_Gpt_Ip_SetHalfCycleReloadPoint/30 
-  Calls: 
-Ftm_Gpt_Ip_ModeSelectA/17 (Ftm_Gpt_Ip_ModeSelectA) @068a8b60
-  Type: function definition analyzed
-  Visibility: no_reorder
-  References: ftmGptBase/4 (read) ftmGptBase/4 (read) ftmGptBase/4 (read) ftmGptBase/4 (read) 
-  Referring: 
-  Function flags: body
-  Called by: Ftm_Gpt_Ip_InitChannel/23 
-  Calls: SchM_Exit_Gpt_GPT_EXCLUSIVE_AREA_24/43 SchM_Enter_Gpt_GPT_EXCLUSIVE_AREA_24/42 
-Ftm_Gpt_Ip_WriteModulo/16 (Ftm_Gpt_Ip_WriteModulo) @068a88c0
-  Type: function definition analyzed
-  Visibility: no_reorder
-  References: ftmGptBase/4 (read) 
-  Referring: 
-  Function flags: body
-  Called by: Ftm_Gpt_Ip_Init/22 
-  Calls: 
-Ftm_Gpt_Ip_SetCompareValue/15 (Ftm_Gpt_Ip_SetCompareValue) @068a8620
-  Type: function definition analyzed
-  Visibility: no_reorder
-  References: ftmGptBase/4 (read) 
-  Referring: 
-  Function flags: body
-  Called by: Ftm_Gpt_Ip_StartCounting/25 Ftm_Gpt_Ip_InitChannel/23 Ftm_Gpt_Ip_ProcessCommonInterrupt/21 Ftm_Gpt_Ip_ProcessCommonInterrupt/21 
-  Calls: 
-Ftm_Gpt_Ip_SetEnFtmModule/14 (Ftm_Gpt_Ip_SetEnFtmModule) @068a8380
-  Type: function definition analyzed
-  Visibility: no_reorder
-  References: ftmGptBase/4 (read) ftmGptBase/4 (read) ftmGptBase/4 (read) ftmGptBase/4 (read) 
-  Referring: 
-  Function flags: body
-  Called by: Ftm_Gpt_Ip_StopTimer/27 Ftm_Gpt_Ip_StartTimer/26 Ftm_Gpt_Ip_Deinit/24 Ftm_Gpt_Ip_Init/22 
-  Calls: SchM_Exit_Gpt_GPT_EXCLUSIVE_AREA_23/41 SchM_Enter_Gpt_GPT_EXCLUSIVE_AREA_23/40 
-Ftm_Gpt_Ip_SetPrescaler/13 (Ftm_Gpt_Ip_SetPrescaler) @068a8000
-  Type: function definition analyzed
-  Visibility: no_reorder
-  References: ftmGptBase/4 (read) ftmGptBase/4 (read) 
-  Referring: 
-  Function flags: body
-  Called by: Ftm_Gpt_Ip_Init/22 
-  Calls: SchM_Exit_Gpt_GPT_EXCLUSIVE_AREA_22/35 SchM_Enter_Gpt_GPT_EXCLUSIVE_AREA_22/34 
-Ftm_Gpt_Ip_SetClockSource/12 (Ftm_Gpt_Ip_SetClockSource) @068a49a0
-  Type: function definition analyzed
-  Visibility: no_reorder
-  References: ftmGptBase/4 (read) ftmGptBase/4 (read) 
-  Referring: 
-  Function flags: body
-  Called by: Ftm_Gpt_Ip_StopTimer/27 Ftm_Gpt_Ip_Deinit/24 Ftm_Gpt_Ip_Init/22 
-  Calls: SchM_Exit_Gpt_GPT_EXCLUSIVE_AREA_21/37 SchM_Enter_Gpt_GPT_EXCLUSIVE_AREA_21/36 
-Ftm_Gpt_Ip_SetChannelEnableInterrupt/11 (Ftm_Gpt_Ip_SetChannelEnableInterrupt) @068a4e00
-  Type: function definition analyzed
-  Visibility: no_reorder
-  References: ftmGptBase/4 (read) ftmGptBase/4 (read) 
-  Referring: 
-  Function flags: body
-  Called by: Ftm_Gpt_Ip_DisableChannelInterrupt/29 Ftm_Gpt_Ip_EnableChannelInterrupt/28 Ftm_Gpt_Ip_StartCounting/25 Ftm_Gpt_Ip_Deinit/24 Ftm_Gpt_Ip_InitChannel/23 
-  Calls: 
-Ftm_Gpt_Ip_ClearChInterruptStatusFlag/10 (Ftm_Gpt_Ip_ClearChInterruptStatusFlag) @068a4b60
-  Type: function definition analyzed
-  Visibility: no_reorder
-  References: ftmGptBase/4 (read) ftmGptBase/4 (read) 
-  Referring: 
-  Function flags: body
-  Called by: Ftm_Gpt_Ip_DisableChannelInterrupt/29 Ftm_Gpt_Ip_EnableChannelInterrupt/28 Ftm_Gpt_Ip_StartCounting/25 Ftm_Gpt_Ip_Deinit/24 Ftm_Gpt_Ip_InitChannel/23 Ftm_Gpt_Ip_ProcessCommonInterrupt/21 
-  Calls: 
-Ftm_Gpt_Ip_SetCounter/9 (Ftm_Gpt_Ip_SetCounter) @068a48c0
-  Type: function definition analyzed
-  Visibility: no_reorder
-  References: ftmGptBase/4 (read) 
-  Referring: 
-  Function flags: body
-  Called by: Ftm_Gpt_Ip_Deinit/24 
-  Calls: 
-Ftm_Gpt_Ip_SetCounterInitVal/8 (Ftm_Gpt_Ip_SetCounterInitVal) @068a4620
-  Type: function definition analyzed
-  Visibility: no_reorder
-  References: ftmGptBase/4 (read) 
-  Referring: 
-  Function flags: body
-  Called by: Ftm_Gpt_Ip_StartTimer/26 Ftm_Gpt_Ip_Deinit/24 Ftm_Gpt_Ip_Init/22 
-  Calls: 
-Ftm_Gpt_Ip_SetFreezeBits/7 (Ftm_Gpt_Ip_SetFreezeBits) @068a4380
-  Type: function definition analyzed
-  Visibility: no_reorder
-  References: ftmGptBase/4 (read) ftmGptBase/4 (read) 
-  Referring: 
-  Function flags: body
-  Called by: Ftm_Gpt_Ip_Deinit/24 Ftm_Gpt_Ip_Init/22 
-  Calls: SchM_Exit_Gpt_GPT_EXCLUSIVE_AREA_17/39 SchM_Enter_Gpt_GPT_EXCLUSIVE_AREA_17/38 
-Ftm_Gpt_Ip_u32ChState/6 (Ftm_Gpt_Ip_u32ChState) @0689dbd0
-  Type: variable definition analyzed
-  Visibility: force_output no_reorder
-  References: 
-  Referring: Ftm_Gpt_Ip_ProcessCommonInterrupt/21 (read) Ftm_Gpt_Ip_ProcessCommonInterrupt/21 (read) Ftm_Gpt_Ip_ProcessCommonInterrupt/21 (read) Ftm_Gpt_Ip_ProcessCommonInterrupt/21 (read) Ftm_Gpt_Ip_InitChannel/23 (write) Ftm_Gpt_Ip_InitChannel/23 (write) Ftm_Gpt_Ip_InitChannel/23 (write) Ftm_Gpt_Ip_InitChannel/23 (write) 
-  Availability: not-ready
-  Varpool flags: initialized
-Ftm_Gpt_Ip_u32InstanceState/5 (Ftm_Gpt_Ip_u32InstanceState) @0689d1f8
-  Type: variable definition analyzed
-  Visibility: force_output no_reorder
-  References: 
-  Referring: Ftm_Gpt_Ip_Init/22 (write) Ftm_Gpt_Ip_Deinit/24 (write) Ftm_Gpt_Ip_StartTimer/26 (read) 
-  Availability: not-ready
-  Varpool flags: initialized
-ftmGptBase/4 (ftmGptBase) @0689d168
-  Type: variable definition analyzed
-  Visibility: force_output no_reorder public
-  References: 
-  Referring: Ftm_Gpt_Ip_GetCompareValue/2 (read) Ftm_Gpt_Ip_GetChInterruptEnableFlag/19 (read) Ftm_Gpt_Ip_GetChInterruptStatusFlag/0 (read) Ftm_Gpt_Ip_ClearChInterruptStatusFlag/10 (read) Ftm_Gpt_Ip_ClearChInterruptStatusFlag/10 (read) Ftm_Gpt_Ip_SetCompareValue/15 (read) Ftm_Gpt_Ip_SetPrescaler/13 (read) Ftm_Gpt_Ip_SetPrescaler/13 (read) Ftm_Gpt_Ip_SetClockSource/12 (read) Ftm_Gpt_Ip_SetClockSource/12 (read) Ftm_Gpt_Ip_SetFreezeBits/7 (read) Ftm_Gpt_Ip_SetFreezeBits/7 (read) Ftm_Gpt_Ip_SetCounterInitVal/8 (read) Ftm_Gpt_Ip_WriteModulo/16 (read) Ftm_Gpt_Ip_SetEnFtmModule/14 (read) Ftm_Gpt_Ip_SetEnFtmModule/14 (read) Ftm_Gpt_Ip_SetEnFtmModule/14 (read) Ftm_Gpt_Ip_SetEnFtmModule/14 (read) Ftm_Gpt_Ip_SetChannelEnableInterrupt/11 (read) Ftm_Gpt_Ip_SetChannelEnableInterrupt/11 (read) Ftm_Gpt_Ip_ModeSelectA/17 (read) Ftm_Gpt_Ip_ModeSelectA/17 (read) Ftm_Gpt_Ip_ModeSelectA/17 (read) Ftm_Gpt_Ip_ModeSelectA/17 (read) Ftm_Gpt_Ip_SetCounter/9 (read) Ftm_Gpt_Ip_GetCntValue/1 (read) Ftm_Gpt_Ip_SetHalfCycleReloadPoint/30 (read) Ftm_Gpt_Ip_GetChannelEventStatus/20 (read) 
-  Availability: not-ready
-  Varpool flags: initialized read-only const-value-known
-Ftm_Gpt_Ip_u32TargetValue/3 (Ftm_Gpt_Ip_u32TargetValue) @0689d0d8
-  Type: variable definition analyzed
-  Visibility: force_output no_reorder public
-  References: 
-  Referring: Ftm_Gpt_Ip_ProcessCommonInterrupt/21 (read) Ftm_Gpt_Ip_StartCounting/25 (write) 
-  Availability: not-ready
-  Varpool flags:
-Ftm_Gpt_Ip_GetCompareValue/2 (Ftm_Gpt_Ip_GetCompareValue) @068871c0
-  Type: function definition analyzed
-  Visibility: no_reorder
-  References: ftmGptBase/4 (read) 
-  Referring: 
-  Function flags: body
-  Called by: Ftm_Gpt_Ip_ProcessCommonInterrupt/21 
-  Calls: 
-Ftm_Gpt_Ip_GetCntValue/1 (Ftm_Gpt_Ip_GetCntValue) @06883b60
-  Type: function definition analyzed
-  Visibility: no_reorder
-  References: ftmGptBase/4 (read) 
-  Referring: 
-  Function flags: body
-  Called by: Ftm_Gpt_Ip_StartCounting/25 
-  Calls: 
-Ftm_Gpt_Ip_GetChInterruptStatusFlag/0 (Ftm_Gpt_Ip_GetChInterruptStatusFlag) @06883e00
-  Type: function definition analyzed
-  Visibility: no_reorder
-  References: ftmGptBase/4 (read) 
-  Referring: 
-  Function flags: body
-  Called by: Ftm_Gpt_Ip_ProcessCommonInterrupt/21 
+  Called by: Ftm_Gpt_Ip_StartCounting/21 
   Calls: 
 
 Reclaiming functions:
@@ -1451,124 +1172,97 @@ Reclaiming variables:
 Clearing address taken flags:
 Optimized Symbol table:
 
-SchM_Exit_Gpt_GPT_EXCLUSIVE_AREA_24/43 (SchM_Exit_Gpt_GPT_EXCLUSIVE_AREA_24) @069e30e0
+SchM_Exit_Gpt_GPT_EXCLUSIVE_AREA_24/36 (SchM_Exit_Gpt_GPT_EXCLUSIVE_AREA_24) @0698bb60
   Type: function
   Visibility: external public
   References: 
   Referring: 
   Availability: not_available
   Function flags:
-  Called by: Ftm_Gpt_Ip_ModeSelectA/17 
+  Called by: Ftm_Gpt_Ip_ModeSelectA/16 
   Calls: 
-SchM_Enter_Gpt_GPT_EXCLUSIVE_AREA_24/42 (SchM_Enter_Gpt_GPT_EXCLUSIVE_AREA_24) @069e3000
+SchM_Enter_Gpt_GPT_EXCLUSIVE_AREA_24/35 (SchM_Enter_Gpt_GPT_EXCLUSIVE_AREA_24) @0698ba80
   Type: function
   Visibility: external public
   References: 
   Referring: 
   Availability: not_available
   Function flags:
-  Called by: Ftm_Gpt_Ip_ModeSelectA/17 
+  Called by: Ftm_Gpt_Ip_ModeSelectA/16 
   Calls: 
-SchM_Exit_Gpt_GPT_EXCLUSIVE_AREA_23/41 (SchM_Exit_Gpt_GPT_EXCLUSIVE_AREA_23) @069d7c40
+SchM_Exit_Gpt_GPT_EXCLUSIVE_AREA_23/34 (SchM_Exit_Gpt_GPT_EXCLUSIVE_AREA_23) @0698b540
   Type: function
   Visibility: external public
   References: 
   Referring: 
   Availability: not_available
   Function flags:
-  Called by: Ftm_Gpt_Ip_SetEnFtmModule/14 
+  Called by: Ftm_Gpt_Ip_SetEnFtmModule/13 
   Calls: 
-SchM_Enter_Gpt_GPT_EXCLUSIVE_AREA_23/40 (SchM_Enter_Gpt_GPT_EXCLUSIVE_AREA_23) @069d7b60
+SchM_Enter_Gpt_GPT_EXCLUSIVE_AREA_23/33 (SchM_Enter_Gpt_GPT_EXCLUSIVE_AREA_23) @0698b460
   Type: function
   Visibility: external public
   References: 
   Referring: 
   Availability: not_available
   Function flags:
-  Called by: Ftm_Gpt_Ip_SetEnFtmModule/14 
+  Called by: Ftm_Gpt_Ip_SetEnFtmModule/13 
   Calls: 
-SchM_Exit_Gpt_GPT_EXCLUSIVE_AREA_17/39 (SchM_Exit_Gpt_GPT_EXCLUSIVE_AREA_17) @069d77e0
+SchM_Exit_Gpt_GPT_EXCLUSIVE_AREA_17/32 (SchM_Exit_Gpt_GPT_EXCLUSIVE_AREA_17) @0698b0e0
   Type: function
   Visibility: external public
   References: 
   Referring: 
   Availability: not_available
   Function flags:
-  Called by: Ftm_Gpt_Ip_SetFreezeBits/7 
+  Called by: Ftm_Gpt_Ip_SetFreezeBits/6 
   Calls: 
-SchM_Enter_Gpt_GPT_EXCLUSIVE_AREA_17/38 (SchM_Enter_Gpt_GPT_EXCLUSIVE_AREA_17) @069d7700
+SchM_Enter_Gpt_GPT_EXCLUSIVE_AREA_17/31 (SchM_Enter_Gpt_GPT_EXCLUSIVE_AREA_17) @0698b000
   Type: function
   Visibility: external public
   References: 
   Referring: 
   Availability: not_available
   Function flags:
-  Called by: Ftm_Gpt_Ip_SetFreezeBits/7 
+  Called by: Ftm_Gpt_Ip_SetFreezeBits/6 
   Calls: 
-SchM_Exit_Gpt_GPT_EXCLUSIVE_AREA_21/37 (SchM_Exit_Gpt_GPT_EXCLUSIVE_AREA_21) @069d7540
+SchM_Exit_Gpt_GPT_EXCLUSIVE_AREA_21/30 (SchM_Exit_Gpt_GPT_EXCLUSIVE_AREA_21) @06987380
   Type: function
   Visibility: external public
   References: 
   Referring: 
   Availability: not_available
   Function flags:
-  Called by: Ftm_Gpt_Ip_SetClockSource/12 
+  Called by: Ftm_Gpt_Ip_SetClockSource/11 
   Calls: 
-SchM_Enter_Gpt_GPT_EXCLUSIVE_AREA_21/36 (SchM_Enter_Gpt_GPT_EXCLUSIVE_AREA_21) @069d7460
+SchM_Enter_Gpt_GPT_EXCLUSIVE_AREA_21/29 (SchM_Enter_Gpt_GPT_EXCLUSIVE_AREA_21) @069870e0
   Type: function
   Visibility: external public
   References: 
   Referring: 
   Availability: not_available
   Function flags:
-  Called by: Ftm_Gpt_Ip_SetClockSource/12 
+  Called by: Ftm_Gpt_Ip_SetClockSource/11 
   Calls: 
-SchM_Exit_Gpt_GPT_EXCLUSIVE_AREA_22/35 (SchM_Exit_Gpt_GPT_EXCLUSIVE_AREA_22) @069d72a0
+SchM_Exit_Gpt_GPT_EXCLUSIVE_AREA_22/28 (SchM_Exit_Gpt_GPT_EXCLUSIVE_AREA_22) @06987e00
   Type: function
   Visibility: external public
   References: 
   Referring: 
   Availability: not_available
   Function flags:
-  Called by: Ftm_Gpt_Ip_SetPrescaler/13 
+  Called by: Ftm_Gpt_Ip_SetPrescaler/12 
   Calls: 
-SchM_Enter_Gpt_GPT_EXCLUSIVE_AREA_22/34 (SchM_Enter_Gpt_GPT_EXCLUSIVE_AREA_22) @069d71c0
+SchM_Enter_Gpt_GPT_EXCLUSIVE_AREA_22/27 (SchM_Enter_Gpt_GPT_EXCLUSIVE_AREA_22) @06987d20
   Type: function
   Visibility: external public
   References: 
   Referring: 
   Availability: not_available
   Function flags:
-  Called by: Ftm_Gpt_Ip_SetPrescaler/13 
+  Called by: Ftm_Gpt_Ip_SetPrescaler/12 
   Calls: 
-SchM_Exit_Gpt_GPT_EXCLUSIVE_AREA_25/33 (SchM_Exit_Gpt_GPT_EXCLUSIVE_AREA_25) @069d0b60
-  Type: function
-  Visibility: external public
-  References: 
-  Referring: 
-  Availability: not_available
-  Function flags:
-  Called by: Ftm_Gpt_Ip_ProcessCommonInterrupt/21 
-  Calls: 
-SchM_Enter_Gpt_GPT_EXCLUSIVE_AREA_25/32 (SchM_Enter_Gpt_GPT_EXCLUSIVE_AREA_25) @069d0a80
-  Type: function
-  Visibility: external public
-  References: 
-  Referring: 
-  Availability: not_available
-  Function flags:
-  Called by: Ftm_Gpt_Ip_ProcessCommonInterrupt/21 
-  Calls: 
-FTM_0_CH_0_CH_1_ISR/31 (FTM_0_CH_0_CH_1_ISR) @069d0540
-  Type: function definition analyzed
-  Visibility: force_output externally_visible no_reorder public
-  References: 
-  Referring: 
-  Availability: available
-  Function flags: body
-  Called by: 
-  Calls: Ftm_Gpt_Ip_ProcessCommonInterrupt/21 Ftm_Gpt_Ip_GetChannelEventStatus/20 Ftm_Gpt_Ip_ProcessCommonInterrupt/21 Ftm_Gpt_Ip_GetChannelEventStatus/20 
-Ftm_Gpt_Ip_SetHalfCycleReloadPoint/30 (Ftm_Gpt_Ip_SetHalfCycleReloadPoint) @069d02a0
+Ftm_Gpt_Ip_SetHalfCycleReloadPoint/26 (Ftm_Gpt_Ip_SetHalfCycleReloadPoint) @069877e0
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: ftmGptBase/4 (read) 
@@ -1576,17 +1270,8 @@ Ftm_Gpt_Ip_SetHalfCycleReloadPoint/30 (Ftm_Gpt_Ip_SetHalfCycleReloadPoint) @069d
   Availability: available
   Function flags: body
   Called by: 
-  Calls: Ftm_Gpt_Ip_SetHalfCycleValue/18 
-Ftm_Gpt_Ip_DisableChannelInterrupt/29 (Ftm_Gpt_Ip_DisableChannelInterrupt) @069d0000
-  Type: function definition analyzed
-  Visibility: force_output externally_visible no_reorder public
-  References: 
-  Referring: 
-  Availability: available
-  Function flags: body
-  Called by: Ftm_Gpt_Ip_ProcessCommonInterrupt/21 
-  Calls: Ftm_Gpt_Ip_ClearChInterruptStatusFlag/10 Ftm_Gpt_Ip_SetChannelEnableInterrupt/11 
-Ftm_Gpt_Ip_EnableChannelInterrupt/28 (Ftm_Gpt_Ip_EnableChannelInterrupt) @06a84b60
+  Calls: Ftm_Gpt_Ip_SetHalfCycleValue/17 
+Ftm_Gpt_Ip_DisableChannelInterrupt/25 (Ftm_Gpt_Ip_DisableChannelInterrupt) @06987540
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: 
@@ -1594,8 +1279,8 @@ Ftm_Gpt_Ip_EnableChannelInterrupt/28 (Ftm_Gpt_Ip_EnableChannelInterrupt) @06a84b
   Availability: available
   Function flags: body
   Called by: 
-  Calls: Ftm_Gpt_Ip_SetChannelEnableInterrupt/11 Ftm_Gpt_Ip_ClearChInterruptStatusFlag/10 
-Ftm_Gpt_Ip_StopTimer/27 (Ftm_Gpt_Ip_StopTimer) @06a84620
+  Calls: Ftm_Gpt_Ip_ClearChInterruptStatusFlag/9 Ftm_Gpt_Ip_SetChannelEnableInterrupt/10 
+Ftm_Gpt_Ip_EnableChannelInterrupt/24 (Ftm_Gpt_Ip_EnableChannelInterrupt) @069872a0
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: 
@@ -1603,8 +1288,17 @@ Ftm_Gpt_Ip_StopTimer/27 (Ftm_Gpt_Ip_StopTimer) @06a84620
   Availability: available
   Function flags: body
   Called by: 
-  Calls: Ftm_Gpt_Ip_SetClockSource/12 Ftm_Gpt_Ip_SetEnFtmModule/14 
-Ftm_Gpt_Ip_StartTimer/26 (Ftm_Gpt_Ip_StartTimer) @06a840e0
+  Calls: Ftm_Gpt_Ip_SetChannelEnableInterrupt/10 Ftm_Gpt_Ip_ClearChInterruptStatusFlag/9 
+Ftm_Gpt_Ip_StopTimer/23 (Ftm_Gpt_Ip_StopTimer) @06987000
+  Type: function definition analyzed
+  Visibility: force_output externally_visible no_reorder public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: body
+  Called by: 
+  Calls: Ftm_Gpt_Ip_SetClockSource/11 Ftm_Gpt_Ip_SetEnFtmModule/13 
+Ftm_Gpt_Ip_StartTimer/22 (Ftm_Gpt_Ip_StartTimer) @0697ec40
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: Ftm_Gpt_Ip_u32InstanceState/5 (read) 
@@ -1612,8 +1306,8 @@ Ftm_Gpt_Ip_StartTimer/26 (Ftm_Gpt_Ip_StartTimer) @06a840e0
   Availability: available
   Function flags: body
   Called by: 
-  Calls: Ftm_Gpt_Ip_SetEnFtmModule/14 Ftm_Gpt_Ip_SetCounterInitVal/8 
-Ftm_Gpt_Ip_StartCounting/25 (Ftm_Gpt_Ip_StartCounting) @06a84d20
+  Calls: Ftm_Gpt_Ip_SetEnFtmModule/13 Ftm_Gpt_Ip_SetCounterInitVal/7 
+Ftm_Gpt_Ip_StartCounting/21 (Ftm_Gpt_Ip_StartCounting) @0697e700
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: Ftm_Gpt_Ip_u32TargetValue/3 (write) 
@@ -1621,8 +1315,8 @@ Ftm_Gpt_Ip_StartCounting/25 (Ftm_Gpt_Ip_StartCounting) @06a84d20
   Availability: available
   Function flags: body
   Called by: 
-  Calls: Ftm_Gpt_Ip_SetChannelEnableInterrupt/11 Ftm_Gpt_Ip_ClearChInterruptStatusFlag/10 Ftm_Gpt_Ip_SetCompareValue/15 Ftm_Gpt_Ip_GetCntValue/1 
-Ftm_Gpt_Ip_Deinit/24 (Ftm_Gpt_Ip_Deinit) @06a84a80
+  Calls: Ftm_Gpt_Ip_SetChannelEnableInterrupt/10 Ftm_Gpt_Ip_ClearChInterruptStatusFlag/9 Ftm_Gpt_Ip_SetCompareValue/14 Ftm_Gpt_Ip_GetCntValue/1 
+Ftm_Gpt_Ip_Deinit/20 (Ftm_Gpt_Ip_Deinit) @0697ee00
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: Ftm_Gpt_Ip_u32InstanceState/5 (write) 
@@ -1630,17 +1324,17 @@ Ftm_Gpt_Ip_Deinit/24 (Ftm_Gpt_Ip_Deinit) @06a84a80
   Availability: available
   Function flags: body
   Called by: 
-  Calls: Ftm_Gpt_Ip_SetCounter/9 Ftm_Gpt_Ip_SetCounterInitVal/8 Ftm_Gpt_Ip_SetFreezeBits/7 Ftm_Gpt_Ip_SetEnFtmModule/14 Ftm_Gpt_Ip_SetClockSource/12 Ftm_Gpt_Ip_ClearChInterruptStatusFlag/10 Ftm_Gpt_Ip_SetChannelEnableInterrupt/11 
-Ftm_Gpt_Ip_InitChannel/23 (Ftm_Gpt_Ip_InitChannel) @06a847e0
+  Calls: Ftm_Gpt_Ip_SetCounter/8 Ftm_Gpt_Ip_SetCounterInitVal/7 Ftm_Gpt_Ip_SetFreezeBits/6 Ftm_Gpt_Ip_SetEnFtmModule/13 Ftm_Gpt_Ip_SetClockSource/11 Ftm_Gpt_Ip_ClearChInterruptStatusFlag/9 Ftm_Gpt_Ip_SetChannelEnableInterrupt/10 
+Ftm_Gpt_Ip_InitChannel/19 (Ftm_Gpt_Ip_InitChannel) @0697eb60
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
-  References: Ftm_Gpt_Ip_u32ChState/6 (write) Ftm_Gpt_Ip_u32ChState/6 (write) Ftm_Gpt_Ip_u32ChState/6 (write) Ftm_Gpt_Ip_u32ChState/6 (write) 
+  References: 
   Referring: 
   Availability: available
   Function flags: body
   Called by: 
-  Calls: Ftm_Gpt_Ip_ModeSelectA/17 Ftm_Gpt_Ip_SetCompareValue/15 Ftm_Gpt_Ip_ClearChInterruptStatusFlag/10 Ftm_Gpt_Ip_SetChannelEnableInterrupt/11 
-Ftm_Gpt_Ip_Init/22 (Ftm_Gpt_Ip_Init) @06a84540
+  Calls: Ftm_Gpt_Ip_ModeSelectA/16 Ftm_Gpt_Ip_SetCompareValue/14 Ftm_Gpt_Ip_ClearChInterruptStatusFlag/9 Ftm_Gpt_Ip_SetChannelEnableInterrupt/10 
+Ftm_Gpt_Ip_Init/18 (Ftm_Gpt_Ip_Init) @0697e8c0
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: Ftm_Gpt_Ip_u32InstanceState/5 (write) 
@@ -1648,197 +1342,144 @@ Ftm_Gpt_Ip_Init/22 (Ftm_Gpt_Ip_Init) @06a84540
   Availability: available
   Function flags: body
   Called by: 
-  Calls: Ftm_Gpt_Ip_SetEnFtmModule/14 Ftm_Gpt_Ip_WriteModulo/16 Ftm_Gpt_Ip_SetCounterInitVal/8 Ftm_Gpt_Ip_SetFreezeBits/7 Ftm_Gpt_Ip_SetClockSource/12 Ftm_Gpt_Ip_SetPrescaler/13 
-Ftm_Gpt_Ip_ProcessCommonInterrupt/21 (Ftm_Gpt_Ip_ProcessCommonInterrupt) @06a842a0
-  Type: function definition analyzed
-  Visibility: force_output no_reorder prevailing_def_ironly
-  References: Ftm_Gpt_Ip_u32ChState/6 (read) Ftm_Gpt_Ip_u32ChState/6 (read) Ftm_Gpt_Ip_u32ChState/6 (read) Ftm_Gpt_Ip_u32ChState/6 (read) Ftm_Gpt_Ip_u32TargetValue/3 (read) 
-  Referring: 
-  Availability: available
-  Function flags: body
-  Called by: FTM_0_CH_0_CH_1_ISR/31 FTM_0_CH_0_CH_1_ISR/31 
-  Calls: Ftm_Gpt_Ip_SetCompareValue/15 Ftm_Gpt_Ip_SetCompareValue/15 Ftm_Gpt_Ip_DisableChannelInterrupt/29 SchM_Exit_Gpt_GPT_EXCLUSIVE_AREA_25/33 Ftm_Gpt_Ip_ClearChInterruptStatusFlag/10 Ftm_Gpt_Ip_GetChInterruptStatusFlag/0 Ftm_Gpt_Ip_GetChInterruptEnableFlag/19 SchM_Enter_Gpt_GPT_EXCLUSIVE_AREA_25/32 Ftm_Gpt_Ip_GetCompareValue/2 
-   Indirect call Num speculative call targets: 0
-Ftm_Gpt_Ip_GetChannelEventStatus/20 (Ftm_Gpt_Ip_GetChannelEventStatus) @06a84000
-  Type: function definition analyzed
-  Visibility: no_reorder prevailing_def_ironly
-  References: ftmGptBase/4 (read) 
-  Referring: 
-  Availability: local
-  Function flags: body local
-  Called by: FTM_0_CH_0_CH_1_ISR/31 FTM_0_CH_0_CH_1_ISR/31 
-  Calls: 
-Ftm_Gpt_Ip_GetChInterruptEnableFlag/19 (Ftm_Gpt_Ip_GetChInterruptEnableFlag) @068a8460
-  Type: function definition analyzed
-  Visibility: no_reorder prevailing_def_ironly
-  References: ftmGptBase/4 (read) 
-  Referring: 
-  Availability: local
-  Function flags: body local
-  Called by: Ftm_Gpt_Ip_ProcessCommonInterrupt/21 
-  Calls: 
-Ftm_Gpt_Ip_SetHalfCycleValue/18 (Ftm_Gpt_Ip_SetHalfCycleValue) @068a8e00
+  Calls: Ftm_Gpt_Ip_SetEnFtmModule/13 Ftm_Gpt_Ip_WriteModulo/15 Ftm_Gpt_Ip_SetCounterInitVal/7 Ftm_Gpt_Ip_SetFreezeBits/6 Ftm_Gpt_Ip_SetClockSource/11 Ftm_Gpt_Ip_SetPrescaler/12 
+Ftm_Gpt_Ip_SetHalfCycleValue/17 (Ftm_Gpt_Ip_SetHalfCycleValue) @0697e620
   Type: function definition analyzed
   Visibility: no_reorder prevailing_def_ironly
   References: 
   Referring: 
   Availability: local
   Function flags: body local
-  Called by: Ftm_Gpt_Ip_SetHalfCycleReloadPoint/30 
+  Called by: Ftm_Gpt_Ip_SetHalfCycleReloadPoint/26 
   Calls: 
-Ftm_Gpt_Ip_ModeSelectA/17 (Ftm_Gpt_Ip_ModeSelectA) @068a8b60
+Ftm_Gpt_Ip_ModeSelectA/16 (Ftm_Gpt_Ip_ModeSelectA) @0697e380
   Type: function definition analyzed
   Visibility: no_reorder prevailing_def_ironly
   References: ftmGptBase/4 (read) ftmGptBase/4 (read) ftmGptBase/4 (read) ftmGptBase/4 (read) 
   Referring: 
   Availability: local
   Function flags: body local
-  Called by: Ftm_Gpt_Ip_InitChannel/23 
-  Calls: SchM_Exit_Gpt_GPT_EXCLUSIVE_AREA_24/43 SchM_Enter_Gpt_GPT_EXCLUSIVE_AREA_24/42 
-Ftm_Gpt_Ip_WriteModulo/16 (Ftm_Gpt_Ip_WriteModulo) @068a88c0
+  Called by: Ftm_Gpt_Ip_InitChannel/19 
+  Calls: SchM_Exit_Gpt_GPT_EXCLUSIVE_AREA_24/36 SchM_Enter_Gpt_GPT_EXCLUSIVE_AREA_24/35 
+Ftm_Gpt_Ip_WriteModulo/15 (Ftm_Gpt_Ip_WriteModulo) @0697e0e0
   Type: function definition analyzed
   Visibility: no_reorder prevailing_def_ironly
   References: ftmGptBase/4 (read) 
   Referring: 
   Availability: local
   Function flags: body local
-  Called by: Ftm_Gpt_Ip_Init/22 
+  Called by: Ftm_Gpt_Ip_Init/18 
   Calls: 
-Ftm_Gpt_Ip_SetCompareValue/15 (Ftm_Gpt_Ip_SetCompareValue) @068a8620
+Ftm_Gpt_Ip_SetCompareValue/14 (Ftm_Gpt_Ip_SetCompareValue) @06977b60
   Type: function definition analyzed
   Visibility: no_reorder prevailing_def_ironly
   References: ftmGptBase/4 (read) 
   Referring: 
   Availability: local
   Function flags: body local
-  Called by: Ftm_Gpt_Ip_ProcessCommonInterrupt/21 Ftm_Gpt_Ip_ProcessCommonInterrupt/21 Ftm_Gpt_Ip_StartCounting/25 Ftm_Gpt_Ip_InitChannel/23 
+  Called by: Ftm_Gpt_Ip_StartCounting/21 Ftm_Gpt_Ip_InitChannel/19 
   Calls: 
-Ftm_Gpt_Ip_SetEnFtmModule/14 (Ftm_Gpt_Ip_SetEnFtmModule) @068a8380
+Ftm_Gpt_Ip_SetEnFtmModule/13 (Ftm_Gpt_Ip_SetEnFtmModule) @06977540
   Type: function definition analyzed
   Visibility: no_reorder prevailing_def_ironly
   References: ftmGptBase/4 (read) ftmGptBase/4 (read) ftmGptBase/4 (read) ftmGptBase/4 (read) 
   Referring: 
   Availability: local
   Function flags: body local
-  Called by: Ftm_Gpt_Ip_StopTimer/27 Ftm_Gpt_Ip_StartTimer/26 Ftm_Gpt_Ip_Deinit/24 Ftm_Gpt_Ip_Init/22 
-  Calls: SchM_Exit_Gpt_GPT_EXCLUSIVE_AREA_23/41 SchM_Enter_Gpt_GPT_EXCLUSIVE_AREA_23/40 
-Ftm_Gpt_Ip_SetPrescaler/13 (Ftm_Gpt_Ip_SetPrescaler) @068a8000
+  Called by: Ftm_Gpt_Ip_StopTimer/23 Ftm_Gpt_Ip_StartTimer/22 Ftm_Gpt_Ip_Deinit/20 Ftm_Gpt_Ip_Init/18 
+  Calls: SchM_Exit_Gpt_GPT_EXCLUSIVE_AREA_23/34 SchM_Enter_Gpt_GPT_EXCLUSIVE_AREA_23/33 
+Ftm_Gpt_Ip_SetPrescaler/12 (Ftm_Gpt_Ip_SetPrescaler) @06977e00
   Type: function definition analyzed
   Visibility: no_reorder prevailing_def_ironly
   References: ftmGptBase/4 (read) ftmGptBase/4 (read) 
   Referring: 
   Availability: local
   Function flags: body local
-  Called by: Ftm_Gpt_Ip_Init/22 
-  Calls: SchM_Exit_Gpt_GPT_EXCLUSIVE_AREA_22/35 SchM_Enter_Gpt_GPT_EXCLUSIVE_AREA_22/34 
-Ftm_Gpt_Ip_SetClockSource/12 (Ftm_Gpt_Ip_SetClockSource) @068a49a0
+  Called by: Ftm_Gpt_Ip_Init/18 
+  Calls: SchM_Exit_Gpt_GPT_EXCLUSIVE_AREA_22/28 SchM_Enter_Gpt_GPT_EXCLUSIVE_AREA_22/27 
+Ftm_Gpt_Ip_SetClockSource/11 (Ftm_Gpt_Ip_SetClockSource) @06977a80
   Type: function definition analyzed
   Visibility: no_reorder prevailing_def_ironly
   References: ftmGptBase/4 (read) ftmGptBase/4 (read) 
   Referring: 
   Availability: local
   Function flags: body local
-  Called by: Ftm_Gpt_Ip_StopTimer/27 Ftm_Gpt_Ip_Deinit/24 Ftm_Gpt_Ip_Init/22 
-  Calls: SchM_Exit_Gpt_GPT_EXCLUSIVE_AREA_21/37 SchM_Enter_Gpt_GPT_EXCLUSIVE_AREA_21/36 
-Ftm_Gpt_Ip_SetChannelEnableInterrupt/11 (Ftm_Gpt_Ip_SetChannelEnableInterrupt) @068a4e00
+  Called by: Ftm_Gpt_Ip_StopTimer/23 Ftm_Gpt_Ip_Deinit/20 Ftm_Gpt_Ip_Init/18 
+  Calls: SchM_Exit_Gpt_GPT_EXCLUSIVE_AREA_21/30 SchM_Enter_Gpt_GPT_EXCLUSIVE_AREA_21/29 
+Ftm_Gpt_Ip_SetChannelEnableInterrupt/10 (Ftm_Gpt_Ip_SetChannelEnableInterrupt) @06977700
   Type: function definition analyzed
   Visibility: no_reorder prevailing_def_ironly
   References: ftmGptBase/4 (read) ftmGptBase/4 (read) 
   Referring: 
   Availability: local
   Function flags: body local
-  Called by: Ftm_Gpt_Ip_DisableChannelInterrupt/29 Ftm_Gpt_Ip_EnableChannelInterrupt/28 Ftm_Gpt_Ip_StartCounting/25 Ftm_Gpt_Ip_Deinit/24 Ftm_Gpt_Ip_InitChannel/23 
+  Called by: Ftm_Gpt_Ip_DisableChannelInterrupt/25 Ftm_Gpt_Ip_EnableChannelInterrupt/24 Ftm_Gpt_Ip_StartCounting/21 Ftm_Gpt_Ip_Deinit/20 Ftm_Gpt_Ip_InitChannel/19 
   Calls: 
-Ftm_Gpt_Ip_ClearChInterruptStatusFlag/10 (Ftm_Gpt_Ip_ClearChInterruptStatusFlag) @068a4b60
+Ftm_Gpt_Ip_ClearChInterruptStatusFlag/9 (Ftm_Gpt_Ip_ClearChInterruptStatusFlag) @06977460
   Type: function definition analyzed
   Visibility: no_reorder prevailing_def_ironly
   References: ftmGptBase/4 (read) ftmGptBase/4 (read) 
   Referring: 
   Availability: local
   Function flags: body local
-  Called by: Ftm_Gpt_Ip_ProcessCommonInterrupt/21 Ftm_Gpt_Ip_DisableChannelInterrupt/29 Ftm_Gpt_Ip_EnableChannelInterrupt/28 Ftm_Gpt_Ip_StartCounting/25 Ftm_Gpt_Ip_Deinit/24 Ftm_Gpt_Ip_InitChannel/23 
+  Called by: Ftm_Gpt_Ip_DisableChannelInterrupt/25 Ftm_Gpt_Ip_EnableChannelInterrupt/24 Ftm_Gpt_Ip_StartCounting/21 Ftm_Gpt_Ip_Deinit/20 Ftm_Gpt_Ip_InitChannel/19 
   Calls: 
-Ftm_Gpt_Ip_SetCounter/9 (Ftm_Gpt_Ip_SetCounter) @068a48c0
+Ftm_Gpt_Ip_SetCounter/8 (Ftm_Gpt_Ip_SetCounter) @069771c0
   Type: function definition analyzed
   Visibility: no_reorder prevailing_def_ironly
   References: ftmGptBase/4 (read) 
   Referring: 
   Availability: local
   Function flags: body local
-  Called by: Ftm_Gpt_Ip_Deinit/24 
+  Called by: Ftm_Gpt_Ip_Deinit/20 
   Calls: 
-Ftm_Gpt_Ip_SetCounterInitVal/8 (Ftm_Gpt_Ip_SetCounterInitVal) @068a4620
+Ftm_Gpt_Ip_SetCounterInitVal/7 (Ftm_Gpt_Ip_SetCounterInitVal) @06972a80
   Type: function definition analyzed
   Visibility: no_reorder prevailing_def_ironly
   References: ftmGptBase/4 (read) 
   Referring: 
   Availability: local
   Function flags: body local
-  Called by: Ftm_Gpt_Ip_StartTimer/26 Ftm_Gpt_Ip_Deinit/24 Ftm_Gpt_Ip_Init/22 
+  Called by: Ftm_Gpt_Ip_StartTimer/22 Ftm_Gpt_Ip_Deinit/20 Ftm_Gpt_Ip_Init/18 
   Calls: 
-Ftm_Gpt_Ip_SetFreezeBits/7 (Ftm_Gpt_Ip_SetFreezeBits) @068a4380
+Ftm_Gpt_Ip_SetFreezeBits/6 (Ftm_Gpt_Ip_SetFreezeBits) @06972d20
   Type: function definition analyzed
   Visibility: no_reorder prevailing_def_ironly
   References: ftmGptBase/4 (read) ftmGptBase/4 (read) 
   Referring: 
   Availability: local
   Function flags: body local
-  Called by: Ftm_Gpt_Ip_Deinit/24 Ftm_Gpt_Ip_Init/22 
-  Calls: SchM_Exit_Gpt_GPT_EXCLUSIVE_AREA_17/39 SchM_Enter_Gpt_GPT_EXCLUSIVE_AREA_17/38 
-Ftm_Gpt_Ip_u32ChState/6 (Ftm_Gpt_Ip_u32ChState) @0689dbd0
+  Called by: Ftm_Gpt_Ip_Deinit/20 Ftm_Gpt_Ip_Init/18 
+  Calls: SchM_Exit_Gpt_GPT_EXCLUSIVE_AREA_17/32 SchM_Enter_Gpt_GPT_EXCLUSIVE_AREA_17/31 
+Ftm_Gpt_Ip_u32InstanceState/5 (Ftm_Gpt_Ip_u32InstanceState) @06970120
   Type: variable definition analyzed
   Visibility: force_output no_reorder prevailing_def_ironly
   References: 
-  Referring: Ftm_Gpt_Ip_InitChannel/23 (write) Ftm_Gpt_Ip_InitChannel/23 (write) Ftm_Gpt_Ip_InitChannel/23 (write) Ftm_Gpt_Ip_InitChannel/23 (write) Ftm_Gpt_Ip_ProcessCommonInterrupt/21 (read) Ftm_Gpt_Ip_ProcessCommonInterrupt/21 (read) Ftm_Gpt_Ip_ProcessCommonInterrupt/21 (read) Ftm_Gpt_Ip_ProcessCommonInterrupt/21 (read) 
+  Referring: Ftm_Gpt_Ip_Init/18 (write) Ftm_Gpt_Ip_Deinit/20 (write) Ftm_Gpt_Ip_StartTimer/22 (read) 
   Availability: available
   Varpool flags: initialized
-Ftm_Gpt_Ip_u32InstanceState/5 (Ftm_Gpt_Ip_u32InstanceState) @0689d1f8
-  Type: variable definition analyzed
-  Visibility: force_output no_reorder prevailing_def_ironly
-  References: 
-  Referring: Ftm_Gpt_Ip_Init/22 (write) Ftm_Gpt_Ip_Deinit/24 (write) Ftm_Gpt_Ip_StartTimer/26 (read) 
-  Availability: available
-  Varpool flags: initialized
-ftmGptBase/4 (ftmGptBase) @0689d168
+ftmGptBase/4 (ftmGptBase) @06970090
   Type: variable definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: 
-  Referring: Ftm_Gpt_Ip_GetChInterruptStatusFlag/0 (read) Ftm_Gpt_Ip_SetCompareValue/15 (read) Ftm_Gpt_Ip_WriteModulo/16 (read) Ftm_Gpt_Ip_SetEnFtmModule/14 (read) Ftm_Gpt_Ip_SetCounterInitVal/8 (read) Ftm_Gpt_Ip_ClearChInterruptStatusFlag/10 (read) Ftm_Gpt_Ip_ClearChInterruptStatusFlag/10 (read) Ftm_Gpt_Ip_GetChInterruptEnableFlag/19 (read) Ftm_Gpt_Ip_SetChannelEnableInterrupt/11 (read) Ftm_Gpt_Ip_GetChannelEventStatus/20 (read) Ftm_Gpt_Ip_SetPrescaler/13 (read) Ftm_Gpt_Ip_SetPrescaler/13 (read) Ftm_Gpt_Ip_GetCntValue/1 (read) Ftm_Gpt_Ip_SetChannelEnableInterrupt/11 (read) Ftm_Gpt_Ip_GetCompareValue/2 (read) Ftm_Gpt_Ip_ModeSelectA/17 (read) Ftm_Gpt_Ip_SetClockSource/12 (read) Ftm_Gpt_Ip_SetClockSource/12 (read) Ftm_Gpt_Ip_SetEnFtmModule/14 (read) Ftm_Gpt_Ip_SetCounter/9 (read) Ftm_Gpt_Ip_SetEnFtmModule/14 (read) Ftm_Gpt_Ip_SetEnFtmModule/14 (read) Ftm_Gpt_Ip_SetFreezeBits/7 (read) Ftm_Gpt_Ip_SetFreezeBits/7 (read) Ftm_Gpt_Ip_ModeSelectA/17 (read) Ftm_Gpt_Ip_ModeSelectA/17 (read) Ftm_Gpt_Ip_ModeSelectA/17 (read) Ftm_Gpt_Ip_SetHalfCycleReloadPoint/30 (read) 
+  Referring: Ftm_Gpt_Ip_ClearChInterruptStatusFlag/9 (read) Ftm_Gpt_Ip_SetCompareValue/14 (read) Ftm_Gpt_Ip_SetChannelEnableInterrupt/10 (read) Ftm_Gpt_Ip_WriteModulo/15 (read) Ftm_Gpt_Ip_SetPrescaler/12 (read) Ftm_Gpt_Ip_SetPrescaler/12 (read) Ftm_Gpt_Ip_ModeSelectA/16 (read) Ftm_Gpt_Ip_SetChannelEnableInterrupt/10 (read) Ftm_Gpt_Ip_SetFreezeBits/6 (read) Ftm_Gpt_Ip_GetCntValue/1 (read) Ftm_Gpt_Ip_SetClockSource/11 (read) Ftm_Gpt_Ip_SetClockSource/11 (read) Ftm_Gpt_Ip_SetEnFtmModule/13 (read) Ftm_Gpt_Ip_SetCounter/8 (read) Ftm_Gpt_Ip_SetEnFtmModule/13 (read) Ftm_Gpt_Ip_SetCounterInitVal/7 (read) Ftm_Gpt_Ip_ClearChInterruptStatusFlag/9 (read) Ftm_Gpt_Ip_SetEnFtmModule/13 (read) Ftm_Gpt_Ip_SetEnFtmModule/13 (read) Ftm_Gpt_Ip_SetFreezeBits/6 (read) Ftm_Gpt_Ip_ModeSelectA/16 (read) Ftm_Gpt_Ip_ModeSelectA/16 (read) Ftm_Gpt_Ip_ModeSelectA/16 (read) Ftm_Gpt_Ip_SetHalfCycleReloadPoint/26 (read) 
   Availability: available
   Varpool flags: initialized read-only const-value-known
-Ftm_Gpt_Ip_u32TargetValue/3 (Ftm_Gpt_Ip_u32TargetValue) @0689d0d8
+Ftm_Gpt_Ip_u32TargetValue/3 (Ftm_Gpt_Ip_u32TargetValue) @06970000
   Type: variable definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: 
-  Referring: Ftm_Gpt_Ip_StartCounting/25 (write) Ftm_Gpt_Ip_ProcessCommonInterrupt/21 (read) 
+  Referring: Ftm_Gpt_Ip_StartCounting/21 (write) 
   Availability: available
   Varpool flags:
-Ftm_Gpt_Ip_GetCompareValue/2 (Ftm_Gpt_Ip_GetCompareValue) @068871c0
+Ftm_Gpt_Ip_GetCntValue/1 (Ftm_Gpt_Ip_GetCntValue) @06955b60
   Type: function definition analyzed
   Visibility: no_reorder prevailing_def_ironly
   References: ftmGptBase/4 (read) 
   Referring: 
   Availability: local
   Function flags: body local
-  Called by: Ftm_Gpt_Ip_ProcessCommonInterrupt/21 
-  Calls: 
-Ftm_Gpt_Ip_GetCntValue/1 (Ftm_Gpt_Ip_GetCntValue) @06883b60
-  Type: function definition analyzed
-  Visibility: no_reorder prevailing_def_ironly
-  References: ftmGptBase/4 (read) 
-  Referring: 
-  Availability: local
-  Function flags: body local
-  Called by: Ftm_Gpt_Ip_StartCounting/25 
-  Calls: 
-Ftm_Gpt_Ip_GetChInterruptStatusFlag/0 (Ftm_Gpt_Ip_GetChInterruptStatusFlag) @06883e00
-  Type: function definition analyzed
-  Visibility: no_reorder prevailing_def_ironly
-  References: ftmGptBase/4 (read) 
-  Referring: 
-  Availability: local
-  Function flags: body local
-  Called by: Ftm_Gpt_Ip_ProcessCommonInterrupt/21 
+  Called by: Ftm_Gpt_Ip_StartCounting/21 
   Calls: 
 Materializing clones
 Materialization Call site updates done.
@@ -1846,12 +1487,12 @@ Materialization Call site updates done.
 Reclaiming functions:
 Reclaiming variables:
 Clearing address taken flags:
-Trivially needed variables: Ftm_Gpt_Ip_u32ChState/6 Ftm_Gpt_Ip_u32InstanceState/5 ftmGptBase/4 Ftm_Gpt_Ip_u32TargetValue/3
+Trivially needed variables: Ftm_Gpt_Ip_u32InstanceState/5 ftmGptBase/4 Ftm_Gpt_Ip_u32TargetValue/3
 Removing variables:
 
 Final Symbol table:
 
-SchM_Exit_Gpt_GPT_EXCLUSIVE_AREA_24/43 (SchM_Exit_Gpt_GPT_EXCLUSIVE_AREA_24) @069e30e0
+SchM_Exit_Gpt_GPT_EXCLUSIVE_AREA_24/36 (SchM_Exit_Gpt_GPT_EXCLUSIVE_AREA_24) @0698bb60
   Type: function
   Visibility: external public
   References: 
@@ -1860,7 +1501,7 @@ SchM_Exit_Gpt_GPT_EXCLUSIVE_AREA_24/43 (SchM_Exit_Gpt_GPT_EXCLUSIVE_AREA_24) @06
   Function flags:
   Called by: 
   Calls: 
-SchM_Enter_Gpt_GPT_EXCLUSIVE_AREA_24/42 (SchM_Enter_Gpt_GPT_EXCLUSIVE_AREA_24) @069e3000
+SchM_Enter_Gpt_GPT_EXCLUSIVE_AREA_24/35 (SchM_Enter_Gpt_GPT_EXCLUSIVE_AREA_24) @0698ba80
   Type: function
   Visibility: external public
   References: 
@@ -1869,7 +1510,7 @@ SchM_Enter_Gpt_GPT_EXCLUSIVE_AREA_24/42 (SchM_Enter_Gpt_GPT_EXCLUSIVE_AREA_24) @
   Function flags:
   Called by: 
   Calls: 
-SchM_Exit_Gpt_GPT_EXCLUSIVE_AREA_23/41 (SchM_Exit_Gpt_GPT_EXCLUSIVE_AREA_23) @069d7c40
+SchM_Exit_Gpt_GPT_EXCLUSIVE_AREA_23/34 (SchM_Exit_Gpt_GPT_EXCLUSIVE_AREA_23) @0698b540
   Type: function
   Visibility: external public
   References: 
@@ -1878,7 +1519,7 @@ SchM_Exit_Gpt_GPT_EXCLUSIVE_AREA_23/41 (SchM_Exit_Gpt_GPT_EXCLUSIVE_AREA_23) @06
   Function flags:
   Called by: 
   Calls: 
-SchM_Enter_Gpt_GPT_EXCLUSIVE_AREA_23/40 (SchM_Enter_Gpt_GPT_EXCLUSIVE_AREA_23) @069d7b60
+SchM_Enter_Gpt_GPT_EXCLUSIVE_AREA_23/33 (SchM_Enter_Gpt_GPT_EXCLUSIVE_AREA_23) @0698b460
   Type: function
   Visibility: external public
   References: 
@@ -1887,7 +1528,7 @@ SchM_Enter_Gpt_GPT_EXCLUSIVE_AREA_23/40 (SchM_Enter_Gpt_GPT_EXCLUSIVE_AREA_23) @
   Function flags:
   Called by: 
   Calls: 
-SchM_Exit_Gpt_GPT_EXCLUSIVE_AREA_17/39 (SchM_Exit_Gpt_GPT_EXCLUSIVE_AREA_17) @069d77e0
+SchM_Exit_Gpt_GPT_EXCLUSIVE_AREA_17/32 (SchM_Exit_Gpt_GPT_EXCLUSIVE_AREA_17) @0698b0e0
   Type: function
   Visibility: external public
   References: 
@@ -1896,7 +1537,7 @@ SchM_Exit_Gpt_GPT_EXCLUSIVE_AREA_17/39 (SchM_Exit_Gpt_GPT_EXCLUSIVE_AREA_17) @06
   Function flags:
   Called by: 
   Calls: 
-SchM_Enter_Gpt_GPT_EXCLUSIVE_AREA_17/38 (SchM_Enter_Gpt_GPT_EXCLUSIVE_AREA_17) @069d7700
+SchM_Enter_Gpt_GPT_EXCLUSIVE_AREA_17/31 (SchM_Enter_Gpt_GPT_EXCLUSIVE_AREA_17) @0698b000
   Type: function
   Visibility: external public
   References: 
@@ -1905,7 +1546,7 @@ SchM_Enter_Gpt_GPT_EXCLUSIVE_AREA_17/38 (SchM_Enter_Gpt_GPT_EXCLUSIVE_AREA_17) @
   Function flags:
   Called by: 
   Calls: 
-SchM_Exit_Gpt_GPT_EXCLUSIVE_AREA_21/37 (SchM_Exit_Gpt_GPT_EXCLUSIVE_AREA_21) @069d7540
+SchM_Exit_Gpt_GPT_EXCLUSIVE_AREA_21/30 (SchM_Exit_Gpt_GPT_EXCLUSIVE_AREA_21) @06987380
   Type: function
   Visibility: external public
   References: 
@@ -1914,7 +1555,7 @@ SchM_Exit_Gpt_GPT_EXCLUSIVE_AREA_21/37 (SchM_Exit_Gpt_GPT_EXCLUSIVE_AREA_21) @06
   Function flags:
   Called by: 
   Calls: 
-SchM_Enter_Gpt_GPT_EXCLUSIVE_AREA_21/36 (SchM_Enter_Gpt_GPT_EXCLUSIVE_AREA_21) @069d7460
+SchM_Enter_Gpt_GPT_EXCLUSIVE_AREA_21/29 (SchM_Enter_Gpt_GPT_EXCLUSIVE_AREA_21) @069870e0
   Type: function
   Visibility: external public
   References: 
@@ -1923,7 +1564,7 @@ SchM_Enter_Gpt_GPT_EXCLUSIVE_AREA_21/36 (SchM_Enter_Gpt_GPT_EXCLUSIVE_AREA_21) @
   Function flags:
   Called by: 
   Calls: 
-SchM_Exit_Gpt_GPT_EXCLUSIVE_AREA_22/35 (SchM_Exit_Gpt_GPT_EXCLUSIVE_AREA_22) @069d72a0
+SchM_Exit_Gpt_GPT_EXCLUSIVE_AREA_22/28 (SchM_Exit_Gpt_GPT_EXCLUSIVE_AREA_22) @06987e00
   Type: function
   Visibility: external public
   References: 
@@ -1932,7 +1573,7 @@ SchM_Exit_Gpt_GPT_EXCLUSIVE_AREA_22/35 (SchM_Exit_Gpt_GPT_EXCLUSIVE_AREA_22) @06
   Function flags:
   Called by: 
   Calls: 
-SchM_Enter_Gpt_GPT_EXCLUSIVE_AREA_22/34 (SchM_Enter_Gpt_GPT_EXCLUSIVE_AREA_22) @069d71c0
+SchM_Enter_Gpt_GPT_EXCLUSIVE_AREA_22/27 (SchM_Enter_Gpt_GPT_EXCLUSIVE_AREA_22) @06987d20
   Type: function
   Visibility: external public
   References: 
@@ -1941,34 +1582,7 @@ SchM_Enter_Gpt_GPT_EXCLUSIVE_AREA_22/34 (SchM_Enter_Gpt_GPT_EXCLUSIVE_AREA_22) @
   Function flags:
   Called by: 
   Calls: 
-SchM_Exit_Gpt_GPT_EXCLUSIVE_AREA_25/33 (SchM_Exit_Gpt_GPT_EXCLUSIVE_AREA_25) @069d0b60
-  Type: function
-  Visibility: external public
-  References: 
-  Referring: 
-  Availability: not_available
-  Function flags:
-  Called by: 
-  Calls: 
-SchM_Enter_Gpt_GPT_EXCLUSIVE_AREA_25/32 (SchM_Enter_Gpt_GPT_EXCLUSIVE_AREA_25) @069d0a80
-  Type: function
-  Visibility: external public
-  References: 
-  Referring: 
-  Availability: not_available
-  Function flags:
-  Called by: 
-  Calls: 
-FTM_0_CH_0_CH_1_ISR/31 (FTM_0_CH_0_CH_1_ISR) @069d0540
-  Type: function definition analyzed
-  Visibility: force_output externally_visible no_reorder asm_written public section:.text.FTM_0_CH_0_CH_1_ISR (implicit_section)
-  References: 
-  Referring: 
-  Availability: available
-  Function flags:
-  Called by: 
-  Calls: 
-Ftm_Gpt_Ip_SetHalfCycleReloadPoint/30 (Ftm_Gpt_Ip_SetHalfCycleReloadPoint) @069d02a0
+Ftm_Gpt_Ip_SetHalfCycleReloadPoint/26 (Ftm_Gpt_Ip_SetHalfCycleReloadPoint) @069877e0
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder asm_written public section:.text.Ftm_Gpt_Ip_SetHalfCycleReloadPoint (implicit_section)
   References: 
@@ -1977,7 +1591,7 @@ Ftm_Gpt_Ip_SetHalfCycleReloadPoint/30 (Ftm_Gpt_Ip_SetHalfCycleReloadPoint) @069d
   Function flags:
   Called by: 
   Calls: 
-Ftm_Gpt_Ip_DisableChannelInterrupt/29 (Ftm_Gpt_Ip_DisableChannelInterrupt) @069d0000
+Ftm_Gpt_Ip_DisableChannelInterrupt/25 (Ftm_Gpt_Ip_DisableChannelInterrupt) @06987540
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder asm_written public section:.text.Ftm_Gpt_Ip_DisableChannelInterrupt (implicit_section)
   References: 
@@ -1986,7 +1600,7 @@ Ftm_Gpt_Ip_DisableChannelInterrupt/29 (Ftm_Gpt_Ip_DisableChannelInterrupt) @069d
   Function flags:
   Called by: 
   Calls: 
-Ftm_Gpt_Ip_EnableChannelInterrupt/28 (Ftm_Gpt_Ip_EnableChannelInterrupt) @06a84b60
+Ftm_Gpt_Ip_EnableChannelInterrupt/24 (Ftm_Gpt_Ip_EnableChannelInterrupt) @069872a0
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder asm_written public section:.text.Ftm_Gpt_Ip_EnableChannelInterrupt (implicit_section)
   References: 
@@ -1995,7 +1609,7 @@ Ftm_Gpt_Ip_EnableChannelInterrupt/28 (Ftm_Gpt_Ip_EnableChannelInterrupt) @06a84b
   Function flags:
   Called by: 
   Calls: 
-Ftm_Gpt_Ip_StopTimer/27 (Ftm_Gpt_Ip_StopTimer) @06a84620
+Ftm_Gpt_Ip_StopTimer/23 (Ftm_Gpt_Ip_StopTimer) @06987000
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder asm_written public section:.text.Ftm_Gpt_Ip_StopTimer (implicit_section)
   References: 
@@ -2004,7 +1618,7 @@ Ftm_Gpt_Ip_StopTimer/27 (Ftm_Gpt_Ip_StopTimer) @06a84620
   Function flags:
   Called by: 
   Calls: 
-Ftm_Gpt_Ip_StartTimer/26 (Ftm_Gpt_Ip_StartTimer) @06a840e0
+Ftm_Gpt_Ip_StartTimer/22 (Ftm_Gpt_Ip_StartTimer) @0697ec40
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder asm_written public section:.text.Ftm_Gpt_Ip_StartTimer (implicit_section)
   References: 
@@ -2013,7 +1627,7 @@ Ftm_Gpt_Ip_StartTimer/26 (Ftm_Gpt_Ip_StartTimer) @06a840e0
   Function flags:
   Called by: 
   Calls: 
-Ftm_Gpt_Ip_StartCounting/25 (Ftm_Gpt_Ip_StartCounting) @06a84d20
+Ftm_Gpt_Ip_StartCounting/21 (Ftm_Gpt_Ip_StartCounting) @0697e700
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder asm_written public section:.text.Ftm_Gpt_Ip_StartCounting (implicit_section)
   References: 
@@ -2022,7 +1636,7 @@ Ftm_Gpt_Ip_StartCounting/25 (Ftm_Gpt_Ip_StartCounting) @06a84d20
   Function flags:
   Called by: 
   Calls: 
-Ftm_Gpt_Ip_Deinit/24 (Ftm_Gpt_Ip_Deinit) @06a84a80
+Ftm_Gpt_Ip_Deinit/20 (Ftm_Gpt_Ip_Deinit) @0697ee00
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder asm_written public section:.text.Ftm_Gpt_Ip_Deinit (implicit_section)
   References: 
@@ -2031,7 +1645,7 @@ Ftm_Gpt_Ip_Deinit/24 (Ftm_Gpt_Ip_Deinit) @06a84a80
   Function flags:
   Called by: 
   Calls: 
-Ftm_Gpt_Ip_InitChannel/23 (Ftm_Gpt_Ip_InitChannel) @06a847e0
+Ftm_Gpt_Ip_InitChannel/19 (Ftm_Gpt_Ip_InitChannel) @0697eb60
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder asm_written public section:.text.Ftm_Gpt_Ip_InitChannel (implicit_section)
   References: 
@@ -2040,7 +1654,7 @@ Ftm_Gpt_Ip_InitChannel/23 (Ftm_Gpt_Ip_InitChannel) @06a847e0
   Function flags:
   Called by: 
   Calls: 
-Ftm_Gpt_Ip_Init/22 (Ftm_Gpt_Ip_Init) @06a84540
+Ftm_Gpt_Ip_Init/18 (Ftm_Gpt_Ip_Init) @0697e8c0
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder asm_written public section:.text.Ftm_Gpt_Ip_Init (implicit_section)
   References: 
@@ -2049,34 +1663,7 @@ Ftm_Gpt_Ip_Init/22 (Ftm_Gpt_Ip_Init) @06a84540
   Function flags:
   Called by: 
   Calls: 
-Ftm_Gpt_Ip_ProcessCommonInterrupt/21 (Ftm_Gpt_Ip_ProcessCommonInterrupt) @06a842a0
-  Type: function definition analyzed
-  Visibility: force_output no_reorder prevailing_def_ironly asm_written section:.text.Ftm_Gpt_Ip_ProcessCommonInterrupt (implicit_section)
-  References: 
-  Referring: 
-  Availability: available
-  Function flags:
-  Called by: 
-  Calls: 
-Ftm_Gpt_Ip_GetChannelEventStatus/20 (Ftm_Gpt_Ip_GetChannelEventStatus) @06a84000
-  Type: function definition analyzed
-  Visibility: no_reorder prevailing_def_ironly asm_written section:.text.Ftm_Gpt_Ip_GetChannelEventStatus (implicit_section)
-  References: 
-  Referring: 
-  Availability: local
-  Function flags: local
-  Called by: 
-  Calls: 
-Ftm_Gpt_Ip_GetChInterruptEnableFlag/19 (Ftm_Gpt_Ip_GetChInterruptEnableFlag) @068a8460
-  Type: function definition analyzed
-  Visibility: no_reorder prevailing_def_ironly asm_written section:.text.Ftm_Gpt_Ip_GetChInterruptEnableFlag (implicit_section)
-  References: 
-  Referring: 
-  Availability: local
-  Function flags: local
-  Called by: 
-  Calls: 
-Ftm_Gpt_Ip_SetHalfCycleValue/18 (Ftm_Gpt_Ip_SetHalfCycleValue) @068a8e00
+Ftm_Gpt_Ip_SetHalfCycleValue/17 (Ftm_Gpt_Ip_SetHalfCycleValue) @0697e620
   Type: function definition analyzed
   Visibility: no_reorder prevailing_def_ironly asm_written section:.text.Ftm_Gpt_Ip_SetHalfCycleValue (implicit_section)
   References: 
@@ -2085,7 +1672,7 @@ Ftm_Gpt_Ip_SetHalfCycleValue/18 (Ftm_Gpt_Ip_SetHalfCycleValue) @068a8e00
   Function flags: local
   Called by: 
   Calls: 
-Ftm_Gpt_Ip_ModeSelectA/17 (Ftm_Gpt_Ip_ModeSelectA) @068a8b60
+Ftm_Gpt_Ip_ModeSelectA/16 (Ftm_Gpt_Ip_ModeSelectA) @0697e380
   Type: function definition analyzed
   Visibility: no_reorder prevailing_def_ironly asm_written section:.text.Ftm_Gpt_Ip_ModeSelectA (implicit_section)
   References: 
@@ -2094,7 +1681,7 @@ Ftm_Gpt_Ip_ModeSelectA/17 (Ftm_Gpt_Ip_ModeSelectA) @068a8b60
   Function flags: local
   Called by: 
   Calls: 
-Ftm_Gpt_Ip_WriteModulo/16 (Ftm_Gpt_Ip_WriteModulo) @068a88c0
+Ftm_Gpt_Ip_WriteModulo/15 (Ftm_Gpt_Ip_WriteModulo) @0697e0e0
   Type: function definition analyzed
   Visibility: no_reorder prevailing_def_ironly asm_written section:.text.Ftm_Gpt_Ip_WriteModulo (implicit_section)
   References: 
@@ -2103,7 +1690,7 @@ Ftm_Gpt_Ip_WriteModulo/16 (Ftm_Gpt_Ip_WriteModulo) @068a88c0
   Function flags: local
   Called by: 
   Calls: 
-Ftm_Gpt_Ip_SetCompareValue/15 (Ftm_Gpt_Ip_SetCompareValue) @068a8620
+Ftm_Gpt_Ip_SetCompareValue/14 (Ftm_Gpt_Ip_SetCompareValue) @06977b60
   Type: function definition analyzed
   Visibility: no_reorder prevailing_def_ironly asm_written section:.text.Ftm_Gpt_Ip_SetCompareValue (implicit_section)
   References: 
@@ -2112,7 +1699,7 @@ Ftm_Gpt_Ip_SetCompareValue/15 (Ftm_Gpt_Ip_SetCompareValue) @068a8620
   Function flags: local
   Called by: 
   Calls: 
-Ftm_Gpt_Ip_SetEnFtmModule/14 (Ftm_Gpt_Ip_SetEnFtmModule) @068a8380
+Ftm_Gpt_Ip_SetEnFtmModule/13 (Ftm_Gpt_Ip_SetEnFtmModule) @06977540
   Type: function definition analyzed
   Visibility: no_reorder prevailing_def_ironly asm_written section:.text.Ftm_Gpt_Ip_SetEnFtmModule (implicit_section)
   References: 
@@ -2121,7 +1708,7 @@ Ftm_Gpt_Ip_SetEnFtmModule/14 (Ftm_Gpt_Ip_SetEnFtmModule) @068a8380
   Function flags: local
   Called by: 
   Calls: 
-Ftm_Gpt_Ip_SetPrescaler/13 (Ftm_Gpt_Ip_SetPrescaler) @068a8000
+Ftm_Gpt_Ip_SetPrescaler/12 (Ftm_Gpt_Ip_SetPrescaler) @06977e00
   Type: function definition analyzed
   Visibility: no_reorder prevailing_def_ironly asm_written section:.text.Ftm_Gpt_Ip_SetPrescaler (implicit_section)
   References: 
@@ -2130,7 +1717,7 @@ Ftm_Gpt_Ip_SetPrescaler/13 (Ftm_Gpt_Ip_SetPrescaler) @068a8000
   Function flags: local
   Called by: 
   Calls: 
-Ftm_Gpt_Ip_SetClockSource/12 (Ftm_Gpt_Ip_SetClockSource) @068a49a0
+Ftm_Gpt_Ip_SetClockSource/11 (Ftm_Gpt_Ip_SetClockSource) @06977a80
   Type: function definition analyzed
   Visibility: no_reorder prevailing_def_ironly asm_written section:.text.Ftm_Gpt_Ip_SetClockSource (implicit_section)
   References: 
@@ -2139,7 +1726,7 @@ Ftm_Gpt_Ip_SetClockSource/12 (Ftm_Gpt_Ip_SetClockSource) @068a49a0
   Function flags: local
   Called by: 
   Calls: 
-Ftm_Gpt_Ip_SetChannelEnableInterrupt/11 (Ftm_Gpt_Ip_SetChannelEnableInterrupt) @068a4e00
+Ftm_Gpt_Ip_SetChannelEnableInterrupt/10 (Ftm_Gpt_Ip_SetChannelEnableInterrupt) @06977700
   Type: function definition analyzed
   Visibility: no_reorder prevailing_def_ironly asm_written section:.text.Ftm_Gpt_Ip_SetChannelEnableInterrupt (implicit_section)
   References: 
@@ -2148,7 +1735,7 @@ Ftm_Gpt_Ip_SetChannelEnableInterrupt/11 (Ftm_Gpt_Ip_SetChannelEnableInterrupt) @
   Function flags: local
   Called by: 
   Calls: 
-Ftm_Gpt_Ip_ClearChInterruptStatusFlag/10 (Ftm_Gpt_Ip_ClearChInterruptStatusFlag) @068a4b60
+Ftm_Gpt_Ip_ClearChInterruptStatusFlag/9 (Ftm_Gpt_Ip_ClearChInterruptStatusFlag) @06977460
   Type: function definition analyzed
   Visibility: no_reorder prevailing_def_ironly asm_written section:.text.Ftm_Gpt_Ip_ClearChInterruptStatusFlag (implicit_section)
   References: 
@@ -2157,7 +1744,7 @@ Ftm_Gpt_Ip_ClearChInterruptStatusFlag/10 (Ftm_Gpt_Ip_ClearChInterruptStatusFlag)
   Function flags: local
   Called by: 
   Calls: 
-Ftm_Gpt_Ip_SetCounter/9 (Ftm_Gpt_Ip_SetCounter) @068a48c0
+Ftm_Gpt_Ip_SetCounter/8 (Ftm_Gpt_Ip_SetCounter) @069771c0
   Type: function definition analyzed
   Visibility: no_reorder prevailing_def_ironly asm_written section:.text.Ftm_Gpt_Ip_SetCounter (implicit_section)
   References: 
@@ -2166,7 +1753,7 @@ Ftm_Gpt_Ip_SetCounter/9 (Ftm_Gpt_Ip_SetCounter) @068a48c0
   Function flags: local
   Called by: 
   Calls: 
-Ftm_Gpt_Ip_SetCounterInitVal/8 (Ftm_Gpt_Ip_SetCounterInitVal) @068a4620
+Ftm_Gpt_Ip_SetCounterInitVal/7 (Ftm_Gpt_Ip_SetCounterInitVal) @06972a80
   Type: function definition analyzed
   Visibility: no_reorder prevailing_def_ironly asm_written section:.text.Ftm_Gpt_Ip_SetCounterInitVal (implicit_section)
   References: 
@@ -2175,7 +1762,7 @@ Ftm_Gpt_Ip_SetCounterInitVal/8 (Ftm_Gpt_Ip_SetCounterInitVal) @068a4620
   Function flags: local
   Called by: 
   Calls: 
-Ftm_Gpt_Ip_SetFreezeBits/7 (Ftm_Gpt_Ip_SetFreezeBits) @068a4380
+Ftm_Gpt_Ip_SetFreezeBits/6 (Ftm_Gpt_Ip_SetFreezeBits) @06972d20
   Type: function definition analyzed
   Visibility: no_reorder prevailing_def_ironly asm_written section:.text.Ftm_Gpt_Ip_SetFreezeBits (implicit_section)
   References: 
@@ -2184,59 +1771,33 @@ Ftm_Gpt_Ip_SetFreezeBits/7 (Ftm_Gpt_Ip_SetFreezeBits) @068a4380
   Function flags: local
   Called by: 
   Calls: 
-Ftm_Gpt_Ip_u32ChState/6 (Ftm_Gpt_Ip_u32ChState) @0689dbd0
+Ftm_Gpt_Ip_u32InstanceState/5 (Ftm_Gpt_Ip_u32InstanceState) @06970120
   Type: variable definition analyzed
-  Visibility: force_output no_reorder prevailing_def_ironly asm_written section:.bss.Ftm_Gpt_Ip_u32ChState (implicit_section)
+  Visibility: force_output no_reorder prevailing_def_ironly asm_written section:.bss.Ftm_Gpt_Ip_u32InstanceState (implicit_section)
   Aux: @00000001
   References: 
   Referring: 
   Availability: available
   Varpool flags: initialized
-Ftm_Gpt_Ip_u32InstanceState/5 (Ftm_Gpt_Ip_u32InstanceState) @0689d1f8
-  Type: variable definition analyzed
-  Visibility: force_output no_reorder prevailing_def_ironly asm_written section:.bss.Ftm_Gpt_Ip_u32InstanceState (implicit_section)
-  Aux: @0689dbd0
-  References: 
-  Referring: 
-  Availability: available
-  Varpool flags: initialized
-ftmGptBase/4 (ftmGptBase) @0689d168
+ftmGptBase/4 (ftmGptBase) @06970090
   Type: variable definition analyzed
   Visibility: force_output externally_visible no_reorder asm_written public section:.rodata.ftmGptBase (implicit_section)
-  Aux: @0689d1f8
+  Aux: @06970120
   References: 
   Referring: 
   Availability: available
   Varpool flags: initialized read-only const-value-known
-Ftm_Gpt_Ip_u32TargetValue/3 (Ftm_Gpt_Ip_u32TargetValue) @0689d0d8
+Ftm_Gpt_Ip_u32TargetValue/3 (Ftm_Gpt_Ip_u32TargetValue) @06970000
   Type: variable definition analyzed
   Visibility: force_output externally_visible no_reorder asm_written public section:.bss.Ftm_Gpt_Ip_u32TargetValue (implicit_section)
-  Aux: @0689d168
+  Aux: @06970090
   References: 
   Referring: 
   Availability: available
   Varpool flags:
-Ftm_Gpt_Ip_GetCompareValue/2 (Ftm_Gpt_Ip_GetCompareValue) @068871c0
-  Type: function definition analyzed
-  Visibility: no_reorder prevailing_def_ironly asm_written section:.text.Ftm_Gpt_Ip_GetCompareValue (implicit_section)
-  References: 
-  Referring: 
-  Availability: local
-  Function flags: local
-  Called by: 
-  Calls: 
-Ftm_Gpt_Ip_GetCntValue/1 (Ftm_Gpt_Ip_GetCntValue) @06883b60
+Ftm_Gpt_Ip_GetCntValue/1 (Ftm_Gpt_Ip_GetCntValue) @06955b60
   Type: function definition analyzed
   Visibility: no_reorder prevailing_def_ironly asm_written section:.text.Ftm_Gpt_Ip_GetCntValue (implicit_section)
-  References: 
-  Referring: 
-  Availability: local
-  Function flags: local
-  Called by: 
-  Calls: 
-Ftm_Gpt_Ip_GetChInterruptStatusFlag/0 (Ftm_Gpt_Ip_GetChInterruptStatusFlag) @06883e00
-  Type: function definition analyzed
-  Visibility: no_reorder prevailing_def_ironly asm_written section:.text.Ftm_Gpt_Ip_GetChInterruptStatusFlag (implicit_section)
   References: 
   Referring: 
   Availability: local

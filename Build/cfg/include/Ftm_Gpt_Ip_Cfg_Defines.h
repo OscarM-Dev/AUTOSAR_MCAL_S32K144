@@ -101,21 +101,7 @@ extern "C"{
 */
 
     /* Channel per instance*/
-                                                                                                                                                        /* Generate ISR when check in GptHwConfiguration*/
-        
-#define FTM_0_CH_0_CH_1_ISR_USED
-
-#ifndef FTM_0_CH_0_USED
-    #define FTM_0_CH_0_USED
-#else
-    #error "FTM_0_CH_0 cannot be used by GPT. Instance locked by another driver!"
-#endif
-
-#ifndef FTM_0_CH_1_USED
-    #define FTM_0_CH_1_USED
-#else
-    #error "FTM_0_CH_1 cannot be used by GPT. Instance locked by another driver!"
-#endif
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    /* Generate ISR when check in GptHwConfiguration*/
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             /* Generate ISR when check in GptHwConfiguration*/
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             /* Generate ISR when check in GptHwConfiguration*/
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             /* Generate ISR when check in GptHwConfiguration*/

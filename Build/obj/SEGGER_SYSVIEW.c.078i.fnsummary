@@ -1,6 +1,6 @@
 Symbol table:
 
-__builtin_va_end/105 (__builtin_va_end) @06ac8b60
+__builtin_va_end/105 (__builtin_va_end) @06adab60
   Type: function
   Visibility: external public
   References: 
@@ -9,7 +9,7 @@ __builtin_va_end/105 (__builtin_va_end) @06ac8b60
   Function flags:
   Called by: SEGGER_SYSVIEW_ErrorfTarget/90 SEGGER_SYSVIEW_WarnfTarget/88 SEGGER_SYSVIEW_PrintfTarget/86 SEGGER_SYSVIEW_PrintfTargetEx/84 SEGGER_SYSVIEW_ErrorfHost/82 SEGGER_SYSVIEW_WarnfHost/80 SEGGER_SYSVIEW_PrintfHost/78 SEGGER_SYSVIEW_PrintfHostEx/76 
   Calls: 
-__builtin_va_start/104 (__builtin_va_start) @06ac8a80
+__builtin_va_start/104 (__builtin_va_start) @06adaa80
   Type: function
   Visibility: external public
   References: 
@@ -18,7 +18,7 @@ __builtin_va_start/104 (__builtin_va_start) @06ac8a80
   Function flags:
   Called by: SEGGER_SYSVIEW_ErrorfTarget/90 SEGGER_SYSVIEW_WarnfTarget/88 SEGGER_SYSVIEW_PrintfTarget/86 SEGGER_SYSVIEW_PrintfTargetEx/84 SEGGER_SYSVIEW_ErrorfHost/82 SEGGER_SYSVIEW_WarnfHost/80 SEGGER_SYSVIEW_PrintfHost/78 SEGGER_SYSVIEW_PrintfHostEx/76 
   Calls: 
-SEGGER_RTT_ConfigDownBuffer/103 (SEGGER_RTT_ConfigDownBuffer) @06a5f0e0
+SEGGER_RTT_ConfigDownBuffer/103 (SEGGER_RTT_ConfigDownBuffer) @06a710e0
   Type: function
   Visibility: external public
   References: 
@@ -27,7 +27,7 @@ SEGGER_RTT_ConfigDownBuffer/103 (SEGGER_RTT_ConfigDownBuffer) @06a5f0e0
   Function flags:
   Called by: SEGGER_SYSVIEW_Init/20 
   Calls: 
-SEGGER_RTT_AllocUpBuffer/102 (SEGGER_RTT_AllocUpBuffer) @06a05700
+SEGGER_RTT_AllocUpBuffer/102 (SEGGER_RTT_AllocUpBuffer) @06a17700
   Type: function
   Visibility: external public
   References: 
@@ -36,14 +36,14 @@ SEGGER_RTT_AllocUpBuffer/102 (SEGGER_RTT_AllocUpBuffer) @06a05700
   Function flags:
   Called by: SEGGER_SYSVIEW_Init/20 
   Calls: 
-_aV2C.0/101 (_aV2C) @06a2b900
+_aV2C.0/101 (_aV2C) @06a3d900
   Type: variable definition analyzed
   Visibility: force_output no_reorder prevailing_def_ironly
   References: 
   Referring: _PrintUnsigned/17 (read) 
   Availability: available
   Varpool flags: initialized read-only const-value-known
-_SEGGER_RTT/100 (_SEGGER_RTT) @06a09f78
+_SEGGER_RTT/100 (_SEGGER_RTT) @06a1bf78
   Type: variable
   Body removed by symtab_remove_unreachable_nodes
   Visibility: external public
@@ -51,7 +51,7 @@ _SEGGER_RTT/100 (_SEGGER_RTT) @06a09f78
   Referring: _SendPacket/14 (read) _SendPacket/14 (read) SEGGER_SYSVIEW_IsStarted/97 (read) SEGGER_SYSVIEW_IsStarted/97 (read) 
   Availability: not_available
   Varpool flags:
-SEGGER_RTT_ASM_WriteSkipNoLock/99 (SEGGER_RTT_ASM_WriteSkipNoLock) @06a052a0
+SEGGER_RTT_ASM_WriteSkipNoLock/99 (SEGGER_RTT_ASM_WriteSkipNoLock) @06a172a0
   Type: function
   Visibility: external public
   References: 
@@ -60,7 +60,7 @@ SEGGER_RTT_ASM_WriteSkipNoLock/99 (SEGGER_RTT_ASM_WriteSkipNoLock) @06a052a0
   Function flags:
   Called by: SEGGER_SYSVIEW_Start/34 _SendPacket/14 _TrySendOverflowPacket/13 
   Calls: 
-SEGGER_RTT_ReadNoLock/98 (SEGGER_RTT_ReadNoLock) @06a050e0
+SEGGER_RTT_ReadNoLock/98 (SEGGER_RTT_ReadNoLock) @06a170e0
   Type: function
   Visibility: external public
   References: 
@@ -69,7 +69,7 @@ SEGGER_RTT_ReadNoLock/98 (SEGGER_RTT_ReadNoLock) @06a050e0
   Function flags:
   Called by: _HandleIncomingPacket/12 _HandleIncomingPacket/12 _HandleIncomingPacket/12 
   Calls: 
-SEGGER_SYSVIEW_IsStarted/97 (SEGGER_SYSVIEW_IsStarted) @069f6e00
+SEGGER_SYSVIEW_IsStarted/97 (SEGGER_SYSVIEW_IsStarted) @06a08e00
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: _SYSVIEW_Globals/5 (read) _SEGGER_RTT/100 (read) _SYSVIEW_Globals/5 (read) _SEGGER_RTT/100 (read) _SYSVIEW_Globals/5 (read) _SYSVIEW_Globals/5 (write) _SYSVIEW_Globals/5 (write) _SYSVIEW_Globals/5 (read) 
@@ -78,7 +78,7 @@ SEGGER_SYSVIEW_IsStarted/97 (SEGGER_SYSVIEW_IsStarted) @069f6e00
   Function flags: body
   Called by: 
   Calls: _HandleIncomingPacket/12 
-SEGGER_SYSVIEW_DisableEvents/96 (SEGGER_SYSVIEW_DisableEvents) @069f6b60
+SEGGER_SYSVIEW_DisableEvents/96 (SEGGER_SYSVIEW_DisableEvents) @06a08b60
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: _SYSVIEW_Globals/5 (read) _SYSVIEW_Globals/5 (write) 
@@ -87,7 +87,7 @@ SEGGER_SYSVIEW_DisableEvents/96 (SEGGER_SYSVIEW_DisableEvents) @069f6b60
   Function flags: body
   Called by: 
   Calls: 
-SEGGER_SYSVIEW_EnableEvents/95 (SEGGER_SYSVIEW_EnableEvents) @069f68c0
+SEGGER_SYSVIEW_EnableEvents/95 (SEGGER_SYSVIEW_EnableEvents) @06a088c0
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: _SYSVIEW_Globals/5 (read) _SYSVIEW_Globals/5 (write) 
@@ -96,7 +96,7 @@ SEGGER_SYSVIEW_EnableEvents/95 (SEGGER_SYSVIEW_EnableEvents) @069f68c0
   Function flags: body
   Called by: 
   Calls: 
-SEGGER_SYSVIEW_Error/94 (SEGGER_SYSVIEW_Error) @069f6620
+SEGGER_SYSVIEW_Error/94 (SEGGER_SYSVIEW_Error) @06a08620
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: _aPacket/8 (addr) 
@@ -105,7 +105,7 @@ SEGGER_SYSVIEW_Error/94 (SEGGER_SYSVIEW_Error) @069f6620
   Function flags: body
   Called by: 
   Calls: _SendPacket/14 _EncodeStr/10 _PreparePacket/11 
-SEGGER_SYSVIEW_Warn/93 (SEGGER_SYSVIEW_Warn) @069f62a0
+SEGGER_SYSVIEW_Warn/93 (SEGGER_SYSVIEW_Warn) @06a082a0
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: _aPacket/8 (addr) 
@@ -114,7 +114,7 @@ SEGGER_SYSVIEW_Warn/93 (SEGGER_SYSVIEW_Warn) @069f62a0
   Function flags: body
   Called by: 
   Calls: _SendPacket/14 _EncodeStr/10 _PreparePacket/11 
-SEGGER_SYSVIEW_Print/92 (SEGGER_SYSVIEW_Print) @069f2e00
+SEGGER_SYSVIEW_Print/92 (SEGGER_SYSVIEW_Print) @06a04e00
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: _aPacket/8 (addr) 
@@ -123,7 +123,7 @@ SEGGER_SYSVIEW_Print/92 (SEGGER_SYSVIEW_Print) @069f2e00
   Function flags: body
   Called by: 
   Calls: _SendPacket/14 _EncodeStr/10 _PreparePacket/11 
-SEGGER_SYSVIEW_VErrorfTarget/91 (SEGGER_SYSVIEW_VErrorfTarget) @069f2620
+SEGGER_SYSVIEW_VErrorfTarget/91 (SEGGER_SYSVIEW_VErrorfTarget) @06a04620
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: 
@@ -132,7 +132,7 @@ SEGGER_SYSVIEW_VErrorfTarget/91 (SEGGER_SYSVIEW_VErrorfTarget) @069f2620
   Function flags: body
   Called by: 
   Calls: _VPrintTarget/19 
-SEGGER_SYSVIEW_ErrorfTarget/90 (SEGGER_SYSVIEW_ErrorfTarget) @069f20e0
+SEGGER_SYSVIEW_ErrorfTarget/90 (SEGGER_SYSVIEW_ErrorfTarget) @06a040e0
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: 
@@ -141,7 +141,7 @@ SEGGER_SYSVIEW_ErrorfTarget/90 (SEGGER_SYSVIEW_ErrorfTarget) @069f20e0
   Function flags: body
   Called by: 
   Calls: __builtin_va_end/105 _VPrintTarget/19 __builtin_va_start/104 
-SEGGER_SYSVIEW_VWarnfTarget/89 (SEGGER_SYSVIEW_VWarnfTarget) @069f2d20
+SEGGER_SYSVIEW_VWarnfTarget/89 (SEGGER_SYSVIEW_VWarnfTarget) @06a04d20
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: 
@@ -150,7 +150,7 @@ SEGGER_SYSVIEW_VWarnfTarget/89 (SEGGER_SYSVIEW_VWarnfTarget) @069f2d20
   Function flags: body
   Called by: 
   Calls: _VPrintTarget/19 
-SEGGER_SYSVIEW_WarnfTarget/88 (SEGGER_SYSVIEW_WarnfTarget) @069f2a80
+SEGGER_SYSVIEW_WarnfTarget/88 (SEGGER_SYSVIEW_WarnfTarget) @06a04a80
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: 
@@ -159,7 +159,7 @@ SEGGER_SYSVIEW_WarnfTarget/88 (SEGGER_SYSVIEW_WarnfTarget) @069f2a80
   Function flags: body
   Called by: 
   Calls: __builtin_va_end/105 _VPrintTarget/19 __builtin_va_start/104 
-SEGGER_SYSVIEW_VPrintfTarget/87 (SEGGER_SYSVIEW_VPrintfTarget) @069f27e0
+SEGGER_SYSVIEW_VPrintfTarget/87 (SEGGER_SYSVIEW_VPrintfTarget) @06a047e0
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: 
@@ -168,7 +168,7 @@ SEGGER_SYSVIEW_VPrintfTarget/87 (SEGGER_SYSVIEW_VPrintfTarget) @069f27e0
   Function flags: body
   Called by: 
   Calls: _VPrintTarget/19 
-SEGGER_SYSVIEW_PrintfTarget/86 (SEGGER_SYSVIEW_PrintfTarget) @069f2540
+SEGGER_SYSVIEW_PrintfTarget/86 (SEGGER_SYSVIEW_PrintfTarget) @06a04540
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: 
@@ -177,7 +177,7 @@ SEGGER_SYSVIEW_PrintfTarget/86 (SEGGER_SYSVIEW_PrintfTarget) @069f2540
   Function flags: body
   Called by: 
   Calls: __builtin_va_end/105 _VPrintTarget/19 __builtin_va_start/104 
-SEGGER_SYSVIEW_VPrintfTargetEx/85 (SEGGER_SYSVIEW_VPrintfTargetEx) @069f22a0
+SEGGER_SYSVIEW_VPrintfTargetEx/85 (SEGGER_SYSVIEW_VPrintfTargetEx) @06a042a0
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: 
@@ -186,7 +186,7 @@ SEGGER_SYSVIEW_VPrintfTargetEx/85 (SEGGER_SYSVIEW_VPrintfTargetEx) @069f22a0
   Function flags: body
   Called by: 
   Calls: _VPrintTarget/19 
-SEGGER_SYSVIEW_PrintfTargetEx/84 (SEGGER_SYSVIEW_PrintfTargetEx) @069f2000
+SEGGER_SYSVIEW_PrintfTargetEx/84 (SEGGER_SYSVIEW_PrintfTargetEx) @06a04000
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: 
@@ -195,7 +195,7 @@ SEGGER_SYSVIEW_PrintfTargetEx/84 (SEGGER_SYSVIEW_PrintfTargetEx) @069f2000
   Function flags: body
   Called by: 
   Calls: __builtin_va_end/105 _VPrintTarget/19 __builtin_va_start/104 
-SEGGER_SYSVIEW_VErrorfHost/83 (SEGGER_SYSVIEW_VErrorfHost) @069eab60
+SEGGER_SYSVIEW_VErrorfHost/83 (SEGGER_SYSVIEW_VErrorfHost) @069fcb60
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: 
@@ -204,7 +204,7 @@ SEGGER_SYSVIEW_VErrorfHost/83 (SEGGER_SYSVIEW_VErrorfHost) @069eab60
   Function flags: body
   Called by: 
   Calls: _VPrintHost/15 
-SEGGER_SYSVIEW_ErrorfHost/82 (SEGGER_SYSVIEW_ErrorfHost) @069ea620
+SEGGER_SYSVIEW_ErrorfHost/82 (SEGGER_SYSVIEW_ErrorfHost) @069fc620
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: 
@@ -213,7 +213,7 @@ SEGGER_SYSVIEW_ErrorfHost/82 (SEGGER_SYSVIEW_ErrorfHost) @069ea620
   Function flags: body
   Called by: 
   Calls: __builtin_va_end/105 _VPrintHost/15 __builtin_va_start/104 
-SEGGER_SYSVIEW_VWarnfHost/81 (SEGGER_SYSVIEW_VWarnfHost) @069ea0e0
+SEGGER_SYSVIEW_VWarnfHost/81 (SEGGER_SYSVIEW_VWarnfHost) @069fc0e0
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: 
@@ -222,7 +222,7 @@ SEGGER_SYSVIEW_VWarnfHost/81 (SEGGER_SYSVIEW_VWarnfHost) @069ea0e0
   Function flags: body
   Called by: 
   Calls: _VPrintHost/15 
-SEGGER_SYSVIEW_WarnfHost/80 (SEGGER_SYSVIEW_WarnfHost) @069ead20
+SEGGER_SYSVIEW_WarnfHost/80 (SEGGER_SYSVIEW_WarnfHost) @069fcd20
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: 
@@ -231,7 +231,7 @@ SEGGER_SYSVIEW_WarnfHost/80 (SEGGER_SYSVIEW_WarnfHost) @069ead20
   Function flags: body
   Called by: 
   Calls: __builtin_va_end/105 _VPrintHost/15 __builtin_va_start/104 
-SEGGER_SYSVIEW_VPrintfHost/79 (SEGGER_SYSVIEW_VPrintfHost) @069eaa80
+SEGGER_SYSVIEW_VPrintfHost/79 (SEGGER_SYSVIEW_VPrintfHost) @069fca80
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: 
@@ -240,7 +240,7 @@ SEGGER_SYSVIEW_VPrintfHost/79 (SEGGER_SYSVIEW_VPrintfHost) @069eaa80
   Function flags: body
   Called by: 
   Calls: _VPrintHost/15 
-SEGGER_SYSVIEW_PrintfHost/78 (SEGGER_SYSVIEW_PrintfHost) @069ea7e0
+SEGGER_SYSVIEW_PrintfHost/78 (SEGGER_SYSVIEW_PrintfHost) @069fc7e0
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: 
@@ -249,7 +249,7 @@ SEGGER_SYSVIEW_PrintfHost/78 (SEGGER_SYSVIEW_PrintfHost) @069ea7e0
   Function flags: body
   Called by: 
   Calls: __builtin_va_end/105 _VPrintHost/15 __builtin_va_start/104 
-SEGGER_SYSVIEW_VPrintfHostEx/77 (SEGGER_SYSVIEW_VPrintfHostEx) @069ea540
+SEGGER_SYSVIEW_VPrintfHostEx/77 (SEGGER_SYSVIEW_VPrintfHostEx) @069fc540
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: 
@@ -258,7 +258,7 @@ SEGGER_SYSVIEW_VPrintfHostEx/77 (SEGGER_SYSVIEW_VPrintfHostEx) @069ea540
   Function flags: body
   Called by: 
   Calls: _VPrintHost/15 
-SEGGER_SYSVIEW_PrintfHostEx/76 (SEGGER_SYSVIEW_PrintfHostEx) @069ea2a0
+SEGGER_SYSVIEW_PrintfHostEx/76 (SEGGER_SYSVIEW_PrintfHostEx) @069fc2a0
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: 
@@ -267,7 +267,7 @@ SEGGER_SYSVIEW_PrintfHostEx/76 (SEGGER_SYSVIEW_PrintfHostEx) @069ea2a0
   Function flags: body
   Called by: 
   Calls: __builtin_va_end/105 _VPrintHost/15 __builtin_va_start/104 
-SEGGER_SYSVIEW_SendNumModules/75 (SEGGER_SYSVIEW_SendNumModules) @069ea000
+SEGGER_SYSVIEW_SendNumModules/75 (SEGGER_SYSVIEW_SendNumModules) @069fc000
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: _aPacket/8 (addr) _NumModules/7 (read) 
@@ -276,7 +276,7 @@ SEGGER_SYSVIEW_SendNumModules/75 (SEGGER_SYSVIEW_SendNumModules) @069ea000
   Function flags: body
   Called by: SEGGER_SYSVIEW_Start/34 _HandleIncomingPacket/12 
   Calls: _SendPacket/14 _PreparePacket/11 
-SEGGER_SYSVIEW_SendModuleDescription/74 (SEGGER_SYSVIEW_SendModuleDescription) @069e1620
+SEGGER_SYSVIEW_SendModuleDescription/74 (SEGGER_SYSVIEW_SendModuleDescription) @069f3620
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: _pFirstModule/6 (read) _pFirstModule/6 (read) 
@@ -286,7 +286,7 @@ SEGGER_SYSVIEW_SendModuleDescription/74 (SEGGER_SYSVIEW_SendModuleDescription) @
   Called by: _HandleIncomingPacket/12 
   Calls: 
    Indirect call Num speculative call targets: 0
-SEGGER_SYSVIEW_SendModule/73 (SEGGER_SYSVIEW_SendModule) @069e10e0
+SEGGER_SYSVIEW_SendModule/73 (SEGGER_SYSVIEW_SendModule) @069f30e0
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: _pFirstModule/6 (read) _pFirstModule/6 (read) _aPacket/8 (addr) 
@@ -296,7 +296,7 @@ SEGGER_SYSVIEW_SendModule/73 (SEGGER_SYSVIEW_SendModule) @069e10e0
   Called by: SEGGER_SYSVIEW_RegisterModule/71 _HandleIncomingPacket/12 
   Calls: _SendPacket/14 _EncodeStr/10 _PreparePacket/11 
    Indirect call Num speculative call targets: 0
-SEGGER_SYSVIEW_RecordModuleDescription/72 (SEGGER_SYSVIEW_RecordModuleDescription) @069e1c40
+SEGGER_SYSVIEW_RecordModuleDescription/72 (SEGGER_SYSVIEW_RecordModuleDescription) @069f3c40
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: _pFirstModule/6 (read) _aPacket/8 (addr) 
@@ -305,7 +305,7 @@ SEGGER_SYSVIEW_RecordModuleDescription/72 (SEGGER_SYSVIEW_RecordModuleDescriptio
   Function flags: body
   Called by: 
   Calls: _SendPacket/14 _EncodeStr/10 _PreparePacket/11 
-SEGGER_SYSVIEW_RegisterModule/71 (SEGGER_SYSVIEW_RegisterModule) @069e18c0
+SEGGER_SYSVIEW_RegisterModule/71 (SEGGER_SYSVIEW_RegisterModule) @069f38c0
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: _pFirstModule/6 (read) _pFirstModule/6 (write) _NumModules/7 (write) _pFirstModule/6 (read) _pFirstModule/6 (read) _pFirstModule/6 (read) _pFirstModule/6 (write) _NumModules/7 (read) _NumModules/7 (write) 
@@ -314,7 +314,7 @@ SEGGER_SYSVIEW_RegisterModule/71 (SEGGER_SYSVIEW_RegisterModule) @069e18c0
   Function flags: body
   Called by: 
   Calls: SEGGER_SYSVIEW_SendModule/73 
-SEGGER_SYSVIEW_ShrinkId/70 (SEGGER_SYSVIEW_ShrinkId) @069e1540
+SEGGER_SYSVIEW_ShrinkId/70 (SEGGER_SYSVIEW_ShrinkId) @069f3540
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: _SYSVIEW_Globals/5 (read) 
@@ -323,7 +323,7 @@ SEGGER_SYSVIEW_ShrinkId/70 (SEGGER_SYSVIEW_ShrinkId) @069e1540
   Function flags: body
   Called by: 
   Calls: 
-SEGGER_SYSVIEW_EncodeId/69 (SEGGER_SYSVIEW_EncodeId) @069e12a0
+SEGGER_SYSVIEW_EncodeId/69 (SEGGER_SYSVIEW_EncodeId) @069f32a0
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: _SYSVIEW_Globals/5 (read) 
@@ -332,7 +332,7 @@ SEGGER_SYSVIEW_EncodeId/69 (SEGGER_SYSVIEW_EncodeId) @069e12a0
   Function flags: body
   Called by: 
   Calls: 
-SEGGER_SYSVIEW_EncodeData/68 (SEGGER_SYSVIEW_EncodeData) @069e1000
+SEGGER_SYSVIEW_EncodeData/68 (SEGGER_SYSVIEW_EncodeData) @069f3000
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: 
@@ -341,7 +341,7 @@ SEGGER_SYSVIEW_EncodeData/68 (SEGGER_SYSVIEW_EncodeData) @069e1000
   Function flags: body
   Called by: 
   Calls: _EncodeData/9 
-SEGGER_SYSVIEW_EncodeString/67 (SEGGER_SYSVIEW_EncodeString) @069d5a80
+SEGGER_SYSVIEW_EncodeString/67 (SEGGER_SYSVIEW_EncodeString) @069dfa80
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: 
@@ -350,7 +350,7 @@ SEGGER_SYSVIEW_EncodeString/67 (SEGGER_SYSVIEW_EncodeString) @069d5a80
   Function flags: body
   Called by: 
   Calls: _EncodeStr/10 
-SEGGER_SYSVIEW_EncodeU32/66 (SEGGER_SYSVIEW_EncodeU32) @069d5000
+SEGGER_SYSVIEW_EncodeU32/66 (SEGGER_SYSVIEW_EncodeU32) @069df000
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: 
@@ -359,7 +359,7 @@ SEGGER_SYSVIEW_EncodeU32/66 (SEGGER_SYSVIEW_EncodeU32) @069d5000
   Function flags: body
   Called by: 
   Calls: 
-SEGGER_SYSVIEW_SendPacket/65 (SEGGER_SYSVIEW_SendPacket) @069d5d20
+SEGGER_SYSVIEW_SendPacket/65 (SEGGER_SYSVIEW_SendPacket) @069dfd20
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: 
@@ -368,7 +368,7 @@ SEGGER_SYSVIEW_SendPacket/65 (SEGGER_SYSVIEW_SendPacket) @069d5d20
   Function flags: body
   Called by: 
   Calls: _SendPacket/14 
-SEGGER_SYSVIEW_HeapFree/64 (SEGGER_SYSVIEW_HeapFree) @069d59a0
+SEGGER_SYSVIEW_HeapFree/64 (SEGGER_SYSVIEW_HeapFree) @069df9a0
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: _aPacket/8 (addr) _SYSVIEW_Globals/5 (read) _SYSVIEW_Globals/5 (read) 
@@ -377,7 +377,7 @@ SEGGER_SYSVIEW_HeapFree/64 (SEGGER_SYSVIEW_HeapFree) @069d59a0
   Function flags: body
   Called by: 
   Calls: _SendPacket/14 _PreparePacket/11 
-SEGGER_SYSVIEW_HeapAllocEx/63 (SEGGER_SYSVIEW_HeapAllocEx) @069d5460
+SEGGER_SYSVIEW_HeapAllocEx/63 (SEGGER_SYSVIEW_HeapAllocEx) @069df460
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: _aPacket/8 (addr) _SYSVIEW_Globals/5 (read) _SYSVIEW_Globals/5 (read) 
@@ -386,7 +386,7 @@ SEGGER_SYSVIEW_HeapAllocEx/63 (SEGGER_SYSVIEW_HeapAllocEx) @069d5460
   Function flags: body
   Called by: 
   Calls: _SendPacket/14 _PreparePacket/11 
-SEGGER_SYSVIEW_HeapAlloc/62 (SEGGER_SYSVIEW_HeapAlloc) @06993e00
+SEGGER_SYSVIEW_HeapAlloc/62 (SEGGER_SYSVIEW_HeapAlloc) @0699de00
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: _aPacket/8 (addr) _SYSVIEW_Globals/5 (read) _SYSVIEW_Globals/5 (read) 
@@ -395,7 +395,7 @@ SEGGER_SYSVIEW_HeapAlloc/62 (SEGGER_SYSVIEW_HeapAlloc) @06993e00
   Function flags: body
   Called by: 
   Calls: _SendPacket/14 _PreparePacket/11 
-SEGGER_SYSVIEW_HeapDefine/61 (SEGGER_SYSVIEW_HeapDefine) @06993d20
+SEGGER_SYSVIEW_HeapDefine/61 (SEGGER_SYSVIEW_HeapDefine) @0699dd20
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: _aPacket/8 (addr) _SYSVIEW_Globals/5 (read) _SYSVIEW_Globals/5 (read) 
@@ -404,7 +404,7 @@ SEGGER_SYSVIEW_HeapDefine/61 (SEGGER_SYSVIEW_HeapDefine) @06993d20
   Function flags: body
   Called by: 
   Calls: _SendPacket/14 _PreparePacket/11 
-SEGGER_SYSVIEW_NameResource/60 (SEGGER_SYSVIEW_NameResource) @069937e0
+SEGGER_SYSVIEW_NameResource/60 (SEGGER_SYSVIEW_NameResource) @0699d7e0
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: _aPacket/8 (addr) _SYSVIEW_Globals/5 (read) 
@@ -413,7 +413,7 @@ SEGGER_SYSVIEW_NameResource/60 (SEGGER_SYSVIEW_NameResource) @069937e0
   Function flags: body
   Called by: 
   Calls: _SendPacket/14 _EncodeStr/10 _PreparePacket/11 
-SEGGER_SYSVIEW_NameMarker/59 (SEGGER_SYSVIEW_NameMarker) @06993460
+SEGGER_SYSVIEW_NameMarker/59 (SEGGER_SYSVIEW_NameMarker) @0699d460
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: _aPacket/8 (addr) 
@@ -422,7 +422,7 @@ SEGGER_SYSVIEW_NameMarker/59 (SEGGER_SYSVIEW_NameMarker) @06993460
   Function flags: body
   Called by: 
   Calls: _SendPacket/14 _EncodeStr/10 _PreparePacket/11 
-SEGGER_SYSVIEW_Mark/58 (SEGGER_SYSVIEW_Mark) @069930e0
+SEGGER_SYSVIEW_Mark/58 (SEGGER_SYSVIEW_Mark) @0699d0e0
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: _aPacket/8 (addr) 
@@ -431,7 +431,7 @@ SEGGER_SYSVIEW_Mark/58 (SEGGER_SYSVIEW_Mark) @069930e0
   Function flags: body
   Called by: 
   Calls: _SendPacket/14 _PreparePacket/11 
-SEGGER_SYSVIEW_MarkStop/57 (SEGGER_SYSVIEW_MarkStop) @069878c0
+SEGGER_SYSVIEW_MarkStop/57 (SEGGER_SYSVIEW_MarkStop) @069918c0
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: _aPacket/8 (addr) 
@@ -440,7 +440,7 @@ SEGGER_SYSVIEW_MarkStop/57 (SEGGER_SYSVIEW_MarkStop) @069878c0
   Function flags: body
   Called by: 
   Calls: _SendPacket/14 _PreparePacket/11 
-SEGGER_SYSVIEW_MarkStart/56 (SEGGER_SYSVIEW_MarkStart) @06987ee0
+SEGGER_SYSVIEW_MarkStart/56 (SEGGER_SYSVIEW_MarkStart) @06991ee0
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: _aPacket/8 (addr) 
@@ -449,7 +449,7 @@ SEGGER_SYSVIEW_MarkStart/56 (SEGGER_SYSVIEW_MarkStart) @06987ee0
   Function flags: body
   Called by: 
   Calls: _SendPacket/14 _PreparePacket/11 
-SEGGER_SYSVIEW_OnTaskStopReady/55 (SEGGER_SYSVIEW_OnTaskStopReady) @06987b60
+SEGGER_SYSVIEW_OnTaskStopReady/55 (SEGGER_SYSVIEW_OnTaskStopReady) @06991b60
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: _aPacket/8 (addr) _SYSVIEW_Globals/5 (read) 
@@ -458,7 +458,7 @@ SEGGER_SYSVIEW_OnTaskStopReady/55 (SEGGER_SYSVIEW_OnTaskStopReady) @06987b60
   Function flags: body
   Called by: 
   Calls: _SendPacket/14 _PreparePacket/11 
-SEGGER_SYSVIEW_OnTaskStartReady/54 (SEGGER_SYSVIEW_OnTaskStartReady) @069877e0
+SEGGER_SYSVIEW_OnTaskStartReady/54 (SEGGER_SYSVIEW_OnTaskStartReady) @069917e0
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: _aPacket/8 (addr) _SYSVIEW_Globals/5 (read) 
@@ -467,7 +467,7 @@ SEGGER_SYSVIEW_OnTaskStartReady/54 (SEGGER_SYSVIEW_OnTaskStartReady) @069877e0
   Function flags: body
   Called by: 
   Calls: _SendPacket/14 _PreparePacket/11 
-SEGGER_SYSVIEW_OnTaskStopExec/53 (SEGGER_SYSVIEW_OnTaskStopExec) @06987460
+SEGGER_SYSVIEW_OnTaskStopExec/53 (SEGGER_SYSVIEW_OnTaskStopExec) @06991460
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: _aPacket/8 (addr) 
@@ -476,7 +476,7 @@ SEGGER_SYSVIEW_OnTaskStopExec/53 (SEGGER_SYSVIEW_OnTaskStopExec) @06987460
   Function flags: body
   Called by: 
   Calls: _SendPacket/14 _PreparePacket/11 
-SEGGER_SYSVIEW_OnTaskStartExec/52 (SEGGER_SYSVIEW_OnTaskStartExec) @069870e0
+SEGGER_SYSVIEW_OnTaskStartExec/52 (SEGGER_SYSVIEW_OnTaskStartExec) @069910e0
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: _aPacket/8 (addr) _SYSVIEW_Globals/5 (read) 
@@ -485,7 +485,7 @@ SEGGER_SYSVIEW_OnTaskStartExec/52 (SEGGER_SYSVIEW_OnTaskStartExec) @069870e0
   Function flags: body
   Called by: 
   Calls: _SendPacket/14 _PreparePacket/11 
-SEGGER_SYSVIEW_OnTaskTerminate/51 (SEGGER_SYSVIEW_OnTaskTerminate) @0697e8c0
+SEGGER_SYSVIEW_OnTaskTerminate/51 (SEGGER_SYSVIEW_OnTaskTerminate) @069888c0
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: _aPacket/8 (addr) _SYSVIEW_Globals/5 (read) 
@@ -494,7 +494,7 @@ SEGGER_SYSVIEW_OnTaskTerminate/51 (SEGGER_SYSVIEW_OnTaskTerminate) @0697e8c0
   Function flags: body
   Called by: 
   Calls: _SendPacket/14 _PreparePacket/11 
-SEGGER_SYSVIEW_OnTaskCreate/50 (SEGGER_SYSVIEW_OnTaskCreate) @0697eee0
+SEGGER_SYSVIEW_OnTaskCreate/50 (SEGGER_SYSVIEW_OnTaskCreate) @06988ee0
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: _aPacket/8 (addr) _SYSVIEW_Globals/5 (read) 
@@ -503,7 +503,7 @@ SEGGER_SYSVIEW_OnTaskCreate/50 (SEGGER_SYSVIEW_OnTaskCreate) @0697eee0
   Function flags: body
   Called by: 
   Calls: _SendPacket/14 _PreparePacket/11 
-SEGGER_SYSVIEW_OnIdle/49 (SEGGER_SYSVIEW_OnIdle) @0697eb60
+SEGGER_SYSVIEW_OnIdle/49 (SEGGER_SYSVIEW_OnIdle) @06988b60
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: _aPacket/8 (addr) 
@@ -512,7 +512,7 @@ SEGGER_SYSVIEW_OnIdle/49 (SEGGER_SYSVIEW_OnIdle) @0697eb60
   Function flags: body
   Called by: 
   Calls: _SendPacket/14 _PreparePacket/11 
-SEGGER_SYSVIEW_RecordEndCallU32/48 (SEGGER_SYSVIEW_RecordEndCallU32) @0697e7e0
+SEGGER_SYSVIEW_RecordEndCallU32/48 (SEGGER_SYSVIEW_RecordEndCallU32) @069887e0
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: _aPacket/8 (addr) 
@@ -521,7 +521,7 @@ SEGGER_SYSVIEW_RecordEndCallU32/48 (SEGGER_SYSVIEW_RecordEndCallU32) @0697e7e0
   Function flags: body
   Called by: 
   Calls: _SendPacket/14 _PreparePacket/11 
-SEGGER_SYSVIEW_RecordEndCall/47 (SEGGER_SYSVIEW_RecordEndCall) @0697e460
+SEGGER_SYSVIEW_RecordEndCall/47 (SEGGER_SYSVIEW_RecordEndCall) @06988460
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: _aPacket/8 (addr) 
@@ -530,7 +530,7 @@ SEGGER_SYSVIEW_RecordEndCall/47 (SEGGER_SYSVIEW_RecordEndCall) @0697e460
   Function flags: body
   Called by: 
   Calls: _SendPacket/14 _PreparePacket/11 
-SEGGER_SYSVIEW_RecordExitTimer/46 (SEGGER_SYSVIEW_RecordExitTimer) @0697e0e0
+SEGGER_SYSVIEW_RecordExitTimer/46 (SEGGER_SYSVIEW_RecordExitTimer) @069880e0
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: _aPacket/8 (addr) 
@@ -539,7 +539,7 @@ SEGGER_SYSVIEW_RecordExitTimer/46 (SEGGER_SYSVIEW_RecordExitTimer) @0697e0e0
   Function flags: body
   Called by: 
   Calls: _SendPacket/14 _PreparePacket/11 
-SEGGER_SYSVIEW_RecordEnterTimer/45 (SEGGER_SYSVIEW_RecordEnterTimer) @069769a0
+SEGGER_SYSVIEW_RecordEnterTimer/45 (SEGGER_SYSVIEW_RecordEnterTimer) @069809a0
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: _aPacket/8 (addr) _SYSVIEW_Globals/5 (read) 
@@ -548,7 +548,7 @@ SEGGER_SYSVIEW_RecordEnterTimer/45 (SEGGER_SYSVIEW_RecordEnterTimer) @069769a0
   Function flags: body
   Called by: 
   Calls: _SendPacket/14 _PreparePacket/11 
-SEGGER_SYSVIEW_RecordExitISRToScheduler/44 (SEGGER_SYSVIEW_RecordExitISRToScheduler) @06976000
+SEGGER_SYSVIEW_RecordExitISRToScheduler/44 (SEGGER_SYSVIEW_RecordExitISRToScheduler) @06980000
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: _aPacket/8 (addr) 
@@ -557,7 +557,7 @@ SEGGER_SYSVIEW_RecordExitISRToScheduler/44 (SEGGER_SYSVIEW_RecordExitISRToSchedu
   Function flags: body
   Called by: 
   Calls: _SendPacket/14 _PreparePacket/11 
-SEGGER_SYSVIEW_RecordExitISR/43 (SEGGER_SYSVIEW_RecordExitISR) @06976c40
+SEGGER_SYSVIEW_RecordExitISR/43 (SEGGER_SYSVIEW_RecordExitISR) @06980c40
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: _aPacket/8 (addr) 
@@ -566,7 +566,7 @@ SEGGER_SYSVIEW_RecordExitISR/43 (SEGGER_SYSVIEW_RecordExitISR) @06976c40
   Function flags: body
   Called by: 
   Calls: _SendPacket/14 _PreparePacket/11 
-SEGGER_SYSVIEW_RecordEnterISR/42 (SEGGER_SYSVIEW_RecordEnterISR) @069768c0
+SEGGER_SYSVIEW_RecordEnterISR/42 (SEGGER_SYSVIEW_RecordEnterISR) @069808c0
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: _aPacket/8 (addr) 
@@ -575,7 +575,7 @@ SEGGER_SYSVIEW_RecordEnterISR/42 (SEGGER_SYSVIEW_RecordEnterISR) @069768c0
   Function flags: body
   Called by: 
   Calls: _SendPacket/14 _PreparePacket/11 
-SEGGER_SYSVIEW_RecordSystime/41 (SEGGER_SYSVIEW_RecordSystime) @06976540
+SEGGER_SYSVIEW_RecordSystime/41 (SEGGER_SYSVIEW_RecordSystime) @06980540
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: _SYSVIEW_Globals/5 (read) _SYSVIEW_Globals/5 (read) _SYSVIEW_Globals/5 (read) 
@@ -585,7 +585,7 @@ SEGGER_SYSVIEW_RecordSystime/41 (SEGGER_SYSVIEW_RecordSystime) @06976540
   Called by: SEGGER_SYSVIEW_Start/34 _HandleIncomingPacket/12 
   Calls: SEGGER_SYSVIEW_RecordU32/23 SEGGER_SYSVIEW_RecordU32x2/24 
    Indirect call Num speculative call targets: 0
-SEGGER_SYSVIEW_SendSysDesc/40 (SEGGER_SYSVIEW_SendSysDesc) @069762a0
+SEGGER_SYSVIEW_SendSysDesc/40 (SEGGER_SYSVIEW_SendSysDesc) @069802a0
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: _aPacket/8 (addr) 
@@ -594,7 +594,7 @@ SEGGER_SYSVIEW_SendSysDesc/40 (SEGGER_SYSVIEW_SendSysDesc) @069762a0
   Function flags: body
   Called by: 
   Calls: _SendPacket/14 _EncodeStr/10 _PreparePacket/11 
-SEGGER_SYSVIEW_SendTaskList/39 (SEGGER_SYSVIEW_SendTaskList) @06952ee0
+SEGGER_SYSVIEW_SendTaskList/39 (SEGGER_SYSVIEW_SendTaskList) @0695cee0
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: _SYSVIEW_Globals/5 (read) _SYSVIEW_Globals/5 (read) _SYSVIEW_Globals/5 (read) 
@@ -604,7 +604,7 @@ SEGGER_SYSVIEW_SendTaskList/39 (SEGGER_SYSVIEW_SendTaskList) @06952ee0
   Called by: SEGGER_SYSVIEW_Start/34 _HandleIncomingPacket/12 
   Calls: 
    Indirect call Num speculative call targets: 0
-SEGGER_SYSVIEW_SendTaskInfo/38 (SEGGER_SYSVIEW_SendTaskInfo) @069528c0
+SEGGER_SYSVIEW_SendTaskInfo/38 (SEGGER_SYSVIEW_SendTaskInfo) @0695c8c0
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: _aPacket/8 (addr) _SYSVIEW_Globals/5 (read) _SYSVIEW_Globals/5 (read) 
@@ -613,7 +613,7 @@ SEGGER_SYSVIEW_SendTaskInfo/38 (SEGGER_SYSVIEW_SendTaskInfo) @069528c0
   Function flags: body
   Called by: 
   Calls: _SendPacket/14 _SendPacket/14 _EncodeStr/10 _PreparePacket/11 
-SEGGER_SYSVIEW_GetSysDesc/37 (SEGGER_SYSVIEW_GetSysDesc) @06952e00
+SEGGER_SYSVIEW_GetSysDesc/37 (SEGGER_SYSVIEW_GetSysDesc) @0695ce00
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: _aPacket/8 (addr) _SYSVIEW_Globals/5 (read) _SYSVIEW_Globals/5 (read) _SYSVIEW_Globals/5 (read) _SYSVIEW_Globals/5 (read) _SYSVIEW_Globals/5 (read) 
@@ -623,7 +623,7 @@ SEGGER_SYSVIEW_GetSysDesc/37 (SEGGER_SYSVIEW_GetSysDesc) @06952e00
   Called by: _HandleIncomingPacket/12 
   Calls: _SendPacket/14 _PreparePacket/11 
    Indirect call Num speculative call targets: 0
-SEGGER_SYSVIEW_GetChannelID/36 (SEGGER_SYSVIEW_GetChannelID) @06952a80
+SEGGER_SYSVIEW_GetChannelID/36 (SEGGER_SYSVIEW_GetChannelID) @0695ca80
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: _SYSVIEW_Globals/5 (read) 
@@ -632,7 +632,7 @@ SEGGER_SYSVIEW_GetChannelID/36 (SEGGER_SYSVIEW_GetChannelID) @06952a80
   Function flags: body
   Called by: 
   Calls: 
-SEGGER_SYSVIEW_Stop/35 (SEGGER_SYSVIEW_Stop) @069527e0
+SEGGER_SYSVIEW_Stop/35 (SEGGER_SYSVIEW_Stop) @0695c7e0
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: _aPacket/8 (addr) _SYSVIEW_Globals/5 (read) _SYSVIEW_Globals/5 (write) 
@@ -641,7 +641,7 @@ SEGGER_SYSVIEW_Stop/35 (SEGGER_SYSVIEW_Stop) @069527e0
   Function flags: body
   Called by: _HandleIncomingPacket/12 
   Calls: _SendPacket/14 _PreparePacket/11 
-SEGGER_SYSVIEW_Start/34 (SEGGER_SYSVIEW_Start) @06952460
+SEGGER_SYSVIEW_Start/34 (SEGGER_SYSVIEW_Start) @0695c460
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: _SYSVIEW_Globals/5 (write) _SYSVIEW_Globals/5 (read) _abSync/2 (addr) _aPacket/8 (addr) _SYSVIEW_Globals/5 (read) _SYSVIEW_Globals/5 (read) _SYSVIEW_Globals/5 (read) _SYSVIEW_Globals/5 (read) _SYSVIEW_Globals/5 (read) 
@@ -651,7 +651,7 @@ SEGGER_SYSVIEW_Start/34 (SEGGER_SYSVIEW_Start) @06952460
   Called by: _HandleIncomingPacket/12 
   Calls: SEGGER_SYSVIEW_SendNumModules/75 SEGGER_SYSVIEW_SendTaskList/39 SEGGER_SYSVIEW_RecordSystime/41 _SendPacket/14 _PreparePacket/11 SEGGER_SYSVIEW_RecordVoid/22 SEGGER_RTT_ASM_WriteSkipNoLock/99 
    Indirect call Num speculative call targets: 0
-SEGGER_SYSVIEW_RecordString/33 (SEGGER_SYSVIEW_RecordString) @06952000
+SEGGER_SYSVIEW_RecordString/33 (SEGGER_SYSVIEW_RecordString) @0695c000
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: _aPacket/8 (addr) 
@@ -660,7 +660,7 @@ SEGGER_SYSVIEW_RecordString/33 (SEGGER_SYSVIEW_RecordString) @06952000
   Function flags: body
   Called by: 
   Calls: _SendPacket/14 _EncodeStr/10 _PreparePacket/11 
-SEGGER_SYSVIEW_RecordU32x10/32 (SEGGER_SYSVIEW_RecordU32x10) @0692e7e0
+SEGGER_SYSVIEW_RecordU32x10/32 (SEGGER_SYSVIEW_RecordU32x10) @069387e0
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: _aPacket/8 (addr) 
@@ -669,7 +669,7 @@ SEGGER_SYSVIEW_RecordU32x10/32 (SEGGER_SYSVIEW_RecordU32x10) @0692e7e0
   Function flags: body
   Called by: 
   Calls: _SendPacket/14 _PreparePacket/11 
-SEGGER_SYSVIEW_RecordU32x9/31 (SEGGER_SYSVIEW_RecordU32x9) @0692ee00
+SEGGER_SYSVIEW_RecordU32x9/31 (SEGGER_SYSVIEW_RecordU32x9) @06938e00
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: _aPacket/8 (addr) 
@@ -678,7 +678,7 @@ SEGGER_SYSVIEW_RecordU32x9/31 (SEGGER_SYSVIEW_RecordU32x9) @0692ee00
   Function flags: body
   Called by: 
   Calls: _SendPacket/14 _PreparePacket/11 
-SEGGER_SYSVIEW_RecordU32x8/30 (SEGGER_SYSVIEW_RecordU32x8) @0692ea80
+SEGGER_SYSVIEW_RecordU32x8/30 (SEGGER_SYSVIEW_RecordU32x8) @06938a80
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: _aPacket/8 (addr) 
@@ -687,7 +687,7 @@ SEGGER_SYSVIEW_RecordU32x8/30 (SEGGER_SYSVIEW_RecordU32x8) @0692ea80
   Function flags: body
   Called by: 
   Calls: _SendPacket/14 _PreparePacket/11 
-SEGGER_SYSVIEW_RecordU32x7/29 (SEGGER_SYSVIEW_RecordU32x7) @0692e700
+SEGGER_SYSVIEW_RecordU32x7/29 (SEGGER_SYSVIEW_RecordU32x7) @06938700
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: _aPacket/8 (addr) 
@@ -696,7 +696,7 @@ SEGGER_SYSVIEW_RecordU32x7/29 (SEGGER_SYSVIEW_RecordU32x7) @0692e700
   Function flags: body
   Called by: 
   Calls: _SendPacket/14 _PreparePacket/11 
-SEGGER_SYSVIEW_RecordU32x6/28 (SEGGER_SYSVIEW_RecordU32x6) @0692e380
+SEGGER_SYSVIEW_RecordU32x6/28 (SEGGER_SYSVIEW_RecordU32x6) @06938380
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: _aPacket/8 (addr) 
@@ -705,7 +705,7 @@ SEGGER_SYSVIEW_RecordU32x6/28 (SEGGER_SYSVIEW_RecordU32x6) @0692e380
   Function flags: body
   Called by: 
   Calls: _SendPacket/14 _PreparePacket/11 
-SEGGER_SYSVIEW_RecordU32x5/27 (SEGGER_SYSVIEW_RecordU32x5) @0692e000
+SEGGER_SYSVIEW_RecordU32x5/27 (SEGGER_SYSVIEW_RecordU32x5) @06938000
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: _aPacket/8 (addr) 
@@ -714,7 +714,7 @@ SEGGER_SYSVIEW_RecordU32x5/27 (SEGGER_SYSVIEW_RecordU32x5) @0692e000
   Function flags: body
   Called by: 
   Calls: _SendPacket/14 _PreparePacket/11 
-SEGGER_SYSVIEW_RecordU32x4/26 (SEGGER_SYSVIEW_RecordU32x4) @0691d7e0
+SEGGER_SYSVIEW_RecordU32x4/26 (SEGGER_SYSVIEW_RecordU32x4) @069277e0
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: _aPacket/8 (addr) 
@@ -723,7 +723,7 @@ SEGGER_SYSVIEW_RecordU32x4/26 (SEGGER_SYSVIEW_RecordU32x4) @0691d7e0
   Function flags: body
   Called by: 
   Calls: _SendPacket/14 _PreparePacket/11 
-SEGGER_SYSVIEW_RecordU32x3/25 (SEGGER_SYSVIEW_RecordU32x3) @0691de00
+SEGGER_SYSVIEW_RecordU32x3/25 (SEGGER_SYSVIEW_RecordU32x3) @06927e00
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: _aPacket/8 (addr) 
@@ -732,7 +732,7 @@ SEGGER_SYSVIEW_RecordU32x3/25 (SEGGER_SYSVIEW_RecordU32x3) @0691de00
   Function flags: body
   Called by: 
   Calls: _SendPacket/14 _PreparePacket/11 
-SEGGER_SYSVIEW_RecordU32x2/24 (SEGGER_SYSVIEW_RecordU32x2) @0691da80
+SEGGER_SYSVIEW_RecordU32x2/24 (SEGGER_SYSVIEW_RecordU32x2) @06927a80
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: _aPacket/8 (addr) 
@@ -741,7 +741,7 @@ SEGGER_SYSVIEW_RecordU32x2/24 (SEGGER_SYSVIEW_RecordU32x2) @0691da80
   Function flags: body
   Called by: SEGGER_SYSVIEW_RecordSystime/41 
   Calls: _SendPacket/14 _PreparePacket/11 
-SEGGER_SYSVIEW_RecordU32/23 (SEGGER_SYSVIEW_RecordU32) @0691d700
+SEGGER_SYSVIEW_RecordU32/23 (SEGGER_SYSVIEW_RecordU32) @06927700
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: _aPacket/8 (addr) 
@@ -750,7 +750,7 @@ SEGGER_SYSVIEW_RecordU32/23 (SEGGER_SYSVIEW_RecordU32) @0691d700
   Function flags: body
   Called by: SEGGER_SYSVIEW_RecordSystime/41 
   Calls: _SendPacket/14 _PreparePacket/11 
-SEGGER_SYSVIEW_RecordVoid/22 (SEGGER_SYSVIEW_RecordVoid) @0691d380
+SEGGER_SYSVIEW_RecordVoid/22 (SEGGER_SYSVIEW_RecordVoid) @06927380
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: _aPacket/8 (addr) 
@@ -759,7 +759,7 @@ SEGGER_SYSVIEW_RecordVoid/22 (SEGGER_SYSVIEW_RecordVoid) @0691d380
   Function flags: body
   Called by: SEGGER_SYSVIEW_Start/34 
   Calls: _SendPacket/14 _PreparePacket/11 
-SEGGER_SYSVIEW_SetRAMBase/21 (SEGGER_SYSVIEW_SetRAMBase) @0691d000
+SEGGER_SYSVIEW_SetRAMBase/21 (SEGGER_SYSVIEW_SetRAMBase) @06927000
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: _SYSVIEW_Globals/5 (write) 
@@ -768,7 +768,7 @@ SEGGER_SYSVIEW_SetRAMBase/21 (SEGGER_SYSVIEW_SetRAMBase) @0691d000
   Function flags: body
   Called by: 
   Calls: 
-SEGGER_SYSVIEW_Init/20 (SEGGER_SYSVIEW_Init) @068b9ee0
+SEGGER_SYSVIEW_Init/20 (SEGGER_SYSVIEW_Init) @068d4ee0
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: _UpBuffer/3 (addr) _SYSVIEW_Globals/5 (write) _SYSVIEW_Globals/5 (read) _SYSVIEW_Globals/5 (write) _SYSVIEW_Globals/5 (read) _DownBuffer/4 (addr) _SYSVIEW_Globals/5 (write) _SYSVIEW_Globals/5 (write) _SYSVIEW_Globals/5 (write) _SYSVIEW_Globals/5 (write) _SYSVIEW_Globals/5 (write) _SYSVIEW_Globals/5 (write) _SYSVIEW_Globals/5 (write) 
@@ -777,7 +777,7 @@ SEGGER_SYSVIEW_Init/20 (SEGGER_SYSVIEW_Init) @068b9ee0
   Function flags: body
   Called by: 
   Calls: SEGGER_RTT_ConfigDownBuffer/103 SEGGER_RTT_AllocUpBuffer/102 
-_VPrintTarget/19 (_VPrintTarget) @068b9c40
+_VPrintTarget/19 (_VPrintTarget) @068d4c40
   Type: function definition analyzed
   Visibility: force_output no_reorder prevailing_def_ironly
   References: _aPacket/8 (addr) _aPacket/8 (addr) 
@@ -786,7 +786,7 @@ _VPrintTarget/19 (_VPrintTarget) @068b9c40
   Function flags: body
   Called by: SEGGER_SYSVIEW_VErrorfTarget/91 SEGGER_SYSVIEW_ErrorfTarget/90 SEGGER_SYSVIEW_VWarnfTarget/89 SEGGER_SYSVIEW_WarnfTarget/88 SEGGER_SYSVIEW_VPrintfTarget/87 SEGGER_SYSVIEW_PrintfTarget/86 SEGGER_SYSVIEW_VPrintfTargetEx/85 SEGGER_SYSVIEW_PrintfTargetEx/84 
   Calls: _SendPacket/14 _StoreChar/16 _StoreChar/16 _PrintUnsigned/17 _StoreChar/16 _PrintUnsigned/17 _PrintUnsigned/17 _PrintInt/18 _StoreChar/16 _PreparePacket/11 
-_PrintInt/18 (_PrintInt) @068b98c0
+_PrintInt/18 (_PrintInt) @068d48c0
   Type: function definition analyzed
   Visibility: force_output no_reorder prevailing_def_ironly
   References: 
@@ -795,7 +795,7 @@ _PrintInt/18 (_PrintInt) @068b98c0
   Function flags: body
   Called by: _VPrintTarget/19 
   Calls: _PrintUnsigned/17 _StoreChar/16 _StoreChar/16 _StoreChar/16 _StoreChar/16 
-_PrintUnsigned/17 (_PrintUnsigned) @068b9620
+_PrintUnsigned/17 (_PrintUnsigned) @068d4620
   Type: function definition analyzed
   Visibility: force_output no_reorder prevailing_def_ironly
   References: _aV2C.0/101 (read) 
@@ -804,7 +804,7 @@ _PrintUnsigned/17 (_PrintUnsigned) @068b9620
   Function flags: body
   Called by: _VPrintTarget/19 _VPrintTarget/19 _VPrintTarget/19 _PrintInt/18 
   Calls: _StoreChar/16 _StoreChar/16 _StoreChar/16 
-_StoreChar/16 (_StoreChar) @068b92a0
+_StoreChar/16 (_StoreChar) @068d42a0
   Type: function definition analyzed
   Visibility: force_output no_reorder prevailing_def_ironly
   References: 
@@ -813,7 +813,7 @@ _StoreChar/16 (_StoreChar) @068b92a0
   Function flags: body
   Called by: _VPrintTarget/19 _VPrintTarget/19 _VPrintTarget/19 _VPrintTarget/19 _PrintInt/18 _PrintInt/18 _PrintInt/18 _PrintInt/18 _PrintUnsigned/17 _PrintUnsigned/17 _PrintUnsigned/17 
   Calls: _PreparePacket/11 _SendPacket/14 
-_VPrintHost/15 (_VPrintHost) @068b9000
+_VPrintHost/15 (_VPrintHost) @068d4000
   Type: function definition analyzed
   Visibility: force_output no_reorder prevailing_def_ironly
   References: _aPacket/8 (addr) 
@@ -822,7 +822,7 @@ _VPrintHost/15 (_VPrintHost) @068b9000
   Function flags: body
   Called by: SEGGER_SYSVIEW_VErrorfHost/83 SEGGER_SYSVIEW_ErrorfHost/82 SEGGER_SYSVIEW_VWarnfHost/81 SEGGER_SYSVIEW_WarnfHost/80 SEGGER_SYSVIEW_VPrintfHost/79 SEGGER_SYSVIEW_PrintfHost/78 SEGGER_SYSVIEW_VPrintfHostEx/77 SEGGER_SYSVIEW_PrintfHostEx/76 
   Calls: _SendPacket/14 _EncodeStr/10 _PreparePacket/11 
-_SendPacket/14 (_SendPacket) @06888d20
+_SendPacket/14 (_SendPacket) @068a3d20
   Type: function definition analyzed
   Visibility: force_output no_reorder prevailing_def_ironly
   References: _SYSVIEW_Globals/5 (read) _SYSVIEW_Globals/5 (read) _SYSVIEW_Globals/5 (read) _SYSVIEW_Globals/5 (read) _SYSVIEW_Globals/5 (read) _SYSVIEW_Globals/5 (read) _SYSVIEW_Globals/5 (read) _SYSVIEW_Globals/5 (write) _SYSVIEW_Globals/5 (read) _SYSVIEW_Globals/5 (write) _SYSVIEW_Globals/5 (read) _SEGGER_RTT/100 (read) _SYSVIEW_Globals/5 (read) _SEGGER_RTT/100 (read) _SYSVIEW_Globals/5 (read) _SYSVIEW_Globals/5 (write) _SYSVIEW_Globals/5 (write) 
@@ -831,7 +831,7 @@ _SendPacket/14 (_SendPacket) @06888d20
   Function flags: body
   Called by: SEGGER_SYSVIEW_Error/94 SEGGER_SYSVIEW_Warn/93 SEGGER_SYSVIEW_Print/92 SEGGER_SYSVIEW_SendModule/73 SEGGER_SYSVIEW_RecordModuleDescription/72 SEGGER_SYSVIEW_SendPacket/65 SEGGER_SYSVIEW_HeapFree/64 SEGGER_SYSVIEW_HeapAllocEx/63 SEGGER_SYSVIEW_HeapAlloc/62 SEGGER_SYSVIEW_HeapDefine/61 SEGGER_SYSVIEW_NameResource/60 SEGGER_SYSVIEW_NameMarker/59 SEGGER_SYSVIEW_Mark/58 SEGGER_SYSVIEW_MarkStop/57 SEGGER_SYSVIEW_MarkStart/56 SEGGER_SYSVIEW_OnTaskStopReady/55 SEGGER_SYSVIEW_OnTaskStartReady/54 SEGGER_SYSVIEW_OnTaskStopExec/53 SEGGER_SYSVIEW_OnTaskStartExec/52 SEGGER_SYSVIEW_OnTaskTerminate/51 SEGGER_SYSVIEW_OnTaskCreate/50 SEGGER_SYSVIEW_OnIdle/49 SEGGER_SYSVIEW_RecordEndCallU32/48 SEGGER_SYSVIEW_RecordEndCall/47 SEGGER_SYSVIEW_RecordExitTimer/46 SEGGER_SYSVIEW_RecordEnterTimer/45 SEGGER_SYSVIEW_RecordExitISRToScheduler/44 SEGGER_SYSVIEW_RecordExitISR/43 SEGGER_SYSVIEW_RecordEnterISR/42 SEGGER_SYSVIEW_SendSysDesc/40 SEGGER_SYSVIEW_SendTaskInfo/38 SEGGER_SYSVIEW_SendTaskInfo/38 SEGGER_SYSVIEW_GetSysDesc/37 SEGGER_SYSVIEW_Stop/35 SEGGER_SYSVIEW_RecordString/33 SEGGER_SYSVIEW_RecordU32x10/32 SEGGER_SYSVIEW_RecordU32x9/31 SEGGER_SYSVIEW_RecordU32x8/30 SEGGER_SYSVIEW_RecordU32x7/29 SEGGER_SYSVIEW_RecordU32x6/28 SEGGER_SYSVIEW_RecordU32x5/27 SEGGER_SYSVIEW_RecordU32x4/26 SEGGER_SYSVIEW_RecordU32x3/25 SEGGER_SYSVIEW_Start/34 SEGGER_SYSVIEW_RecordU32x2/24 SEGGER_SYSVIEW_RecordU32/23 SEGGER_SYSVIEW_RecordVoid/22 _VPrintTarget/19 _StoreChar/16 _VPrintHost/15 SEGGER_SYSVIEW_SendNumModules/75 
   Calls: _HandleIncomingPacket/12 SEGGER_RTT_ASM_WriteSkipNoLock/99 _TrySendOverflowPacket/13 
-_TrySendOverflowPacket/13 (_TrySendOverflowPacket) @06888a80
+_TrySendOverflowPacket/13 (_TrySendOverflowPacket) @068a3a80
   Type: function definition analyzed
   Visibility: force_output no_reorder prevailing_def_ironly
   References: _SYSVIEW_Globals/5 (read) _SYSVIEW_Globals/5 (read) _SYSVIEW_Globals/5 (read) _SYSVIEW_Globals/5 (write) _SYSVIEW_Globals/5 (read) _SYSVIEW_Globals/5 (write) _SYSVIEW_Globals/5 (read) _SYSVIEW_Globals/5 (write) 
@@ -840,7 +840,7 @@ _TrySendOverflowPacket/13 (_TrySendOverflowPacket) @06888a80
   Function flags: body
   Called by: _SendPacket/14 
   Calls: SEGGER_RTT_ASM_WriteSkipNoLock/99 
-_HandleIncomingPacket/12 (_HandleIncomingPacket) @068887e0
+_HandleIncomingPacket/12 (_HandleIncomingPacket) @068a37e0
   Type: function definition analyzed
   Visibility: force_output no_reorder prevailing_def_ironly
   References: _SYSVIEW_Globals/5 (read) _SYSVIEW_Globals/5 (read) _SYSVIEW_Globals/5 (read) 
@@ -849,7 +849,7 @@ _HandleIncomingPacket/12 (_HandleIncomingPacket) @068887e0
   Function flags: body
   Called by: SEGGER_SYSVIEW_IsStarted/97 _SendPacket/14 
   Calls: SEGGER_RTT_ReadNoLock/98 SEGGER_SYSVIEW_SendModule/73 SEGGER_RTT_ReadNoLock/98 SEGGER_SYSVIEW_SendModuleDescription/74 SEGGER_SYSVIEW_SendNumModules/75 SEGGER_SYSVIEW_GetSysDesc/37 SEGGER_SYSVIEW_SendTaskList/39 SEGGER_SYSVIEW_RecordSystime/41 SEGGER_SYSVIEW_Stop/35 SEGGER_SYSVIEW_Start/34 SEGGER_RTT_ReadNoLock/98 
-_PreparePacket/11 (_PreparePacket) @06888540
+_PreparePacket/11 (_PreparePacket) @068a3540
   Type: function definition analyzed
   Visibility: force_output no_reorder prevailing_def_ironly
   References: 
@@ -858,7 +858,7 @@ _PreparePacket/11 (_PreparePacket) @06888540
   Function flags: body
   Called by: SEGGER_SYSVIEW_Error/94 SEGGER_SYSVIEW_Warn/93 SEGGER_SYSVIEW_Print/92 SEGGER_SYSVIEW_SendModule/73 SEGGER_SYSVIEW_RecordModuleDescription/72 SEGGER_SYSVIEW_HeapFree/64 SEGGER_SYSVIEW_HeapAllocEx/63 SEGGER_SYSVIEW_HeapAlloc/62 SEGGER_SYSVIEW_HeapDefine/61 SEGGER_SYSVIEW_NameResource/60 SEGGER_SYSVIEW_NameMarker/59 SEGGER_SYSVIEW_Mark/58 SEGGER_SYSVIEW_MarkStop/57 SEGGER_SYSVIEW_MarkStart/56 SEGGER_SYSVIEW_OnTaskStopReady/55 SEGGER_SYSVIEW_OnTaskStartReady/54 SEGGER_SYSVIEW_OnTaskStopExec/53 SEGGER_SYSVIEW_OnTaskStartExec/52 SEGGER_SYSVIEW_OnTaskTerminate/51 SEGGER_SYSVIEW_OnTaskCreate/50 SEGGER_SYSVIEW_OnIdle/49 SEGGER_SYSVIEW_RecordEndCallU32/48 SEGGER_SYSVIEW_RecordEndCall/47 SEGGER_SYSVIEW_RecordExitTimer/46 SEGGER_SYSVIEW_RecordEnterTimer/45 SEGGER_SYSVIEW_RecordExitISRToScheduler/44 SEGGER_SYSVIEW_RecordExitISR/43 SEGGER_SYSVIEW_RecordEnterISR/42 SEGGER_SYSVIEW_SendSysDesc/40 SEGGER_SYSVIEW_SendTaskInfo/38 SEGGER_SYSVIEW_GetSysDesc/37 SEGGER_SYSVIEW_Stop/35 SEGGER_SYSVIEW_RecordString/33 SEGGER_SYSVIEW_RecordU32x10/32 SEGGER_SYSVIEW_RecordU32x9/31 SEGGER_SYSVIEW_RecordU32x8/30 SEGGER_SYSVIEW_RecordU32x7/29 SEGGER_SYSVIEW_RecordU32x6/28 SEGGER_SYSVIEW_RecordU32x5/27 SEGGER_SYSVIEW_RecordU32x4/26 SEGGER_SYSVIEW_RecordU32x3/25 SEGGER_SYSVIEW_Start/34 SEGGER_SYSVIEW_RecordU32x2/24 SEGGER_SYSVIEW_RecordU32/23 SEGGER_SYSVIEW_RecordVoid/22 _VPrintTarget/19 _StoreChar/16 _VPrintHost/15 SEGGER_SYSVIEW_SendNumModules/75 
   Calls: 
-_EncodeStr/10 (_EncodeStr) @068882a0
+_EncodeStr/10 (_EncodeStr) @068a32a0
   Type: function definition analyzed
   Visibility: force_output no_reorder prevailing_def_ironly
   References: 
@@ -867,7 +867,7 @@ _EncodeStr/10 (_EncodeStr) @068882a0
   Function flags: body
   Called by: SEGGER_SYSVIEW_Error/94 SEGGER_SYSVIEW_Warn/93 SEGGER_SYSVIEW_Print/92 SEGGER_SYSVIEW_SendModule/73 SEGGER_SYSVIEW_RecordModuleDescription/72 SEGGER_SYSVIEW_NameResource/60 SEGGER_SYSVIEW_NameMarker/59 SEGGER_SYSVIEW_SendSysDesc/40 SEGGER_SYSVIEW_SendTaskInfo/38 SEGGER_SYSVIEW_RecordString/33 _VPrintHost/15 SEGGER_SYSVIEW_EncodeString/67 
   Calls: 
-_EncodeData/9 (_EncodeData) @06888000
+_EncodeData/9 (_EncodeData) @068a3000
   Type: function definition analyzed
   Visibility: force_output no_reorder prevailing_def_ironly
   References: 
@@ -876,63 +876,63 @@ _EncodeData/9 (_EncodeData) @06888000
   Function flags: body
   Called by: SEGGER_SYSVIEW_EncodeData/68 
   Calls: 
-_aPacket/8 (_aPacket) @06880b40
+_aPacket/8 (_aPacket) @0689bb40
   Type: variable definition analyzed
   Visibility: force_output no_reorder prevailing_def_ironly
   References: 
   Referring: SEGGER_SYSVIEW_RecordU32x2/24 (addr) SEGGER_SYSVIEW_SendModule/73 (addr) SEGGER_SYSVIEW_SendNumModules/75 (addr) _VPrintHost/15 (addr) _VPrintTarget/19 (addr) SEGGER_SYSVIEW_RecordVoid/22 (addr) SEGGER_SYSVIEW_RecordU32/23 (addr) SEGGER_SYSVIEW_Start/34 (addr) SEGGER_SYSVIEW_RecordU32x3/25 (addr) SEGGER_SYSVIEW_RecordU32x4/26 (addr) SEGGER_SYSVIEW_RecordU32x5/27 (addr) SEGGER_SYSVIEW_RecordU32x6/28 (addr) SEGGER_SYSVIEW_RecordU32x7/29 (addr) SEGGER_SYSVIEW_RecordU32x8/30 (addr) SEGGER_SYSVIEW_RecordU32x9/31 (addr) SEGGER_SYSVIEW_Warn/93 (addr) SEGGER_SYSVIEW_RecordU32x10/32 (addr) SEGGER_SYSVIEW_RecordString/33 (addr) SEGGER_SYSVIEW_Stop/35 (addr) SEGGER_SYSVIEW_GetSysDesc/37 (addr) SEGGER_SYSVIEW_SendTaskInfo/38 (addr) SEGGER_SYSVIEW_SendSysDesc/40 (addr) SEGGER_SYSVIEW_RecordEnterISR/42 (addr) SEGGER_SYSVIEW_RecordExitISR/43 (addr) SEGGER_SYSVIEW_RecordExitISRToScheduler/44 (addr) SEGGER_SYSVIEW_RecordEnterTimer/45 (addr) SEGGER_SYSVIEW_RecordExitTimer/46 (addr) SEGGER_SYSVIEW_RecordEndCall/47 (addr) SEGGER_SYSVIEW_RecordEndCallU32/48 (addr) SEGGER_SYSVIEW_OnIdle/49 (addr) SEGGER_SYSVIEW_OnTaskCreate/50 (addr) SEGGER_SYSVIEW_OnTaskTerminate/51 (addr) SEGGER_SYSVIEW_OnTaskStartExec/52 (addr) SEGGER_SYSVIEW_OnTaskStopExec/53 (addr) SEGGER_SYSVIEW_OnTaskStartReady/54 (addr) SEGGER_SYSVIEW_OnTaskStopReady/55 (addr) SEGGER_SYSVIEW_MarkStart/56 (addr) SEGGER_SYSVIEW_MarkStop/57 (addr) SEGGER_SYSVIEW_Mark/58 (addr) SEGGER_SYSVIEW_NameMarker/59 (addr) SEGGER_SYSVIEW_NameResource/60 (addr) SEGGER_SYSVIEW_HeapDefine/61 (addr) SEGGER_SYSVIEW_HeapAlloc/62 (addr) SEGGER_SYSVIEW_HeapAllocEx/63 (addr) SEGGER_SYSVIEW_HeapFree/64 (addr) SEGGER_SYSVIEW_Print/92 (addr) SEGGER_SYSVIEW_RecordModuleDescription/72 (addr) _VPrintTarget/19 (addr) SEGGER_SYSVIEW_Error/94 (addr) 
   Availability: available
   Varpool flags:
-_NumModules/7 (_NumModules) @068809d8
+_NumModules/7 (_NumModules) @0689b9d8
   Type: variable definition analyzed
   Visibility: force_output no_reorder prevailing_def_ironly
   References: 
   Referring: SEGGER_SYSVIEW_SendNumModules/75 (read) SEGGER_SYSVIEW_RegisterModule/71 (write) SEGGER_SYSVIEW_RegisterModule/71 (read) SEGGER_SYSVIEW_RegisterModule/71 (write) 
   Availability: available
   Varpool flags:
-_pFirstModule/6 (_pFirstModule) @06880948
+_pFirstModule/6 (_pFirstModule) @0689b948
   Type: variable definition analyzed
   Visibility: force_output no_reorder prevailing_def_ironly
   References: 
   Referring: SEGGER_SYSVIEW_RecordModuleDescription/72 (read) SEGGER_SYSVIEW_SendModule/73 (read) SEGGER_SYSVIEW_SendModule/73 (read) SEGGER_SYSVIEW_SendModuleDescription/74 (read) SEGGER_SYSVIEW_SendModuleDescription/74 (read) SEGGER_SYSVIEW_RegisterModule/71 (read) SEGGER_SYSVIEW_RegisterModule/71 (write) SEGGER_SYSVIEW_RegisterModule/71 (read) SEGGER_SYSVIEW_RegisterModule/71 (read) SEGGER_SYSVIEW_RegisterModule/71 (read) SEGGER_SYSVIEW_RegisterModule/71 (write) 
   Availability: available
   Varpool flags:
-_SYSVIEW_Globals/5 (_SYSVIEW_Globals) @068808b8
+_SYSVIEW_Globals/5 (_SYSVIEW_Globals) @0689b8b8
   Type: variable definition analyzed
   Visibility: force_output no_reorder prevailing_def_ironly
   References: 
   Referring: SEGGER_SYSVIEW_RecordSystime/41 (read) SEGGER_SYSVIEW_RecordSystime/41 (read) SEGGER_SYSVIEW_RecordSystime/41 (read) SEGGER_SYSVIEW_HeapFree/64 (read) SEGGER_SYSVIEW_HeapFree/64 (read) SEGGER_SYSVIEW_Init/20 (write) SEGGER_SYSVIEW_Start/34 (read) SEGGER_SYSVIEW_Start/34 (read) SEGGER_SYSVIEW_Start/34 (read) SEGGER_SYSVIEW_EnableEvents/95 (read) SEGGER_SYSVIEW_EnableEvents/95 (write) SEGGER_SYSVIEW_HeapDefine/61 (read) SEGGER_SYSVIEW_HeapAlloc/62 (read) SEGGER_SYSVIEW_HeapAlloc/62 (read) SEGGER_SYSVIEW_GetChannelID/36 (read) SEGGER_SYSVIEW_Init/20 (write) SEGGER_SYSVIEW_Init/20 (read) SEGGER_SYSVIEW_Init/20 (write) _TrySendOverflowPacket/13 (read) _SendPacket/14 (read) _SendPacket/14 (write) _SendPacket/14 (read) _SendPacket/14 (read) SEGGER_SYSVIEW_SendTaskList/39 (read) SEGGER_SYSVIEW_SendTaskList/39 (read) SEGGER_SYSVIEW_ShrinkId/70 (read) SEGGER_SYSVIEW_SendTaskList/39 (read) SEGGER_SYSVIEW_HeapAllocEx/63 (read) SEGGER_SYSVIEW_HeapAllocEx/63 (read) SEGGER_SYSVIEW_Init/20 (read) SEGGER_SYSVIEW_Init/20 (write) SEGGER_SYSVIEW_Start/34 (read) SEGGER_SYSVIEW_GetSysDesc/37 (read) SEGGER_SYSVIEW_GetSysDesc/37 (read) SEGGER_SYSVIEW_GetSysDesc/37 (read) SEGGER_SYSVIEW_DisableEvents/96 (read) SEGGER_SYSVIEW_DisableEvents/96 (write) _TrySendOverflowPacket/13 (write) _TrySendOverflowPacket/13 (read) _TrySendOverflowPacket/13 (read) _TrySendOverflowPacket/13 (write) _TrySendOverflowPacket/13 (read) SEGGER_SYSVIEW_Init/20 (write) SEGGER_SYSVIEW_Init/20 (write) SEGGER_SYSVIEW_EncodeId/69 (read) _SendPacket/14 (write) _SendPacket/14 (write) SEGGER_SYSVIEW_Init/20 (write) SEGGER_SYSVIEW_Init/20 (write) SEGGER_SYSVIEW_Init/20 (write) _SendPacket/14 (read) SEGGER_SYSVIEW_Start/34 (read) SEGGER_SYSVIEW_Start/34 (read) SEGGER_SYSVIEW_Stop/35 (read) SEGGER_SYSVIEW_Stop/35 (write) _TrySendOverflowPacket/13 (write) _TrySendOverflowPacket/13 (read) SEGGER_SYSVIEW_SetRAMBase/21 (write) _HandleIncomingPacket/12 (read) _HandleIncomingPacket/12 (read) _HandleIncomingPacket/12 (read) SEGGER_SYSVIEW_GetSysDesc/37 (read) SEGGER_SYSVIEW_SendTaskInfo/38 (read) SEGGER_SYSVIEW_RecordEnterTimer/45 (read) SEGGER_SYSVIEW_OnTaskCreate/50 (read) SEGGER_SYSVIEW_OnTaskTerminate/51 (read) SEGGER_SYSVIEW_OnTaskStartExec/52 (read) SEGGER_SYSVIEW_OnTaskStartReady/54 (read) SEGGER_SYSVIEW_GetSysDesc/37 (read) SEGGER_SYSVIEW_OnTaskStopReady/55 (read) SEGGER_SYSVIEW_SendTaskInfo/38 (read) SEGGER_SYSVIEW_NameResource/60 (read) SEGGER_SYSVIEW_HeapDefine/61 (read) _SendPacket/14 (read) _SendPacket/14 (read) _SendPacket/14 (read) _SendPacket/14 (read) _SendPacket/14 (read) _SendPacket/14 (read) _SendPacket/14 (read) _SendPacket/14 (write) SEGGER_SYSVIEW_Start/34 (write) SEGGER_SYSVIEW_IsStarted/97 (read) SEGGER_SYSVIEW_IsStarted/97 (read) SEGGER_SYSVIEW_IsStarted/97 (read) SEGGER_SYSVIEW_IsStarted/97 (write) SEGGER_SYSVIEW_IsStarted/97 (write) SEGGER_SYSVIEW_IsStarted/97 (read) 
   Availability: available
   Varpool flags:
-_DownBuffer/4 (_DownBuffer) @06880870
+_DownBuffer/4 (_DownBuffer) @0689b870
   Type: variable definition analyzed
   Visibility: force_output no_reorder prevailing_def_ironly
   References: 
   Referring: SEGGER_SYSVIEW_Init/20 (addr) 
   Availability: available
   Varpool flags:
-_UpBuffer/3 (_UpBuffer) @06880828
+_UpBuffer/3 (_UpBuffer) @0689b828
   Type: variable definition analyzed
   Visibility: force_output no_reorder prevailing_def_ironly
   References: 
   Referring: SEGGER_SYSVIEW_Init/20 (addr) 
   Availability: available
   Varpool flags:
-_abSync/2 (_abSync) @06880630
+_abSync/2 (_abSync) @0689b630
   Type: variable definition analyzed
   Visibility: force_output no_reorder prevailing_def_ironly
   References: 
   Referring: SEGGER_SYSVIEW_Start/34 (addr) 
   Availability: available
   Varpool flags: initialized read-only const-value-known
-SEGGER_SYSVIEW_InterruptId/1 (SEGGER_SYSVIEW_InterruptId) @06846f30
+SEGGER_SYSVIEW_InterruptId/1 (SEGGER_SYSVIEW_InterruptId) @0685ef30
   Type: variable definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: 
   Referring: 
   Availability: available
   Varpool flags:
-SEGGER_SYSVIEW_TickCnt/0 (SEGGER_SYSVIEW_TickCnt) @06846ea0
+SEGGER_SYSVIEW_TickCnt/0 (SEGGER_SYSVIEW_TickCnt) @0685eea0
   Type: variable definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: 

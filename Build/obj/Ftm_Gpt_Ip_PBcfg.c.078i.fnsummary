@@ -1,6 +1,6 @@
 Symbol table:
 
-Gpt_ProcessCommonInterrupt/2 (Gpt_ProcessCommonInterrupt) @05bd5380
+Gpt_ProcessCommonInterrupt/2 (Gpt_ProcessCommonInterrupt) @0682a380
   Type: function
   Visibility: external public
   Address is taken.
@@ -10,14 +10,14 @@ Gpt_ProcessCommonInterrupt/2 (Gpt_ProcessCommonInterrupt) @05bd5380
   Function flags:
   Called by: 
   Calls: 
-FTM_0_ChannelConfig_PB/1 (FTM_0_ChannelConfig_PB) @05bd4b88
+FTM_0_ChannelConfig_PB/1 (FTM_0_ChannelConfig_PB) @06828ab0
   Type: variable definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: Gpt_ProcessCommonInterrupt/2 (addr) Gpt_ProcessCommonInterrupt/2 (addr) 
   Referring: 
   Availability: available
   Varpool flags: initialized read-only const-value-known
-FTM_0_InitConfig_PB/0 (FTM_0_InitConfig_PB) @05bd4b40
+FTM_0_InitConfig_PB/0 (FTM_0_InitConfig_PB) @06828a68
   Type: variable definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: 

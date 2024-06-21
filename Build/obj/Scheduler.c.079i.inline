@@ -1,0 +1,1126 @@
+IPA summary for Scheduler_MainFunction/58 is missing.
+IPA summary for Scheduler_ReloadTimer/57 is missing.
+IPA summary for Scheduler_GetTimer/56 is missing.
+IPA summary for Scheduler_StopTimer/55 is missing.
+IPA summary for Scheduler_StartTimer/54 is missing.
+IPA summary for Scheduler_PeriodTask/53 is missing.
+IPA summary for Scheduler_StartTask/52 is missing.
+IPA summary for Scheduler_StopTask/51 is missing.
+IPA summary for Scheduler_Init/50 is missing.
+IPA summary for Bfx_PutBit_u32u8u8/17 is missing.
+IPA summary for Bfx_GetBit_u32u8_u8/2 is missing.
+IPA summary for Bfx_ClrBit_u32u8/1 is missing.
+IPA summary for Bfx_SetBit_u32u8/0 is missing.
+
+Flattening functions:
+Overall time estimate: 0.000000 weighted by profile: 0.000000
+
+Deciding on inlining of small functions.  Starting with size 0.
+node context cache: 0 hits, 0 misses, 0 initializations
+
+Reclaiming functions:
+Reclaiming variables:
+Clearing address taken flags:
+
+Deciding on functions to be inlined into all callers and removing useless speculations:
+Overall time estimate: 0.000000 weighted by profile: 0.000000
+
+Why inlining failed?
+function not considered for inlining              :       10 calls, 10.000000 freq, 0 count
+function body not available                       :        3 calls, 3.000000 freq, 0 count
+IPA summary for Scheduler_MainFunction/58 is missing.
+IPA summary for Scheduler_ReloadTimer/57 is missing.
+IPA summary for Scheduler_GetTimer/56 is missing.
+IPA summary for Scheduler_StopTimer/55 is missing.
+IPA summary for Scheduler_StartTimer/54 is missing.
+IPA summary for Scheduler_PeriodTask/53 is missing.
+IPA summary for Scheduler_StartTask/52 is missing.
+IPA summary for Scheduler_StopTask/51 is missing.
+IPA summary for Scheduler_Init/50 is missing.
+IPA summary for Bfx_PutBit_u32u8u8/17 is missing.
+IPA summary for Bfx_GetBit_u32u8_u8/2 is missing.
+IPA summary for Bfx_ClrBit_u32u8/1 is missing.
+IPA summary for Bfx_SetBit_u32u8/0 is missing.
+Symbol table:
+
+OsIf_GetElapsed/63 (OsIf_GetElapsed) @06a69000
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: Scheduler_MainFunction/58 
+  Calls: 
+OsIf_GetCounter/62 (OsIf_GetCounter) @069ace00
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: Scheduler_MainFunction/58 
+  Calls: 
+OsIf_MicrosToTicks/61 (OsIf_MicrosToTicks) @069acee0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: Scheduler_MainFunction/58 
+  Calls: 
+SchedulerCtrl_Ptr/60 (SchedulerCtrl_Ptr) @06a25900
+  Type: variable
+  Body removed by symtab_remove_unreachable_nodes
+  Visibility: external public
+  References: 
+  Referring: Scheduler_GetTimer/56 (read) Scheduler_ReloadTimer/57 (read) Scheduler_StopTask/51 (read) Scheduler_StartTimer/54 (read) Scheduler_StartTimer/54 (read) Scheduler_StartTimer/54 (read) Scheduler_StartTask/52 (read) Scheduler_PeriodTask/53 (read) Scheduler_StartTimer/54 (read) Scheduler_ReloadTimer/57 (read) Scheduler_StopTimer/55 (read) Scheduler_MainFunction/58 (read) Scheduler_MainFunction/58 (read) Scheduler_MainFunction/58 (read) Scheduler_MainFunction/58 (read) Scheduler_MainFunction/58 (read) Scheduler_MainFunction/58 (read) Scheduler_MainFunction/58 (read) Scheduler_MainFunction/58 (read) Scheduler_MainFunction/58 (read) 
+  Availability: not_available
+  Varpool flags:
+SchedulerConfig_Ptr/59 (SchedulerConfig_Ptr) @06a253a8
+  Type: variable
+  Body removed by symtab_remove_unreachable_nodes
+  Visibility: external public
+  References: 
+  Referring: Scheduler_Init/50 (read) Scheduler_Init/50 (read) Scheduler_PeriodTask/53 (read) Scheduler_PeriodTask/53 (read) Scheduler_GetTimer/56 (read) Scheduler_ReloadTimer/57 (read) Scheduler_Init/50 (read) Scheduler_ReloadTimer/57 (read) Scheduler_ReloadTimer/57 (read) Scheduler_StopTask/51 (read) Scheduler_StartTask/52 (read) Scheduler_PeriodTask/53 (read) Scheduler_StartTimer/54 (read) Scheduler_Init/50 (read) Scheduler_Init/50 (read) Scheduler_StopTimer/55 (read) Scheduler_MainFunction/58 (read) Scheduler_MainFunction/58 (read) Scheduler_MainFunction/58 (read) Scheduler_MainFunction/58 (read) Scheduler_MainFunction/58 (read) Scheduler_MainFunction/58 (read) Scheduler_MainFunction/58 (read) 
+  Availability: not_available
+  Varpool flags:
+Scheduler_MainFunction/58 (Scheduler_MainFunction) @069a3b60
+  Type: function definition analyzed
+  Visibility: force_output externally_visible no_reorder public
+  References: SchedulerConfig_Ptr/59 (read) SchedulerCtrl_Ptr/60 (read) SchedulerCtrl_Ptr/60 (read) SchedulerConfig_Ptr/59 (read) SchedulerCtrl_Ptr/60 (read) SchedulerConfig_Ptr/59 (read) SchedulerConfig_Ptr/59 (read) SchedulerCtrl_Ptr/60 (read) SchedulerCtrl_Ptr/60 (read) SchedulerConfig_Ptr/59 (read) SchedulerCtrl_Ptr/60 (read) SchedulerCtrl_Ptr/60 (read) SchedulerCtrl_Ptr/60 (read) SchedulerConfig_Ptr/59 (read) SchedulerCtrl_Ptr/60 (read) SchedulerConfig_Ptr/59 (read) 
+  Referring: 
+  Availability: available
+  Function flags: body
+  Called by: 
+  Calls: Bfx_GetBit_u32u8_u8/2 Scheduler_GetTimer/56 Bfx_GetBit_u32u8_u8/2 OsIf_GetElapsed/63 OsIf_GetCounter/62 OsIf_MicrosToTicks/61 
+   Indirect call Num speculative call targets: 0
+   Indirect call Num speculative call targets: 0
+Scheduler_ReloadTimer/57 (Scheduler_ReloadTimer) @069a3620
+  Type: function definition analyzed
+  Visibility: force_output externally_visible no_reorder public
+  References: SchedulerConfig_Ptr/59 (read) SchedulerConfig_Ptr/59 (read) SchedulerConfig_Ptr/59 (read) SchedulerCtrl_Ptr/60 (read) SchedulerCtrl_Ptr/60 (read) 
+  Referring: 
+  Availability: available
+  Function flags: body
+  Called by: 
+  Calls: Scheduler_StartTimer/54 
+Scheduler_GetTimer/56 (Scheduler_GetTimer) @069a30e0
+  Type: function definition analyzed
+  Visibility: force_output externally_visible no_reorder public
+  References: SchedulerConfig_Ptr/59 (read) SchedulerCtrl_Ptr/60 (read) 
+  Referring: 
+  Availability: available
+  Function flags: body
+  Called by: Scheduler_MainFunction/58 
+  Calls: 
+Scheduler_StopTimer/55 (Scheduler_StopTimer) @069a3d20
+  Type: function definition analyzed
+  Visibility: force_output externally_visible no_reorder public
+  References: SchedulerConfig_Ptr/59 (read) SchedulerCtrl_Ptr/60 (read) 
+  Referring: 
+  Availability: available
+  Function flags: body
+  Called by: 
+  Calls: Bfx_ClrBit_u32u8/1 
+Scheduler_StartTimer/54 (Scheduler_StartTimer) @069a3a80
+  Type: function definition analyzed
+  Visibility: force_output externally_visible no_reorder public
+  References: SchedulerConfig_Ptr/59 (read) SchedulerCtrl_Ptr/60 (read) SchedulerCtrl_Ptr/60 (read) SchedulerCtrl_Ptr/60 (read) SchedulerCtrl_Ptr/60 (read) 
+  Referring: 
+  Availability: available
+  Function flags: body
+  Called by: Scheduler_ReloadTimer/57 
+  Calls: Bfx_SetBit_u32u8/0 
+Scheduler_PeriodTask/53 (Scheduler_PeriodTask) @069a37e0
+  Type: function definition analyzed
+  Visibility: force_output externally_visible no_reorder public
+  References: SchedulerConfig_Ptr/59 (read) SchedulerConfig_Ptr/59 (read) SchedulerConfig_Ptr/59 (read) SchedulerCtrl_Ptr/60 (read) 
+  Referring: 
+  Availability: available
+  Function flags: body
+  Called by: 
+  Calls: 
+Scheduler_StartTask/52 (Scheduler_StartTask) @069a3540
+  Type: function definition analyzed
+  Visibility: force_output externally_visible no_reorder public
+  References: SchedulerConfig_Ptr/59 (read) SchedulerCtrl_Ptr/60 (read) 
+  Referring: 
+  Availability: available
+  Function flags: body
+  Called by: 
+  Calls: Bfx_SetBit_u32u8/0 
+Scheduler_StopTask/51 (Scheduler_StopTask) @069a32a0
+  Type: function definition analyzed
+  Visibility: force_output externally_visible no_reorder public
+  References: SchedulerConfig_Ptr/59 (read) SchedulerCtrl_Ptr/60 (read) 
+  Referring: 
+  Availability: available
+  Function flags: body
+  Called by: 
+  Calls: Bfx_ClrBit_u32u8/1 
+Scheduler_Init/50 (Scheduler_Init) @069a3000
+  Type: function definition analyzed
+  Visibility: force_output externally_visible no_reorder public
+  References: SchedulerConfig_Ptr/59 (read) SchedulerConfig_Ptr/59 (read) SchedulerConfig_Ptr/59 (read) SchedulerConfig_Ptr/59 (read) SchedulerConfig_Ptr/59 (read) 
+  Referring: 
+  Availability: available
+  Function flags: body
+  Called by: 
+  Calls: Bfx_PutBit_u32u8u8/17 Bfx_PutBit_u32u8u8/17 
+Bfx_PutBit_u32u8u8/17 (Bfx_PutBit_u32u8u8) @06976a80
+  Type: function definition analyzed
+  Visibility: no_reorder prevailing_def_ironly
+  References: 
+  Referring: 
+  Availability: local
+  Function flags: body local
+  Called by: Scheduler_Init/50 Scheduler_Init/50 
+  Calls: 
+Bfx_GetBit_u32u8_u8/2 (Bfx_GetBit_u32u8_u8) @069562a0
+  Type: function definition analyzed
+  Visibility: no_reorder prevailing_def_ironly
+  References: 
+  Referring: 
+  Availability: local
+  Function flags: body local
+  Called by: Scheduler_MainFunction/58 Scheduler_MainFunction/58 
+  Calls: 
+Bfx_ClrBit_u32u8/1 (Bfx_ClrBit_u32u8) @06956000
+  Type: function definition analyzed
+  Visibility: no_reorder prevailing_def_ironly
+  References: 
+  Referring: 
+  Availability: local
+  Function flags: body local
+  Called by: Scheduler_StopTimer/55 Scheduler_StopTask/51 
+  Calls: 
+Bfx_SetBit_u32u8/0 (Bfx_SetBit_u32u8) @06946d20
+  Type: function definition analyzed
+  Visibility: no_reorder prevailing_def_ironly
+  References: 
+  Referring: 
+  Availability: local
+  Function flags: body local
+  Called by: Scheduler_StartTimer/54 Scheduler_StartTask/52 
+  Calls: 
+
+;; Function Bfx_SetBit_u32u8 (Bfx_SetBit_u32u8, funcdef_no=0, decl_uid=5361, cgraph_uid=1, symbol_order=0)
+
+Bfx_SetBit_u32u8 (uint32 * Data, uint8 BitPn)
+{
+  long unsigned int _1;
+  int _2;
+  int _3;
+  long unsigned int _4;
+  long unsigned int _5;
+
+  <bb 2> :
+  _1 = *Data_7(D);
+  _2 = (int) BitPn_8(D);
+  _3 = 1 << _2;
+  _4 = (long unsigned int) _3;
+  _5 = _1 | _4;
+  *Data_7(D) = _5;
+  return;
+
+}
+
+
+
+;; Function Bfx_ClrBit_u32u8 (Bfx_ClrBit_u32u8, funcdef_no=1, decl_uid=5365, cgraph_uid=2, symbol_order=1)
+
+Bfx_ClrBit_u32u8 (uint32 * Data, uint8 BitPn)
+{
+  long unsigned int _1;
+  int _2;
+  int _3;
+  int _4;
+  long unsigned int _5;
+  long unsigned int _6;
+
+  <bb 2> :
+  _1 = *Data_8(D);
+  _2 = (int) BitPn_9(D);
+  _3 = 1 << _2;
+  _4 = ~_3;
+  _5 = (long unsigned int) _4;
+  _6 = _1 & _5;
+  *Data_8(D) = _6;
+  return;
+
+}
+
+
+
+;; Function Bfx_GetBit_u32u8_u8 (Bfx_GetBit_u32u8_u8, funcdef_no=2, decl_uid=5369, cgraph_uid=3, symbol_order=2)
+
+Bfx_GetBit_u32u8_u8 (uint32 Data, uint8 BitPn)
+{
+  boolean Result;
+  boolean D.5838;
+  int _1;
+  int _2;
+  long unsigned int _3;
+  long unsigned int _4;
+  boolean _9;
+
+  <bb 2> :
+  Result_5 = 0;
+  _1 = (int) BitPn_6(D);
+  _2 = 1 << _1;
+  _3 = (long unsigned int) _2;
+  _4 = Data_7(D) & _3;
+  Result_8 = _4 != 0;
+  _9 = Result_8;
+
+  <bb 3> :
+<L0>:
+  return _9;
+
+}
+
+
+
+;; Function Bfx_PutBit_u32u8u8 (Bfx_PutBit_u32u8u8, funcdef_no=17, decl_uid=5448, cgraph_uid=18, symbol_order=17)
+
+Bfx_PutBit_u32u8u8 (uint32 * Data, uint8 BitPn, boolean Status)
+{
+  long unsigned int _1;
+  int _2;
+  int _3;
+  long unsigned int _4;
+  long unsigned int _5;
+  long unsigned int _6;
+  int _7;
+  int _8;
+  int _9;
+  long unsigned int _10;
+  long unsigned int _11;
+
+  <bb 2> :
+  if (Status_13(D) != 0)
+    goto <bb 3>; [INV]
+  else
+    goto <bb 4>; [INV]
+
+  <bb 3> :
+  _1 = *Data_15(D);
+  _2 = (int) BitPn_16(D);
+  _3 = 1 << _2;
+  _4 = (long unsigned int) _3;
+  _5 = _1 | _4;
+  *Data_15(D) = _5;
+  goto <bb 5>; [INV]
+
+  <bb 4> :
+  _6 = *Data_15(D);
+  _7 = (int) BitPn_16(D);
+  _8 = 1 << _7;
+  _9 = ~_8;
+  _10 = (long unsigned int) _9;
+  _11 = _6 & _10;
+  *Data_15(D) = _11;
+
+  <bb 5> :
+  return;
+
+}
+
+
+
+;; Function Scheduler_Init (Scheduler_Init, funcdef_no=50, decl_uid=5684, cgraph_uid=51, symbol_order=50)
+
+Scheduler_Init (struct Scheduler_CtrlType * SchedulerPtr)
+{
+  uint8 i;
+  Std_ReturnType status;
+  Std_ReturnType D.5770;
+  const struct Scheduler_ConfigType * SchedulerConfig_Ptr.0_1;
+  const struct Task_ConfigType * _2;
+  unsigned int _3;
+  unsigned int _4;
+  const struct Task_ConfigType * _5;
+  int _6;
+  long unsigned int _7;
+  int _8;
+  uint32 * _9;
+  const struct Scheduler_ConfigType * SchedulerConfig_Ptr.1_10;
+  const struct Task_ConfigType * _11;
+  unsigned int _12;
+  unsigned int _13;
+  const struct Task_ConfigType * _14;
+  unsigned char _15;
+  _Bool _16;
+  unsigned char i.2_17;
+  const struct Scheduler_ConfigType * SchedulerConfig_Ptr.3_18;
+  const struct Timer_ConfigType * _19;
+  unsigned int _20;
+  unsigned int _21;
+  const struct Timer_ConfigType * _22;
+  int _23;
+  long unsigned int _24;
+  const struct Scheduler_ConfigType * SchedulerConfig_Ptr.4_25;
+  const struct Timer_ConfigType * _26;
+  unsigned int _27;
+  unsigned int _28;
+  const struct Timer_ConfigType * _29;
+  int _30;
+  long unsigned int _31;
+  uint32 * _32;
+  const struct Scheduler_ConfigType * SchedulerConfig_Ptr.5_33;
+  const struct Timer_ConfigType * _34;
+  unsigned int _35;
+  unsigned int _36;
+  const struct Timer_ConfigType * _37;
+  unsigned char _38;
+  _Bool _39;
+  unsigned char i.6_40;
+  Std_ReturnType _50;
+
+  <bb 2> :
+  status_45 = 1;
+  i_46 = 0;
+  i_47 = 0;
+  goto <bb 4>; [INV]
+
+  <bb 3> :
+  SchedulerConfig_Ptr.0_1 = SchedulerConfig_Ptr;
+  _2 = SchedulerConfig_Ptr.0_1->TaskPtr;
+  _3 = (unsigned int) i_41;
+  _4 = _3 * 12;
+  _5 = _2 + _4;
+  _6 = (int) i_41;
+  _7 = _5->InitPeriod;
+  SchedulerPtr_51(D)->TaskPeriod[_6] = _7;
+  _8 = (int) i_41;
+  SchedulerPtr_51(D)->TaskElapsed[_8] = 0;
+  _9 = &SchedulerPtr_51(D)->TaskFlags;
+  SchedulerConfig_Ptr.1_10 = SchedulerConfig_Ptr;
+  _11 = SchedulerConfig_Ptr.1_10->TaskPtr;
+  _12 = (unsigned int) i_41;
+  _13 = _12 * 12;
+  _14 = _11 + _13;
+  _15 = _14->InitFlag;
+  _16 = _15 != 0;
+  Bfx_PutBit_u32u8u8 (_9, i_41, _16);
+  i.2_17 = i_41;
+  i_59 = i.2_17 + 1;
+
+  <bb 4> :
+  # i_41 = PHI <i_47(2), i_59(3)>
+  if (i_41 <= 1)
+    goto <bb 3>; [INV]
+  else
+    goto <bb 5>; [INV]
+
+  <bb 5> :
+  i_49 = 0;
+  goto <bb 7>; [INV]
+
+  <bb 6> :
+  SchedulerConfig_Ptr.3_18 = SchedulerConfig_Ptr;
+  _19 = SchedulerConfig_Ptr.3_18->TimerPtr;
+  _20 = (unsigned int) i_42;
+  _21 = _20 * 12;
+  _22 = _19 + _21;
+  _23 = (int) i_42;
+  _24 = _22->InitTimeout;
+  SchedulerPtr_51(D)->TimerTimeout[_23] = _24;
+  SchedulerConfig_Ptr.4_25 = SchedulerConfig_Ptr;
+  _26 = SchedulerConfig_Ptr.4_25->TimerPtr;
+  _27 = (unsigned int) i_42;
+  _28 = _27 * 12;
+  _29 = _26 + _28;
+  _30 = (int) i_42;
+  _31 = _29->InitTimeout;
+  SchedulerPtr_51(D)->TimerCount[_30] = _31;
+  _32 = &SchedulerPtr_51(D)->TimerFlags;
+  SchedulerConfig_Ptr.5_33 = SchedulerConfig_Ptr;
+  _34 = SchedulerConfig_Ptr.5_33->TimerPtr;
+  _35 = (unsigned int) i_42;
+  _36 = _35 * 12;
+  _37 = _34 + _36;
+  _38 = _37->InitFlag;
+  _39 = _38 != 0;
+  Bfx_PutBit_u32u8u8 (_32, i_42, _39);
+  i.6_40 = i_42;
+  i_55 = i.6_40 + 1;
+
+  <bb 7> :
+  # i_42 = PHI <i_49(5), i_55(6)>
+  if (i_42 <= 1)
+    goto <bb 6>; [INV]
+  else
+    goto <bb 8>; [INV]
+
+  <bb 8> :
+  _50 = status_45;
+
+  <bb 9> :
+<L6>:
+  return _50;
+
+}
+
+
+
+;; Function Scheduler_StopTask (Scheduler_StopTask, funcdef_no=51, decl_uid=5686, cgraph_uid=52, symbol_order=51)
+
+Scheduler_StopTask (TaskType Task)
+{
+  Std_ReturnType status;
+  Std_ReturnType D.5779;
+  const struct Scheduler_ConfigType * SchedulerConfig_Ptr.7_1;
+  unsigned char _2;
+  struct Scheduler_CtrlType * SchedulerCtrl_Ptr.8_3;
+  uint32 * _4;
+  unsigned char _5;
+  Std_ReturnType _14;
+
+  <bb 2> :
+  status_8 = 0;
+  if (Task_9(D) != 0)
+    goto <bb 3>; [INV]
+  else
+    goto <bb 5>; [INV]
+
+  <bb 3> :
+  SchedulerConfig_Ptr.7_1 = SchedulerConfig_Ptr;
+  _2 = SchedulerConfig_Ptr.7_1->Tasks;
+  if (Task_9(D) <= _2)
+    goto <bb 4>; [INV]
+  else
+    goto <bb 5>; [INV]
+
+  <bb 4> :
+  SchedulerCtrl_Ptr.8_3 = SchedulerCtrl_Ptr;
+  _4 = &SchedulerCtrl_Ptr.8_3->TaskFlags;
+  _5 = Task_9(D) + 255;
+  Bfx_ClrBit_u32u8 (_4, _5);
+  status_12 = 1;
+  goto <bb 6>; [INV]
+
+  <bb 5> :
+  status_13 = 0;
+
+  <bb 6> :
+  # status_6 = PHI <status_12(4), status_13(5)>
+  _14 = status_6;
+
+  <bb 7> :
+<L4>:
+  return _14;
+
+}
+
+
+
+;; Function Scheduler_StartTask (Scheduler_StartTask, funcdef_no=52, decl_uid=5688, cgraph_uid=53, symbol_order=52)
+
+Scheduler_StartTask (TaskType Task)
+{
+  Std_ReturnType status;
+  Std_ReturnType D.5785;
+  const struct Scheduler_ConfigType * SchedulerConfig_Ptr.9_1;
+  unsigned char _2;
+  struct Scheduler_CtrlType * SchedulerCtrl_Ptr.10_3;
+  uint32 * _4;
+  unsigned char _5;
+  Std_ReturnType _14;
+
+  <bb 2> :
+  status_8 = 0;
+  if (Task_9(D) != 0)
+    goto <bb 3>; [INV]
+  else
+    goto <bb 5>; [INV]
+
+  <bb 3> :
+  SchedulerConfig_Ptr.9_1 = SchedulerConfig_Ptr;
+  _2 = SchedulerConfig_Ptr.9_1->Tasks;
+  if (Task_9(D) <= _2)
+    goto <bb 4>; [INV]
+  else
+    goto <bb 5>; [INV]
+
+  <bb 4> :
+  SchedulerCtrl_Ptr.10_3 = SchedulerCtrl_Ptr;
+  _4 = &SchedulerCtrl_Ptr.10_3->TaskFlags;
+  _5 = Task_9(D) + 255;
+  Bfx_SetBit_u32u8 (_4, _5);
+  status_12 = 1;
+  goto <bb 6>; [INV]
+
+  <bb 5> :
+  status_13 = 0;
+
+  <bb 6> :
+  # status_6 = PHI <status_12(4), status_13(5)>
+  _14 = status_6;
+
+  <bb 7> :
+<L4>:
+  return _14;
+
+}
+
+
+
+;; Function Scheduler_PeriodTask (Scheduler_PeriodTask, funcdef_no=53, decl_uid=5691, cgraph_uid=54, symbol_order=53)
+
+Scheduler_PeriodTask (TaskType Task, uint32 NewPeriod)
+{
+  Std_ReturnType status;
+  Std_ReturnType D.5795;
+  const struct Scheduler_ConfigType * SchedulerConfig_Ptr.11_1;
+  unsigned char _2;
+  const struct Scheduler_ConfigType * SchedulerConfig_Ptr.12_3;
+  long unsigned int _4;
+  const struct Scheduler_ConfigType * SchedulerConfig_Ptr.13_5;
+  long unsigned int _6;
+  long unsigned int _7;
+  struct Scheduler_CtrlType * SchedulerCtrl_Ptr.14_8;
+  int _9;
+  int _10;
+  Std_ReturnType _23;
+
+  <bb 2> :
+  status_15 = 0;
+  if (Task_16(D) != 0)
+    goto <bb 3>; [INV]
+  else
+    goto <bb 9>; [INV]
+
+  <bb 3> :
+  SchedulerConfig_Ptr.11_1 = SchedulerConfig_Ptr;
+  _2 = SchedulerConfig_Ptr.11_1->Tasks;
+  if (Task_16(D) <= _2)
+    goto <bb 4>; [INV]
+  else
+    goto <bb 9>; [INV]
+
+  <bb 4> :
+  SchedulerConfig_Ptr.12_3 = SchedulerConfig_Ptr;
+  _4 = SchedulerConfig_Ptr.12_3->Tick;
+  if (NewPeriod_18(D) >= _4)
+    goto <bb 5>; [INV]
+  else
+    goto <bb 7>; [INV]
+
+  <bb 5> :
+  SchedulerConfig_Ptr.13_5 = SchedulerConfig_Ptr;
+  _6 = SchedulerConfig_Ptr.13_5->Tick;
+  _7 = NewPeriod_18(D) % _6;
+  if (_7 == 0)
+    goto <bb 6>; [INV]
+  else
+    goto <bb 7>; [INV]
+
+  <bb 6> :
+  SchedulerCtrl_Ptr.14_8 = SchedulerCtrl_Ptr;
+  _9 = (int) Task_16(D);
+  _10 = _9 + -1;
+  SchedulerCtrl_Ptr.14_8->TaskPeriod[_10] = NewPeriod_18(D);
+  status_20 = 1;
+  goto <bb 8>; [INV]
+
+  <bb 7> :
+  status_21 = 0;
+
+  <bb 8> :
+  # status_11 = PHI <status_20(6), status_21(7)>
+  goto <bb 10>; [INV]
+
+  <bb 9> :
+  status_22 = 0;
+
+  <bb 10> :
+  # status_12 = PHI <status_11(8), status_22(9)>
+  _23 = status_12;
+
+  <bb 11> :
+<L8>:
+  return _23;
+
+}
+
+
+
+;; Function Scheduler_StartTimer (Scheduler_StartTimer, funcdef_no=54, decl_uid=5693, cgraph_uid=55, symbol_order=54)
+
+Scheduler_StartTimer (TimerType Timer)
+{
+  Std_ReturnType status;
+  Std_ReturnType D.5803;
+  const struct Scheduler_ConfigType * SchedulerConfig_Ptr.15_1;
+  unsigned char _2;
+  struct Scheduler_CtrlType * SchedulerCtrl_Ptr.16_3;
+  uint32 * _4;
+  unsigned char _5;
+  struct Scheduler_CtrlType * SchedulerCtrl_Ptr.17_6;
+  int _7;
+  int _8;
+  long unsigned int _9;
+  struct Scheduler_CtrlType * SchedulerCtrl_Ptr.18_10;
+  int _11;
+  int _12;
+  struct Scheduler_CtrlType * SchedulerCtrl_Ptr.19_13;
+  int _14;
+  int _15;
+  long unsigned int _16;
+  Std_ReturnType _27;
+
+  <bb 2> :
+  status_20 = 0;
+  if (Timer_21(D) != 0)
+    goto <bb 3>; [INV]
+  else
+    goto <bb 7>; [INV]
+
+  <bb 3> :
+  SchedulerConfig_Ptr.15_1 = SchedulerConfig_Ptr;
+  _2 = SchedulerConfig_Ptr.15_1->Timers;
+  if (Timer_21(D) <= _2)
+    goto <bb 4>; [INV]
+  else
+    goto <bb 7>; [INV]
+
+  <bb 4> :
+  SchedulerCtrl_Ptr.16_3 = SchedulerCtrl_Ptr;
+  _4 = &SchedulerCtrl_Ptr.16_3->TimerFlags;
+  _5 = Timer_21(D) + 255;
+  Bfx_SetBit_u32u8 (_4, _5);
+  SchedulerCtrl_Ptr.17_6 = SchedulerCtrl_Ptr;
+  _7 = (int) Timer_21(D);
+  _8 = _7 + -1;
+  _9 = SchedulerCtrl_Ptr.17_6->TimerCount[_8];
+  if (_9 == 0)
+    goto <bb 5>; [INV]
+  else
+    goto <bb 6>; [INV]
+
+  <bb 5> :
+  SchedulerCtrl_Ptr.18_10 = SchedulerCtrl_Ptr;
+  _11 = (int) Timer_21(D);
+  _12 = _11 + -1;
+  SchedulerCtrl_Ptr.19_13 = SchedulerCtrl_Ptr;
+  _14 = (int) Timer_21(D);
+  _15 = _14 + -1;
+  _16 = SchedulerCtrl_Ptr.18_10->TimerTimeout[_12];
+  SchedulerCtrl_Ptr.19_13->TimerCount[_15] = _16;
+
+  <bb 6> :
+  status_25 = 1;
+  goto <bb 8>; [INV]
+
+  <bb 7> :
+  status_26 = 0;
+
+  <bb 8> :
+  # status_17 = PHI <status_25(6), status_26(7)>
+  _27 = status_17;
+
+  <bb 9> :
+<L6>:
+  return _27;
+
+}
+
+
+
+;; Function Scheduler_StopTimer (Scheduler_StopTimer, funcdef_no=55, decl_uid=5695, cgraph_uid=56, symbol_order=55)
+
+Scheduler_StopTimer (TimerType Timer)
+{
+  Std_ReturnType status;
+  Std_ReturnType D.5809;
+  const struct Scheduler_ConfigType * SchedulerConfig_Ptr.20_1;
+  unsigned char _2;
+  struct Scheduler_CtrlType * SchedulerCtrl_Ptr.21_3;
+  uint32 * _4;
+  unsigned char _5;
+  Std_ReturnType _14;
+
+  <bb 2> :
+  status_8 = 0;
+  if (Timer_9(D) != 0)
+    goto <bb 3>; [INV]
+  else
+    goto <bb 5>; [INV]
+
+  <bb 3> :
+  SchedulerConfig_Ptr.20_1 = SchedulerConfig_Ptr;
+  _2 = SchedulerConfig_Ptr.20_1->Timers;
+  if (Timer_9(D) <= _2)
+    goto <bb 4>; [INV]
+  else
+    goto <bb 5>; [INV]
+
+  <bb 4> :
+  SchedulerCtrl_Ptr.21_3 = SchedulerCtrl_Ptr;
+  _4 = &SchedulerCtrl_Ptr.21_3->TimerFlags;
+  _5 = Timer_9(D) + 255;
+  Bfx_ClrBit_u32u8 (_4, _5);
+  status_12 = 1;
+  goto <bb 6>; [INV]
+
+  <bb 5> :
+  status_13 = 0;
+
+  <bb 6> :
+  # status_6 = PHI <status_12(4), status_13(5)>
+  _14 = status_6;
+
+  <bb 7> :
+<L4>:
+  return _14;
+
+}
+
+
+
+;; Function Scheduler_GetTimer (Scheduler_GetTimer, funcdef_no=56, decl_uid=5697, cgraph_uid=57, symbol_order=56)
+
+Scheduler_GetTimer (TimerType Timer)
+{
+  uint32 counter_value;
+  uint32 D.5815;
+  const struct Scheduler_ConfigType * SchedulerConfig_Ptr.22_1;
+  unsigned char _2;
+  struct Scheduler_CtrlType * SchedulerCtrl_Ptr.23_3;
+  int _4;
+  int _5;
+  uint32 _12;
+
+  <bb 2> :
+  counter_value_7 = 0;
+  if (Timer_8(D) != 0)
+    goto <bb 3>; [INV]
+  else
+    goto <bb 5>; [INV]
+
+  <bb 3> :
+  SchedulerConfig_Ptr.22_1 = SchedulerConfig_Ptr;
+  _2 = SchedulerConfig_Ptr.22_1->Timers;
+  if (Timer_8(D) <= _2)
+    goto <bb 4>; [INV]
+  else
+    goto <bb 5>; [INV]
+
+  <bb 4> :
+  SchedulerCtrl_Ptr.23_3 = SchedulerCtrl_Ptr;
+  _4 = (int) Timer_8(D);
+  _5 = _4 + -1;
+  counter_value_10 = SchedulerCtrl_Ptr.23_3->TimerCount[_5];
+  goto <bb 6>; [INV]
+
+  <bb 5> :
+  counter_value_11 = 0;
+
+  <bb 6> :
+  # counter_value_6 = PHI <counter_value_10(4), counter_value_11(5)>
+  _12 = counter_value_6;
+
+  <bb 7> :
+<L4>:
+  return _12;
+
+}
+
+
+
+;; Function Scheduler_ReloadTimer (Scheduler_ReloadTimer, funcdef_no=57, decl_uid=5700, cgraph_uid=58, symbol_order=57)
+
+Scheduler_ReloadTimer (TimerType Timer, uint32 NewTimeout)
+{
+  Std_ReturnType status;
+  Std_ReturnType D.5825;
+  const struct Scheduler_ConfigType * SchedulerConfig_Ptr.24_1;
+  unsigned char _2;
+  const struct Scheduler_ConfigType * SchedulerConfig_Ptr.25_3;
+  long unsigned int _4;
+  const struct Scheduler_ConfigType * SchedulerConfig_Ptr.26_5;
+  long unsigned int _6;
+  long unsigned int _7;
+  struct Scheduler_CtrlType * SchedulerCtrl_Ptr.27_8;
+  int _9;
+  int _10;
+  struct Scheduler_CtrlType * SchedulerCtrl_Ptr.28_11;
+  int _12;
+  int _13;
+  Std_ReturnType _28;
+
+  <bb 2> :
+  status_18 = 0;
+  if (Timer_19(D) != 0)
+    goto <bb 3>; [INV]
+  else
+    goto <bb 9>; [INV]
+
+  <bb 3> :
+  SchedulerConfig_Ptr.24_1 = SchedulerConfig_Ptr;
+  _2 = SchedulerConfig_Ptr.24_1->Timers;
+  if (Timer_19(D) <= _2)
+    goto <bb 4>; [INV]
+  else
+    goto <bb 9>; [INV]
+
+  <bb 4> :
+  SchedulerConfig_Ptr.25_3 = SchedulerConfig_Ptr;
+  _4 = SchedulerConfig_Ptr.25_3->Tick;
+  if (NewTimeout_21(D) >= _4)
+    goto <bb 5>; [INV]
+  else
+    goto <bb 7>; [INV]
+
+  <bb 5> :
+  SchedulerConfig_Ptr.26_5 = SchedulerConfig_Ptr;
+  _6 = SchedulerConfig_Ptr.26_5->Tick;
+  _7 = NewTimeout_21(D) % _6;
+  if (_7 == 0)
+    goto <bb 6>; [INV]
+  else
+    goto <bb 7>; [INV]
+
+  <bb 6> :
+  SchedulerCtrl_Ptr.27_8 = SchedulerCtrl_Ptr;
+  _9 = (int) Timer_19(D);
+  _10 = _9 + -1;
+  SchedulerCtrl_Ptr.27_8->TimerTimeout[_10] = NewTimeout_21(D);
+  SchedulerCtrl_Ptr.28_11 = SchedulerCtrl_Ptr;
+  _12 = (int) Timer_19(D);
+  _13 = _12 + -1;
+  SchedulerCtrl_Ptr.28_11->TimerCount[_13] = NewTimeout_21(D);
+  Scheduler_StartTimer (Timer_19(D));
+  status_25 = 1;
+  goto <bb 8>; [INV]
+
+  <bb 7> :
+  status_26 = 0;
+
+  <bb 8> :
+  # status_14 = PHI <status_25(6), status_26(7)>
+  goto <bb 10>; [INV]
+
+  <bb 9> :
+  status_27 = 0;
+
+  <bb 10> :
+  # status_15 = PHI <status_14(8), status_27(9)>
+  _28 = status_15;
+
+  <bb 11> :
+<L8>:
+  return _28;
+
+}
+
+
+
+;; Function Scheduler_MainFunction (Scheduler_MainFunction, funcdef_no=58, decl_uid=5702, cgraph_uid=59, symbol_order=58)
+
+Scheduler_MainFunction ()
+{
+  uint8 i;
+  uint32 elapsed_time;
+  uint32 count_value;
+  uint32 tick_value;
+  long unsigned int D.5827;
+  const struct Scheduler_ConfigType * SchedulerConfig_Ptr.29_1;
+  long unsigned int _2;
+  long unsigned int _3;
+  long unsigned int _4;
+  struct Scheduler_CtrlType * SchedulerCtrl_Ptr.30_5;
+  long unsigned int _6;
+  _Bool _7;
+  struct Scheduler_CtrlType * SchedulerCtrl_Ptr.31_8;
+  int _9;
+  long unsigned int _10;
+  const struct Scheduler_ConfigType * SchedulerConfig_Ptr.32_11;
+  long unsigned int _12;
+  struct Scheduler_CtrlType * SchedulerCtrl_Ptr.33_13;
+  int _14;
+  long unsigned int _15;
+  unsigned char _16;
+  long unsigned int _17;
+  const struct Scheduler_ConfigType * SchedulerConfig_Ptr.34_18;
+  const struct Timer_ConfigType * _19;
+  unsigned int _20;
+  unsigned int _21;
+  const struct Timer_ConfigType * _22;
+  void (*<T521>) (void) _23;
+  unsigned char i.35_24;
+  const struct Scheduler_ConfigType * SchedulerConfig_Ptr.36_25;
+  unsigned char _26;
+  struct Scheduler_CtrlType * SchedulerCtrl_Ptr.37_27;
+  long unsigned int _28;
+  _Bool _29;
+  struct Scheduler_CtrlType * SchedulerCtrl_Ptr.38_30;
+  int _31;
+  long unsigned int _32;
+  const struct Scheduler_ConfigType * SchedulerConfig_Ptr.39_33;
+  long unsigned int _34;
+  struct Scheduler_CtrlType * SchedulerCtrl_Ptr.40_35;
+  int _36;
+  long unsigned int _37;
+  struct Scheduler_CtrlType * SchedulerCtrl_Ptr.41_38;
+  int _39;
+  long unsigned int _40;
+  struct Scheduler_CtrlType * SchedulerCtrl_Ptr.42_41;
+  int _42;
+  long unsigned int _43;
+  const struct Scheduler_ConfigType * SchedulerConfig_Ptr.43_44;
+  const struct Task_ConfigType * _45;
+  unsigned int _46;
+  unsigned int _47;
+  const struct Task_ConfigType * _48;
+  void (*<T521>) (void) _49;
+  struct Scheduler_CtrlType * SchedulerCtrl_Ptr.44_50;
+  int _51;
+  unsigned char i.45_52;
+  const struct Scheduler_ConfigType * SchedulerConfig_Ptr.46_53;
+  unsigned char _54;
+  long unsigned int _73;
+
+  <bb 2> :
+  SchedulerConfig_Ptr.29_1 = SchedulerConfig_Ptr;
+  _2 = SchedulerConfig_Ptr.29_1->Tick;
+  _3 = _2 * 1000;
+  tick_value_67 = OsIf_MicrosToTicks (_3, 1);
+  _4 = OsIf_GetCounter (1);
+  count_value = _4;
+  elapsed_time_70 = 0;
+  i_71 = 0;
+
+  <bb 3> :
+  # elapsed_time_55 = PHI <elapsed_time_70(2), elapsed_time_56(17)>
+  _73 = OsIf_GetElapsed (&count_value, 1);
+  elapsed_time_74 = _73 + elapsed_time_55;
+  if (elapsed_time_74 >= tick_value_67)
+    goto <bb 4>; [INV]
+  else
+    goto <bb 17>; [INV]
+
+  <bb 4> :
+  i_75 = 0;
+  goto <bb 9>; [INV]
+
+  <bb 5> :
+  SchedulerCtrl_Ptr.30_5 = SchedulerCtrl_Ptr;
+  _6 = SchedulerCtrl_Ptr.30_5->TimerFlags;
+  _7 = Bfx_GetBit_u32u8_u8 (_6, i_57);
+  if (_7 != 0)
+    goto <bb 6>; [INV]
+  else
+    goto <bb 8>; [INV]
+
+  <bb 6> :
+  SchedulerCtrl_Ptr.31_8 = SchedulerCtrl_Ptr;
+  _9 = (int) i_57;
+  _10 = SchedulerCtrl_Ptr.31_8->TimerCount[_9];
+  SchedulerConfig_Ptr.32_11 = SchedulerConfig_Ptr;
+  _12 = SchedulerConfig_Ptr.32_11->Tick;
+  SchedulerCtrl_Ptr.33_13 = SchedulerCtrl_Ptr;
+  _14 = (int) i_57;
+  _15 = _10 - _12;
+  SchedulerCtrl_Ptr.33_13->TimerCount[_14] = _15;
+  _16 = i_57 + 1;
+  _17 = Scheduler_GetTimer (_16);
+  if (_17 == 0)
+    goto <bb 7>; [INV]
+  else
+    goto <bb 8>; [INV]
+
+  <bb 7> :
+  SchedulerConfig_Ptr.34_18 = SchedulerConfig_Ptr;
+  _19 = SchedulerConfig_Ptr.34_18->TimerPtr;
+  _20 = (unsigned int) i_57;
+  _21 = _20 * 12;
+  _22 = _19 + _21;
+  _23 = _22->CallbackFunc;
+  _23 ();
+
+  <bb 8> :
+  i.35_24 = i_57;
+  i_87 = i.35_24 + 1;
+
+  <bb 9> :
+  # i_57 = PHI <i_75(4), i_87(8)>
+  SchedulerConfig_Ptr.36_25 = SchedulerConfig_Ptr;
+  _26 = SchedulerConfig_Ptr.36_25->Timers;
+  if (i_57 < _26)
+    goto <bb 5>; [INV]
+  else
+    goto <bb 10>; [INV]
+
+  <bb 10> :
+  i_76 = 0;
+  goto <bb 15>; [INV]
+
+  <bb 11> :
+  SchedulerCtrl_Ptr.37_27 = SchedulerCtrl_Ptr;
+  _28 = SchedulerCtrl_Ptr.37_27->TaskFlags;
+  _29 = Bfx_GetBit_u32u8_u8 (_28, i_58);
+  if (_29 != 0)
+    goto <bb 12>; [INV]
+  else
+    goto <bb 14>; [INV]
+
+  <bb 12> :
+  SchedulerCtrl_Ptr.38_30 = SchedulerCtrl_Ptr;
+  _31 = (int) i_58;
+  _32 = SchedulerCtrl_Ptr.38_30->TaskElapsed[_31];
+  SchedulerConfig_Ptr.39_33 = SchedulerConfig_Ptr;
+  _34 = SchedulerConfig_Ptr.39_33->Tick;
+  SchedulerCtrl_Ptr.40_35 = SchedulerCtrl_Ptr;
+  _36 = (int) i_58;
+  _37 = _32 + _34;
+  SchedulerCtrl_Ptr.40_35->TaskElapsed[_36] = _37;
+  SchedulerCtrl_Ptr.41_38 = SchedulerCtrl_Ptr;
+  _39 = (int) i_58;
+  _40 = SchedulerCtrl_Ptr.41_38->TaskElapsed[_39];
+  SchedulerCtrl_Ptr.42_41 = SchedulerCtrl_Ptr;
+  _42 = (int) i_58;
+  _43 = SchedulerCtrl_Ptr.42_41->TaskPeriod[_42];
+  if (_40 >= _43)
+    goto <bb 13>; [INV]
+  else
+    goto <bb 14>; [INV]
+
+  <bb 13> :
+  SchedulerConfig_Ptr.43_44 = SchedulerConfig_Ptr;
+  _45 = SchedulerConfig_Ptr.43_44->TaskPtr;
+  _46 = (unsigned int) i_58;
+  _47 = _46 * 12;
+  _48 = _45 + _47;
+  _49 = _48->TaskFunc;
+  _49 ();
+  SchedulerCtrl_Ptr.44_50 = SchedulerCtrl_Ptr;
+  _51 = (int) i_58;
+  SchedulerCtrl_Ptr.44_50->TaskElapsed[_51] = 0;
+
+  <bb 14> :
+  i.45_52 = i_58;
+  i_82 = i.45_52 + 1;
+
+  <bb 15> :
+  # i_58 = PHI <i_76(10), i_82(14)>
+  SchedulerConfig_Ptr.46_53 = SchedulerConfig_Ptr;
+  _54 = SchedulerConfig_Ptr.46_53->Tasks;
+  if (i_58 < _54)
+    goto <bb 11>; [INV]
+  else
+    goto <bb 16>; [INV]
+
+  <bb 16> :
+  elapsed_time_77 = 0;
+
+  <bb 17> :
+  # elapsed_time_56 = PHI <elapsed_time_74(3), elapsed_time_77(16)>
+  goto <bb 3>; [INV]
+
+}
+
+

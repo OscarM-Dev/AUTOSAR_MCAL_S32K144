@@ -31,7 +31,7 @@ IPA summary for SchM_Enter_Mcu_MCU_EXCLUSIVE_AREA_00/7 is missing.
 IPA summary for Mcu_schm_read_msr/6 is missing.
 Symbol table:
 
-Sys_GetCoreID/13 (Sys_GetCoreID) @069581c0
+Sys_GetCoreID/13 (Sys_GetCoreID) @0695d1c0
   Type: function
   Visibility: external public
   References: 
@@ -40,7 +40,7 @@ Sys_GetCoreID/13 (Sys_GetCoreID) @069581c0
   Function flags:
   Called by: SchM_Exit_Mcu_MCU_EXCLUSIVE_AREA_02/12 SchM_Enter_Mcu_MCU_EXCLUSIVE_AREA_02/11 SchM_Exit_Mcu_MCU_EXCLUSIVE_AREA_01/10 SchM_Enter_Mcu_MCU_EXCLUSIVE_AREA_01/9 SchM_Exit_Mcu_MCU_EXCLUSIVE_AREA_00/8 SchM_Enter_Mcu_MCU_EXCLUSIVE_AREA_00/7 
   Calls: 
-SchM_Exit_Mcu_MCU_EXCLUSIVE_AREA_02/12 (SchM_Exit_Mcu_MCU_EXCLUSIVE_AREA_02) @06954380
+SchM_Exit_Mcu_MCU_EXCLUSIVE_AREA_02/12 (SchM_Exit_Mcu_MCU_EXCLUSIVE_AREA_02) @06959380
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: reentry_guard_MCU_EXCLUSIVE_AREA_02/5 (read) reentry_guard_MCU_EXCLUSIVE_AREA_02/5 (write) msr_MCU_EXCLUSIVE_AREA_02/4 (read) reentry_guard_MCU_EXCLUSIVE_AREA_02/5 (read) 
@@ -49,7 +49,7 @@ SchM_Exit_Mcu_MCU_EXCLUSIVE_AREA_02/12 (SchM_Exit_Mcu_MCU_EXCLUSIVE_AREA_02) @06
   Function flags: body
   Called by: 
   Calls: Sys_GetCoreID/13 
-SchM_Enter_Mcu_MCU_EXCLUSIVE_AREA_02/11 (SchM_Enter_Mcu_MCU_EXCLUSIVE_AREA_02) @06954ee0
+SchM_Enter_Mcu_MCU_EXCLUSIVE_AREA_02/11 (SchM_Enter_Mcu_MCU_EXCLUSIVE_AREA_02) @06959ee0
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: reentry_guard_MCU_EXCLUSIVE_AREA_02/5 (read) msr_MCU_EXCLUSIVE_AREA_02/4 (write) reentry_guard_MCU_EXCLUSIVE_AREA_02/5 (read) reentry_guard_MCU_EXCLUSIVE_AREA_02/5 (write) 
@@ -58,7 +58,7 @@ SchM_Enter_Mcu_MCU_EXCLUSIVE_AREA_02/11 (SchM_Enter_Mcu_MCU_EXCLUSIVE_AREA_02) @
   Function flags: body
   Called by: 
   Calls: Mcu_schm_read_msr/6 Sys_GetCoreID/13 
-SchM_Exit_Mcu_MCU_EXCLUSIVE_AREA_01/10 (SchM_Exit_Mcu_MCU_EXCLUSIVE_AREA_01) @06954b60
+SchM_Exit_Mcu_MCU_EXCLUSIVE_AREA_01/10 (SchM_Exit_Mcu_MCU_EXCLUSIVE_AREA_01) @06959b60
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: reentry_guard_MCU_EXCLUSIVE_AREA_01/3 (read) reentry_guard_MCU_EXCLUSIVE_AREA_01/3 (write) msr_MCU_EXCLUSIVE_AREA_01/2 (read) reentry_guard_MCU_EXCLUSIVE_AREA_01/3 (read) 
@@ -67,7 +67,7 @@ SchM_Exit_Mcu_MCU_EXCLUSIVE_AREA_01/10 (SchM_Exit_Mcu_MCU_EXCLUSIVE_AREA_01) @06
   Function flags: body
   Called by: 
   Calls: Sys_GetCoreID/13 
-SchM_Enter_Mcu_MCU_EXCLUSIVE_AREA_01/9 (SchM_Enter_Mcu_MCU_EXCLUSIVE_AREA_01) @069548c0
+SchM_Enter_Mcu_MCU_EXCLUSIVE_AREA_01/9 (SchM_Enter_Mcu_MCU_EXCLUSIVE_AREA_01) @069598c0
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: reentry_guard_MCU_EXCLUSIVE_AREA_01/3 (read) msr_MCU_EXCLUSIVE_AREA_01/2 (write) reentry_guard_MCU_EXCLUSIVE_AREA_01/3 (read) reentry_guard_MCU_EXCLUSIVE_AREA_01/3 (write) 
@@ -76,7 +76,7 @@ SchM_Enter_Mcu_MCU_EXCLUSIVE_AREA_01/9 (SchM_Enter_Mcu_MCU_EXCLUSIVE_AREA_01) @0
   Function flags: body
   Called by: 
   Calls: Mcu_schm_read_msr/6 Sys_GetCoreID/13 
-SchM_Exit_Mcu_MCU_EXCLUSIVE_AREA_00/8 (SchM_Exit_Mcu_MCU_EXCLUSIVE_AREA_00) @06954540
+SchM_Exit_Mcu_MCU_EXCLUSIVE_AREA_00/8 (SchM_Exit_Mcu_MCU_EXCLUSIVE_AREA_00) @06959540
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: reentry_guard_MCU_EXCLUSIVE_AREA_00/1 (read) reentry_guard_MCU_EXCLUSIVE_AREA_00/1 (write) msr_MCU_EXCLUSIVE_AREA_00/0 (read) reentry_guard_MCU_EXCLUSIVE_AREA_00/1 (read) 
@@ -85,7 +85,7 @@ SchM_Exit_Mcu_MCU_EXCLUSIVE_AREA_00/8 (SchM_Exit_Mcu_MCU_EXCLUSIVE_AREA_00) @069
   Function flags: body
   Called by: 
   Calls: Sys_GetCoreID/13 
-SchM_Enter_Mcu_MCU_EXCLUSIVE_AREA_00/7 (SchM_Enter_Mcu_MCU_EXCLUSIVE_AREA_00) @069542a0
+SchM_Enter_Mcu_MCU_EXCLUSIVE_AREA_00/7 (SchM_Enter_Mcu_MCU_EXCLUSIVE_AREA_00) @069592a0
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: reentry_guard_MCU_EXCLUSIVE_AREA_00/1 (read) msr_MCU_EXCLUSIVE_AREA_00/0 (write) reentry_guard_MCU_EXCLUSIVE_AREA_00/1 (read) reentry_guard_MCU_EXCLUSIVE_AREA_00/1 (write) 
@@ -94,7 +94,7 @@ SchM_Enter_Mcu_MCU_EXCLUSIVE_AREA_00/7 (SchM_Enter_Mcu_MCU_EXCLUSIVE_AREA_00) @0
   Function flags: body
   Called by: 
   Calls: Mcu_schm_read_msr/6 Sys_GetCoreID/13 
-Mcu_schm_read_msr/6 (Mcu_schm_read_msr) @0694ee00
+Mcu_schm_read_msr/6 (Mcu_schm_read_msr) @06953e00
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: 
@@ -103,42 +103,42 @@ Mcu_schm_read_msr/6 (Mcu_schm_read_msr) @0694ee00
   Function flags: body
   Called by: SchM_Enter_Mcu_MCU_EXCLUSIVE_AREA_02/11 SchM_Enter_Mcu_MCU_EXCLUSIVE_AREA_01/9 SchM_Enter_Mcu_MCU_EXCLUSIVE_AREA_00/7 
   Calls: 
-reentry_guard_MCU_EXCLUSIVE_AREA_02/5 (reentry_guard_MCU_EXCLUSIVE_AREA_02) @0694f4c8
+reentry_guard_MCU_EXCLUSIVE_AREA_02/5 (reentry_guard_MCU_EXCLUSIVE_AREA_02) @069544c8
   Type: variable definition analyzed
   Visibility: force_output no_reorder prevailing_def_ironly
   References: 
   Referring: SchM_Enter_Mcu_MCU_EXCLUSIVE_AREA_02/11 (read) SchM_Enter_Mcu_MCU_EXCLUSIVE_AREA_02/11 (read) SchM_Enter_Mcu_MCU_EXCLUSIVE_AREA_02/11 (write) SchM_Exit_Mcu_MCU_EXCLUSIVE_AREA_02/12 (read) SchM_Exit_Mcu_MCU_EXCLUSIVE_AREA_02/12 (write) SchM_Exit_Mcu_MCU_EXCLUSIVE_AREA_02/12 (read) 
   Availability: available
   Varpool flags:
-msr_MCU_EXCLUSIVE_AREA_02/4 (msr_MCU_EXCLUSIVE_AREA_02) @0694f438
+msr_MCU_EXCLUSIVE_AREA_02/4 (msr_MCU_EXCLUSIVE_AREA_02) @06954438
   Type: variable definition analyzed
   Visibility: force_output no_reorder prevailing_def_ironly
   References: 
   Referring: SchM_Enter_Mcu_MCU_EXCLUSIVE_AREA_02/11 (write) SchM_Exit_Mcu_MCU_EXCLUSIVE_AREA_02/12 (read) 
   Availability: available
   Varpool flags:
-reentry_guard_MCU_EXCLUSIVE_AREA_01/3 (reentry_guard_MCU_EXCLUSIVE_AREA_01) @0694f3a8
+reentry_guard_MCU_EXCLUSIVE_AREA_01/3 (reentry_guard_MCU_EXCLUSIVE_AREA_01) @069543a8
   Type: variable definition analyzed
   Visibility: force_output no_reorder prevailing_def_ironly
   References: 
   Referring: SchM_Enter_Mcu_MCU_EXCLUSIVE_AREA_01/9 (read) SchM_Enter_Mcu_MCU_EXCLUSIVE_AREA_01/9 (read) SchM_Enter_Mcu_MCU_EXCLUSIVE_AREA_01/9 (write) SchM_Exit_Mcu_MCU_EXCLUSIVE_AREA_01/10 (read) SchM_Exit_Mcu_MCU_EXCLUSIVE_AREA_01/10 (write) SchM_Exit_Mcu_MCU_EXCLUSIVE_AREA_01/10 (read) 
   Availability: available
   Varpool flags:
-msr_MCU_EXCLUSIVE_AREA_01/2 (msr_MCU_EXCLUSIVE_AREA_01) @0694f318
+msr_MCU_EXCLUSIVE_AREA_01/2 (msr_MCU_EXCLUSIVE_AREA_01) @06954318
   Type: variable definition analyzed
   Visibility: force_output no_reorder prevailing_def_ironly
   References: 
   Referring: SchM_Enter_Mcu_MCU_EXCLUSIVE_AREA_01/9 (write) SchM_Exit_Mcu_MCU_EXCLUSIVE_AREA_01/10 (read) 
   Availability: available
   Varpool flags:
-reentry_guard_MCU_EXCLUSIVE_AREA_00/1 (reentry_guard_MCU_EXCLUSIVE_AREA_00) @0694f288
+reentry_guard_MCU_EXCLUSIVE_AREA_00/1 (reentry_guard_MCU_EXCLUSIVE_AREA_00) @06954288
   Type: variable definition analyzed
   Visibility: force_output no_reorder prevailing_def_ironly
   References: 
   Referring: SchM_Enter_Mcu_MCU_EXCLUSIVE_AREA_00/7 (read) SchM_Enter_Mcu_MCU_EXCLUSIVE_AREA_00/7 (read) SchM_Enter_Mcu_MCU_EXCLUSIVE_AREA_00/7 (write) SchM_Exit_Mcu_MCU_EXCLUSIVE_AREA_00/8 (read) SchM_Exit_Mcu_MCU_EXCLUSIVE_AREA_00/8 (write) SchM_Exit_Mcu_MCU_EXCLUSIVE_AREA_00/8 (read) 
   Availability: available
   Varpool flags:
-msr_MCU_EXCLUSIVE_AREA_00/0 (msr_MCU_EXCLUSIVE_AREA_00) @0694f1f8
+msr_MCU_EXCLUSIVE_AREA_00/0 (msr_MCU_EXCLUSIVE_AREA_00) @069541f8
   Type: variable definition analyzed
   Visibility: force_output no_reorder prevailing_def_ironly
   References: 

@@ -1374,7 +1374,7 @@
                           </a:a>
                         </d:var>
                         <d:var name="McuPeripheralClockEnable" type="BOOLEAN" 
-                               value="true"/>
+                               value="false"/>
                         <d:var name="McuPeripheralClockSelect" 
                                type="ENUMERATION" value="SIRC"/>
                         <d:var name="McuPeripheralClockDivider" type="INTEGER" 

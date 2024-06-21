@@ -10,7 +10,7 @@
 
 //Headers
 #include "StandardTypes.h"
-#include "Gpt.h"
+//#include "Gpt.h"
 #include "Dio.h"
 
 //Macros.
@@ -22,7 +22,7 @@
 typedef enum { IDLE, SINGLE_PRESS, SINGLE_RELEASE, DOUBLE_PRESS, HOLD } states;
 
 //Global data.
-extern uint8 state;
+//extern uint8 state;
 
 //Functions.
 void DoubleClick_stMachine( void );

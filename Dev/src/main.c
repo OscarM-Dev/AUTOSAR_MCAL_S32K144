@@ -7,10 +7,7 @@
 
 //Header.
 #include "mcu_init.h"
-#include "gpt_notifications.h"
-
-//Global data
-uint8 state;
+#include "Scheduler.h"
 
 /**
  * @brief This is the main function of the project
@@ -21,11 +18,11 @@ uint8 state;
 */
 int main( void ) {
 
-    EcuM_Init();//MCU configuration.
-    Gpt_StartTimer( GptConf_GptChannelConfiguration_Gpt_Ftm0_ch0, FTM0CH0_V );//Starting timer 50ms.
-
-    while( 1u ) {
+    EcuM_Init();    //MCU configuration.
+    Scheduler_Init( &Scheduler_Control );   //Initializing control structure 2 for scheduler.
     
+    while( 1u ) {
+        Scheduler_MainFunction();
     }
 
     return 0u;

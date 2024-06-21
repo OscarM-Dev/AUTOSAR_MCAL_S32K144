@@ -1,7 +1,7 @@
 Platform_InstallIrqHandler (IRQn_Type eIrqNumber, void (*Platform_IrqHandlerType) (void) pfNewHandler, void (*Platform_IrqHandlerType) (void) * const pfOldHandler)
 {
   Std_ReturnType RetValue;
-  Std_ReturnType D.6206;
+  Std_ReturnType D.6204;
   Std_ReturnType _7;
 
   <bb 2> :
@@ -19,7 +19,7 @@ Platform_InstallIrqHandler (IRQn_Type eIrqNumber, void (*Platform_IrqHandlerType
 Platform_GetIrqPriority (IRQn_Type eIrqNumber, uint8 * u8Priority)
 {
   Std_ReturnType RetValue;
-  Std_ReturnType D.6202;
+  Std_ReturnType D.6200;
   unsigned char _1;
   Std_ReturnType _8;
 
@@ -39,7 +39,7 @@ Platform_GetIrqPriority (IRQn_Type eIrqNumber, uint8 * u8Priority)
 Platform_SetIrqPriority (IRQn_Type eIrqNumber, uint8 u8Priority)
 {
   Std_ReturnType RetValue;
-  Std_ReturnType D.6200;
+  Std_ReturnType D.6198;
   Std_ReturnType _6;
 
   <bb 2> :
@@ -57,7 +57,7 @@ Platform_SetIrqPriority (IRQn_Type eIrqNumber, uint8 u8Priority)
 Platform_SetIrq (IRQn_Type eIrqNumber, boolean bEnable)
 {
   Std_ReturnType RetValue;
-  Std_ReturnType D.6195;
+  Std_ReturnType D.6193;
   Std_ReturnType _6;
 
   <bb 2> :
@@ -101,7 +101,7 @@ Platform_Ipw_InstallIrqHandler (IRQn_Type eIrqNumber, void (*IntCtrl_Ip_IrqHandl
 
 Platform_Ipw_GetIrqPriority (IRQn_Type eIrqNumber)
 {
-  uint8 D.6204;
+  uint8 D.6202;
   uint8 _4;
 
   <bb 2> :

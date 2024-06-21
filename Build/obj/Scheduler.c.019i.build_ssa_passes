@@ -1,0 +1,673 @@
+Scheduler_MainFunction ()
+{
+  uint8 i;
+  uint32 elapsed_time;
+  uint32 count_value;
+  uint32 tick_value;
+  long unsigned int D.5827;
+
+  <bb 2> :
+  SchedulerConfig_Ptr.29_1 = SchedulerConfig_Ptr;
+  _2 = SchedulerConfig_Ptr.29_1->Tick;
+  _3 = _2 * 1000;
+  tick_value = OsIf_MicrosToTicks (_3, 1);
+  _4 = OsIf_GetCounter (1);
+  count_value = _4;
+  elapsed_time = 0;
+  i = 0;
+
+  <bb 3> :
+  D.5827 = OsIf_GetElapsed (&count_value, 1);
+  elapsed_time = D.5827 + elapsed_time;
+  if (elapsed_time >= tick_value)
+    goto <bb 4>; [INV]
+  else
+    goto <bb 17>; [INV]
+
+  <bb 4> :
+  i = 0;
+  goto <bb 9>; [INV]
+
+  <bb 5> :
+  SchedulerCtrl_Ptr.30_5 = SchedulerCtrl_Ptr;
+  _6 = SchedulerCtrl_Ptr.30_5->TimerFlags;
+  _7 = Bfx_GetBit_u32u8_u8 (_6, i);
+  if (_7 != 0)
+    goto <bb 6>; [INV]
+  else
+    goto <bb 8>; [INV]
+
+  <bb 6> :
+  SchedulerCtrl_Ptr.31_8 = SchedulerCtrl_Ptr;
+  _9 = (int) i;
+  _10 = SchedulerCtrl_Ptr.31_8->TimerCount[_9];
+  SchedulerConfig_Ptr.32_11 = SchedulerConfig_Ptr;
+  _12 = SchedulerConfig_Ptr.32_11->Tick;
+  SchedulerCtrl_Ptr.33_13 = SchedulerCtrl_Ptr;
+  _14 = (int) i;
+  _15 = _10 - _12;
+  SchedulerCtrl_Ptr.33_13->TimerCount[_14] = _15;
+  _16 = i + 1;
+  _17 = Scheduler_GetTimer (_16);
+  if (_17 == 0)
+    goto <bb 7>; [INV]
+  else
+    goto <bb 8>; [INV]
+
+  <bb 7> :
+  SchedulerConfig_Ptr.34_18 = SchedulerConfig_Ptr;
+  _19 = SchedulerConfig_Ptr.34_18->TimerPtr;
+  _20 = (unsigned int) i;
+  _21 = _20 * 12;
+  _22 = _19 + _21;
+  _23 = _22->CallbackFunc;
+  _23 ();
+
+  <bb 8> :
+  i.35_24 = i;
+  i = i.35_24 + 1;
+
+  <bb 9> :
+  SchedulerConfig_Ptr.36_25 = SchedulerConfig_Ptr;
+  _26 = SchedulerConfig_Ptr.36_25->Timers;
+  if (i < _26)
+    goto <bb 5>; [INV]
+  else
+    goto <bb 10>; [INV]
+
+  <bb 10> :
+  i = 0;
+  goto <bb 15>; [INV]
+
+  <bb 11> :
+  SchedulerCtrl_Ptr.37_27 = SchedulerCtrl_Ptr;
+  _28 = SchedulerCtrl_Ptr.37_27->TaskFlags;
+  _29 = Bfx_GetBit_u32u8_u8 (_28, i);
+  if (_29 != 0)
+    goto <bb 12>; [INV]
+  else
+    goto <bb 14>; [INV]
+
+  <bb 12> :
+  SchedulerCtrl_Ptr.38_30 = SchedulerCtrl_Ptr;
+  _31 = (int) i;
+  _32 = SchedulerCtrl_Ptr.38_30->TaskElapsed[_31];
+  SchedulerConfig_Ptr.39_33 = SchedulerConfig_Ptr;
+  _34 = SchedulerConfig_Ptr.39_33->Tick;
+  SchedulerCtrl_Ptr.40_35 = SchedulerCtrl_Ptr;
+  _36 = (int) i;
+  _37 = _32 + _34;
+  SchedulerCtrl_Ptr.40_35->TaskElapsed[_36] = _37;
+  SchedulerCtrl_Ptr.41_38 = SchedulerCtrl_Ptr;
+  _39 = (int) i;
+  _40 = SchedulerCtrl_Ptr.41_38->TaskElapsed[_39];
+  SchedulerCtrl_Ptr.42_41 = SchedulerCtrl_Ptr;
+  _42 = (int) i;
+  _43 = SchedulerCtrl_Ptr.42_41->TaskPeriod[_42];
+  if (_40 >= _43)
+    goto <bb 13>; [INV]
+  else
+    goto <bb 14>; [INV]
+
+  <bb 13> :
+  SchedulerConfig_Ptr.43_44 = SchedulerConfig_Ptr;
+  _45 = SchedulerConfig_Ptr.43_44->TaskPtr;
+  _46 = (unsigned int) i;
+  _47 = _46 * 12;
+  _48 = _45 + _47;
+  _49 = _48->TaskFunc;
+  _49 ();
+  SchedulerCtrl_Ptr.44_50 = SchedulerCtrl_Ptr;
+  _51 = (int) i;
+  SchedulerCtrl_Ptr.44_50->TaskElapsed[_51] = 0;
+
+  <bb 14> :
+  i.45_52 = i;
+  i = i.45_52 + 1;
+
+  <bb 15> :
+  SchedulerConfig_Ptr.46_53 = SchedulerConfig_Ptr;
+  _54 = SchedulerConfig_Ptr.46_53->Tasks;
+  if (i < _54)
+    goto <bb 11>; [INV]
+  else
+    goto <bb 16>; [INV]
+
+  <bb 16> :
+  elapsed_time = 0;
+
+  <bb 17> :
+  goto <bb 3>; [INV]
+
+}
+
+
+Scheduler_ReloadTimer (TimerType Timer, uint32 NewTimeout)
+{
+  Std_ReturnType status;
+  Std_ReturnType D.5825;
+
+  <bb 2> :
+  status = 0;
+  if (Timer != 0)
+    goto <bb 3>; [INV]
+  else
+    goto <bb 9>; [INV]
+
+  <bb 3> :
+  SchedulerConfig_Ptr.24_1 = SchedulerConfig_Ptr;
+  _2 = SchedulerConfig_Ptr.24_1->Timers;
+  if (Timer <= _2)
+    goto <bb 4>; [INV]
+  else
+    goto <bb 9>; [INV]
+
+  <bb 4> :
+  SchedulerConfig_Ptr.25_3 = SchedulerConfig_Ptr;
+  _4 = SchedulerConfig_Ptr.25_3->Tick;
+  if (NewTimeout >= _4)
+    goto <bb 5>; [INV]
+  else
+    goto <bb 7>; [INV]
+
+  <bb 5> :
+  SchedulerConfig_Ptr.26_5 = SchedulerConfig_Ptr;
+  _6 = SchedulerConfig_Ptr.26_5->Tick;
+  _7 = NewTimeout % _6;
+  if (_7 == 0)
+    goto <bb 6>; [INV]
+  else
+    goto <bb 7>; [INV]
+
+  <bb 6> :
+  SchedulerCtrl_Ptr.27_8 = SchedulerCtrl_Ptr;
+  _9 = (int) Timer;
+  _10 = _9 + -1;
+  SchedulerCtrl_Ptr.27_8->TimerTimeout[_10] = NewTimeout;
+  SchedulerCtrl_Ptr.28_11 = SchedulerCtrl_Ptr;
+  _12 = (int) Timer;
+  _13 = _12 + -1;
+  SchedulerCtrl_Ptr.28_11->TimerCount[_13] = NewTimeout;
+  Scheduler_StartTimer (Timer);
+  status = 1;
+  goto <bb 8>; [INV]
+
+  <bb 7> :
+  status = 0;
+
+  <bb 8> :
+  goto <bb 10>; [INV]
+
+  <bb 9> :
+  status = 0;
+
+  <bb 10> :
+  D.5825 = status;
+
+  <bb 11> :
+<L8>:
+  return D.5825;
+
+}
+
+
+Scheduler_GetTimer (TimerType Timer)
+{
+  uint32 counter_value;
+  uint32 D.5815;
+
+  <bb 2> :
+  counter_value = 0;
+  if (Timer != 0)
+    goto <bb 3>; [INV]
+  else
+    goto <bb 5>; [INV]
+
+  <bb 3> :
+  SchedulerConfig_Ptr.22_1 = SchedulerConfig_Ptr;
+  _2 = SchedulerConfig_Ptr.22_1->Timers;
+  if (Timer <= _2)
+    goto <bb 4>; [INV]
+  else
+    goto <bb 5>; [INV]
+
+  <bb 4> :
+  SchedulerCtrl_Ptr.23_3 = SchedulerCtrl_Ptr;
+  _4 = (int) Timer;
+  _5 = _4 + -1;
+  counter_value = SchedulerCtrl_Ptr.23_3->TimerCount[_5];
+  goto <bb 6>; [INV]
+
+  <bb 5> :
+  counter_value = 0;
+
+  <bb 6> :
+  D.5815 = counter_value;
+
+  <bb 7> :
+<L4>:
+  return D.5815;
+
+}
+
+
+Scheduler_StopTimer (TimerType Timer)
+{
+  Std_ReturnType status;
+  Std_ReturnType D.5809;
+
+  <bb 2> :
+  status = 0;
+  if (Timer != 0)
+    goto <bb 3>; [INV]
+  else
+    goto <bb 5>; [INV]
+
+  <bb 3> :
+  SchedulerConfig_Ptr.20_1 = SchedulerConfig_Ptr;
+  _2 = SchedulerConfig_Ptr.20_1->Timers;
+  if (Timer <= _2)
+    goto <bb 4>; [INV]
+  else
+    goto <bb 5>; [INV]
+
+  <bb 4> :
+  SchedulerCtrl_Ptr.21_3 = SchedulerCtrl_Ptr;
+  _4 = &SchedulerCtrl_Ptr.21_3->TimerFlags;
+  _5 = Timer + 255;
+  Bfx_ClrBit_u32u8 (_4, _5);
+  status = 1;
+  goto <bb 6>; [INV]
+
+  <bb 5> :
+  status = 0;
+
+  <bb 6> :
+  D.5809 = status;
+
+  <bb 7> :
+<L4>:
+  return D.5809;
+
+}
+
+
+Scheduler_StartTimer (TimerType Timer)
+{
+  Std_ReturnType status;
+  Std_ReturnType D.5803;
+
+  <bb 2> :
+  status = 0;
+  if (Timer != 0)
+    goto <bb 3>; [INV]
+  else
+    goto <bb 7>; [INV]
+
+  <bb 3> :
+  SchedulerConfig_Ptr.15_1 = SchedulerConfig_Ptr;
+  _2 = SchedulerConfig_Ptr.15_1->Timers;
+  if (Timer <= _2)
+    goto <bb 4>; [INV]
+  else
+    goto <bb 7>; [INV]
+
+  <bb 4> :
+  SchedulerCtrl_Ptr.16_3 = SchedulerCtrl_Ptr;
+  _4 = &SchedulerCtrl_Ptr.16_3->TimerFlags;
+  _5 = Timer + 255;
+  Bfx_SetBit_u32u8 (_4, _5);
+  SchedulerCtrl_Ptr.17_6 = SchedulerCtrl_Ptr;
+  _7 = (int) Timer;
+  _8 = _7 + -1;
+  _9 = SchedulerCtrl_Ptr.17_6->TimerCount[_8];
+  if (_9 == 0)
+    goto <bb 5>; [INV]
+  else
+    goto <bb 6>; [INV]
+
+  <bb 5> :
+  SchedulerCtrl_Ptr.18_10 = SchedulerCtrl_Ptr;
+  _11 = (int) Timer;
+  _12 = _11 + -1;
+  SchedulerCtrl_Ptr.19_13 = SchedulerCtrl_Ptr;
+  _14 = (int) Timer;
+  _15 = _14 + -1;
+  _16 = SchedulerCtrl_Ptr.18_10->TimerTimeout[_12];
+  SchedulerCtrl_Ptr.19_13->TimerCount[_15] = _16;
+
+  <bb 6> :
+  status = 1;
+  goto <bb 8>; [INV]
+
+  <bb 7> :
+  status = 0;
+
+  <bb 8> :
+  D.5803 = status;
+
+  <bb 9> :
+<L6>:
+  return D.5803;
+
+}
+
+
+Scheduler_PeriodTask (TaskType Task, uint32 NewPeriod)
+{
+  Std_ReturnType status;
+  Std_ReturnType D.5795;
+
+  <bb 2> :
+  status = 0;
+  if (Task != 0)
+    goto <bb 3>; [INV]
+  else
+    goto <bb 9>; [INV]
+
+  <bb 3> :
+  SchedulerConfig_Ptr.11_1 = SchedulerConfig_Ptr;
+  _2 = SchedulerConfig_Ptr.11_1->Tasks;
+  if (Task <= _2)
+    goto <bb 4>; [INV]
+  else
+    goto <bb 9>; [INV]
+
+  <bb 4> :
+  SchedulerConfig_Ptr.12_3 = SchedulerConfig_Ptr;
+  _4 = SchedulerConfig_Ptr.12_3->Tick;
+  if (NewPeriod >= _4)
+    goto <bb 5>; [INV]
+  else
+    goto <bb 7>; [INV]
+
+  <bb 5> :
+  SchedulerConfig_Ptr.13_5 = SchedulerConfig_Ptr;
+  _6 = SchedulerConfig_Ptr.13_5->Tick;
+  _7 = NewPeriod % _6;
+  if (_7 == 0)
+    goto <bb 6>; [INV]
+  else
+    goto <bb 7>; [INV]
+
+  <bb 6> :
+  SchedulerCtrl_Ptr.14_8 = SchedulerCtrl_Ptr;
+  _9 = (int) Task;
+  _10 = _9 + -1;
+  SchedulerCtrl_Ptr.14_8->TaskPeriod[_10] = NewPeriod;
+  status = 1;
+  goto <bb 8>; [INV]
+
+  <bb 7> :
+  status = 0;
+
+  <bb 8> :
+  goto <bb 10>; [INV]
+
+  <bb 9> :
+  status = 0;
+
+  <bb 10> :
+  D.5795 = status;
+
+  <bb 11> :
+<L8>:
+  return D.5795;
+
+}
+
+
+Scheduler_StartTask (TaskType Task)
+{
+  Std_ReturnType status;
+  Std_ReturnType D.5785;
+
+  <bb 2> :
+  status = 0;
+  if (Task != 0)
+    goto <bb 3>; [INV]
+  else
+    goto <bb 5>; [INV]
+
+  <bb 3> :
+  SchedulerConfig_Ptr.9_1 = SchedulerConfig_Ptr;
+  _2 = SchedulerConfig_Ptr.9_1->Tasks;
+  if (Task <= _2)
+    goto <bb 4>; [INV]
+  else
+    goto <bb 5>; [INV]
+
+  <bb 4> :
+  SchedulerCtrl_Ptr.10_3 = SchedulerCtrl_Ptr;
+  _4 = &SchedulerCtrl_Ptr.10_3->TaskFlags;
+  _5 = Task + 255;
+  Bfx_SetBit_u32u8 (_4, _5);
+  status = 1;
+  goto <bb 6>; [INV]
+
+  <bb 5> :
+  status = 0;
+
+  <bb 6> :
+  D.5785 = status;
+
+  <bb 7> :
+<L4>:
+  return D.5785;
+
+}
+
+
+Scheduler_StopTask (TaskType Task)
+{
+  Std_ReturnType status;
+  Std_ReturnType D.5779;
+
+  <bb 2> :
+  status = 0;
+  if (Task != 0)
+    goto <bb 3>; [INV]
+  else
+    goto <bb 5>; [INV]
+
+  <bb 3> :
+  SchedulerConfig_Ptr.7_1 = SchedulerConfig_Ptr;
+  _2 = SchedulerConfig_Ptr.7_1->Tasks;
+  if (Task <= _2)
+    goto <bb 4>; [INV]
+  else
+    goto <bb 5>; [INV]
+
+  <bb 4> :
+  SchedulerCtrl_Ptr.8_3 = SchedulerCtrl_Ptr;
+  _4 = &SchedulerCtrl_Ptr.8_3->TaskFlags;
+  _5 = Task + 255;
+  Bfx_ClrBit_u32u8 (_4, _5);
+  status = 1;
+  goto <bb 6>; [INV]
+
+  <bb 5> :
+  status = 0;
+
+  <bb 6> :
+  D.5779 = status;
+
+  <bb 7> :
+<L4>:
+  return D.5779;
+
+}
+
+
+Scheduler_Init (struct Scheduler_CtrlType * SchedulerPtr)
+{
+  uint8 i;
+  Std_ReturnType status;
+  Std_ReturnType D.5770;
+
+  <bb 2> :
+  status = 1;
+  i = 0;
+  i = 0;
+  goto <bb 4>; [INV]
+
+  <bb 3> :
+  SchedulerConfig_Ptr.0_1 = SchedulerConfig_Ptr;
+  _2 = SchedulerConfig_Ptr.0_1->TaskPtr;
+  _3 = (unsigned int) i;
+  _4 = _3 * 12;
+  _5 = _2 + _4;
+  _6 = (int) i;
+  _7 = _5->InitPeriod;
+  SchedulerPtr->TaskPeriod[_6] = _7;
+  _8 = (int) i;
+  SchedulerPtr->TaskElapsed[_8] = 0;
+  _9 = &SchedulerPtr->TaskFlags;
+  SchedulerConfig_Ptr.1_10 = SchedulerConfig_Ptr;
+  _11 = SchedulerConfig_Ptr.1_10->TaskPtr;
+  _12 = (unsigned int) i;
+  _13 = _12 * 12;
+  _14 = _11 + _13;
+  _15 = _14->InitFlag;
+  _16 = _15 != 0;
+  Bfx_PutBit_u32u8u8 (_9, i, _16);
+  i.2_17 = i;
+  i = i.2_17 + 1;
+
+  <bb 4> :
+  if (i <= 1)
+    goto <bb 3>; [INV]
+  else
+    goto <bb 5>; [INV]
+
+  <bb 5> :
+  i = 0;
+  goto <bb 7>; [INV]
+
+  <bb 6> :
+  SchedulerConfig_Ptr.3_18 = SchedulerConfig_Ptr;
+  _19 = SchedulerConfig_Ptr.3_18->TimerPtr;
+  _20 = (unsigned int) i;
+  _21 = _20 * 12;
+  _22 = _19 + _21;
+  _23 = (int) i;
+  _24 = _22->InitTimeout;
+  SchedulerPtr->TimerTimeout[_23] = _24;
+  SchedulerConfig_Ptr.4_25 = SchedulerConfig_Ptr;
+  _26 = SchedulerConfig_Ptr.4_25->TimerPtr;
+  _27 = (unsigned int) i;
+  _28 = _27 * 12;
+  _29 = _26 + _28;
+  _30 = (int) i;
+  _31 = _29->InitTimeout;
+  SchedulerPtr->TimerCount[_30] = _31;
+  _32 = &SchedulerPtr->TimerFlags;
+  SchedulerConfig_Ptr.5_33 = SchedulerConfig_Ptr;
+  _34 = SchedulerConfig_Ptr.5_33->TimerPtr;
+  _35 = (unsigned int) i;
+  _36 = _35 * 12;
+  _37 = _34 + _36;
+  _38 = _37->InitFlag;
+  _39 = _38 != 0;
+  Bfx_PutBit_u32u8u8 (_32, i, _39);
+  i.6_40 = i;
+  i = i.6_40 + 1;
+
+  <bb 7> :
+  if (i <= 1)
+    goto <bb 6>; [INV]
+  else
+    goto <bb 8>; [INV]
+
+  <bb 8> :
+  D.5770 = status;
+
+  <bb 9> :
+<L6>:
+  return D.5770;
+
+}
+
+
+Bfx_PutBit_u32u8u8 (uint32 * Data, uint8 BitPn, boolean Status)
+{
+  <bb 2> :
+  if (Status != 0)
+    goto <bb 3>; [INV]
+  else
+    goto <bb 4>; [INV]
+
+  <bb 3> :
+  _1 = *Data;
+  _2 = (int) BitPn;
+  _3 = 1 << _2;
+  _4 = (long unsigned int) _3;
+  _5 = _1 | _4;
+  *Data = _5;
+  goto <bb 5>; [INV]
+
+  <bb 4> :
+  _6 = *Data;
+  _7 = (int) BitPn;
+  _8 = 1 << _7;
+  _9 = ~_8;
+  _10 = (long unsigned int) _9;
+  _11 = _6 & _10;
+  *Data = _11;
+
+  <bb 5> :
+  return;
+
+}
+
+
+Bfx_GetBit_u32u8_u8 (uint32 Data, uint8 BitPn)
+{
+  boolean Result;
+  boolean D.5838;
+
+  <bb 2> :
+  Result = 0;
+  _1 = (int) BitPn;
+  _2 = 1 << _1;
+  _3 = (long unsigned int) _2;
+  _4 = Data & _3;
+  Result = _4 != 0;
+  D.5838 = Result;
+
+  <bb 3> :
+<L0>:
+  return D.5838;
+
+}
+
+
+Bfx_ClrBit_u32u8 (uint32 * Data, uint8 BitPn)
+{
+  <bb 2> :
+  _1 = *Data;
+  _2 = (int) BitPn;
+  _3 = 1 << _2;
+  _4 = ~_3;
+  _5 = (long unsigned int) _4;
+  _6 = _1 & _5;
+  *Data = _6;
+  return;
+
+}
+
+
+Bfx_SetBit_u32u8 (uint32 * Data, uint8 BitPn)
+{
+  <bb 2> :
+  _1 = *Data;
+  _2 = (int) BitPn;
+  _3 = 1 << _2;
+  _4 = (long unsigned int) _3;
+  _5 = _1 | _4;
+  *Data = _5;
+  return;
+
+}
+
+

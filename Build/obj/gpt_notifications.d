@@ -80,39 +80,9 @@ Build/obj/gpt_notifications.o: Dev/src/gpt_notifications.c \
  Autosar/Mcal/Platform/include/IntCtrl_Ip_TypesDef.h \
  Autosar/Mcal/Platform/include/System_Ip.h \
  Build/cfg/include/System_Ip_Cfg.h \
- Build/cfg/include/System_Ip_CfgDefines.h Autosar/Mcal/Gpt/include/Gpt.h \
- Autosar/Mcal/Gpt/include/Gpt_Ipw_Types.h Build/cfg/include/Gpt_Cfg.h \
- Autosar/Mcal/Base/include/Std_Types.h Build/cfg/include/Gpt_PBcfg.h \
- Autosar/Mcal/Gpt/include/Ftm_Gpt_Ip.h \
- Autosar/Mcal/Gpt/include/Ftm_Gpt_Ip_Types.h \
- Build/cfg/include/Ftm_Gpt_Ip_Cfg_Defines.h \
- Autosar/Mcal/Base/header/S32K144_FTM.h \
- Build/cfg/include/Ftm_Gpt_Ip_Cfg.h Build/cfg/include/Ftm_Gpt_Ip_PBcfg.h \
- Autosar/Mcal/Gpt/include/Ftm_Gpt_Ip_Types.h \
- Autosar/Mcal/Base/include/Gpt_MemMap.h Autosar/Mcal/Base/include/OsIf.h \
- Autosar/Mcal/Base/include/BaseNXP_MemMap.h \
- Autosar/Rte/include/SchM_Gpt.h Autosar/Mcal/Gpt/include/SRtc_Ip.h \
- Autosar/Mcal/Gpt/include/SRtc_Ip_Types.h \
- Build/cfg/include/SRtc_Ip_Cfg_Defines.h \
- Autosar/Mcal/Base/header/S32K144_RTC.h Build/cfg/include/SRtc_Ip_Cfg.h \
- Build/cfg/include/SRtc_Ip_PBcfg.h \
- Autosar/Mcal/Gpt/include/SRtc_Ip_Types.h \
- Autosar/Mcal/Gpt/include/Lptmr_Gpt_Ip.h \
- Autosar/Mcal/Gpt/include/Lptmr_Gpt_Ip_Types.h \
- Build/cfg/include/Lptmr_Gpt_Ip_Cfg_Defines.h \
- Autosar/Mcal/Base/header/S32K144_LPTMR.h \
- Build/cfg/include/Lptmr_Gpt_Ip_Cfg.h \
- Build/cfg/include/Lptmr_Gpt_Ip_PBcfg.h \
- Autosar/Mcal/Gpt/include/Lptmr_Gpt_Ip_Types.h \
- Autosar/Mcal/Gpt/include/LPit_Gpt_Ip.h \
- Autosar/Mcal/Gpt/include/LPit_Gpt_Ip_Types.h \
- Build/cfg/include/LPit_Gpt_Ip_Cfg_Defines.h \
- Autosar/Mcal/Base/header/S32K144_LPIT.h \
- Build/cfg/include/LPit_Gpt_Ip_Cfg.h \
- Build/cfg/include/LPit_Gpt_Ip_PBcfg.h \
- Autosar/Mcal/Gpt/include/LPit_Gpt_Ip_Types.h \
- Autosar/Mcal/Gpt/include/Gpt_EnvCfg.h Autosar/Mcal/Dio/include/Dio.h \
- Build/cfg/include/Dio_Cfg.h Build/cfg/include/Gpio_Dio_Ip_Cfg.h \
+ Build/cfg/include/System_Ip_CfgDefines.h Autosar/Mcal/Dio/include/Dio.h \
+ Autosar/Mcal/Base/include/Std_Types.h Build/cfg/include/Dio_Cfg.h \
+ Build/cfg/include/Gpio_Dio_Ip_Cfg.h \
  Autosar/Mcal/Base/header/S32K144_GPIO.h \
  Autosar/Mcal/Base/include/Dio_MemMap.h Dev/include/state_machine.h
 Dev/include/gpt_notifications.h:
@@ -203,45 +173,8 @@ Autosar/Mcal/Platform/include/IntCtrl_Ip_TypesDef.h:
 Autosar/Mcal/Platform/include/System_Ip.h:
 Build/cfg/include/System_Ip_Cfg.h:
 Build/cfg/include/System_Ip_CfgDefines.h:
-Autosar/Mcal/Gpt/include/Gpt.h:
-Autosar/Mcal/Gpt/include/Gpt_Ipw_Types.h:
-Build/cfg/include/Gpt_Cfg.h:
-Autosar/Mcal/Base/include/Std_Types.h:
-Build/cfg/include/Gpt_PBcfg.h:
-Autosar/Mcal/Gpt/include/Ftm_Gpt_Ip.h:
-Autosar/Mcal/Gpt/include/Ftm_Gpt_Ip_Types.h:
-Build/cfg/include/Ftm_Gpt_Ip_Cfg_Defines.h:
-Autosar/Mcal/Base/header/S32K144_FTM.h:
-Build/cfg/include/Ftm_Gpt_Ip_Cfg.h:
-Build/cfg/include/Ftm_Gpt_Ip_PBcfg.h:
-Autosar/Mcal/Gpt/include/Ftm_Gpt_Ip_Types.h:
-Autosar/Mcal/Base/include/Gpt_MemMap.h:
-Autosar/Mcal/Base/include/OsIf.h:
-Autosar/Mcal/Base/include/BaseNXP_MemMap.h:
-Autosar/Rte/include/SchM_Gpt.h:
-Autosar/Mcal/Gpt/include/SRtc_Ip.h:
-Autosar/Mcal/Gpt/include/SRtc_Ip_Types.h:
-Build/cfg/include/SRtc_Ip_Cfg_Defines.h:
-Autosar/Mcal/Base/header/S32K144_RTC.h:
-Build/cfg/include/SRtc_Ip_Cfg.h:
-Build/cfg/include/SRtc_Ip_PBcfg.h:
-Autosar/Mcal/Gpt/include/SRtc_Ip_Types.h:
-Autosar/Mcal/Gpt/include/Lptmr_Gpt_Ip.h:
-Autosar/Mcal/Gpt/include/Lptmr_Gpt_Ip_Types.h:
-Build/cfg/include/Lptmr_Gpt_Ip_Cfg_Defines.h:
-Autosar/Mcal/Base/header/S32K144_LPTMR.h:
-Build/cfg/include/Lptmr_Gpt_Ip_Cfg.h:
-Build/cfg/include/Lptmr_Gpt_Ip_PBcfg.h:
-Autosar/Mcal/Gpt/include/Lptmr_Gpt_Ip_Types.h:
-Autosar/Mcal/Gpt/include/LPit_Gpt_Ip.h:
-Autosar/Mcal/Gpt/include/LPit_Gpt_Ip_Types.h:
-Build/cfg/include/LPit_Gpt_Ip_Cfg_Defines.h:
-Autosar/Mcal/Base/header/S32K144_LPIT.h:
-Build/cfg/include/LPit_Gpt_Ip_Cfg.h:
-Build/cfg/include/LPit_Gpt_Ip_PBcfg.h:
-Autosar/Mcal/Gpt/include/LPit_Gpt_Ip_Types.h:
-Autosar/Mcal/Gpt/include/Gpt_EnvCfg.h:
 Autosar/Mcal/Dio/include/Dio.h:
+Autosar/Mcal/Base/include/Std_Types.h:
 Build/cfg/include/Dio_Cfg.h:
 Build/cfg/include/Gpio_Dio_Ip_Cfg.h:
 Autosar/Mcal/Base/header/S32K144_GPIO.h:

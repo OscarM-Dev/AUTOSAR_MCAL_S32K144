@@ -3,21 +3,21 @@ Trivially needed symbols: Gpt_Ipw_ChannelConfig_PB/4 Gpt_Ipw_HwInstanceConfig_PB
 
 Initial Symbol table:
 
-FTM_0_ChannelConfig_PB/6 (FTM_0_ChannelConfig_PB) @06abed38
+FTM_0_ChannelConfig_PB/6 (FTM_0_ChannelConfig_PB) @06923c60
   Type: variable
   Visibility: external public
   References: 
   Referring: Gpt_Ipw_ChannelConfig_PB/4 (addr) Gpt_Ipw_ChannelConfig_PB/4 (addr) 
   Availability: not-ready
   Varpool flags: read-only
-FTM_0_InitConfig_PB/5 (FTM_0_InitConfig_PB) @06abecf0
+FTM_0_InitConfig_PB/5 (FTM_0_InitConfig_PB) @06923c18
   Type: variable
   Visibility: external public
   References: 
   Referring: Gpt_Ipw_HwInstanceConfig_PB/3 (addr) 
   Availability: not-ready
   Varpool flags: read-only
-Gpt_Ipw_ChannelConfig_PB/4 (Gpt_Ipw_ChannelConfig_PB) @06abebd0
+Gpt_Ipw_ChannelConfig_PB/4 (Gpt_Ipw_ChannelConfig_PB) @06923af8
   Type: variable definition analyzed
   Visibility: force_output no_reorder public
   Aux: @01981040
@@ -25,15 +25,15 @@ Gpt_Ipw_ChannelConfig_PB/4 (Gpt_Ipw_ChannelConfig_PB) @06abebd0
   Referring: 
   Availability: not-ready
   Varpool flags: initialized
-Gpt_Ipw_HwInstanceConfig_PB/3 (Gpt_Ipw_HwInstanceConfig_PB) @06abeb88
+Gpt_Ipw_HwInstanceConfig_PB/3 (Gpt_Ipw_HwInstanceConfig_PB) @06923ab0
   Type: variable definition analyzed
   Visibility: force_output no_reorder public
-  Aux: @06abebd0
+  Aux: @06923af8
   References: FTM_0_InitConfig_PB/5 (addr) 
   Referring: 
   Availability: not-ready
   Varpool flags: initialized
-Ftm_Gpt_Ip_GetCompareValue/2 (Ftm_Gpt_Ip_GetCompareValue) @069a71c0
+Ftm_Gpt_Ip_GetCompareValue/2 (Ftm_Gpt_Ip_GetCompareValue) @068a31c0
   Type: function definition
   Visibility: no_reorder
   References: 
@@ -41,7 +41,7 @@ Ftm_Gpt_Ip_GetCompareValue/2 (Ftm_Gpt_Ip_GetCompareValue) @069a71c0
   Function flags:
   Called by: 
   Calls: 
-Ftm_Gpt_Ip_GetCntValue/1 (Ftm_Gpt_Ip_GetCntValue) @069ecb60
+Ftm_Gpt_Ip_GetCntValue/1 (Ftm_Gpt_Ip_GetCntValue) @068dab60
   Type: function definition
   Visibility: no_reorder
   References: 
@@ -49,7 +49,7 @@ Ftm_Gpt_Ip_GetCntValue/1 (Ftm_Gpt_Ip_GetCntValue) @069ecb60
   Function flags:
   Called by: 
   Calls: 
-Ftm_Gpt_Ip_GetChInterruptStatusFlag/0 (Ftm_Gpt_Ip_GetChInterruptStatusFlag) @069ece00
+Ftm_Gpt_Ip_GetChInterruptStatusFlag/0 (Ftm_Gpt_Ip_GetChInterruptStatusFlag) @068dae00
   Type: function definition
   Visibility: no_reorder
   References: 
@@ -62,28 +62,28 @@ Removing unused symbols: Ftm_Gpt_Ip_GetCompareValue/2 Ftm_Gpt_Ip_GetCntValue/1 F
 
 Reclaimed Symbol table:
 
-FTM_0_ChannelConfig_PB/6 (FTM_0_ChannelConfig_PB) @06abed38
+FTM_0_ChannelConfig_PB/6 (FTM_0_ChannelConfig_PB) @06923c60
   Type: variable
   Visibility: external public
   References: 
   Referring: Gpt_Ipw_ChannelConfig_PB/4 (addr) Gpt_Ipw_ChannelConfig_PB/4 (addr) 
   Availability: not-ready
   Varpool flags: read-only
-FTM_0_InitConfig_PB/5 (FTM_0_InitConfig_PB) @06abecf0
+FTM_0_InitConfig_PB/5 (FTM_0_InitConfig_PB) @06923c18
   Type: variable
   Visibility: external public
   References: 
   Referring: Gpt_Ipw_HwInstanceConfig_PB/3 (addr) 
   Availability: not-ready
   Varpool flags: read-only
-Gpt_Ipw_ChannelConfig_PB/4 (Gpt_Ipw_ChannelConfig_PB) @06abebd0
+Gpt_Ipw_ChannelConfig_PB/4 (Gpt_Ipw_ChannelConfig_PB) @06923af8
   Type: variable definition analyzed
   Visibility: force_output no_reorder public
   References: FTM_0_ChannelConfig_PB/6 (addr) FTM_0_ChannelConfig_PB/6 (addr) 
   Referring: 
   Availability: not-ready
   Varpool flags: initialized
-Gpt_Ipw_HwInstanceConfig_PB/3 (Gpt_Ipw_HwInstanceConfig_PB) @06abeb88
+Gpt_Ipw_HwInstanceConfig_PB/3 (Gpt_Ipw_HwInstanceConfig_PB) @06923ab0
   Type: variable definition analyzed
   Visibility: force_output no_reorder public
   References: FTM_0_InitConfig_PB/5 (addr) 
@@ -94,28 +94,28 @@ Gpt_Ipw_HwInstanceConfig_PB/3 (Gpt_Ipw_HwInstanceConfig_PB) @06abeb88
 
 Initial Symbol table:
 
-FTM_0_ChannelConfig_PB/6 (FTM_0_ChannelConfig_PB) @06abed38
+FTM_0_ChannelConfig_PB/6 (FTM_0_ChannelConfig_PB) @06923c60
   Type: variable
   Visibility: external public
   References: 
   Referring: Gpt_Ipw_ChannelConfig_PB/4 (addr) Gpt_Ipw_ChannelConfig_PB/4 (addr) 
   Availability: not-ready
   Varpool flags: read-only
-FTM_0_InitConfig_PB/5 (FTM_0_InitConfig_PB) @06abecf0
+FTM_0_InitConfig_PB/5 (FTM_0_InitConfig_PB) @06923c18
   Type: variable
   Visibility: external public
   References: 
   Referring: Gpt_Ipw_HwInstanceConfig_PB/3 (addr) 
   Availability: not-ready
   Varpool flags: read-only
-Gpt_Ipw_ChannelConfig_PB/4 (Gpt_Ipw_ChannelConfig_PB) @06abebd0
+Gpt_Ipw_ChannelConfig_PB/4 (Gpt_Ipw_ChannelConfig_PB) @06923af8
   Type: variable definition analyzed
   Visibility: force_output no_reorder public
   References: FTM_0_ChannelConfig_PB/6 (addr) FTM_0_ChannelConfig_PB/6 (addr) 
   Referring: 
   Availability: not-ready
   Varpool flags: initialized
-Gpt_Ipw_HwInstanceConfig_PB/3 (Gpt_Ipw_HwInstanceConfig_PB) @06abeb88
+Gpt_Ipw_HwInstanceConfig_PB/3 (Gpt_Ipw_HwInstanceConfig_PB) @06923ab0
   Type: variable definition analyzed
   Visibility: force_output no_reorder public
   References: FTM_0_InitConfig_PB/5 (addr) 
@@ -127,28 +127,28 @@ Removing unused symbols:
 
 Reclaimed Symbol table:
 
-FTM_0_ChannelConfig_PB/6 (FTM_0_ChannelConfig_PB) @06abed38
+FTM_0_ChannelConfig_PB/6 (FTM_0_ChannelConfig_PB) @06923c60
   Type: variable
   Visibility: external public
   References: 
   Referring: Gpt_Ipw_ChannelConfig_PB/4 (addr) Gpt_Ipw_ChannelConfig_PB/4 (addr) 
   Availability: not-ready
   Varpool flags: read-only
-FTM_0_InitConfig_PB/5 (FTM_0_InitConfig_PB) @06abecf0
+FTM_0_InitConfig_PB/5 (FTM_0_InitConfig_PB) @06923c18
   Type: variable
   Visibility: external public
   References: 
   Referring: Gpt_Ipw_HwInstanceConfig_PB/3 (addr) 
   Availability: not-ready
   Varpool flags: read-only
-Gpt_Ipw_ChannelConfig_PB/4 (Gpt_Ipw_ChannelConfig_PB) @06abebd0
+Gpt_Ipw_ChannelConfig_PB/4 (Gpt_Ipw_ChannelConfig_PB) @06923af8
   Type: variable definition analyzed
   Visibility: force_output no_reorder public
   References: FTM_0_ChannelConfig_PB/6 (addr) FTM_0_ChannelConfig_PB/6 (addr) 
   Referring: 
   Availability: not-ready
   Varpool flags: initialized
-Gpt_Ipw_HwInstanceConfig_PB/3 (Gpt_Ipw_HwInstanceConfig_PB) @06abeb88
+Gpt_Ipw_HwInstanceConfig_PB/3 (Gpt_Ipw_HwInstanceConfig_PB) @06923ab0
   Type: variable definition analyzed
   Visibility: force_output no_reorder public
   References: FTM_0_InitConfig_PB/5 (addr) 
@@ -161,7 +161,7 @@ Reclaiming variables:
 Clearing address taken flags:
 Optimized Symbol table:
 
-FTM_0_ChannelConfig_PB/6 (FTM_0_ChannelConfig_PB) @06abed38
+FTM_0_ChannelConfig_PB/6 (FTM_0_ChannelConfig_PB) @06923c60
   Type: variable
   Body removed by symtab_remove_unreachable_nodes
   Visibility: external public
@@ -169,7 +169,7 @@ FTM_0_ChannelConfig_PB/6 (FTM_0_ChannelConfig_PB) @06abed38
   Referring: Gpt_Ipw_ChannelConfig_PB/4 (addr) Gpt_Ipw_ChannelConfig_PB/4 (addr) 
   Availability: not_available
   Varpool flags: read-only
-FTM_0_InitConfig_PB/5 (FTM_0_InitConfig_PB) @06abecf0
+FTM_0_InitConfig_PB/5 (FTM_0_InitConfig_PB) @06923c18
   Type: variable
   Body removed by symtab_remove_unreachable_nodes
   Visibility: external public
@@ -177,14 +177,14 @@ FTM_0_InitConfig_PB/5 (FTM_0_InitConfig_PB) @06abecf0
   Referring: Gpt_Ipw_HwInstanceConfig_PB/3 (addr) 
   Availability: not_available
   Varpool flags: read-only
-Gpt_Ipw_ChannelConfig_PB/4 (Gpt_Ipw_ChannelConfig_PB) @06abebd0
+Gpt_Ipw_ChannelConfig_PB/4 (Gpt_Ipw_ChannelConfig_PB) @06923af8
   Type: variable definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: FTM_0_ChannelConfig_PB/6 (addr) FTM_0_ChannelConfig_PB/6 (addr) 
   Referring: 
   Availability: available
   Varpool flags: initialized
-Gpt_Ipw_HwInstanceConfig_PB/3 (Gpt_Ipw_HwInstanceConfig_PB) @06abeb88
+Gpt_Ipw_HwInstanceConfig_PB/3 (Gpt_Ipw_HwInstanceConfig_PB) @06923ab0
   Type: variable definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: FTM_0_InitConfig_PB/5 (addr) 
@@ -202,7 +202,7 @@ Removing variables:
 
 Final Symbol table:
 
-FTM_0_ChannelConfig_PB/6 (FTM_0_ChannelConfig_PB) @06abed38
+FTM_0_ChannelConfig_PB/6 (FTM_0_ChannelConfig_PB) @06923c60
   Type: variable
   Body removed by symtab_remove_unreachable_nodes
   Visibility: external public
@@ -210,7 +210,7 @@ FTM_0_ChannelConfig_PB/6 (FTM_0_ChannelConfig_PB) @06abed38
   Referring: Gpt_Ipw_ChannelConfig_PB/4 (addr) Gpt_Ipw_ChannelConfig_PB/4 (addr) 
   Availability: not_available
   Varpool flags: read-only
-FTM_0_InitConfig_PB/5 (FTM_0_InitConfig_PB) @06abecf0
+FTM_0_InitConfig_PB/5 (FTM_0_InitConfig_PB) @06923c18
   Type: variable
   Body removed by symtab_remove_unreachable_nodes
   Visibility: external public
@@ -218,7 +218,7 @@ FTM_0_InitConfig_PB/5 (FTM_0_InitConfig_PB) @06abecf0
   Referring: Gpt_Ipw_HwInstanceConfig_PB/3 (addr) 
   Availability: not_available
   Varpool flags: read-only
-Gpt_Ipw_ChannelConfig_PB/4 (Gpt_Ipw_ChannelConfig_PB) @06abebd0
+Gpt_Ipw_ChannelConfig_PB/4 (Gpt_Ipw_ChannelConfig_PB) @06923af8
   Type: variable definition analyzed
   Visibility: force_output externally_visible no_reorder asm_written public section:.data.Gpt_Ipw_ChannelConfig_PB (implicit_section)
   Aux: @00000001
@@ -226,10 +226,10 @@ Gpt_Ipw_ChannelConfig_PB/4 (Gpt_Ipw_ChannelConfig_PB) @06abebd0
   Referring: 
   Availability: available
   Varpool flags: initialized
-Gpt_Ipw_HwInstanceConfig_PB/3 (Gpt_Ipw_HwInstanceConfig_PB) @06abeb88
+Gpt_Ipw_HwInstanceConfig_PB/3 (Gpt_Ipw_HwInstanceConfig_PB) @06923ab0
   Type: variable definition analyzed
   Visibility: force_output externally_visible no_reorder asm_written public section:.data.Gpt_Ipw_HwInstanceConfig_PB (implicit_section)
-  Aux: @06abebd0
+  Aux: @06923af8
   References: FTM_0_InitConfig_PB/5 (addr) 
   Referring: 
   Availability: available

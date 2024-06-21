@@ -9,9 +9,7 @@
 
 //Headers.
 #include "Mcu.h"
-#include "Platform.h"
 #include "OsIf.h"
-#include "Gpt.h"
 #include "Port.h"
 #include "Dio.h"
 

@@ -1,6 +1,6 @@
-IPA summary for EcuM_Init/10 is missing.
-IPA summary for Gpt_conf/9 is missing.
-IPA summary for MCU_clocks/8 is missing.
+IPA summary for EcuM_Init/3 is missing.
+IPA summary for Gpt_conf/2 is missing.
+IPA summary for MCU_clocks/1 is missing.
 
 Flattening functions:
 Overall time estimate: 0.000000 weighted by profile: 0.000000
@@ -16,138 +16,103 @@ Deciding on functions to be inlined into all callers and removing useless specul
 Overall time estimate: 0.000000 weighted by profile: 0.000000
 
 Why inlining failed?
-function not considered for inlining              :        2 calls, 2.000000 freq, 0 count
-function body not available                       :        8 calls, 8.000000 freq, 0 count
-IPA summary for EcuM_Init/10 is missing.
-IPA summary for Gpt_conf/9 is missing.
-IPA summary for MCU_clocks/8 is missing.
+function not considered for inlining              :        1 calls, 1.000000 freq, 0 count
+function body not available                       :        5 calls, 5.000000 freq, 0 count
+IPA summary for EcuM_Init/3 is missing.
+IPA summary for Gpt_conf/2 is missing.
+IPA summary for MCU_clocks/1 is missing.
 Symbol table:
 
-Platform_Init/21 (Platform_Init) @071602a0
-  Type: function
-  Visibility: external public
-  References: 
-  Referring: 
-  Availability: not_available
-  Function flags:
-  Called by: EcuM_Init/10 
-  Calls: 
-Port_Config/20 (Port_Config) @0715f438
+Port_Config/10 (Port_Config) @06c2abd0
   Type: variable
   Body removed by symtab_remove_unreachable_nodes
   Visibility: external public
   References: 
-  Referring: EcuM_Init/10 (addr) 
+  Referring: EcuM_Init/3 (addr) 
   Availability: not_available
   Varpool flags: read-only
-Port_Init/19 (Port_Init) @071601c0
+Port_Init/9 (Port_Init) @06c2f460
   Type: function
   Visibility: external public
   References: 
   Referring: 
   Availability: not_available
   Function flags:
-  Called by: EcuM_Init/10 
+  Called by: EcuM_Init/3 
   Calls: 
-OsIf_Init/18 (OsIf_Init) @071600e0
+OsIf_Init/8 (OsIf_Init) @06c2f380
   Type: function
   Visibility: external public
   References: 
   Referring: 
   Availability: not_available
   Function flags:
-  Called by: EcuM_Init/10 
+  Called by: EcuM_Init/3 
   Calls: 
-Gpt_EnableNotification/17 (Gpt_EnableNotification) @07140700
+Mcu_InitClock/7 (Mcu_InitClock) @06c2f0e0
   Type: function
   Visibility: external public
   References: 
   Referring: 
   Availability: not_available
   Function flags:
-  Called by: Gpt_conf/9 
+  Called by: MCU_clocks/1 
   Calls: 
-Gpt_Config/16 (Gpt_Config) @0715f120
+Mcu_SetMode/6 (Mcu_SetMode) @06c2f000
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: MCU_clocks/1 
+  Calls: 
+Mcu_Config/5 (Mcu_Config) @06c2a828
   Type: variable
   Body removed by symtab_remove_unreachable_nodes
   Visibility: external public
   References: 
-  Referring: Gpt_conf/9 (addr) 
+  Referring: MCU_clocks/1 (addr) 
   Availability: not_available
   Varpool flags: read-only
-Gpt_Init/15 (Gpt_Init) @07140460
+Mcu_Init/4 (Mcu_Init) @06c2cb60
   Type: function
   Visibility: external public
   References: 
   Referring: 
   Availability: not_available
   Function flags:
-  Called by: Gpt_conf/9 
+  Called by: MCU_clocks/1 
   Calls: 
-Mcu_InitClock/14 (Mcu_InitClock) @07140ee0
-  Type: function
-  Visibility: external public
-  References: 
-  Referring: 
-  Availability: not_available
-  Function flags:
-  Called by: MCU_clocks/8 
-  Calls: 
-Mcu_SetMode/13 (Mcu_SetMode) @07140e00
-  Type: function
-  Visibility: external public
-  References: 
-  Referring: 
-  Availability: not_available
-  Function flags:
-  Called by: MCU_clocks/8 
-  Calls: 
-Mcu_Config/12 (Mcu_Config) @0713cee8
-  Type: variable
-  Body removed by symtab_remove_unreachable_nodes
-  Visibility: external public
-  References: 
-  Referring: MCU_clocks/8 (addr) 
-  Availability: not_available
-  Varpool flags: read-only
-Mcu_Init/11 (Mcu_Init) @07140d20
-  Type: function
-  Visibility: external public
-  References: 
-  Referring: 
-  Availability: not_available
-  Function flags:
-  Called by: MCU_clocks/8 
-  Calls: 
-EcuM_Init/10 (EcuM_Init) @071408c0
+EcuM_Init/3 (EcuM_Init) @06c2cd20
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
-  References: Port_Config/20 (addr) 
+  References: Port_Config/10 (addr) 
   Referring: 
   Availability: available
   Function flags: body
   Called by: 
-  Calls: Platform_Init/21 Port_Init/19 Gpt_conf/9 OsIf_Init/18 MCU_clocks/8 
-Gpt_conf/9 (Gpt_conf) @07140620
+  Calls: Port_Init/9 OsIf_Init/8 MCU_clocks/1 
+Gpt_conf/2 (Gpt_conf) @06c2ca80
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
-  References: Gpt_Config/16 (addr) 
+  References: 
   Referring: 
   Availability: available
   Function flags: body
-  Called by: EcuM_Init/10 
-  Calls: Gpt_EnableNotification/17 Gpt_Init/15 
-MCU_clocks/8 (MCU_clocks) @07140380
+  Called by: 
+  Calls: 
+MCU_clocks/1 (MCU_clocks) @06c2c7e0
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
-  References: Mcu_Config/12 (addr) 
+  References: Mcu_Config/5 (addr) 
   Referring: 
   Availability: available
   Function flags: body
-  Called by: EcuM_Init/10 
-  Calls: Mcu_InitClock/14 Mcu_SetMode/13 Mcu_Init/11 
+  Called by: EcuM_Init/3 
+  Calls: Mcu_InitClock/7 Mcu_SetMode/6 Mcu_Init/4 
 
-;; Function MCU_clocks (MCU_clocks, funcdef_no=8, decl_uid=7266, cgraph_uid=9, symbol_order=8)
+;; Function MCU_clocks (MCU_clocks, funcdef_no=1, decl_uid=6064, cgraph_uid=2, symbol_order=1)
 
 MCU_clocks ()
 {
@@ -161,29 +126,25 @@ MCU_clocks ()
 
 
 
-;; Function Gpt_conf (Gpt_conf, funcdef_no=9, decl_uid=7268, cgraph_uid=10, symbol_order=9)
+;; Function Gpt_conf (Gpt_conf, funcdef_no=2, decl_uid=6066, cgraph_uid=3, symbol_order=2)
 
 Gpt_conf ()
 {
   <bb 2> :
-  Gpt_Init (&Gpt_Config);
-  Gpt_EnableNotification (0);
   return;
 
 }
 
 
 
-;; Function EcuM_Init (EcuM_Init, funcdef_no=10, decl_uid=7270, cgraph_uid=11, symbol_order=10)
+;; Function EcuM_Init (EcuM_Init, funcdef_no=3, decl_uid=6068, cgraph_uid=4, symbol_order=3)
 
 EcuM_Init ()
 {
   <bb 2> :
   MCU_clocks ();
   OsIf_Init (0B);
-  Gpt_conf ();
   Port_Init (&Port_Config);
-  Platform_Init (0B);
   return;
 
 }

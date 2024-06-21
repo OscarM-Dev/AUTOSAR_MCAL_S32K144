@@ -768,7 +768,7 @@ const Clock_Ip_ClockConfigType Mcu_aClockConfigPB[1U] = {
             #if CLOCK_IP_GATES_NO > 11U
             {
                 FTM0_CLK,                  /*!<     name;                    */
-                1U,                           /*!<     enable;                  */
+                0U,                           /*!<     enable;                  */
             },
             #endif
             #if CLOCK_IP_GATES_NO > 12U

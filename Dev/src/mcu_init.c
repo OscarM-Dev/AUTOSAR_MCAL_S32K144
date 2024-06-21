@@ -47,10 +47,10 @@ void MCU_clocks( void ) {
  * 
  */
 void Gpt_conf( void ) {
-    Gpt_Init( &Gpt_Config );//Initializing gpt driver and configurations.
+    //Gpt_Init( &Gpt_Config );//Initializing gpt driver and configurations.
 
     //Enabling notifications
-    Gpt_EnableNotification( GptConf_GptChannelConfiguration_Gpt_Ftm0_ch0 );
+    //Gpt_EnableNotification( GptConf_GptChannelConfiguration_Gpt_Ftm0_ch0 );
 }
 
 /**
@@ -62,7 +62,5 @@ void EcuM_Init( void )
 {   
     MCU_clocks();
     OsIf_Init( NULL_PTR );//Init Osif timer.
-    Gpt_conf();
     Port_Init( &Port_Config );//Init port driver and configuration.
-    Platform_Init( NULL_PTR );//Initializing platform driver and configurations.
 }

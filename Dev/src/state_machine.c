@@ -20,11 +20,11 @@
  * 
  */
 void DoubleClick_stMachine( void ) {
-    switch( state ) {
+   /* switch( state ) {
         case IDLE :
             //Checks if the button is pressed.
             if ( Dio_ReadChannel( DioConf_DioChannel_PTE12 ) == STD_LOW ) {
-                Gpt_StartTimer( GptConf_GptChannelConfiguration_Gpt_Ftm0_ch1, FTM0CH1_V );//Starting timer 300ms.
+                //Gpt_StartTimer( GptConf_GptChannelConfiguration_Gpt_Ftm0_ch1, FTM0CH1_V );//Starting timer 300ms.
                 state = SINGLE_PRESS;
             }
         break;
@@ -78,5 +78,5 @@ void DoubleClick_stMachine( void ) {
         
         default :
         break;
-    }
+    } */
 }

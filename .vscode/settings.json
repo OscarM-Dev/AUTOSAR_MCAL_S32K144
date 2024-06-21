@@ -60,6 +60,8 @@
     "platform_types.h": "c",
     "platformtypes.h": "c",
     "std_types.h": "c",
-    "mcu_init.h": "c"
+    "mcu_init.h": "c",
+    "dio_cfg.h": "c",
+    "standardtypes.h": "c"
   }
 }
