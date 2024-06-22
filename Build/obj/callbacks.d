@@ -17,7 +17,8 @@ Build/obj/Callbacks.o: Autosar/Os/src/Callbacks.c \
  Autosar/Mcal/Base/include/BasicTypes.h \
  Autosar/Mcal/Base/include/BaseNXP_MemMap.h Autosar/Bfx/Bfx.h \
  Autosar/Bfx/Bfx_32bits.h Autosar/Mcal/Base/include/Std_Types.h \
- Autosar/Bfx/Bfx_8bits.h Autosar/Mcal/Dio/include/Dio.h \
+ Autosar/Bfx/Bfx_8bits.h Dev/include/State_machine.h \
+ Autosar/Os/include/Scheduler.h Autosar/Mcal/Dio/include/Dio.h \
  Autosar/Mcal/Base/include/Mcal.h Autosar/Mcal/Base/include/Reg_eSys.h \
  Build/cfg/include/Dio_Cfg.h Build/cfg/include/Gpio_Dio_Ip_Cfg.h \
  Autosar/Mcal/Base/header/S32K144_GPIO.h \
@@ -48,6 +49,8 @@ Autosar/Bfx/Bfx.h:
 Autosar/Bfx/Bfx_32bits.h:
 Autosar/Mcal/Base/include/Std_Types.h:
 Autosar/Bfx/Bfx_8bits.h:
+Dev/include/State_machine.h:
+Autosar/Os/include/Scheduler.h:
 Autosar/Mcal/Dio/include/Dio.h:
 Autosar/Mcal/Base/include/Mcal.h:
 Autosar/Mcal/Base/include/Reg_eSys.h:

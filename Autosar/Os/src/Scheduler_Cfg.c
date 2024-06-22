@@ -18,12 +18,12 @@
 //Task buffer.
 const Task_ConfigType Task_Config[ SCHEDULER_TASKS ]  = {
     {
-        .InitPeriod = SCHEDULER_TASK1_PERIOD_100MS,
+        .InitPeriod = SCHEDULER_TASK1_PERIOD_50MS,
         .InitFlag = TRUE,
         .TaskFunc = Task1_callback
     },
     {
-        .InitPeriod = SCHEDULER_TASK2_PERIOD_200MS,
+        .InitPeriod = SCHEDULER_TASK2_PERIOD_100MS,
         .InitFlag = TRUE,
         .TaskFunc = Task2_callback
     }
@@ -33,13 +33,8 @@ const Task_ConfigType Task_Config[ SCHEDULER_TASKS ]  = {
 const Timer_ConfigType Timer_Config[ SCHEDULER_TIMERS ] = {
     {
         .InitTimeout = SCHEDULER_TIMER1_TIMEOUT_300MS,
-        .InitFlag = TRUE,
+        .InitFlag = FALSE,
         .CallbackFunc = Timer1_callback
-    },
-    {
-        .InitTimeout = SCHEDULER_TIMER2_TIMEOUT_400MS,
-        .InitFlag = TRUE,
-        .CallbackFunc = Timer2_callback
     }
 };
 

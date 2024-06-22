@@ -1,5 +1,5 @@
 /**
- * @file state_machine.h
+ * @file State_machine.h
  * @brief This header contains the declaration of the functions and structures related to the double click state machine.
  * 
  * 
@@ -10,19 +10,15 @@
 
 //Headers
 #include "StandardTypes.h"
-//#include "Gpt.h"
+#include "Scheduler.h"
 #include "Dio.h"
-
-//Macros.
-#define FTM0CH0_V 3125 ///< Counter reference value for 50 ms.
-#define FTM0CH1_V 18750 ///< Counter reference value for 300 ms.
-
 
 //Enums 
 typedef enum { IDLE, SINGLE_PRESS, SINGLE_RELEASE, DOUBLE_PRESS, HOLD } states;
+typedef enum { NO_CLICK, SINGLE_CLICK, DOUBLE_CLICK, HOLD_CLICK } clicks;
 
-//Global data.
-//extern uint8 state;
+//Global data
+extern uint8 click;
 
 //Functions.
 void DoubleClick_stMachine( void );

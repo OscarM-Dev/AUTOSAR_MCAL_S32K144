@@ -2,12 +2,15 @@
  * @file main.c
  * @brief This file contains the main function of the project
  * 
- * This file contains
+ * This file executes the double click state machine using the scheduler.
 */
 
 //Header.
-#include "mcu_init.h"
+#include "Mcu_init.h"
 #include "Scheduler.h"
+
+//Global data.
+uint8 click = 0;
 
 /**
  * @brief This is the main function of the project

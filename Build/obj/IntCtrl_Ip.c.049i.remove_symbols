@@ -4,7 +4,7 @@ Reclaiming variables:
 Clearing address taken flags:
 Symbol table:
 
-IntCtrl_Ip_ClearPending/13 (IntCtrl_Ip_ClearPending) @06d0dd20
+IntCtrl_Ip_ClearPending/13 (IntCtrl_Ip_ClearPending) @06cfdd20
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: 
@@ -13,7 +13,7 @@ IntCtrl_Ip_ClearPending/13 (IntCtrl_Ip_ClearPending) @06d0dd20
   Function flags: body
   Called by: IntCtrl_Ip_Init/7 
   Calls: IntCtrl_Ip_ClearPendingPrivileged/6 
-IntCtrl_Ip_GetPriority/12 (IntCtrl_Ip_GetPriority) @06d0da80
+IntCtrl_Ip_GetPriority/12 (IntCtrl_Ip_GetPriority) @06cfda80
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: 
@@ -22,7 +22,7 @@ IntCtrl_Ip_GetPriority/12 (IntCtrl_Ip_GetPriority) @06d0da80
   Function flags: body
   Called by: 
   Calls: IntCtrl_Ip_GetPriorityPrivileged/5 
-IntCtrl_Ip_SetPriority/11 (IntCtrl_Ip_SetPriority) @06d0d7e0
+IntCtrl_Ip_SetPriority/11 (IntCtrl_Ip_SetPriority) @06cfd7e0
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: 
@@ -31,7 +31,7 @@ IntCtrl_Ip_SetPriority/11 (IntCtrl_Ip_SetPriority) @06d0d7e0
   Function flags: body
   Called by: IntCtrl_Ip_Init/7 
   Calls: IntCtrl_Ip_SetPriorityPrivileged/4 
-IntCtrl_Ip_DisableIrq/10 (IntCtrl_Ip_DisableIrq) @06d0d540
+IntCtrl_Ip_DisableIrq/10 (IntCtrl_Ip_DisableIrq) @06cfd540
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: 
@@ -40,7 +40,7 @@ IntCtrl_Ip_DisableIrq/10 (IntCtrl_Ip_DisableIrq) @06d0d540
   Function flags: body
   Called by: IntCtrl_Ip_Init/7 
   Calls: IntCtrl_Ip_DisableIrqPrivileged/3 
-IntCtrl_Ip_EnableIrq/9 (IntCtrl_Ip_EnableIrq) @06d0d2a0
+IntCtrl_Ip_EnableIrq/9 (IntCtrl_Ip_EnableIrq) @06cfd2a0
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: 
@@ -49,7 +49,7 @@ IntCtrl_Ip_EnableIrq/9 (IntCtrl_Ip_EnableIrq) @06d0d2a0
   Function flags: body
   Called by: IntCtrl_Ip_Init/7 
   Calls: IntCtrl_Ip_EnableIrqPrivileged/2 
-IntCtrl_Ip_InstallHandler/8 (IntCtrl_Ip_InstallHandler) @06d0d000
+IntCtrl_Ip_InstallHandler/8 (IntCtrl_Ip_InstallHandler) @06cfd000
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: 
@@ -58,7 +58,7 @@ IntCtrl_Ip_InstallHandler/8 (IntCtrl_Ip_InstallHandler) @06d0d000
   Function flags: body
   Called by: IntCtrl_Ip_Init/7 
   Calls: IntCtrl_Ip_InstallHandlerPrivileged/1 
-IntCtrl_Ip_Init/7 (IntCtrl_Ip_Init) @06c4c9a0
+IntCtrl_Ip_Init/7 (IntCtrl_Ip_Init) @06c3c9a0
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: 
@@ -67,7 +67,7 @@ IntCtrl_Ip_Init/7 (IntCtrl_Ip_Init) @06c4c9a0
   Function flags: body
   Called by: 
   Calls: IntCtrl_Ip_DisableIrq/10 IntCtrl_Ip_EnableIrq/9 IntCtrl_Ip_InstallHandler/8 IntCtrl_Ip_SetPriority/11 IntCtrl_Ip_ClearPending/13 
-IntCtrl_Ip_ClearPendingPrivileged/6 (IntCtrl_Ip_ClearPendingPrivileged) @06c4c460
+IntCtrl_Ip_ClearPendingPrivileged/6 (IntCtrl_Ip_ClearPendingPrivileged) @06c3c460
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: 
@@ -76,7 +76,7 @@ IntCtrl_Ip_ClearPendingPrivileged/6 (IntCtrl_Ip_ClearPendingPrivileged) @06c4c46
   Function flags: body
   Called by: IntCtrl_Ip_ClearPending/13 
   Calls: 
-IntCtrl_Ip_GetPriorityPrivileged/5 (IntCtrl_Ip_GetPriorityPrivileged) @06c4ce00
+IntCtrl_Ip_GetPriorityPrivileged/5 (IntCtrl_Ip_GetPriorityPrivileged) @06c3ce00
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: 
@@ -85,7 +85,7 @@ IntCtrl_Ip_GetPriorityPrivileged/5 (IntCtrl_Ip_GetPriorityPrivileged) @06c4ce00
   Function flags: body
   Called by: IntCtrl_Ip_GetPriority/12 
   Calls: 
-IntCtrl_Ip_SetPriorityPrivileged/4 (IntCtrl_Ip_SetPriorityPrivileged) @06c4cb60
+IntCtrl_Ip_SetPriorityPrivileged/4 (IntCtrl_Ip_SetPriorityPrivileged) @06c3cb60
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: 
@@ -94,7 +94,7 @@ IntCtrl_Ip_SetPriorityPrivileged/4 (IntCtrl_Ip_SetPriorityPrivileged) @06c4cb60
   Function flags: body
   Called by: IntCtrl_Ip_SetPriority/11 
   Calls: 
-IntCtrl_Ip_DisableIrqPrivileged/3 (IntCtrl_Ip_DisableIrqPrivileged) @06c4c8c0
+IntCtrl_Ip_DisableIrqPrivileged/3 (IntCtrl_Ip_DisableIrqPrivileged) @06c3c8c0
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: 
@@ -103,7 +103,7 @@ IntCtrl_Ip_DisableIrqPrivileged/3 (IntCtrl_Ip_DisableIrqPrivileged) @06c4c8c0
   Function flags: body
   Called by: IntCtrl_Ip_DisableIrq/10 
   Calls: 
-IntCtrl_Ip_EnableIrqPrivileged/2 (IntCtrl_Ip_EnableIrqPrivileged) @06c4c620
+IntCtrl_Ip_EnableIrqPrivileged/2 (IntCtrl_Ip_EnableIrqPrivileged) @06c3c620
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: 
@@ -112,7 +112,7 @@ IntCtrl_Ip_EnableIrqPrivileged/2 (IntCtrl_Ip_EnableIrqPrivileged) @06c4c620
   Function flags: body
   Called by: IntCtrl_Ip_EnableIrq/9 
   Calls: 
-IntCtrl_Ip_InstallHandlerPrivileged/1 (IntCtrl_Ip_InstallHandlerPrivileged) @06c4c380
+IntCtrl_Ip_InstallHandlerPrivileged/1 (IntCtrl_Ip_InstallHandlerPrivileged) @06c3c380
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: 

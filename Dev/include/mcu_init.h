@@ -1,5 +1,5 @@
 /**
- * @file mcu_init.h
+ * @file Mcu_init.h
  * @brief This header contains the declaration of the initialization functions of the MCU.
  * 
  */
@@ -16,7 +16,6 @@
 
 //Function declarations.
 void MCU_clocks( void );
-void Gpt_conf( void );
 void EcuM_Init( void );
 
 

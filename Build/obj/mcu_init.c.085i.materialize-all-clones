@@ -9,14 +9,6 @@ EcuM_Init ()
 }
 
 
-Gpt_conf ()
-{
-  <bb 2> :
-  return;
-
-}
-
-
 MCU_clocks ()
 {
   <bb 2> :

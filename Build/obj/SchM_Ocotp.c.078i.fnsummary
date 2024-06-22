@@ -1,6 +1,6 @@
 Symbol table:
 
-Sys_GetCoreID/21 (Sys_GetCoreID) @068871c0
+Sys_GetCoreID/21 (Sys_GetCoreID) @068e51c0
   Type: function
   Visibility: external public
   References: 
@@ -9,7 +9,7 @@ Sys_GetCoreID/21 (Sys_GetCoreID) @068871c0
   Function flags:
   Called by: SchM_Exit_Ocotp_OCOTP_EXCLUSIVE_AREA_04/20 SchM_Enter_Ocotp_OCOTP_EXCLUSIVE_AREA_04/19 SchM_Exit_Ocotp_OCOTP_EXCLUSIVE_AREA_03/18 SchM_Enter_Ocotp_OCOTP_EXCLUSIVE_AREA_03/17 SchM_Exit_Ocotp_OCOTP_EXCLUSIVE_AREA_02/16 SchM_Enter_Ocotp_OCOTP_EXCLUSIVE_AREA_02/15 SchM_Exit_Ocotp_OCOTP_EXCLUSIVE_AREA_01/14 SchM_Enter_Ocotp_OCOTP_EXCLUSIVE_AREA_01/13 SchM_Exit_Ocotp_OCOTP_EXCLUSIVE_AREA_00/12 SchM_Enter_Ocotp_OCOTP_EXCLUSIVE_AREA_00/11 
   Calls: 
-SchM_Exit_Ocotp_OCOTP_EXCLUSIVE_AREA_04/20 (SchM_Exit_Ocotp_OCOTP_EXCLUSIVE_AREA_04) @06918380
+SchM_Exit_Ocotp_OCOTP_EXCLUSIVE_AREA_04/20 (SchM_Exit_Ocotp_OCOTP_EXCLUSIVE_AREA_04) @06978380
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: reentry_guard_OCOTP_EXCLUSIVE_AREA_04/9 (read) reentry_guard_OCOTP_EXCLUSIVE_AREA_04/9 (write) msr_OCOTP_EXCLUSIVE_AREA_04/8 (read) reentry_guard_OCOTP_EXCLUSIVE_AREA_04/9 (read) 
@@ -18,7 +18,7 @@ SchM_Exit_Ocotp_OCOTP_EXCLUSIVE_AREA_04/20 (SchM_Exit_Ocotp_OCOTP_EXCLUSIVE_AREA
   Function flags: body
   Called by: 
   Calls: Sys_GetCoreID/21 
-SchM_Enter_Ocotp_OCOTP_EXCLUSIVE_AREA_04/19 (SchM_Enter_Ocotp_OCOTP_EXCLUSIVE_AREA_04) @06918ee0
+SchM_Enter_Ocotp_OCOTP_EXCLUSIVE_AREA_04/19 (SchM_Enter_Ocotp_OCOTP_EXCLUSIVE_AREA_04) @06978ee0
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: reentry_guard_OCOTP_EXCLUSIVE_AREA_04/9 (read) msr_OCOTP_EXCLUSIVE_AREA_04/8 (write) reentry_guard_OCOTP_EXCLUSIVE_AREA_04/9 (read) reentry_guard_OCOTP_EXCLUSIVE_AREA_04/9 (write) 
@@ -27,7 +27,7 @@ SchM_Enter_Ocotp_OCOTP_EXCLUSIVE_AREA_04/19 (SchM_Enter_Ocotp_OCOTP_EXCLUSIVE_AR
   Function flags: body
   Called by: 
   Calls: Ocotp_schm_read_msr/10 Sys_GetCoreID/21 
-SchM_Exit_Ocotp_OCOTP_EXCLUSIVE_AREA_03/18 (SchM_Exit_Ocotp_OCOTP_EXCLUSIVE_AREA_03) @06918b60
+SchM_Exit_Ocotp_OCOTP_EXCLUSIVE_AREA_03/18 (SchM_Exit_Ocotp_OCOTP_EXCLUSIVE_AREA_03) @06978b60
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: reentry_guard_OCOTP_EXCLUSIVE_AREA_03/7 (read) reentry_guard_OCOTP_EXCLUSIVE_AREA_03/7 (write) msr_OCOTP_EXCLUSIVE_AREA_03/6 (read) reentry_guard_OCOTP_EXCLUSIVE_AREA_03/7 (read) 
@@ -36,7 +36,7 @@ SchM_Exit_Ocotp_OCOTP_EXCLUSIVE_AREA_03/18 (SchM_Exit_Ocotp_OCOTP_EXCLUSIVE_AREA
   Function flags: body
   Called by: 
   Calls: Sys_GetCoreID/21 
-SchM_Enter_Ocotp_OCOTP_EXCLUSIVE_AREA_03/17 (SchM_Enter_Ocotp_OCOTP_EXCLUSIVE_AREA_03) @069188c0
+SchM_Enter_Ocotp_OCOTP_EXCLUSIVE_AREA_03/17 (SchM_Enter_Ocotp_OCOTP_EXCLUSIVE_AREA_03) @069788c0
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: reentry_guard_OCOTP_EXCLUSIVE_AREA_03/7 (read) msr_OCOTP_EXCLUSIVE_AREA_03/6 (write) reentry_guard_OCOTP_EXCLUSIVE_AREA_03/7 (read) reentry_guard_OCOTP_EXCLUSIVE_AREA_03/7 (write) 
@@ -45,7 +45,7 @@ SchM_Enter_Ocotp_OCOTP_EXCLUSIVE_AREA_03/17 (SchM_Enter_Ocotp_OCOTP_EXCLUSIVE_AR
   Function flags: body
   Called by: 
   Calls: Ocotp_schm_read_msr/10 Sys_GetCoreID/21 
-SchM_Exit_Ocotp_OCOTP_EXCLUSIVE_AREA_02/16 (SchM_Exit_Ocotp_OCOTP_EXCLUSIVE_AREA_02) @06918540
+SchM_Exit_Ocotp_OCOTP_EXCLUSIVE_AREA_02/16 (SchM_Exit_Ocotp_OCOTP_EXCLUSIVE_AREA_02) @06978540
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: reentry_guard_OCOTP_EXCLUSIVE_AREA_02/5 (read) reentry_guard_OCOTP_EXCLUSIVE_AREA_02/5 (write) msr_OCOTP_EXCLUSIVE_AREA_02/4 (read) reentry_guard_OCOTP_EXCLUSIVE_AREA_02/5 (read) 
@@ -54,7 +54,7 @@ SchM_Exit_Ocotp_OCOTP_EXCLUSIVE_AREA_02/16 (SchM_Exit_Ocotp_OCOTP_EXCLUSIVE_AREA
   Function flags: body
   Called by: 
   Calls: Sys_GetCoreID/21 
-SchM_Enter_Ocotp_OCOTP_EXCLUSIVE_AREA_02/15 (SchM_Enter_Ocotp_OCOTP_EXCLUSIVE_AREA_02) @069182a0
+SchM_Enter_Ocotp_OCOTP_EXCLUSIVE_AREA_02/15 (SchM_Enter_Ocotp_OCOTP_EXCLUSIVE_AREA_02) @069782a0
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: reentry_guard_OCOTP_EXCLUSIVE_AREA_02/5 (read) msr_OCOTP_EXCLUSIVE_AREA_02/4 (write) reentry_guard_OCOTP_EXCLUSIVE_AREA_02/5 (read) reentry_guard_OCOTP_EXCLUSIVE_AREA_02/5 (write) 
@@ -63,7 +63,7 @@ SchM_Enter_Ocotp_OCOTP_EXCLUSIVE_AREA_02/15 (SchM_Enter_Ocotp_OCOTP_EXCLUSIVE_AR
   Function flags: body
   Called by: 
   Calls: Ocotp_schm_read_msr/10 Sys_GetCoreID/21 
-SchM_Exit_Ocotp_OCOTP_EXCLUSIVE_AREA_01/14 (SchM_Exit_Ocotp_OCOTP_EXCLUSIVE_AREA_01) @06913e00
+SchM_Exit_Ocotp_OCOTP_EXCLUSIVE_AREA_01/14 (SchM_Exit_Ocotp_OCOTP_EXCLUSIVE_AREA_01) @06973e00
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: reentry_guard_OCOTP_EXCLUSIVE_AREA_01/3 (read) reentry_guard_OCOTP_EXCLUSIVE_AREA_01/3 (write) msr_OCOTP_EXCLUSIVE_AREA_01/2 (read) reentry_guard_OCOTP_EXCLUSIVE_AREA_01/3 (read) 
@@ -72,7 +72,7 @@ SchM_Exit_Ocotp_OCOTP_EXCLUSIVE_AREA_01/14 (SchM_Exit_Ocotp_OCOTP_EXCLUSIVE_AREA
   Function flags: body
   Called by: 
   Calls: Sys_GetCoreID/21 
-SchM_Enter_Ocotp_OCOTP_EXCLUSIVE_AREA_01/13 (SchM_Enter_Ocotp_OCOTP_EXCLUSIVE_AREA_01) @069137e0
+SchM_Enter_Ocotp_OCOTP_EXCLUSIVE_AREA_01/13 (SchM_Enter_Ocotp_OCOTP_EXCLUSIVE_AREA_01) @069737e0
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: reentry_guard_OCOTP_EXCLUSIVE_AREA_01/3 (read) msr_OCOTP_EXCLUSIVE_AREA_01/2 (write) reentry_guard_OCOTP_EXCLUSIVE_AREA_01/3 (read) reentry_guard_OCOTP_EXCLUSIVE_AREA_01/3 (write) 
@@ -81,7 +81,7 @@ SchM_Enter_Ocotp_OCOTP_EXCLUSIVE_AREA_01/13 (SchM_Enter_Ocotp_OCOTP_EXCLUSIVE_AR
   Function flags: body
   Called by: 
   Calls: Ocotp_schm_read_msr/10 Sys_GetCoreID/21 
-SchM_Exit_Ocotp_OCOTP_EXCLUSIVE_AREA_00/12 (SchM_Exit_Ocotp_OCOTP_EXCLUSIVE_AREA_00) @06913d20
+SchM_Exit_Ocotp_OCOTP_EXCLUSIVE_AREA_00/12 (SchM_Exit_Ocotp_OCOTP_EXCLUSIVE_AREA_00) @06973d20
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: reentry_guard_OCOTP_EXCLUSIVE_AREA_00/1 (read) reentry_guard_OCOTP_EXCLUSIVE_AREA_00/1 (write) msr_OCOTP_EXCLUSIVE_AREA_00/0 (read) reentry_guard_OCOTP_EXCLUSIVE_AREA_00/1 (read) 
@@ -90,7 +90,7 @@ SchM_Exit_Ocotp_OCOTP_EXCLUSIVE_AREA_00/12 (SchM_Exit_Ocotp_OCOTP_EXCLUSIVE_AREA
   Function flags: body
   Called by: 
   Calls: Sys_GetCoreID/21 
-SchM_Enter_Ocotp_OCOTP_EXCLUSIVE_AREA_00/11 (SchM_Enter_Ocotp_OCOTP_EXCLUSIVE_AREA_00) @06913a80
+SchM_Enter_Ocotp_OCOTP_EXCLUSIVE_AREA_00/11 (SchM_Enter_Ocotp_OCOTP_EXCLUSIVE_AREA_00) @06973a80
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: reentry_guard_OCOTP_EXCLUSIVE_AREA_00/1 (read) msr_OCOTP_EXCLUSIVE_AREA_00/0 (write) reentry_guard_OCOTP_EXCLUSIVE_AREA_00/1 (read) reentry_guard_OCOTP_EXCLUSIVE_AREA_00/1 (write) 
@@ -99,7 +99,7 @@ SchM_Enter_Ocotp_OCOTP_EXCLUSIVE_AREA_00/11 (SchM_Enter_Ocotp_OCOTP_EXCLUSIVE_AR
   Function flags: body
   Called by: 
   Calls: Ocotp_schm_read_msr/10 Sys_GetCoreID/21 
-Ocotp_schm_read_msr/10 (Ocotp_schm_read_msr) @06913700
+Ocotp_schm_read_msr/10 (Ocotp_schm_read_msr) @06973700
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: 
@@ -108,70 +108,70 @@ Ocotp_schm_read_msr/10 (Ocotp_schm_read_msr) @06913700
   Function flags: body
   Called by: SchM_Enter_Ocotp_OCOTP_EXCLUSIVE_AREA_04/19 SchM_Enter_Ocotp_OCOTP_EXCLUSIVE_AREA_03/17 SchM_Enter_Ocotp_OCOTP_EXCLUSIVE_AREA_02/15 SchM_Enter_Ocotp_OCOTP_EXCLUSIVE_AREA_01/13 SchM_Enter_Ocotp_OCOTP_EXCLUSIVE_AREA_00/11 
   Calls: 
-reentry_guard_OCOTP_EXCLUSIVE_AREA_04/9 (reentry_guard_OCOTP_EXCLUSIVE_AREA_04) @06911828
+reentry_guard_OCOTP_EXCLUSIVE_AREA_04/9 (reentry_guard_OCOTP_EXCLUSIVE_AREA_04) @06971828
   Type: variable definition analyzed
   Visibility: force_output no_reorder prevailing_def_ironly
   References: 
   Referring: SchM_Enter_Ocotp_OCOTP_EXCLUSIVE_AREA_04/19 (read) SchM_Enter_Ocotp_OCOTP_EXCLUSIVE_AREA_04/19 (read) SchM_Enter_Ocotp_OCOTP_EXCLUSIVE_AREA_04/19 (write) SchM_Exit_Ocotp_OCOTP_EXCLUSIVE_AREA_04/20 (read) SchM_Exit_Ocotp_OCOTP_EXCLUSIVE_AREA_04/20 (write) SchM_Exit_Ocotp_OCOTP_EXCLUSIVE_AREA_04/20 (read) 
   Availability: available
   Varpool flags:
-msr_OCOTP_EXCLUSIVE_AREA_04/8 (msr_OCOTP_EXCLUSIVE_AREA_04) @06911798
+msr_OCOTP_EXCLUSIVE_AREA_04/8 (msr_OCOTP_EXCLUSIVE_AREA_04) @06971798
   Type: variable definition analyzed
   Visibility: force_output no_reorder prevailing_def_ironly
   References: 
   Referring: SchM_Enter_Ocotp_OCOTP_EXCLUSIVE_AREA_04/19 (write) SchM_Exit_Ocotp_OCOTP_EXCLUSIVE_AREA_04/20 (read) 
   Availability: available
   Varpool flags:
-reentry_guard_OCOTP_EXCLUSIVE_AREA_03/7 (reentry_guard_OCOTP_EXCLUSIVE_AREA_03) @06911708
+reentry_guard_OCOTP_EXCLUSIVE_AREA_03/7 (reentry_guard_OCOTP_EXCLUSIVE_AREA_03) @06971708
   Type: variable definition analyzed
   Visibility: force_output no_reorder prevailing_def_ironly
   References: 
   Referring: SchM_Enter_Ocotp_OCOTP_EXCLUSIVE_AREA_03/17 (read) SchM_Enter_Ocotp_OCOTP_EXCLUSIVE_AREA_03/17 (read) SchM_Enter_Ocotp_OCOTP_EXCLUSIVE_AREA_03/17 (write) SchM_Exit_Ocotp_OCOTP_EXCLUSIVE_AREA_03/18 (read) SchM_Exit_Ocotp_OCOTP_EXCLUSIVE_AREA_03/18 (write) SchM_Exit_Ocotp_OCOTP_EXCLUSIVE_AREA_03/18 (read) 
   Availability: available
   Varpool flags:
-msr_OCOTP_EXCLUSIVE_AREA_03/6 (msr_OCOTP_EXCLUSIVE_AREA_03) @06911678
+msr_OCOTP_EXCLUSIVE_AREA_03/6 (msr_OCOTP_EXCLUSIVE_AREA_03) @06971678
   Type: variable definition analyzed
   Visibility: force_output no_reorder prevailing_def_ironly
   References: 
   Referring: SchM_Enter_Ocotp_OCOTP_EXCLUSIVE_AREA_03/17 (write) SchM_Exit_Ocotp_OCOTP_EXCLUSIVE_AREA_03/18 (read) 
   Availability: available
   Varpool flags:
-reentry_guard_OCOTP_EXCLUSIVE_AREA_02/5 (reentry_guard_OCOTP_EXCLUSIVE_AREA_02) @069115e8
+reentry_guard_OCOTP_EXCLUSIVE_AREA_02/5 (reentry_guard_OCOTP_EXCLUSIVE_AREA_02) @069715e8
   Type: variable definition analyzed
   Visibility: force_output no_reorder prevailing_def_ironly
   References: 
   Referring: SchM_Enter_Ocotp_OCOTP_EXCLUSIVE_AREA_02/15 (read) SchM_Enter_Ocotp_OCOTP_EXCLUSIVE_AREA_02/15 (read) SchM_Enter_Ocotp_OCOTP_EXCLUSIVE_AREA_02/15 (write) SchM_Exit_Ocotp_OCOTP_EXCLUSIVE_AREA_02/16 (read) SchM_Exit_Ocotp_OCOTP_EXCLUSIVE_AREA_02/16 (write) SchM_Exit_Ocotp_OCOTP_EXCLUSIVE_AREA_02/16 (read) 
   Availability: available
   Varpool flags:
-msr_OCOTP_EXCLUSIVE_AREA_02/4 (msr_OCOTP_EXCLUSIVE_AREA_02) @06911558
+msr_OCOTP_EXCLUSIVE_AREA_02/4 (msr_OCOTP_EXCLUSIVE_AREA_02) @06971558
   Type: variable definition analyzed
   Visibility: force_output no_reorder prevailing_def_ironly
   References: 
   Referring: SchM_Enter_Ocotp_OCOTP_EXCLUSIVE_AREA_02/15 (write) SchM_Exit_Ocotp_OCOTP_EXCLUSIVE_AREA_02/16 (read) 
   Availability: available
   Varpool flags:
-reentry_guard_OCOTP_EXCLUSIVE_AREA_01/3 (reentry_guard_OCOTP_EXCLUSIVE_AREA_01) @069114c8
+reentry_guard_OCOTP_EXCLUSIVE_AREA_01/3 (reentry_guard_OCOTP_EXCLUSIVE_AREA_01) @069714c8
   Type: variable definition analyzed
   Visibility: force_output no_reorder prevailing_def_ironly
   References: 
   Referring: SchM_Enter_Ocotp_OCOTP_EXCLUSIVE_AREA_01/13 (read) SchM_Enter_Ocotp_OCOTP_EXCLUSIVE_AREA_01/13 (read) SchM_Enter_Ocotp_OCOTP_EXCLUSIVE_AREA_01/13 (write) SchM_Exit_Ocotp_OCOTP_EXCLUSIVE_AREA_01/14 (read) SchM_Exit_Ocotp_OCOTP_EXCLUSIVE_AREA_01/14 (write) SchM_Exit_Ocotp_OCOTP_EXCLUSIVE_AREA_01/14 (read) 
   Availability: available
   Varpool flags:
-msr_OCOTP_EXCLUSIVE_AREA_01/2 (msr_OCOTP_EXCLUSIVE_AREA_01) @06911438
+msr_OCOTP_EXCLUSIVE_AREA_01/2 (msr_OCOTP_EXCLUSIVE_AREA_01) @06971438
   Type: variable definition analyzed
   Visibility: force_output no_reorder prevailing_def_ironly
   References: 
   Referring: SchM_Enter_Ocotp_OCOTP_EXCLUSIVE_AREA_01/13 (write) SchM_Exit_Ocotp_OCOTP_EXCLUSIVE_AREA_01/14 (read) 
   Availability: available
   Varpool flags:
-reentry_guard_OCOTP_EXCLUSIVE_AREA_00/1 (reentry_guard_OCOTP_EXCLUSIVE_AREA_00) @069113a8
+reentry_guard_OCOTP_EXCLUSIVE_AREA_00/1 (reentry_guard_OCOTP_EXCLUSIVE_AREA_00) @069713a8
   Type: variable definition analyzed
   Visibility: force_output no_reorder prevailing_def_ironly
   References: 
   Referring: SchM_Enter_Ocotp_OCOTP_EXCLUSIVE_AREA_00/11 (read) SchM_Enter_Ocotp_OCOTP_EXCLUSIVE_AREA_00/11 (read) SchM_Enter_Ocotp_OCOTP_EXCLUSIVE_AREA_00/11 (write) SchM_Exit_Ocotp_OCOTP_EXCLUSIVE_AREA_00/12 (read) SchM_Exit_Ocotp_OCOTP_EXCLUSIVE_AREA_00/12 (write) SchM_Exit_Ocotp_OCOTP_EXCLUSIVE_AREA_00/12 (read) 
   Availability: available
   Varpool flags:
-msr_OCOTP_EXCLUSIVE_AREA_00/0 (msr_OCOTP_EXCLUSIVE_AREA_00) @06911318
+msr_OCOTP_EXCLUSIVE_AREA_00/0 (msr_OCOTP_EXCLUSIVE_AREA_00) @06971318
   Type: variable definition analyzed
   Visibility: force_output no_reorder prevailing_def_ironly
   References: 

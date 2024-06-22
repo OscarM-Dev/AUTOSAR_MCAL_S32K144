@@ -4,53 +4,60 @@ Reclaiming variables:
 Clearing address taken flags:
 Symbol table:
 
-Scheduler_MainFunction/55 (Scheduler_MainFunction) @06c19000
+Scheduler_MainFunction/56 (Scheduler_MainFunction) @06ce91c0
   Type: function
   Visibility: external public
   References: 
   Referring: 
   Availability: not_available
   Function flags:
-  Called by: main/51 
+  Called by: main/52 
   Calls: 
-Scheduler_Control/54 (Scheduler_Control) @06c18240
+Scheduler_Control/55 (Scheduler_Control) @06ce81f8
   Type: variable
   Body removed by symtab_remove_unreachable_nodes
   Visibility: external public
   References: 
-  Referring: main/51 (addr) 
+  Referring: main/52 (addr) 
   Availability: not_available
   Varpool flags:
-Scheduler_Init/53 (Scheduler_Init) @06c17ee0
+Scheduler_Init/54 (Scheduler_Init) @06ce90e0
   Type: function
   Visibility: external public
   References: 
   Referring: 
   Availability: not_available
   Function flags:
-  Called by: main/51 
+  Called by: main/52 
   Calls: 
-EcuM_Init/52 (EcuM_Init) @06c17e00
+EcuM_Init/53 (EcuM_Init) @06ce9000
   Type: function
   Visibility: external public
   References: 
   Referring: 
   Availability: not_available
   Function flags:
-  Called by: main/51 
+  Called by: main/52 
   Calls: 
-main/51 (main) @06c179a0
+main/52 (main) @06ce6b60
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
-  References: Scheduler_Control/54 (addr) 
+  References: Scheduler_Control/55 (addr) 
   Referring: 
   Availability: available
   Function flags: body
   Called by: 
-  Calls: Scheduler_MainFunction/55 Scheduler_Init/53 EcuM_Init/52 
+  Calls: Scheduler_MainFunction/56 Scheduler_Init/54 EcuM_Init/53 
+click/51 (click) @06cdec60
+  Type: variable definition analyzed
+  Visibility: force_output externally_visible no_reorder public
+  References: 
+  Referring: 
+  Availability: available
+  Varpool flags: initialized
 main ()
 {
-  int D.6429;
+  int D.6428;
 
   <bb 2> :
   EcuM_Init ();

@@ -1,41 +1,32 @@
 Symbol table:
 
-Port_Config/10 (Port_Config) @06c2abd0
+Port_Config/9 (Port_Config) @06beaa68
   Type: variable
   Body removed by symtab_remove_unreachable_nodes
   Visibility: external public
   References: 
-  Referring: EcuM_Init/3 (addr) 
+  Referring: EcuM_Init/2 (addr) 
   Availability: not_available
   Varpool flags: read-only
-Port_Init/9 (Port_Init) @06c2f460
+Port_Init/8 (Port_Init) @06bef0e0
   Type: function
   Visibility: external public
   References: 
   Referring: 
   Availability: not_available
   Function flags:
-  Called by: EcuM_Init/3 
+  Called by: EcuM_Init/2 
   Calls: 
-OsIf_Init/8 (OsIf_Init) @06c2f380
+OsIf_Init/7 (OsIf_Init) @06bef000
   Type: function
   Visibility: external public
   References: 
   Referring: 
   Availability: not_available
   Function flags:
-  Called by: EcuM_Init/3 
+  Called by: EcuM_Init/2 
   Calls: 
-Mcu_InitClock/7 (Mcu_InitClock) @06c2f0e0
-  Type: function
-  Visibility: external public
-  References: 
-  Referring: 
-  Availability: not_available
-  Function flags:
-  Called by: MCU_clocks/1 
-  Calls: 
-Mcu_SetMode/6 (Mcu_SetMode) @06c2f000
+Mcu_InitClock/6 (Mcu_InitClock) @06bec540
   Type: function
   Visibility: external public
   References: 
@@ -44,7 +35,16 @@ Mcu_SetMode/6 (Mcu_SetMode) @06c2f000
   Function flags:
   Called by: MCU_clocks/1 
   Calls: 
-Mcu_Config/5 (Mcu_Config) @06c2a828
+Mcu_SetMode/5 (Mcu_SetMode) @06becee0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: MCU_clocks/1 
+  Calls: 
+Mcu_Config/4 (Mcu_Config) @06bea798
   Type: variable
   Body removed by symtab_remove_unreachable_nodes
   Visibility: external public
@@ -52,7 +52,7 @@ Mcu_Config/5 (Mcu_Config) @06c2a828
   Referring: MCU_clocks/1 (addr) 
   Availability: not_available
   Varpool flags: read-only
-Mcu_Init/4 (Mcu_Init) @06c2cb60
+Mcu_Init/3 (Mcu_Init) @06bece00
   Type: function
   Visibility: external public
   References: 
@@ -61,47 +61,30 @@ Mcu_Init/4 (Mcu_Init) @06c2cb60
   Function flags:
   Called by: MCU_clocks/1 
   Calls: 
-EcuM_Init/3 (EcuM_Init) @06c2cd20
+EcuM_Init/2 (EcuM_Init) @06bec9a0
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
-  References: Port_Config/10 (addr) 
+  References: Port_Config/9 (addr) 
   Referring: 
   Availability: available
   Function flags: body
   Called by: 
-  Calls: Port_Init/9 OsIf_Init/8 MCU_clocks/1 
-Gpt_conf/2 (Gpt_conf) @06c2ca80
+  Calls: Port_Init/8 OsIf_Init/7 MCU_clocks/1 
+MCU_clocks/1 (MCU_clocks) @06bec700
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
-  References: 
+  References: Mcu_Config/4 (addr) 
   Referring: 
   Availability: available
   Function flags: body
-  Called by: 
-  Calls: 
-MCU_clocks/1 (MCU_clocks) @06c2c7e0
-  Type: function definition analyzed
-  Visibility: force_output externally_visible no_reorder public
-  References: Mcu_Config/5 (addr) 
-  Referring: 
-  Availability: available
-  Function flags: body
-  Called by: EcuM_Init/3 
-  Calls: Mcu_InitClock/7 Mcu_SetMode/6 Mcu_Init/4 
+  Called by: EcuM_Init/2 
+  Calls: Mcu_InitClock/6 Mcu_SetMode/5 Mcu_Init/3 
 EcuM_Init ()
 {
   <bb 2> :
   MCU_clocks ();
   OsIf_Init (0B);
   Port_Init (&Port_Config);
-  return;
-
-}
-
-
-Gpt_conf ()
-{
-  <bb 2> :
   return;
 
 }

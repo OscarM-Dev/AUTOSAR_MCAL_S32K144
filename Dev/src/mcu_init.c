@@ -5,7 +5,7 @@
  */
 
 //Headers
-#include "mcu_init.h"
+#include "Mcu_init.h"
 
 /**
  * @brief This function configures the clock signals of the MCU.
@@ -38,19 +38,6 @@ void MCU_clocks( void ) {
     //Configuring Pll clock.
     /*while ( Mcu_GetPllStatus() != MCU_PLL_LOCKED );//Waiting until PLL is locked.
     Mcu_DistributePllClock();//Executing pll clock configuration established in container.*/
-}
-
-/**
- * @brief This function configures the gpt driver.
- * This function initialices the gpt driver and enables the notifications of the gpt channels configurated.
- * 
- * 
- */
-void Gpt_conf( void ) {
-    //Gpt_Init( &Gpt_Config );//Initializing gpt driver and configurations.
-
-    //Enabling notifications
-    //Gpt_EnableNotification( GptConf_GptChannelConfiguration_Gpt_Ftm0_ch0 );
 }
 
 /**

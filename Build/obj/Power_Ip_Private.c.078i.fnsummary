@@ -1,6 +1,6 @@
 Symbol table:
 
-OsIf_GetElapsed/7 (OsIf_GetElapsed) @068fcd20
+OsIf_GetElapsed/7 (OsIf_GetElapsed) @06978d20
   Type: function
   Visibility: external public
   References: 
@@ -9,7 +9,7 @@ OsIf_GetElapsed/7 (OsIf_GetElapsed) @068fcd20
   Function flags:
   Called by: Power_Ip_TimeoutExpired/3 
   Calls: 
-OsIf_MicrosToTicks/6 (OsIf_MicrosToTicks) @068fcb60
+OsIf_MicrosToTicks/6 (OsIf_MicrosToTicks) @06978b60
   Type: function
   Visibility: external public
   References: 
@@ -18,7 +18,7 @@ OsIf_MicrosToTicks/6 (OsIf_MicrosToTicks) @068fcb60
   Function flags:
   Called by: Power_Ip_StartTimeout/2 
   Calls: 
-OsIf_GetCounter/5 (OsIf_GetCounter) @068fca80
+OsIf_GetCounter/5 (OsIf_GetCounter) @06978a80
   Type: function
   Visibility: external public
   References: 
@@ -27,7 +27,7 @@ OsIf_GetCounter/5 (OsIf_GetCounter) @068fca80
   Function flags:
   Called by: Power_Ip_StartTimeout/2 
   Calls: 
-Power_Ip_pfReportErrorsCallback/4 (Power_Ip_pfReportErrorsCallback) @068fd3a8
+Power_Ip_pfReportErrorsCallback/4 (Power_Ip_pfReportErrorsCallback) @069793a8
   Type: variable
   Body removed by symtab_remove_unreachable_nodes
   Visibility: external public
@@ -35,7 +35,7 @@ Power_Ip_pfReportErrorsCallback/4 (Power_Ip_pfReportErrorsCallback) @068fd3a8
   Referring: Power_Ip_ReportPowerErrors/0 (read) 
   Availability: not_available
   Varpool flags:
-Power_Ip_TimeoutExpired/3 (Power_Ip_TimeoutExpired) @068fc460
+Power_Ip_TimeoutExpired/3 (Power_Ip_TimeoutExpired) @06978460
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: 
@@ -44,7 +44,7 @@ Power_Ip_TimeoutExpired/3 (Power_Ip_TimeoutExpired) @068fc460
   Function flags: body
   Called by: 
   Calls: OsIf_GetElapsed/7 
-Power_Ip_StartTimeout/2 (Power_Ip_StartTimeout) @068fc1c0
+Power_Ip_StartTimeout/2 (Power_Ip_StartTimeout) @069781c0
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: 
@@ -53,7 +53,7 @@ Power_Ip_StartTimeout/2 (Power_Ip_StartTimeout) @068fc1c0
   Function flags: body
   Called by: 
   Calls: OsIf_MicrosToTicks/6 OsIf_GetCounter/5 
-Power_Ip_ReportPowerErrorsEmptyCallback/1 (Power_Ip_ReportPowerErrorsEmptyCallback) @068f3d20
+Power_Ip_ReportPowerErrorsEmptyCallback/1 (Power_Ip_ReportPowerErrorsEmptyCallback) @0696fd20
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: 
@@ -62,7 +62,7 @@ Power_Ip_ReportPowerErrorsEmptyCallback/1 (Power_Ip_ReportPowerErrorsEmptyCallba
   Function flags: body
   Called by: 
   Calls: 
-Power_Ip_ReportPowerErrors/0 (Power_Ip_ReportPowerErrors) @068f3ee0
+Power_Ip_ReportPowerErrors/0 (Power_Ip_ReportPowerErrors) @0696fee0
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: Power_Ip_pfReportErrorsCallback/4 (read) 

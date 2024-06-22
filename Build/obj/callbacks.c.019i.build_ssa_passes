@@ -1,8 +1,6 @@
 Timer2_callback ()
 {
   <bb 2> :
-  Dio_FlipChannel (75);
-  Scheduler_StartTimer (2);
   return;
 
 }
@@ -11,8 +9,7 @@ Timer2_callback ()
 Timer1_callback ()
 {
   <bb 2> :
-  Dio_FlipChannel (74);
-  Scheduler_StartTimer (1);
+  Scheduler_StopTimer (1);
   return;
 
 }
@@ -21,7 +18,32 @@ Timer1_callback ()
 Task2_callback ()
 {
   <bb 2> :
+  click.0_1 = click;
+  _2 = (int) click.0_1;
+  switch (_2) <default: <L3> [INV], case 1: <L0> [INV], case 2: <L1> [INV], case 3: <L2> [INV]>
+
+  <bb 3> :
+<L0>:
+  Dio_FlipChannel (72);
+  click = 0;
+  goto <bb 7>; [INV]
+
+  <bb 4> :
+<L1>:
   Dio_FlipChannel (73);
+  click = 0;
+  goto <bb 7>; [INV]
+
+  <bb 5> :
+<L2>:
+  Dio_FlipChannel (74);
+  click = 0;
+  goto <bb 7>; [INV]
+
+  <bb 6> :
+<L3>:
+
+  <bb 7> :
   return;
 
 }
@@ -30,7 +52,7 @@ Task2_callback ()
 Task1_callback ()
 {
   <bb 2> :
-  Dio_FlipChannel (72);
+  DoubleClick_stMachine ();
   return;
 
 }

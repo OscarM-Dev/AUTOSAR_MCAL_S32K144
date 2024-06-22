@@ -13,7 +13,7 @@ Reclaiming variables:
 Clearing address taken flags:
 Symbol table:
 
-memcpy/5 (memcpy) @06838620
+memcpy/5 (memcpy) @06969620
   Type: function
   Visibility: external public
   References: 
@@ -22,7 +22,7 @@ memcpy/5 (memcpy) @06838620
   Function flags:
   Called by: Queue_readData/4 Queue_writeData/3 
   Calls: 
-Queue_readData/4 (Queue_readData) @06838a80
+Queue_readData/4 (Queue_readData) @06969a80
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: 
@@ -31,7 +31,7 @@ Queue_readData/4 (Queue_readData) @06838a80
   Function flags: body
   Called by: 
   Calls: memcpy/5 
-Queue_writeData/3 (Queue_writeData) @068387e0
+Queue_writeData/3 (Queue_writeData) @069697e0
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: 
@@ -40,7 +40,7 @@ Queue_writeData/3 (Queue_writeData) @068387e0
   Function flags: body
   Called by: 
   Calls: memcpy/5 
-Queue_flushQueue/2 (Queue_flushQueue) @06838540
+Queue_flushQueue/2 (Queue_flushQueue) @06969540
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: 
@@ -49,7 +49,7 @@ Queue_flushQueue/2 (Queue_flushQueue) @06838540
   Function flags: body
   Called by: 
   Calls: Queue_initQueue/0 
-Queue_isQueueEmpty/1 (Queue_isQueueEmpty) @068382a0
+Queue_isQueueEmpty/1 (Queue_isQueueEmpty) @069692a0
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: 
@@ -58,7 +58,7 @@ Queue_isQueueEmpty/1 (Queue_isQueueEmpty) @068382a0
   Function flags: body
   Called by: 
   Calls: 
-Queue_initQueue/0 (Queue_initQueue) @06838000
+Queue_initQueue/0 (Queue_initQueue) @06969000
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: 

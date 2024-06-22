@@ -32,7 +32,7 @@ IPA summary for Gpio_Dio_Ip_WritePins/2 is missing.
 IPA summary for Gpio_Dio_Ip_WritePin/1 is missing.
 Symbol table:
 
-SchM_Exit_Dio_DIO_EXCLUSIVE_AREA_00/10 (SchM_Exit_Dio_DIO_EXCLUSIVE_AREA_00) @068efb60
+SchM_Exit_Dio_DIO_EXCLUSIVE_AREA_00/10 (SchM_Exit_Dio_DIO_EXCLUSIVE_AREA_00) @0694cb60
   Type: function
   Visibility: external public
   References: 
@@ -41,7 +41,7 @@ SchM_Exit_Dio_DIO_EXCLUSIVE_AREA_00/10 (SchM_Exit_Dio_DIO_EXCLUSIVE_AREA_00) @06
   Function flags:
   Called by: Gpio_Dio_Ip_WritePin/1 
   Calls: 
-SchM_Enter_Dio_DIO_EXCLUSIVE_AREA_00/9 (SchM_Enter_Dio_DIO_EXCLUSIVE_AREA_00) @068ef8c0
+SchM_Enter_Dio_DIO_EXCLUSIVE_AREA_00/9 (SchM_Enter_Dio_DIO_EXCLUSIVE_AREA_00) @0694c8c0
   Type: function
   Visibility: external public
   References: 
@@ -50,7 +50,7 @@ SchM_Enter_Dio_DIO_EXCLUSIVE_AREA_00/9 (SchM_Enter_Dio_DIO_EXCLUSIVE_AREA_00) @0
   Function flags:
   Called by: Gpio_Dio_Ip_WritePin/1 
   Calls: 
-Gpio_Dio_Ip_ReadPin/8 (Gpio_Dio_Ip_ReadPin) @068efd20
+Gpio_Dio_Ip_ReadPin/8 (Gpio_Dio_Ip_ReadPin) @0694cd20
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: 
@@ -59,7 +59,7 @@ Gpio_Dio_Ip_ReadPin/8 (Gpio_Dio_Ip_ReadPin) @068efd20
   Function flags: body
   Called by: 
   Calls: 
-Gpio_Dio_Ip_ReadPins/7 (Gpio_Dio_Ip_ReadPins) @068efa80
+Gpio_Dio_Ip_ReadPins/7 (Gpio_Dio_Ip_ReadPins) @0694ca80
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: 
@@ -68,7 +68,7 @@ Gpio_Dio_Ip_ReadPins/7 (Gpio_Dio_Ip_ReadPins) @068efa80
   Function flags: body
   Called by: 
   Calls: 
-Gpio_Dio_Ip_TogglePins/6 (Gpio_Dio_Ip_TogglePins) @068ef7e0
+Gpio_Dio_Ip_TogglePins/6 (Gpio_Dio_Ip_TogglePins) @0694c7e0
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: 
@@ -77,7 +77,7 @@ Gpio_Dio_Ip_TogglePins/6 (Gpio_Dio_Ip_TogglePins) @068ef7e0
   Function flags: body
   Called by: 
   Calls: 
-Gpio_Dio_Ip_ClearPins/5 (Gpio_Dio_Ip_ClearPins) @068ef460
+Gpio_Dio_Ip_ClearPins/5 (Gpio_Dio_Ip_ClearPins) @0694c460
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: 
@@ -86,7 +86,7 @@ Gpio_Dio_Ip_ClearPins/5 (Gpio_Dio_Ip_ClearPins) @068ef460
   Function flags: body
   Called by: 
   Calls: 
-Gpio_Dio_Ip_SetPins/4 (Gpio_Dio_Ip_SetPins) @068ef0e0
+Gpio_Dio_Ip_SetPins/4 (Gpio_Dio_Ip_SetPins) @0694c0e0
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: 
@@ -95,7 +95,7 @@ Gpio_Dio_Ip_SetPins/4 (Gpio_Dio_Ip_SetPins) @068ef0e0
   Function flags: body
   Called by: 
   Calls: 
-Gpio_Dio_Ip_GetPinsOutput/3 (Gpio_Dio_Ip_GetPinsOutput) @06813b60
+Gpio_Dio_Ip_GetPinsOutput/3 (Gpio_Dio_Ip_GetPinsOutput) @06876b60
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: 
@@ -104,7 +104,7 @@ Gpio_Dio_Ip_GetPinsOutput/3 (Gpio_Dio_Ip_GetPinsOutput) @06813b60
   Function flags: body
   Called by: 
   Calls: 
-Gpio_Dio_Ip_WritePins/2 (Gpio_Dio_Ip_WritePins) @06813e00
+Gpio_Dio_Ip_WritePins/2 (Gpio_Dio_Ip_WritePins) @06876e00
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: 
@@ -113,7 +113,7 @@ Gpio_Dio_Ip_WritePins/2 (Gpio_Dio_Ip_WritePins) @06813e00
   Function flags: body
   Called by: 
   Calls: 
-Gpio_Dio_Ip_WritePin/1 (Gpio_Dio_Ip_WritePin) @06813a80
+Gpio_Dio_Ip_WritePin/1 (Gpio_Dio_Ip_WritePin) @06876a80
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: 
@@ -122,7 +122,7 @@ Gpio_Dio_Ip_WritePin/1 (Gpio_Dio_Ip_WritePin) @06813a80
   Function flags: body
   Called by: 
   Calls: SchM_Exit_Dio_DIO_EXCLUSIVE_AREA_00/10 SchM_Enter_Dio_DIO_EXCLUSIVE_AREA_00/9 
-GpioBaseAdresses/0 (GpioBaseAdresses) @06818798
+GpioBaseAdresses/0 (GpioBaseAdresses) @0687b798
   Type: variable definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: 

@@ -1,4 +1,4 @@
-Build/obj/mcu_init.o: Dev/src/mcu_init.c Dev/include/mcu_init.h \
+Build/obj/Mcu_init.o: Dev/src/Mcu_init.c Dev/include/Mcu_init.h \
  Autosar/Mcal/Mcu/include/Mcu.h Build/cfg/include/Mcu_Cfg.h \
  Autosar/Mcal/Base/include/Mcal.h Autosar/Mcal/Base/include/Compiler.h \
  Autosar/Mcal/Base/include/Compiler_Cfg.h \
@@ -55,7 +55,7 @@ Build/obj/mcu_init.o: Dev/src/mcu_init.c Dev/include/mcu_init.h \
  Autosar/Mcal/Dio/include/Dio.h Build/cfg/include/Dio_Cfg.h \
  Build/cfg/include/Gpio_Dio_Ip_Cfg.h \
  Autosar/Mcal/Base/include/Dio_MemMap.h
-Dev/include/mcu_init.h:
+Dev/include/Mcu_init.h:
 Autosar/Mcal/Mcu/include/Mcu.h:
 Build/cfg/include/Mcu_Cfg.h:
 Autosar/Mcal/Base/include/Mcal.h:

@@ -1,5 +1,5 @@
 /**
- * @file state_machine.c
+ * @file State_machine.c
  * @brief This file contains the definition of the functions related to the double click state machine.
  * 
  * This operation is based on the flow chart diagram.
@@ -20,18 +20,21 @@
  * 
  */
 void DoubleClick_stMachine( void ) {
-   /* switch( state ) {
+    //local data
+    static uint8 state = IDLE;
+
+    switch( state ) {
         case IDLE :
             //Checks if the button is pressed.
             if ( Dio_ReadChannel( DioConf_DioChannel_PTE12 ) == STD_LOW ) {
-                //Gpt_StartTimer( GptConf_GptChannelConfiguration_Gpt_Ftm0_ch1, FTM0CH1_V );//Starting timer 300ms.
+                Scheduler_ReloadTimer( SCHEDULER_TIMER1_ID, SCHEDULER_TIMER1_TIMEOUT_300MS );   //Starting timer 300ms.
                 state = SINGLE_PRESS;
             }
         break;
         
         case SINGLE_PRESS :
             //Checking timer timeout.
-            if ( Gpt_GetTimeRemaining( GptConf_GptChannelConfiguration_Gpt_Ftm0_ch1 ) == 0 ) {
+            if ( Scheduler_GetTimer( SCHEDULER_TIMER1_ID ) == 0 ) {
                 state = HOLD;
             }
 
@@ -43,27 +46,27 @@ void DoubleClick_stMachine( void ) {
         
         case SINGLE_RELEASE :
             //Checking timer timeout.
-            if ( Gpt_GetTimeRemaining( GptConf_GptChannelConfiguration_Gpt_Ftm0_ch1 ) == 0 ) {//Single click
-                Dio_FlipChannel( DioConf_DioChannel_PTC8 );
+            if ( Scheduler_GetTimer( SCHEDULER_TIMER1_ID ) == 0 ) { //Single click
+                click = SINGLE_CLICK;
                 state = IDLE;
             }
 
             //Checks if the button is pressed.
             if ( Dio_ReadChannel( DioConf_DioChannel_PTE12 ) == STD_LOW ) {
-                Gpt_StartTimer( GptConf_GptChannelConfiguration_Gpt_Ftm0_ch1, FTM0CH1_V );//Starting timer 300ms.
+                Scheduler_ReloadTimer( SCHEDULER_TIMER1_ID, SCHEDULER_TIMER1_TIMEOUT_300MS );   //Starting timer 300ms.
                 state = DOUBLE_PRESS;
             }
         break;
         
         case DOUBLE_PRESS :
             //Checking timer timeout.
-            if ( Gpt_GetTimeRemaining( GptConf_GptChannelConfiguration_Gpt_Ftm0_ch1 ) == 0 ) {
+            if ( Scheduler_GetTimer( SCHEDULER_TIMER1_ID ) == 0 ) {
                 state = HOLD;
             }
 
             //Checking if the button is released.
             if ( Dio_ReadChannel( DioConf_DioChannel_PTE12 ) == STD_HIGH ) {//Double click.
-                Dio_FlipChannel( DioConf_DioChannel_PTC9 );
+                click = DOUBLE_CLICK;
                 state = IDLE;
             }
         break;
@@ -71,12 +74,12 @@ void DoubleClick_stMachine( void ) {
         case HOLD ://Hold click.
             //Checking if the button is released.
             if ( Dio_ReadChannel( DioConf_DioChannel_PTE12 ) == STD_HIGH ) {
-                Dio_FlipChannel( DioConf_DioChannel_PTC10 );
+                click = HOLD_CLICK;
                 state = IDLE;
             }
         break;
         
         default :
         break;
-    } */
+    }
 }
