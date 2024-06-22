@@ -27,6 +27,20 @@
 #define SCHEDULER_TASK2_PERIOD_100MS 100    ///< Period value for taks 2 in ms. 
 
 #define SCHEDULER_TIMER1_TIMEOUT_300MS 300  ///< Timeout value for timer 1 in ms.
+
+#define SCHEDULER_MAX_QUEUES 32 ///< Max number of queues to handle.
+
+#define SCHEDULER_QUEUES 2  ///< Number of queues to handle.
+
+#define SCHEDULER_QUEUE1_SIZE     sizeof( Queue1[0] ) ///< Number of bytes of each element of the queue 1.
+#define SCHEDULER_QUEUE2_SIZE     sizeof( Queue2[0] ) ///< Number of bytes of each element of the queue 2. 
+
+#define SCHEDULER_QUEUE1_ELEMENTS   3  ///< Number of elements of the queue 1.
+#define SCHEDULER_QUEUE2_ELEMENTS   3  ///< Number of elements of the queue 2.
+
+#define SCHEDULER_QUEUE_EMPTY_STATUS 1  ///< Empty status ID.
+#define SCHEDULER_QUEUE_FULL_STATUS 2 ///< Full status ID.
+
 /**
   @} */
 

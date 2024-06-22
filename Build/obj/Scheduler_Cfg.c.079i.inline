@@ -15,75 +15,98 @@ Overall time estimate: 0.000000 weighted by profile: 0.000000
 Why inlining failed?
 Symbol table:
 
-Timer1_callback/58 (Timer1_callback) @05c53d20
+Timer1_callback/61 (Timer1_callback) @069178c0
   Type: function
   Visibility: external public
   Address is taken.
   References: 
-  Referring: Timer_Config/51 (addr) 
+  Referring: Timer_Config/52 (addr) 
   Availability: not_available
   Function flags:
   Called by: 
   Calls: 
-Task2_callback/57 (Task2_callback) @05c53c40
+Task2_callback/60 (Task2_callback) @069177e0
   Type: function
   Visibility: external public
   Address is taken.
   References: 
-  Referring: Task_Config/50 (addr) 
+  Referring: Task_Config/51 (addr) 
   Availability: not_available
   Function flags:
   Called by: 
   Calls: 
-Task1_callback/56 (Task1_callback) @05c53b60
+Task1_callback/59 (Task1_callback) @06917700
   Type: function
   Visibility: external public
   Address is taken.
   References: 
-  Referring: Task_Config/50 (addr) 
+  Referring: Task_Config/51 (addr) 
   Availability: not_available
   Function flags:
   Called by: 
   Calls: 
-SchedulerCtrl_Ptr/55 (SchedulerCtrl_Ptr) @05c4daf8
+Queue2/58 (Queue2) @06913630
+  Type: variable
+  Body removed by symtab_remove_unreachable_nodes
+  Visibility: external public
+  References: 
+  Referring: Queue_Config/50 (addr) 
+  Availability: not_available
+  Varpool flags:
+Queue1/57 (Queue1) @069135e8
+  Type: variable
+  Body removed by symtab_remove_unreachable_nodes
+  Visibility: external public
+  References: 
+  Referring: Queue_Config/50 (addr) 
+  Availability: not_available
+  Varpool flags:
+SchedulerCtrl_Ptr/56 (SchedulerCtrl_Ptr) @069134c8
   Type: variable definition analyzed
   Visibility: force_output externally_visible no_reorder public
-  References: Scheduler_Control/53 (addr) 
+  References: Scheduler_Control/54 (addr) 
   Referring: 
   Availability: available
   Varpool flags: initialized
-SchedulerConfig_Ptr/54 (SchedulerConfig_Ptr) @05c4dab0
+SchedulerConfig_Ptr/55 (SchedulerConfig_Ptr) @06913480
   Type: variable definition analyzed
   Visibility: force_output externally_visible no_reorder public
-  References: Scheduler_Config/52 (addr) 
+  References: Scheduler_Config/53 (addr) 
   Referring: 
   Availability: available
   Varpool flags: initialized
-Scheduler_Control/53 (Scheduler_Control) @05c4da68
+Scheduler_Control/54 (Scheduler_Control) @06913438
   Type: variable definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: 
-  Referring: SchedulerCtrl_Ptr/55 (addr) 
+  Referring: SchedulerCtrl_Ptr/56 (addr) 
   Availability: available
   Varpool flags:
-Scheduler_Config/52 (Scheduler_Config) @05c4da20
+Scheduler_Config/53 (Scheduler_Config) @069133f0
   Type: variable definition analyzed
   Visibility: force_output externally_visible no_reorder public
-  References: Task_Config/50 (addr) Timer_Config/51 (addr) 
-  Referring: SchedulerConfig_Ptr/54 (addr) 
+  References: Task_Config/51 (addr) Timer_Config/52 (addr) Queue_Config/50 (addr) 
+  Referring: SchedulerConfig_Ptr/55 (addr) 
   Availability: available
   Varpool flags: initialized read-only const-value-known
-Timer_Config/51 (Timer_Config) @05c4d990
+Timer_Config/52 (Timer_Config) @06913360
   Type: variable definition analyzed
   Visibility: force_output externally_visible no_reorder public
-  References: Timer1_callback/58 (addr) 
-  Referring: Scheduler_Config/52 (addr) 
+  References: Timer1_callback/61 (addr) 
+  Referring: Scheduler_Config/53 (addr) 
   Availability: available
   Varpool flags: initialized read-only const-value-known
-Task_Config/50 (Task_Config) @05c4d900
+Task_Config/51 (Task_Config) @069132d0
   Type: variable definition analyzed
   Visibility: force_output externally_visible no_reorder public
-  References: Task1_callback/56 (addr) Task2_callback/57 (addr) 
-  Referring: Scheduler_Config/52 (addr) 
+  References: Task1_callback/59 (addr) Task2_callback/60 (addr) 
+  Referring: Scheduler_Config/53 (addr) 
+  Availability: available
+  Varpool flags: initialized read-only const-value-known
+Queue_Config/50 (Queue_Config) @06913240
+  Type: variable definition analyzed
+  Visibility: force_output externally_visible no_reorder public
+  References: Queue1/57 (addr) Queue2/58 (addr) 
+  Referring: Scheduler_Config/53 (addr) 
   Availability: available
   Varpool flags: initialized read-only const-value-known

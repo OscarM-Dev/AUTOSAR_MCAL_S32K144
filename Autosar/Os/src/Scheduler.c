@@ -1,6 +1,6 @@
 /**
  * @file Scheduler.c
- * @brief This file contains the definition of the functions of the round robin scheduler.
+ * @brief This file contains the definition of the functions of the round robin scheduler and the queue.
  *
  * The scheduler every tick checks the timer and task buffers and execute them according to their activation flag and
  * established timeout and periodicity, basically the execution is related to an specific function call.
@@ -10,11 +10,240 @@
 #include "Scheduler.h"
 
 /**
+ * @brief This function copies and pastes size bytes of data from src to dest.
+ * 
+ * @param Dest Void pointer to destiny, destiny base memory address.
+ * @param Src Void pointer to source, source base memory address.
+ * @param Size Number of bytes to copy and paste.
+ */
+void MemCopy( void *Dest, void *Src, uint32 Size ) {
+    //local data.
+    uint8 i = 0;
+    uint8 *Ptr_dest = Dest; //Byte ptr in destiny base memory address.
+    uint8 *Ptr_src = Src;   //Byte ptr in source base memory address.
+
+    //Copying and pasting byte by byte.
+    for ( i = 0; i < Size; i++ ) {
+        *( Ptr_dest + i ) = *( Ptr_src + i );
+    }
+}
+
+/**
+ * @brief This function initialices the queue buffer control members.
+ * 
+ * @param SchedulerPtr Ptr to control struct instance, it allows the init of the members.
+ */
+void Scheduler_InitQueue( Scheduler_CtrlType *SchedulerPtr ) {
+    //local data.
+    uint8 i = 0;
+
+    //Initializing members.
+    for ( i = 0; i < SCHEDULER_QUEUES; i++ ) {
+        SchedulerPtr->QueueHeads[i] = 0;
+        SchedulerPtr->QueueTails[i] = 0;
+        Bfx_ClrBit_u32u8( &SchedulerPtr->QueueFulls, i );
+        Bfx_SetBit_u32u8( &SchedulerPtr->QueueEmpties, i );
+    }
+}
+
+/**
+ * @brief This function indicates the value of the specified status flag of a given queue.
+ * 
+ * @param Queue Queue ID.
+ * @param Status Status flag of interest.
+ * 
+ * @return status Value of the queue flag of interest.
+ * 
+ * @note The queue ID must be valid.
+ */
+uint8 Scheduler_GetStatusQueue( QueueType Queue, uint8 Status ) {
+    //local data.
+    uint8 status = FALSE;
+
+    //Verifying if the ID is valid.
+    if ( ( Queue != 0 ) && ( Queue <= SchedulerConfig_Ptr->Queues ) ) { //Valid ID.      
+        switch ( Status ) { //Checking status flag of interest.
+            case SCHEDULER_QUEUE_EMPTY_STATUS: 
+                status = Bfx_GetBit_u32u8_u8( SchedulerCtrl_Ptr->QueueEmpties, Queue - 1 ); 
+            break;
+            case SCHEDULER_QUEUE_FULL_STATUS:
+                status = Bfx_GetBit_u32u8_u8( SchedulerCtrl_Ptr->QueueFulls, Queue - 1 ); 
+            break;
+            default:    //Invalid Status flag.
+            break;
+        }
+    } 
+    
+    else {
+        status = FALSE; //Invalid ID.
+    }
+
+    return status;
+}
+
+/**
+ * @brief This function empties a given queue.
+ * 
+ * @param Queue Queue ID.
+ * 
+ * @return status Status of the operation, successfull 1 or not 0.
+ * 
+ * @note The queue ID must be valid.
+ */
+Std_ReturnType Scheduler_FlushQueue( QueueType Queue ) {
+    //local data
+    Std_ReturnType status = FALSE;
+
+    //Verifying if the ID is valid.
+    if ( ( Queue != 0 ) && ( Queue <= SchedulerConfig_Ptr->Queues ) ) { //Valid ID.   
+        SchedulerCtrl_Ptr->QueueTails[ Queue - 1 ] = SchedulerCtrl_Ptr->QueueHeads[ Queue - 1 ];    //Emptying queue.
+        Bfx_ClrBit_u32u8( &SchedulerCtrl_Ptr->QueueFulls, Queue - 1 );
+        Bfx_SetBit_u32u8( &SchedulerCtrl_Ptr->QueueEmpties, Queue - 1 );
+        status = TRUE;
+    }
+
+    else {  //Invalid ID.
+        status = FALSE; 
+    }
+
+    return status;
+}
+
+/**
+ * @brief This function writes a single data to a given queue.
+ *
+ * This function writes a single data to the queue if there´s an avalaible space 
+ * if not it doesn´t modified the queue.
+ * 
+ * For achieving this it copies and pastes size bytes of info from data to the head element of the queue.
+ * 
+ * This operation uses the base memory address of both parameters, in case of the 
+ * queue it uses the actual Head index for getting the memory address.
+ * 
+ * Once the writing operation is done it increments head by one.
+ * 
+ * It also determines wheter the queue is full or not after writing to it.
+ * 
+ * @param[in] Queue Queue ID.
+ * @param[in] Data Void ptr to the data to be written, allows the access to the data.
+ *
+ * @retval status Status of the write operation, write operation was succesfull 1 or not 0.
+ * 
+ * @note The queue ID must be valid.
+*/
+Std_ReturnType Scheduler_WriteQueue( QueueType Queue, void *Data ) {
+    //Local data
+    Std_ReturnType status = FALSE;
+
+     //Verifying if the ID is valid.
+    if ( ( Queue != 0 ) && ( Queue <= SchedulerConfig_Ptr->Queues ) ) { //Valid ID.  
+        uint32 base_add = ( uint32 ) SchedulerConfig_Ptr->QueuePtr[ Queue - 1 ].Buffer; //queue element 0 memory address.
+        uint32 actual_add = 0;  //memory address of the actual queue element.
+
+        //Verifying if the queue is availabe to be written.
+        if ( Scheduler_GetStatusQueue( Queue, SCHEDULER_QUEUE_FULL_STATUS ) == FALSE ) {    //Spaces available.
+
+            //Writing to array, copying and pasting size bytes of info from data to queue.
+            actual_add = base_add + ( SchedulerCtrl_Ptr->QueueHeads[ Queue - 1 ] * SchedulerConfig_Ptr->QueuePtr[ Queue - 1 ].Size );
+            MemCopy( ( void* )actual_add, Data, SchedulerConfig_Ptr->QueuePtr[ Queue - 1 ].Size );
+
+            SchedulerCtrl_Ptr->QueueHeads[ Queue - 1 ]++;  //next value to be written.
+
+            if ( SchedulerCtrl_Ptr->QueueHeads[ Queue - 1 ] > SchedulerConfig_Ptr->QueuePtr[ Queue - 1 ].Elements - 1 ) {
+                SchedulerCtrl_Ptr->QueueHeads[ Queue - 1 ] = 0;    //Reseting write index.
+            }
+
+            if ( Scheduler_GetStatusQueue( Queue, SCHEDULER_QUEUE_EMPTY_STATUS ) == TRUE ) {
+                Bfx_ClrBit_u32u8( &SchedulerCtrl_Ptr->QueueEmpties, Queue - 1 );    //Once data is written the queue is no longer empty.
+            }
+
+            //Verifying if queue is full with the last data written.
+            if ( SchedulerCtrl_Ptr->QueueHeads[ Queue - 1 ] == SchedulerCtrl_Ptr->QueueTails[ Queue - 1 ] ) {
+                Bfx_SetBit_u32u8( &SchedulerCtrl_Ptr->QueueFulls, Queue - 1 );
+            }
+
+            status = TRUE;  //Succesfull operation.
+        }
+    }
+
+    else {  //Invalid ID.
+        status = FALSE; 
+    }
+
+    return status;
+}
+
+/**
+ * @brief This function reads a single data from a given queue.
+ * 
+ * This function reads a single data from the queue if it´s not empty if it´s empty it doesn´t read anything.
+ * 
+ * For achieving this it copies and pastes size bytes of info from the tail element of the queue to the data.
+ * 
+ * This operation uses the base memory address of both parameters, in case of the 
+ * queue it uses the actual Tail index for getting the memory address.
+ * 
+ * Once the reading operation is done it increments tail by one.
+ * 
+ * The data read no longer exists in the queue.
+ * 
+ * It also determines wheter the queue is empty or not after reading from it.
+ * 
+ * @param[in] Queue Queue ID.
+ * @param[in] Data Void ptr to the variable to put the read data from the queue, allows the read from the queue.
+ *
+ * @retval status Status of the read operation, read operation was succesfull 1 or not 0.
+ * 
+ * @note The queue ID must be valid.
+*/
+Std_ReturnType Scheduler_ReadQueue( QueueType Queue, void *Data ) {
+    //Local data
+    Std_ReturnType status = FALSE;
+
+     //Verifying if the ID is valid.
+    if ( ( Queue != 0 ) && ( Queue <= SchedulerConfig_Ptr->Queues ) ) { //Valid ID.
+        uint32 base_add = ( uint32 ) SchedulerConfig_Ptr->QueuePtr[ Queue - 1 ].Buffer; //queue element 0 memory address.
+        uint32 actual_add = 0;  //memory address of the actual queue element.     
+        
+        //Verifying if the queue has data available to be read.
+        if ( Scheduler_GetStatusQueue( Queue, SCHEDULER_QUEUE_EMPTY_STATUS ) == FALSE ) { 
+        
+            //Reading from array, copying and pasting size bytes of info from queue to data.
+            actual_add = base_add + ( SchedulerCtrl_Ptr->QueueTails[ Queue - 1 ] * SchedulerConfig_Ptr->QueuePtr[ Queue - 1 ].Size );
+            MemCopy( Data, ( void* )actual_add, SchedulerConfig_Ptr->QueuePtr[ Queue - 1 ].Size );            
+        
+            SchedulerCtrl_Ptr->QueueTails[ Queue - 1 ]++;  //next value to be read.
+
+            if ( SchedulerCtrl_Ptr->QueueTails[ Queue - 1 ] > SchedulerConfig_Ptr->QueuePtr[ Queue - 1 ].Elements - 1 )  {
+                SchedulerCtrl_Ptr->QueueTails[ Queue - 1 ] = 0; //Reseting read index.
+            }
+
+            if ( Scheduler_GetStatusQueue( Queue, SCHEDULER_QUEUE_FULL_STATUS ) == TRUE ) {
+                Bfx_ClrBit_u32u8( &SchedulerCtrl_Ptr->QueueFulls, Queue - 1 );  //Once data is read the queue is no longer full.
+            }
+
+            //Verifying if the queue is empty with the last data read.
+            if ( SchedulerCtrl_Ptr->QueueTails[ Queue - 1 ] == SchedulerCtrl_Ptr->QueueHeads[ Queue - 1 ] ) {
+                Bfx_SetBit_u32u8( &SchedulerCtrl_Ptr->QueueEmpties, Queue - 1 );
+            }
+            
+            status = TRUE; //Succesfull operation.            
+        }
+    }
+
+    else {  //Invalid ID.
+        status = FALSE; 
+    }
+
+    return status;  
+}
+
+/**
  * @brief This function initialices the scheduler.
  *
- * This function initialices the control structure 2 of the scheduler.
+ * This function initialices the control structure of the scheduler.
  * 
- * @param[in] SchedulerPtr Ptr to control struct 2 instance, it allows the init of the members.
+ * @param[in] SchedulerPtr Ptr to control struct instance, it allows the init of the members.
  *
  * @retval status Status of the operation, successfull 1 or not 0.
  *
@@ -39,7 +268,9 @@ Std_ReturnType Scheduler_Init( Scheduler_CtrlType *SchedulerPtr ) {
         SchedulerPtr->TimerTimeout[i] = SchedulerConfig_Ptr->TimerPtr[i].InitTimeout;   //Registering initial timeout value of each timer.
         SchedulerPtr->TimerCount[i] = SchedulerConfig_Ptr->TimerPtr[i].InitTimeout; //Initializing timer count of each timer.
         Bfx_PutBit_u32u8u8( &SchedulerPtr->TimerFlags, i, SchedulerConfig_Ptr->TimerPtr[i].InitFlag  );   //Registering initial flag of each timer.
-    }    
+    } 
+
+    Scheduler_InitQueue( SchedulerPtr ); //Initializing queues related parameters.   
 
     return status;
 }

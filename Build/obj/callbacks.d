@@ -1,6 +1,6 @@
 Build/obj/Callbacks.o: Autosar/Os/src/Callbacks.c \
- Autosar/Os/include/Callbacks.h Autosar/Os/include/queue.h \
- Autosar/Os/include/Scheduler.h Autosar/Mcal/Base/include/StandardTypes.h \
+ Autosar/Os/include/Callbacks.h Autosar/Os/include/Scheduler.h \
+ Autosar/Mcal/Base/include/StandardTypes.h \
  Autosar/Mcal/Base/include/Platform_Types.h \
  Autosar/Mcal/Base/include/PlatformTypes.h \
  Autosar/Mcal/Base/include/Compiler.h \
@@ -24,7 +24,6 @@ Build/obj/Callbacks.o: Autosar/Os/src/Callbacks.c \
  Autosar/Mcal/Base/header/S32K144_GPIO.h \
  Autosar/Mcal/Base/include/Dio_MemMap.h
 Autosar/Os/include/Callbacks.h:
-Autosar/Os/include/queue.h:
 Autosar/Os/include/Scheduler.h:
 Autosar/Mcal/Base/include/StandardTypes.h:
 Autosar/Mcal/Base/include/Platform_Types.h:

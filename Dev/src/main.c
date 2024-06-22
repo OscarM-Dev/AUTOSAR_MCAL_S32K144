@@ -11,6 +11,8 @@
 
 //Global data.
 uint8 click = 0;
+uint32 Queue1[ SCHEDULER_QUEUE1_ELEMENTS ];
+uint16 Queue2[ SCHEDULER_QUEUE2_ELEMENTS ];
 
 /**
  * @brief This is the main function of the project
@@ -22,8 +24,8 @@ uint8 click = 0;
 int main( void ) {
 
     EcuM_Init();    //MCU configuration.
-    Scheduler_Init( &Scheduler_Control );   //Initializing control structure 2 for scheduler.
-    
+    Scheduler_Init( &Scheduler_Control );   //Initializing control structure for scheduler.
+
     while( 1u ) {
         Scheduler_MainFunction();
     }

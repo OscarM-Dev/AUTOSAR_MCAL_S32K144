@@ -1,6 +1,6 @@
 Symbol table:
 
-click/55 (click) @0692c798
+click/55 (click) @06ac70d8
   Type: variable
   Body removed by symtab_remove_unreachable_nodes
   Visibility: external public
@@ -8,7 +8,7 @@ click/55 (click) @0692c798
   Referring: DoubleClick_stMachine/50 (write) DoubleClick_stMachine/50 (write) DoubleClick_stMachine/50 (write) 
   Availability: not_available
   Varpool flags:
-Scheduler_GetTimer/54 (Scheduler_GetTimer) @06927b60
+Scheduler_GetTimer/54 (Scheduler_GetTimer) @069cb460
   Type: function
   Visibility: external public
   References: 
@@ -17,7 +17,7 @@ Scheduler_GetTimer/54 (Scheduler_GetTimer) @06927b60
   Function flags:
   Called by: DoubleClick_stMachine/50 DoubleClick_stMachine/50 DoubleClick_stMachine/50 
   Calls: 
-Scheduler_ReloadTimer/53 (Scheduler_ReloadTimer) @06927a80
+Scheduler_ReloadTimer/53 (Scheduler_ReloadTimer) @069cbee0
   Type: function
   Visibility: external public
   References: 
@@ -26,7 +26,7 @@ Scheduler_ReloadTimer/53 (Scheduler_ReloadTimer) @06927a80
   Function flags:
   Called by: DoubleClick_stMachine/50 DoubleClick_stMachine/50 
   Calls: 
-Dio_ReadChannel/52 (Dio_ReadChannel) @069279a0
+Dio_ReadChannel/52 (Dio_ReadChannel) @069cbe00
   Type: function
   Visibility: external public
   References: 
@@ -35,14 +35,14 @@ Dio_ReadChannel/52 (Dio_ReadChannel) @069279a0
   Function flags:
   Called by: DoubleClick_stMachine/50 DoubleClick_stMachine/50 DoubleClick_stMachine/50 DoubleClick_stMachine/50 DoubleClick_stMachine/50 
   Calls: 
-state.0/51 (state) @0692c5e8
+state.0/51 (state) @069caee8
   Type: variable definition analyzed
   Visibility: force_output no_reorder prevailing_def_ironly
   References: 
   Referring: DoubleClick_stMachine/50 (read) DoubleClick_stMachine/50 (write) DoubleClick_stMachine/50 (write) DoubleClick_stMachine/50 (write) DoubleClick_stMachine/50 (write) DoubleClick_stMachine/50 (write) DoubleClick_stMachine/50 (write) DoubleClick_stMachine/50 (write) DoubleClick_stMachine/50 (write) 
   Availability: available
   Varpool flags: initialized
-DoubleClick_stMachine/50 (DoubleClick_stMachine) @06927380
+DoubleClick_stMachine/50 (DoubleClick_stMachine) @069cb7e0
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: state.0/51 (read) state.0/51 (write) state.0/51 (write) state.0/51 (write) click/55 (write) state.0/51 (write) state.0/51 (write) state.0/51 (write) click/55 (write) state.0/51 (write) click/55 (write) state.0/51 (write) 

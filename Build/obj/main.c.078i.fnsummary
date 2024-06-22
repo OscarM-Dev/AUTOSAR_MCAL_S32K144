@@ -1,50 +1,64 @@
 Symbol table:
 
-Scheduler_MainFunction/56 (Scheduler_MainFunction) @06ce91c0
+Scheduler_MainFunction/58 (Scheduler_MainFunction) @06c4b9a0
   Type: function
   Visibility: external public
   References: 
   Referring: 
   Availability: not_available
   Function flags:
-  Called by: main/52 
+  Called by: main/54 
   Calls: 
-Scheduler_Control/55 (Scheduler_Control) @06ce81f8
+Scheduler_Control/57 (Scheduler_Control) @06c4ab88
   Type: variable
   Body removed by symtab_remove_unreachable_nodes
   Visibility: external public
   References: 
-  Referring: main/52 (addr) 
+  Referring: main/54 (addr) 
   Availability: not_available
   Varpool flags:
-Scheduler_Init/54 (Scheduler_Init) @06ce90e0
+Scheduler_Init/56 (Scheduler_Init) @06c4b8c0
   Type: function
   Visibility: external public
   References: 
   Referring: 
   Availability: not_available
   Function flags:
-  Called by: main/52 
+  Called by: main/54 
   Calls: 
-EcuM_Init/53 (EcuM_Init) @06ce9000
+EcuM_Init/55 (EcuM_Init) @06c4b7e0
   Type: function
   Visibility: external public
   References: 
   Referring: 
   Availability: not_available
   Function flags:
-  Called by: main/52 
+  Called by: main/54 
   Calls: 
-main/52 (main) @06ce6b60
+main/54 (main) @06c4b380
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
-  References: Scheduler_Control/55 (addr) 
+  References: Scheduler_Control/57 (addr) 
   Referring: 
   Availability: available
   Function flags: body
   Called by: 
-  Calls: Scheduler_MainFunction/56 Scheduler_Init/54 EcuM_Init/53 
-click/51 (click) @06cdec60
+  Calls: Scheduler_MainFunction/58 Scheduler_Init/56 EcuM_Init/55 
+Queue2/53 (Queue2) @06c4a630
+  Type: variable definition analyzed
+  Visibility: force_output externally_visible no_reorder public
+  References: 
+  Referring: 
+  Availability: available
+  Varpool flags:
+Queue1/52 (Queue1) @06c4a5e8
+  Type: variable definition analyzed
+  Visibility: force_output externally_visible no_reorder public
+  References: 
+  Referring: 
+  Availability: available
+  Varpool flags:
+click/51 (click) @06c4a5a0
   Type: variable definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: 
@@ -53,7 +67,7 @@ click/51 (click) @06cdec60
   Varpool flags: initialized
 main ()
 {
-  int D.6428;
+  int D.6459;
 
   <bb 2> :
   EcuM_Init ();

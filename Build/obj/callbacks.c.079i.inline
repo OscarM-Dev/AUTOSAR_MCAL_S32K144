@@ -24,7 +24,7 @@ IPA summary for Task2_callback/51 is missing.
 IPA summary for Task1_callback/50 is missing.
 Symbol table:
 
-Scheduler_StopTimer/57 (Scheduler_StopTimer) @05d3f2a0
+Scheduler_StopTimer/57 (Scheduler_StopTimer) @06a23380
   Type: function
   Visibility: external public
   References: 
@@ -33,7 +33,7 @@ Scheduler_StopTimer/57 (Scheduler_StopTimer) @05d3f2a0
   Function flags:
   Called by: Timer1_callback/52 
   Calls: 
-Dio_FlipChannel/56 (Dio_FlipChannel) @05d3f0e0
+Dio_FlipChannel/56 (Dio_FlipChannel) @06a231c0
   Type: function
   Visibility: external public
   References: 
@@ -42,7 +42,7 @@ Dio_FlipChannel/56 (Dio_FlipChannel) @05d3f0e0
   Function flags:
   Called by: Task2_callback/51 Task2_callback/51 Task2_callback/51 
   Calls: 
-click/55 (click) @05d3e438
+click/55 (click) @068fbc60
   Type: variable
   Body removed by symtab_remove_unreachable_nodes
   Visibility: external public
@@ -50,7 +50,7 @@ click/55 (click) @05d3e438
   Referring: Task2_callback/51 (read) Task2_callback/51 (write) Task2_callback/51 (write) Task2_callback/51 (write) 
   Availability: not_available
   Varpool flags:
-DoubleClick_stMachine/54 (DoubleClick_stMachine) @05d3ae00
+DoubleClick_stMachine/54 (DoubleClick_stMachine) @06a23000
   Type: function
   Visibility: external public
   References: 
@@ -59,7 +59,7 @@ DoubleClick_stMachine/54 (DoubleClick_stMachine) @05d3ae00
   Function flags:
   Called by: Task1_callback/50 
   Calls: 
-Timer2_callback/53 (Timer2_callback) @05d3a700
+Timer2_callback/53 (Timer2_callback) @068fc8c0
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: 
@@ -68,7 +68,7 @@ Timer2_callback/53 (Timer2_callback) @05d3a700
   Function flags: body
   Called by: 
   Calls: 
-Timer1_callback/52 (Timer1_callback) @05d3a380
+Timer1_callback/52 (Timer1_callback) @068fc620
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: 
@@ -77,7 +77,7 @@ Timer1_callback/52 (Timer1_callback) @05d3a380
   Function flags: body
   Called by: 
   Calls: Scheduler_StopTimer/57 
-Task2_callback/51 (Task2_callback) @05d3ad20
+Task2_callback/51 (Task2_callback) @068fce00
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: click/55 (read) click/55 (write) click/55 (write) click/55 (write) 
@@ -86,7 +86,7 @@ Task2_callback/51 (Task2_callback) @05d3ad20
   Function flags: body
   Called by: 
   Calls: Dio_FlipChannel/56 Dio_FlipChannel/56 Dio_FlipChannel/56 
-Task1_callback/50 (Task1_callback) @05d3aa80
+Task1_callback/50 (Task1_callback) @068fcb60
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: 
@@ -96,7 +96,7 @@ Task1_callback/50 (Task1_callback) @05d3aa80
   Called by: 
   Calls: DoubleClick_stMachine/54 
 
-;; Function Task1_callback (Task1_callback, funcdef_no=50, decl_uid=5991, cgraph_uid=51, symbol_order=50)
+;; Function Task1_callback (Task1_callback, funcdef_no=50, decl_uid=5733, cgraph_uid=51, symbol_order=50)
 
 Task1_callback ()
 {
@@ -108,7 +108,7 @@ Task1_callback ()
 
 
 
-;; Function Task2_callback (Task2_callback, funcdef_no=51, decl_uid=5993, cgraph_uid=52, symbol_order=51)
+;; Function Task2_callback (Task2_callback, funcdef_no=51, decl_uid=5735, cgraph_uid=52, symbol_order=51)
 
 Task2_callback ()
 {
@@ -148,7 +148,7 @@ Task2_callback ()
 
 
 
-;; Function Timer1_callback (Timer1_callback, funcdef_no=52, decl_uid=5995, cgraph_uid=53, symbol_order=52)
+;; Function Timer1_callback (Timer1_callback, funcdef_no=52, decl_uid=5737, cgraph_uid=53, symbol_order=52)
 
 Timer1_callback ()
 {
@@ -160,7 +160,7 @@ Timer1_callback ()
 
 
 
-;; Function Timer2_callback (Timer2_callback, funcdef_no=53, decl_uid=5997, cgraph_uid=54, symbol_order=53)
+;; Function Timer2_callback (Timer2_callback, funcdef_no=53, decl_uid=5739, cgraph_uid=54, symbol_order=53)
 
 Timer2_callback ()
 {

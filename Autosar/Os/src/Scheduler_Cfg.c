@@ -4,7 +4,7 @@
  * 
  * @note The register of tasks and timers is done in the initialization of the buffers
  * @note The periodicity and timeout value must be >= tick and a multiple of tick.
- * @note The timer or task ID is the element of the buffer where it was registered + 1.
+ * @note The timer, task o queue ID is the element of the buffer where it was registered + 1.
  * @note In order to register new timers or tasks is neccesary to do it manually.
  * @note Remember that all the timers and tasks registered must be different, different callback functions!!.
  * 
@@ -13,7 +13,25 @@
 //Headers.
 #include "Scheduler.h"
 
+//Queues
+extern uint32 Queue1[ SCHEDULER_QUEUE1_ELEMENTS ];
+extern uint16 Queue2[ SCHEDULER_QUEUE2_ELEMENTS ];
+
 //Constant control structure global instances.
+//Queue buffer.
+const Queue_ConfigType Queue_Config[ SCHEDULER_QUEUES ] = 
+{
+    {
+        .Size = SCHEDULER_QUEUE1_SIZE,
+        .Elements = SCHEDULER_QUEUE1_ELEMENTS,
+        .Buffer = Queue1
+    },
+    {
+        .Size = SCHEDULER_QUEUE2_SIZE,
+        .Elements = SCHEDULER_QUEUE2_ELEMENTS,
+        .Buffer = Queue2
+    }
+};
 
 //Task buffer.
 const Task_ConfigType Task_Config[ SCHEDULER_TASKS ]  = {
@@ -38,16 +56,18 @@ const Timer_ConfigType Timer_Config[ SCHEDULER_TIMERS ] = {
     }
 };
 
-//Scheduler control structure 1 instance.
+//Scheduler config structure instance.
 const Scheduler_ConfigType Scheduler_Config = {
     .Tick = SCHEDULER_TICK,
     .Tasks = SCHEDULER_TASKS,
     .TaskPtr = Task_Config,
     .Timers = SCHEDULER_TIMERS,
-    .TimerPtr = Timer_Config
+    .TimerPtr = Timer_Config,
+    .Queues = SCHEDULER_QUEUES,
+    .QueuePtr = Queue_Config
 };
 
 //Global data
-Scheduler_CtrlType Scheduler_Control; //Control structure 2 instance.
+Scheduler_CtrlType Scheduler_Control; //Control structure nstance.
 const Scheduler_ConfigType *SchedulerConfig_Ptr = &Scheduler_Config; //Pointer to control structure 1.
 Scheduler_CtrlType *SchedulerCtrl_Ptr = &Scheduler_Control; //Pointer to control structure 2.
