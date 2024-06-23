@@ -6,9 +6,10 @@
  * 
  * @note This function is called every 50ms.
  * @note Remember that the 300ms count is for detecting a hold click when the button is pressed 1 and 2 times.
- * @note A single click toggles PTC8.
- * @note A double click toggles PTC9.
- * @note A hold click toggles PTC10.
+ * @note Each button has its own dedicated timer.
+ * @note Button 1, Single click toggle only led0 (PTC8), double click toggle only led1 (PTC9), hold click toggle both leds (PTC8-9).
+ * @note Button 2, Single click toggle only led2 (PTC10), double click toggle only led3 (PTC11), hold click toggle both leds (PTC10-11).
+ * @note Button 3, Single click toggle only led5 (PTC13), double click toggle only led6 (PTC14), hold click toggle both leds (PTC13-14).
  * 
  */
 
@@ -21,65 +22,77 @@
  */
 void DoubleClick_stMachine( void ) {
     //local data
-    static uint8 state = IDLE;
+    uint8 i = 0;
+    QueueMessage Message_write; //Message to write in the queue1.
 
-    switch( state ) {
-        case IDLE :
-            //Checks if the button is pressed.
-            if ( Dio_ReadChannel( DioConf_DioChannel_PTE12 ) == STD_LOW ) {
-                Scheduler_ReloadTimer( SCHEDULER_TIMER1_ID, SCHEDULER_TIMER1_TIMEOUT_300MS );   //Starting timer 300ms.
-                state = SINGLE_PRESS;
-            }
-        break;
+    for ( i = 0; i < 3; i++ ) { //Executing state machine for each button.
+        switch( stBtnMachine[i].State ) {
+            case IDLE :
+                //Checks if the button is pressed.
+                if ( Dio_ReadChannel( stBtnMachine[i].Button ) == STD_LOW ) {
+                    Scheduler_ReloadTimer( stBtnMachine[i].Timer, SCHEDULER_TIMER_TIMEOUT_300MS );   //Starting timer 300ms.
+                    stBtnMachine[i].State = SINGLE_PRESS;
+                }
+            break;
         
-        case SINGLE_PRESS :
-            //Checking timer timeout.
-            if ( Scheduler_GetTimer( SCHEDULER_TIMER1_ID ) == 0 ) {
-                state = HOLD;
-            }
+            case SINGLE_PRESS :
+                //Checking timer timeout.
+                if ( Scheduler_GetTimer( stBtnMachine[i].Timer ) == 0 ) {
+                    stBtnMachine[i].State = HOLD;
+                }
 
-            //Checking if the button is released.
-            if ( Dio_ReadChannel( DioConf_DioChannel_PTE12 ) == STD_HIGH ) {
-                state = SINGLE_RELEASE;
-            }
-        break;
+                //Checking if the button is released.
+                if ( Dio_ReadChannel( stBtnMachine[i].Button ) == STD_HIGH ) {
+                    stBtnMachine[i].State = SINGLE_RELEASE;
+                }
+            break;
         
-        case SINGLE_RELEASE :
-            //Checking timer timeout.
-            if ( Scheduler_GetTimer( SCHEDULER_TIMER1_ID ) == 0 ) { //Single click
-                click = SINGLE_CLICK;
-                state = IDLE;
-            }
+            case SINGLE_RELEASE :
+                //Checking timer timeout.
+                if ( Scheduler_GetTimer( stBtnMachine[i].Timer ) == 0 ) { //Single click
+                    //Writing to the queue1 click detected.
+                    Message_write.Button = i;
+                    Message_write.Click = SINGLE_CLICK;
+                    Scheduler_WriteQueue( SCHEDULER_QUEUE1_ID, &Message_write );
+                    stBtnMachine[i].State = IDLE;
+                }
 
-            //Checks if the button is pressed.
-            if ( Dio_ReadChannel( DioConf_DioChannel_PTE12 ) == STD_LOW ) {
-                Scheduler_ReloadTimer( SCHEDULER_TIMER1_ID, SCHEDULER_TIMER1_TIMEOUT_300MS );   //Starting timer 300ms.
-                state = DOUBLE_PRESS;
-            }
-        break;
+                //Checks if the button is pressed.
+                if ( Dio_ReadChannel( stBtnMachine[i].Button  ) == STD_LOW ) {
+                    Scheduler_ReloadTimer( stBtnMachine[i].Timer, SCHEDULER_TIMER_TIMEOUT_300MS );   //Starting timer 300ms.
+                    stBtnMachine[i].State = DOUBLE_PRESS;
+                }
+            break;
         
-        case DOUBLE_PRESS :
-            //Checking timer timeout.
-            if ( Scheduler_GetTimer( SCHEDULER_TIMER1_ID ) == 0 ) {
-                state = HOLD;
-            }
+            case DOUBLE_PRESS :
+                //Checking timer timeout.
+                if ( Scheduler_GetTimer( stBtnMachine[i].Timer ) == 0 ) {
+                    stBtnMachine[i].State = HOLD;
+                }
 
-            //Checking if the button is released.
-            if ( Dio_ReadChannel( DioConf_DioChannel_PTE12 ) == STD_HIGH ) {//Double click.
-                click = DOUBLE_CLICK;
-                state = IDLE;
-            }
-        break;
+                //Checking if the button is released.
+                if ( Dio_ReadChannel( stBtnMachine[i].Button ) == STD_HIGH ) {//Double click.
+                    //Writing to the queue1 click detected.
+                    Message_write.Button = i;
+                    Message_write.Click = DOUBLE_CLICK;
+                    Scheduler_WriteQueue( SCHEDULER_QUEUE1_ID, &Message_write );
+                    stBtnMachine[i].State = IDLE;
+                }
+            break;
         
-        case HOLD ://Hold click.
-            //Checking if the button is released.
-            if ( Dio_ReadChannel( DioConf_DioChannel_PTE12 ) == STD_HIGH ) {
-                click = HOLD_CLICK;
-                state = IDLE;
-            }
-        break;
+            case HOLD ://Hold click.
+                //Checking if the button is released.
+                if ( Dio_ReadChannel( stBtnMachine[i].Button ) == STD_HIGH ) {
+                    //Writing to the queue1 click detected.
+                    Message_write.Button = i;
+                    Message_write.Click = HOLD_CLICK;
+                    Scheduler_WriteQueue( SCHEDULER_QUEUE1_ID, &Message_write );
+                    stBtnMachine[i].State = IDLE;
+                }
+            break;
         
-        default :
-        break;
+            default :
+            break;
+        }
     }
 }

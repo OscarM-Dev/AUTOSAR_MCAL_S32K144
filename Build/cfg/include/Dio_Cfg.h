@@ -276,6 +276,22 @@ extern "C" {
 */
 #define  DioConf_DioChannel_PTC11 ((uint16)0x004bU)
 
+
+
+/**
+* @brief          Symbolic name for the channel PTC13.
+*
+*/
+#define  DioConf_DioChannel_PTC13 ((uint16)0x004dU)
+
+
+
+/**
+* @brief          Symbolic name for the channel PTC14.
+*
+*/
+#define  DioConf_DioChannel_PTC14 ((uint16)0x004eU)
+
 /* ---------- PTE ---------- */
 
 /**
@@ -291,6 +307,38 @@ extern "C" {
 *
 */
 #define  DioConf_DioChannel_PTE12 ((uint16)0x008cU)
+
+/* ---------- PTD ---------- */
+
+/**
+* @brief          Symbolic name for the port PTD.
+*
+*/
+#define DioConf_DioPort_PTD  ((uint8)0x03U)
+
+
+
+/**
+* @brief          Symbolic name for the channel PTD17.
+*
+*/
+#define  DioConf_DioChannel_PTD17 ((uint16)0x0071U)
+
+/* ---------- PTA ---------- */
+
+/**
+* @brief          Symbolic name for the port PTA.
+*
+*/
+#define DioConf_DioPort_PTA  ((uint8)0x00U)
+
+
+
+/**
+* @brief          Symbolic name for the channel PTA12.
+*
+*/
+#define  DioConf_DioChannel_PTA12 ((uint16)0x000cU)
 
 
 /*=================================================================================================

@@ -120,6 +120,7 @@ extern void Task1_callback( void );
 extern void Task2_callback( void );
 extern void Timer1_callback( void );
 extern void Timer2_callback( void );
+extern void Timer3_callback( void );
 
 /// @endcond
 

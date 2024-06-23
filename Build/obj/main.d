@@ -56,7 +56,8 @@ Build/obj/main.o: Dev/src/main.c Dev/include/Mcu_init.h \
  Build/cfg/include/Gpio_Dio_Ip_Cfg.h \
  Autosar/Mcal/Base/include/Dio_MemMap.h Autosar/Os/include/Scheduler.h \
  Autosar/Os/include/Scheduler_Cfg.h Autosar/Bfx/Bfx.h \
- Autosar/Bfx/Bfx_32bits.h Autosar/Bfx/Bfx_8bits.h
+ Autosar/Bfx/Bfx_32bits.h Autosar/Bfx/Bfx_8bits.h \
+ Dev/include/State_machine.h
 Dev/include/Mcu_init.h:
 Autosar/Mcal/Mcu/include/Mcu.h:
 Build/cfg/include/Mcu_Cfg.h:
@@ -133,3 +134,4 @@ Autosar/Os/include/Scheduler_Cfg.h:
 Autosar/Bfx/Bfx.h:
 Autosar/Bfx/Bfx_32bits.h:
 Autosar/Bfx/Bfx_8bits.h:
+Dev/include/State_machine.h:

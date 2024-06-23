@@ -1,32 +1,42 @@
 Symbol table:
 
-Scheduler_StopTimer/57 (Scheduler_StopTimer) @06a23380
+Scheduler_StopTimer/59 (Scheduler_StopTimer) @069dc7e0
   Type: function
   Visibility: external public
   References: 
   Referring: 
   Availability: not_available
   Function flags:
-  Called by: Timer1_callback/52 
+  Called by: Timer3_callback/54 Timer2_callback/53 Timer1_callback/52 
   Calls: 
-Dio_FlipChannel/56 (Dio_FlipChannel) @06a231c0
+Dio_FlipChannel/58 (Dio_FlipChannel) @069dc620
   Type: function
   Visibility: external public
   References: 
   Referring: 
   Availability: not_available
   Function flags:
-  Called by: Task2_callback/51 Task2_callback/51 Task2_callback/51 
+  Called by: Task2_callback/51 Task2_callback/51 Task2_callback/51 Task2_callback/51 Task2_callback/51 Task2_callback/51 Task2_callback/51 Task2_callback/51 Task2_callback/51 Task2_callback/51 Task2_callback/51 Task2_callback/51 
   Calls: 
-click/55 (click) @068fbc60
-  Type: variable
-  Body removed by symtab_remove_unreachable_nodes
+Scheduler_ReadQueue/57 (Scheduler_ReadQueue) @069dc540
+  Type: function
   Visibility: external public
   References: 
-  Referring: Task2_callback/51 (read) Task2_callback/51 (write) Task2_callback/51 (write) Task2_callback/51 (write) 
+  Referring: 
   Availability: not_available
-  Varpool flags:
-DoubleClick_stMachine/54 (DoubleClick_stMachine) @06a23000
+  Function flags:
+  Called by: Task2_callback/51 
+  Calls: 
+Scheduler_GetStatusQueue/56 (Scheduler_GetStatusQueue) @069dc460
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: Task2_callback/51 
+  Calls: 
+DoubleClick_stMachine/55 (DoubleClick_stMachine) @069dc0e0
   Type: function
   Visibility: external public
   References: 
@@ -35,7 +45,7 @@ DoubleClick_stMachine/54 (DoubleClick_stMachine) @06a23000
   Function flags:
   Called by: Task1_callback/50 
   Calls: 
-Timer2_callback/53 (Timer2_callback) @068fc8c0
+Timer3_callback/54 (Timer3_callback) @069d3620
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: 
@@ -43,8 +53,8 @@ Timer2_callback/53 (Timer2_callback) @068fc8c0
   Availability: available
   Function flags: body
   Called by: 
-  Calls: 
-Timer1_callback/52 (Timer1_callback) @068fc620
+  Calls: Scheduler_StopTimer/59 
+Timer2_callback/53 (Timer2_callback) @069d37e0
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: 
@@ -52,17 +62,8 @@ Timer1_callback/52 (Timer1_callback) @068fc620
   Availability: available
   Function flags: body
   Called by: 
-  Calls: Scheduler_StopTimer/57 
-Task2_callback/51 (Task2_callback) @068fce00
-  Type: function definition analyzed
-  Visibility: force_output externally_visible no_reorder public
-  References: click/55 (read) click/55 (write) click/55 (write) click/55 (write) 
-  Referring: 
-  Availability: available
-  Function flags: body
-  Called by: 
-  Calls: Dio_FlipChannel/56 Dio_FlipChannel/56 Dio_FlipChannel/56 
-Task1_callback/50 (Task1_callback) @068fcb60
+  Calls: Scheduler_StopTimer/59 
+Timer1_callback/52 (Timer1_callback) @069d3540
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: 
@@ -70,10 +71,38 @@ Task1_callback/50 (Task1_callback) @068fcb60
   Availability: available
   Function flags: body
   Called by: 
-  Calls: DoubleClick_stMachine/54 
+  Calls: Scheduler_StopTimer/59 
+Task2_callback/51 (Task2_callback) @069d3e00
+  Type: function definition analyzed
+  Visibility: force_output externally_visible no_reorder public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: body
+  Called by: 
+  Calls: Dio_FlipChannel/58 Dio_FlipChannel/58 Dio_FlipChannel/58 Dio_FlipChannel/58 Dio_FlipChannel/58 Dio_FlipChannel/58 Dio_FlipChannel/58 Dio_FlipChannel/58 Dio_FlipChannel/58 Dio_FlipChannel/58 Dio_FlipChannel/58 Dio_FlipChannel/58 Scheduler_ReadQueue/57 Scheduler_GetStatusQueue/56 
+Task1_callback/50 (Task1_callback) @069d3b60
+  Type: function definition analyzed
+  Visibility: force_output externally_visible no_reorder public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: body
+  Called by: 
+  Calls: DoubleClick_stMachine/55 
+Timer3_callback ()
+{
+  <bb 2> :
+  Scheduler_StopTimer (3);
+  return;
+
+}
+
+
 Timer2_callback ()
 {
   <bb 2> :
+  Scheduler_StopTimer (2);
   return;
 
 }
@@ -90,36 +119,137 @@ Timer1_callback ()
 
 Task2_callback ()
 {
-  unsigned char click.0_1;
-  int _2;
+  struct QueueMessage Message_read;
+  uint8 i;
+  unsigned char _1;
+  unsigned char _2;
+  int _3;
+  unsigned char _4;
+  int _5;
+  unsigned char _6;
+  int _7;
+  unsigned char _8;
+  int _9;
+  unsigned char i.0_10;
 
   <bb 2> :
-  click.0_1 = click;
-  _2 = (int) click.0_1;
-  switch (_2) <default: <L3> [INV], case 1: <L0> [INV], case 2: <L1> [INV], case 3: <L2> [INV]>
+  i_17 = 0;
+  i_18 = 0;
+  goto <bb 25>; [INV]
 
   <bb 3> :
-<L0>:
-  Dio_FlipChannel (72);
-  click = 0;
-  goto <bb 7>; [INV]
+  _1 = Scheduler_GetStatusQueue (1, 1);
+  if (_1 == 0)
+    goto <bb 4>; [INV]
+  else
+    goto <bb 24>; [INV]
 
   <bb 4> :
-<L1>:
-  Dio_FlipChannel (73);
-  click = 0;
-  goto <bb 7>; [INV]
+  Scheduler_ReadQueue (1, &Message_read);
+  _2 = Message_read.Button;
+  _3 = (int) _2;
+  switch (_3) <default: <L20> [INV], case 0: <L2> [INV], case 1: <L8> [INV], case 2: <L14> [INV]>
 
   <bb 5> :
 <L2>:
-  Dio_FlipChannel (74);
-  click = 0;
-  goto <bb 7>; [INV]
+  _4 = Message_read.Click;
+  _5 = (int) _4;
+  switch (_5) <default: <L6> [INV], case 0: <L3> [INV], case 1: <L4> [INV], case 2: <L5> [INV]>
 
   <bb 6> :
 <L3>:
+  Dio_FlipChannel (72);
+  goto <bb 10>; [INV]
 
   <bb 7> :
+<L4>:
+  Dio_FlipChannel (73);
+  goto <bb 10>; [INV]
+
+  <bb 8> :
+<L5>:
+  Dio_FlipChannel (72);
+  Dio_FlipChannel (73);
+  goto <bb 10>; [INV]
+
+  <bb 9> :
+<L6>:
+
+  <bb 10> :
+  goto <bb 24>; [INV]
+
+  <bb 11> :
+<L8>:
+  _6 = Message_read.Click;
+  _7 = (int) _6;
+  switch (_7) <default: <L12> [INV], case 0: <L9> [INV], case 1: <L10> [INV], case 2: <L11> [INV]>
+
+  <bb 12> :
+<L9>:
+  Dio_FlipChannel (74);
+  goto <bb 16>; [INV]
+
+  <bb 13> :
+<L10>:
+  Dio_FlipChannel (75);
+  goto <bb 16>; [INV]
+
+  <bb 14> :
+<L11>:
+  Dio_FlipChannel (74);
+  Dio_FlipChannel (75);
+  goto <bb 16>; [INV]
+
+  <bb 15> :
+<L12>:
+
+  <bb 16> :
+  goto <bb 24>; [INV]
+
+  <bb 17> :
+<L14>:
+  _8 = Message_read.Click;
+  _9 = (int) _8;
+  switch (_9) <default: <L18> [INV], case 0: <L15> [INV], case 1: <L16> [INV], case 2: <L17> [INV]>
+
+  <bb 18> :
+<L15>:
+  Dio_FlipChannel (77);
+  goto <bb 22>; [INV]
+
+  <bb 19> :
+<L16>:
+  Dio_FlipChannel (78);
+  goto <bb 22>; [INV]
+
+  <bb 20> :
+<L17>:
+  Dio_FlipChannel (77);
+  Dio_FlipChannel (78);
+  goto <bb 22>; [INV]
+
+  <bb 21> :
+<L18>:
+
+  <bb 22> :
+  goto <bb 24>; [INV]
+
+  <bb 23> :
+<L20>:
+
+  <bb 24> :
+  i.0_10 = i_11;
+  i_35 = i.0_10 + 1;
+
+  <bb 25> :
+  # i_11 = PHI <i_18(2), i_35(24)>
+  if (i_11 <= 2)
+    goto <bb 3>; [INV]
+  else
+    goto <bb 26>; [INV]
+
+  <bb 26> :
+  Message_read ={v} {CLOBBER};
   return;
 
 }

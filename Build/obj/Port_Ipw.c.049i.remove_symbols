@@ -4,7 +4,7 @@ Reclaiming variables:
 Clearing address taken flags:
 Symbol table:
 
-SchM_Exit_Port_PORT_EXCLUSIVE_AREA_20/17 (SchM_Exit_Port_PORT_EXCLUSIVE_AREA_20) @05e91a80
+SchM_Exit_Port_PORT_EXCLUSIVE_AREA_20/17 (SchM_Exit_Port_PORT_EXCLUSIVE_AREA_20) @06a21a80
   Type: function
   Visibility: external public
   References: 
@@ -13,7 +13,7 @@ SchM_Exit_Port_PORT_EXCLUSIVE_AREA_20/17 (SchM_Exit_Port_PORT_EXCLUSIVE_AREA_20)
   Function flags:
   Called by: Port_Ipw_RefreshPortDirection/3 
   Calls: 
-SchM_Enter_Port_PORT_EXCLUSIVE_AREA_20/16 (SchM_Enter_Port_PORT_EXCLUSIVE_AREA_20) @05e917e0
+SchM_Enter_Port_PORT_EXCLUSIVE_AREA_20/16 (SchM_Enter_Port_PORT_EXCLUSIVE_AREA_20) @06a217e0
   Type: function
   Visibility: external public
   References: 
@@ -22,7 +22,7 @@ SchM_Enter_Port_PORT_EXCLUSIVE_AREA_20/16 (SchM_Enter_Port_PORT_EXCLUSIVE_AREA_2
   Function flags:
   Called by: Port_Ipw_RefreshPortDirection/3 
   Calls: 
-SchM_Exit_Port_PORT_EXCLUSIVE_AREA_19/15 (SchM_Exit_Port_PORT_EXCLUSIVE_AREA_19) @05e91ee0
+SchM_Exit_Port_PORT_EXCLUSIVE_AREA_19/15 (SchM_Exit_Port_PORT_EXCLUSIVE_AREA_19) @06a21ee0
   Type: function
   Visibility: external public
   References: 
@@ -31,7 +31,7 @@ SchM_Exit_Port_PORT_EXCLUSIVE_AREA_19/15 (SchM_Exit_Port_PORT_EXCLUSIVE_AREA_19)
   Function flags:
   Called by: Port_Ipw_RefreshPortDirection/3 Port_Ipw_RefreshPortDirection/3 
   Calls: 
-SchM_Enter_Port_PORT_EXCLUSIVE_AREA_19/14 (SchM_Enter_Port_PORT_EXCLUSIVE_AREA_19) @05e91e00
+SchM_Enter_Port_PORT_EXCLUSIVE_AREA_19/14 (SchM_Enter_Port_PORT_EXCLUSIVE_AREA_19) @06a21e00
   Type: function
   Visibility: external public
   References: 
@@ -40,7 +40,7 @@ SchM_Enter_Port_PORT_EXCLUSIVE_AREA_19/14 (SchM_Enter_Port_PORT_EXCLUSIVE_AREA_1
   Function flags:
   Called by: Port_Ipw_RefreshPortDirection/3 Port_Ipw_RefreshPortDirection/3 
   Calls: 
-SchM_Exit_Port_PORT_EXCLUSIVE_AREA_10/13 (SchM_Exit_Port_PORT_EXCLUSIVE_AREA_10) @05e91c40
+SchM_Exit_Port_PORT_EXCLUSIVE_AREA_10/13 (SchM_Exit_Port_PORT_EXCLUSIVE_AREA_10) @06a21c40
   Type: function
   Visibility: external public
   References: 
@@ -49,7 +49,7 @@ SchM_Exit_Port_PORT_EXCLUSIVE_AREA_10/13 (SchM_Exit_Port_PORT_EXCLUSIVE_AREA_10)
   Function flags:
   Called by: Port_Ipw_Init_UnusedPins/1 
   Calls: 
-SchM_Enter_Port_PORT_EXCLUSIVE_AREA_10/12 (SchM_Enter_Port_PORT_EXCLUSIVE_AREA_10) @05e91b60
+SchM_Enter_Port_PORT_EXCLUSIVE_AREA_10/12 (SchM_Enter_Port_PORT_EXCLUSIVE_AREA_10) @06a21b60
   Type: function
   Visibility: external public
   References: 
@@ -58,7 +58,7 @@ SchM_Enter_Port_PORT_EXCLUSIVE_AREA_10/12 (SchM_Enter_Port_PORT_EXCLUSIVE_AREA_1
   Function flags:
   Called by: Port_Ipw_Init_UnusedPins/1 
   Calls: 
-SchM_Exit_Port_PORT_EXCLUSIVE_AREA_09/11 (SchM_Exit_Port_PORT_EXCLUSIVE_AREA_09) @05e919a0
+SchM_Exit_Port_PORT_EXCLUSIVE_AREA_09/11 (SchM_Exit_Port_PORT_EXCLUSIVE_AREA_09) @06a219a0
   Type: function
   Visibility: external public
   References: 
@@ -67,7 +67,7 @@ SchM_Exit_Port_PORT_EXCLUSIVE_AREA_09/11 (SchM_Exit_Port_PORT_EXCLUSIVE_AREA_09)
   Function flags:
   Called by: Port_Ipw_Init_UnusedPins/1 Port_Ipw_Init_UnusedPins/1 
   Calls: 
-SchM_Enter_Port_PORT_EXCLUSIVE_AREA_09/10 (SchM_Enter_Port_PORT_EXCLUSIVE_AREA_09) @05e918c0
+SchM_Enter_Port_PORT_EXCLUSIVE_AREA_09/10 (SchM_Enter_Port_PORT_EXCLUSIVE_AREA_09) @06a218c0
   Type: function
   Visibility: external public
   References: 
@@ -76,7 +76,7 @@ SchM_Enter_Port_PORT_EXCLUSIVE_AREA_09/10 (SchM_Enter_Port_PORT_EXCLUSIVE_AREA_0
   Function flags:
   Called by: Port_Ipw_Init_UnusedPins/1 Port_Ipw_Init_UnusedPins/1 
   Calls: 
-Port_au32PortCiGpioBaseAddr/9 (Port_au32PortCiGpioBaseAddr) @05e959d8
+Port_au32PortCiGpioBaseAddr/9 (Port_au32PortCiGpioBaseAddr) @06a22af8
   Type: variable
   Body removed by symtab_remove_unreachable_nodes
   Visibility: external public
@@ -84,7 +84,7 @@ Port_au32PortCiGpioBaseAddr/9 (Port_au32PortCiGpioBaseAddr) @05e959d8
   Referring: Port_Ipw_Init_UnusedPins/1 (read) Port_Ipw_Init_UnusedPins/1 (read) Port_Ipw_Init_UnusedPins/1 (read) Port_Ipw_Init_UnusedPins/1 (read) Port_Ipw_Init_UnusedPins/1 (read) Port_Ipw_Init_UnusedPins/1 (read) Port_Ipw_Init_UnusedPins/1 (read) Port_Ipw_Init_UnusedPins/1 (read) Port_Ipw_Init_UnusedPins/1 (read) Port_Ipw_Init_UnusedPins/1 (read) Port_Ipw_RefreshPortDirection/3 (read) Port_Ipw_RefreshPortDirection/3 (read) Port_Ipw_RefreshPortDirection/3 (read) Port_Ipw_RefreshPortDirection/3 (read) Port_Ipw_RefreshPortDirection/3 (read) Port_Ipw_RefreshPortDirection/3 (read) Port_Ipw_RefreshPortDirection/3 (read) Port_Ipw_RefreshPortDirection/3 (read) 
   Availability: not_available
   Varpool flags: read-only
-Port_Ci_Port_Ip_Init/8 (Port_Ci_Port_Ip_Init) @05e91700
+Port_Ci_Port_Ip_Init/8 (Port_Ci_Port_Ip_Init) @06a21700
   Type: function
   Visibility: external public
   References: 
@@ -93,7 +93,7 @@ Port_Ci_Port_Ip_Init/8 (Port_Ci_Port_Ip_Init) @05e91700
   Function flags:
   Called by: Port_Ipw_Init/2 
   Calls: 
-SchM_Exit_Port_PORT_EXCLUSIVE_AREA_15/7 (SchM_Exit_Port_PORT_EXCLUSIVE_AREA_15) @05e91620
+SchM_Exit_Port_PORT_EXCLUSIVE_AREA_15/7 (SchM_Exit_Port_PORT_EXCLUSIVE_AREA_15) @06a21620
   Type: function
   Visibility: external public
   References: 
@@ -102,7 +102,7 @@ SchM_Exit_Port_PORT_EXCLUSIVE_AREA_15/7 (SchM_Exit_Port_PORT_EXCLUSIVE_AREA_15) 
   Function flags:
   Called by: Port_Ipw_Init/2 
   Calls: 
-SchM_Enter_Port_PORT_EXCLUSIVE_AREA_15/6 (SchM_Enter_Port_PORT_EXCLUSIVE_AREA_15) @05e91540
+SchM_Enter_Port_PORT_EXCLUSIVE_AREA_15/6 (SchM_Enter_Port_PORT_EXCLUSIVE_AREA_15) @06a21540
   Type: function
   Visibility: external public
   References: 
@@ -111,7 +111,7 @@ SchM_Enter_Port_PORT_EXCLUSIVE_AREA_15/6 (SchM_Enter_Port_PORT_EXCLUSIVE_AREA_15
   Function flags:
   Called by: Port_Ipw_Init/2 
   Calls: 
-Port_Ci_Port_Ip_ConfigDigitalFilter/5 (Port_Ci_Port_Ip_ConfigDigitalFilter) @05e91460
+Port_Ci_Port_Ip_ConfigDigitalFilter/5 (Port_Ci_Port_Ip_ConfigDigitalFilter) @06a21460
   Type: function
   Visibility: external public
   References: 
@@ -120,7 +120,7 @@ Port_Ci_Port_Ip_ConfigDigitalFilter/5 (Port_Ci_Port_Ip_ConfigDigitalFilter) @05e
   Function flags:
   Called by: Port_Ipw_Init/2 
   Calls: 
-Port_au32PortCiPortBaseAddr/4 (Port_au32PortCiPortBaseAddr) @05e951f8
+Port_au32PortCiPortBaseAddr/4 (Port_au32PortCiPortBaseAddr) @06a22318
   Type: variable
   Body removed by symtab_remove_unreachable_nodes
   Visibility: external public
@@ -128,7 +128,7 @@ Port_au32PortCiPortBaseAddr/4 (Port_au32PortCiPortBaseAddr) @05e951f8
   Referring: Port_Ipw_Init_UnusedPins/1 (read) Port_Ipw_Init/2 (read) Port_Ipw_Init/2 (read) Port_Ipw_Init/2 (read) 
   Availability: not_available
   Varpool flags: read-only
-Port_Ipw_RefreshPortDirection/3 (Port_Ipw_RefreshPortDirection) @05e91000
+Port_Ipw_RefreshPortDirection/3 (Port_Ipw_RefreshPortDirection) @06a21000
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: Port_au32PortCiGpioBaseAddr/9 (read) Port_au32PortCiGpioBaseAddr/9 (read) Port_au32PortCiGpioBaseAddr/9 (read) Port_au32PortCiGpioBaseAddr/9 (read) Port_au32PortCiGpioBaseAddr/9 (read) Port_au32PortCiGpioBaseAddr/9 (read) Port_au32PortCiGpioBaseAddr/9 (read) Port_au32PortCiGpioBaseAddr/9 (read) 
@@ -137,7 +137,7 @@ Port_Ipw_RefreshPortDirection/3 (Port_Ipw_RefreshPortDirection) @05e91000
   Function flags: body
   Called by: 
   Calls: SchM_Exit_Port_PORT_EXCLUSIVE_AREA_20/17 SchM_Enter_Port_PORT_EXCLUSIVE_AREA_20/16 SchM_Exit_Port_PORT_EXCLUSIVE_AREA_19/15 SchM_Enter_Port_PORT_EXCLUSIVE_AREA_19/14 SchM_Exit_Port_PORT_EXCLUSIVE_AREA_19/15 SchM_Enter_Port_PORT_EXCLUSIVE_AREA_19/14 
-Port_Ipw_Init/2 (Port_Ipw_Init) @05e897e0
+Port_Ipw_Init/2 (Port_Ipw_Init) @06a197e0
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: Port_au32PortCiPortBaseAddr/4 (read) Port_au32PortCiPortBaseAddr/4 (read) Port_au32PortCiPortBaseAddr/4 (read) 
@@ -146,7 +146,7 @@ Port_Ipw_Init/2 (Port_Ipw_Init) @05e897e0
   Function flags: body
   Called by: 
   Calls: Port_Ipw_Init_UnusedPins/1 Port_Ci_Port_Ip_Init/8 SchM_Exit_Port_PORT_EXCLUSIVE_AREA_15/7 SchM_Enter_Port_PORT_EXCLUSIVE_AREA_15/6 Port_Ci_Port_Ip_ConfigDigitalFilter/5 
-Port_Ipw_Init_UnusedPins/1 (Port_Ipw_Init_UnusedPins) @05e89540
+Port_Ipw_Init_UnusedPins/1 (Port_Ipw_Init_UnusedPins) @06a19540
   Type: function definition analyzed
   Visibility: no_reorder prevailing_def_ironly
   References: Port_au32PortCiGpioBaseAddr/9 (read) Port_au32PortCiGpioBaseAddr/9 (read) Port_au32PortCiGpioBaseAddr/9 (read) Port_au32PortCiGpioBaseAddr/9 (read) Port_au32PortCiGpioBaseAddr/9 (read) Port_au32PortCiGpioBaseAddr/9 (read) Port_au32PortCiGpioBaseAddr/9 (read) Port_au32PortCiGpioBaseAddr/9 (read) Port_au32PortCiGpioBaseAddr/9 (read) Port_au32PortCiGpioBaseAddr/9 (read) Port_au32PortCiPortBaseAddr/4 (read) 
@@ -475,7 +475,7 @@ Port_Ipw_Init (const struct Port_ConfigType * pConfigPtr)
 
   <bb 5> :
   _24 = pConfigPtr_28(D)->IpConfigPtr;
-  Port_Ci_Port_Ip_Init (5, _24);
+  Port_Ci_Port_Ip_Init (9, _24);
   Port_Ipw_Init_UnusedPins (pConfigPtr_28(D));
   return;
 

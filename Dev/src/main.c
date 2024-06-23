@@ -8,11 +8,27 @@
 //Header.
 #include "Mcu_init.h"
 #include "Scheduler.h"
+#include "State_machine.h"
 
 //Global data.
-uint8 click = 0;
-uint32 Queue1[ SCHEDULER_QUEUE1_ELEMENTS ];
-uint16 Queue2[ SCHEDULER_QUEUE2_ELEMENTS ];
+QueueMessage Queue1[ SCHEDULER_QUEUE1_ELEMENTS ];
+BtnsCtrl stBtnMachine[3] = {
+    {   //Button 1.
+        .Button = DioConf_DioChannel_PTE12,
+        .State = IDLE,
+        .Timer = SCHEDULER_TIMER1_ID
+    },
+    {   //Button 2.
+        .Button = DioConf_DioChannel_PTD17,
+        .State = IDLE,
+        .Timer = SCHEDULER_TIMER2_ID
+    },
+    {   //Button 3.
+        .Button = DioConf_DioChannel_PTA12,
+        .State = IDLE,
+        .Timer = SCHEDULER_TIMER3_ID
+    }
+};
 
 /**
  * @brief This is the main function of the project

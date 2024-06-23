@@ -1,17 +1,9 @@
 Trivially needed symbols: DoubleClick_stMachine/50
-Trivially needed symbols: state/51
 
 
 Initial Symbol table:
 
-click/55 (click) @06ac70d8
-  Type: variable
-  Visibility: external public
-  References: 
-  Referring: DoubleClick_stMachine/50 (write) DoubleClick_stMachine/50 (write) DoubleClick_stMachine/50 (write) 
-  Availability: not-ready
-  Varpool flags:
-Scheduler_GetTimer/54 (Scheduler_GetTimer) @069cb460
+Scheduler_WriteQueue/55 (Scheduler_WriteQueue) @05dc3540
   Type: function
   Visibility: external public
   References: 
@@ -19,7 +11,15 @@ Scheduler_GetTimer/54 (Scheduler_GetTimer) @069cb460
   Function flags:
   Called by: DoubleClick_stMachine/50 DoubleClick_stMachine/50 DoubleClick_stMachine/50 
   Calls: 
-Scheduler_ReloadTimer/53 (Scheduler_ReloadTimer) @069cbee0
+Scheduler_GetTimer/54 (Scheduler_GetTimer) @05dc3380
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: DoubleClick_stMachine/50 DoubleClick_stMachine/50 DoubleClick_stMachine/50 
+  Calls: 
+Scheduler_ReloadTimer/53 (Scheduler_ReloadTimer) @05dc3e00
   Type: function
   Visibility: external public
   References: 
@@ -27,7 +27,7 @@ Scheduler_ReloadTimer/53 (Scheduler_ReloadTimer) @069cbee0
   Function flags:
   Called by: DoubleClick_stMachine/50 DoubleClick_stMachine/50 
   Calls: 
-Dio_ReadChannel/52 (Dio_ReadChannel) @069cbe00
+Dio_ReadChannel/52 (Dio_ReadChannel) @05dc3d20
   Type: function
   Visibility: external public
   References: 
@@ -35,24 +35,23 @@ Dio_ReadChannel/52 (Dio_ReadChannel) @069cbe00
   Function flags:
   Called by: DoubleClick_stMachine/50 DoubleClick_stMachine/50 DoubleClick_stMachine/50 DoubleClick_stMachine/50 DoubleClick_stMachine/50 
   Calls: 
-state/51 (state) @069caee8
-  Type: variable definition analyzed
-  Visibility: force_output no_reorder
-  Aux: @01981040
+stBtnMachine/51 (stBtnMachine) @05dce510
+  Type: variable
+  Visibility: external public
   References: 
-  Referring: DoubleClick_stMachine/50 (read) DoubleClick_stMachine/50 (write) DoubleClick_stMachine/50 (write) DoubleClick_stMachine/50 (write) DoubleClick_stMachine/50 (write) DoubleClick_stMachine/50 (write) DoubleClick_stMachine/50 (write) DoubleClick_stMachine/50 (write) DoubleClick_stMachine/50 (write) 
+  Referring: DoubleClick_stMachine/50 (read) DoubleClick_stMachine/50 (read) DoubleClick_stMachine/50 (read) DoubleClick_stMachine/50 (write) DoubleClick_stMachine/50 (read) DoubleClick_stMachine/50 (write) DoubleClick_stMachine/50 (read) DoubleClick_stMachine/50 (write) DoubleClick_stMachine/50 (read) DoubleClick_stMachine/50 (write) DoubleClick_stMachine/50 (read) DoubleClick_stMachine/50 (read) DoubleClick_stMachine/50 (write) DoubleClick_stMachine/50 (read) DoubleClick_stMachine/50 (write) DoubleClick_stMachine/50 (read) DoubleClick_stMachine/50 (write) DoubleClick_stMachine/50 (read) DoubleClick_stMachine/50 (write) 
   Availability: not-ready
-  Varpool flags: initialized
-DoubleClick_stMachine/50 (DoubleClick_stMachine) @069cb7e0
+  Varpool flags:
+DoubleClick_stMachine/50 (DoubleClick_stMachine) @05dc3700
   Type: function definition analyzed
   Visibility: force_output no_reorder public
   Aux: @01981040
-  References: state/51 (read) state/51 (write) state/51 (write) state/51 (write) click/55 (write) state/51 (write) state/51 (write) state/51 (write) click/55 (write) state/51 (write) click/55 (write) state/51 (write) 
+  References: stBtnMachine/51 (read) stBtnMachine/51 (read) stBtnMachine/51 (read) stBtnMachine/51 (write) stBtnMachine/51 (read) stBtnMachine/51 (write) stBtnMachine/51 (read) stBtnMachine/51 (write) stBtnMachine/51 (read) stBtnMachine/51 (write) stBtnMachine/51 (read) stBtnMachine/51 (read) stBtnMachine/51 (write) stBtnMachine/51 (read) stBtnMachine/51 (write) stBtnMachine/51 (read) stBtnMachine/51 (write) stBtnMachine/51 (read) stBtnMachine/51 (write) 
   Referring: 
   Function flags: body
   Called by: 
-  Calls: Dio_ReadChannel/52 Dio_ReadChannel/52 Scheduler_GetTimer/54 Scheduler_ReloadTimer/53 Dio_ReadChannel/52 Scheduler_GetTimer/54 Dio_ReadChannel/52 Scheduler_GetTimer/54 Scheduler_ReloadTimer/53 Dio_ReadChannel/52 
-Bfx_CountLeadingZeros_u8/49 (Bfx_CountLeadingZeros_u8) @069491c0
+  Calls: Scheduler_WriteQueue/55 Dio_ReadChannel/52 Scheduler_WriteQueue/55 Dio_ReadChannel/52 Scheduler_GetTimer/54 Scheduler_ReloadTimer/53 Dio_ReadChannel/52 Scheduler_WriteQueue/55 Scheduler_GetTimer/54 Dio_ReadChannel/52 Scheduler_GetTimer/54 Scheduler_ReloadTimer/53 Dio_ReadChannel/52 
+Bfx_CountLeadingZeros_u8/49 (Bfx_CountLeadingZeros_u8) @05d3c460
   Type: function definition
   Visibility: no_reorder
   References: 
@@ -60,7 +59,7 @@ Bfx_CountLeadingZeros_u8/49 (Bfx_CountLeadingZeros_u8) @069491c0
   Function flags:
   Called by: 
   Calls: 
-Bfx_CountLeadingSigns_s8/48 (Bfx_CountLeadingSigns_s8) @06943ee0
+Bfx_CountLeadingSigns_s8/48 (Bfx_CountLeadingSigns_s8) @05d3c1c0
   Type: function definition
   Visibility: no_reorder
   References: 
@@ -68,7 +67,7 @@ Bfx_CountLeadingSigns_s8/48 (Bfx_CountLeadingSigns_s8) @06943ee0
   Function flags:
   Called by: 
   Calls: 
-Bfx_CountLeadingOnes_u8/47 (Bfx_CountLeadingOnes_u8) @06943c40
+Bfx_CountLeadingOnes_u8/47 (Bfx_CountLeadingOnes_u8) @05d36ee0
   Type: function definition
   Visibility: no_reorder
   References: 
@@ -76,7 +75,7 @@ Bfx_CountLeadingOnes_u8/47 (Bfx_CountLeadingOnes_u8) @06943c40
   Function flags:
   Called by: 
   Calls: 
-Bfx_ShiftBitSat_s8s8_s8/46 (Bfx_ShiftBitSat_s8s8_s8) @069439a0
+Bfx_ShiftBitSat_s8s8_s8/46 (Bfx_ShiftBitSat_s8s8_s8) @05d36c40
   Type: function definition
   Visibility: no_reorder
   References: 
@@ -84,7 +83,7 @@ Bfx_ShiftBitSat_s8s8_s8/46 (Bfx_ShiftBitSat_s8s8_s8) @069439a0
   Function flags:
   Called by: 
   Calls: 
-Bfx_ShiftBitSat_u8s8_u8/45 (Bfx_ShiftBitSat_u8s8_u8) @06943700
+Bfx_ShiftBitSat_u8s8_u8/45 (Bfx_ShiftBitSat_u8s8_u8) @05d369a0
   Type: function definition
   Visibility: no_reorder
   References: 
@@ -92,7 +91,7 @@ Bfx_ShiftBitSat_u8s8_u8/45 (Bfx_ShiftBitSat_u8s8_u8) @06943700
   Function flags:
   Called by: 
   Calls: 
-Bfx_PutBits_u8u8u8u8/44 (Bfx_PutBits_u8u8u8u8) @06943460
+Bfx_PutBits_u8u8u8u8/44 (Bfx_PutBits_u8u8u8u8) @05d36700
   Type: function definition
   Visibility: no_reorder
   References: 
@@ -100,7 +99,7 @@ Bfx_PutBits_u8u8u8u8/44 (Bfx_PutBits_u8u8u8u8) @06943460
   Function flags:
   Called by: 
   Calls: 
-Bfx_PutBitsMask_u8u8u8/43 (Bfx_PutBitsMask_u8u8u8) @069431c0
+Bfx_PutBitsMask_u8u8u8/43 (Bfx_PutBitsMask_u8u8u8) @05d36460
   Type: function definition
   Visibility: no_reorder
   References: 
@@ -108,7 +107,7 @@ Bfx_PutBitsMask_u8u8u8/43 (Bfx_PutBitsMask_u8u8u8) @069431c0
   Function flags:
   Called by: 
   Calls: 
-Bfx_PutBit_u8u8u8/42 (Bfx_PutBit_u8u8u8) @0693fee0
+Bfx_PutBit_u8u8u8/42 (Bfx_PutBit_u8u8u8) @05d361c0
   Type: function definition
   Visibility: no_reorder
   References: 
@@ -116,7 +115,7 @@ Bfx_PutBit_u8u8u8/42 (Bfx_PutBit_u8u8u8) @0693fee0
   Function flags:
   Called by: 
   Calls: 
-Bfx_CopyBit_u8u8u8u8/41 (Bfx_CopyBit_u8u8u8u8) @0693fc40
+Bfx_CopyBit_u8u8u8u8/41 (Bfx_CopyBit_u8u8u8u8) @05d30ee0
   Type: function definition
   Visibility: no_reorder
   References: 
@@ -124,7 +123,7 @@ Bfx_CopyBit_u8u8u8u8/41 (Bfx_CopyBit_u8u8u8u8) @0693fc40
   Function flags:
   Called by: 
   Calls: 
-Bfx_RotBitLt_u8u8/40 (Bfx_RotBitLt_u8u8) @0693f9a0
+Bfx_RotBitLt_u8u8/40 (Bfx_RotBitLt_u8u8) @05d30c40
   Type: function definition
   Visibility: no_reorder
   References: 
@@ -132,7 +131,7 @@ Bfx_RotBitLt_u8u8/40 (Bfx_RotBitLt_u8u8) @0693f9a0
   Function flags:
   Called by: 
   Calls: 
-Bfx_RotBitRt_u8u8/39 (Bfx_RotBitRt_u8u8) @0693f700
+Bfx_RotBitRt_u8u8/39 (Bfx_RotBitRt_u8u8) @05d309a0
   Type: function definition
   Visibility: no_reorder
   References: 
@@ -140,7 +139,7 @@ Bfx_RotBitRt_u8u8/39 (Bfx_RotBitRt_u8u8) @0693f700
   Function flags:
   Called by: 
   Calls: 
-Bfx_ShiftBitLt_u8u8/38 (Bfx_ShiftBitLt_u8u8) @0693f460
+Bfx_ShiftBitLt_u8u8/38 (Bfx_ShiftBitLt_u8u8) @05d30700
   Type: function definition
   Visibility: no_reorder
   References: 
@@ -148,7 +147,7 @@ Bfx_ShiftBitLt_u8u8/38 (Bfx_ShiftBitLt_u8u8) @0693f460
   Function flags:
   Called by: 
   Calls: 
-Bfx_ShiftBitRt_u8u8/37 (Bfx_ShiftBitRt_u8u8) @0693f1c0
+Bfx_ShiftBitRt_u8u8/37 (Bfx_ShiftBitRt_u8u8) @05d30460
   Type: function definition
   Visibility: no_reorder
   References: 
@@ -156,7 +155,7 @@ Bfx_ShiftBitRt_u8u8/37 (Bfx_ShiftBitRt_u8u8) @0693f1c0
   Function flags:
   Called by: 
   Calls: 
-Bfx_ToggleBitMask_u8u8/36 (Bfx_ToggleBitMask_u8u8) @06939ee0
+Bfx_ToggleBitMask_u8u8/36 (Bfx_ToggleBitMask_u8u8) @05d301c0
   Type: function definition
   Visibility: no_reorder
   References: 
@@ -164,7 +163,7 @@ Bfx_ToggleBitMask_u8u8/36 (Bfx_ToggleBitMask_u8u8) @06939ee0
   Function flags:
   Called by: 
   Calls: 
-Bfx_ToggleBits_u8/35 (Bfx_ToggleBits_u8) @06939c40
+Bfx_ToggleBits_u8/35 (Bfx_ToggleBits_u8) @05d2cee0
   Type: function definition
   Visibility: no_reorder
   References: 
@@ -172,7 +171,7 @@ Bfx_ToggleBits_u8/35 (Bfx_ToggleBits_u8) @06939c40
   Function flags:
   Called by: 
   Calls: 
-Bfx_TstParityEven_u8_u8/34 (Bfx_TstParityEven_u8_u8) @069399a0
+Bfx_TstParityEven_u8_u8/34 (Bfx_TstParityEven_u8_u8) @05d2cc40
   Type: function definition
   Visibility: no_reorder
   References: 
@@ -180,7 +179,7 @@ Bfx_TstParityEven_u8_u8/34 (Bfx_TstParityEven_u8_u8) @069399a0
   Function flags:
   Called by: 
   Calls: 
-Bfx_TstBitLnMask_u8u8_u8/33 (Bfx_TstBitLnMask_u8u8_u8) @06939700
+Bfx_TstBitLnMask_u8u8_u8/33 (Bfx_TstBitLnMask_u8u8_u8) @05d2c9a0
   Type: function definition
   Visibility: no_reorder
   References: 
@@ -188,7 +187,7 @@ Bfx_TstBitLnMask_u8u8_u8/33 (Bfx_TstBitLnMask_u8u8_u8) @06939700
   Function flags:
   Called by: 
   Calls: 
-Bfx_TstBitMask_u8u8_u8/32 (Bfx_TstBitMask_u8u8_u8) @06939460
+Bfx_TstBitMask_u8u8_u8/32 (Bfx_TstBitMask_u8u8_u8) @05d2c700
   Type: function definition
   Visibility: no_reorder
   References: 
@@ -196,7 +195,7 @@ Bfx_TstBitMask_u8u8_u8/32 (Bfx_TstBitMask_u8u8_u8) @06939460
   Function flags:
   Called by: 
   Calls: 
-Bfx_ClrBitMask_u8u8/31 (Bfx_ClrBitMask_u8u8) @069391c0
+Bfx_ClrBitMask_u8u8/31 (Bfx_ClrBitMask_u8u8) @05d2c460
   Type: function definition
   Visibility: no_reorder
   References: 
@@ -204,7 +203,7 @@ Bfx_ClrBitMask_u8u8/31 (Bfx_ClrBitMask_u8u8) @069391c0
   Function flags:
   Called by: 
   Calls: 
-Bfx_SetBitMask_u8u8/30 (Bfx_SetBitMask_u8u8) @06935ee0
+Bfx_SetBitMask_u8u8/30 (Bfx_SetBitMask_u8u8) @05d2c1c0
   Type: function definition
   Visibility: no_reorder
   References: 
@@ -212,7 +211,7 @@ Bfx_SetBitMask_u8u8/30 (Bfx_SetBitMask_u8u8) @06935ee0
   Function flags:
   Called by: 
   Calls: 
-Bfx_GetBits_u8u8u8_u8/29 (Bfx_GetBits_u8u8u8_u8) @06935c40
+Bfx_GetBits_u8u8u8_u8/29 (Bfx_GetBits_u8u8u8_u8) @05d27ee0
   Type: function definition
   Visibility: no_reorder
   References: 
@@ -220,7 +219,7 @@ Bfx_GetBits_u8u8u8_u8/29 (Bfx_GetBits_u8u8u8_u8) @06935c40
   Function flags:
   Called by: 
   Calls: 
-Bfx_SetBits_u8u8u8u8/28 (Bfx_SetBits_u8u8u8u8) @069359a0
+Bfx_SetBits_u8u8u8u8/28 (Bfx_SetBits_u8u8u8u8) @05d27c40
   Type: function definition
   Visibility: no_reorder
   References: 
@@ -228,7 +227,7 @@ Bfx_SetBits_u8u8u8u8/28 (Bfx_SetBits_u8u8u8u8) @069359a0
   Function flags:
   Called by: 
   Calls: 
-Bfx_GetBit_u8u8_u8/27 (Bfx_GetBit_u8u8_u8) @06935700
+Bfx_GetBit_u8u8_u8/27 (Bfx_GetBit_u8u8_u8) @05d279a0
   Type: function definition
   Visibility: no_reorder
   References: 
@@ -236,7 +235,7 @@ Bfx_GetBit_u8u8_u8/27 (Bfx_GetBit_u8u8_u8) @06935700
   Function flags:
   Called by: 
   Calls: 
-Bfx_ClrBit_u8u8/26 (Bfx_ClrBit_u8u8) @06935460
+Bfx_ClrBit_u8u8/26 (Bfx_ClrBit_u8u8) @05d27700
   Type: function definition
   Visibility: no_reorder
   References: 
@@ -244,7 +243,7 @@ Bfx_ClrBit_u8u8/26 (Bfx_ClrBit_u8u8) @06935460
   Function flags:
   Called by: 
   Calls: 
-Bfx_SetBit_u8u8/25 (Bfx_SetBit_u8u8) @069351c0
+Bfx_SetBit_u8u8/25 (Bfx_SetBit_u8u8) @05d27460
   Type: function definition
   Visibility: no_reorder
   References: 
@@ -252,7 +251,7 @@ Bfx_SetBit_u8u8/25 (Bfx_SetBit_u8u8) @069351c0
   Function flags:
   Called by: 
   Calls: 
-Bfx_CountLeadingZeros_u32/24 (Bfx_CountLeadingZeros_u32) @0692bee0
+Bfx_CountLeadingZeros_u32/24 (Bfx_CountLeadingZeros_u32) @05d271c0
   Type: function definition
   Visibility: no_reorder
   References: 
@@ -260,7 +259,7 @@ Bfx_CountLeadingZeros_u32/24 (Bfx_CountLeadingZeros_u32) @0692bee0
   Function flags:
   Called by: 
   Calls: 
-Bfx_CountLeadingSigns_s32/23 (Bfx_CountLeadingSigns_s32) @0692bc40
+Bfx_CountLeadingSigns_s32/23 (Bfx_CountLeadingSigns_s32) @05d1eee0
   Type: function definition
   Visibility: no_reorder
   References: 
@@ -268,7 +267,7 @@ Bfx_CountLeadingSigns_s32/23 (Bfx_CountLeadingSigns_s32) @0692bc40
   Function flags:
   Called by: 
   Calls: 
-Bfx_CountLeadingOnes_u32/22 (Bfx_CountLeadingOnes_u32) @0692b9a0
+Bfx_CountLeadingOnes_u32/22 (Bfx_CountLeadingOnes_u32) @05d1ec40
   Type: function definition
   Visibility: no_reorder
   References: 
@@ -276,7 +275,7 @@ Bfx_CountLeadingOnes_u32/22 (Bfx_CountLeadingOnes_u32) @0692b9a0
   Function flags:
   Called by: 
   Calls: 
-Bfx_ShiftBitSat_s32s8_s32/21 (Bfx_ShiftBitSat_s32s8_s32) @0692b700
+Bfx_ShiftBitSat_s32s8_s32/21 (Bfx_ShiftBitSat_s32s8_s32) @05d1e9a0
   Type: function definition
   Visibility: no_reorder
   References: 
@@ -284,7 +283,7 @@ Bfx_ShiftBitSat_s32s8_s32/21 (Bfx_ShiftBitSat_s32s8_s32) @0692b700
   Function flags:
   Called by: 
   Calls: 
-Bfx_ShiftBitSat_u32s8_u32/20 (Bfx_ShiftBitSat_u32s8_u32) @0692b460
+Bfx_ShiftBitSat_u32s8_u32/20 (Bfx_ShiftBitSat_u32s8_u32) @05d1e700
   Type: function definition
   Visibility: no_reorder
   References: 
@@ -292,7 +291,7 @@ Bfx_ShiftBitSat_u32s8_u32/20 (Bfx_ShiftBitSat_u32s8_u32) @0692b460
   Function flags:
   Called by: 
   Calls: 
-Bfx_PutBits_u32u8u8u32/19 (Bfx_PutBits_u32u8u8u32) @0692b1c0
+Bfx_PutBits_u32u8u8u32/19 (Bfx_PutBits_u32u8u8u32) @05d1e460
   Type: function definition
   Visibility: no_reorder
   References: 
@@ -300,7 +299,7 @@ Bfx_PutBits_u32u8u8u32/19 (Bfx_PutBits_u32u8u8u32) @0692b1c0
   Function flags:
   Called by: 
   Calls: 
-Bfx_PutBitsMask_u32u32u32/18 (Bfx_PutBitsMask_u32u32u32) @06929ee0
+Bfx_PutBitsMask_u32u32u32/18 (Bfx_PutBitsMask_u32u32u32) @05d1e1c0
   Type: function definition
   Visibility: no_reorder
   References: 
@@ -308,7 +307,7 @@ Bfx_PutBitsMask_u32u32u32/18 (Bfx_PutBitsMask_u32u32u32) @06929ee0
   Function flags:
   Called by: 
   Calls: 
-Bfx_PutBit_u32u8u8/17 (Bfx_PutBit_u32u8u8) @06929c40
+Bfx_PutBit_u32u8u8/17 (Bfx_PutBit_u32u8u8) @05d1cee0
   Type: function definition
   Visibility: no_reorder
   References: 
@@ -316,7 +315,7 @@ Bfx_PutBit_u32u8u8/17 (Bfx_PutBit_u32u8u8) @06929c40
   Function flags:
   Called by: 
   Calls: 
-Bfx_CopyBit_u32u8u32u8/16 (Bfx_CopyBit_u32u8u32u8) @069299a0
+Bfx_CopyBit_u32u8u32u8/16 (Bfx_CopyBit_u32u8u32u8) @05d1cc40
   Type: function definition
   Visibility: no_reorder
   References: 
@@ -324,7 +323,7 @@ Bfx_CopyBit_u32u8u32u8/16 (Bfx_CopyBit_u32u8u32u8) @069299a0
   Function flags:
   Called by: 
   Calls: 
-Bfx_RotBitLt_u32u8/15 (Bfx_RotBitLt_u32u8) @06929700
+Bfx_RotBitLt_u32u8/15 (Bfx_RotBitLt_u32u8) @05d1c9a0
   Type: function definition
   Visibility: no_reorder
   References: 
@@ -332,7 +331,7 @@ Bfx_RotBitLt_u32u8/15 (Bfx_RotBitLt_u32u8) @06929700
   Function flags:
   Called by: 
   Calls: 
-Bfx_RotBitRt_u32u8/14 (Bfx_RotBitRt_u32u8) @06929460
+Bfx_RotBitRt_u32u8/14 (Bfx_RotBitRt_u32u8) @05d1c700
   Type: function definition
   Visibility: no_reorder
   References: 
@@ -340,7 +339,7 @@ Bfx_RotBitRt_u32u8/14 (Bfx_RotBitRt_u32u8) @06929460
   Function flags:
   Called by: 
   Calls: 
-Bfx_ShiftBitLt_u32u8/13 (Bfx_ShiftBitLt_u32u8) @069291c0
+Bfx_ShiftBitLt_u32u8/13 (Bfx_ShiftBitLt_u32u8) @05d1c460
   Type: function definition
   Visibility: no_reorder
   References: 
@@ -348,7 +347,7 @@ Bfx_ShiftBitLt_u32u8/13 (Bfx_ShiftBitLt_u32u8) @069291c0
   Function flags:
   Called by: 
   Calls: 
-Bfx_ShiftBitRt_u32u8/12 (Bfx_ShiftBitRt_u32u8) @06925ee0
+Bfx_ShiftBitRt_u32u8/12 (Bfx_ShiftBitRt_u32u8) @05d1c1c0
   Type: function definition
   Visibility: no_reorder
   References: 
@@ -356,7 +355,7 @@ Bfx_ShiftBitRt_u32u8/12 (Bfx_ShiftBitRt_u32u8) @06925ee0
   Function flags:
   Called by: 
   Calls: 
-Bfx_ToggleBitMask_u32u32/11 (Bfx_ToggleBitMask_u32u32) @06925c40
+Bfx_ToggleBitMask_u32u32/11 (Bfx_ToggleBitMask_u32u32) @05d18ee0
   Type: function definition
   Visibility: no_reorder
   References: 
@@ -364,7 +363,7 @@ Bfx_ToggleBitMask_u32u32/11 (Bfx_ToggleBitMask_u32u32) @06925c40
   Function flags:
   Called by: 
   Calls: 
-Bfx_ToggleBits_u32/10 (Bfx_ToggleBits_u32) @069259a0
+Bfx_ToggleBits_u32/10 (Bfx_ToggleBits_u32) @05d18c40
   Type: function definition
   Visibility: no_reorder
   References: 
@@ -372,7 +371,7 @@ Bfx_ToggleBits_u32/10 (Bfx_ToggleBits_u32) @069259a0
   Function flags:
   Called by: 
   Calls: 
-Bfx_TstParityEven_u32_u8/9 (Bfx_TstParityEven_u32_u8) @06925700
+Bfx_TstParityEven_u32_u8/9 (Bfx_TstParityEven_u32_u8) @05d189a0
   Type: function definition
   Visibility: no_reorder
   References: 
@@ -380,7 +379,7 @@ Bfx_TstParityEven_u32_u8/9 (Bfx_TstParityEven_u32_u8) @06925700
   Function flags:
   Called by: 
   Calls: 
-Bfx_TstBitLnMask_u32u32_u8/8 (Bfx_TstBitLnMask_u32u32_u8) @06925460
+Bfx_TstBitLnMask_u32u32_u8/8 (Bfx_TstBitLnMask_u32u32_u8) @05d18700
   Type: function definition
   Visibility: no_reorder
   References: 
@@ -388,7 +387,7 @@ Bfx_TstBitLnMask_u32u32_u8/8 (Bfx_TstBitLnMask_u32u32_u8) @06925460
   Function flags:
   Called by: 
   Calls: 
-Bfx_TstBitMask_u32u32_u8/7 (Bfx_TstBitMask_u32u32_u8) @069251c0
+Bfx_TstBitMask_u32u32_u8/7 (Bfx_TstBitMask_u32u32_u8) @05d18460
   Type: function definition
   Visibility: no_reorder
   References: 
@@ -396,7 +395,7 @@ Bfx_TstBitMask_u32u32_u8/7 (Bfx_TstBitMask_u32u32_u8) @069251c0
   Function flags:
   Called by: 
   Calls: 
-Bfx_ClrBitMask_u32u32/6 (Bfx_ClrBitMask_u32u32) @06907ee0
+Bfx_ClrBitMask_u32u32/6 (Bfx_ClrBitMask_u32u32) @05d181c0
   Type: function definition
   Visibility: no_reorder
   References: 
@@ -404,7 +403,7 @@ Bfx_ClrBitMask_u32u32/6 (Bfx_ClrBitMask_u32u32) @06907ee0
   Function flags:
   Called by: 
   Calls: 
-Bfx_SetBitMask_u32u32/5 (Bfx_SetBitMask_u32u32) @06907c40
+Bfx_SetBitMask_u32u32/5 (Bfx_SetBitMask_u32u32) @05cfeee0
   Type: function definition
   Visibility: no_reorder
   References: 
@@ -412,7 +411,7 @@ Bfx_SetBitMask_u32u32/5 (Bfx_SetBitMask_u32u32) @06907c40
   Function flags:
   Called by: 
   Calls: 
-Bfx_GetBits_u32u8u8_u32/4 (Bfx_GetBits_u32u8u8_u32) @069079a0
+Bfx_GetBits_u32u8u8_u32/4 (Bfx_GetBits_u32u8u8_u32) @05cfec40
   Type: function definition
   Visibility: no_reorder
   References: 
@@ -420,7 +419,7 @@ Bfx_GetBits_u32u8u8_u32/4 (Bfx_GetBits_u32u8u8_u32) @069079a0
   Function flags:
   Called by: 
   Calls: 
-Bfx_SetBits_u32u8u8u8/3 (Bfx_SetBits_u32u8u8u8) @06907700
+Bfx_SetBits_u32u8u8u8/3 (Bfx_SetBits_u32u8u8u8) @05cfe9a0
   Type: function definition
   Visibility: no_reorder
   References: 
@@ -428,7 +427,7 @@ Bfx_SetBits_u32u8u8u8/3 (Bfx_SetBits_u32u8u8u8) @06907700
   Function flags:
   Called by: 
   Calls: 
-Bfx_GetBit_u32u8_u8/2 (Bfx_GetBit_u32u8_u8) @06907460
+Bfx_GetBit_u32u8_u8/2 (Bfx_GetBit_u32u8_u8) @05cfe700
   Type: function definition
   Visibility: no_reorder
   References: 
@@ -436,7 +435,7 @@ Bfx_GetBit_u32u8_u8/2 (Bfx_GetBit_u32u8_u8) @06907460
   Function flags:
   Called by: 
   Calls: 
-Bfx_ClrBit_u32u8/1 (Bfx_ClrBit_u32u8) @069071c0
+Bfx_ClrBit_u32u8/1 (Bfx_ClrBit_u32u8) @05cfe460
   Type: function definition
   Visibility: no_reorder
   References: 
@@ -444,7 +443,7 @@ Bfx_ClrBit_u32u8/1 (Bfx_ClrBit_u32u8) @069071c0
   Function flags:
   Called by: 
   Calls: 
-Bfx_SetBit_u32u8/0 (Bfx_SetBit_u32u8) @068f7ee0
+Bfx_SetBit_u32u8/0 (Bfx_SetBit_u32u8) @05cfe1c0
   Type: function definition
   Visibility: no_reorder
   References: 
@@ -457,14 +456,7 @@ Removing unused symbols: Bfx_CountLeadingZeros_u8/49 Bfx_CountLeadingSigns_s8/48
 
 Reclaimed Symbol table:
 
-click/55 (click) @06ac70d8
-  Type: variable
-  Visibility: external public
-  References: 
-  Referring: DoubleClick_stMachine/50 (write) DoubleClick_stMachine/50 (write) DoubleClick_stMachine/50 (write) 
-  Availability: not-ready
-  Varpool flags:
-Scheduler_GetTimer/54 (Scheduler_GetTimer) @069cb460
+Scheduler_WriteQueue/55 (Scheduler_WriteQueue) @05dc3540
   Type: function
   Visibility: external public
   References: 
@@ -472,7 +464,15 @@ Scheduler_GetTimer/54 (Scheduler_GetTimer) @069cb460
   Function flags:
   Called by: DoubleClick_stMachine/50 DoubleClick_stMachine/50 DoubleClick_stMachine/50 
   Calls: 
-Scheduler_ReloadTimer/53 (Scheduler_ReloadTimer) @069cbee0
+Scheduler_GetTimer/54 (Scheduler_GetTimer) @05dc3380
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: DoubleClick_stMachine/50 DoubleClick_stMachine/50 DoubleClick_stMachine/50 
+  Calls: 
+Scheduler_ReloadTimer/53 (Scheduler_ReloadTimer) @05dc3e00
   Type: function
   Visibility: external public
   References: 
@@ -480,7 +480,7 @@ Scheduler_ReloadTimer/53 (Scheduler_ReloadTimer) @069cbee0
   Function flags:
   Called by: DoubleClick_stMachine/50 DoubleClick_stMachine/50 
   Calls: 
-Dio_ReadChannel/52 (Dio_ReadChannel) @069cbe00
+Dio_ReadChannel/52 (Dio_ReadChannel) @05dc3d20
   Type: function
   Visibility: external public
   References: 
@@ -488,33 +488,26 @@ Dio_ReadChannel/52 (Dio_ReadChannel) @069cbe00
   Function flags:
   Called by: DoubleClick_stMachine/50 DoubleClick_stMachine/50 DoubleClick_stMachine/50 DoubleClick_stMachine/50 DoubleClick_stMachine/50 
   Calls: 
-state/51 (state) @069caee8
-  Type: variable definition analyzed
-  Visibility: force_output no_reorder
+stBtnMachine/51 (stBtnMachine) @05dce510
+  Type: variable
+  Visibility: external public
   References: 
-  Referring: DoubleClick_stMachine/50 (read) DoubleClick_stMachine/50 (write) DoubleClick_stMachine/50 (write) DoubleClick_stMachine/50 (write) DoubleClick_stMachine/50 (write) DoubleClick_stMachine/50 (write) DoubleClick_stMachine/50 (write) DoubleClick_stMachine/50 (write) DoubleClick_stMachine/50 (write) 
+  Referring: DoubleClick_stMachine/50 (read) DoubleClick_stMachine/50 (read) DoubleClick_stMachine/50 (read) DoubleClick_stMachine/50 (write) DoubleClick_stMachine/50 (read) DoubleClick_stMachine/50 (write) DoubleClick_stMachine/50 (read) DoubleClick_stMachine/50 (write) DoubleClick_stMachine/50 (read) DoubleClick_stMachine/50 (write) DoubleClick_stMachine/50 (read) DoubleClick_stMachine/50 (read) DoubleClick_stMachine/50 (write) DoubleClick_stMachine/50 (read) DoubleClick_stMachine/50 (write) DoubleClick_stMachine/50 (read) DoubleClick_stMachine/50 (write) DoubleClick_stMachine/50 (read) DoubleClick_stMachine/50 (write) 
   Availability: not-ready
-  Varpool flags: initialized
-DoubleClick_stMachine/50 (DoubleClick_stMachine) @069cb7e0
+  Varpool flags:
+DoubleClick_stMachine/50 (DoubleClick_stMachine) @05dc3700
   Type: function definition analyzed
   Visibility: force_output no_reorder public
-  References: state/51 (read) state/51 (write) state/51 (write) state/51 (write) click/55 (write) state/51 (write) state/51 (write) state/51 (write) click/55 (write) state/51 (write) click/55 (write) state/51 (write) 
+  References: stBtnMachine/51 (read) stBtnMachine/51 (read) stBtnMachine/51 (read) stBtnMachine/51 (write) stBtnMachine/51 (read) stBtnMachine/51 (write) stBtnMachine/51 (read) stBtnMachine/51 (write) stBtnMachine/51 (read) stBtnMachine/51 (write) stBtnMachine/51 (read) stBtnMachine/51 (read) stBtnMachine/51 (write) stBtnMachine/51 (read) stBtnMachine/51 (write) stBtnMachine/51 (read) stBtnMachine/51 (write) stBtnMachine/51 (read) stBtnMachine/51 (write) 
   Referring: 
   Function flags: body
   Called by: 
-  Calls: Dio_ReadChannel/52 Dio_ReadChannel/52 Scheduler_GetTimer/54 Scheduler_ReloadTimer/53 Dio_ReadChannel/52 Scheduler_GetTimer/54 Dio_ReadChannel/52 Scheduler_GetTimer/54 Scheduler_ReloadTimer/53 Dio_ReadChannel/52 
+  Calls: Scheduler_WriteQueue/55 Dio_ReadChannel/52 Scheduler_WriteQueue/55 Dio_ReadChannel/52 Scheduler_GetTimer/54 Scheduler_ReloadTimer/53 Dio_ReadChannel/52 Scheduler_WriteQueue/55 Scheduler_GetTimer/54 Dio_ReadChannel/52 Scheduler_GetTimer/54 Scheduler_ReloadTimer/53 Dio_ReadChannel/52 
 
 
 Initial Symbol table:
 
-click/55 (click) @06ac70d8
-  Type: variable
-  Visibility: external public
-  References: 
-  Referring: DoubleClick_stMachine/50 (write) DoubleClick_stMachine/50 (write) DoubleClick_stMachine/50 (write) 
-  Availability: not-ready
-  Varpool flags:
-Scheduler_GetTimer/54 (Scheduler_GetTimer) @069cb460
+Scheduler_WriteQueue/55 (Scheduler_WriteQueue) @05dc3540
   Type: function
   Visibility: external public
   References: 
@@ -522,7 +515,15 @@ Scheduler_GetTimer/54 (Scheduler_GetTimer) @069cb460
   Function flags:
   Called by: DoubleClick_stMachine/50 DoubleClick_stMachine/50 DoubleClick_stMachine/50 
   Calls: 
-Scheduler_ReloadTimer/53 (Scheduler_ReloadTimer) @069cbee0
+Scheduler_GetTimer/54 (Scheduler_GetTimer) @05dc3380
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: DoubleClick_stMachine/50 DoubleClick_stMachine/50 DoubleClick_stMachine/50 
+  Calls: 
+Scheduler_ReloadTimer/53 (Scheduler_ReloadTimer) @05dc3e00
   Type: function
   Visibility: external public
   References: 
@@ -530,7 +531,7 @@ Scheduler_ReloadTimer/53 (Scheduler_ReloadTimer) @069cbee0
   Function flags:
   Called by: DoubleClick_stMachine/50 DoubleClick_stMachine/50 
   Calls: 
-Dio_ReadChannel/52 (Dio_ReadChannel) @069cbe00
+Dio_ReadChannel/52 (Dio_ReadChannel) @05dc3d20
   Type: function
   Visibility: external public
   References: 
@@ -538,34 +539,27 @@ Dio_ReadChannel/52 (Dio_ReadChannel) @069cbe00
   Function flags:
   Called by: DoubleClick_stMachine/50 DoubleClick_stMachine/50 DoubleClick_stMachine/50 DoubleClick_stMachine/50 DoubleClick_stMachine/50 
   Calls: 
-state.0/51 (state) @069caee8
-  Type: variable definition analyzed
-  Visibility: force_output no_reorder
+stBtnMachine/51 (stBtnMachine) @05dce510
+  Type: variable
+  Visibility: external public
   References: 
-  Referring: DoubleClick_stMachine/50 (read) DoubleClick_stMachine/50 (write) DoubleClick_stMachine/50 (write) DoubleClick_stMachine/50 (write) DoubleClick_stMachine/50 (write) DoubleClick_stMachine/50 (write) DoubleClick_stMachine/50 (write) DoubleClick_stMachine/50 (write) DoubleClick_stMachine/50 (write) 
+  Referring: DoubleClick_stMachine/50 (read) DoubleClick_stMachine/50 (read) DoubleClick_stMachine/50 (read) DoubleClick_stMachine/50 (write) DoubleClick_stMachine/50 (read) DoubleClick_stMachine/50 (write) DoubleClick_stMachine/50 (read) DoubleClick_stMachine/50 (write) DoubleClick_stMachine/50 (read) DoubleClick_stMachine/50 (write) DoubleClick_stMachine/50 (read) DoubleClick_stMachine/50 (read) DoubleClick_stMachine/50 (write) DoubleClick_stMachine/50 (read) DoubleClick_stMachine/50 (write) DoubleClick_stMachine/50 (read) DoubleClick_stMachine/50 (write) DoubleClick_stMachine/50 (read) DoubleClick_stMachine/50 (write) 
   Availability: not-ready
-  Varpool flags: initialized
-DoubleClick_stMachine/50 (DoubleClick_stMachine) @069cb7e0
+  Varpool flags:
+DoubleClick_stMachine/50 (DoubleClick_stMachine) @05dc3700
   Type: function definition analyzed
   Visibility: force_output no_reorder public
-  References: state.0/51 (read) state.0/51 (write) state.0/51 (write) state.0/51 (write) click/55 (write) state.0/51 (write) state.0/51 (write) state.0/51 (write) click/55 (write) state.0/51 (write) click/55 (write) state.0/51 (write) 
+  References: stBtnMachine/51 (read) stBtnMachine/51 (read) stBtnMachine/51 (read) stBtnMachine/51 (write) stBtnMachine/51 (read) stBtnMachine/51 (write) stBtnMachine/51 (read) stBtnMachine/51 (write) stBtnMachine/51 (read) stBtnMachine/51 (write) stBtnMachine/51 (read) stBtnMachine/51 (read) stBtnMachine/51 (write) stBtnMachine/51 (read) stBtnMachine/51 (write) stBtnMachine/51 (read) stBtnMachine/51 (write) stBtnMachine/51 (read) stBtnMachine/51 (write) 
   Referring: 
   Function flags: body
   Called by: 
-  Calls: Dio_ReadChannel/52 Dio_ReadChannel/52 Scheduler_GetTimer/54 Scheduler_ReloadTimer/53 Dio_ReadChannel/52 Scheduler_GetTimer/54 Dio_ReadChannel/52 Scheduler_GetTimer/54 Scheduler_ReloadTimer/53 Dio_ReadChannel/52 
+  Calls: Scheduler_WriteQueue/55 Dio_ReadChannel/52 Scheduler_WriteQueue/55 Dio_ReadChannel/52 Scheduler_GetTimer/54 Scheduler_ReloadTimer/53 Dio_ReadChannel/52 Scheduler_WriteQueue/55 Scheduler_GetTimer/54 Dio_ReadChannel/52 Scheduler_GetTimer/54 Scheduler_ReloadTimer/53 Dio_ReadChannel/52 
 
 Removing unused symbols:
 
 Reclaimed Symbol table:
 
-click/55 (click) @06ac70d8
-  Type: variable
-  Visibility: external public
-  References: 
-  Referring: DoubleClick_stMachine/50 (write) DoubleClick_stMachine/50 (write) DoubleClick_stMachine/50 (write) 
-  Availability: not-ready
-  Varpool flags:
-Scheduler_GetTimer/54 (Scheduler_GetTimer) @069cb460
+Scheduler_WriteQueue/55 (Scheduler_WriteQueue) @05dc3540
   Type: function
   Visibility: external public
   References: 
@@ -573,7 +567,15 @@ Scheduler_GetTimer/54 (Scheduler_GetTimer) @069cb460
   Function flags:
   Called by: DoubleClick_stMachine/50 DoubleClick_stMachine/50 DoubleClick_stMachine/50 
   Calls: 
-Scheduler_ReloadTimer/53 (Scheduler_ReloadTimer) @069cbee0
+Scheduler_GetTimer/54 (Scheduler_GetTimer) @05dc3380
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: DoubleClick_stMachine/50 DoubleClick_stMachine/50 DoubleClick_stMachine/50 
+  Calls: 
+Scheduler_ReloadTimer/53 (Scheduler_ReloadTimer) @05dc3e00
   Type: function
   Visibility: external public
   References: 
@@ -581,7 +583,7 @@ Scheduler_ReloadTimer/53 (Scheduler_ReloadTimer) @069cbee0
   Function flags:
   Called by: DoubleClick_stMachine/50 DoubleClick_stMachine/50 
   Calls: 
-Dio_ReadChannel/52 (Dio_ReadChannel) @069cbe00
+Dio_ReadChannel/52 (Dio_ReadChannel) @05dc3d20
   Type: function
   Visibility: external public
   References: 
@@ -589,36 +591,28 @@ Dio_ReadChannel/52 (Dio_ReadChannel) @069cbe00
   Function flags:
   Called by: DoubleClick_stMachine/50 DoubleClick_stMachine/50 DoubleClick_stMachine/50 DoubleClick_stMachine/50 DoubleClick_stMachine/50 
   Calls: 
-state.0/51 (state) @069caee8
-  Type: variable definition analyzed
-  Visibility: force_output no_reorder
+stBtnMachine/51 (stBtnMachine) @05dce510
+  Type: variable
+  Visibility: external public
   References: 
-  Referring: DoubleClick_stMachine/50 (read) DoubleClick_stMachine/50 (write) DoubleClick_stMachine/50 (write) DoubleClick_stMachine/50 (write) DoubleClick_stMachine/50 (write) DoubleClick_stMachine/50 (write) DoubleClick_stMachine/50 (write) DoubleClick_stMachine/50 (write) DoubleClick_stMachine/50 (write) 
+  Referring: DoubleClick_stMachine/50 (read) DoubleClick_stMachine/50 (read) DoubleClick_stMachine/50 (read) DoubleClick_stMachine/50 (write) DoubleClick_stMachine/50 (read) DoubleClick_stMachine/50 (write) DoubleClick_stMachine/50 (read) DoubleClick_stMachine/50 (write) DoubleClick_stMachine/50 (read) DoubleClick_stMachine/50 (write) DoubleClick_stMachine/50 (read) DoubleClick_stMachine/50 (read) DoubleClick_stMachine/50 (write) DoubleClick_stMachine/50 (read) DoubleClick_stMachine/50 (write) DoubleClick_stMachine/50 (read) DoubleClick_stMachine/50 (write) DoubleClick_stMachine/50 (read) DoubleClick_stMachine/50 (write) 
   Availability: not-ready
-  Varpool flags: initialized
-DoubleClick_stMachine/50 (DoubleClick_stMachine) @069cb7e0
+  Varpool flags:
+DoubleClick_stMachine/50 (DoubleClick_stMachine) @05dc3700
   Type: function definition analyzed
   Visibility: force_output no_reorder public
-  References: state.0/51 (read) state.0/51 (write) state.0/51 (write) state.0/51 (write) click/55 (write) state.0/51 (write) state.0/51 (write) state.0/51 (write) click/55 (write) state.0/51 (write) click/55 (write) state.0/51 (write) 
+  References: stBtnMachine/51 (read) stBtnMachine/51 (read) stBtnMachine/51 (read) stBtnMachine/51 (write) stBtnMachine/51 (read) stBtnMachine/51 (write) stBtnMachine/51 (read) stBtnMachine/51 (write) stBtnMachine/51 (read) stBtnMachine/51 (write) stBtnMachine/51 (read) stBtnMachine/51 (read) stBtnMachine/51 (write) stBtnMachine/51 (read) stBtnMachine/51 (write) stBtnMachine/51 (read) stBtnMachine/51 (write) stBtnMachine/51 (read) stBtnMachine/51 (write) 
   Referring: 
   Function flags: body
   Called by: 
-  Calls: Dio_ReadChannel/52 Dio_ReadChannel/52 Scheduler_GetTimer/54 Scheduler_ReloadTimer/53 Dio_ReadChannel/52 Scheduler_GetTimer/54 Dio_ReadChannel/52 Scheduler_GetTimer/54 Scheduler_ReloadTimer/53 Dio_ReadChannel/52 
+  Calls: Scheduler_WriteQueue/55 Dio_ReadChannel/52 Scheduler_WriteQueue/55 Dio_ReadChannel/52 Scheduler_GetTimer/54 Scheduler_ReloadTimer/53 Dio_ReadChannel/52 Scheduler_WriteQueue/55 Scheduler_GetTimer/54 Dio_ReadChannel/52 Scheduler_GetTimer/54 Scheduler_ReloadTimer/53 Dio_ReadChannel/52 
 
 Reclaiming functions:
 Reclaiming variables:
 Clearing address taken flags:
 Optimized Symbol table:
 
-click/55 (click) @06ac70d8
-  Type: variable
-  Body removed by symtab_remove_unreachable_nodes
-  Visibility: external public
-  References: 
-  Referring: DoubleClick_stMachine/50 (write) DoubleClick_stMachine/50 (write) DoubleClick_stMachine/50 (write) 
-  Availability: not_available
-  Varpool flags:
-Scheduler_GetTimer/54 (Scheduler_GetTimer) @069cb460
+Scheduler_WriteQueue/55 (Scheduler_WriteQueue) @05dc3540
   Type: function
   Visibility: external public
   References: 
@@ -627,7 +621,16 @@ Scheduler_GetTimer/54 (Scheduler_GetTimer) @069cb460
   Function flags:
   Called by: DoubleClick_stMachine/50 DoubleClick_stMachine/50 DoubleClick_stMachine/50 
   Calls: 
-Scheduler_ReloadTimer/53 (Scheduler_ReloadTimer) @069cbee0
+Scheduler_GetTimer/54 (Scheduler_GetTimer) @05dc3380
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: DoubleClick_stMachine/50 DoubleClick_stMachine/50 DoubleClick_stMachine/50 
+  Calls: 
+Scheduler_ReloadTimer/53 (Scheduler_ReloadTimer) @05dc3e00
   Type: function
   Visibility: external public
   References: 
@@ -636,7 +639,7 @@ Scheduler_ReloadTimer/53 (Scheduler_ReloadTimer) @069cbee0
   Function flags:
   Called by: DoubleClick_stMachine/50 DoubleClick_stMachine/50 
   Calls: 
-Dio_ReadChannel/52 (Dio_ReadChannel) @069cbe00
+Dio_ReadChannel/52 (Dio_ReadChannel) @05dc3d20
   Type: function
   Visibility: external public
   References: 
@@ -645,34 +648,71 @@ Dio_ReadChannel/52 (Dio_ReadChannel) @069cbe00
   Function flags:
   Called by: DoubleClick_stMachine/50 DoubleClick_stMachine/50 DoubleClick_stMachine/50 DoubleClick_stMachine/50 DoubleClick_stMachine/50 
   Calls: 
-state.0/51 (state) @069caee8
-  Type: variable definition analyzed
-  Visibility: force_output no_reorder prevailing_def_ironly
+stBtnMachine/51 (stBtnMachine) @05dce510
+  Type: variable
+  Body removed by symtab_remove_unreachable_nodes
+  Visibility: external public
   References: 
-  Referring: DoubleClick_stMachine/50 (read) DoubleClick_stMachine/50 (write) DoubleClick_stMachine/50 (write) DoubleClick_stMachine/50 (write) DoubleClick_stMachine/50 (write) DoubleClick_stMachine/50 (write) DoubleClick_stMachine/50 (write) DoubleClick_stMachine/50 (write) DoubleClick_stMachine/50 (write) 
-  Availability: available
-  Varpool flags: initialized
-DoubleClick_stMachine/50 (DoubleClick_stMachine) @069cb7e0
+  Referring: DoubleClick_stMachine/50 (read) DoubleClick_stMachine/50 (read) DoubleClick_stMachine/50 (read) DoubleClick_stMachine/50 (write) DoubleClick_stMachine/50 (read) DoubleClick_stMachine/50 (write) DoubleClick_stMachine/50 (read) DoubleClick_stMachine/50 (write) DoubleClick_stMachine/50 (read) DoubleClick_stMachine/50 (write) DoubleClick_stMachine/50 (read) DoubleClick_stMachine/50 (read) DoubleClick_stMachine/50 (write) DoubleClick_stMachine/50 (read) DoubleClick_stMachine/50 (write) DoubleClick_stMachine/50 (read) DoubleClick_stMachine/50 (write) DoubleClick_stMachine/50 (read) DoubleClick_stMachine/50 (write) 
+  Availability: not_available
+  Varpool flags:
+DoubleClick_stMachine/50 (DoubleClick_stMachine) @05dc3700
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
-  References: state.0/51 (read) state.0/51 (write) state.0/51 (write) state.0/51 (write) click/55 (write) state.0/51 (write) state.0/51 (write) state.0/51 (write) click/55 (write) state.0/51 (write) click/55 (write) state.0/51 (write) 
+  References: stBtnMachine/51 (read) stBtnMachine/51 (read) stBtnMachine/51 (read) stBtnMachine/51 (write) stBtnMachine/51 (read) stBtnMachine/51 (write) stBtnMachine/51 (read) stBtnMachine/51 (write) stBtnMachine/51 (read) stBtnMachine/51 (write) stBtnMachine/51 (read) stBtnMachine/51 (read) stBtnMachine/51 (write) stBtnMachine/51 (read) stBtnMachine/51 (write) stBtnMachine/51 (read) stBtnMachine/51 (write) stBtnMachine/51 (read) stBtnMachine/51 (write) 
   Referring: 
   Availability: available
   Function flags: body
   Called by: 
-  Calls: Dio_ReadChannel/52 Dio_ReadChannel/52 Scheduler_GetTimer/54 Scheduler_ReloadTimer/53 Dio_ReadChannel/52 Scheduler_GetTimer/54 Dio_ReadChannel/52 Scheduler_GetTimer/54 Scheduler_ReloadTimer/53 Dio_ReadChannel/52 
+  Calls: Scheduler_WriteQueue/55 Dio_ReadChannel/52 Scheduler_WriteQueue/55 Dio_ReadChannel/52 Scheduler_GetTimer/54 Scheduler_ReloadTimer/53 Dio_ReadChannel/52 Scheduler_WriteQueue/55 Scheduler_GetTimer/54 Dio_ReadChannel/52 Scheduler_GetTimer/54 Scheduler_ReloadTimer/53 Dio_ReadChannel/52 
 Materializing clones
 Materialization Call site updates done.
 
 Reclaiming functions:
 Reclaiming variables:
 Clearing address taken flags:
-Trivially needed variables: state.0/51
+Trivially needed variables:
 Removing variables:
 
 Final Symbol table:
 
-click/55 (click) @06ac70d8
+Scheduler_WriteQueue/55 (Scheduler_WriteQueue) @05dc3540
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+Scheduler_GetTimer/54 (Scheduler_GetTimer) @05dc3380
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+Scheduler_ReloadTimer/53 (Scheduler_ReloadTimer) @05dc3e00
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+Dio_ReadChannel/52 (Dio_ReadChannel) @05dc3d20
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+stBtnMachine/51 (stBtnMachine) @05dce510
   Type: variable
   Body removed by symtab_remove_unreachable_nodes
   Visibility: external public
@@ -680,42 +720,7 @@ click/55 (click) @06ac70d8
   Referring: 
   Availability: not_available
   Varpool flags:
-Scheduler_GetTimer/54 (Scheduler_GetTimer) @069cb460
-  Type: function
-  Visibility: external public
-  References: 
-  Referring: 
-  Availability: not_available
-  Function flags:
-  Called by: 
-  Calls: 
-Scheduler_ReloadTimer/53 (Scheduler_ReloadTimer) @069cbee0
-  Type: function
-  Visibility: external public
-  References: 
-  Referring: 
-  Availability: not_available
-  Function flags:
-  Called by: 
-  Calls: 
-Dio_ReadChannel/52 (Dio_ReadChannel) @069cbe00
-  Type: function
-  Visibility: external public
-  References: 
-  Referring: 
-  Availability: not_available
-  Function flags:
-  Called by: 
-  Calls: 
-state.0/51 (state) @069caee8
-  Type: variable definition analyzed
-  Visibility: force_output no_reorder prevailing_def_ironly asm_written section:.bss.state.0 (implicit_section)
-  Aux: @00000001
-  References: 
-  Referring: 
-  Availability: available
-  Varpool flags: initialized
-DoubleClick_stMachine/50 (DoubleClick_stMachine) @069cb7e0
+DoubleClick_stMachine/50 (DoubleClick_stMachine) @05dc3700
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder asm_written public section:.text.DoubleClick_stMachine (implicit_section)
   References: 

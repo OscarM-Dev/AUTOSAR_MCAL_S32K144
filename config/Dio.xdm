@@ -46,6 +46,14 @@
                         <d:var name="DioChannelId" type="INTEGER" value="11"/>
                         <d:lst name="DioChannelEcucPartitionRef"/>
                       </d:ctr>
+                      <d:ctr name="PTC13" type="IDENTIFIABLE">
+                        <d:var name="DioChannelId" type="INTEGER" value="13"/>
+                        <d:lst name="DioChannelEcucPartitionRef"/>
+                      </d:ctr>
+                      <d:ctr name="PTC14" type="IDENTIFIABLE">
+                        <d:var name="DioChannelId" type="INTEGER" value="14"/>
+                        <d:lst name="DioChannelEcucPartitionRef"/>
+                      </d:ctr>
                     </d:lst>
                     <d:lst name="DioChannelGroup" type="MAP"/>
                     <d:lst name="DioPortEcucPartitionRef"/>
@@ -54,6 +62,30 @@
                     <d:var name="DioPortId" type="INTEGER" value="4"/>
                     <d:lst name="DioChannel" type="MAP">
                       <d:ctr name="PTE12" type="IDENTIFIABLE">
+                        <d:var name="DioChannelId" type="INTEGER" value="12"/>
+                        <d:lst name="DioChannelEcucPartitionRef"/>
+                      </d:ctr>
+                    </d:lst>
+                    <d:lst name="DioChannelGroup" type="MAP"/>
+                    <d:lst name="DioPortEcucPartitionRef"/>
+                  </d:ctr>
+                  <d:ctr name="PTD" type="IDENTIFIABLE">
+                    <d:var name="DioPortId" type="INTEGER" value="3"/>
+                    <d:lst name="DioChannel" type="MAP">
+                      <d:ctr name="PTD17" type="IDENTIFIABLE">
+                        <d:var name="DioChannelId" type="INTEGER" value="17"/>
+                        <d:lst name="DioChannelEcucPartitionRef"/>
+                      </d:ctr>
+                    </d:lst>
+                    <d:lst name="DioChannelGroup" type="MAP"/>
+                    <d:lst name="DioPortEcucPartitionRef"/>
+                  </d:ctr>
+                  <d:ctr name="PTA" type="IDENTIFIABLE">
+                    <d:var name="DioPortId" type="INTEGER" value="0">
+                      <a:a name="IMPORTER_INFO" value="@DEF"/>
+                    </d:var>
+                    <d:lst name="DioChannel" type="MAP">
+                      <d:ctr name="PTA12" type="IDENTIFIABLE">
                         <d:var name="DioChannelId" type="INTEGER" value="12"/>
                         <d:lst name="DioChannelEcucPartitionRef"/>
                       </d:ctr>

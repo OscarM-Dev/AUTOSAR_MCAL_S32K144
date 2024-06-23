@@ -14,8 +14,7 @@
 #include "Scheduler.h"
 
 //Queues
-extern uint32 Queue1[ SCHEDULER_QUEUE1_ELEMENTS ];
-extern uint16 Queue2[ SCHEDULER_QUEUE2_ELEMENTS ];
+extern QueueMessage Queue1[ SCHEDULER_QUEUE1_ELEMENTS ];
 
 //Constant control structure global instances.
 //Queue buffer.
@@ -25,11 +24,6 @@ const Queue_ConfigType Queue_Config[ SCHEDULER_QUEUES ] =
         .Size = SCHEDULER_QUEUE1_SIZE,
         .Elements = SCHEDULER_QUEUE1_ELEMENTS,
         .Buffer = Queue1
-    },
-    {
-        .Size = SCHEDULER_QUEUE2_SIZE,
-        .Elements = SCHEDULER_QUEUE2_ELEMENTS,
-        .Buffer = Queue2
     }
 };
 
@@ -50,10 +44,20 @@ const Task_ConfigType Task_Config[ SCHEDULER_TASKS ]  = {
 //Timer buffer.
 const Timer_ConfigType Timer_Config[ SCHEDULER_TIMERS ] = {
     {
-        .InitTimeout = SCHEDULER_TIMER1_TIMEOUT_300MS,
+        .InitTimeout = SCHEDULER_TIMER_TIMEOUT_300MS,
         .InitFlag = FALSE,
         .CallbackFunc = Timer1_callback
-    }
+    },
+    {
+        .InitTimeout = SCHEDULER_TIMER_TIMEOUT_300MS,
+        .InitFlag = FALSE,
+        .CallbackFunc = Timer2_callback
+    },
+    {
+        .InitTimeout = SCHEDULER_TIMER_TIMEOUT_300MS,
+        .InitFlag = FALSE,
+        .CallbackFunc = Timer3_callback
+    } 
 };
 
 //Scheduler config structure instance.

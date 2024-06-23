@@ -4,7 +4,7 @@ Scheduler_MainFunction ()
   uint32 elapsed_time;
   uint32 count_value;
   uint32 tick_value;
-  long unsigned int D.5943;
+  long unsigned int D.5949;
   const struct Scheduler_ConfigType * SchedulerConfig_Ptr.67_1;
   long unsigned int _2;
   long unsigned int _3;
@@ -27,7 +27,7 @@ Scheduler_MainFunction ()
   unsigned int _20;
   unsigned int _21;
   const struct Timer_ConfigType * _22;
-  void (*<T524>) (void) _23;
+  void (*<T526>) (void) _23;
   unsigned char i.73_24;
   const struct Scheduler_ConfigType * SchedulerConfig_Ptr.74_25;
   unsigned char _26;
@@ -53,7 +53,7 @@ Scheduler_MainFunction ()
   unsigned int _46;
   unsigned int _47;
   const struct Task_ConfigType * _48;
-  void (*<T524>) (void) _49;
+  void (*<T526>) (void) _49;
   struct Scheduler_CtrlType * SchedulerCtrl_Ptr.82_50;
   int _51;
   unsigned char i.83_52;
@@ -204,7 +204,7 @@ Scheduler_MainFunction ()
 Scheduler_ReloadTimer (TimerType Timer, uint32 NewTimeout)
 {
   Std_ReturnType status;
-  Std_ReturnType D.5941;
+  Std_ReturnType D.5947;
   const struct Scheduler_ConfigType * SchedulerConfig_Ptr.62_1;
   unsigned char _2;
   const struct Scheduler_ConfigType * SchedulerConfig_Ptr.63_3;
@@ -289,7 +289,7 @@ Scheduler_ReloadTimer (TimerType Timer, uint32 NewTimeout)
 Scheduler_GetTimer (TimerType Timer)
 {
   uint32 counter_value;
-  uint32 D.5931;
+  uint32 D.5937;
   const struct Scheduler_ConfigType * SchedulerConfig_Ptr.60_1;
   unsigned char _2;
   struct Scheduler_CtrlType * SchedulerCtrl_Ptr.61_3;
@@ -336,7 +336,7 @@ Scheduler_GetTimer (TimerType Timer)
 Scheduler_StopTimer (TimerType Timer)
 {
   Std_ReturnType status;
-  Std_ReturnType D.5925;
+  Std_ReturnType D.5931;
   const struct Scheduler_ConfigType * SchedulerConfig_Ptr.58_1;
   unsigned char _2;
   struct Scheduler_CtrlType * SchedulerCtrl_Ptr.59_3;
@@ -384,7 +384,7 @@ Scheduler_StopTimer (TimerType Timer)
 Scheduler_StartTimer (TimerType Timer)
 {
   Std_ReturnType status;
-  Std_ReturnType D.5919;
+  Std_ReturnType D.5925;
   const struct Scheduler_ConfigType * SchedulerConfig_Ptr.53_1;
   unsigned char _2;
   struct Scheduler_CtrlType * SchedulerCtrl_Ptr.54_3;
@@ -463,7 +463,7 @@ Scheduler_StartTimer (TimerType Timer)
 Scheduler_PeriodTask (TaskType Task, uint32 NewPeriod)
 {
   Std_ReturnType status;
-  Std_ReturnType D.5911;
+  Std_ReturnType D.5917;
   const struct Scheduler_ConfigType * SchedulerConfig_Ptr.49_1;
   unsigned char _2;
   const struct Scheduler_ConfigType * SchedulerConfig_Ptr.50_3;
@@ -540,7 +540,7 @@ Scheduler_PeriodTask (TaskType Task, uint32 NewPeriod)
 Scheduler_StartTask (TaskType Task)
 {
   Std_ReturnType status;
-  Std_ReturnType D.5901;
+  Std_ReturnType D.5907;
   const struct Scheduler_ConfigType * SchedulerConfig_Ptr.47_1;
   unsigned char _2;
   struct Scheduler_CtrlType * SchedulerCtrl_Ptr.48_3;
@@ -588,7 +588,7 @@ Scheduler_StartTask (TaskType Task)
 Scheduler_StopTask (TaskType Task)
 {
   Std_ReturnType status;
-  Std_ReturnType D.5895;
+  Std_ReturnType D.5901;
   const struct Scheduler_ConfigType * SchedulerConfig_Ptr.45_1;
   unsigned char _2;
   struct Scheduler_CtrlType * SchedulerCtrl_Ptr.46_3;
@@ -637,7 +637,7 @@ Scheduler_Init (struct Scheduler_CtrlType * SchedulerPtr)
 {
   uint8 i;
   Std_ReturnType status;
-  Std_ReturnType D.5886;
+  Std_ReturnType D.5892;
   const struct Scheduler_ConfigType * SchedulerConfig_Ptr.38_1;
   const struct Task_ConfigType * _2;
   unsigned int _3;
@@ -751,7 +751,7 @@ Scheduler_Init (struct Scheduler_CtrlType * SchedulerPtr)
 
   <bb 7> :
   # i_42 = PHI <i_49(5), i_56(6)>
-  if (i_42 == 0)
+  if (i_42 <= 2)
     goto <bb 6>; [INV]
   else
     goto <bb 8>; [INV]
@@ -772,7 +772,7 @@ Scheduler_ReadQueue (QueueType Queue, void * Data)
   uint32 actual_add;
   uint32 base_add;
   Std_ReturnType status;
-  Std_ReturnType D.5884;
+  Std_ReturnType D.5890;
   const struct Scheduler_ConfigType * SchedulerConfig_Ptr.24_1;
   unsigned char _2;
   const struct Scheduler_ConfigType * SchedulerConfig_Ptr.25_3;
@@ -986,7 +986,7 @@ Scheduler_WriteQueue (QueueType Queue, void * Data)
   uint32 actual_add;
   uint32 base_add;
   Std_ReturnType status;
-  Std_ReturnType D.5870;
+  Std_ReturnType D.5876;
   const struct Scheduler_ConfigType * SchedulerConfig_Ptr.10_1;
   unsigned char _2;
   const struct Scheduler_ConfigType * SchedulerConfig_Ptr.11_3;
@@ -1198,7 +1198,7 @@ Scheduler_WriteQueue (QueueType Queue, void * Data)
 Scheduler_FlushQueue (QueueType Queue)
 {
   Std_ReturnType status;
-  Std_ReturnType D.5856;
+  Std_ReturnType D.5862;
   const struct Scheduler_ConfigType * SchedulerConfig_Ptr.5_1;
   unsigned char _2;
   struct Scheduler_CtrlType * SchedulerCtrl_Ptr.6_3;
@@ -1268,7 +1268,7 @@ Scheduler_FlushQueue (QueueType Queue)
 Scheduler_GetStatusQueue (QueueType Queue, uint8 Status)
 {
   uint8 status;
-  uint8 D.5848;
+  uint8 D.5854;
   const struct Scheduler_ConfigType * SchedulerConfig_Ptr.2_1;
   unsigned char _2;
   int _3;
@@ -1368,7 +1368,7 @@ Scheduler_InitQueue (struct Scheduler_CtrlType * SchedulerPtr)
 
   <bb 4> :
   # i_6 = PHI <i_9(2), i_16(3)>
-  if (i_6 <= 1)
+  if (i_6 == 0)
     goto <bb 3>; [INV]
   else
     goto <bb 5>; [INV]
@@ -1470,7 +1470,7 @@ Bfx_PutBit_u32u8u8 (uint32 * Data, uint8 BitPn, boolean Status)
 Bfx_GetBit_u32u8_u8 (uint32 Data, uint8 BitPn)
 {
   boolean Result;
-  boolean D.5850;
+  boolean D.5856;
   int _1;
   int _2;
   long unsigned int _3;

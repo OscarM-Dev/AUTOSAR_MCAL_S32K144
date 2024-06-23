@@ -4,7 +4,7 @@ Scheduler_MainFunction ()
   uint32 elapsed_time;
   uint32 count_value;
   uint32 tick_value;
-  long unsigned int D.5943;
+  long unsigned int D.5949;
 
   <bb 2> :
   SchedulerConfig_Ptr.67_1 = SchedulerConfig_Ptr;
@@ -17,8 +17,8 @@ Scheduler_MainFunction ()
   i = 0;
 
   <bb 3> :
-  D.5943 = OsIf_GetElapsed (&count_value, 1);
-  elapsed_time = D.5943 + elapsed_time;
+  D.5949 = OsIf_GetElapsed (&count_value, 1);
+  elapsed_time = D.5949 + elapsed_time;
   if (elapsed_time >= tick_value)
     goto <bb 4>; [INV]
   else
@@ -145,7 +145,7 @@ Scheduler_MainFunction ()
 Scheduler_ReloadTimer (TimerType Timer, uint32 NewTimeout)
 {
   Std_ReturnType status;
-  Std_ReturnType D.5941;
+  Std_ReturnType D.5947;
 
   <bb 2> :
   status = 0;
@@ -202,11 +202,11 @@ Scheduler_ReloadTimer (TimerType Timer, uint32 NewTimeout)
   status = 0;
 
   <bb 10> :
-  D.5941 = status;
+  D.5947 = status;
 
   <bb 11> :
 <L8>:
-  return D.5941;
+  return D.5947;
 
 }
 
@@ -214,7 +214,7 @@ Scheduler_ReloadTimer (TimerType Timer, uint32 NewTimeout)
 Scheduler_GetTimer (TimerType Timer)
 {
   uint32 counter_value;
-  uint32 D.5931;
+  uint32 D.5937;
 
   <bb 2> :
   counter_value = 0;
@@ -242,11 +242,11 @@ Scheduler_GetTimer (TimerType Timer)
   counter_value = 0;
 
   <bb 6> :
-  D.5931 = counter_value;
+  D.5937 = counter_value;
 
   <bb 7> :
 <L4>:
-  return D.5931;
+  return D.5937;
 
 }
 
@@ -254,7 +254,7 @@ Scheduler_GetTimer (TimerType Timer)
 Scheduler_StopTimer (TimerType Timer)
 {
   Std_ReturnType status;
-  Std_ReturnType D.5925;
+  Std_ReturnType D.5931;
 
   <bb 2> :
   status = 0;
@@ -283,11 +283,11 @@ Scheduler_StopTimer (TimerType Timer)
   status = 0;
 
   <bb 6> :
-  D.5925 = status;
+  D.5931 = status;
 
   <bb 7> :
 <L4>:
-  return D.5925;
+  return D.5931;
 
 }
 
@@ -295,7 +295,7 @@ Scheduler_StopTimer (TimerType Timer)
 Scheduler_StartTimer (TimerType Timer)
 {
   Std_ReturnType status;
-  Std_ReturnType D.5919;
+  Std_ReturnType D.5925;
 
   <bb 2> :
   status = 0;
@@ -344,11 +344,11 @@ Scheduler_StartTimer (TimerType Timer)
   status = 0;
 
   <bb 8> :
-  D.5919 = status;
+  D.5925 = status;
 
   <bb 9> :
 <L6>:
-  return D.5919;
+  return D.5925;
 
 }
 
@@ -356,7 +356,7 @@ Scheduler_StartTimer (TimerType Timer)
 Scheduler_PeriodTask (TaskType Task, uint32 NewPeriod)
 {
   Std_ReturnType status;
-  Std_ReturnType D.5911;
+  Std_ReturnType D.5917;
 
   <bb 2> :
   status = 0;
@@ -408,11 +408,11 @@ Scheduler_PeriodTask (TaskType Task, uint32 NewPeriod)
   status = 0;
 
   <bb 10> :
-  D.5911 = status;
+  D.5917 = status;
 
   <bb 11> :
 <L8>:
-  return D.5911;
+  return D.5917;
 
 }
 
@@ -420,7 +420,7 @@ Scheduler_PeriodTask (TaskType Task, uint32 NewPeriod)
 Scheduler_StartTask (TaskType Task)
 {
   Std_ReturnType status;
-  Std_ReturnType D.5901;
+  Std_ReturnType D.5907;
 
   <bb 2> :
   status = 0;
@@ -449,11 +449,11 @@ Scheduler_StartTask (TaskType Task)
   status = 0;
 
   <bb 6> :
-  D.5901 = status;
+  D.5907 = status;
 
   <bb 7> :
 <L4>:
-  return D.5901;
+  return D.5907;
 
 }
 
@@ -461,7 +461,7 @@ Scheduler_StartTask (TaskType Task)
 Scheduler_StopTask (TaskType Task)
 {
   Std_ReturnType status;
-  Std_ReturnType D.5895;
+  Std_ReturnType D.5901;
 
   <bb 2> :
   status = 0;
@@ -490,11 +490,11 @@ Scheduler_StopTask (TaskType Task)
   status = 0;
 
   <bb 6> :
-  D.5895 = status;
+  D.5901 = status;
 
   <bb 7> :
 <L4>:
-  return D.5895;
+  return D.5901;
 
 }
 
@@ -503,7 +503,7 @@ Scheduler_Init (struct Scheduler_CtrlType * SchedulerPtr)
 {
   uint8 i;
   Std_ReturnType status;
-  Std_ReturnType D.5886;
+  Std_ReturnType D.5892;
 
   <bb 2> :
   status = 1;
@@ -574,18 +574,18 @@ Scheduler_Init (struct Scheduler_CtrlType * SchedulerPtr)
   i = i.44_40 + 1;
 
   <bb 7> :
-  if (i == 0)
+  if (i <= 2)
     goto <bb 6>; [INV]
   else
     goto <bb 8>; [INV]
 
   <bb 8> :
   Scheduler_InitQueue (SchedulerPtr);
-  D.5886 = status;
+  D.5892 = status;
 
   <bb 9> :
 <L6>:
-  return D.5886;
+  return D.5892;
 
 }
 
@@ -595,7 +595,7 @@ Scheduler_ReadQueue (QueueType Queue, void * Data)
   uint32 actual_add;
   uint32 base_add;
   Std_ReturnType status;
-  Std_ReturnType D.5884;
+  Std_ReturnType D.5890;
 
   <bb 2> :
   status = 0;
@@ -725,11 +725,11 @@ Scheduler_ReadQueue (QueueType Queue, void * Data)
   status = 0;
 
   <bb 14> :
-  D.5884 = status;
+  D.5890 = status;
 
   <bb 15> :
 <L12>:
-  return D.5884;
+  return D.5890;
 
 }
 
@@ -739,7 +739,7 @@ Scheduler_WriteQueue (QueueType Queue, void * Data)
   uint32 actual_add;
   uint32 base_add;
   Std_ReturnType status;
-  Std_ReturnType D.5870;
+  Std_ReturnType D.5876;
 
   <bb 2> :
   status = 0;
@@ -869,11 +869,11 @@ Scheduler_WriteQueue (QueueType Queue, void * Data)
   status = 0;
 
   <bb 14> :
-  D.5870 = status;
+  D.5876 = status;
 
   <bb 15> :
 <L12>:
-  return D.5870;
+  return D.5876;
 
 }
 
@@ -881,7 +881,7 @@ Scheduler_WriteQueue (QueueType Queue, void * Data)
 Scheduler_FlushQueue (QueueType Queue)
 {
   Std_ReturnType status;
-  Std_ReturnType D.5856;
+  Std_ReturnType D.5862;
 
   <bb 2> :
   status = 0;
@@ -922,11 +922,11 @@ Scheduler_FlushQueue (QueueType Queue)
   status = 0;
 
   <bb 6> :
-  D.5856 = status;
+  D.5862 = status;
 
   <bb 7> :
 <L4>:
-  return D.5856;
+  return D.5862;
 
 }
 
@@ -934,7 +934,7 @@ Scheduler_FlushQueue (QueueType Queue)
 Scheduler_GetStatusQueue (QueueType Queue, uint8 Status)
 {
   uint8 status;
-  uint8 D.5848;
+  uint8 D.5854;
 
   <bb 2> :
   status = 0;
@@ -983,11 +983,11 @@ Scheduler_GetStatusQueue (QueueType Queue, uint8 Status)
   status = 0;
 
   <bb 10> :
-  D.5848 = status;
+  D.5854 = status;
 
   <bb 11> :
 <L8>:
-  return D.5848;
+  return D.5854;
 
 }
 
@@ -1014,7 +1014,7 @@ Scheduler_InitQueue (struct Scheduler_CtrlType * SchedulerPtr)
   i = i.1_5 + 1;
 
   <bb 4> :
-  if (i <= 1)
+  if (i == 0)
     goto <bb 3>; [INV]
   else
     goto <bb 5>; [INV]
@@ -1096,7 +1096,7 @@ Bfx_PutBit_u32u8u8 (uint32 * Data, uint8 BitPn, boolean Status)
 Bfx_GetBit_u32u8_u8 (uint32 Data, uint8 BitPn)
 {
   boolean Result;
-  boolean D.5850;
+  boolean D.5856;
 
   <bb 2> :
   Result = 0;
@@ -1105,11 +1105,11 @@ Bfx_GetBit_u32u8_u8 (uint32 Data, uint8 BitPn)
   _3 = (long unsigned int) _2;
   _4 = Data & _3;
   Result = _4 != 0;
-  D.5850 = Result;
+  D.5856 = Result;
 
   <bb 3> :
 <L0>:
-  return D.5850;
+  return D.5856;
 
 }
 

@@ -15,10 +15,19 @@
 
 //Enums 
 typedef enum { IDLE, SINGLE_PRESS, SINGLE_RELEASE, DOUBLE_PRESS, HOLD } states;
-typedef enum { NO_CLICK, SINGLE_CLICK, DOUBLE_CLICK, HOLD_CLICK } clicks;
+typedef enum { SINGLE_CLICK, DOUBLE_CLICK, HOLD_CLICK } clicks;
+typedef enum { BTN_1, BTN_2, BTN_3 } buttons;
+
+//Structures
+typedef struct _BtnsCtrl
+{
+    uint8 Button;  ///< Dio channel where the button is connected.
+    uint8 State;   ///< State of the button state machine.
+    uint8 Timer;   ///< 300ms timer ID,
+} BtnsCtrl;
 
 //Global data
-extern uint8 click;
+extern BtnsCtrl stBtnMachine[3];
 
 //Functions.
 void DoubleClick_stMachine( void );
