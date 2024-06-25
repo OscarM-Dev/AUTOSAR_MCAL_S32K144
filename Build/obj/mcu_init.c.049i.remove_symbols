@@ -4,7 +4,7 @@ Reclaiming variables:
 Clearing address taken flags:
 Symbol table:
 
-Port_Config/9 (Port_Config) @06bfad38
+LedsCfg/13 (LedsCfg) @06bfe630
   Type: variable
   Body removed by symtab_remove_unreachable_nodes
   Visibility: external public
@@ -12,7 +12,7 @@ Port_Config/9 (Port_Config) @06bfad38
   Referring: EcuM_Init/2 (addr) 
   Availability: not_available
   Varpool flags: read-only
-Port_Init/8 (Port_Init) @06bff0e0
+HwIoAb_Leds_Init/12 (HwIoAb_Leds_Init) @06bfc0e0
   Type: function
   Visibility: external public
   References: 
@@ -21,7 +21,15 @@ Port_Init/8 (Port_Init) @06bff0e0
   Function flags:
   Called by: EcuM_Init/2 
   Calls: 
-OsIf_Init/7 (OsIf_Init) @06bff000
+ButtonsCfg/11 (ButtonsCfg) @06bfe5a0
+  Type: variable
+  Body removed by symtab_remove_unreachable_nodes
+  Visibility: external public
+  References: 
+  Referring: EcuM_Init/2 (addr) 
+  Availability: not_available
+  Varpool flags: read-only
+HwIoAb_Buttons_Init/10 (HwIoAb_Buttons_Init) @06bfcee0
   Type: function
   Visibility: external public
   References: 
@@ -30,7 +38,33 @@ OsIf_Init/7 (OsIf_Init) @06bff000
   Function flags:
   Called by: EcuM_Init/2 
   Calls: 
-Mcu_InitClock/6 (Mcu_InitClock) @06bfc540
+Port_Config/9 (Port_Config) @06bfe510
+  Type: variable
+  Body removed by symtab_remove_unreachable_nodes
+  Visibility: external public
+  References: 
+  Referring: EcuM_Init/2 (addr) 
+  Availability: not_available
+  Varpool flags: read-only
+Port_Init/8 (Port_Init) @06bfce00
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: EcuM_Init/2 
+  Calls: 
+OsIf_Init/7 (OsIf_Init) @06bfcd20
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: EcuM_Init/2 
+  Calls: 
+Mcu_InitClock/6 (Mcu_InitClock) @06bfcb60
   Type: function
   Visibility: external public
   References: 
@@ -39,7 +73,7 @@ Mcu_InitClock/6 (Mcu_InitClock) @06bfc540
   Function flags:
   Called by: MCU_clocks/1 
   Calls: 
-Mcu_SetMode/5 (Mcu_SetMode) @06bfcee0
+Mcu_SetMode/5 (Mcu_SetMode) @06bfca80
   Type: function
   Visibility: external public
   References: 
@@ -48,7 +82,7 @@ Mcu_SetMode/5 (Mcu_SetMode) @06bfcee0
   Function flags:
   Called by: MCU_clocks/1 
   Calls: 
-Mcu_Config/4 (Mcu_Config) @06bfaa68
+Mcu_Config/4 (Mcu_Config) @06bfe240
   Type: variable
   Body removed by symtab_remove_unreachable_nodes
   Visibility: external public
@@ -56,7 +90,7 @@ Mcu_Config/4 (Mcu_Config) @06bfaa68
   Referring: MCU_clocks/1 (addr) 
   Availability: not_available
   Varpool flags: read-only
-Mcu_Init/3 (Mcu_Init) @06bfce00
+Mcu_Init/3 (Mcu_Init) @06bfc9a0
   Type: function
   Visibility: external public
   References: 
@@ -65,16 +99,16 @@ Mcu_Init/3 (Mcu_Init) @06bfce00
   Function flags:
   Called by: MCU_clocks/1 
   Calls: 
-EcuM_Init/2 (EcuM_Init) @06bfc9a0
+EcuM_Init/2 (EcuM_Init) @06bfc540
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
-  References: Port_Config/9 (addr) 
+  References: Port_Config/9 (addr) ButtonsCfg/11 (addr) LedsCfg/13 (addr) 
   Referring: 
   Availability: available
   Function flags: body
   Called by: 
-  Calls: Port_Init/8 OsIf_Init/7 MCU_clocks/1 
-MCU_clocks/1 (MCU_clocks) @06bfc700
+  Calls: HwIoAb_Leds_Init/12 HwIoAb_Buttons_Init/10 Port_Init/8 OsIf_Init/7 MCU_clocks/1 
+MCU_clocks/1 (MCU_clocks) @06bfc2a0
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: Mcu_Config/4 (addr) 
@@ -89,6 +123,8 @@ EcuM_Init ()
   MCU_clocks ();
   OsIf_Init (0B);
   Port_Init (&Port_Config);
+  HwIoAb_Buttons_Init (&ButtonsCfg);
+  HwIoAb_Leds_Init (&LedsCfg);
   return;
 
 }

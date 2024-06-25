@@ -1,0 +1,376 @@
+HwIoAb_Buttons_MainFunction ()
+{
+  boolean active;
+  uint8 i;
+  static uint32 count[3] = {0, 0, 0};
+  static boolean count_flags[3] = {0, 0, 0};
+
+  <bb 2> :
+  i = 0;
+  active = 0;
+  i = 0;
+  goto <bb 7>; [INV]
+
+  <bb 3> :
+  _1 = (int) i;
+  _2 = count_flags[_1];
+  if (_2 != 0)
+    goto <bb 4>; [INV]
+  else
+    goto <bb 6>; [INV]
+
+  <bb 4> :
+  _3 = (int) i;
+  _4 = count[_3];
+  _5 = (int) i;
+  _6 = _4 + 50;
+  count[_5] = _6;
+  _7 = (int) i;
+  _8 = count[_7];
+  ButtonsControl_Ptr.9_9 = ButtonsControl_Ptr;
+  _10 = ButtonsControl_Ptr.9_9->ButtonsConfig_Ptr;
+  _11 = (unsigned int) i;
+  _12 = _11 * 8;
+  _13 = _10 + _12;
+  _14 = _13->Timeout;
+  if (_8 == _14)
+    goto <bb 5>; [INV]
+  else
+    goto <bb 6>; [INV]
+
+  <bb 5> :
+  _15 = (int) i;
+  count_flags[_15] = 0;
+
+  <bb 6> :
+  i.10_16 = i;
+  i = i.10_16 + 1;
+
+  <bb 7> :
+  ButtonsControl_Ptr.11_17 = ButtonsControl_Ptr;
+  _18 = ButtonsControl_Ptr.11_17->Buttons;
+  if (i < _18)
+    goto <bb 3>; [INV]
+  else
+    goto <bb 8>; [INV]
+
+  <bb 8> :
+  i = 0;
+  goto <bb 36>; [INV]
+
+  <bb 9> :
+  ButtonsControl_Ptr.12_19 = ButtonsControl_Ptr;
+  _20 = ButtonsControl_Ptr.12_19->ButtonsConfig_Ptr;
+  _21 = (unsigned int) i;
+  _22 = _21 * 8;
+  _23 = _20 + _22;
+  _24 = _23->Active;
+  if (_24 == 1)
+    goto <bb 10>; [INV]
+  else
+    goto <bb 11>; [INV]
+
+  <bb 10> :
+  active = 1;
+  goto <bb 12>; [INV]
+
+  <bb 11> :
+  active = 0;
+
+  <bb 12> :
+  ButtonsControl_Ptr.13_25 = ButtonsControl_Ptr;
+  _26 = (int) i;
+  _27 = ButtonsControl_Ptr.13_25->States[_26];
+  _28 = (int) _27;
+  switch (_28) <default: <L32> [INV], case 0: <L11> [INV], case 1: <L14> [INV], case 2: <L24> [INV], case 3: <L29> [INV], case 4: <L19> [INV]>
+
+  <bb 13> :
+<L11>:
+  ButtonsControl_Ptr.14_29 = ButtonsControl_Ptr;
+  _30 = ButtonsControl_Ptr.14_29->ButtonsConfig_Ptr;
+  _31 = (unsigned int) i;
+  _32 = _31 * 8;
+  _33 = _30 + _32;
+  _34 = _33->Button;
+  _35 = Dio_ReadChannel (_34);
+  _36 = (unsigned char) active;
+  if (_35 == _36)
+    goto <bb 14>; [INV]
+  else
+    goto <bb 15>; [INV]
+
+  <bb 14> :
+  _37 = (int) i;
+  count_flags[_37] = 1;
+  _38 = (int) i;
+  count[_38] = 0;
+  ButtonsControl_Ptr.15_39 = ButtonsControl_Ptr;
+  _40 = (int) i;
+  ButtonsControl_Ptr.15_39->States[_40] = 1;
+
+  <bb 15> :
+  goto <bb 35>; [INV]
+
+  <bb 16> :
+<L14>:
+  _41 = (int) i;
+  _42 = count[_41];
+  ButtonsControl_Ptr.16_43 = ButtonsControl_Ptr;
+  _44 = ButtonsControl_Ptr.16_43->ButtonsConfig_Ptr;
+  _45 = (unsigned int) i;
+  _46 = _45 * 8;
+  _47 = _44 + _46;
+  _48 = _47->Timeout;
+  if (_42 == _48)
+    goto <bb 17>; [INV]
+  else
+    goto <bb 18>; [INV]
+
+  <bb 17> :
+  ButtonsControl_Ptr.17_49 = ButtonsControl_Ptr;
+  _50 = (int) i;
+  ButtonsControl_Ptr.17_49->States[_50] = 3;
+
+  <bb 18> :
+  ButtonsControl_Ptr.18_51 = ButtonsControl_Ptr;
+  _52 = ButtonsControl_Ptr.18_51->ButtonsConfig_Ptr;
+  _53 = (unsigned int) i;
+  _54 = _53 * 8;
+  _55 = _52 + _54;
+  _56 = _55->Button;
+  _57 = Dio_ReadChannel (_56);
+  _58 = ~active;
+  _59 = (unsigned char) _58;
+  if (_57 == _59)
+    goto <bb 19>; [INV]
+  else
+    goto <bb 20>; [INV]
+
+  <bb 19> :
+  ButtonsControl_Ptr.19_60 = ButtonsControl_Ptr;
+  _61 = (int) i;
+  ButtonsControl_Ptr.19_60->States[_61] = 4;
+
+  <bb 20> :
+  goto <bb 35>; [INV]
+
+  <bb 21> :
+<L19>:
+  _62 = (int) i;
+  _63 = count[_62];
+  ButtonsControl_Ptr.20_64 = ButtonsControl_Ptr;
+  _65 = ButtonsControl_Ptr.20_64->ButtonsConfig_Ptr;
+  _66 = (unsigned int) i;
+  _67 = _66 * 8;
+  _68 = _65 + _67;
+  _69 = _68->Timeout;
+  if (_63 == _69)
+    goto <bb 22>; [INV]
+  else
+    goto <bb 23>; [INV]
+
+  <bb 22> :
+  ButtonsControl_Ptr.21_70 = ButtonsControl_Ptr;
+  _71 = (int) i;
+  ButtonsControl_Ptr.21_70->Events[_71] = 1;
+  ButtonsControl_Ptr.22_72 = ButtonsControl_Ptr;
+  _73 = (int) i;
+  ButtonsControl_Ptr.22_72->States[_73] = 0;
+
+  <bb 23> :
+  ButtonsControl_Ptr.23_74 = ButtonsControl_Ptr;
+  _75 = ButtonsControl_Ptr.23_74->ButtonsConfig_Ptr;
+  _76 = (unsigned int) i;
+  _77 = _76 * 8;
+  _78 = _75 + _77;
+  _79 = _78->Button;
+  _80 = Dio_ReadChannel (_79);
+  _81 = (unsigned char) active;
+  if (_80 == _81)
+    goto <bb 24>; [INV]
+  else
+    goto <bb 25>; [INV]
+
+  <bb 24> :
+  _82 = (int) i;
+  count_flags[_82] = 1;
+  _83 = (int) i;
+  count[_83] = 0;
+  ButtonsControl_Ptr.24_84 = ButtonsControl_Ptr;
+  _85 = (int) i;
+  ButtonsControl_Ptr.24_84->States[_85] = 2;
+
+  <bb 25> :
+  goto <bb 35>; [INV]
+
+  <bb 26> :
+<L24>:
+  _86 = (int) i;
+  _87 = count[_86];
+  ButtonsControl_Ptr.25_88 = ButtonsControl_Ptr;
+  _89 = ButtonsControl_Ptr.25_88->ButtonsConfig_Ptr;
+  _90 = (unsigned int) i;
+  _91 = _90 * 8;
+  _92 = _89 + _91;
+  _93 = _92->Timeout;
+  if (_87 == _93)
+    goto <bb 27>; [INV]
+  else
+    goto <bb 28>; [INV]
+
+  <bb 27> :
+  ButtonsControl_Ptr.26_94 = ButtonsControl_Ptr;
+  _95 = (int) i;
+  ButtonsControl_Ptr.26_94->States[_95] = 3;
+
+  <bb 28> :
+  ButtonsControl_Ptr.27_96 = ButtonsControl_Ptr;
+  _97 = ButtonsControl_Ptr.27_96->ButtonsConfig_Ptr;
+  _98 = (unsigned int) i;
+  _99 = _98 * 8;
+  _100 = _97 + _99;
+  _101 = _100->Button;
+  _102 = Dio_ReadChannel (_101);
+  _103 = ~active;
+  _104 = (unsigned char) _103;
+  if (_102 == _104)
+    goto <bb 29>; [INV]
+  else
+    goto <bb 30>; [INV]
+
+  <bb 29> :
+  ButtonsControl_Ptr.28_105 = ButtonsControl_Ptr;
+  _106 = (int) i;
+  ButtonsControl_Ptr.28_105->Events[_106] = 2;
+  ButtonsControl_Ptr.29_107 = ButtonsControl_Ptr;
+  _108 = (int) i;
+  ButtonsControl_Ptr.29_107->States[_108] = 0;
+
+  <bb 30> :
+  goto <bb 35>; [INV]
+
+  <bb 31> :
+<L29>:
+  ButtonsControl_Ptr.30_109 = ButtonsControl_Ptr;
+  _110 = ButtonsControl_Ptr.30_109->ButtonsConfig_Ptr;
+  _111 = (unsigned int) i;
+  _112 = _111 * 8;
+  _113 = _110 + _112;
+  _114 = _113->Button;
+  _115 = Dio_ReadChannel (_114);
+  _116 = ~active;
+  _117 = (unsigned char) _116;
+  if (_115 == _117)
+    goto <bb 32>; [INV]
+  else
+    goto <bb 33>; [INV]
+
+  <bb 32> :
+  ButtonsControl_Ptr.31_118 = ButtonsControl_Ptr;
+  _119 = (int) i;
+  ButtonsControl_Ptr.31_118->Events[_119] = 3;
+  ButtonsControl_Ptr.32_120 = ButtonsControl_Ptr;
+  _121 = (int) i;
+  ButtonsControl_Ptr.32_120->States[_121] = 0;
+
+  <bb 33> :
+  goto <bb 35>; [INV]
+
+  <bb 34> :
+<L32>:
+
+  <bb 35> :
+  i.33_122 = i;
+  i = i.33_122 + 1;
+
+  <bb 36> :
+  ButtonsControl_Ptr.34_123 = ButtonsControl_Ptr;
+  _124 = ButtonsControl_Ptr.34_123->Buttons;
+  if (i < _124)
+    goto <bb 9>; [INV]
+  else
+    goto <bb 37>; [INV]
+
+  <bb 37> :
+  return;
+
+}
+
+
+HwIoAb_Buttons_GetEvent (uint8 Button)
+{
+  uint8 event;
+  uint8 D.5474;
+
+  <bb 2> :
+  event = 0;
+  if (Button != 0)
+    goto <bb 3>; [INV]
+  else
+    goto <bb 5>; [INV]
+
+  <bb 3> :
+  ButtonsControl_Ptr.6_1 = ButtonsControl_Ptr;
+  _2 = ButtonsControl_Ptr.6_1->Buttons;
+  if (Button <= _2)
+    goto <bb 4>; [INV]
+  else
+    goto <bb 5>; [INV]
+
+  <bb 4> :
+  ButtonsControl_Ptr.7_3 = ButtonsControl_Ptr;
+  _4 = (int) Button;
+  _5 = _4 + -1;
+  event = ButtonsControl_Ptr.7_3->Events[_5];
+  ButtonsControl_Ptr.8_6 = ButtonsControl_Ptr;
+  _7 = (int) Button;
+  _8 = _7 + -1;
+  ButtonsControl_Ptr.8_6->Events[_8] = 0;
+
+  <bb 5> :
+  D.5474 = event;
+
+  <bb 6> :
+<L4>:
+  return D.5474;
+
+}
+
+
+HwIoAb_Buttons_Init (const struct HwIoAb_Buttons_Config * Buttons_Config)
+{
+  uint8 i;
+
+  <bb 2> :
+  i = 0;
+  ButtonsControl_Ptr.0_1 = ButtonsControl_Ptr;
+  ButtonsControl_Ptr.0_1->Buttons = 3;
+  ButtonsControl_Ptr.1_2 = ButtonsControl_Ptr;
+  ButtonsControl_Ptr.1_2->ButtonsConfig_Ptr = Buttons_Config;
+  i = 0;
+  goto <bb 4>; [INV]
+
+  <bb 3> :
+  ButtonsControl_Ptr.2_3 = ButtonsControl_Ptr;
+  _4 = (int) i;
+  ButtonsControl_Ptr.2_3->States[_4] = 0;
+  ButtonsControl_Ptr.3_5 = ButtonsControl_Ptr;
+  _6 = (int) i;
+  ButtonsControl_Ptr.3_5->Events[_6] = 0;
+  i.4_7 = i;
+  i = i.4_7 + 1;
+
+  <bb 4> :
+  ButtonsControl_Ptr.5_8 = ButtonsControl_Ptr;
+  _9 = ButtonsControl_Ptr.5_8->Buttons;
+  if (i < _9)
+    goto <bb 3>; [INV]
+  else
+    goto <bb 5>; [INV]
+
+  <bb 5> :
+  return;
+
+}
+
+

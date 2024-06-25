@@ -5,7 +5,7 @@ SRCS  = main.c
 #Mcal Modules to use
 MCAL_SRCS = Platform Base Rte Mcu Port Dio
 #BSW Modules to use
-BSW_SRCS = EcuM Rte Det Os
+BSW_SRCS = EcuM Rte Det Os IoHwAbs
 #BSW Modules to use
 RTT_SRCS = SEGGER_RTT.c SEGGER_RTT_printf.c
 #archivo linker a usar

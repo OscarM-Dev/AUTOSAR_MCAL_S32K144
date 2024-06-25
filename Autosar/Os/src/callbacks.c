@@ -14,37 +14,40 @@
  * This function executes the state machine every 50ms.
  */
 void Task1_callback( void ) {
-    DoubleClick_stMachine();
+    HwIoAb_Buttons_MainFunction();
 }
 
 /**
  * @brief This is the callback function for the task 2.
  *
- * This function is called every 100ms and reads the messagges from the queue
- * in order to toggle the leds according to the btn and its corresponding click detected.
+ * This function is called every 100ms and gets the last event detected for each button 
+ * to toggle the corresponding led.
+ * 
+ * @note Button 1, Single click toggle only led0 (PTC8), double click toggle only led1 (PTC9), hold click toggle both leds (PTC8-9).
+ * @note Button 2, Single click toggle only led2 (PTC10), double click toggle only led3 (PTC11), hold click toggle both leds (PTC10-11).
+ * @note Button 3, Single click toggle only led4 (PTC13), double click toggle only led5 (PTC14), hold click toggle both leds (PTC13-14).
+ * 
  */
 void Task2_callback( void ) {
     //local data.
     uint8 i = 0;
-    QueueMessage Message_read;
+    uint8 actual_event = 0; //Actual event of button.
 
-    //Reading the queue if there are messages availables.
-    for ( i = 0; i < 3; i++ ) { //Checking each button and its click detected.
-        if ( Scheduler_GetStatusQueue( SCHEDULER_QUEUE1_ID, SCHEDULER_QUEUE_EMPTY_STATUS ) == FALSE ) {
-            Scheduler_ReadQueue( SCHEDULER_QUEUE1_ID, &Message_read );
-
-            switch ( Message_read.Button ) {    
+    for ( i = 0; i < ButtonsControl_Ptr->Buttons; i++ ) { //Checking each button and its event detected.
+        actual_event =  HwIoAb_Buttons_GetEvent( i + 1 );   //Obtaining event of actual button.
+        if ( actual_event != HWIOAB_BTN_EVENT_IDLE ) {  //A click was detected.
+            switch ( i ) {    
                 case BTN_1: 
-                    switch ( Message_read.Click ) {
-                        case SINGLE_CLICK:
-                            Dio_FlipChannel( DioConf_DioChannel_PTC8 );
+                    switch ( actual_event ) {
+                        case HWIOAB_BTN_EVENT_SINGLE_CLICK:
+                            HwIoAb_Leds_TurnToggle( HWIOAB_LEDS_0_ID );
                         break;
-                        case DOUBLE_CLICK:
-                            Dio_FlipChannel( DioConf_DioChannel_PTC9 );
+                        case HWIOAB_BTN_EVENT_DOUBLE_CLICK:
+                            HwIoAb_Leds_TurnToggle( HWI0AB_LEDS_1_ID );
                         break;
-                        case HOLD_CLICK:
-                            Dio_FlipChannel( DioConf_DioChannel_PTC8 );
-                            Dio_FlipChannel( DioConf_DioChannel_PTC9 );
+                        case HWIOAB_BTN_EVENT_HOLD_CLICK:
+                            HwIoAb_Leds_TurnToggle( HWIOAB_LEDS_0_ID );
+                            HwIoAb_Leds_TurnToggle( HWI0AB_LEDS_1_ID );
                         break;
                         default:    //No click.
                         break;
@@ -52,16 +55,16 @@ void Task2_callback( void ) {
                 break;
             
                 case BTN_2:
-                    switch ( Message_read.Click ) {
-                        case SINGLE_CLICK:
-                            Dio_FlipChannel( DioConf_DioChannel_PTC10 );
+                    switch ( actual_event ) {
+                        case HWIOAB_BTN_EVENT_SINGLE_CLICK:
+                            HwIoAb_Leds_TurnToggle( HWIOAB_LEDS_2_ID );
                         break;
-                        case DOUBLE_CLICK:
-                            Dio_FlipChannel( DioConf_DioChannel_PTC11 );
+                        case HWIOAB_BTN_EVENT_DOUBLE_CLICK:
+                            HwIoAb_Leds_TurnToggle( HWIOAB_LEDS_3_ID );
                         break;
-                        case HOLD_CLICK:
-                            Dio_FlipChannel( DioConf_DioChannel_PTC10 );
-                            Dio_FlipChannel( DioConf_DioChannel_PTC11 );
+                        case HWIOAB_BTN_EVENT_HOLD_CLICK:
+                            HwIoAb_Leds_TurnToggle( HWIOAB_LEDS_2_ID );
+                            HwIoAb_Leds_TurnToggle( HWIOAB_LEDS_3_ID );
                         break;
                         default:    //No click.
                         break;
@@ -69,16 +72,16 @@ void Task2_callback( void ) {
                 break;
 
                 case BTN_3:
-                        switch ( Message_read.Click ) {
-                            case SINGLE_CLICK:
-                                Dio_FlipChannel( DioConf_DioChannel_PTC13 );
+                        switch ( actual_event ) {
+                            case HWIOAB_BTN_EVENT_SINGLE_CLICK:
+                                HwIoAb_Leds_TurnToggle( HWIOAB_LEDS_4_ID );
                             break;
-                            case DOUBLE_CLICK:
-                                Dio_FlipChannel( DioConf_DioChannel_PTC14 );
+                            case HWIOAB_BTN_EVENT_DOUBLE_CLICK:
+                                HwIoAb_Leds_TurnToggle( HWIOAB_LEDS_5_ID );
                             break;
-                            case HOLD_CLICK:
-                                Dio_FlipChannel( DioConf_DioChannel_PTC13 );
-                                Dio_FlipChannel( DioConf_DioChannel_PTC14 );
+                            case HWIOAB_BTN_EVENT_HOLD_CLICK:
+                               HwIoAb_Leds_TurnToggle( HWIOAB_LEDS_4_ID );
+                               HwIoAb_Leds_TurnToggle( HWIOAB_LEDS_5_ID );
                             break;
                             default:    //No click.
                             break;
@@ -96,29 +99,20 @@ void Task2_callback( void ) {
 /**
  * @brief This is the callback function for the timer 1.
  *
- * This function is called when the timer counts to 300ms. 
- * This is for detecting the timeout for the button 1 in the state machine.
  */
 void Timer1_callback( void ) {    
-    Scheduler_StopTimer( SCHEDULER_TIMER1_ID );    //Stoping timer.
 }
 
 /**
  * @brief This is the callback function for the timer 2.
  *
- * This function is called when the timer counts to 300ms. 
- * This is for detecting the timeout for the button 2 in the state machine.
  */
 void Timer2_callback( void ) {    
-    Scheduler_StopTimer( SCHEDULER_TIMER2_ID );    //Stoping timer.
 }
 
 /**
  * @brief This is the callback function for the timer 3.
  *
- * This function is called when the timer counts to 300ms. 
- * This is for detecting the timeout for the button 3 in the state machine.
  */
 void Timer3_callback( void ) {    
-    Scheduler_StopTimer( SCHEDULER_TIMER3_ID );    //Stoping timer.
 }

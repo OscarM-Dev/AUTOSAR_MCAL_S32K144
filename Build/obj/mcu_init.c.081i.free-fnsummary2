@@ -4,6 +4,8 @@ EcuM_Init ()
   MCU_clocks ();
   OsIf_Init (0B);
   Port_Init (&Port_Config);
+  HwIoAb_Buttons_Init (&ButtonsCfg);
+  HwIoAb_Leds_Init (&LedsCfg);
   return;
 
 }

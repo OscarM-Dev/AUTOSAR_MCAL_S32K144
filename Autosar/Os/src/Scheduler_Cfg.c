@@ -47,17 +47,7 @@ const Timer_ConfigType Timer_Config[ SCHEDULER_TIMERS ] = {
         .InitTimeout = SCHEDULER_TIMER_TIMEOUT_300MS,
         .InitFlag = FALSE,
         .CallbackFunc = Timer1_callback
-    },
-    {
-        .InitTimeout = SCHEDULER_TIMER_TIMEOUT_300MS,
-        .InitFlag = FALSE,
-        .CallbackFunc = Timer2_callback
-    },
-    {
-        .InitTimeout = SCHEDULER_TIMER_TIMEOUT_300MS,
-        .InitFlag = FALSE,
-        .CallbackFunc = Timer3_callback
-    } 
+    }
 };
 
 //Scheduler config structure instance.

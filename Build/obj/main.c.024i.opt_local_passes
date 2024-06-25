@@ -1,6 +1,6 @@
 main ()
 {
-  int D.6489;
+  int D.6529;
 
   <bb 2> :
   EcuM_Init ();

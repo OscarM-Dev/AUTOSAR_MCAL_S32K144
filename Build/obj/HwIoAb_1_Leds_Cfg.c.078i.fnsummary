@@ -1,0 +1,23 @@
+Symbol table:
+
+LedsControl_Ptr/2 (LedsControl_Ptr) @06913048
+  Type: variable definition analyzed
+  Visibility: force_output externally_visible no_reorder public
+  References: LedsCtrl/1 (addr) 
+  Referring: 
+  Availability: available
+  Varpool flags: initialized
+LedsCtrl/1 (LedsCtrl) @06913000
+  Type: variable definition analyzed
+  Visibility: force_output externally_visible no_reorder public
+  References: 
+  Referring: LedsControl_Ptr/2 (addr) 
+  Availability: available
+  Varpool flags:
+LedsCfg/0 (LedsCfg) @068a1f78
+  Type: variable definition analyzed
+  Visibility: force_output externally_visible no_reorder public
+  References: 
+  Referring: 
+  Availability: available
+  Varpool flags: initialized read-only const-value-known

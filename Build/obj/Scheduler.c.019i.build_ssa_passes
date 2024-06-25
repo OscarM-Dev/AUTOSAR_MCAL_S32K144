@@ -574,7 +574,7 @@ Scheduler_Init (struct Scheduler_CtrlType * SchedulerPtr)
   i = i.44_40 + 1;
 
   <bb 7> :
-  if (i <= 2)
+  if (i == 0)
     goto <bb 6>; [INV]
   else
     goto <bb 8>; [INV]

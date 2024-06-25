@@ -1,7 +1,6 @@
 Timer3_callback ()
 {
   <bb 2> :
-  Scheduler_StopTimer (3);
   return;
 
 }
@@ -10,7 +9,6 @@ Timer3_callback ()
 Timer2_callback ()
 {
   <bb 2> :
-  Scheduler_StopTimer (2);
   return;
 
 }
@@ -19,7 +17,6 @@ Timer2_callback ()
 Timer1_callback ()
 {
   <bb 2> :
-  Scheduler_StopTimer (1);
   return;
 
 }
@@ -27,57 +24,54 @@ Timer1_callback ()
 
 Task2_callback ()
 {
-  struct QueueMessage Message_read;
+  uint8 actual_event;
   uint8 i;
   unsigned char _1;
-  unsigned char _2;
+  int _2;
   int _3;
-  unsigned char _4;
+  int _4;
   int _5;
-  unsigned char _6;
-  int _7;
+  unsigned char i.0_6;
+  struct HwIoAb_Buttons_Ctrl * ButtonsControl_Ptr.1_7;
   unsigned char _8;
-  int _9;
-  unsigned char i.0_10;
 
   <bb 2> :
+  i_15 = 0;
+  actual_event_16 = 0;
   i_17 = 0;
-  i_18 = 0;
   goto <bb 25>; [INV]
 
   <bb 3> :
-  _1 = Scheduler_GetStatusQueue (1, 1);
-  if (_1 == 0)
+  _1 = i_9 + 1;
+  actual_event_20 = HwIoAb_Buttons_GetEvent (_1);
+  if (actual_event_20 != 0)
     goto <bb 4>; [INV]
   else
     goto <bb 24>; [INV]
 
   <bb 4> :
-  Scheduler_ReadQueue (1, &Message_read);
-  _2 = Message_read.Button;
-  _3 = (int) _2;
-  switch (_3) <default: <L20> [INV], case 0: <L2> [INV], case 1: <L8> [INV], case 2: <L14> [INV]>
+  _2 = (int) i_9;
+  switch (_2) <default: <L20> [INV], case 0: <L2> [INV], case 1: <L8> [INV], case 2: <L14> [INV]>
 
   <bb 5> :
 <L2>:
-  _4 = Message_read.Click;
-  _5 = (int) _4;
-  switch (_5) <default: <L6> [INV], case 0: <L3> [INV], case 1: <L4> [INV], case 2: <L5> [INV]>
+  _3 = (int) actual_event_20;
+  switch (_3) <default: <L6> [INV], case 1: <L3> [INV], case 2: <L4> [INV], case 3: <L5> [INV]>
 
   <bb 6> :
 <L3>:
-  Dio_FlipChannel (72);
+  HwIoAb_Leds_TurnToggle (0);
   goto <bb 10>; [INV]
 
   <bb 7> :
 <L4>:
-  Dio_FlipChannel (73);
+  HwIoAb_Leds_TurnToggle (1);
   goto <bb 10>; [INV]
 
   <bb 8> :
 <L5>:
-  Dio_FlipChannel (72);
-  Dio_FlipChannel (73);
+  HwIoAb_Leds_TurnToggle (0);
+  HwIoAb_Leds_TurnToggle (1);
   goto <bb 10>; [INV]
 
   <bb 9> :
@@ -88,24 +82,23 @@ Task2_callback ()
 
   <bb 11> :
 <L8>:
-  _6 = Message_read.Click;
-  _7 = (int) _6;
-  switch (_7) <default: <L12> [INV], case 0: <L9> [INV], case 1: <L10> [INV], case 2: <L11> [INV]>
+  _4 = (int) actual_event_20;
+  switch (_4) <default: <L12> [INV], case 1: <L9> [INV], case 2: <L10> [INV], case 3: <L11> [INV]>
 
   <bb 12> :
 <L9>:
-  Dio_FlipChannel (74);
+  HwIoAb_Leds_TurnToggle (2);
   goto <bb 16>; [INV]
 
   <bb 13> :
 <L10>:
-  Dio_FlipChannel (75);
+  HwIoAb_Leds_TurnToggle (3);
   goto <bb 16>; [INV]
 
   <bb 14> :
 <L11>:
-  Dio_FlipChannel (74);
-  Dio_FlipChannel (75);
+  HwIoAb_Leds_TurnToggle (2);
+  HwIoAb_Leds_TurnToggle (3);
   goto <bb 16>; [INV]
 
   <bb 15> :
@@ -116,24 +109,23 @@ Task2_callback ()
 
   <bb 17> :
 <L14>:
-  _8 = Message_read.Click;
-  _9 = (int) _8;
-  switch (_9) <default: <L18> [INV], case 0: <L15> [INV], case 1: <L16> [INV], case 2: <L17> [INV]>
+  _5 = (int) actual_event_20;
+  switch (_5) <default: <L18> [INV], case 1: <L15> [INV], case 2: <L16> [INV], case 3: <L17> [INV]>
 
   <bb 18> :
 <L15>:
-  Dio_FlipChannel (77);
+  HwIoAb_Leds_TurnToggle (4);
   goto <bb 22>; [INV]
 
   <bb 19> :
 <L16>:
-  Dio_FlipChannel (78);
+  HwIoAb_Leds_TurnToggle (5);
   goto <bb 22>; [INV]
 
   <bb 20> :
 <L17>:
-  Dio_FlipChannel (77);
-  Dio_FlipChannel (78);
+  HwIoAb_Leds_TurnToggle (4);
+  HwIoAb_Leds_TurnToggle (5);
   goto <bb 22>; [INV]
 
   <bb 21> :
@@ -146,18 +138,19 @@ Task2_callback ()
 <L20>:
 
   <bb 24> :
-  i.0_10 = i_11;
-  i_35 = i.0_10 + 1;
+  i.0_6 = i_9;
+  i_33 = i.0_6 + 1;
 
   <bb 25> :
-  # i_11 = PHI <i_18(2), i_35(24)>
-  if (i_11 <= 2)
+  # i_9 = PHI <i_17(2), i_33(24)>
+  ButtonsControl_Ptr.1_7 = ButtonsControl_Ptr;
+  _8 = ButtonsControl_Ptr.1_7->Buttons;
+  if (i_9 < _8)
     goto <bb 3>; [INV]
   else
     goto <bb 26>; [INV]
 
   <bb 26> :
-  Message_read ={v} {CLOBBER};
   return;
 
 }
@@ -166,7 +159,7 @@ Task2_callback ()
 Task1_callback ()
 {
   <bb 2> :
-  DoubleClick_stMachine ();
+  HwIoAb_Buttons_MainFunction ();
   return;
 
 }

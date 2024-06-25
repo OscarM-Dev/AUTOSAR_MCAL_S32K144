@@ -1,0 +1,134 @@
+HwIoAb_Leds_TurnToggle (uint8 Led)
+{
+  <bb 2> :
+  LedsControl_Ptr.8_1 = LedsControl_Ptr;
+  _2 = LedsControl_Ptr.8_1->Leds;
+  if (Led < _2)
+    goto <bb 3>; [INV]
+  else
+    goto <bb 4>; [INV]
+
+  <bb 3> :
+  LedsControl_Ptr.9_3 = LedsControl_Ptr;
+  _4 = LedsControl_Ptr.9_3->LedsConfig_Ptr;
+  _5 = (unsigned int) Led;
+  _6 = _5 * 4;
+  _7 = _4 + _6;
+  _8 = _7->Led;
+  Dio_FlipChannel (_8);
+
+  <bb 4> :
+  return;
+
+}
+
+
+HwIoAb_Leds_TurnOff (uint8 Led)
+{
+  boolean active;
+
+  <bb 2> :
+  active = 0;
+  LedsControl_Ptr.5_1 = LedsControl_Ptr;
+  _2 = LedsControl_Ptr.5_1->Leds;
+  if (Led < _2)
+    goto <bb 3>; [INV]
+  else
+    goto <bb 7>; [INV]
+
+  <bb 3> :
+  LedsControl_Ptr.6_3 = LedsControl_Ptr;
+  _4 = LedsControl_Ptr.6_3->LedsConfig_Ptr;
+  _5 = (unsigned int) Led;
+  _6 = _5 * 4;
+  _7 = _4 + _6;
+  _8 = _7->Active;
+  if (_8 == 1)
+    goto <bb 4>; [INV]
+  else
+    goto <bb 5>; [INV]
+
+  <bb 4> :
+  active = 1;
+  goto <bb 6>; [INV]
+
+  <bb 5> :
+  active = 0;
+
+  <bb 6> :
+  LedsControl_Ptr.7_9 = LedsControl_Ptr;
+  _10 = LedsControl_Ptr.7_9->LedsConfig_Ptr;
+  _11 = (unsigned int) Led;
+  _12 = _11 * 4;
+  _13 = _10 + _12;
+  _14 = _13->Led;
+  _15 = ~active;
+  _16 = (unsigned char) _15;
+  Dio_WriteChannel (_14, _16);
+
+  <bb 7> :
+  return;
+
+}
+
+
+HwIoAb_Leds_TurnOn (uint8 Led)
+{
+  boolean active;
+
+  <bb 2> :
+  active = 0;
+  LedsControl_Ptr.2_1 = LedsControl_Ptr;
+  _2 = LedsControl_Ptr.2_1->Leds;
+  if (Led < _2)
+    goto <bb 3>; [INV]
+  else
+    goto <bb 7>; [INV]
+
+  <bb 3> :
+  LedsControl_Ptr.3_3 = LedsControl_Ptr;
+  _4 = LedsControl_Ptr.3_3->LedsConfig_Ptr;
+  _5 = (unsigned int) Led;
+  _6 = _5 * 4;
+  _7 = _4 + _6;
+  _8 = _7->Active;
+  if (_8 == 1)
+    goto <bb 4>; [INV]
+  else
+    goto <bb 5>; [INV]
+
+  <bb 4> :
+  active = 1;
+  goto <bb 6>; [INV]
+
+  <bb 5> :
+  active = 0;
+
+  <bb 6> :
+  LedsControl_Ptr.4_9 = LedsControl_Ptr;
+  _10 = LedsControl_Ptr.4_9->LedsConfig_Ptr;
+  _11 = (unsigned int) Led;
+  _12 = _11 * 4;
+  _13 = _10 + _12;
+  _14 = _13->Led;
+  _15 = (unsigned char) active;
+  Dio_WriteChannel (_14, _15);
+
+  <bb 7> :
+  return;
+
+}
+
+
+HwIoAb_Leds_Init (const struct HwIoAb_Leds_Config * Leds_Config)
+{
+  <bb 2> :
+  LedsControl_Ptr.0_1 = LedsControl_Ptr;
+  LedsControl_Ptr.0_1->Leds = 6;
+  LedsControl_Ptr.1_2 = LedsControl_Ptr;
+  LedsControl_Ptr.1_2->LedsConfig_Ptr = Leds_Config;
+  return;
+
+}
+
+

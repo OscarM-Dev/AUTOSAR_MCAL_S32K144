@@ -18,7 +18,7 @@ function body not available                       :       13 calls, 13.000000 fr
 IPA summary for DoubleClick_stMachine/50 is missing.
 Symbol table:
 
-Scheduler_WriteQueue/55 (Scheduler_WriteQueue) @05dc3540
+Scheduler_WriteQueue/55 (Scheduler_WriteQueue) @068e4ee0
   Type: function
   Visibility: external public
   References: 
@@ -27,7 +27,7 @@ Scheduler_WriteQueue/55 (Scheduler_WriteQueue) @05dc3540
   Function flags:
   Called by: DoubleClick_stMachine/50 DoubleClick_stMachine/50 DoubleClick_stMachine/50 
   Calls: 
-Scheduler_GetTimer/54 (Scheduler_GetTimer) @05dc3380
+Scheduler_GetTimer/54 (Scheduler_GetTimer) @068e4e00
   Type: function
   Visibility: external public
   References: 
@@ -36,7 +36,7 @@ Scheduler_GetTimer/54 (Scheduler_GetTimer) @05dc3380
   Function flags:
   Called by: DoubleClick_stMachine/50 DoubleClick_stMachine/50 DoubleClick_stMachine/50 
   Calls: 
-Scheduler_ReloadTimer/53 (Scheduler_ReloadTimer) @05dc3e00
+Scheduler_ReloadTimer/53 (Scheduler_ReloadTimer) @068e4c40
   Type: function
   Visibility: external public
   References: 
@@ -45,7 +45,7 @@ Scheduler_ReloadTimer/53 (Scheduler_ReloadTimer) @05dc3e00
   Function flags:
   Called by: DoubleClick_stMachine/50 DoubleClick_stMachine/50 
   Calls: 
-Dio_ReadChannel/52 (Dio_ReadChannel) @05dc3d20
+Dio_ReadChannel/52 (Dio_ReadChannel) @068e4b60
   Type: function
   Visibility: external public
   References: 
@@ -54,7 +54,7 @@ Dio_ReadChannel/52 (Dio_ReadChannel) @05dc3d20
   Function flags:
   Called by: DoubleClick_stMachine/50 DoubleClick_stMachine/50 DoubleClick_stMachine/50 DoubleClick_stMachine/50 DoubleClick_stMachine/50 
   Calls: 
-stBtnMachine/51 (stBtnMachine) @05dce510
+stBtnMachine/51 (stBtnMachine) @068ef480
   Type: variable
   Body removed by symtab_remove_unreachable_nodes
   Visibility: external public
@@ -62,7 +62,7 @@ stBtnMachine/51 (stBtnMachine) @05dce510
   Referring: DoubleClick_stMachine/50 (read) DoubleClick_stMachine/50 (read) DoubleClick_stMachine/50 (read) DoubleClick_stMachine/50 (write) DoubleClick_stMachine/50 (read) DoubleClick_stMachine/50 (write) DoubleClick_stMachine/50 (read) DoubleClick_stMachine/50 (write) DoubleClick_stMachine/50 (read) DoubleClick_stMachine/50 (write) DoubleClick_stMachine/50 (read) DoubleClick_stMachine/50 (read) DoubleClick_stMachine/50 (write) DoubleClick_stMachine/50 (read) DoubleClick_stMachine/50 (write) DoubleClick_stMachine/50 (read) DoubleClick_stMachine/50 (write) DoubleClick_stMachine/50 (read) DoubleClick_stMachine/50 (write) 
   Availability: not_available
   Varpool flags:
-DoubleClick_stMachine/50 (DoubleClick_stMachine) @05dc3700
+DoubleClick_stMachine/50 (DoubleClick_stMachine) @068e4540
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: stBtnMachine/51 (read) stBtnMachine/51 (read) stBtnMachine/51 (read) stBtnMachine/51 (write) stBtnMachine/51 (read) stBtnMachine/51 (write) stBtnMachine/51 (read) stBtnMachine/51 (write) stBtnMachine/51 (read) stBtnMachine/51 (write) stBtnMachine/51 (read) stBtnMachine/51 (read) stBtnMachine/51 (write) stBtnMachine/51 (read) stBtnMachine/51 (write) stBtnMachine/51 (read) stBtnMachine/51 (write) stBtnMachine/51 (read) stBtnMachine/51 (write) 

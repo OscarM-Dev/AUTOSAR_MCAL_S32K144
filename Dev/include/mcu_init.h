@@ -11,7 +11,8 @@
 #include "Mcu.h"
 #include "OsIf.h"
 #include "Port.h"
-#include "Dio.h"
+#include "HwIoAb_0_Buttons.h"
+#include "HwIoAb_1_Leds.h"
 
 
 //Function declarations.

@@ -48,6 +48,8 @@ void MCU_clocks( void ) {
 void EcuM_Init( void )
 {   
     MCU_clocks();
-    OsIf_Init( NULL_PTR );//Init Osif timer.
-    Port_Init( &Port_Config );//Init port driver and configuration.
+    OsIf_Init( NULL_PTR );  //Init Osif timer.
+    Port_Init( &Port_Config );  //Init port driver and configuration.
+    HwIoAb_Buttons_Init( ButtonsCfg );  //Buttons init.
+    HwIoAb_Leds_Init( LedsCfg );    //Leds init
 }
