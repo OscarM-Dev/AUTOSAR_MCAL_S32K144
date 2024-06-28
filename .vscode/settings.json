@@ -62,6 +62,9 @@
     "std_types.h": "c",
     "mcu_init.h": "c",
     "dio_cfg.h": "c",
-    "standardtypes.h": "c"
+    "standardtypes.h": "c",
+    "adc.h": "c",
+    "hwioab_1_leds.h": "c",
+    "scheduler.h": "c"
   }
 }

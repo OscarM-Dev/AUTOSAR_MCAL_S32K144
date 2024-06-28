@@ -1,0 +1,292 @@
+Symbol table:
+
+Adc_ReadGroup/8 (Adc_ReadGroup) @069258c0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: HwIoAb_Pots_GetAltValue/2 HwIoAb_Pots_GetValue/1 
+  Calls: 
+Adc_GetGroupStatus/7 (Adc_GetGroupStatus) @069257e0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: HwIoAb_Pots_GetAltValue/2 HwIoAb_Pots_GetValue/1 
+  Calls: 
+Adc_StartGroupConversion/6 (Adc_StartGroupConversion) @06925700
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: HwIoAb_Pots_GetAltValue/2 HwIoAb_Pots_GetValue/1 
+  Calls: 
+Adc_SetupResultBuffer/5 (Adc_SetupResultBuffer) @06925540
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: HwIoAb_Pots_Init/0 HwIoAb_Pots_Init/0 
+  Calls: 
+PotsControl_Ptr/4 (PotsControl_Ptr) @068fadc8
+  Type: variable
+  Body removed by symtab_remove_unreachable_nodes
+  Visibility: external public
+  References: 
+  Referring: HwIoAb_Pots_Init/0 (read) HwIoAb_Pots_Init/0 (read) HwIoAb_Pots_Init/0 (read) HwIoAb_Pots_GetValue/1 (read) HwIoAb_Pots_GetValue/1 (read) HwIoAb_Pots_GetValue/1 (read) HwIoAb_Pots_GetAltValue/2 (read) HwIoAb_Pots_GetAltValue/2 (read) HwIoAb_Pots_GetAltValue/2 (read) 
+  Availability: not_available
+  Varpool flags:
+Adc_Calibrate/3 (Adc_Calibrate) @06925460
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: HwIoAb_Pots_Init/0 HwIoAb_Pots_Init/0 
+  Calls: 
+HwIoAb_Pots_GetAltValue/2 (HwIoAb_Pots_GetAltValue) @06925000
+  Type: function definition analyzed
+  Visibility: force_output externally_visible no_reorder public
+  References: PotsControl_Ptr/4 (read) PotsControl_Ptr/4 (read) PotsControl_Ptr/4 (read) 
+  Referring: 
+  Availability: available
+  Function flags: body
+  Called by: 
+  Calls: Adc_ReadGroup/8 Adc_GetGroupStatus/7 Adc_StartGroupConversion/6 
+HwIoAb_Pots_GetValue/1 (HwIoAb_Pots_GetValue) @068fc7e0
+  Type: function definition analyzed
+  Visibility: force_output externally_visible no_reorder public
+  References: PotsControl_Ptr/4 (read) PotsControl_Ptr/4 (read) PotsControl_Ptr/4 (read) 
+  Referring: 
+  Availability: available
+  Function flags: body
+  Called by: 
+  Calls: Adc_ReadGroup/8 Adc_GetGroupStatus/7 Adc_StartGroupConversion/6 
+HwIoAb_Pots_Init/0 (HwIoAb_Pots_Init) @068fcee0
+  Type: function definition analyzed
+  Visibility: force_output externally_visible no_reorder public
+  References: PotsControl_Ptr/4 (read) PotsControl_Ptr/4 (read) PotsControl_Ptr/4 (read) 
+  Referring: 
+  Availability: available
+  Function flags: body
+  Called by: 
+  Calls: Adc_SetupResultBuffer/5 Adc_SetupResultBuffer/5 Adc_Calibrate/3 Adc_Calibrate/3 
+HwIoAb_Pots_GetAltValue (uint16 * AltPots)
+{
+  uint8 i;
+  <unnamed type> _1;
+  struct HwIoAb_Pots_Ctrl * PotsControl_Ptr.7_2;
+  uint16[2] * _3;
+  struct HwIoAb_Pots_Ctrl * PotsControl_Ptr.8_4;
+  int _5;
+  short unsigned int _6;
+  float _7;
+  float _8;
+  float _9;
+  unsigned int _10;
+  unsigned int _11;
+  uint16 * _12;
+  short unsigned int _13;
+  unsigned int _14;
+  unsigned int _15;
+  uint16 * _16;
+  short unsigned int _17;
+  unsigned int _18;
+  unsigned int _19;
+  uint16 * _20;
+  unsigned char i.9_21;
+  struct HwIoAb_Pots_Ctrl * PotsControl_Ptr.10_22;
+  unsigned char _23;
+
+  <bb 2> :
+  i_28 = 0;
+  Adc_StartGroupConversion (1);
+
+  <bb 3> :
+  _1 = Adc_GetGroupStatus (1);
+  if (_1 == 1)
+    goto <bb 3>; [INV]
+  else
+    goto <bb 4>; [INV]
+
+  <bb 4> :
+  PotsControl_Ptr.7_2 = PotsControl_Ptr;
+  _3 = &PotsControl_Ptr.7_2->Raw_results_alter;
+  Adc_ReadGroup (1, _3);
+  i_33 = 0;
+  goto <bb 8>; [INV]
+
+  <bb 5> :
+  PotsControl_Ptr.8_4 = PotsControl_Ptr;
+  _5 = (int) i_24;
+  _6 = PotsControl_Ptr.8_4->Raw_results_alter[_5];
+  _7 = (float) _6;
+  _8 = _7 / 2.832e+3;
+  _9 = _8 * 1.0e+4;
+  _10 = (unsigned int) i_24;
+  _11 = _10 * 2;
+  _12 = AltPots_34(D) + _11;
+  _13 = (short unsigned int) _9;
+  *_12 = _13;
+  _14 = (unsigned int) i_24;
+  _15 = _14 * 2;
+  _16 = AltPots_34(D) + _15;
+  _17 = *_16;
+  if (_17 > 10000)
+    goto <bb 6>; [INV]
+  else
+    goto <bb 7>; [INV]
+
+  <bb 6> :
+  _18 = (unsigned int) i_24;
+  _19 = _18 * 2;
+  _20 = AltPots_34(D) + _19;
+  *_20 = 10000;
+
+  <bb 7> :
+  i.9_21 = i_24;
+  i_37 = i.9_21 + 1;
+
+  <bb 8> :
+  # i_24 = PHI <i_33(4), i_37(7)>
+  PotsControl_Ptr.10_22 = PotsControl_Ptr;
+  _23 = PotsControl_Ptr.10_22->Pots;
+  if (i_24 < _23)
+    goto <bb 5>; [INV]
+  else
+    goto <bb 9>; [INV]
+
+  <bb 9> :
+  return;
+
+}
+
+
+HwIoAb_Pots_GetValue (uint16 * Pots)
+{
+  uint8 i;
+  <unnamed type> _1;
+  struct HwIoAb_Pots_Ctrl * PotsControl_Ptr.3_2;
+  uint16[2] * _3;
+  struct HwIoAb_Pots_Ctrl * PotsControl_Ptr.4_4;
+  int _5;
+  short unsigned int _6;
+  float _7;
+  float _8;
+  float _9;
+  unsigned int _10;
+  unsigned int _11;
+  uint16 * _12;
+  short unsigned int _13;
+  unsigned int _14;
+  unsigned int _15;
+  uint16 * _16;
+  short unsigned int _17;
+  unsigned int _18;
+  unsigned int _19;
+  uint16 * _20;
+  unsigned char i.5_21;
+  struct HwIoAb_Pots_Ctrl * PotsControl_Ptr.6_22;
+  unsigned char _23;
+
+  <bb 2> :
+  i_28 = 0;
+  Adc_StartGroupConversion (0);
+
+  <bb 3> :
+  _1 = Adc_GetGroupStatus (0);
+  if (_1 == 1)
+    goto <bb 3>; [INV]
+  else
+    goto <bb 4>; [INV]
+
+  <bb 4> :
+  PotsControl_Ptr.3_2 = PotsControl_Ptr;
+  _3 = &PotsControl_Ptr.3_2->Raw_results_main;
+  Adc_ReadGroup (0, _3);
+  i_33 = 0;
+  goto <bb 8>; [INV]
+
+  <bb 5> :
+  PotsControl_Ptr.4_4 = PotsControl_Ptr;
+  _5 = (int) i_24;
+  _6 = PotsControl_Ptr.4_4->Raw_results_main[_5];
+  _7 = (float) _6;
+  _8 = _7 / 2.832e+3;
+  _9 = _8 * 1.0e+4;
+  _10 = (unsigned int) i_24;
+  _11 = _10 * 2;
+  _12 = Pots_34(D) + _11;
+  _13 = (short unsigned int) _9;
+  *_12 = _13;
+  _14 = (unsigned int) i_24;
+  _15 = _14 * 2;
+  _16 = Pots_34(D) + _15;
+  _17 = *_16;
+  if (_17 > 10000)
+    goto <bb 6>; [INV]
+  else
+    goto <bb 7>; [INV]
+
+  <bb 6> :
+  _18 = (unsigned int) i_24;
+  _19 = _18 * 2;
+  _20 = Pots_34(D) + _19;
+  *_20 = 10000;
+
+  <bb 7> :
+  i.5_21 = i_24;
+  i_37 = i.5_21 + 1;
+
+  <bb 8> :
+  # i_24 = PHI <i_33(4), i_37(7)>
+  PotsControl_Ptr.6_22 = PotsControl_Ptr;
+  _23 = PotsControl_Ptr.6_22->Pots;
+  if (i_24 < _23)
+    goto <bb 5>; [INV]
+  else
+    goto <bb 9>; [INV]
+
+  <bb 9> :
+  return;
+
+}
+
+
+HwIoAb_Pots_Init (const struct HwIoAb_Pots_Config * Pots_Config)
+{
+  struct Adc_CalibrationStatusType Calib_Status_ADC1;
+  struct Adc_CalibrationStatusType Calib_Status_ADC0;
+  struct HwIoAb_Pots_Ctrl * PotsControl_Ptr.0_1;
+  uint16[2] * _2;
+  struct HwIoAb_Pots_Ctrl * PotsControl_Ptr.1_3;
+  uint16[2] * _4;
+  struct HwIoAb_Pots_Ctrl * PotsControl_Ptr.2_5;
+
+  <bb 2> :
+  Adc_Calibrate (0, &Calib_Status_ADC0);
+  Adc_Calibrate (1, &Calib_Status_ADC1);
+  PotsControl_Ptr.0_1 = PotsControl_Ptr;
+  _2 = &PotsControl_Ptr.0_1->Raw_results_main;
+  Adc_SetupResultBuffer (0, _2);
+  PotsControl_Ptr.1_3 = PotsControl_Ptr;
+  _4 = &PotsControl_Ptr.1_3->Raw_results_alter;
+  Adc_SetupResultBuffer (1, _4);
+  PotsControl_Ptr.2_5 = PotsControl_Ptr;
+  PotsControl_Ptr.2_5->Pots = 2;
+  Calib_Status_ADC0 ={v} {CLOBBER};
+  Calib_Status_ADC1 ={v} {CLOBBER};
+  return;
+
+}
+
+

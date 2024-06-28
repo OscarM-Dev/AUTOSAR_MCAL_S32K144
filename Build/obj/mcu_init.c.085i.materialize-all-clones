@@ -1,11 +1,24 @@
+HwIoAb_Init ()
+{
+  <bb 2> :
+  HwIoAb_Buttons_Init (&ButtonsCfg);
+  HwIoAb_Leds_Init (&LedsCfg);
+  HwIoAb_Pots_Init (0B);
+  return;
+
+}
+
+
 EcuM_Init ()
 {
   <bb 2> :
   MCU_clocks ();
   OsIf_Init (0B);
+  Platform_Init (0B);
   Port_Init (&Port_Config);
-  HwIoAb_Buttons_Init (&ButtonsCfg);
-  HwIoAb_Leds_Init (&LedsCfg);
+  Adc_Init (&Adc_Config);
+  Port_Ci_Port_Ip_SetMuxModeSel (1074044928B, 1, 8);
+  Port_Ci_Port_Ip_SetMuxModeSel (1074044928B, 13, 8);
   return;
 
 }

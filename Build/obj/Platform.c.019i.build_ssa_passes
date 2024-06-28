@@ -1,11 +1,29 @@
 Platform_InstallIrqHandler (IRQn_Type eIrqNumber, void (*Platform_IrqHandlerType) (void) pfNewHandler, void (*Platform_IrqHandlerType) (void) * const pfOldHandler)
 {
   Std_ReturnType RetValue;
-  Std_ReturnType D.6204;
+  Std_ReturnType D.6208;
 
   <bb 2> :
   RetValue = 0;
   Platform_Ipw_InstallIrqHandler (eIrqNumber, pfNewHandler, pfOldHandler);
+  D.6208 = RetValue;
+
+  <bb 3> :
+<L0>:
+  return D.6208;
+
+}
+
+
+Platform_GetIrqPriority (IRQn_Type eIrqNumber, uint8 * u8Priority)
+{
+  Std_ReturnType RetValue;
+  Std_ReturnType D.6204;
+
+  <bb 2> :
+  RetValue = 0;
+  _1 = Platform_Ipw_GetIrqPriority (eIrqNumber);
+  *u8Priority = _1;
   D.6204 = RetValue;
 
   <bb 3> :
@@ -15,37 +33,19 @@ Platform_InstallIrqHandler (IRQn_Type eIrqNumber, void (*Platform_IrqHandlerType
 }
 
 
-Platform_GetIrqPriority (IRQn_Type eIrqNumber, uint8 * u8Priority)
-{
-  Std_ReturnType RetValue;
-  Std_ReturnType D.6200;
-
-  <bb 2> :
-  RetValue = 0;
-  _1 = Platform_Ipw_GetIrqPriority (eIrqNumber);
-  *u8Priority = _1;
-  D.6200 = RetValue;
-
-  <bb 3> :
-<L0>:
-  return D.6200;
-
-}
-
-
 Platform_SetIrqPriority (IRQn_Type eIrqNumber, uint8 u8Priority)
 {
   Std_ReturnType RetValue;
-  Std_ReturnType D.6198;
+  Std_ReturnType D.6202;
 
   <bb 2> :
   RetValue = 0;
   Platform_Ipw_SetIrqPriority (eIrqNumber, u8Priority);
-  D.6198 = RetValue;
+  D.6202 = RetValue;
 
   <bb 3> :
 <L0>:
-  return D.6198;
+  return D.6202;
 
 }
 
@@ -53,16 +53,16 @@ Platform_SetIrqPriority (IRQn_Type eIrqNumber, uint8 u8Priority)
 Platform_SetIrq (IRQn_Type eIrqNumber, boolean bEnable)
 {
   Std_ReturnType RetValue;
-  Std_ReturnType D.6193;
+  Std_ReturnType D.6197;
 
   <bb 2> :
   RetValue = 0;
   Platform_Ipw_SetIrq (eIrqNumber, bEnable);
-  D.6193 = RetValue;
+  D.6197 = RetValue;
 
   <bb 3> :
 <L0>:
-  return D.6193;
+  return D.6197;
 
 }
 
@@ -93,14 +93,14 @@ Platform_Ipw_InstallIrqHandler (IRQn_Type eIrqNumber, void (*IntCtrl_Ip_IrqHandl
 
 Platform_Ipw_GetIrqPriority (IRQn_Type eIrqNumber)
 {
-  uint8 D.6202;
+  uint8 D.6206;
 
   <bb 2> :
-  D.6202 = IntCtrl_Ip_GetPriority (eIrqNumber);
+  D.6206 = IntCtrl_Ip_GetPriority (eIrqNumber);
 
   <bb 3> :
 <L0>:
-  return D.6202;
+  return D.6206;
 
 }
 

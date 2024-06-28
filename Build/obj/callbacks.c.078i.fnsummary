@@ -1,6 +1,6 @@
 Symbol table:
 
-ButtonsControl_Ptr/58 (ButtonsControl_Ptr) @068afc60
+ButtonsControl_Ptr/58 (ButtonsControl_Ptr) @05e12ee8
   Type: variable
   Body removed by symtab_remove_unreachable_nodes
   Visibility: external public
@@ -8,7 +8,7 @@ ButtonsControl_Ptr/58 (ButtonsControl_Ptr) @068afc60
   Referring: Task2_callback/51 (read) 
   Availability: not_available
   Varpool flags:
-HwIoAb_Leds_TurnToggle/57 (HwIoAb_Leds_TurnToggle) @068ae8c0
+HwIoAb_Leds_TurnToggle/57 (HwIoAb_Leds_TurnToggle) @05e13380
   Type: function
   Visibility: external public
   References: 
@@ -17,7 +17,7 @@ HwIoAb_Leds_TurnToggle/57 (HwIoAb_Leds_TurnToggle) @068ae8c0
   Function flags:
   Called by: Task2_callback/51 Task2_callback/51 Task2_callback/51 Task2_callback/51 Task2_callback/51 Task2_callback/51 Task2_callback/51 Task2_callback/51 Task2_callback/51 Task2_callback/51 Task2_callback/51 Task2_callback/51 
   Calls: 
-HwIoAb_Buttons_GetEvent/56 (HwIoAb_Buttons_GetEvent) @068ae7e0
+HwIoAb_Buttons_GetEvent/56 (HwIoAb_Buttons_GetEvent) @05e132a0
   Type: function
   Visibility: external public
   References: 
@@ -26,7 +26,7 @@ HwIoAb_Buttons_GetEvent/56 (HwIoAb_Buttons_GetEvent) @068ae7e0
   Function flags:
   Called by: Task2_callback/51 
   Calls: 
-HwIoAb_Buttons_MainFunction/55 (HwIoAb_Buttons_MainFunction) @068ae460
+HwIoAb_Buttons_MainFunction/55 (HwIoAb_Buttons_MainFunction) @05e08ee0
   Type: function
   Visibility: external public
   References: 
@@ -35,7 +35,7 @@ HwIoAb_Buttons_MainFunction/55 (HwIoAb_Buttons_MainFunction) @068ae460
   Function flags:
   Called by: Task1_callback/50 
   Calls: 
-Timer3_callback/54 (Timer3_callback) @068ae000
+Timer3_callback/54 (Timer3_callback) @05e0e7e0
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: 
@@ -44,7 +44,7 @@ Timer3_callback/54 (Timer3_callback) @068ae000
   Function flags: body
   Called by: 
   Calls: 
-Timer2_callback/53 (Timer2_callback) @068a8b60
+Timer2_callback/53 (Timer2_callback) @05e0e540
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: 
@@ -53,7 +53,7 @@ Timer2_callback/53 (Timer2_callback) @068a8b60
   Function flags: body
   Called by: 
   Calls: 
-Timer1_callback/52 (Timer1_callback) @068a8d20
+Timer1_callback/52 (Timer1_callback) @05e0eee0
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: 
@@ -62,7 +62,7 @@ Timer1_callback/52 (Timer1_callback) @068a8d20
   Function flags: body
   Called by: 
   Calls: 
-Task2_callback/51 (Task2_callback) @068a8a80
+Task2_callback/51 (Task2_callback) @05e0ec40
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: ButtonsControl_Ptr/58 (read) 
@@ -71,7 +71,7 @@ Task2_callback/51 (Task2_callback) @068a8a80
   Function flags: body
   Called by: 
   Calls: HwIoAb_Leds_TurnToggle/57 HwIoAb_Leds_TurnToggle/57 HwIoAb_Leds_TurnToggle/57 HwIoAb_Leds_TurnToggle/57 HwIoAb_Leds_TurnToggle/57 HwIoAb_Leds_TurnToggle/57 HwIoAb_Leds_TurnToggle/57 HwIoAb_Leds_TurnToggle/57 HwIoAb_Leds_TurnToggle/57 HwIoAb_Leds_TurnToggle/57 HwIoAb_Leds_TurnToggle/57 HwIoAb_Leds_TurnToggle/57 HwIoAb_Buttons_GetEvent/56 
-Task1_callback/50 (Task1_callback) @068a8460
+Task1_callback/50 (Task1_callback) @05e0e9a0
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: 

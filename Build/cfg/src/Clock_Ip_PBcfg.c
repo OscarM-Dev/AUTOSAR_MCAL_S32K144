@@ -327,7 +327,7 @@ const Clock_Ip_ClockConfigType Mcu_aClockConfigPB[1U] = {
             #if CLOCK_IP_SELECTORS_NO > 8U
             {
                 ADC1_CLK,                     /* Clock name associated to selector */
-                CLOCK_IS_OFF,                       /* Name of the selected input source */
+                SIRCDIV2_CLK,                       /* Name of the selected input source */
             },
             #endif
         
@@ -362,7 +362,7 @@ const Clock_Ip_ClockConfigType Mcu_aClockConfigPB[1U] = {
             #if CLOCK_IP_SELECTORS_NO > 13U
             {
                 ADC0_CLK,                     /* Clock name associated to selector */
-                CLOCK_IS_OFF,                       /* Name of the selected input source */
+                SIRCDIV2_CLK,                       /* Name of the selected input source */
             },
             #endif
         
@@ -456,7 +456,7 @@ const Clock_Ip_ClockConfigType Mcu_aClockConfigPB[1U] = {
             #if CLOCK_IP_DIVIDERS_NO > 0U
             {
                 SIRCDIV1_CLK,
-                8U,
+                1U,
                 {
                     0U,
                 }
@@ -486,7 +486,7 @@ const Clock_Ip_ClockConfigType Mcu_aClockConfigPB[1U] = {
             #if CLOCK_IP_DIVIDERS_NO > 3U
             {
                 FIRCDIV2_CLK,
-                1U,
+                2U,
                 {
                     0U,
                 }
@@ -702,13 +702,13 @@ const Clock_Ip_ClockConfigType Mcu_aClockConfigPB[1U] = {
             #if CLOCK_IP_GATES_NO > 0U
             {
                 ADC0_CLK,                  /*!<     name;                    */
-                0U,                           /*!<     enable;                  */
+                1U,                           /*!<     enable;                  */
             },
             #endif
             #if CLOCK_IP_GATES_NO > 1U
             {
                 ADC1_CLK,                  /*!<     name;                    */
-                0U,                           /*!<     enable;                  */
+                1U,                           /*!<     enable;                  */
             },
             #endif
             #if CLOCK_IP_GATES_NO > 2U
@@ -846,13 +846,13 @@ const Clock_Ip_ClockConfigType Mcu_aClockConfigPB[1U] = {
             #if CLOCK_IP_GATES_NO > 24U
             {
                 PDB0_CLK,                  /*!<     name;                    */
-                0U,                           /*!<     enable;                  */
+                1U,                           /*!<     enable;                  */
             },
             #endif
             #if CLOCK_IP_GATES_NO > 25U
             {
                 PDB1_CLK,                  /*!<     name;                    */
-                0U,                           /*!<     enable;                  */
+                1U,                           /*!<     enable;                  */
             },
             #endif
             #if CLOCK_IP_GATES_NO > 26U

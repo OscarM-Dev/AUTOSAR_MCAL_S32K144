@@ -1,4 +1,4 @@
-IPA summary for main/52 is missing.
+IPA summary for main/56 is missing.
 
 Flattening functions:
 Overall time estimate: 0.000000 weighted by profile: 0.000000
@@ -14,55 +14,64 @@ Deciding on functions to be inlined into all callers and removing useless specul
 Overall time estimate: 0.000000 weighted by profile: 0.000000
 
 Why inlining failed?
-function body not available                       :        3 calls, 3.000000 freq, 0 count
-IPA summary for main/52 is missing.
+function body not available                       :        4 calls, 4.000000 freq, 0 count
+IPA summary for main/56 is missing.
 Symbol table:
 
-Scheduler_MainFunction/56 (Scheduler_MainFunction) @06e48700
+Scheduler_MainFunction/61 (Scheduler_MainFunction) @065097e0
   Type: function
   Visibility: external public
   References: 
   Referring: 
   Availability: not_available
   Function flags:
-  Called by: main/52 
+  Called by: main/56 
   Calls: 
-Scheduler_Control/55 (Scheduler_Control) @06e465e8
+Scheduler_Control/60 (Scheduler_Control) @06503ee8
   Type: variable
   Body removed by symtab_remove_unreachable_nodes
   Visibility: external public
   References: 
-  Referring: main/52 (addr) 
+  Referring: main/56 (addr) 
   Availability: not_available
   Varpool flags:
-Scheduler_Init/54 (Scheduler_Init) @06e48620
+Scheduler_Init/59 (Scheduler_Init) @06509700
   Type: function
   Visibility: external public
   References: 
   Referring: 
   Availability: not_available
   Function flags:
-  Called by: main/52 
+  Called by: main/56 
   Calls: 
-EcuM_Init/53 (EcuM_Init) @06e48540
+HwIoAb_Init/58 (HwIoAb_Init) @06509620
   Type: function
   Visibility: external public
   References: 
   Referring: 
   Availability: not_available
   Function flags:
-  Called by: main/52 
+  Called by: main/56 
   Calls: 
-main/52 (main) @06e480e0
+EcuM_Init/57 (EcuM_Init) @06509540
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: main/56 
+  Calls: 
+main/56 (main) @065090e0
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
-  References: Scheduler_Control/55 (addr) 
+  References: Scheduler_Control/60 (addr) 
   Referring: 
   Availability: available
   Function flags: body
   Called by: 
-  Calls: Scheduler_MainFunction/56 Scheduler_Init/54 EcuM_Init/53 
-Queue1/51 (Queue1) @06e46090
+  Calls: Scheduler_MainFunction/61 Scheduler_Init/59 HwIoAb_Init/58 EcuM_Init/57 
+Queue1/55 (Queue1) @06503900
   Type: variable definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: 
@@ -70,14 +79,15 @@ Queue1/51 (Queue1) @06e46090
   Availability: available
   Varpool flags:
 
-;; Function main (main, funcdef_no=51, decl_uid=6522, cgraph_uid=52, symbol_order=52)
+;; Function main (main, funcdef_no=55, decl_uid=7574, cgraph_uid=56, symbol_order=56)
 
 main ()
 {
-  int D.6529;
+  int D.7581;
 
   <bb 2> :
   EcuM_Init ();
+  HwIoAb_Init ();
   Scheduler_Init (&Scheduler_Control);
 
   <bb 3> :

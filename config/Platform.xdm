@@ -57,7 +57,22 @@
               </d:ctr>
               <d:lst name="IntCtrlConfig" type="MAP">
                 <d:ctr name="IntConfs0" type="IDENTIFIABLE">
-                  <d:lst name="PlatformIsrConfig" type="MAP"/>
+                  <d:lst name="PlatformIsrConfig" type="MAP">
+                    <d:ctr name="Adc0_ISR_Config" type="IDENTIFIABLE">
+                      <d:var name="IsrName" type="ENUMERATION" value="ADC0_IRQn"/>
+                      <d:var name="IsrEnabled" type="BOOLEAN" value="true"/>
+                      <d:var name="IsrPriority" type="INTEGER" value="0"/>
+                      <d:var name="IsrHandler" type="FUNCTION-NAME" 
+                             value="Adc_0_Isr"/>
+                    </d:ctr>
+                    <d:ctr name="Adc1_ISR_Config" type="IDENTIFIABLE">
+                      <d:var name="IsrName" type="ENUMERATION" value="ADC1_IRQn"/>
+                      <d:var name="IsrEnabled" type="BOOLEAN" value="true"/>
+                      <d:var name="IsrPriority" type="INTEGER" value="0"/>
+                      <d:var name="IsrHandler" type="FUNCTION-NAME" 
+                             value="Adc_1_Isr"/>
+                    </d:ctr>
+                  </d:lst>
                   <d:ref name="PlatformNvicEcucPartitionRef" type="REFERENCE" >
                     <a:a name="ENABLE" value="false"/>
                     <a:a name="IMPORTER_INFO" value="@DEF"/>

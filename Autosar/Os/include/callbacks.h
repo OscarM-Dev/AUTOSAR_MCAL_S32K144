@@ -10,6 +10,7 @@
 #include "Scheduler.h"
 #include "HwIoAb_0_Buttons.h"
 #include "HwIoAb_1_Leds.h"
+#include "HwIoAb_2_Pots.h"
 
 //Structures.
 

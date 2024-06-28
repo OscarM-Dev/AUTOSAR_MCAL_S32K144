@@ -1,4 +1,4 @@
-Build/obj/Callbacks.o: Autosar/Os/src/Callbacks.c \
+Build/obj/callbacks.o: Autosar/Os/src/callbacks.c \
  Autosar/Os/include/Callbacks.h Autosar/Os/include/Scheduler.h \
  Autosar/Mcal/Base/include/StandardTypes.h \
  Autosar/Mcal/Base/include/Platform_Types.h \
@@ -25,7 +25,24 @@ Build/obj/Callbacks.o: Autosar/Os/src/Callbacks.c \
  Autosar/Mcal/Base/include/Dio_MemMap.h \
  Autosar/IoHwAbs/include/HwIoAb_0_Buttons_Cfg.h \
  Autosar/IoHwAbs/include/HwIoAb_1_Leds.h \
- Autosar/IoHwAbs/include/HwIoAb_1_Leds_Cfg.h
+ Autosar/IoHwAbs/include/HwIoAb_1_Leds_Cfg.h \
+ Autosar/IoHwAbs/include/HwIoAb_2_Pots.h Autosar/Mcal/Adc/include/Adc.h \
+ Build/cfg/include/Adc_Cfg.h Build/cfg/include/Adc_CfgDefines.h \
+ Autosar/Mcal/Adc/include/Adc_Types.h \
+ Autosar/Mcal/Adc/include/Adc_Ipw_Types.h \
+ Build/cfg/include/Adc_Ipw_CfgDefines.h \
+ Autosar/Mcal/Adc/include/Adc_Ip_Types.h \
+ Build/cfg/include/Adc_Ip_CfgDefines.h \
+ Autosar/Mcal/Base/header/S32K144_ADC.h \
+ Autosar/Mcal/Base/header/S32K144_SIM.h \
+ Autosar/Mcal/Adc/include/Adc_Ip_HeaderWrapper_S32K1xx.h \
+ Autosar/Mcal/Adc/include/Pdb_Adc_Ip_Types.h \
+ Build/cfg/include/Pdb_Adc_Ip_CfgDefines.h \
+ Autosar/Mcal/Base/header/S32K144_PDB.h \
+ Build/cfg/include/Adc_CfgDefines.h Build/cfg/include/Adc_PBcfg.h \
+ Autosar/Mcal/Base/include/Adc_MemMap.h \
+ Autosar/Mcal/Adc/include/Adc_Types.h \
+ Autosar/IoHwAbs/include/HwIoAb_2_Pots_Cfg.h
 Autosar/Os/include/Callbacks.h:
 Autosar/Os/include/Scheduler.h:
 Autosar/Mcal/Base/include/StandardTypes.h:
@@ -62,3 +79,23 @@ Autosar/Mcal/Base/include/Dio_MemMap.h:
 Autosar/IoHwAbs/include/HwIoAb_0_Buttons_Cfg.h:
 Autosar/IoHwAbs/include/HwIoAb_1_Leds.h:
 Autosar/IoHwAbs/include/HwIoAb_1_Leds_Cfg.h:
+Autosar/IoHwAbs/include/HwIoAb_2_Pots.h:
+Autosar/Mcal/Adc/include/Adc.h:
+Build/cfg/include/Adc_Cfg.h:
+Build/cfg/include/Adc_CfgDefines.h:
+Autosar/Mcal/Adc/include/Adc_Types.h:
+Autosar/Mcal/Adc/include/Adc_Ipw_Types.h:
+Build/cfg/include/Adc_Ipw_CfgDefines.h:
+Autosar/Mcal/Adc/include/Adc_Ip_Types.h:
+Build/cfg/include/Adc_Ip_CfgDefines.h:
+Autosar/Mcal/Base/header/S32K144_ADC.h:
+Autosar/Mcal/Base/header/S32K144_SIM.h:
+Autosar/Mcal/Adc/include/Adc_Ip_HeaderWrapper_S32K1xx.h:
+Autosar/Mcal/Adc/include/Pdb_Adc_Ip_Types.h:
+Build/cfg/include/Pdb_Adc_Ip_CfgDefines.h:
+Autosar/Mcal/Base/header/S32K144_PDB.h:
+Build/cfg/include/Adc_CfgDefines.h:
+Build/cfg/include/Adc_PBcfg.h:
+Autosar/Mcal/Base/include/Adc_MemMap.h:
+Autosar/Mcal/Adc/include/Adc_Types.h:
+Autosar/IoHwAbs/include/HwIoAb_2_Pots_Cfg.h:

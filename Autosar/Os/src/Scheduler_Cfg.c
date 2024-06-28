@@ -44,7 +44,7 @@ const Task_ConfigType Task_Config[ SCHEDULER_TASKS ]  = {
 //Timer buffer.
 const Timer_ConfigType Timer_Config[ SCHEDULER_TIMERS ] = {
     {
-        .InitTimeout = SCHEDULER_TIMER_TIMEOUT_300MS,
+        .InitTimeout = SCHEDULER_TIMER1_TIMEOUT_100MS,
         .InitFlag = FALSE,
         .CallbackFunc = Timer1_callback
     }

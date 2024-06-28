@@ -4,7 +4,7 @@ Reclaiming variables:
 Clearing address taken flags:
 Symbol table:
 
-Power_Ip_HwIPsConfigPB/3 (Power_Ip_HwIPsConfigPB) @069503a8
+Power_Ip_HwIPsConfigPB/3 (Power_Ip_HwIPsConfigPB) @069e33a8
   Type: variable
   Body removed by symtab_remove_unreachable_nodes
   Visibility: external public
@@ -12,7 +12,7 @@ Power_Ip_HwIPsConfigPB/3 (Power_Ip_HwIPsConfigPB) @069503a8
   Referring: Mcu_Config/0 (addr) 
   Availability: not_available
   Varpool flags: read-only
-Mcu_aClockConfigPB/2 (Mcu_aClockConfigPB) @06950360
+Mcu_aClockConfigPB/2 (Mcu_aClockConfigPB) @069e3360
   Type: variable
   Body removed by symtab_remove_unreachable_nodes
   Visibility: external public
@@ -20,7 +20,7 @@ Mcu_aClockConfigPB/2 (Mcu_aClockConfigPB) @06950360
   Referring: Mcu_Config/0 (addr) 
   Availability: not_available
   Varpool flags: read-only
-Power_Ip_aModeConfigPB/1 (Power_Ip_aModeConfigPB) @06950318
+Power_Ip_aModeConfigPB/1 (Power_Ip_aModeConfigPB) @069e3318
   Type: variable
   Body removed by symtab_remove_unreachable_nodes
   Visibility: external public
@@ -28,7 +28,7 @@ Power_Ip_aModeConfigPB/1 (Power_Ip_aModeConfigPB) @06950318
   Referring: Mcu_Config/0 (addr) 
   Availability: not_available
   Varpool flags: read-only
-Mcu_Config/0 (Mcu_Config) @069501f8
+Mcu_Config/0 (Mcu_Config) @069e31f8
   Type: variable definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: Power_Ip_aModeConfigPB/1 (addr) Mcu_aClockConfigPB/2 (addr) Power_Ip_HwIPsConfigPB/3 (addr) 

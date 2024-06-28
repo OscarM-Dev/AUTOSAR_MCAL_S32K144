@@ -100,14 +100,14 @@ void Task2_callback( void ) {
  * @brief This is the callback function for the timer 1.
  *
  */
-void Timer1_callback( void ) {    
+void Timer1_callback( void ) {
 }
 
 /**
  * @brief This is the callback function for the timer 2.
  *
  */
-void Timer2_callback( void ) {    
+void Timer2_callback( void ) {
 }
 
 /**

@@ -1,5 +1,0 @@
-Autosar/Os/src/queue.c:20:6:Queue_initQueue	8	static
-Autosar/Os/src/queue.c:36:9:Queue_isQueueEmpty	8	static
-Autosar/Os/src/queue.c:48:6:Queue_flushQueue	16	static
-Autosar/Os/src/queue.c:72:9:Queue_writeData	56	static
-Autosar/Os/src/queue.c:120:9:Queue_readData	56	static

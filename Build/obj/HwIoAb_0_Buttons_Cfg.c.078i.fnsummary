@@ -1,20 +1,20 @@
 Symbol table:
 
-ButtonsControl_Ptr/2 (ButtonsControl_Ptr) @06858480
+ButtonsControl_Ptr/2 (ButtonsControl_Ptr) @069ae480
   Type: variable definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: ButtonsCtrl/1 (addr) 
   Referring: 
   Availability: available
   Varpool flags: initialized
-ButtonsCtrl/1 (ButtonsCtrl) @06858438
+ButtonsCtrl/1 (ButtonsCtrl) @069ae438
   Type: variable definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: 
   Referring: ButtonsControl_Ptr/2 (addr) 
   Availability: available
   Varpool flags:
-ButtonsCfg/0 (ButtonsCfg) @068583f0
+ButtonsCfg/0 (ButtonsCfg) @069ae3f0
   Type: variable definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: 

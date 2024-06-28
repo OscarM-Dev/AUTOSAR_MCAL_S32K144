@@ -1,34 +1,34 @@
 Symbol table:
 
-Dio_Config/4 (Dio_Config) @05c9aa20
+Dio_Config/4 (Dio_Config) @06829a20
   Type: variable definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: Dio_au32ChannelToPartitionMap/0 (addr) Dio_au32PortToPartitionMap/1 (addr) 
   Referring: 
   Availability: available
   Varpool flags: initialized read-only const-value-known
-Dio_aAvailablePinsForRead/3 (Dio_aAvailablePinsForRead) @05c9a9d8
+Dio_aAvailablePinsForRead/3 (Dio_aAvailablePinsForRead) @068299d8
   Type: variable definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: 
   Referring: 
   Availability: available
   Varpool flags: initialized read-only const-value-known
-Dio_aAvailablePinsForWrite/2 (Dio_aAvailablePinsForWrite) @05c9a948
+Dio_aAvailablePinsForWrite/2 (Dio_aAvailablePinsForWrite) @06829948
   Type: variable definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: 
   Referring: 
   Availability: available
   Varpool flags: initialized read-only const-value-known
-Dio_au32PortToPartitionMap/1 (Dio_au32PortToPartitionMap) @05c9a8b8
+Dio_au32PortToPartitionMap/1 (Dio_au32PortToPartitionMap) @068298b8
   Type: variable definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: 
   Referring: Dio_Config/4 (addr) 
   Availability: available
   Varpool flags: initialized read-only const-value-known
-Dio_au32ChannelToPartitionMap/0 (Dio_au32ChannelToPartitionMap) @05c9a828
+Dio_au32ChannelToPartitionMap/0 (Dio_au32ChannelToPartitionMap) @06829828
   Type: variable definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: 

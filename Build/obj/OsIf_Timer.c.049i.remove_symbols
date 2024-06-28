@@ -4,7 +4,7 @@ Reclaiming variables:
 Clearing address taken flags:
 Symbol table:
 
-OsIf_Timer_System_MicrosToTicks/13 (OsIf_Timer_System_MicrosToTicks) @06822460
+OsIf_Timer_System_MicrosToTicks/13 (OsIf_Timer_System_MicrosToTicks) @05d13460
   Type: function
   Visibility: external public
   References: 
@@ -13,7 +13,7 @@ OsIf_Timer_System_MicrosToTicks/13 (OsIf_Timer_System_MicrosToTicks) @06822460
   Function flags:
   Called by: OsIf_MicrosToTicks/8 
   Calls: 
-OsIf_Timer_System_SetTimerFrequency/12 (OsIf_Timer_System_SetTimerFrequency) @068221c0
+OsIf_Timer_System_SetTimerFrequency/12 (OsIf_Timer_System_SetTimerFrequency) @05d131c0
   Type: function
   Visibility: external public
   References: 
@@ -22,7 +22,7 @@ OsIf_Timer_System_SetTimerFrequency/12 (OsIf_Timer_System_SetTimerFrequency) @06
   Function flags:
   Called by: OsIf_SetTimerFrequency/7 
   Calls: 
-OsIf_Timer_System_GetElapsed/11 (OsIf_Timer_System_GetElapsed) @0681d7e0
+OsIf_Timer_System_GetElapsed/11 (OsIf_Timer_System_GetElapsed) @05d0e7e0
   Type: function
   Visibility: external public
   References: 
@@ -31,7 +31,7 @@ OsIf_Timer_System_GetElapsed/11 (OsIf_Timer_System_GetElapsed) @0681d7e0
   Function flags:
   Called by: OsIf_GetElapsed/6 
   Calls: 
-OsIf_Timer_System_GetCounter/10 (OsIf_Timer_System_GetCounter) @0681d000
+OsIf_Timer_System_GetCounter/10 (OsIf_Timer_System_GetCounter) @05d0e000
   Type: function
   Visibility: external public
   References: 
@@ -40,7 +40,7 @@ OsIf_Timer_System_GetCounter/10 (OsIf_Timer_System_GetCounter) @0681d000
   Function flags:
   Called by: OsIf_GetCounter/5 
   Calls: 
-OsIf_Timer_System_Init/9 (OsIf_Timer_System_Init) @0681de00
+OsIf_Timer_System_Init/9 (OsIf_Timer_System_Init) @05d0ee00
   Type: function
   Visibility: external public
   References: 
@@ -49,7 +49,7 @@ OsIf_Timer_System_Init/9 (OsIf_Timer_System_Init) @0681de00
   Function flags:
   Called by: OsIf_Init/4 
   Calls: 
-OsIf_MicrosToTicks/8 (OsIf_MicrosToTicks) @0681d9a0
+OsIf_MicrosToTicks/8 (OsIf_MicrosToTicks) @05d0e9a0
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: 
@@ -58,7 +58,7 @@ OsIf_MicrosToTicks/8 (OsIf_MicrosToTicks) @0681d9a0
   Function flags: body
   Called by: 
   Calls: OsIf_Timer_System_MicrosToTicks/13 OsIf_Timer_Dummy_MicrosToTicks/3 
-OsIf_SetTimerFrequency/7 (OsIf_SetTimerFrequency) @0681d700
+OsIf_SetTimerFrequency/7 (OsIf_SetTimerFrequency) @05d0e700
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: 
@@ -67,7 +67,7 @@ OsIf_SetTimerFrequency/7 (OsIf_SetTimerFrequency) @0681d700
   Function flags: body
   Called by: 
   Calls: OsIf_Timer_System_SetTimerFrequency/12 OsIf_Timer_Dummy_SetTimerFrequency/2 
-OsIf_GetElapsed/6 (OsIf_GetElapsed) @0681d460
+OsIf_GetElapsed/6 (OsIf_GetElapsed) @05d0e460
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: 
@@ -76,7 +76,7 @@ OsIf_GetElapsed/6 (OsIf_GetElapsed) @0681d460
   Function flags: body
   Called by: 
   Calls: OsIf_Timer_System_GetElapsed/11 OsIf_Timer_Dummy_GetElapsed/1 
-OsIf_GetCounter/5 (OsIf_GetCounter) @0681d1c0
+OsIf_GetCounter/5 (OsIf_GetCounter) @05d0e1c0
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: 
@@ -85,7 +85,7 @@ OsIf_GetCounter/5 (OsIf_GetCounter) @0681d1c0
   Function flags: body
   Called by: 
   Calls: OsIf_Timer_System_GetCounter/10 OsIf_Timer_Dummy_GetCounter/0 
-OsIf_Init/4 (OsIf_Init) @06814ee0
+OsIf_Init/4 (OsIf_Init) @05d07ee0
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: 
@@ -94,7 +94,7 @@ OsIf_Init/4 (OsIf_Init) @06814ee0
   Function flags: body
   Called by: 
   Calls: OsIf_Timer_System_Init/9 
-OsIf_Timer_Dummy_MicrosToTicks/3 (OsIf_Timer_Dummy_MicrosToTicks) @068149a0
+OsIf_Timer_Dummy_MicrosToTicks/3 (OsIf_Timer_Dummy_MicrosToTicks) @05d079a0
   Type: function definition analyzed
   Visibility: no_reorder prevailing_def_ironly
   References: 
@@ -103,7 +103,7 @@ OsIf_Timer_Dummy_MicrosToTicks/3 (OsIf_Timer_Dummy_MicrosToTicks) @068149a0
   Function flags: body local
   Called by: OsIf_MicrosToTicks/8 
   Calls: 
-OsIf_Timer_Dummy_SetTimerFrequency/2 (OsIf_Timer_Dummy_SetTimerFrequency) @06814e00
+OsIf_Timer_Dummy_SetTimerFrequency/2 (OsIf_Timer_Dummy_SetTimerFrequency) @05d07e00
   Type: function definition analyzed
   Visibility: no_reorder prevailing_def_ironly
   References: 
@@ -112,7 +112,7 @@ OsIf_Timer_Dummy_SetTimerFrequency/2 (OsIf_Timer_Dummy_SetTimerFrequency) @06814
   Function flags: body local
   Called by: OsIf_SetTimerFrequency/7 
   Calls: 
-OsIf_Timer_Dummy_GetElapsed/1 (OsIf_Timer_Dummy_GetElapsed) @06814b60
+OsIf_Timer_Dummy_GetElapsed/1 (OsIf_Timer_Dummy_GetElapsed) @05d07b60
   Type: function definition analyzed
   Visibility: no_reorder prevailing_def_ironly
   References: 
@@ -121,7 +121,7 @@ OsIf_Timer_Dummy_GetElapsed/1 (OsIf_Timer_Dummy_GetElapsed) @06814b60
   Function flags: body local
   Called by: OsIf_GetElapsed/6 
   Calls: 
-OsIf_Timer_Dummy_GetCounter/0 (OsIf_Timer_Dummy_GetCounter) @068148c0
+OsIf_Timer_Dummy_GetCounter/0 (OsIf_Timer_Dummy_GetCounter) @05d078c0
   Type: function definition analyzed
   Visibility: no_reorder prevailing_def_ironly
   References: 

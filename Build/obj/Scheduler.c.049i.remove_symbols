@@ -4,7 +4,7 @@ Reclaiming variables:
 Clearing address taken flags:
 Symbol table:
 
-OsIf_GetElapsed/69 (OsIf_GetElapsed) @05ddca80
+OsIf_GetElapsed/69 (OsIf_GetElapsed) @06a83a80
   Type: function
   Visibility: external public
   References: 
@@ -13,7 +13,7 @@ OsIf_GetElapsed/69 (OsIf_GetElapsed) @05ddca80
   Function flags:
   Called by: Scheduler_MainFunction/64 
   Calls: 
-OsIf_GetCounter/68 (OsIf_GetCounter) @05ddc9a0
+OsIf_GetCounter/68 (OsIf_GetCounter) @06a839a0
   Type: function
   Visibility: external public
   References: 
@@ -22,7 +22,7 @@ OsIf_GetCounter/68 (OsIf_GetCounter) @05ddc9a0
   Function flags:
   Called by: Scheduler_MainFunction/64 
   Calls: 
-OsIf_MicrosToTicks/67 (OsIf_MicrosToTicks) @05ddc8c0
+OsIf_MicrosToTicks/67 (OsIf_MicrosToTicks) @06a838c0
   Type: function
   Visibility: external public
   References: 
@@ -31,7 +31,7 @@ OsIf_MicrosToTicks/67 (OsIf_MicrosToTicks) @05ddc8c0
   Function flags:
   Called by: Scheduler_MainFunction/64 
   Calls: 
-SchedulerCtrl_Ptr/66 (SchedulerCtrl_Ptr) @05d97678
+SchedulerCtrl_Ptr/66 (SchedulerCtrl_Ptr) @06a3e678
   Type: variable
   Body removed by symtab_remove_unreachable_nodes
   Visibility: external public
@@ -39,7 +39,7 @@ SchedulerCtrl_Ptr/66 (SchedulerCtrl_Ptr) @05d97678
   Referring: Scheduler_StartTimer/60 (read) Scheduler_GetTimer/62 (read) Scheduler_ReadQueue/55 (read) Scheduler_ReadQueue/55 (read) Scheduler_ReloadTimer/63 (read) Scheduler_ReloadTimer/63 (read) Scheduler_WriteQueue/54 (read) Scheduler_WriteQueue/54 (read) Scheduler_WriteQueue/54 (read) Scheduler_WriteQueue/54 (read) Scheduler_StartTimer/60 (read) Scheduler_StartTimer/60 (read) Scheduler_GetStatusQueue/52 (read) Scheduler_GetStatusQueue/52 (read) Scheduler_ReadQueue/55 (read) Scheduler_ReadQueue/55 (read) Scheduler_ReadQueue/55 (read) Scheduler_ReadQueue/55 (read) Scheduler_FlushQueue/53 (read) Scheduler_FlushQueue/53 (read) Scheduler_FlushQueue/53 (read) Scheduler_FlushQueue/53 (read) Scheduler_WriteQueue/54 (read) Scheduler_ReadQueue/55 (read) Scheduler_StopTask/57 (read) Scheduler_WriteQueue/54 (read) Scheduler_WriteQueue/54 (read) Scheduler_WriteQueue/54 (read) Scheduler_StartTask/58 (read) Scheduler_PeriodTask/59 (read) Scheduler_StartTimer/60 (read) Scheduler_ReadQueue/55 (read) Scheduler_StopTimer/61 (read) Scheduler_MainFunction/64 (read) Scheduler_MainFunction/64 (read) Scheduler_MainFunction/64 (read) Scheduler_MainFunction/64 (read) Scheduler_MainFunction/64 (read) Scheduler_MainFunction/64 (read) Scheduler_MainFunction/64 (read) Scheduler_MainFunction/64 (read) Scheduler_MainFunction/64 (read) 
   Availability: not_available
   Varpool flags:
-SchedulerConfig_Ptr/65 (SchedulerConfig_Ptr) @05d97630
+SchedulerConfig_Ptr/65 (SchedulerConfig_Ptr) @06a3e630
   Type: variable
   Body removed by symtab_remove_unreachable_nodes
   Visibility: external public
@@ -47,7 +47,7 @@ SchedulerConfig_Ptr/65 (SchedulerConfig_Ptr) @05d97630
   Referring: Scheduler_GetTimer/62 (read) Scheduler_ReloadTimer/63 (read) Scheduler_ReadQueue/55 (read) Scheduler_ReadQueue/55 (read) Scheduler_PeriodTask/59 (read) Scheduler_PeriodTask/59 (read) Scheduler_GetStatusQueue/52 (read) Scheduler_Init/56 (read) Scheduler_Init/56 (read) Scheduler_ReloadTimer/63 (read) Scheduler_ReloadTimer/63 (read) Scheduler_FlushQueue/53 (read) Scheduler_WriteQueue/54 (read) Scheduler_WriteQueue/54 (read) Scheduler_WriteQueue/54 (read) Scheduler_WriteQueue/54 (read) Scheduler_WriteQueue/54 (read) Scheduler_ReadQueue/55 (read) Scheduler_Init/56 (read) Scheduler_ReadQueue/55 (read) Scheduler_ReadQueue/55 (read) Scheduler_StopTask/57 (read) Scheduler_StartTask/58 (read) Scheduler_PeriodTask/59 (read) Scheduler_StartTimer/60 (read) Scheduler_Init/56 (read) Scheduler_Init/56 (read) Scheduler_StopTimer/61 (read) Scheduler_MainFunction/64 (read) Scheduler_MainFunction/64 (read) Scheduler_MainFunction/64 (read) Scheduler_MainFunction/64 (read) Scheduler_MainFunction/64 (read) Scheduler_MainFunction/64 (read) Scheduler_MainFunction/64 (read) 
   Availability: not_available
   Varpool flags:
-Scheduler_MainFunction/64 (Scheduler_MainFunction) @05d72460
+Scheduler_MainFunction/64 (Scheduler_MainFunction) @06a28460
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: SchedulerConfig_Ptr/65 (read) SchedulerCtrl_Ptr/66 (read) SchedulerCtrl_Ptr/66 (read) SchedulerConfig_Ptr/65 (read) SchedulerCtrl_Ptr/66 (read) SchedulerConfig_Ptr/65 (read) SchedulerConfig_Ptr/65 (read) SchedulerCtrl_Ptr/66 (read) SchedulerCtrl_Ptr/66 (read) SchedulerConfig_Ptr/65 (read) SchedulerCtrl_Ptr/66 (read) SchedulerCtrl_Ptr/66 (read) SchedulerCtrl_Ptr/66 (read) SchedulerConfig_Ptr/65 (read) SchedulerCtrl_Ptr/66 (read) SchedulerConfig_Ptr/65 (read) 
@@ -58,7 +58,7 @@ Scheduler_MainFunction/64 (Scheduler_MainFunction) @05d72460
   Calls: Bfx_GetBit_u32u8_u8/2 Scheduler_GetTimer/62 Bfx_GetBit_u32u8_u8/2 OsIf_GetElapsed/69 OsIf_GetCounter/68 OsIf_MicrosToTicks/67 
    Indirect call Num speculative call targets: 0
    Indirect call Num speculative call targets: 0
-Scheduler_ReloadTimer/63 (Scheduler_ReloadTimer) @05d721c0
+Scheduler_ReloadTimer/63 (Scheduler_ReloadTimer) @06a281c0
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: SchedulerConfig_Ptr/65 (read) SchedulerConfig_Ptr/65 (read) SchedulerConfig_Ptr/65 (read) SchedulerCtrl_Ptr/66 (read) SchedulerCtrl_Ptr/66 (read) 
@@ -67,7 +67,7 @@ Scheduler_ReloadTimer/63 (Scheduler_ReloadTimer) @05d721c0
   Function flags: body
   Called by: 
   Calls: Scheduler_StartTimer/60 
-Scheduler_GetTimer/62 (Scheduler_GetTimer) @05d60d20
+Scheduler_GetTimer/62 (Scheduler_GetTimer) @06a16d20
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: SchedulerConfig_Ptr/65 (read) SchedulerCtrl_Ptr/66 (read) 
@@ -76,7 +76,7 @@ Scheduler_GetTimer/62 (Scheduler_GetTimer) @05d60d20
   Function flags: body
   Called by: Scheduler_MainFunction/64 
   Calls: 
-Scheduler_StopTimer/61 (Scheduler_StopTimer) @05d607e0
+Scheduler_StopTimer/61 (Scheduler_StopTimer) @06a167e0
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: SchedulerConfig_Ptr/65 (read) SchedulerCtrl_Ptr/66 (read) 
@@ -85,7 +85,7 @@ Scheduler_StopTimer/61 (Scheduler_StopTimer) @05d607e0
   Function flags: body
   Called by: 
   Calls: Bfx_ClrBit_u32u8/1 
-Scheduler_StartTimer/60 (Scheduler_StartTimer) @05d602a0
+Scheduler_StartTimer/60 (Scheduler_StartTimer) @06a162a0
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: SchedulerConfig_Ptr/65 (read) SchedulerCtrl_Ptr/66 (read) SchedulerCtrl_Ptr/66 (read) SchedulerCtrl_Ptr/66 (read) SchedulerCtrl_Ptr/66 (read) 
@@ -94,7 +94,7 @@ Scheduler_StartTimer/60 (Scheduler_StartTimer) @05d602a0
   Function flags: body
   Called by: Scheduler_ReloadTimer/63 
   Calls: Bfx_SetBit_u32u8/0 
-Scheduler_PeriodTask/59 (Scheduler_PeriodTask) @05d60ee0
+Scheduler_PeriodTask/59 (Scheduler_PeriodTask) @06a16ee0
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: SchedulerConfig_Ptr/65 (read) SchedulerConfig_Ptr/65 (read) SchedulerConfig_Ptr/65 (read) SchedulerCtrl_Ptr/66 (read) 
@@ -103,7 +103,7 @@ Scheduler_PeriodTask/59 (Scheduler_PeriodTask) @05d60ee0
   Function flags: body
   Called by: 
   Calls: 
-Scheduler_StartTask/58 (Scheduler_StartTask) @05d60c40
+Scheduler_StartTask/58 (Scheduler_StartTask) @06a16c40
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: SchedulerConfig_Ptr/65 (read) SchedulerCtrl_Ptr/66 (read) 
@@ -112,7 +112,7 @@ Scheduler_StartTask/58 (Scheduler_StartTask) @05d60c40
   Function flags: body
   Called by: 
   Calls: Bfx_SetBit_u32u8/0 
-Scheduler_StopTask/57 (Scheduler_StopTask) @05d609a0
+Scheduler_StopTask/57 (Scheduler_StopTask) @06a169a0
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: SchedulerConfig_Ptr/65 (read) SchedulerCtrl_Ptr/66 (read) 
@@ -121,7 +121,7 @@ Scheduler_StopTask/57 (Scheduler_StopTask) @05d609a0
   Function flags: body
   Called by: 
   Calls: Bfx_ClrBit_u32u8/1 
-Scheduler_Init/56 (Scheduler_Init) @05d60700
+Scheduler_Init/56 (Scheduler_Init) @06a16700
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: SchedulerConfig_Ptr/65 (read) SchedulerConfig_Ptr/65 (read) SchedulerConfig_Ptr/65 (read) SchedulerConfig_Ptr/65 (read) SchedulerConfig_Ptr/65 (read) 
@@ -130,7 +130,7 @@ Scheduler_Init/56 (Scheduler_Init) @05d60700
   Function flags: body
   Called by: 
   Calls: Scheduler_InitQueue/51 Bfx_PutBit_u32u8u8/17 Bfx_PutBit_u32u8u8/17 
-Scheduler_ReadQueue/55 (Scheduler_ReadQueue) @05d60460
+Scheduler_ReadQueue/55 (Scheduler_ReadQueue) @06a16460
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: SchedulerConfig_Ptr/65 (read) SchedulerConfig_Ptr/65 (read) SchedulerCtrl_Ptr/66 (read) SchedulerConfig_Ptr/65 (read) SchedulerConfig_Ptr/65 (read) SchedulerCtrl_Ptr/66 (read) SchedulerCtrl_Ptr/66 (read) SchedulerConfig_Ptr/65 (read) SchedulerCtrl_Ptr/66 (read) SchedulerCtrl_Ptr/66 (read) SchedulerCtrl_Ptr/66 (read) SchedulerCtrl_Ptr/66 (read) SchedulerCtrl_Ptr/66 (read) 
@@ -139,7 +139,7 @@ Scheduler_ReadQueue/55 (Scheduler_ReadQueue) @05d60460
   Function flags: body
   Called by: 
   Calls: Bfx_SetBit_u32u8/0 Bfx_ClrBit_u32u8/1 Scheduler_GetStatusQueue/52 MemCopy/50 Scheduler_GetStatusQueue/52 
-Scheduler_WriteQueue/54 (Scheduler_WriteQueue) @05d601c0
+Scheduler_WriteQueue/54 (Scheduler_WriteQueue) @06a161c0
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: SchedulerConfig_Ptr/65 (read) SchedulerConfig_Ptr/65 (read) SchedulerCtrl_Ptr/66 (read) SchedulerConfig_Ptr/65 (read) SchedulerConfig_Ptr/65 (read) SchedulerCtrl_Ptr/66 (read) SchedulerCtrl_Ptr/66 (read) SchedulerConfig_Ptr/65 (read) SchedulerCtrl_Ptr/66 (read) SchedulerCtrl_Ptr/66 (read) SchedulerCtrl_Ptr/66 (read) SchedulerCtrl_Ptr/66 (read) SchedulerCtrl_Ptr/66 (read) 
@@ -148,7 +148,7 @@ Scheduler_WriteQueue/54 (Scheduler_WriteQueue) @05d601c0
   Function flags: body
   Called by: 
   Calls: Bfx_SetBit_u32u8/0 Bfx_ClrBit_u32u8/1 Scheduler_GetStatusQueue/52 MemCopy/50 Scheduler_GetStatusQueue/52 
-Scheduler_FlushQueue/53 (Scheduler_FlushQueue) @05d5ae00
+Scheduler_FlushQueue/53 (Scheduler_FlushQueue) @06a10e00
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: SchedulerConfig_Ptr/65 (read) SchedulerCtrl_Ptr/66 (read) SchedulerCtrl_Ptr/66 (read) SchedulerCtrl_Ptr/66 (read) SchedulerCtrl_Ptr/66 (read) 
@@ -157,7 +157,7 @@ Scheduler_FlushQueue/53 (Scheduler_FlushQueue) @05d5ae00
   Function flags: body
   Called by: 
   Calls: Bfx_SetBit_u32u8/0 Bfx_ClrBit_u32u8/1 
-Scheduler_GetStatusQueue/52 (Scheduler_GetStatusQueue) @05d5a8c0
+Scheduler_GetStatusQueue/52 (Scheduler_GetStatusQueue) @06a108c0
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: SchedulerConfig_Ptr/65 (read) SchedulerCtrl_Ptr/66 (read) SchedulerCtrl_Ptr/66 (read) 
@@ -166,7 +166,7 @@ Scheduler_GetStatusQueue/52 (Scheduler_GetStatusQueue) @05d5a8c0
   Function flags: body
   Called by: Scheduler_ReadQueue/55 Scheduler_ReadQueue/55 Scheduler_WriteQueue/54 Scheduler_WriteQueue/54 
   Calls: Bfx_GetBit_u32u8_u8/2 Bfx_GetBit_u32u8_u8/2 
-Scheduler_InitQueue/51 (Scheduler_InitQueue) @05d5ad20
+Scheduler_InitQueue/51 (Scheduler_InitQueue) @06a10d20
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: 
@@ -175,7 +175,7 @@ Scheduler_InitQueue/51 (Scheduler_InitQueue) @05d5ad20
   Function flags: body
   Called by: Scheduler_Init/56 
   Calls: Bfx_SetBit_u32u8/0 Bfx_ClrBit_u32u8/1 
-MemCopy/50 (MemCopy) @05d5aa80
+MemCopy/50 (MemCopy) @06a10a80
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: 
@@ -184,7 +184,7 @@ MemCopy/50 (MemCopy) @05d5aa80
   Function flags: body
   Called by: Scheduler_ReadQueue/55 Scheduler_WriteQueue/54 
   Calls: 
-Bfx_PutBit_u32u8u8/17 (Bfx_PutBit_u32u8u8) @05d2eee0
+Bfx_PutBit_u32u8u8/17 (Bfx_PutBit_u32u8u8) @069e4ee0
   Type: function definition analyzed
   Visibility: no_reorder prevailing_def_ironly
   References: 
@@ -193,7 +193,7 @@ Bfx_PutBit_u32u8u8/17 (Bfx_PutBit_u32u8u8) @05d2eee0
   Function flags: body local
   Called by: Scheduler_Init/56 Scheduler_Init/56 
   Calls: 
-Bfx_GetBit_u32u8_u8/2 (Bfx_GetBit_u32u8_u8) @05cac700
+Bfx_GetBit_u32u8_u8/2 (Bfx_GetBit_u32u8_u8) @06964700
   Type: function definition analyzed
   Visibility: no_reorder prevailing_def_ironly
   References: 
@@ -202,7 +202,7 @@ Bfx_GetBit_u32u8_u8/2 (Bfx_GetBit_u32u8_u8) @05cac700
   Function flags: body local
   Called by: Scheduler_MainFunction/64 Scheduler_MainFunction/64 Scheduler_GetStatusQueue/52 Scheduler_GetStatusQueue/52 
   Calls: 
-Bfx_ClrBit_u32u8/1 (Bfx_ClrBit_u32u8) @05cac460
+Bfx_ClrBit_u32u8/1 (Bfx_ClrBit_u32u8) @06964460
   Type: function definition analyzed
   Visibility: no_reorder prevailing_def_ironly
   References: 
@@ -211,7 +211,7 @@ Bfx_ClrBit_u32u8/1 (Bfx_ClrBit_u32u8) @05cac460
   Function flags: body local
   Called by: Scheduler_StopTimer/61 Scheduler_StopTask/57 Scheduler_ReadQueue/55 Scheduler_WriteQueue/54 Scheduler_FlushQueue/53 Scheduler_InitQueue/51 
   Calls: 
-Bfx_SetBit_u32u8/0 (Bfx_SetBit_u32u8) @05cac1c0
+Bfx_SetBit_u32u8/0 (Bfx_SetBit_u32u8) @069641c0
   Type: function definition analyzed
   Visibility: no_reorder prevailing_def_ironly
   References: 

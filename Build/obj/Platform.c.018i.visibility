@@ -13,7 +13,7 @@ Reclaiming variables:
 Clearing address taken flags:
 Symbol table:
 
-IntCtrl_Ip_InstallHandler/16 (IntCtrl_Ip_InstallHandler) @06d94c40
+IntCtrl_Ip_InstallHandler/16 (IntCtrl_Ip_InstallHandler) @05fa2e00
   Type: function
   Visibility: external public
   References: 
@@ -22,7 +22,7 @@ IntCtrl_Ip_InstallHandler/16 (IntCtrl_Ip_InstallHandler) @06d94c40
   Function flags:
   Called by: Platform_Ipw_InstallIrqHandler/4 
   Calls: 
-IntCtrl_Ip_GetPriority/15 (IntCtrl_Ip_GetPriority) @06d949a0
+IntCtrl_Ip_GetPriority/15 (IntCtrl_Ip_GetPriority) @05fa2b60
   Type: function
   Visibility: external public
   References: 
@@ -31,7 +31,7 @@ IntCtrl_Ip_GetPriority/15 (IntCtrl_Ip_GetPriority) @06d949a0
   Function flags:
   Called by: Platform_Ipw_GetIrqPriority/3 
   Calls: 
-IntCtrl_Ip_SetPriority/14 (IntCtrl_Ip_SetPriority) @06d94700
+IntCtrl_Ip_SetPriority/14 (IntCtrl_Ip_SetPriority) @05fa28c0
   Type: function
   Visibility: external public
   References: 
@@ -40,7 +40,7 @@ IntCtrl_Ip_SetPriority/14 (IntCtrl_Ip_SetPriority) @06d94700
   Function flags:
   Called by: Platform_Ipw_SetIrqPriority/2 
   Calls: 
-IntCtrl_Ip_DisableIrq/13 (IntCtrl_Ip_DisableIrq) @06d94460
+IntCtrl_Ip_DisableIrq/13 (IntCtrl_Ip_DisableIrq) @05fa2620
   Type: function
   Visibility: external public
   References: 
@@ -49,7 +49,7 @@ IntCtrl_Ip_DisableIrq/13 (IntCtrl_Ip_DisableIrq) @06d94460
   Function flags:
   Called by: Platform_Ipw_SetIrq/1 
   Calls: 
-IntCtrl_Ip_EnableIrq/12 (IntCtrl_Ip_EnableIrq) @06d94380
+IntCtrl_Ip_EnableIrq/12 (IntCtrl_Ip_EnableIrq) @05fa2540
   Type: function
   Visibility: external public
   References: 
@@ -58,7 +58,7 @@ IntCtrl_Ip_EnableIrq/12 (IntCtrl_Ip_EnableIrq) @06d94380
   Function flags:
   Called by: Platform_Ipw_SetIrq/1 
   Calls: 
-Platform_Ipw_Init/11 (Platform_Ipw_Init) @06d940e0
+Platform_Ipw_Init/11 (Platform_Ipw_Init) @05fa22a0
   Type: function
   Visibility: external public
   References: 
@@ -67,7 +67,7 @@ Platform_Ipw_Init/11 (Platform_Ipw_Init) @06d940e0
   Function flags:
   Called by: Platform_Init/5 
   Calls: 
-Platform_Config/10 (Platform_Config) @06d8f870
+Platform_Config/10 (Platform_Config) @05f9e900
   Type: variable
   Body removed by symtab_remove_unreachable_nodes
   Visibility: external public
@@ -75,7 +75,7 @@ Platform_Config/10 (Platform_Config) @06d8f870
   Referring: Platform_Init/5 (read) 
   Availability: not_available
   Varpool flags: read-only
-Platform_InstallIrqHandler/9 (Platform_InstallIrqHandler) @06d90540
+Platform_InstallIrqHandler/9 (Platform_InstallIrqHandler) @05f9dc40
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: 
@@ -84,7 +84,7 @@ Platform_InstallIrqHandler/9 (Platform_InstallIrqHandler) @06d90540
   Function flags: body
   Called by: 
   Calls: Platform_Ipw_InstallIrqHandler/4 
-Platform_GetIrqPriority/8 (Platform_GetIrqPriority) @06d90ee0
+Platform_GetIrqPriority/8 (Platform_GetIrqPriority) @05f9d700
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: 
@@ -93,7 +93,7 @@ Platform_GetIrqPriority/8 (Platform_GetIrqPriority) @06d90ee0
   Function flags: body
   Called by: 
   Calls: Platform_Ipw_GetIrqPriority/3 
-Platform_SetIrqPriority/7 (Platform_SetIrqPriority) @06d90c40
+Platform_SetIrqPriority/7 (Platform_SetIrqPriority) @05f9de00
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: 
@@ -102,7 +102,7 @@ Platform_SetIrqPriority/7 (Platform_SetIrqPriority) @06d90c40
   Function flags: body
   Called by: 
   Calls: Platform_Ipw_SetIrqPriority/2 
-Platform_SetIrq/6 (Platform_SetIrq) @06d909a0
+Platform_SetIrq/6 (Platform_SetIrq) @05f9db60
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: 
@@ -111,7 +111,7 @@ Platform_SetIrq/6 (Platform_SetIrq) @06d909a0
   Function flags: body
   Called by: 
   Calls: Platform_Ipw_SetIrq/1 
-Platform_Init/5 (Platform_Init) @06d90700
+Platform_Init/5 (Platform_Init) @05f9d8c0
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: Platform_Config/10 (read) 
@@ -120,7 +120,7 @@ Platform_Init/5 (Platform_Init) @06d90700
   Function flags: body
   Called by: 
   Calls: Platform_Ipw_Init/11 
-Platform_Ipw_InstallIrqHandler/4 (Platform_Ipw_InstallIrqHandler) @06d899a0
+Platform_Ipw_InstallIrqHandler/4 (Platform_Ipw_InstallIrqHandler) @05f96c40
   Type: function definition analyzed
   Visibility: no_reorder prevailing_def_ironly
   References: 
@@ -129,7 +129,7 @@ Platform_Ipw_InstallIrqHandler/4 (Platform_Ipw_InstallIrqHandler) @06d899a0
   Function flags: body local
   Called by: Platform_InstallIrqHandler/9 
   Calls: IntCtrl_Ip_InstallHandler/16 
-Platform_Ipw_GetIrqPriority/3 (Platform_Ipw_GetIrqPriority) @06d89700
+Platform_Ipw_GetIrqPriority/3 (Platform_Ipw_GetIrqPriority) @05f969a0
   Type: function definition analyzed
   Visibility: no_reorder prevailing_def_ironly
   References: 
@@ -138,7 +138,7 @@ Platform_Ipw_GetIrqPriority/3 (Platform_Ipw_GetIrqPriority) @06d89700
   Function flags: body local
   Called by: Platform_GetIrqPriority/8 
   Calls: IntCtrl_Ip_GetPriority/15 
-Platform_Ipw_SetIrqPriority/2 (Platform_Ipw_SetIrqPriority) @06d89460
+Platform_Ipw_SetIrqPriority/2 (Platform_Ipw_SetIrqPriority) @05f96700
   Type: function definition analyzed
   Visibility: no_reorder prevailing_def_ironly
   References: 
@@ -147,7 +147,7 @@ Platform_Ipw_SetIrqPriority/2 (Platform_Ipw_SetIrqPriority) @06d89460
   Function flags: body local
   Called by: Platform_SetIrqPriority/7 
   Calls: IntCtrl_Ip_SetPriority/14 
-Platform_Ipw_SetIrq/1 (Platform_Ipw_SetIrq) @06d891c0
+Platform_Ipw_SetIrq/1 (Platform_Ipw_SetIrq) @05f96460
   Type: function definition analyzed
   Visibility: no_reorder prevailing_def_ironly
   References: 
@@ -159,11 +159,29 @@ Platform_Ipw_SetIrq/1 (Platform_Ipw_SetIrq) @06d891c0
 Platform_InstallIrqHandler (IRQn_Type eIrqNumber, void (*Platform_IrqHandlerType) (void) pfNewHandler, void (*Platform_IrqHandlerType) (void) * const pfOldHandler)
 {
   Std_ReturnType RetValue;
-  Std_ReturnType D.6204;
+  Std_ReturnType D.6208;
 
   <bb 2> :
   RetValue = 0;
   Platform_Ipw_InstallIrqHandler (eIrqNumber, pfNewHandler, pfOldHandler);
+  D.6208 = RetValue;
+
+  <bb 3> :
+<L0>:
+  return D.6208;
+
+}
+
+
+Platform_GetIrqPriority (IRQn_Type eIrqNumber, uint8 * u8Priority)
+{
+  Std_ReturnType RetValue;
+  Std_ReturnType D.6204;
+
+  <bb 2> :
+  RetValue = 0;
+  _1 = Platform_Ipw_GetIrqPriority (eIrqNumber);
+  *u8Priority = _1;
   D.6204 = RetValue;
 
   <bb 3> :
@@ -173,37 +191,19 @@ Platform_InstallIrqHandler (IRQn_Type eIrqNumber, void (*Platform_IrqHandlerType
 }
 
 
-Platform_GetIrqPriority (IRQn_Type eIrqNumber, uint8 * u8Priority)
-{
-  Std_ReturnType RetValue;
-  Std_ReturnType D.6200;
-
-  <bb 2> :
-  RetValue = 0;
-  _1 = Platform_Ipw_GetIrqPriority (eIrqNumber);
-  *u8Priority = _1;
-  D.6200 = RetValue;
-
-  <bb 3> :
-<L0>:
-  return D.6200;
-
-}
-
-
 Platform_SetIrqPriority (IRQn_Type eIrqNumber, uint8 u8Priority)
 {
   Std_ReturnType RetValue;
-  Std_ReturnType D.6198;
+  Std_ReturnType D.6202;
 
   <bb 2> :
   RetValue = 0;
   Platform_Ipw_SetIrqPriority (eIrqNumber, u8Priority);
-  D.6198 = RetValue;
+  D.6202 = RetValue;
 
   <bb 3> :
 <L0>:
-  return D.6198;
+  return D.6202;
 
 }
 
@@ -211,16 +211,16 @@ Platform_SetIrqPriority (IRQn_Type eIrqNumber, uint8 u8Priority)
 Platform_SetIrq (IRQn_Type eIrqNumber, boolean bEnable)
 {
   Std_ReturnType RetValue;
-  Std_ReturnType D.6193;
+  Std_ReturnType D.6197;
 
   <bb 2> :
   RetValue = 0;
   Platform_Ipw_SetIrq (eIrqNumber, bEnable);
-  D.6193 = RetValue;
+  D.6197 = RetValue;
 
   <bb 3> :
 <L0>:
-  return D.6193;
+  return D.6197;
 
 }
 
@@ -251,14 +251,14 @@ Platform_Ipw_InstallIrqHandler (IRQn_Type eIrqNumber, void (*IntCtrl_Ip_IrqHandl
 
 Platform_Ipw_GetIrqPriority (IRQn_Type eIrqNumber)
 {
-  uint8 D.6202;
+  uint8 D.6206;
 
   <bb 2> :
-  D.6202 = IntCtrl_Ip_GetPriority (eIrqNumber);
+  D.6206 = IntCtrl_Ip_GetPriority (eIrqNumber);
 
   <bb 3> :
 <L0>:
-  return D.6202;
+  return D.6206;
 
 }
 

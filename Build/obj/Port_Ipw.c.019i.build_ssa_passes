@@ -210,7 +210,7 @@ Port_Ipw_Init (const struct Port_ConfigType * pConfigPtr)
 
   <bb 5> :
   _24 = pConfigPtr->IpConfigPtr;
-  Port_Ci_Port_Ip_Init (9, _24);
+  Port_Ci_Port_Ip_Init (11, _24);
   Port_Ipw_Init_UnusedPins (pConfigPtr);
   return;
 

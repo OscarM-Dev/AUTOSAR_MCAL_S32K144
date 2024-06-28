@@ -710,6 +710,8 @@ PORT_CONFIG_PB
 #define PortConf_PortPin_PTE12  3
 #define PortConf_PortPin_PTD17  7
 #define PortConf_PortPin_PTA12  8
+#define PortConf_PortPin_PTB1  9
+#define PortConf_PortPin_PTB13  10
 
 
 /**
@@ -730,12 +732,12 @@ PORT_CONFIG_PB
 /**
 * @brief The maximum number of configured pins
 */
-#define PORT_MAX_CONFIGURED_PADS_U16                        ((uint16)9)
+#define PORT_MAX_CONFIGURED_PADS_U16                        ((uint16)11)
 
 /**
  * @brief Number of UnUsed pin array
 */
-#define PORT_MAX_UNUSED_PADS_U16   (75U)
+#define PORT_MAX_UNUSED_PADS_U16   (73U)
 
 /**
 * @brief Port driver Pre-Compile configuration switch

@@ -27,7 +27,7 @@
 #define SCHEDULER_TASK1_PERIOD_50MS 50    ///< Period value for task 1 in ms.
 #define SCHEDULER_TASK2_PERIOD_100MS 100    ///< Period value for taks 2 in ms. 
 
-#define SCHEDULER_TIMER_TIMEOUT_300MS 300  ///< Timeout value for timer 1, 2 and 3 in ms.
+#define SCHEDULER_TIMER1_TIMEOUT_100MS 100  ///< Timeout value for timer 1 in ms.
 
 #define SCHEDULER_MAX_QUEUES 32 ///< Max number of queues to handle.
 

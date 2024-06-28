@@ -1,9 +1,10 @@
 main ()
 {
-  int D.6529;
+  int D.7581;
 
   <bb 2> :
   EcuM_Init ();
+  HwIoAb_Init ();
   Scheduler_Init (&Scheduler_Control);
 
   <bb 3> :
