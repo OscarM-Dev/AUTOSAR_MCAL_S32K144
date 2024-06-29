@@ -23,7 +23,7 @@ int main( void ) {
     EcuM_Init();    //MCU configuration.
     HwIoAb_Init();  //Initializing IO hardware abstractions.
     Scheduler_Init( &Scheduler_Control );   //Initializing control structure for scheduler.
-    
+
     while( 1u ) {
         Scheduler_MainFunction();
     }

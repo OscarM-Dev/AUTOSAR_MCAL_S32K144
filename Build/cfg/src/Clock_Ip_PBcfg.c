@@ -306,7 +306,7 @@ const Clock_Ip_ClockConfigType Mcu_aClockConfigPB[1U] = {
             #if CLOCK_IP_SELECTORS_NO > 5U
             {
                 FTM1_CLK,                     /* Clock name associated to selector */
-                CLOCK_IS_OFF,                       /* Name of the selected input source */
+                SIRCDIV1_CLK,                       /* Name of the selected input source */
             },
             #endif
         
@@ -774,7 +774,7 @@ const Clock_Ip_ClockConfigType Mcu_aClockConfigPB[1U] = {
             #if CLOCK_IP_GATES_NO > 12U
             {
                 FTM1_CLK,                  /*!<     name;                    */
-                0U,                           /*!<     enable;                  */
+                1U,                           /*!<     enable;                  */
             },
             #endif
             #if CLOCK_IP_GATES_NO > 13U

@@ -16,7 +16,7 @@
 #include "HwIoAb_0_Buttons.h"
 #include "HwIoAb_1_Leds.h"
 #include "HwIoAb_2_Pots.h"
-
+#include "HwIoAb_3_Buzzer.h"
 
 //Function declarations.
 void MCU_clocks( void );

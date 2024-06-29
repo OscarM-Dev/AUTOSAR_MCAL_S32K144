@@ -11,8 +11,6 @@
 #include "StandardTypes.h"
 #include "Adc.h"
 
-#include "HwIoAb_2_Pots_Cfg.h"
-
 //Config structures.
 /**
  * @brief Configuration structure for each Pot
@@ -23,6 +21,8 @@
 typedef struct _HwIoAb_Pots_Config {
     uint8 dummy;
 } HwIoAb_Pots_Config;
+
+#include "HwIoAb_2_Pots_Cfg.h"
 
 //Control structures.
 /**

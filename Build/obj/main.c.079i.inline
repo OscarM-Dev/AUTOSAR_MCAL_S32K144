@@ -18,7 +18,7 @@ function body not available                       :        4 calls, 4.000000 fre
 IPA summary for main/56 is missing.
 Symbol table:
 
-Scheduler_MainFunction/61 (Scheduler_MainFunction) @065097e0
+Scheduler_MainFunction/61 (Scheduler_MainFunction) @071c6d20
   Type: function
   Visibility: external public
   References: 
@@ -27,7 +27,7 @@ Scheduler_MainFunction/61 (Scheduler_MainFunction) @065097e0
   Function flags:
   Called by: main/56 
   Calls: 
-Scheduler_Control/60 (Scheduler_Control) @06503ee8
+Scheduler_Control/60 (Scheduler_Control) @071c2e10
   Type: variable
   Body removed by symtab_remove_unreachable_nodes
   Visibility: external public
@@ -35,7 +35,7 @@ Scheduler_Control/60 (Scheduler_Control) @06503ee8
   Referring: main/56 (addr) 
   Availability: not_available
   Varpool flags:
-Scheduler_Init/59 (Scheduler_Init) @06509700
+Scheduler_Init/59 (Scheduler_Init) @071c6c40
   Type: function
   Visibility: external public
   References: 
@@ -44,7 +44,7 @@ Scheduler_Init/59 (Scheduler_Init) @06509700
   Function flags:
   Called by: main/56 
   Calls: 
-HwIoAb_Init/58 (HwIoAb_Init) @06509620
+HwIoAb_Init/58 (HwIoAb_Init) @071c6b60
   Type: function
   Visibility: external public
   References: 
@@ -53,7 +53,7 @@ HwIoAb_Init/58 (HwIoAb_Init) @06509620
   Function flags:
   Called by: main/56 
   Calls: 
-EcuM_Init/57 (EcuM_Init) @06509540
+EcuM_Init/57 (EcuM_Init) @071c6a80
   Type: function
   Visibility: external public
   References: 
@@ -62,7 +62,7 @@ EcuM_Init/57 (EcuM_Init) @06509540
   Function flags:
   Called by: main/56 
   Calls: 
-main/56 (main) @065090e0
+main/56 (main) @071c6620
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: Scheduler_Control/60 (addr) 
@@ -71,7 +71,7 @@ main/56 (main) @065090e0
   Function flags: body
   Called by: 
   Calls: Scheduler_MainFunction/61 Scheduler_Init/59 HwIoAb_Init/58 EcuM_Init/57 
-Queue1/55 (Queue1) @06503900
+Queue1/55 (Queue1) @071c2828
   Type: variable definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: 
@@ -79,11 +79,11 @@ Queue1/55 (Queue1) @06503900
   Availability: available
   Varpool flags:
 
-;; Function main (main, funcdef_no=55, decl_uid=7574, cgraph_uid=56, symbol_order=56)
+;; Function main (main, funcdef_no=55, decl_uid=7973, cgraph_uid=56, symbol_order=56)
 
 main ()
 {
-  int D.7581;
+  int D.7980;
 
   <bb 2> :
   EcuM_Init ();

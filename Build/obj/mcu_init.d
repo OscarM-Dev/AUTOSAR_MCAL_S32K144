@@ -140,7 +140,22 @@ Build/obj/mcu_init.o: Dev/src/mcu_init.c Dev/include/Mcu_init.h \
  Autosar/IoHwAbs/include/HwIoAb_1_Leds.h \
  Autosar/IoHwAbs/include/HwIoAb_1_Leds_Cfg.h \
  Autosar/IoHwAbs/include/HwIoAb_2_Pots.h \
- Autosar/IoHwAbs/include/HwIoAb_2_Pots_Cfg.h
+ Autosar/IoHwAbs/include/HwIoAb_2_Pots_Cfg.h \
+ Autosar/IoHwAbs/include/HwIoAb_3_Buzzer.h Autosar/Mcal/Pwm/include/Pwm.h \
+ Build/cfg/include/Pwm_Cfg.h Build/cfg/include/Pwm_Ipw_Cfg.h \
+ Build/cfg/include/Ftm_Pwm_Ip_Cfg.h \
+ Autosar/Mcal/Base/header/S32K144_FTM.h \
+ Build/cfg/include/Ftm_Pwm_Ip_PBcfg.h \
+ Autosar/Mcal/Pwm/include/Ftm_Pwm_Ip_Types.h \
+ Build/cfg/include/Ftm_Pwm_Ip_CfgDefines.h \
+ Autosar/Mcal/Base/include/Pwm_MemMap.h \
+ Build/cfg/include/Ftm_Pwm_Ip_CfgDefines.h \
+ Autosar/Mcal/Base/include/Reg_eSys.h Build/cfg/include/Pwm_PBcfg.h \
+ Autosar/Mcal/Pwm/include/Pwm_Ipw_Types.h Build/cfg/include/Pwm_Ipw_Cfg.h \
+ Autosar/Mcal/Pwm/include/Ftm_Pwm_Ip.h Build/cfg/include/Ftm_Pwm_Ip_Cfg.h \
+ Autosar/Mcal/Pwm/include/Ftm_Pwm_Ip_Types.h \
+ Autosar/Mcal/Pwm/include/Pwm_EnvCfg.h \
+ Autosar/IoHwAbs/include/HwIoAb_3_Buzzer_Cfg.h
 Dev/include/Mcu_init.h:
 Autosar/Mcal/Mcu/include/Mcu.h:
 Build/cfg/include/Mcu_Cfg.h:
@@ -302,3 +317,23 @@ Autosar/IoHwAbs/include/HwIoAb_1_Leds.h:
 Autosar/IoHwAbs/include/HwIoAb_1_Leds_Cfg.h:
 Autosar/IoHwAbs/include/HwIoAb_2_Pots.h:
 Autosar/IoHwAbs/include/HwIoAb_2_Pots_Cfg.h:
+Autosar/IoHwAbs/include/HwIoAb_3_Buzzer.h:
+Autosar/Mcal/Pwm/include/Pwm.h:
+Build/cfg/include/Pwm_Cfg.h:
+Build/cfg/include/Pwm_Ipw_Cfg.h:
+Build/cfg/include/Ftm_Pwm_Ip_Cfg.h:
+Autosar/Mcal/Base/header/S32K144_FTM.h:
+Build/cfg/include/Ftm_Pwm_Ip_PBcfg.h:
+Autosar/Mcal/Pwm/include/Ftm_Pwm_Ip_Types.h:
+Build/cfg/include/Ftm_Pwm_Ip_CfgDefines.h:
+Autosar/Mcal/Base/include/Pwm_MemMap.h:
+Build/cfg/include/Ftm_Pwm_Ip_CfgDefines.h:
+Autosar/Mcal/Base/include/Reg_eSys.h:
+Build/cfg/include/Pwm_PBcfg.h:
+Autosar/Mcal/Pwm/include/Pwm_Ipw_Types.h:
+Build/cfg/include/Pwm_Ipw_Cfg.h:
+Autosar/Mcal/Pwm/include/Ftm_Pwm_Ip.h:
+Build/cfg/include/Ftm_Pwm_Ip_Cfg.h:
+Autosar/Mcal/Pwm/include/Ftm_Pwm_Ip_Types.h:
+Autosar/Mcal/Pwm/include/Pwm_EnvCfg.h:
+Autosar/IoHwAbs/include/HwIoAb_3_Buzzer_Cfg.h:

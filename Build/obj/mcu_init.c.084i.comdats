@@ -4,6 +4,7 @@ HwIoAb_Init ()
   HwIoAb_Buttons_Init (&ButtonsCfg);
   HwIoAb_Leds_Init (&LedsCfg);
   HwIoAb_Pots_Init (0B);
+  HwIoAb_Buzzer_Init (0B);
   return;
 
 }
@@ -17,6 +18,7 @@ EcuM_Init ()
   Platform_Init (0B);
   Port_Init (&Port_Config);
   Adc_Init (&Adc_Config);
+  Pwm_Init (&Pwm_Config);
   Port_Ci_Port_Ip_SetMuxModeSel (1074044928B, 1, 8);
   Port_Ci_Port_Ip_SetMuxModeSel (1074044928B, 13, 8);
   return;
