@@ -23,18 +23,6 @@ const HwIoAb_Leds_Config LedsCfg[ HWIOAB_LEDS ] = {
     {
         .Led = HWIOAB_LEDS_2_CHANNEL,
         .Active = HWIOAB_LED_ACTIVE_HIGH
-    },
-    {
-        .Led = HWIOAB_LEDS_3_CHANNEL,
-        .Active = HWIOAB_LED_ACTIVE_HIGH
-    },
-    {
-        .Led = HWIOAB_LEDS_4_CHANNEL,
-        .Active = HWIOAB_LED_ACTIVE_HIGH
-    },
-    {
-        .Led = HWIOAB_LEDS_5_CHANNEL,
-        .Active = HWIOAB_LED_ACTIVE_HIGH
     }
 };
 

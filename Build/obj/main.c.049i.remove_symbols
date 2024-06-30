@@ -4,7 +4,7 @@ Reclaiming variables:
 Clearing address taken flags:
 Symbol table:
 
-Scheduler_MainFunction/61 (Scheduler_MainFunction) @071c6d20
+Scheduler_MainFunction/62 (Scheduler_MainFunction) @066c70e0
   Type: function
   Visibility: external public
   References: 
@@ -13,7 +13,7 @@ Scheduler_MainFunction/61 (Scheduler_MainFunction) @071c6d20
   Function flags:
   Called by: main/56 
   Calls: 
-Scheduler_Control/60 (Scheduler_Control) @071c2e10
+Scheduler_Control/61 (Scheduler_Control) @066c2ee8
   Type: variable
   Body removed by symtab_remove_unreachable_nodes
   Visibility: external public
@@ -21,7 +21,7 @@ Scheduler_Control/60 (Scheduler_Control) @071c2e10
   Referring: main/56 (addr) 
   Availability: not_available
   Varpool flags:
-Scheduler_Init/59 (Scheduler_Init) @071c6c40
+Scheduler_Init/60 (Scheduler_Init) @066c7000
   Type: function
   Visibility: external public
   References: 
@@ -30,7 +30,7 @@ Scheduler_Init/59 (Scheduler_Init) @071c6c40
   Function flags:
   Called by: main/56 
   Calls: 
-HwIoAb_Init/58 (HwIoAb_Init) @071c6b60
+SEGGER_RTT_Init/59 (SEGGER_RTT_Init) @066c5ee0
   Type: function
   Visibility: external public
   References: 
@@ -39,7 +39,7 @@ HwIoAb_Init/58 (HwIoAb_Init) @071c6b60
   Function flags:
   Called by: main/56 
   Calls: 
-EcuM_Init/57 (EcuM_Init) @071c6a80
+HwIoAb_Init/58 (HwIoAb_Init) @066c5e00
   Type: function
   Visibility: external public
   References: 
@@ -48,16 +48,25 @@ EcuM_Init/57 (EcuM_Init) @071c6a80
   Function flags:
   Called by: main/56 
   Calls: 
-main/56 (main) @071c6620
+EcuM_Init/57 (EcuM_Init) @066c5d20
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: main/56 
+  Calls: 
+main/56 (main) @066c58c0
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
-  References: Scheduler_Control/60 (addr) 
+  References: Scheduler_Control/61 (addr) 
   Referring: 
   Availability: available
   Function flags: body
   Called by: 
-  Calls: Scheduler_MainFunction/61 Scheduler_Init/59 HwIoAb_Init/58 EcuM_Init/57 
-Queue1/55 (Queue1) @071c2828
+  Calls: Scheduler_MainFunction/62 Scheduler_Init/60 SEGGER_RTT_Init/59 HwIoAb_Init/58 EcuM_Init/57 
+Queue1/55 (Queue1) @066c2870
   Type: variable definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: 
@@ -66,11 +75,12 @@ Queue1/55 (Queue1) @071c2828
   Varpool flags:
 main ()
 {
-  int D.7980;
+  int D.8577;
 
   <bb 2> :
   EcuM_Init ();
   HwIoAb_Init ();
+  SEGGER_RTT_Init ();
   Scheduler_Init (&Scheduler_Control);
 
   <bb 3> :

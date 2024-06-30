@@ -155,7 +155,8 @@ Build/obj/mcu_init.o: Dev/src/mcu_init.c Dev/include/Mcu_init.h \
  Autosar/Mcal/Pwm/include/Ftm_Pwm_Ip.h Build/cfg/include/Ftm_Pwm_Ip_Cfg.h \
  Autosar/Mcal/Pwm/include/Ftm_Pwm_Ip_Types.h \
  Autosar/Mcal/Pwm/include/Pwm_EnvCfg.h \
- Autosar/IoHwAbs/include/HwIoAb_3_Buzzer_Cfg.h
+ Autosar/IoHwAbs/include/HwIoAb_3_Buzzer_Cfg.h Rtt/SEGGER/SEGGER_RTT.h \
+ Rtt/Config/SEGGER_RTT_Conf.h
 Dev/include/Mcu_init.h:
 Autosar/Mcal/Mcu/include/Mcu.h:
 Build/cfg/include/Mcu_Cfg.h:
@@ -337,3 +338,5 @@ Build/cfg/include/Ftm_Pwm_Ip_Cfg.h:
 Autosar/Mcal/Pwm/include/Ftm_Pwm_Ip_Types.h:
 Autosar/Mcal/Pwm/include/Pwm_EnvCfg.h:
 Autosar/IoHwAbs/include/HwIoAb_3_Buzzer_Cfg.h:
+Rtt/SEGGER/SEGGER_RTT.h:
+Rtt/Config/SEGGER_RTT_Conf.h:

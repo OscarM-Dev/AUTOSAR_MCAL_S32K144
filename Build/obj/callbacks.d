@@ -1,5 +1,5 @@
 Build/obj/callbacks.o: Autosar/Os/src/callbacks.c \
- Autosar/Os/include/Callbacks.h Autosar/Os/include/Scheduler.h \
+ Autosar/Os/include/callbacks.h Autosar/Os/include/Scheduler.h \
  Autosar/Mcal/Base/include/StandardTypes.h \
  Autosar/Mcal/Base/include/Platform_Types.h \
  Autosar/Mcal/Base/include/PlatformTypes.h \
@@ -42,8 +42,24 @@ Build/obj/callbacks.o: Autosar/Os/src/callbacks.c \
  Build/cfg/include/Adc_CfgDefines.h Build/cfg/include/Adc_PBcfg.h \
  Autosar/Mcal/Base/include/Adc_MemMap.h \
  Autosar/Mcal/Adc/include/Adc_Types.h \
- Autosar/IoHwAbs/include/HwIoAb_2_Pots_Cfg.h
-Autosar/Os/include/Callbacks.h:
+ Autosar/IoHwAbs/include/HwIoAb_2_Pots_Cfg.h \
+ Autosar/IoHwAbs/include/HwIoAb_3_Buzzer.h Autosar/Mcal/Pwm/include/Pwm.h \
+ Build/cfg/include/Pwm_Cfg.h Build/cfg/include/Pwm_Ipw_Cfg.h \
+ Build/cfg/include/Ftm_Pwm_Ip_Cfg.h Autosar/Mcal/Base/include/Devassert.h \
+ Autosar/Mcal/Base/include/Mcal.h Autosar/Mcal/Base/header/S32K144_FTM.h \
+ Build/cfg/include/Ftm_Pwm_Ip_PBcfg.h \
+ Autosar/Mcal/Pwm/include/Ftm_Pwm_Ip_Types.h \
+ Build/cfg/include/Ftm_Pwm_Ip_CfgDefines.h \
+ Autosar/Mcal/Base/include/Pwm_MemMap.h \
+ Build/cfg/include/Ftm_Pwm_Ip_CfgDefines.h \
+ Autosar/Mcal/Base/include/Reg_eSys.h Build/cfg/include/Pwm_PBcfg.h \
+ Autosar/Mcal/Pwm/include/Pwm_Ipw_Types.h Build/cfg/include/Pwm_Ipw_Cfg.h \
+ Autosar/Mcal/Pwm/include/Ftm_Pwm_Ip.h Build/cfg/include/Ftm_Pwm_Ip_Cfg.h \
+ Autosar/Mcal/Pwm/include/Ftm_Pwm_Ip_Types.h \
+ Autosar/Mcal/Pwm/include/Pwm_EnvCfg.h \
+ Autosar/IoHwAbs/include/HwIoAb_3_Buzzer_Cfg.h Rtt/SEGGER/SEGGER_RTT.h \
+ Rtt/Config/SEGGER_RTT_Conf.h
+Autosar/Os/include/callbacks.h:
 Autosar/Os/include/Scheduler.h:
 Autosar/Mcal/Base/include/StandardTypes.h:
 Autosar/Mcal/Base/include/Platform_Types.h:
@@ -99,3 +115,27 @@ Build/cfg/include/Adc_PBcfg.h:
 Autosar/Mcal/Base/include/Adc_MemMap.h:
 Autosar/Mcal/Adc/include/Adc_Types.h:
 Autosar/IoHwAbs/include/HwIoAb_2_Pots_Cfg.h:
+Autosar/IoHwAbs/include/HwIoAb_3_Buzzer.h:
+Autosar/Mcal/Pwm/include/Pwm.h:
+Build/cfg/include/Pwm_Cfg.h:
+Build/cfg/include/Pwm_Ipw_Cfg.h:
+Build/cfg/include/Ftm_Pwm_Ip_Cfg.h:
+Autosar/Mcal/Base/include/Devassert.h:
+Autosar/Mcal/Base/include/Mcal.h:
+Autosar/Mcal/Base/header/S32K144_FTM.h:
+Build/cfg/include/Ftm_Pwm_Ip_PBcfg.h:
+Autosar/Mcal/Pwm/include/Ftm_Pwm_Ip_Types.h:
+Build/cfg/include/Ftm_Pwm_Ip_CfgDefines.h:
+Autosar/Mcal/Base/include/Pwm_MemMap.h:
+Build/cfg/include/Ftm_Pwm_Ip_CfgDefines.h:
+Autosar/Mcal/Base/include/Reg_eSys.h:
+Build/cfg/include/Pwm_PBcfg.h:
+Autosar/Mcal/Pwm/include/Pwm_Ipw_Types.h:
+Build/cfg/include/Pwm_Ipw_Cfg.h:
+Autosar/Mcal/Pwm/include/Ftm_Pwm_Ip.h:
+Build/cfg/include/Ftm_Pwm_Ip_Cfg.h:
+Autosar/Mcal/Pwm/include/Ftm_Pwm_Ip_Types.h:
+Autosar/Mcal/Pwm/include/Pwm_EnvCfg.h:
+Autosar/IoHwAbs/include/HwIoAb_3_Buzzer_Cfg.h:
+Rtt/SEGGER/SEGGER_RTT.h:
+Rtt/Config/SEGGER_RTT_Conf.h:

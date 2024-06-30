@@ -5,7 +5,7 @@
  */
 
 //Headers.
-#include "Callbacks.h"
+#include "callbacks.h"
 
 //Tasks.
 /**
@@ -20,18 +20,19 @@ void Task1_callback( void ) {
 /**
  * @brief This is the callback function for the task 2.
  *
- * This function is called every 100ms and gets the last event detected for each button 
- * to toggle the corresponding led.
+ * This function is called every 100ms and gets the last event detected for each button for executing a certain action.
  * 
- * @note Button 1, Single click toggle only led0 (PTC8), double click toggle only led1 (PTC9), hold click toggle both leds (PTC8-9).
- * @note Button 2, Single click toggle only led2 (PTC10), double click toggle only led3 (PTC11), hold click toggle both leds (PTC10-11).
- * @note Button 3, Single click toggle only led4 (PTC13), double click toggle only led5 (PTC14), hold click toggle both leds (PTC13-14).
- * 
+ * @note Button 1, Single click toggle only led0 (PTC8), double click prints ohms value of pot 1 main, hold click tone 1 for buzzer, release stops buzzer.
+ * @note Button 2, Single click toggle only led1 (PTC9), double click prints ohms value of pot 2 main, hold click tone 2 for buzzer, release stops buzzer.
+ * @note Button 3, Single click toggle only led2 (PTC10), double click prints ohms values of pot1 and pot 2 alter , hold click tone 3 for buzzer, release stops buzzer.
+ * @note The tone of the buzzer is always the last activated.
  */
 void Task2_callback( void ) {
     //local data.
+    static boolean flags[3] = { TRUE, TRUE, TRUE }; //Flags for executing buzzer tones.
     uint8 i = 0;
     uint8 actual_event = 0; //Actual event of button.
+
 
     for ( i = 0; i < ButtonsControl_Ptr->Buttons; i++ ) { //Checking each button and its event detected.
         actual_event =  HwIoAb_Buttons_GetEvent( i + 1 );   //Obtaining event of actual button.
@@ -43,11 +44,18 @@ void Task2_callback( void ) {
                             HwIoAb_Leds_TurnToggle( HWIOAB_LEDS_0_ID );
                         break;
                         case HWIOAB_BTN_EVENT_DOUBLE_CLICK:
-                            HwIoAb_Leds_TurnToggle( HWI0AB_LEDS_1_ID );
+                            HwIoAb_Pots_GetValue( HWIOAB_POTS_MAIN_RESULTS );
+                            SEGGER_RTT_printf( 0, "Pot 1 resistance value in ohms: %d\n", PotsControl_Ptr->Ohms_results_main[0] );
                         break;
                         case HWIOAB_BTN_EVENT_HOLD_CLICK:
-                            HwIoAb_Leds_TurnToggle( HWIOAB_LEDS_0_ID );
-                            HwIoAb_Leds_TurnToggle( HWI0AB_LEDS_1_ID );
+                            if ( flags[i]  == TRUE ) {  //Just executes the first time it was detected.
+                                HwIoAb_Buzzer_Beep( HWIOAB_BUZZER_TONE_1 );
+                                flags[i] = FALSE;
+                            }
+                        break;
+                        case HWIOAB_BTN_EVENT_RELEASE:
+                            HwIoAb_Buzzer_Stop();
+                            flags[i] = TRUE;
                         break;
                         default:    //No click.
                         break;
@@ -57,14 +65,21 @@ void Task2_callback( void ) {
                 case BTN_2:
                     switch ( actual_event ) {
                         case HWIOAB_BTN_EVENT_SINGLE_CLICK:
-                            HwIoAb_Leds_TurnToggle( HWIOAB_LEDS_2_ID );
+                            HwIoAb_Leds_TurnToggle( HWI0AB_LEDS_1_ID );
                         break;
                         case HWIOAB_BTN_EVENT_DOUBLE_CLICK:
-                            HwIoAb_Leds_TurnToggle( HWIOAB_LEDS_3_ID );
+                            HwIoAb_Pots_GetValue( HWIOAB_POTS_MAIN_RESULTS );
+                            SEGGER_RTT_printf( 0, "Pot 2 resistance value in ohms: %d\n", PotsControl_Ptr->Ohms_results_main[1] );
                         break;
                         case HWIOAB_BTN_EVENT_HOLD_CLICK:
-                            HwIoAb_Leds_TurnToggle( HWIOAB_LEDS_2_ID );
-                            HwIoAb_Leds_TurnToggle( HWIOAB_LEDS_3_ID );
+                            if ( flags[i]  == TRUE ) {  //Just executes the first time it was detected.
+                                HwIoAb_Buzzer_Beep( HWIOAB_BUZZER_TONE_2 );
+                                flags[i] = FALSE;
+                            }
+                        break;
+                        case HWIOAB_BTN_EVENT_RELEASE:
+                            HwIoAb_Buzzer_Stop();
+                            flags[i] = TRUE;
                         break;
                         default:    //No click.
                         break;
@@ -74,14 +89,22 @@ void Task2_callback( void ) {
                 case BTN_3:
                         switch ( actual_event ) {
                             case HWIOAB_BTN_EVENT_SINGLE_CLICK:
-                                HwIoAb_Leds_TurnToggle( HWIOAB_LEDS_4_ID );
+                                HwIoAb_Leds_TurnToggle( HWIOAB_LEDS_2_ID );
                             break;
                             case HWIOAB_BTN_EVENT_DOUBLE_CLICK:
-                                HwIoAb_Leds_TurnToggle( HWIOAB_LEDS_5_ID );
+                                HwIoAb_Pots_GetAltValue( HWIOAB_POTS_ALTER_RESULTS );
+                                SEGGER_RTT_printf( 0, "Pot 1 resistance value in ohms: %d, Pot 2 resistance value in ohms: %d\n", 
+                                    PotsControl_Ptr->Ohms_results_alter[0], PotsControl_Ptr->Ohms_results_alter[1] );
                             break;
                             case HWIOAB_BTN_EVENT_HOLD_CLICK:
-                               HwIoAb_Leds_TurnToggle( HWIOAB_LEDS_4_ID );
-                               HwIoAb_Leds_TurnToggle( HWIOAB_LEDS_5_ID );
+                                if ( flags[i]  == TRUE ) {  //Just executes the first time it was detected.
+                                    HwIoAb_Buzzer_Beep( HWIOAB_BUZZER_TONE_3 );
+                                    flags[i] = FALSE;
+                                }
+                            break;
+                            case HWIOAB_BTN_EVENT_RELEASE:
+                                HwIoAb_Buzzer_Stop();
+                                flags[i] = TRUE;
                             break;
                             default:    //No click.
                             break;

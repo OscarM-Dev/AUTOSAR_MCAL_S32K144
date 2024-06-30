@@ -252,26 +252,29 @@ HwIoAb_Buttons_MainFunction ()
   <bb 31> :
 <L29>:
   ButtonsControl_Ptr.30_109 = ButtonsControl_Ptr;
-  _110 = ButtonsControl_Ptr.30_109->ButtonsConfig_Ptr;
-  _111 = (unsigned int) i;
-  _112 = _111 * 8;
-  _113 = _110 + _112;
-  _114 = _113->Button;
-  _115 = Dio_ReadChannel (_114);
-  _116 = ~active;
-  _117 = (unsigned char) _116;
-  if (_115 == _117)
+  _110 = (int) i;
+  ButtonsControl_Ptr.30_109->Events[_110] = 3;
+  ButtonsControl_Ptr.31_111 = ButtonsControl_Ptr;
+  _112 = ButtonsControl_Ptr.31_111->ButtonsConfig_Ptr;
+  _113 = (unsigned int) i;
+  _114 = _113 * 8;
+  _115 = _112 + _114;
+  _116 = _115->Button;
+  _117 = Dio_ReadChannel (_116);
+  _118 = ~active;
+  _119 = (unsigned char) _118;
+  if (_117 == _119)
     goto <bb 32>; [INV]
   else
     goto <bb 33>; [INV]
 
   <bb 32> :
-  ButtonsControl_Ptr.31_118 = ButtonsControl_Ptr;
-  _119 = (int) i;
-  ButtonsControl_Ptr.31_118->Events[_119] = 3;
   ButtonsControl_Ptr.32_120 = ButtonsControl_Ptr;
   _121 = (int) i;
-  ButtonsControl_Ptr.32_120->States[_121] = 0;
+  ButtonsControl_Ptr.32_120->Events[_121] = 4;
+  ButtonsControl_Ptr.33_122 = ButtonsControl_Ptr;
+  _123 = (int) i;
+  ButtonsControl_Ptr.33_122->States[_123] = 0;
 
   <bb 33> :
   goto <bb 35>; [INV]
@@ -280,13 +283,13 @@ HwIoAb_Buttons_MainFunction ()
 <L32>:
 
   <bb 35> :
-  i.33_122 = i;
-  i = i.33_122 + 1;
+  i.34_124 = i;
+  i = i.34_124 + 1;
 
   <bb 36> :
-  ButtonsControl_Ptr.34_123 = ButtonsControl_Ptr;
-  _124 = ButtonsControl_Ptr.34_123->Buttons;
-  if (i < _124)
+  ButtonsControl_Ptr.35_125 = ButtonsControl_Ptr;
+  _126 = ButtonsControl_Ptr.35_125->Buttons;
+  if (i < _126)
     goto <bb 9>; [INV]
   else
     goto <bb 37>; [INV]

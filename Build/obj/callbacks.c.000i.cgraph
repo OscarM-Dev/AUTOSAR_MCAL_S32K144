@@ -1,40 +1,96 @@
-Trivially needed symbols: Timer3_callback/54 Timer2_callback/53 Timer1_callback/52 Task2_callback/51 Task1_callback/50
+Trivially needed symbols: Timer3_callback/55 Timer2_callback/54 Timer1_callback/53 Task2_callback/52 Task1_callback/51
+Trivially needed symbols: flags/62
 
 
 Initial Symbol table:
 
-ButtonsControl_Ptr/58 (ButtonsControl_Ptr) @05dc2ee8
+ButtonsControl_Ptr/66 (ButtonsControl_Ptr) @06d5d240
   Type: variable
   Visibility: external public
   References: 
-  Referring: Task2_callback/51 (read) 
+  Referring: Task2_callback/52 (read) 
   Availability: not-ready
   Varpool flags:
-HwIoAb_Leds_TurnToggle/57 (HwIoAb_Leds_TurnToggle) @05dc3380
+HwIoAb_Pots_GetAltValue/65 (HwIoAb_Pots_GetAltValue) @06d5c1c0
   Type: function
   Visibility: external public
   References: 
   Referring: 
   Function flags:
-  Called by: Task2_callback/51 Task2_callback/51 Task2_callback/51 Task2_callback/51 Task2_callback/51 Task2_callback/51 Task2_callback/51 Task2_callback/51 Task2_callback/51 Task2_callback/51 Task2_callback/51 Task2_callback/51 
+  Called by: Task2_callback/52 
   Calls: 
-HwIoAb_Buttons_GetEvent/56 (HwIoAb_Buttons_GetEvent) @05dc32a0
+HwIoAb_Buzzer_Stop/64 (HwIoAb_Buzzer_Stop) @06d5c000
   Type: function
   Visibility: external public
   References: 
   Referring: 
   Function flags:
-  Called by: Task2_callback/51 
+  Called by: Task2_callback/52 Task2_callback/52 Task2_callback/52 
   Calls: 
-HwIoAb_Buttons_MainFunction/55 (HwIoAb_Buttons_MainFunction) @05db8ee0
+HwIoAb_Buzzer_Beep/63 (HwIoAb_Buzzer_Beep) @06d53380
   Type: function
   Visibility: external public
   References: 
   Referring: 
   Function flags:
-  Called by: Task1_callback/50 
+  Called by: Task2_callback/52 Task2_callback/52 Task2_callback/52 
   Calls: 
-Timer3_callback/54 (Timer3_callback) @05dbe7e0
+flags/62 (flags) @06d56e58
+  Type: variable definition analyzed
+  Visibility: force_output no_reorder
+  Aux: @06d53000
+  References: 
+  Referring: Task2_callback/52 (read) Task2_callback/52 (write) Task2_callback/52 (write) Task2_callback/52 (read) Task2_callback/52 (write) Task2_callback/52 (write) Task2_callback/52 (read) Task2_callback/52 (write) Task2_callback/52 (write) 
+  Availability: not-ready
+  Varpool flags: initialized
+SEGGER_RTT_printf/61 (SEGGER_RTT_printf) @06d530e0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: Task2_callback/52 Task2_callback/52 Task2_callback/52 
+  Calls: 
+HwIoAb_Pots_GetValue/60 (HwIoAb_Pots_GetValue) @06d53ee0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: Task2_callback/52 Task2_callback/52 
+  Calls: 
+PotsControl_Ptr/59 (PotsControl_Ptr) @06d56d80
+  Type: variable
+  Visibility: external public
+  References: 
+  Referring: Task2_callback/52 (read) Task2_callback/52 (read) Task2_callback/52 (read) Task2_callback/52 (read) Task2_callback/52 (read) Task2_callback/52 (read) Task2_callback/52 (read) 
+  Availability: not-ready
+  Varpool flags:
+HwIoAb_Leds_TurnToggle/58 (HwIoAb_Leds_TurnToggle) @06d53e00
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: Task2_callback/52 Task2_callback/52 Task2_callback/52 
+  Calls: 
+HwIoAb_Buttons_GetEvent/57 (HwIoAb_Buttons_GetEvent) @06d53d20
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: Task2_callback/52 
+  Calls: 
+HwIoAb_Buttons_MainFunction/56 (HwIoAb_Buttons_MainFunction) @06d539a0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: Task1_callback/51 
+  Calls: 
+Timer3_callback/55 (Timer3_callback) @06d53540
   Type: function definition analyzed
   Visibility: force_output no_reorder public
   Aux: @01981040
@@ -43,43 +99,43 @@ Timer3_callback/54 (Timer3_callback) @05dbe7e0
   Function flags: body
   Called by: 
   Calls: 
-Timer2_callback/53 (Timer2_callback) @05dbe540
+Timer2_callback/54 (Timer2_callback) @06d532a0
   Type: function definition analyzed
   Visibility: force_output no_reorder public
-  Aux: @05dbe7e0
+  Aux: @06d53540
   References: 
   Referring: 
   Function flags: body
   Called by: 
   Calls: 
-Timer1_callback/52 (Timer1_callback) @05dbeee0
+Timer1_callback/53 (Timer1_callback) @06d53000
   Type: function definition analyzed
   Visibility: force_output no_reorder public
-  Aux: @05dbe540
+  Aux: @06d532a0
   References: 
   Referring: 
   Function flags: body
   Called by: 
   Calls: 
-Task2_callback/51 (Task2_callback) @05dbec40
+Task2_callback/52 (Task2_callback) @06d39b60
   Type: function definition analyzed
   Visibility: force_output no_reorder public
-  Aux: @05dbeee0
-  References: ButtonsControl_Ptr/58 (read) 
+  Aux: @06d53000
+  References: PotsControl_Ptr/59 (read) PotsControl_Ptr/59 (read) flags/62 (read) flags/62 (write) flags/62 (write) PotsControl_Ptr/59 (read) PotsControl_Ptr/59 (read) flags/62 (read) flags/62 (write) flags/62 (write) PotsControl_Ptr/59 (read) PotsControl_Ptr/59 (read) PotsControl_Ptr/59 (read) flags/62 (read) flags/62 (write) flags/62 (write) ButtonsControl_Ptr/66 (read) 
   Referring: 
   Function flags: body
   Called by: 
-  Calls: HwIoAb_Leds_TurnToggle/57 HwIoAb_Leds_TurnToggle/57 HwIoAb_Leds_TurnToggle/57 HwIoAb_Leds_TurnToggle/57 HwIoAb_Leds_TurnToggle/57 HwIoAb_Leds_TurnToggle/57 HwIoAb_Leds_TurnToggle/57 HwIoAb_Leds_TurnToggle/57 HwIoAb_Leds_TurnToggle/57 HwIoAb_Leds_TurnToggle/57 HwIoAb_Leds_TurnToggle/57 HwIoAb_Leds_TurnToggle/57 HwIoAb_Buttons_GetEvent/56 
-Task1_callback/50 (Task1_callback) @05dbe9a0
+  Calls: HwIoAb_Buzzer_Stop/64 HwIoAb_Buzzer_Beep/63 SEGGER_RTT_printf/61 HwIoAb_Pots_GetAltValue/65 HwIoAb_Leds_TurnToggle/58 HwIoAb_Buzzer_Stop/64 HwIoAb_Buzzer_Beep/63 SEGGER_RTT_printf/61 HwIoAb_Pots_GetValue/60 HwIoAb_Leds_TurnToggle/58 HwIoAb_Buzzer_Stop/64 HwIoAb_Buzzer_Beep/63 SEGGER_RTT_printf/61 HwIoAb_Pots_GetValue/60 HwIoAb_Leds_TurnToggle/58 HwIoAb_Buttons_GetEvent/57 
+Task1_callback/51 (Task1_callback) @06d39d20
   Type: function definition analyzed
   Visibility: force_output no_reorder public
-  Aux: @05dbec40
+  Aux: @06d39b60
   References: 
   Referring: 
   Function flags: body
   Called by: 
-  Calls: HwIoAb_Buttons_MainFunction/55 
-Bfx_CountLeadingZeros_u8/49 (Bfx_CountLeadingZeros_u8) @05c6f460
+  Calls: HwIoAb_Buttons_MainFunction/56 
+DevAssert/50 (DevAssert) @06a99540
   Type: function definition
   Visibility: no_reorder
   References: 
@@ -87,7 +143,7 @@ Bfx_CountLeadingZeros_u8/49 (Bfx_CountLeadingZeros_u8) @05c6f460
   Function flags:
   Called by: 
   Calls: 
-Bfx_CountLeadingSigns_s8/48 (Bfx_CountLeadingSigns_s8) @05c6f1c0
+Bfx_CountLeadingZeros_u8/49 (Bfx_CountLeadingZeros_u8) @06944460
   Type: function definition
   Visibility: no_reorder
   References: 
@@ -95,7 +151,7 @@ Bfx_CountLeadingSigns_s8/48 (Bfx_CountLeadingSigns_s8) @05c6f1c0
   Function flags:
   Called by: 
   Calls: 
-Bfx_CountLeadingOnes_u8/47 (Bfx_CountLeadingOnes_u8) @05c69ee0
+Bfx_CountLeadingSigns_s8/48 (Bfx_CountLeadingSigns_s8) @069441c0
   Type: function definition
   Visibility: no_reorder
   References: 
@@ -103,7 +159,7 @@ Bfx_CountLeadingOnes_u8/47 (Bfx_CountLeadingOnes_u8) @05c69ee0
   Function flags:
   Called by: 
   Calls: 
-Bfx_ShiftBitSat_s8s8_s8/46 (Bfx_ShiftBitSat_s8s8_s8) @05c69c40
+Bfx_CountLeadingOnes_u8/47 (Bfx_CountLeadingOnes_u8) @0693eee0
   Type: function definition
   Visibility: no_reorder
   References: 
@@ -111,7 +167,7 @@ Bfx_ShiftBitSat_s8s8_s8/46 (Bfx_ShiftBitSat_s8s8_s8) @05c69c40
   Function flags:
   Called by: 
   Calls: 
-Bfx_ShiftBitSat_u8s8_u8/45 (Bfx_ShiftBitSat_u8s8_u8) @05c699a0
+Bfx_ShiftBitSat_s8s8_s8/46 (Bfx_ShiftBitSat_s8s8_s8) @0693ec40
   Type: function definition
   Visibility: no_reorder
   References: 
@@ -119,7 +175,7 @@ Bfx_ShiftBitSat_u8s8_u8/45 (Bfx_ShiftBitSat_u8s8_u8) @05c699a0
   Function flags:
   Called by: 
   Calls: 
-Bfx_PutBits_u8u8u8u8/44 (Bfx_PutBits_u8u8u8u8) @05c69700
+Bfx_ShiftBitSat_u8s8_u8/45 (Bfx_ShiftBitSat_u8s8_u8) @0693e9a0
   Type: function definition
   Visibility: no_reorder
   References: 
@@ -127,7 +183,7 @@ Bfx_PutBits_u8u8u8u8/44 (Bfx_PutBits_u8u8u8u8) @05c69700
   Function flags:
   Called by: 
   Calls: 
-Bfx_PutBitsMask_u8u8u8/43 (Bfx_PutBitsMask_u8u8u8) @05c69460
+Bfx_PutBits_u8u8u8u8/44 (Bfx_PutBits_u8u8u8u8) @0693e700
   Type: function definition
   Visibility: no_reorder
   References: 
@@ -135,7 +191,7 @@ Bfx_PutBitsMask_u8u8u8/43 (Bfx_PutBitsMask_u8u8u8) @05c69460
   Function flags:
   Called by: 
   Calls: 
-Bfx_PutBit_u8u8u8/42 (Bfx_PutBit_u8u8u8) @05c691c0
+Bfx_PutBitsMask_u8u8u8/43 (Bfx_PutBitsMask_u8u8u8) @0693e460
   Type: function definition
   Visibility: no_reorder
   References: 
@@ -143,7 +199,7 @@ Bfx_PutBit_u8u8u8/42 (Bfx_PutBit_u8u8u8) @05c691c0
   Function flags:
   Called by: 
   Calls: 
-Bfx_CopyBit_u8u8u8u8/41 (Bfx_CopyBit_u8u8u8u8) @05c63ee0
+Bfx_PutBit_u8u8u8/42 (Bfx_PutBit_u8u8u8) @0693e1c0
   Type: function definition
   Visibility: no_reorder
   References: 
@@ -151,7 +207,7 @@ Bfx_CopyBit_u8u8u8u8/41 (Bfx_CopyBit_u8u8u8u8) @05c63ee0
   Function flags:
   Called by: 
   Calls: 
-Bfx_RotBitLt_u8u8/40 (Bfx_RotBitLt_u8u8) @05c63c40
+Bfx_CopyBit_u8u8u8u8/41 (Bfx_CopyBit_u8u8u8u8) @06938ee0
   Type: function definition
   Visibility: no_reorder
   References: 
@@ -159,7 +215,7 @@ Bfx_RotBitLt_u8u8/40 (Bfx_RotBitLt_u8u8) @05c63c40
   Function flags:
   Called by: 
   Calls: 
-Bfx_RotBitRt_u8u8/39 (Bfx_RotBitRt_u8u8) @05c639a0
+Bfx_RotBitLt_u8u8/40 (Bfx_RotBitLt_u8u8) @06938c40
   Type: function definition
   Visibility: no_reorder
   References: 
@@ -167,7 +223,7 @@ Bfx_RotBitRt_u8u8/39 (Bfx_RotBitRt_u8u8) @05c639a0
   Function flags:
   Called by: 
   Calls: 
-Bfx_ShiftBitLt_u8u8/38 (Bfx_ShiftBitLt_u8u8) @05c63700
+Bfx_RotBitRt_u8u8/39 (Bfx_RotBitRt_u8u8) @069389a0
   Type: function definition
   Visibility: no_reorder
   References: 
@@ -175,7 +231,7 @@ Bfx_ShiftBitLt_u8u8/38 (Bfx_ShiftBitLt_u8u8) @05c63700
   Function flags:
   Called by: 
   Calls: 
-Bfx_ShiftBitRt_u8u8/37 (Bfx_ShiftBitRt_u8u8) @05c63460
+Bfx_ShiftBitLt_u8u8/38 (Bfx_ShiftBitLt_u8u8) @06938700
   Type: function definition
   Visibility: no_reorder
   References: 
@@ -183,7 +239,7 @@ Bfx_ShiftBitRt_u8u8/37 (Bfx_ShiftBitRt_u8u8) @05c63460
   Function flags:
   Called by: 
   Calls: 
-Bfx_ToggleBitMask_u8u8/36 (Bfx_ToggleBitMask_u8u8) @05c631c0
+Bfx_ShiftBitRt_u8u8/37 (Bfx_ShiftBitRt_u8u8) @06938460
   Type: function definition
   Visibility: no_reorder
   References: 
@@ -191,7 +247,7 @@ Bfx_ToggleBitMask_u8u8/36 (Bfx_ToggleBitMask_u8u8) @05c631c0
   Function flags:
   Called by: 
   Calls: 
-Bfx_ToggleBits_u8/35 (Bfx_ToggleBits_u8) @05c5fee0
+Bfx_ToggleBitMask_u8u8/36 (Bfx_ToggleBitMask_u8u8) @069381c0
   Type: function definition
   Visibility: no_reorder
   References: 
@@ -199,7 +255,7 @@ Bfx_ToggleBits_u8/35 (Bfx_ToggleBits_u8) @05c5fee0
   Function flags:
   Called by: 
   Calls: 
-Bfx_TstParityEven_u8_u8/34 (Bfx_TstParityEven_u8_u8) @05c5fc40
+Bfx_ToggleBits_u8/35 (Bfx_ToggleBits_u8) @06934ee0
   Type: function definition
   Visibility: no_reorder
   References: 
@@ -207,7 +263,7 @@ Bfx_TstParityEven_u8_u8/34 (Bfx_TstParityEven_u8_u8) @05c5fc40
   Function flags:
   Called by: 
   Calls: 
-Bfx_TstBitLnMask_u8u8_u8/33 (Bfx_TstBitLnMask_u8u8_u8) @05c5f9a0
+Bfx_TstParityEven_u8_u8/34 (Bfx_TstParityEven_u8_u8) @06934c40
   Type: function definition
   Visibility: no_reorder
   References: 
@@ -215,7 +271,7 @@ Bfx_TstBitLnMask_u8u8_u8/33 (Bfx_TstBitLnMask_u8u8_u8) @05c5f9a0
   Function flags:
   Called by: 
   Calls: 
-Bfx_TstBitMask_u8u8_u8/32 (Bfx_TstBitMask_u8u8_u8) @05c5f700
+Bfx_TstBitLnMask_u8u8_u8/33 (Bfx_TstBitLnMask_u8u8_u8) @069349a0
   Type: function definition
   Visibility: no_reorder
   References: 
@@ -223,7 +279,7 @@ Bfx_TstBitMask_u8u8_u8/32 (Bfx_TstBitMask_u8u8_u8) @05c5f700
   Function flags:
   Called by: 
   Calls: 
-Bfx_ClrBitMask_u8u8/31 (Bfx_ClrBitMask_u8u8) @05c5f460
+Bfx_TstBitMask_u8u8_u8/32 (Bfx_TstBitMask_u8u8_u8) @06934700
   Type: function definition
   Visibility: no_reorder
   References: 
@@ -231,7 +287,7 @@ Bfx_ClrBitMask_u8u8/31 (Bfx_ClrBitMask_u8u8) @05c5f460
   Function flags:
   Called by: 
   Calls: 
-Bfx_SetBitMask_u8u8/30 (Bfx_SetBitMask_u8u8) @05c5f1c0
+Bfx_ClrBitMask_u8u8/31 (Bfx_ClrBitMask_u8u8) @06934460
   Type: function definition
   Visibility: no_reorder
   References: 
@@ -239,7 +295,7 @@ Bfx_SetBitMask_u8u8/30 (Bfx_SetBitMask_u8u8) @05c5f1c0
   Function flags:
   Called by: 
   Calls: 
-Bfx_GetBits_u8u8u8_u8/29 (Bfx_GetBits_u8u8u8_u8) @05c5aee0
+Bfx_SetBitMask_u8u8/30 (Bfx_SetBitMask_u8u8) @069341c0
   Type: function definition
   Visibility: no_reorder
   References: 
@@ -247,7 +303,7 @@ Bfx_GetBits_u8u8u8_u8/29 (Bfx_GetBits_u8u8u8_u8) @05c5aee0
   Function flags:
   Called by: 
   Calls: 
-Bfx_SetBits_u8u8u8u8/28 (Bfx_SetBits_u8u8u8u8) @05c5ac40
+Bfx_GetBits_u8u8u8_u8/29 (Bfx_GetBits_u8u8u8_u8) @0692fee0
   Type: function definition
   Visibility: no_reorder
   References: 
@@ -255,7 +311,7 @@ Bfx_SetBits_u8u8u8u8/28 (Bfx_SetBits_u8u8u8u8) @05c5ac40
   Function flags:
   Called by: 
   Calls: 
-Bfx_GetBit_u8u8_u8/27 (Bfx_GetBit_u8u8_u8) @05c5a9a0
+Bfx_SetBits_u8u8u8u8/28 (Bfx_SetBits_u8u8u8u8) @0692fc40
   Type: function definition
   Visibility: no_reorder
   References: 
@@ -263,7 +319,7 @@ Bfx_GetBit_u8u8_u8/27 (Bfx_GetBit_u8u8_u8) @05c5a9a0
   Function flags:
   Called by: 
   Calls: 
-Bfx_ClrBit_u8u8/26 (Bfx_ClrBit_u8u8) @05c5a700
+Bfx_GetBit_u8u8_u8/27 (Bfx_GetBit_u8u8_u8) @0692f9a0
   Type: function definition
   Visibility: no_reorder
   References: 
@@ -271,7 +327,7 @@ Bfx_ClrBit_u8u8/26 (Bfx_ClrBit_u8u8) @05c5a700
   Function flags:
   Called by: 
   Calls: 
-Bfx_SetBit_u8u8/25 (Bfx_SetBit_u8u8) @05c5a460
+Bfx_ClrBit_u8u8/26 (Bfx_ClrBit_u8u8) @0692f700
   Type: function definition
   Visibility: no_reorder
   References: 
@@ -279,7 +335,7 @@ Bfx_SetBit_u8u8/25 (Bfx_SetBit_u8u8) @05c5a460
   Function flags:
   Called by: 
   Calls: 
-Bfx_CountLeadingZeros_u32/24 (Bfx_CountLeadingZeros_u32) @05c5a1c0
+Bfx_SetBit_u8u8/25 (Bfx_SetBit_u8u8) @0692f460
   Type: function definition
   Visibility: no_reorder
   References: 
@@ -287,7 +343,7 @@ Bfx_CountLeadingZeros_u32/24 (Bfx_CountLeadingZeros_u32) @05c5a1c0
   Function flags:
   Called by: 
   Calls: 
-Bfx_CountLeadingSigns_s32/23 (Bfx_CountLeadingSigns_s32) @05c51ee0
+Bfx_CountLeadingZeros_u32/24 (Bfx_CountLeadingZeros_u32) @0692f1c0
   Type: function definition
   Visibility: no_reorder
   References: 
@@ -295,7 +351,7 @@ Bfx_CountLeadingSigns_s32/23 (Bfx_CountLeadingSigns_s32) @05c51ee0
   Function flags:
   Called by: 
   Calls: 
-Bfx_CountLeadingOnes_u32/22 (Bfx_CountLeadingOnes_u32) @05c51c40
+Bfx_CountLeadingSigns_s32/23 (Bfx_CountLeadingSigns_s32) @06926ee0
   Type: function definition
   Visibility: no_reorder
   References: 
@@ -303,7 +359,7 @@ Bfx_CountLeadingOnes_u32/22 (Bfx_CountLeadingOnes_u32) @05c51c40
   Function flags:
   Called by: 
   Calls: 
-Bfx_ShiftBitSat_s32s8_s32/21 (Bfx_ShiftBitSat_s32s8_s32) @05c519a0
+Bfx_CountLeadingOnes_u32/22 (Bfx_CountLeadingOnes_u32) @06926c40
   Type: function definition
   Visibility: no_reorder
   References: 
@@ -311,7 +367,7 @@ Bfx_ShiftBitSat_s32s8_s32/21 (Bfx_ShiftBitSat_s32s8_s32) @05c519a0
   Function flags:
   Called by: 
   Calls: 
-Bfx_ShiftBitSat_u32s8_u32/20 (Bfx_ShiftBitSat_u32s8_u32) @05c51700
+Bfx_ShiftBitSat_s32s8_s32/21 (Bfx_ShiftBitSat_s32s8_s32) @069269a0
   Type: function definition
   Visibility: no_reorder
   References: 
@@ -319,7 +375,7 @@ Bfx_ShiftBitSat_u32s8_u32/20 (Bfx_ShiftBitSat_u32s8_u32) @05c51700
   Function flags:
   Called by: 
   Calls: 
-Bfx_PutBits_u32u8u8u32/19 (Bfx_PutBits_u32u8u8u32) @05c51460
+Bfx_ShiftBitSat_u32s8_u32/20 (Bfx_ShiftBitSat_u32s8_u32) @06926700
   Type: function definition
   Visibility: no_reorder
   References: 
@@ -327,7 +383,7 @@ Bfx_PutBits_u32u8u8u32/19 (Bfx_PutBits_u32u8u8u32) @05c51460
   Function flags:
   Called by: 
   Calls: 
-Bfx_PutBitsMask_u32u32u32/18 (Bfx_PutBitsMask_u32u32u32) @05c511c0
+Bfx_PutBits_u32u8u8u32/19 (Bfx_PutBits_u32u8u8u32) @06926460
   Type: function definition
   Visibility: no_reorder
   References: 
@@ -335,7 +391,7 @@ Bfx_PutBitsMask_u32u32u32/18 (Bfx_PutBitsMask_u32u32u32) @05c511c0
   Function flags:
   Called by: 
   Calls: 
-Bfx_PutBit_u32u8u8/17 (Bfx_PutBit_u32u8u8) @05c4fee0
+Bfx_PutBitsMask_u32u32u32/18 (Bfx_PutBitsMask_u32u32u32) @069261c0
   Type: function definition
   Visibility: no_reorder
   References: 
@@ -343,7 +399,7 @@ Bfx_PutBit_u32u8u8/17 (Bfx_PutBit_u32u8u8) @05c4fee0
   Function flags:
   Called by: 
   Calls: 
-Bfx_CopyBit_u32u8u32u8/16 (Bfx_CopyBit_u32u8u32u8) @05c4fc40
+Bfx_PutBit_u32u8u8/17 (Bfx_PutBit_u32u8u8) @06924ee0
   Type: function definition
   Visibility: no_reorder
   References: 
@@ -351,7 +407,7 @@ Bfx_CopyBit_u32u8u32u8/16 (Bfx_CopyBit_u32u8u32u8) @05c4fc40
   Function flags:
   Called by: 
   Calls: 
-Bfx_RotBitLt_u32u8/15 (Bfx_RotBitLt_u32u8) @05c4f9a0
+Bfx_CopyBit_u32u8u32u8/16 (Bfx_CopyBit_u32u8u32u8) @06924c40
   Type: function definition
   Visibility: no_reorder
   References: 
@@ -359,7 +415,7 @@ Bfx_RotBitLt_u32u8/15 (Bfx_RotBitLt_u32u8) @05c4f9a0
   Function flags:
   Called by: 
   Calls: 
-Bfx_RotBitRt_u32u8/14 (Bfx_RotBitRt_u32u8) @05c4f700
+Bfx_RotBitLt_u32u8/15 (Bfx_RotBitLt_u32u8) @069249a0
   Type: function definition
   Visibility: no_reorder
   References: 
@@ -367,7 +423,7 @@ Bfx_RotBitRt_u32u8/14 (Bfx_RotBitRt_u32u8) @05c4f700
   Function flags:
   Called by: 
   Calls: 
-Bfx_ShiftBitLt_u32u8/13 (Bfx_ShiftBitLt_u32u8) @05c4f460
+Bfx_RotBitRt_u32u8/14 (Bfx_RotBitRt_u32u8) @06924700
   Type: function definition
   Visibility: no_reorder
   References: 
@@ -375,7 +431,7 @@ Bfx_ShiftBitLt_u32u8/13 (Bfx_ShiftBitLt_u32u8) @05c4f460
   Function flags:
   Called by: 
   Calls: 
-Bfx_ShiftBitRt_u32u8/12 (Bfx_ShiftBitRt_u32u8) @05c4f1c0
+Bfx_ShiftBitLt_u32u8/13 (Bfx_ShiftBitLt_u32u8) @06924460
   Type: function definition
   Visibility: no_reorder
   References: 
@@ -383,7 +439,7 @@ Bfx_ShiftBitRt_u32u8/12 (Bfx_ShiftBitRt_u32u8) @05c4f1c0
   Function flags:
   Called by: 
   Calls: 
-Bfx_ToggleBitMask_u32u32/11 (Bfx_ToggleBitMask_u32u32) @05c4bee0
+Bfx_ShiftBitRt_u32u8/12 (Bfx_ShiftBitRt_u32u8) @069241c0
   Type: function definition
   Visibility: no_reorder
   References: 
@@ -391,7 +447,7 @@ Bfx_ToggleBitMask_u32u32/11 (Bfx_ToggleBitMask_u32u32) @05c4bee0
   Function flags:
   Called by: 
   Calls: 
-Bfx_ToggleBits_u32/10 (Bfx_ToggleBits_u32) @05c4bc40
+Bfx_ToggleBitMask_u32u32/11 (Bfx_ToggleBitMask_u32u32) @06920ee0
   Type: function definition
   Visibility: no_reorder
   References: 
@@ -399,7 +455,7 @@ Bfx_ToggleBits_u32/10 (Bfx_ToggleBits_u32) @05c4bc40
   Function flags:
   Called by: 
   Calls: 
-Bfx_TstParityEven_u32_u8/9 (Bfx_TstParityEven_u32_u8) @05c4b9a0
+Bfx_ToggleBits_u32/10 (Bfx_ToggleBits_u32) @06920c40
   Type: function definition
   Visibility: no_reorder
   References: 
@@ -407,7 +463,7 @@ Bfx_TstParityEven_u32_u8/9 (Bfx_TstParityEven_u32_u8) @05c4b9a0
   Function flags:
   Called by: 
   Calls: 
-Bfx_TstBitLnMask_u32u32_u8/8 (Bfx_TstBitLnMask_u32u32_u8) @05c4b700
+Bfx_TstParityEven_u32_u8/9 (Bfx_TstParityEven_u32_u8) @069209a0
   Type: function definition
   Visibility: no_reorder
   References: 
@@ -415,7 +471,7 @@ Bfx_TstBitLnMask_u32u32_u8/8 (Bfx_TstBitLnMask_u32u32_u8) @05c4b700
   Function flags:
   Called by: 
   Calls: 
-Bfx_TstBitMask_u32u32_u8/7 (Bfx_TstBitMask_u32u32_u8) @05c4b460
+Bfx_TstBitLnMask_u32u32_u8/8 (Bfx_TstBitLnMask_u32u32_u8) @06920700
   Type: function definition
   Visibility: no_reorder
   References: 
@@ -423,7 +479,7 @@ Bfx_TstBitMask_u32u32_u8/7 (Bfx_TstBitMask_u32u32_u8) @05c4b460
   Function flags:
   Called by: 
   Calls: 
-Bfx_ClrBitMask_u32u32/6 (Bfx_ClrBitMask_u32u32) @05c4b1c0
+Bfx_TstBitMask_u32u32_u8/7 (Bfx_TstBitMask_u32u32_u8) @06920460
   Type: function definition
   Visibility: no_reorder
   References: 
@@ -431,7 +487,7 @@ Bfx_ClrBitMask_u32u32/6 (Bfx_ClrBitMask_u32u32) @05c4b1c0
   Function flags:
   Called by: 
   Calls: 
-Bfx_SetBitMask_u32u32/5 (Bfx_SetBitMask_u32u32) @05c31ee0
+Bfx_ClrBitMask_u32u32/6 (Bfx_ClrBitMask_u32u32) @069201c0
   Type: function definition
   Visibility: no_reorder
   References: 
@@ -439,7 +495,7 @@ Bfx_SetBitMask_u32u32/5 (Bfx_SetBitMask_u32u32) @05c31ee0
   Function flags:
   Called by: 
   Calls: 
-Bfx_GetBits_u32u8u8_u32/4 (Bfx_GetBits_u32u8u8_u32) @05c31c40
+Bfx_SetBitMask_u32u32/5 (Bfx_SetBitMask_u32u32) @06906ee0
   Type: function definition
   Visibility: no_reorder
   References: 
@@ -447,7 +503,7 @@ Bfx_GetBits_u32u8u8_u32/4 (Bfx_GetBits_u32u8u8_u32) @05c31c40
   Function flags:
   Called by: 
   Calls: 
-Bfx_SetBits_u32u8u8u8/3 (Bfx_SetBits_u32u8u8u8) @05c319a0
+Bfx_GetBits_u32u8u8_u32/4 (Bfx_GetBits_u32u8u8_u32) @06906c40
   Type: function definition
   Visibility: no_reorder
   References: 
@@ -455,7 +511,7 @@ Bfx_SetBits_u32u8u8u8/3 (Bfx_SetBits_u32u8u8u8) @05c319a0
   Function flags:
   Called by: 
   Calls: 
-Bfx_GetBit_u32u8_u8/2 (Bfx_GetBit_u32u8_u8) @05c31700
+Bfx_SetBits_u32u8u8u8/3 (Bfx_SetBits_u32u8u8u8) @069069a0
   Type: function definition
   Visibility: no_reorder
   References: 
@@ -463,7 +519,7 @@ Bfx_GetBit_u32u8_u8/2 (Bfx_GetBit_u32u8_u8) @05c31700
   Function flags:
   Called by: 
   Calls: 
-Bfx_ClrBit_u32u8/1 (Bfx_ClrBit_u32u8) @05c31460
+Bfx_GetBit_u32u8_u8/2 (Bfx_GetBit_u32u8_u8) @06906700
   Type: function definition
   Visibility: no_reorder
   References: 
@@ -471,7 +527,15 @@ Bfx_ClrBit_u32u8/1 (Bfx_ClrBit_u32u8) @05c31460
   Function flags:
   Called by: 
   Calls: 
-Bfx_SetBit_u32u8/0 (Bfx_SetBit_u32u8) @05c311c0
+Bfx_ClrBit_u32u8/1 (Bfx_ClrBit_u32u8) @06906460
+  Type: function definition
+  Visibility: no_reorder
+  References: 
+  Referring: 
+  Function flags:
+  Called by: 
+  Calls: 
+Bfx_SetBit_u32u8/0 (Bfx_SetBit_u32u8) @069061c0
   Type: function definition
   Visibility: no_reorder
   References: 
@@ -480,42 +544,96 @@ Bfx_SetBit_u32u8/0 (Bfx_SetBit_u32u8) @05c311c0
   Called by: 
   Calls: 
 
-Removing unused symbols: Bfx_CountLeadingZeros_u8/49 Bfx_CountLeadingSigns_s8/48 Bfx_CountLeadingOnes_u8/47 Bfx_ShiftBitSat_s8s8_s8/46 Bfx_ShiftBitSat_u8s8_u8/45 Bfx_PutBits_u8u8u8u8/44 Bfx_PutBitsMask_u8u8u8/43 Bfx_PutBit_u8u8u8/42 Bfx_CopyBit_u8u8u8u8/41 Bfx_RotBitLt_u8u8/40 Bfx_RotBitRt_u8u8/39 Bfx_ShiftBitLt_u8u8/38 Bfx_ShiftBitRt_u8u8/37 Bfx_ToggleBitMask_u8u8/36 Bfx_ToggleBits_u8/35 Bfx_TstParityEven_u8_u8/34 Bfx_TstBitLnMask_u8u8_u8/33 Bfx_TstBitMask_u8u8_u8/32 Bfx_ClrBitMask_u8u8/31 Bfx_SetBitMask_u8u8/30 Bfx_GetBits_u8u8u8_u8/29 Bfx_SetBits_u8u8u8u8/28 Bfx_GetBit_u8u8_u8/27 Bfx_ClrBit_u8u8/26 Bfx_SetBit_u8u8/25 Bfx_CountLeadingZeros_u32/24 Bfx_CountLeadingSigns_s32/23 Bfx_CountLeadingOnes_u32/22 Bfx_ShiftBitSat_s32s8_s32/21 Bfx_ShiftBitSat_u32s8_u32/20 Bfx_PutBits_u32u8u8u32/19 Bfx_PutBitsMask_u32u32u32/18 Bfx_PutBit_u32u8u8/17 Bfx_CopyBit_u32u8u32u8/16 Bfx_RotBitLt_u32u8/15 Bfx_RotBitRt_u32u8/14 Bfx_ShiftBitLt_u32u8/13 Bfx_ShiftBitRt_u32u8/12 Bfx_ToggleBitMask_u32u32/11 Bfx_ToggleBits_u32/10 Bfx_TstParityEven_u32_u8/9 Bfx_TstBitLnMask_u32u32_u8/8 Bfx_TstBitMask_u32u32_u8/7 Bfx_ClrBitMask_u32u32/6 Bfx_SetBitMask_u32u32/5 Bfx_GetBits_u32u8u8_u32/4 Bfx_SetBits_u32u8u8u8/3 Bfx_GetBit_u32u8_u8/2 Bfx_ClrBit_u32u8/1 Bfx_SetBit_u32u8/0
+Removing unused symbols: DevAssert/50 Bfx_CountLeadingZeros_u8/49 Bfx_CountLeadingSigns_s8/48 Bfx_CountLeadingOnes_u8/47 Bfx_ShiftBitSat_s8s8_s8/46 Bfx_ShiftBitSat_u8s8_u8/45 Bfx_PutBits_u8u8u8u8/44 Bfx_PutBitsMask_u8u8u8/43 Bfx_PutBit_u8u8u8/42 Bfx_CopyBit_u8u8u8u8/41 Bfx_RotBitLt_u8u8/40 Bfx_RotBitRt_u8u8/39 Bfx_ShiftBitLt_u8u8/38 Bfx_ShiftBitRt_u8u8/37 Bfx_ToggleBitMask_u8u8/36 Bfx_ToggleBits_u8/35 Bfx_TstParityEven_u8_u8/34 Bfx_TstBitLnMask_u8u8_u8/33 Bfx_TstBitMask_u8u8_u8/32 Bfx_ClrBitMask_u8u8/31 Bfx_SetBitMask_u8u8/30 Bfx_GetBits_u8u8u8_u8/29 Bfx_SetBits_u8u8u8u8/28 Bfx_GetBit_u8u8_u8/27 Bfx_ClrBit_u8u8/26 Bfx_SetBit_u8u8/25 Bfx_CountLeadingZeros_u32/24 Bfx_CountLeadingSigns_s32/23 Bfx_CountLeadingOnes_u32/22 Bfx_ShiftBitSat_s32s8_s32/21 Bfx_ShiftBitSat_u32s8_u32/20 Bfx_PutBits_u32u8u8u32/19 Bfx_PutBitsMask_u32u32u32/18 Bfx_PutBit_u32u8u8/17 Bfx_CopyBit_u32u8u32u8/16 Bfx_RotBitLt_u32u8/15 Bfx_RotBitRt_u32u8/14 Bfx_ShiftBitLt_u32u8/13 Bfx_ShiftBitRt_u32u8/12 Bfx_ToggleBitMask_u32u32/11 Bfx_ToggleBits_u32/10 Bfx_TstParityEven_u32_u8/9 Bfx_TstBitLnMask_u32u32_u8/8 Bfx_TstBitMask_u32u32_u8/7 Bfx_ClrBitMask_u32u32/6 Bfx_SetBitMask_u32u32/5 Bfx_GetBits_u32u8u8_u32/4 Bfx_SetBits_u32u8u8u8/3 Bfx_GetBit_u32u8_u8/2 Bfx_ClrBit_u32u8/1 Bfx_SetBit_u32u8/0
 
 Reclaimed Symbol table:
 
-ButtonsControl_Ptr/58 (ButtonsControl_Ptr) @05dc2ee8
+ButtonsControl_Ptr/66 (ButtonsControl_Ptr) @06d5d240
   Type: variable
   Visibility: external public
   References: 
-  Referring: Task2_callback/51 (read) 
+  Referring: Task2_callback/52 (read) 
   Availability: not-ready
   Varpool flags:
-HwIoAb_Leds_TurnToggle/57 (HwIoAb_Leds_TurnToggle) @05dc3380
+HwIoAb_Pots_GetAltValue/65 (HwIoAb_Pots_GetAltValue) @06d5c1c0
   Type: function
   Visibility: external public
   References: 
   Referring: 
   Function flags:
-  Called by: Task2_callback/51 Task2_callback/51 Task2_callback/51 Task2_callback/51 Task2_callback/51 Task2_callback/51 Task2_callback/51 Task2_callback/51 Task2_callback/51 Task2_callback/51 Task2_callback/51 Task2_callback/51 
+  Called by: Task2_callback/52 
   Calls: 
-HwIoAb_Buttons_GetEvent/56 (HwIoAb_Buttons_GetEvent) @05dc32a0
+HwIoAb_Buzzer_Stop/64 (HwIoAb_Buzzer_Stop) @06d5c000
   Type: function
   Visibility: external public
   References: 
   Referring: 
   Function flags:
-  Called by: Task2_callback/51 
+  Called by: Task2_callback/52 Task2_callback/52 Task2_callback/52 
   Calls: 
-HwIoAb_Buttons_MainFunction/55 (HwIoAb_Buttons_MainFunction) @05db8ee0
+HwIoAb_Buzzer_Beep/63 (HwIoAb_Buzzer_Beep) @06d53380
   Type: function
   Visibility: external public
   References: 
   Referring: 
   Function flags:
-  Called by: Task1_callback/50 
+  Called by: Task2_callback/52 Task2_callback/52 Task2_callback/52 
   Calls: 
-Timer3_callback/54 (Timer3_callback) @05dbe7e0
+flags/62 (flags) @06d56e58
+  Type: variable definition analyzed
+  Visibility: force_output no_reorder
+  References: 
+  Referring: Task2_callback/52 (read) Task2_callback/52 (write) Task2_callback/52 (write) Task2_callback/52 (read) Task2_callback/52 (write) Task2_callback/52 (write) Task2_callback/52 (read) Task2_callback/52 (write) Task2_callback/52 (write) 
+  Availability: not-ready
+  Varpool flags: initialized
+SEGGER_RTT_printf/61 (SEGGER_RTT_printf) @06d530e0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: Task2_callback/52 Task2_callback/52 Task2_callback/52 
+  Calls: 
+HwIoAb_Pots_GetValue/60 (HwIoAb_Pots_GetValue) @06d53ee0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: Task2_callback/52 Task2_callback/52 
+  Calls: 
+PotsControl_Ptr/59 (PotsControl_Ptr) @06d56d80
+  Type: variable
+  Visibility: external public
+  References: 
+  Referring: Task2_callback/52 (read) Task2_callback/52 (read) Task2_callback/52 (read) Task2_callback/52 (read) Task2_callback/52 (read) Task2_callback/52 (read) Task2_callback/52 (read) 
+  Availability: not-ready
+  Varpool flags:
+HwIoAb_Leds_TurnToggle/58 (HwIoAb_Leds_TurnToggle) @06d53e00
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: Task2_callback/52 Task2_callback/52 Task2_callback/52 
+  Calls: 
+HwIoAb_Buttons_GetEvent/57 (HwIoAb_Buttons_GetEvent) @06d53d20
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: Task2_callback/52 
+  Calls: 
+HwIoAb_Buttons_MainFunction/56 (HwIoAb_Buttons_MainFunction) @06d539a0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: Task1_callback/51 
+  Calls: 
+Timer3_callback/55 (Timer3_callback) @06d53540
   Type: function definition analyzed
   Visibility: force_output no_reorder public
   References: 
@@ -523,7 +641,7 @@ Timer3_callback/54 (Timer3_callback) @05dbe7e0
   Function flags: body
   Called by: 
   Calls: 
-Timer2_callback/53 (Timer2_callback) @05dbe540
+Timer2_callback/54 (Timer2_callback) @06d532a0
   Type: function definition analyzed
   Visibility: force_output no_reorder public
   References: 
@@ -531,7 +649,7 @@ Timer2_callback/53 (Timer2_callback) @05dbe540
   Function flags: body
   Called by: 
   Calls: 
-Timer1_callback/52 (Timer1_callback) @05dbeee0
+Timer1_callback/53 (Timer1_callback) @06d53000
   Type: function definition analyzed
   Visibility: force_output no_reorder public
   References: 
@@ -539,58 +657,112 @@ Timer1_callback/52 (Timer1_callback) @05dbeee0
   Function flags: body
   Called by: 
   Calls: 
-Task2_callback/51 (Task2_callback) @05dbec40
+Task2_callback/52 (Task2_callback) @06d39b60
   Type: function definition analyzed
   Visibility: force_output no_reorder public
-  References: ButtonsControl_Ptr/58 (read) 
+  References: PotsControl_Ptr/59 (read) PotsControl_Ptr/59 (read) flags/62 (read) flags/62 (write) flags/62 (write) PotsControl_Ptr/59 (read) PotsControl_Ptr/59 (read) flags/62 (read) flags/62 (write) flags/62 (write) PotsControl_Ptr/59 (read) PotsControl_Ptr/59 (read) PotsControl_Ptr/59 (read) flags/62 (read) flags/62 (write) flags/62 (write) ButtonsControl_Ptr/66 (read) 
   Referring: 
   Function flags: body
   Called by: 
-  Calls: HwIoAb_Leds_TurnToggle/57 HwIoAb_Leds_TurnToggle/57 HwIoAb_Leds_TurnToggle/57 HwIoAb_Leds_TurnToggle/57 HwIoAb_Leds_TurnToggle/57 HwIoAb_Leds_TurnToggle/57 HwIoAb_Leds_TurnToggle/57 HwIoAb_Leds_TurnToggle/57 HwIoAb_Leds_TurnToggle/57 HwIoAb_Leds_TurnToggle/57 HwIoAb_Leds_TurnToggle/57 HwIoAb_Leds_TurnToggle/57 HwIoAb_Buttons_GetEvent/56 
-Task1_callback/50 (Task1_callback) @05dbe9a0
+  Calls: HwIoAb_Buzzer_Stop/64 HwIoAb_Buzzer_Beep/63 SEGGER_RTT_printf/61 HwIoAb_Pots_GetAltValue/65 HwIoAb_Leds_TurnToggle/58 HwIoAb_Buzzer_Stop/64 HwIoAb_Buzzer_Beep/63 SEGGER_RTT_printf/61 HwIoAb_Pots_GetValue/60 HwIoAb_Leds_TurnToggle/58 HwIoAb_Buzzer_Stop/64 HwIoAb_Buzzer_Beep/63 SEGGER_RTT_printf/61 HwIoAb_Pots_GetValue/60 HwIoAb_Leds_TurnToggle/58 HwIoAb_Buttons_GetEvent/57 
+Task1_callback/51 (Task1_callback) @06d39d20
   Type: function definition analyzed
   Visibility: force_output no_reorder public
   References: 
   Referring: 
   Function flags: body
   Called by: 
-  Calls: HwIoAb_Buttons_MainFunction/55 
+  Calls: HwIoAb_Buttons_MainFunction/56 
 
 
 Initial Symbol table:
 
-ButtonsControl_Ptr/58 (ButtonsControl_Ptr) @05dc2ee8
+ButtonsControl_Ptr/66 (ButtonsControl_Ptr) @06d5d240
   Type: variable
   Visibility: external public
   References: 
-  Referring: Task2_callback/51 (read) 
+  Referring: Task2_callback/52 (read) 
   Availability: not-ready
   Varpool flags:
-HwIoAb_Leds_TurnToggle/57 (HwIoAb_Leds_TurnToggle) @05dc3380
+HwIoAb_Pots_GetAltValue/65 (HwIoAb_Pots_GetAltValue) @06d5c1c0
   Type: function
   Visibility: external public
   References: 
   Referring: 
   Function flags:
-  Called by: Task2_callback/51 Task2_callback/51 Task2_callback/51 Task2_callback/51 Task2_callback/51 Task2_callback/51 Task2_callback/51 Task2_callback/51 Task2_callback/51 Task2_callback/51 Task2_callback/51 Task2_callback/51 
+  Called by: Task2_callback/52 
   Calls: 
-HwIoAb_Buttons_GetEvent/56 (HwIoAb_Buttons_GetEvent) @05dc32a0
+HwIoAb_Buzzer_Stop/64 (HwIoAb_Buzzer_Stop) @06d5c000
   Type: function
   Visibility: external public
   References: 
   Referring: 
   Function flags:
-  Called by: Task2_callback/51 
+  Called by: Task2_callback/52 Task2_callback/52 Task2_callback/52 
   Calls: 
-HwIoAb_Buttons_MainFunction/55 (HwIoAb_Buttons_MainFunction) @05db8ee0
+HwIoAb_Buzzer_Beep/63 (HwIoAb_Buzzer_Beep) @06d53380
   Type: function
   Visibility: external public
   References: 
   Referring: 
   Function flags:
-  Called by: Task1_callback/50 
+  Called by: Task2_callback/52 Task2_callback/52 Task2_callback/52 
   Calls: 
-Timer3_callback/54 (Timer3_callback) @05dbe7e0
+flags.0/62 (flags) @06d56e58
+  Type: variable definition analyzed
+  Visibility: force_output no_reorder
+  References: 
+  Referring: Task2_callback/52 (read) Task2_callback/52 (write) Task2_callback/52 (write) Task2_callback/52 (read) Task2_callback/52 (write) Task2_callback/52 (write) Task2_callback/52 (read) Task2_callback/52 (write) Task2_callback/52 (write) 
+  Availability: not-ready
+  Varpool flags: initialized
+SEGGER_RTT_printf/61 (SEGGER_RTT_printf) @06d530e0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: Task2_callback/52 Task2_callback/52 Task2_callback/52 
+  Calls: 
+HwIoAb_Pots_GetValue/60 (HwIoAb_Pots_GetValue) @06d53ee0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: Task2_callback/52 Task2_callback/52 
+  Calls: 
+PotsControl_Ptr/59 (PotsControl_Ptr) @06d56d80
+  Type: variable
+  Visibility: external public
+  References: 
+  Referring: Task2_callback/52 (read) Task2_callback/52 (read) Task2_callback/52 (read) Task2_callback/52 (read) Task2_callback/52 (read) Task2_callback/52 (read) Task2_callback/52 (read) 
+  Availability: not-ready
+  Varpool flags:
+HwIoAb_Leds_TurnToggle/58 (HwIoAb_Leds_TurnToggle) @06d53e00
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: Task2_callback/52 Task2_callback/52 Task2_callback/52 
+  Calls: 
+HwIoAb_Buttons_GetEvent/57 (HwIoAb_Buttons_GetEvent) @06d53d20
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: Task2_callback/52 
+  Calls: 
+HwIoAb_Buttons_MainFunction/56 (HwIoAb_Buttons_MainFunction) @06d539a0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: Task1_callback/51 
+  Calls: 
+Timer3_callback/55 (Timer3_callback) @06d53540
   Type: function definition analyzed
   Visibility: force_output no_reorder public
   References: 
@@ -598,7 +770,7 @@ Timer3_callback/54 (Timer3_callback) @05dbe7e0
   Function flags: body
   Called by: 
   Calls: 
-Timer2_callback/53 (Timer2_callback) @05dbe540
+Timer2_callback/54 (Timer2_callback) @06d532a0
   Type: function definition analyzed
   Visibility: force_output no_reorder public
   References: 
@@ -606,7 +778,7 @@ Timer2_callback/53 (Timer2_callback) @05dbe540
   Function flags: body
   Called by: 
   Calls: 
-Timer1_callback/52 (Timer1_callback) @05dbeee0
+Timer1_callback/53 (Timer1_callback) @06d53000
   Type: function definition analyzed
   Visibility: force_output no_reorder public
   References: 
@@ -614,59 +786,113 @@ Timer1_callback/52 (Timer1_callback) @05dbeee0
   Function flags: body
   Called by: 
   Calls: 
-Task2_callback/51 (Task2_callback) @05dbec40
+Task2_callback/52 (Task2_callback) @06d39b60
   Type: function definition analyzed
   Visibility: force_output no_reorder public
-  References: ButtonsControl_Ptr/58 (read) 
+  References: PotsControl_Ptr/59 (read) PotsControl_Ptr/59 (read) flags.0/62 (read) flags.0/62 (write) flags.0/62 (write) PotsControl_Ptr/59 (read) PotsControl_Ptr/59 (read) flags.0/62 (read) flags.0/62 (write) flags.0/62 (write) PotsControl_Ptr/59 (read) PotsControl_Ptr/59 (read) PotsControl_Ptr/59 (read) flags.0/62 (read) flags.0/62 (write) flags.0/62 (write) ButtonsControl_Ptr/66 (read) 
   Referring: 
   Function flags: body
   Called by: 
-  Calls: HwIoAb_Leds_TurnToggle/57 HwIoAb_Leds_TurnToggle/57 HwIoAb_Leds_TurnToggle/57 HwIoAb_Leds_TurnToggle/57 HwIoAb_Leds_TurnToggle/57 HwIoAb_Leds_TurnToggle/57 HwIoAb_Leds_TurnToggle/57 HwIoAb_Leds_TurnToggle/57 HwIoAb_Leds_TurnToggle/57 HwIoAb_Leds_TurnToggle/57 HwIoAb_Leds_TurnToggle/57 HwIoAb_Leds_TurnToggle/57 HwIoAb_Buttons_GetEvent/56 
-Task1_callback/50 (Task1_callback) @05dbe9a0
+  Calls: HwIoAb_Buzzer_Stop/64 HwIoAb_Buzzer_Beep/63 SEGGER_RTT_printf/61 HwIoAb_Pots_GetAltValue/65 HwIoAb_Leds_TurnToggle/58 HwIoAb_Buzzer_Stop/64 HwIoAb_Buzzer_Beep/63 SEGGER_RTT_printf/61 HwIoAb_Pots_GetValue/60 HwIoAb_Leds_TurnToggle/58 HwIoAb_Buzzer_Stop/64 HwIoAb_Buzzer_Beep/63 SEGGER_RTT_printf/61 HwIoAb_Pots_GetValue/60 HwIoAb_Leds_TurnToggle/58 HwIoAb_Buttons_GetEvent/57 
+Task1_callback/51 (Task1_callback) @06d39d20
   Type: function definition analyzed
   Visibility: force_output no_reorder public
   References: 
   Referring: 
   Function flags: body
   Called by: 
-  Calls: HwIoAb_Buttons_MainFunction/55 
+  Calls: HwIoAb_Buttons_MainFunction/56 
 
 Removing unused symbols:
 
 Reclaimed Symbol table:
 
-ButtonsControl_Ptr/58 (ButtonsControl_Ptr) @05dc2ee8
+ButtonsControl_Ptr/66 (ButtonsControl_Ptr) @06d5d240
   Type: variable
   Visibility: external public
   References: 
-  Referring: Task2_callback/51 (read) 
+  Referring: Task2_callback/52 (read) 
   Availability: not-ready
   Varpool flags:
-HwIoAb_Leds_TurnToggle/57 (HwIoAb_Leds_TurnToggle) @05dc3380
+HwIoAb_Pots_GetAltValue/65 (HwIoAb_Pots_GetAltValue) @06d5c1c0
   Type: function
   Visibility: external public
   References: 
   Referring: 
   Function flags:
-  Called by: Task2_callback/51 Task2_callback/51 Task2_callback/51 Task2_callback/51 Task2_callback/51 Task2_callback/51 Task2_callback/51 Task2_callback/51 Task2_callback/51 Task2_callback/51 Task2_callback/51 Task2_callback/51 
+  Called by: Task2_callback/52 
   Calls: 
-HwIoAb_Buttons_GetEvent/56 (HwIoAb_Buttons_GetEvent) @05dc32a0
+HwIoAb_Buzzer_Stop/64 (HwIoAb_Buzzer_Stop) @06d5c000
   Type: function
   Visibility: external public
   References: 
   Referring: 
   Function flags:
-  Called by: Task2_callback/51 
+  Called by: Task2_callback/52 Task2_callback/52 Task2_callback/52 
   Calls: 
-HwIoAb_Buttons_MainFunction/55 (HwIoAb_Buttons_MainFunction) @05db8ee0
+HwIoAb_Buzzer_Beep/63 (HwIoAb_Buzzer_Beep) @06d53380
   Type: function
   Visibility: external public
   References: 
   Referring: 
   Function flags:
-  Called by: Task1_callback/50 
+  Called by: Task2_callback/52 Task2_callback/52 Task2_callback/52 
   Calls: 
-Timer3_callback/54 (Timer3_callback) @05dbe7e0
+flags.0/62 (flags) @06d56e58
+  Type: variable definition analyzed
+  Visibility: force_output no_reorder
+  References: 
+  Referring: Task2_callback/52 (read) Task2_callback/52 (write) Task2_callback/52 (write) Task2_callback/52 (read) Task2_callback/52 (write) Task2_callback/52 (write) Task2_callback/52 (read) Task2_callback/52 (write) Task2_callback/52 (write) 
+  Availability: not-ready
+  Varpool flags: initialized
+SEGGER_RTT_printf/61 (SEGGER_RTT_printf) @06d530e0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: Task2_callback/52 Task2_callback/52 Task2_callback/52 
+  Calls: 
+HwIoAb_Pots_GetValue/60 (HwIoAb_Pots_GetValue) @06d53ee0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: Task2_callback/52 Task2_callback/52 
+  Calls: 
+PotsControl_Ptr/59 (PotsControl_Ptr) @06d56d80
+  Type: variable
+  Visibility: external public
+  References: 
+  Referring: Task2_callback/52 (read) Task2_callback/52 (read) Task2_callback/52 (read) Task2_callback/52 (read) Task2_callback/52 (read) Task2_callback/52 (read) Task2_callback/52 (read) 
+  Availability: not-ready
+  Varpool flags:
+HwIoAb_Leds_TurnToggle/58 (HwIoAb_Leds_TurnToggle) @06d53e00
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: Task2_callback/52 Task2_callback/52 Task2_callback/52 
+  Calls: 
+HwIoAb_Buttons_GetEvent/57 (HwIoAb_Buttons_GetEvent) @06d53d20
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: Task2_callback/52 
+  Calls: 
+HwIoAb_Buttons_MainFunction/56 (HwIoAb_Buttons_MainFunction) @06d539a0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: Task1_callback/51 
+  Calls: 
+Timer3_callback/55 (Timer3_callback) @06d53540
   Type: function definition analyzed
   Visibility: force_output no_reorder public
   References: 
@@ -674,7 +900,7 @@ Timer3_callback/54 (Timer3_callback) @05dbe7e0
   Function flags: body
   Called by: 
   Calls: 
-Timer2_callback/53 (Timer2_callback) @05dbe540
+Timer2_callback/54 (Timer2_callback) @06d532a0
   Type: function definition analyzed
   Visibility: force_output no_reorder public
   References: 
@@ -682,7 +908,7 @@ Timer2_callback/53 (Timer2_callback) @05dbe540
   Function flags: body
   Called by: 
   Calls: 
-Timer1_callback/52 (Timer1_callback) @05dbeee0
+Timer1_callback/53 (Timer1_callback) @06d53000
   Type: function definition analyzed
   Visibility: force_output no_reorder public
   References: 
@@ -690,64 +916,124 @@ Timer1_callback/52 (Timer1_callback) @05dbeee0
   Function flags: body
   Called by: 
   Calls: 
-Task2_callback/51 (Task2_callback) @05dbec40
+Task2_callback/52 (Task2_callback) @06d39b60
   Type: function definition analyzed
   Visibility: force_output no_reorder public
-  References: ButtonsControl_Ptr/58 (read) 
+  References: PotsControl_Ptr/59 (read) PotsControl_Ptr/59 (read) flags.0/62 (read) flags.0/62 (write) flags.0/62 (write) PotsControl_Ptr/59 (read) PotsControl_Ptr/59 (read) flags.0/62 (read) flags.0/62 (write) flags.0/62 (write) PotsControl_Ptr/59 (read) PotsControl_Ptr/59 (read) PotsControl_Ptr/59 (read) flags.0/62 (read) flags.0/62 (write) flags.0/62 (write) ButtonsControl_Ptr/66 (read) 
   Referring: 
   Function flags: body
   Called by: 
-  Calls: HwIoAb_Leds_TurnToggle/57 HwIoAb_Leds_TurnToggle/57 HwIoAb_Leds_TurnToggle/57 HwIoAb_Leds_TurnToggle/57 HwIoAb_Leds_TurnToggle/57 HwIoAb_Leds_TurnToggle/57 HwIoAb_Leds_TurnToggle/57 HwIoAb_Leds_TurnToggle/57 HwIoAb_Leds_TurnToggle/57 HwIoAb_Leds_TurnToggle/57 HwIoAb_Leds_TurnToggle/57 HwIoAb_Leds_TurnToggle/57 HwIoAb_Buttons_GetEvent/56 
-Task1_callback/50 (Task1_callback) @05dbe9a0
+  Calls: HwIoAb_Buzzer_Stop/64 HwIoAb_Buzzer_Beep/63 SEGGER_RTT_printf/61 HwIoAb_Pots_GetAltValue/65 HwIoAb_Leds_TurnToggle/58 HwIoAb_Buzzer_Stop/64 HwIoAb_Buzzer_Beep/63 SEGGER_RTT_printf/61 HwIoAb_Pots_GetValue/60 HwIoAb_Leds_TurnToggle/58 HwIoAb_Buzzer_Stop/64 HwIoAb_Buzzer_Beep/63 SEGGER_RTT_printf/61 HwIoAb_Pots_GetValue/60 HwIoAb_Leds_TurnToggle/58 HwIoAb_Buttons_GetEvent/57 
+Task1_callback/51 (Task1_callback) @06d39d20
   Type: function definition analyzed
   Visibility: force_output no_reorder public
   References: 
   Referring: 
   Function flags: body
   Called by: 
-  Calls: HwIoAb_Buttons_MainFunction/55 
+  Calls: HwIoAb_Buttons_MainFunction/56 
 
 Reclaiming functions:
 Reclaiming variables:
 Clearing address taken flags:
 Optimized Symbol table:
 
-ButtonsControl_Ptr/58 (ButtonsControl_Ptr) @05dc2ee8
+ButtonsControl_Ptr/66 (ButtonsControl_Ptr) @06d5d240
   Type: variable
   Body removed by symtab_remove_unreachable_nodes
   Visibility: external public
   References: 
-  Referring: Task2_callback/51 (read) 
+  Referring: Task2_callback/52 (read) 
   Availability: not_available
   Varpool flags:
-HwIoAb_Leds_TurnToggle/57 (HwIoAb_Leds_TurnToggle) @05dc3380
+HwIoAb_Pots_GetAltValue/65 (HwIoAb_Pots_GetAltValue) @06d5c1c0
   Type: function
   Visibility: external public
   References: 
   Referring: 
   Availability: not_available
   Function flags:
-  Called by: Task2_callback/51 Task2_callback/51 Task2_callback/51 Task2_callback/51 Task2_callback/51 Task2_callback/51 Task2_callback/51 Task2_callback/51 Task2_callback/51 Task2_callback/51 Task2_callback/51 Task2_callback/51 
+  Called by: Task2_callback/52 
   Calls: 
-HwIoAb_Buttons_GetEvent/56 (HwIoAb_Buttons_GetEvent) @05dc32a0
+HwIoAb_Buzzer_Stop/64 (HwIoAb_Buzzer_Stop) @06d5c000
   Type: function
   Visibility: external public
   References: 
   Referring: 
   Availability: not_available
   Function flags:
-  Called by: Task2_callback/51 
+  Called by: Task2_callback/52 Task2_callback/52 Task2_callback/52 
   Calls: 
-HwIoAb_Buttons_MainFunction/55 (HwIoAb_Buttons_MainFunction) @05db8ee0
+HwIoAb_Buzzer_Beep/63 (HwIoAb_Buzzer_Beep) @06d53380
   Type: function
   Visibility: external public
   References: 
   Referring: 
   Availability: not_available
   Function flags:
-  Called by: Task1_callback/50 
+  Called by: Task2_callback/52 Task2_callback/52 Task2_callback/52 
   Calls: 
-Timer3_callback/54 (Timer3_callback) @05dbe7e0
+flags.0/62 (flags) @06d56e58
+  Type: variable definition analyzed
+  Visibility: force_output no_reorder prevailing_def_ironly
+  References: 
+  Referring: Task2_callback/52 (read) Task2_callback/52 (write) Task2_callback/52 (write) Task2_callback/52 (read) Task2_callback/52 (write) Task2_callback/52 (write) Task2_callback/52 (read) Task2_callback/52 (write) Task2_callback/52 (write) 
+  Availability: available
+  Varpool flags: initialized
+SEGGER_RTT_printf/61 (SEGGER_RTT_printf) @06d530e0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: Task2_callback/52 Task2_callback/52 Task2_callback/52 
+  Calls: 
+HwIoAb_Pots_GetValue/60 (HwIoAb_Pots_GetValue) @06d53ee0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: Task2_callback/52 Task2_callback/52 
+  Calls: 
+PotsControl_Ptr/59 (PotsControl_Ptr) @06d56d80
+  Type: variable
+  Body removed by symtab_remove_unreachable_nodes
+  Visibility: external public
+  References: 
+  Referring: Task2_callback/52 (read) Task2_callback/52 (read) Task2_callback/52 (read) Task2_callback/52 (read) Task2_callback/52 (read) Task2_callback/52 (read) Task2_callback/52 (read) 
+  Availability: not_available
+  Varpool flags:
+HwIoAb_Leds_TurnToggle/58 (HwIoAb_Leds_TurnToggle) @06d53e00
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: Task2_callback/52 Task2_callback/52 Task2_callback/52 
+  Calls: 
+HwIoAb_Buttons_GetEvent/57 (HwIoAb_Buttons_GetEvent) @06d53d20
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: Task2_callback/52 
+  Calls: 
+HwIoAb_Buttons_MainFunction/56 (HwIoAb_Buttons_MainFunction) @06d539a0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: Task1_callback/51 
+  Calls: 
+Timer3_callback/55 (Timer3_callback) @06d53540
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: 
@@ -756,7 +1042,7 @@ Timer3_callback/54 (Timer3_callback) @05dbe7e0
   Function flags: body
   Called by: 
   Calls: 
-Timer2_callback/53 (Timer2_callback) @05dbe540
+Timer2_callback/54 (Timer2_callback) @06d532a0
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: 
@@ -765,7 +1051,7 @@ Timer2_callback/53 (Timer2_callback) @05dbe540
   Function flags: body
   Called by: 
   Calls: 
-Timer1_callback/52 (Timer1_callback) @05dbeee0
+Timer1_callback/53 (Timer1_callback) @06d53000
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: 
@@ -774,16 +1060,16 @@ Timer1_callback/52 (Timer1_callback) @05dbeee0
   Function flags: body
   Called by: 
   Calls: 
-Task2_callback/51 (Task2_callback) @05dbec40
+Task2_callback/52 (Task2_callback) @06d39b60
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
-  References: ButtonsControl_Ptr/58 (read) 
+  References: PotsControl_Ptr/59 (read) PotsControl_Ptr/59 (read) flags.0/62 (read) flags.0/62 (write) flags.0/62 (write) PotsControl_Ptr/59 (read) PotsControl_Ptr/59 (read) flags.0/62 (read) flags.0/62 (write) flags.0/62 (write) PotsControl_Ptr/59 (read) PotsControl_Ptr/59 (read) PotsControl_Ptr/59 (read) flags.0/62 (read) flags.0/62 (write) flags.0/62 (write) ButtonsControl_Ptr/66 (read) 
   Referring: 
   Availability: available
   Function flags: body
   Called by: 
-  Calls: HwIoAb_Leds_TurnToggle/57 HwIoAb_Leds_TurnToggle/57 HwIoAb_Leds_TurnToggle/57 HwIoAb_Leds_TurnToggle/57 HwIoAb_Leds_TurnToggle/57 HwIoAb_Leds_TurnToggle/57 HwIoAb_Leds_TurnToggle/57 HwIoAb_Leds_TurnToggle/57 HwIoAb_Leds_TurnToggle/57 HwIoAb_Leds_TurnToggle/57 HwIoAb_Leds_TurnToggle/57 HwIoAb_Leds_TurnToggle/57 HwIoAb_Buttons_GetEvent/56 
-Task1_callback/50 (Task1_callback) @05dbe9a0
+  Calls: HwIoAb_Buzzer_Stop/64 HwIoAb_Buzzer_Beep/63 SEGGER_RTT_printf/61 HwIoAb_Pots_GetAltValue/65 HwIoAb_Leds_TurnToggle/58 HwIoAb_Buzzer_Stop/64 HwIoAb_Buzzer_Beep/63 SEGGER_RTT_printf/61 HwIoAb_Pots_GetValue/60 HwIoAb_Leds_TurnToggle/58 HwIoAb_Buzzer_Stop/64 HwIoAb_Buzzer_Beep/63 SEGGER_RTT_printf/61 HwIoAb_Pots_GetValue/60 HwIoAb_Leds_TurnToggle/58 HwIoAb_Buttons_GetEvent/57 
+Task1_callback/51 (Task1_callback) @06d39d20
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: 
@@ -791,19 +1077,19 @@ Task1_callback/50 (Task1_callback) @05dbe9a0
   Availability: available
   Function flags: body
   Called by: 
-  Calls: HwIoAb_Buttons_MainFunction/55 
+  Calls: HwIoAb_Buttons_MainFunction/56 
 Materializing clones
 Materialization Call site updates done.
 
 Reclaiming functions:
 Reclaiming variables:
 Clearing address taken flags:
-Trivially needed variables:
+Trivially needed variables: flags.0/62
 Removing variables:
 
 Final Symbol table:
 
-ButtonsControl_Ptr/58 (ButtonsControl_Ptr) @05dc2ee8
+ButtonsControl_Ptr/66 (ButtonsControl_Ptr) @06d5d240
   Type: variable
   Body removed by symtab_remove_unreachable_nodes
   Visibility: external public
@@ -811,7 +1097,7 @@ ButtonsControl_Ptr/58 (ButtonsControl_Ptr) @05dc2ee8
   Referring: 
   Availability: not_available
   Varpool flags:
-HwIoAb_Leds_TurnToggle/57 (HwIoAb_Leds_TurnToggle) @05dc3380
+HwIoAb_Pots_GetAltValue/65 (HwIoAb_Pots_GetAltValue) @06d5c1c0
   Type: function
   Visibility: external public
   References: 
@@ -820,7 +1106,7 @@ HwIoAb_Leds_TurnToggle/57 (HwIoAb_Leds_TurnToggle) @05dc3380
   Function flags:
   Called by: 
   Calls: 
-HwIoAb_Buttons_GetEvent/56 (HwIoAb_Buttons_GetEvent) @05dc32a0
+HwIoAb_Buzzer_Stop/64 (HwIoAb_Buzzer_Stop) @06d5c000
   Type: function
   Visibility: external public
   References: 
@@ -829,7 +1115,7 @@ HwIoAb_Buttons_GetEvent/56 (HwIoAb_Buttons_GetEvent) @05dc32a0
   Function flags:
   Called by: 
   Calls: 
-HwIoAb_Buttons_MainFunction/55 (HwIoAb_Buttons_MainFunction) @05db8ee0
+HwIoAb_Buzzer_Beep/63 (HwIoAb_Buzzer_Beep) @06d53380
   Type: function
   Visibility: external public
   References: 
@@ -838,7 +1124,68 @@ HwIoAb_Buttons_MainFunction/55 (HwIoAb_Buttons_MainFunction) @05db8ee0
   Function flags:
   Called by: 
   Calls: 
-Timer3_callback/54 (Timer3_callback) @05dbe7e0
+flags.0/62 (flags) @06d56e58
+  Type: variable definition analyzed
+  Visibility: force_output no_reorder prevailing_def_ironly asm_written section:.data.flags.0 (implicit_section)
+  Aux: @00000001
+  References: 
+  Referring: 
+  Availability: available
+  Varpool flags: initialized
+SEGGER_RTT_printf/61 (SEGGER_RTT_printf) @06d530e0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+HwIoAb_Pots_GetValue/60 (HwIoAb_Pots_GetValue) @06d53ee0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+PotsControl_Ptr/59 (PotsControl_Ptr) @06d56d80
+  Type: variable
+  Body removed by symtab_remove_unreachable_nodes
+  Visibility: external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Varpool flags:
+HwIoAb_Leds_TurnToggle/58 (HwIoAb_Leds_TurnToggle) @06d53e00
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+HwIoAb_Buttons_GetEvent/57 (HwIoAb_Buttons_GetEvent) @06d53d20
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+HwIoAb_Buttons_MainFunction/56 (HwIoAb_Buttons_MainFunction) @06d539a0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+Timer3_callback/55 (Timer3_callback) @06d53540
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder asm_written public section:.text.Timer3_callback (implicit_section)
   References: 
@@ -847,7 +1194,7 @@ Timer3_callback/54 (Timer3_callback) @05dbe7e0
   Function flags:
   Called by: 
   Calls: 
-Timer2_callback/53 (Timer2_callback) @05dbe540
+Timer2_callback/54 (Timer2_callback) @06d532a0
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder asm_written public section:.text.Timer2_callback (implicit_section)
   References: 
@@ -856,7 +1203,7 @@ Timer2_callback/53 (Timer2_callback) @05dbe540
   Function flags:
   Called by: 
   Calls: 
-Timer1_callback/52 (Timer1_callback) @05dbeee0
+Timer1_callback/53 (Timer1_callback) @06d53000
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder asm_written public section:.text.Timer1_callback (implicit_section)
   References: 
@@ -865,7 +1212,7 @@ Timer1_callback/52 (Timer1_callback) @05dbeee0
   Function flags:
   Called by: 
   Calls: 
-Task2_callback/51 (Task2_callback) @05dbec40
+Task2_callback/52 (Task2_callback) @06d39b60
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder asm_written public section:.text.Task2_callback (implicit_section)
   References: 
@@ -874,7 +1221,7 @@ Task2_callback/51 (Task2_callback) @05dbec40
   Function flags:
   Called by: 
   Calls: 
-Task1_callback/50 (Task1_callback) @05dbe9a0
+Task1_callback/51 (Task1_callback) @06d39d20
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder asm_written public section:.text.Task1_callback (implicit_section)
   References: 

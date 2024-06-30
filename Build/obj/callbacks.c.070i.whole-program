@@ -2,7 +2,7 @@
 Marking local functions:
 
 
-Marking externally visible functions: Timer3_callback/54 Timer2_callback/53 Timer1_callback/52 Task2_callback/51 Task1_callback/50
+Marking externally visible functions: Timer3_callback/55 Timer2_callback/54 Timer1_callback/53 Task2_callback/52 Task1_callback/51
 
 
 Marking externally visible variables:
@@ -13,42 +13,102 @@ Reclaiming variables:
 Clearing address taken flags:
 Symbol table:
 
-ButtonsControl_Ptr/58 (ButtonsControl_Ptr) @05dc2ee8
+ButtonsControl_Ptr/66 (ButtonsControl_Ptr) @06d5d240
   Type: variable
   Body removed by symtab_remove_unreachable_nodes
   Visibility: external public
   References: 
-  Referring: Task2_callback/51 (read) 
+  Referring: Task2_callback/52 (read) 
   Availability: not_available
   Varpool flags:
-HwIoAb_Leds_TurnToggle/57 (HwIoAb_Leds_TurnToggle) @05dc3380
+HwIoAb_Pots_GetAltValue/65 (HwIoAb_Pots_GetAltValue) @06d5c1c0
   Type: function
   Visibility: external public
   References: 
   Referring: 
   Availability: not_available
   Function flags:
-  Called by: Task2_callback/51 Task2_callback/51 Task2_callback/51 Task2_callback/51 Task2_callback/51 Task2_callback/51 Task2_callback/51 Task2_callback/51 Task2_callback/51 Task2_callback/51 Task2_callback/51 Task2_callback/51 
+  Called by: Task2_callback/52 
   Calls: 
-HwIoAb_Buttons_GetEvent/56 (HwIoAb_Buttons_GetEvent) @05dc32a0
+HwIoAb_Buzzer_Stop/64 (HwIoAb_Buzzer_Stop) @06d5c000
   Type: function
   Visibility: external public
   References: 
   Referring: 
   Availability: not_available
   Function flags:
-  Called by: Task2_callback/51 
+  Called by: Task2_callback/52 Task2_callback/52 Task2_callback/52 
   Calls: 
-HwIoAb_Buttons_MainFunction/55 (HwIoAb_Buttons_MainFunction) @05db8ee0
+HwIoAb_Buzzer_Beep/63 (HwIoAb_Buzzer_Beep) @06d53380
   Type: function
   Visibility: external public
   References: 
   Referring: 
   Availability: not_available
   Function flags:
-  Called by: Task1_callback/50 
+  Called by: Task2_callback/52 Task2_callback/52 Task2_callback/52 
   Calls: 
-Timer3_callback/54 (Timer3_callback) @05dbe7e0
+flags.0/62 (flags) @06d56e58
+  Type: variable definition analyzed
+  Visibility: force_output no_reorder prevailing_def_ironly
+  References: 
+  Referring: Task2_callback/52 (read) Task2_callback/52 (write) Task2_callback/52 (write) Task2_callback/52 (read) Task2_callback/52 (write) Task2_callback/52 (write) Task2_callback/52 (read) Task2_callback/52 (write) Task2_callback/52 (write) 
+  Availability: available
+  Varpool flags: initialized
+SEGGER_RTT_printf/61 (SEGGER_RTT_printf) @06d530e0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: Task2_callback/52 Task2_callback/52 Task2_callback/52 
+  Calls: 
+HwIoAb_Pots_GetValue/60 (HwIoAb_Pots_GetValue) @06d53ee0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: Task2_callback/52 Task2_callback/52 
+  Calls: 
+PotsControl_Ptr/59 (PotsControl_Ptr) @06d56d80
+  Type: variable
+  Body removed by symtab_remove_unreachable_nodes
+  Visibility: external public
+  References: 
+  Referring: Task2_callback/52 (read) Task2_callback/52 (read) Task2_callback/52 (read) Task2_callback/52 (read) Task2_callback/52 (read) Task2_callback/52 (read) Task2_callback/52 (read) 
+  Availability: not_available
+  Varpool flags:
+HwIoAb_Leds_TurnToggle/58 (HwIoAb_Leds_TurnToggle) @06d53e00
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: Task2_callback/52 Task2_callback/52 Task2_callback/52 
+  Calls: 
+HwIoAb_Buttons_GetEvent/57 (HwIoAb_Buttons_GetEvent) @06d53d20
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: Task2_callback/52 
+  Calls: 
+HwIoAb_Buttons_MainFunction/56 (HwIoAb_Buttons_MainFunction) @06d539a0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: Task1_callback/51 
+  Calls: 
+Timer3_callback/55 (Timer3_callback) @06d53540
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: 
@@ -57,7 +117,7 @@ Timer3_callback/54 (Timer3_callback) @05dbe7e0
   Function flags: body
   Called by: 
   Calls: 
-Timer2_callback/53 (Timer2_callback) @05dbe540
+Timer2_callback/54 (Timer2_callback) @06d532a0
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: 
@@ -66,7 +126,7 @@ Timer2_callback/53 (Timer2_callback) @05dbe540
   Function flags: body
   Called by: 
   Calls: 
-Timer1_callback/52 (Timer1_callback) @05dbeee0
+Timer1_callback/53 (Timer1_callback) @06d53000
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: 
@@ -75,16 +135,16 @@ Timer1_callback/52 (Timer1_callback) @05dbeee0
   Function flags: body
   Called by: 
   Calls: 
-Task2_callback/51 (Task2_callback) @05dbec40
+Task2_callback/52 (Task2_callback) @06d39b60
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
-  References: ButtonsControl_Ptr/58 (read) 
+  References: PotsControl_Ptr/59 (read) PotsControl_Ptr/59 (read) flags.0/62 (read) flags.0/62 (write) flags.0/62 (write) PotsControl_Ptr/59 (read) PotsControl_Ptr/59 (read) flags.0/62 (read) flags.0/62 (write) flags.0/62 (write) PotsControl_Ptr/59 (read) PotsControl_Ptr/59 (read) PotsControl_Ptr/59 (read) flags.0/62 (read) flags.0/62 (write) flags.0/62 (write) ButtonsControl_Ptr/66 (read) 
   Referring: 
   Availability: available
   Function flags: body
   Called by: 
-  Calls: HwIoAb_Leds_TurnToggle/57 HwIoAb_Leds_TurnToggle/57 HwIoAb_Leds_TurnToggle/57 HwIoAb_Leds_TurnToggle/57 HwIoAb_Leds_TurnToggle/57 HwIoAb_Leds_TurnToggle/57 HwIoAb_Leds_TurnToggle/57 HwIoAb_Leds_TurnToggle/57 HwIoAb_Leds_TurnToggle/57 HwIoAb_Leds_TurnToggle/57 HwIoAb_Leds_TurnToggle/57 HwIoAb_Leds_TurnToggle/57 HwIoAb_Buttons_GetEvent/56 
-Task1_callback/50 (Task1_callback) @05dbe9a0
+  Calls: HwIoAb_Buzzer_Stop/64 HwIoAb_Buzzer_Beep/63 SEGGER_RTT_printf/61 HwIoAb_Pots_GetAltValue/65 HwIoAb_Leds_TurnToggle/58 HwIoAb_Buzzer_Stop/64 HwIoAb_Buzzer_Beep/63 SEGGER_RTT_printf/61 HwIoAb_Pots_GetValue/60 HwIoAb_Leds_TurnToggle/58 HwIoAb_Buzzer_Stop/64 HwIoAb_Buzzer_Beep/63 SEGGER_RTT_printf/61 HwIoAb_Pots_GetValue/60 HwIoAb_Leds_TurnToggle/58 HwIoAb_Buttons_GetEvent/57 
+Task1_callback/51 (Task1_callback) @06d39d20
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: 
@@ -92,7 +152,7 @@ Task1_callback/50 (Task1_callback) @05dbe9a0
   Availability: available
   Function flags: body
   Called by: 
-  Calls: HwIoAb_Buttons_MainFunction/55 
+  Calls: HwIoAb_Buttons_MainFunction/56 
 Timer3_callback ()
 {
   <bb 2> :
@@ -121,131 +181,237 @@ Task2_callback ()
 {
   uint8 actual_event;
   uint8 i;
+  static boolean flags[3] = {1, 1, 1};
   unsigned char _1;
   int _2;
   int _3;
-  int _4;
-  int _5;
-  unsigned char i.0_6;
-  struct HwIoAb_Buttons_Ctrl * ButtonsControl_Ptr.1_7;
-  unsigned char _8;
+  struct HwIoAb_Pots_Ctrl * PotsControl_Ptr.0_4;
+  uint16[2] * _5;
+  struct HwIoAb_Pots_Ctrl * PotsControl_Ptr.1_6;
+  short unsigned int _7;
+  int _8;
+  int _9;
+  _Bool _10;
+  int _11;
+  int _12;
+  int _13;
+  struct HwIoAb_Pots_Ctrl * PotsControl_Ptr.2_14;
+  uint16[2] * _15;
+  struct HwIoAb_Pots_Ctrl * PotsControl_Ptr.3_16;
+  short unsigned int _17;
+  int _18;
+  int _19;
+  _Bool _20;
+  int _21;
+  int _22;
+  int _23;
+  struct HwIoAb_Pots_Ctrl * PotsControl_Ptr.4_24;
+  uint16[2] * _25;
+  struct HwIoAb_Pots_Ctrl * PotsControl_Ptr.5_26;
+  short unsigned int _27;
+  int _28;
+  struct HwIoAb_Pots_Ctrl * PotsControl_Ptr.6_29;
+  short unsigned int _30;
+  int _31;
+  int _32;
+  _Bool _33;
+  int _34;
+  int _35;
+  unsigned char i.7_36;
+  struct HwIoAb_Buttons_Ctrl * ButtonsControl_Ptr.8_37;
+  unsigned char _38;
 
   <bb 2> :
-  i_15 = 0;
-  actual_event_16 = 0;
-  i_17 = 0;
-  goto <bb 25>; [INV]
+  i_48 = 0;
+  actual_event_49 = 0;
+  i_50 = 0;
+  goto <bb 34>; [INV]
 
   <bb 3> :
-  _1 = i_9 + 1;
-  actual_event_20 = HwIoAb_Buttons_GetEvent (_1);
-  if (actual_event_20 != 0)
+  _1 = i_39 + 1;
+  actual_event_53 = HwIoAb_Buttons_GetEvent (_1);
+  if (actual_event_53 != 0)
     goto <bb 4>; [INV]
   else
-    goto <bb 24>; [INV]
+    goto <bb 33>; [INV]
 
   <bb 4> :
-  _2 = (int) i_9;
-  switch (_2) <default: <L20> [INV], case 0: <L2> [INV], case 1: <L8> [INV], case 2: <L14> [INV]>
+  _2 = (int) i_39;
+  switch (_2) <default: <L29> [INV], case 0: <L2> [INV], case 1: <L11> [INV], case 2: <L20> [INV]>
 
   <bb 5> :
 <L2>:
-  _3 = (int) actual_event_20;
-  switch (_3) <default: <L6> [INV], case 1: <L3> [INV], case 2: <L4> [INV], case 3: <L5> [INV]>
+  _3 = (int) actual_event_53;
+  switch (_3) <default: <L9> [INV], case 1: <L3> [INV], case 2: <L4> [INV], case 3: <L5> [INV], case 4: <L8> [INV]>
 
   <bb 6> :
 <L3>:
   HwIoAb_Leds_TurnToggle (0);
-  goto <bb 10>; [INV]
+  goto <bb 13>; [INV]
 
   <bb 7> :
 <L4>:
-  HwIoAb_Leds_TurnToggle (1);
-  goto <bb 10>; [INV]
+  PotsControl_Ptr.0_4 = PotsControl_Ptr;
+  _5 = &PotsControl_Ptr.0_4->Ohms_results_main;
+  HwIoAb_Pots_GetValue (_5);
+  PotsControl_Ptr.1_6 = PotsControl_Ptr;
+  _7 = PotsControl_Ptr.1_6->Ohms_results_main[0];
+  _8 = (int) _7;
+  SEGGER_RTT_printf (0, "Pot 1 resistance value in ohms: %d\n", _8);
+  goto <bb 13>; [INV]
 
   <bb 8> :
 <L5>:
-  HwIoAb_Leds_TurnToggle (0);
-  HwIoAb_Leds_TurnToggle (1);
-  goto <bb 10>; [INV]
+  _9 = (int) i_39;
+  _10 = flags[_9];
+  if (_10 != 0)
+    goto <bb 9>; [INV]
+  else
+    goto <bb 10>; [INV]
 
   <bb 9> :
-<L6>:
+  HwIoAb_Buzzer_Beep (0);
+  _11 = (int) i_39;
+  flags[_11] = 0;
 
   <bb 10> :
-  goto <bb 24>; [INV]
+  goto <bb 13>; [INV]
 
   <bb 11> :
 <L8>:
-  _4 = (int) actual_event_20;
-  switch (_4) <default: <L12> [INV], case 1: <L9> [INV], case 2: <L10> [INV], case 3: <L11> [INV]>
+  HwIoAb_Buzzer_Stop ();
+  _12 = (int) i_39;
+  flags[_12] = 1;
+  goto <bb 13>; [INV]
 
   <bb 12> :
 <L9>:
-  HwIoAb_Leds_TurnToggle (2);
-  goto <bb 16>; [INV]
 
   <bb 13> :
-<L10>:
-  HwIoAb_Leds_TurnToggle (3);
-  goto <bb 16>; [INV]
+  goto <bb 33>; [INV]
 
   <bb 14> :
 <L11>:
-  HwIoAb_Leds_TurnToggle (2);
-  HwIoAb_Leds_TurnToggle (3);
-  goto <bb 16>; [INV]
+  _13 = (int) actual_event_53;
+  switch (_13) <default: <L18> [INV], case 1: <L12> [INV], case 2: <L13> [INV], case 3: <L14> [INV], case 4: <L17> [INV]>
 
   <bb 15> :
 <L12>:
+  HwIoAb_Leds_TurnToggle (1);
+  goto <bb 22>; [INV]
 
   <bb 16> :
-  goto <bb 24>; [INV]
+<L13>:
+  PotsControl_Ptr.2_14 = PotsControl_Ptr;
+  _15 = &PotsControl_Ptr.2_14->Ohms_results_main;
+  HwIoAb_Pots_GetValue (_15);
+  PotsControl_Ptr.3_16 = PotsControl_Ptr;
+  _17 = PotsControl_Ptr.3_16->Ohms_results_main[1];
+  _18 = (int) _17;
+  SEGGER_RTT_printf (0, "Pot 2 resistance value in ohms: %d\n", _18);
+  goto <bb 22>; [INV]
 
   <bb 17> :
 <L14>:
-  _5 = (int) actual_event_20;
-  switch (_5) <default: <L18> [INV], case 1: <L15> [INV], case 2: <L16> [INV], case 3: <L17> [INV]>
+  _19 = (int) i_39;
+  _20 = flags[_19];
+  if (_20 != 0)
+    goto <bb 18>; [INV]
+  else
+    goto <bb 19>; [INV]
 
   <bb 18> :
-<L15>:
-  HwIoAb_Leds_TurnToggle (4);
-  goto <bb 22>; [INV]
+  HwIoAb_Buzzer_Beep (1);
+  _21 = (int) i_39;
+  flags[_21] = 0;
 
   <bb 19> :
-<L16>:
-  HwIoAb_Leds_TurnToggle (5);
   goto <bb 22>; [INV]
 
   <bb 20> :
 <L17>:
-  HwIoAb_Leds_TurnToggle (4);
-  HwIoAb_Leds_TurnToggle (5);
+  HwIoAb_Buzzer_Stop ();
+  _22 = (int) i_39;
+  flags[_22] = 1;
   goto <bb 22>; [INV]
 
   <bb 21> :
 <L18>:
 
   <bb 22> :
-  goto <bb 24>; [INV]
+  goto <bb 33>; [INV]
 
   <bb 23> :
 <L20>:
+  _23 = (int) actual_event_53;
+  switch (_23) <default: <L27> [INV], case 1: <L21> [INV], case 2: <L22> [INV], case 3: <L23> [INV], case 4: <L26> [INV]>
 
   <bb 24> :
-  i.0_6 = i_9;
-  i_33 = i.0_6 + 1;
+<L21>:
+  HwIoAb_Leds_TurnToggle (2);
+  goto <bb 31>; [INV]
 
   <bb 25> :
-  # i_9 = PHI <i_17(2), i_33(24)>
-  ButtonsControl_Ptr.1_7 = ButtonsControl_Ptr;
-  _8 = ButtonsControl_Ptr.1_7->Buttons;
-  if (i_9 < _8)
-    goto <bb 3>; [INV]
-  else
-    goto <bb 26>; [INV]
+<L22>:
+  PotsControl_Ptr.4_24 = PotsControl_Ptr;
+  _25 = &PotsControl_Ptr.4_24->Ohms_results_alter;
+  HwIoAb_Pots_GetAltValue (_25);
+  PotsControl_Ptr.5_26 = PotsControl_Ptr;
+  _27 = PotsControl_Ptr.5_26->Ohms_results_alter[0];
+  _28 = (int) _27;
+  PotsControl_Ptr.6_29 = PotsControl_Ptr;
+  _30 = PotsControl_Ptr.6_29->Ohms_results_alter[1];
+  _31 = (int) _30;
+  SEGGER_RTT_printf (0, "Pot 1 resistance value in ohms: %d, Pot 2 resistance value in ohms: %d\n", _28, _31);
+  goto <bb 31>; [INV]
 
   <bb 26> :
+<L23>:
+  _32 = (int) i_39;
+  _33 = flags[_32];
+  if (_33 != 0)
+    goto <bb 27>; [INV]
+  else
+    goto <bb 28>; [INV]
+
+  <bb 27> :
+  HwIoAb_Buzzer_Beep (2);
+  _34 = (int) i_39;
+  flags[_34] = 0;
+
+  <bb 28> :
+  goto <bb 31>; [INV]
+
+  <bb 29> :
+<L26>:
+  HwIoAb_Buzzer_Stop ();
+  _35 = (int) i_39;
+  flags[_35] = 1;
+  goto <bb 31>; [INV]
+
+  <bb 30> :
+<L27>:
+
+  <bb 31> :
+  goto <bb 33>; [INV]
+
+  <bb 32> :
+<L29>:
+
+  <bb 33> :
+  i.7_36 = i_39;
+  i_75 = i.7_36 + 1;
+
+  <bb 34> :
+  # i_39 = PHI <i_50(2), i_75(33)>
+  ButtonsControl_Ptr.8_37 = ButtonsControl_Ptr;
+  _38 = ButtonsControl_Ptr.8_37->Buttons;
+  if (i_39 < _38)
+    goto <bb 3>; [INV]
+  else
+    goto <bb 35>; [INV]
+
+  <bb 35> :
   return;
 
 }

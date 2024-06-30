@@ -169,7 +169,7 @@ HwIoAb_Leds_Init (const struct HwIoAb_Leds_Config * Leds_Config)
 
   <bb 2> :
   LedsControl_Ptr.0_1 = LedsControl_Ptr;
-  LedsControl_Ptr.0_1->Leds = 6;
+  LedsControl_Ptr.0_1->Leds = 3;
   LedsControl_Ptr.1_2 = LedsControl_Ptr;
   LedsControl_Ptr.1_2->LedsConfig_Ptr = Leds_Config_5(D);
   return;

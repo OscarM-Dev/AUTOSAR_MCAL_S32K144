@@ -138,9 +138,10 @@ void HwIoAb_Buttons_MainFunction( void ) {
             break;
         
             case HWIOAB_BTN_STATE_HOLD_PRESS :  //Hold click.
+                ButtonsControl_Ptr->Events[i] = HWIOAB_BTN_EVENT_HOLD_CLICK;
                 //Checking if the button is released.
                 if ( Dio_ReadChannel( ButtonsControl_Ptr->ButtonsConfig_Ptr[i].Button ) == !active ) {
-                    ButtonsControl_Ptr->Events[i] = HWIOAB_BTN_EVENT_HOLD_CLICK;
+                    ButtonsControl_Ptr->Events[i] = HWIOAB_BTN_EVENT_RELEASE;
                     ButtonsControl_Ptr->States[i] = HWIOAB_BTN_STATE_IDLE;
                 }
             break;

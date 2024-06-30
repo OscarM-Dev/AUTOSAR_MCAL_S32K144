@@ -7,7 +7,7 @@
 #ifndef HWIOAB_1_LEDS_CFG_H
 #define HWIOAB_1_LEDS_CFG_H
 
-#define HWIOAB_LEDS 6   ///< Number of leds to handle on board.
+#define HWIOAB_LEDS 3   ///< Number of leds to handle on board.
 
 #define HWIOAB_LEDS_0_ID 0   ///< Led 0 ID.
 #define HWI0AB_LEDS_1_ID 1   ///< Led 1 ID.

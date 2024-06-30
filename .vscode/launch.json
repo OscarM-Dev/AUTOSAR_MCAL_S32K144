@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "c:/Users/Familia/Documents/s32k144/Port_Dio/examples/blink_led",
-      "program": "c:/Users/Familia/Documents/s32k144/Port_Dio/examples/blink_led/build/Debug/outDebug",
+      "cwd": "c:/Users/Familia/Documents/AUTOSAR_project/main/Autosar/Os/src",
+      "program": "c:/Users/Familia/Documents/AUTOSAR_project/main/Autosar/Os/src/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
