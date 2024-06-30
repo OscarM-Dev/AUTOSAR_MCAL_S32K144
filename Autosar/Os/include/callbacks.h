@@ -8,10 +8,7 @@
 #define CALLBACKS_H
 //Headers.
 #include "Scheduler.h"
-#include "HwIoAb_0_Buttons.h"
-#include "HwIoAb_1_Leds.h"
-#include "HwIoAb_2_Pots.h"
-#include "HwIoAb_3_Buzzer.h"
+#include "IoHwAb.h"
 #include "SEGGER_RTT.h"
 
 //Structures.

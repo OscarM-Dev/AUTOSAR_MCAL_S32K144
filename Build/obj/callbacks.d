@@ -17,7 +17,8 @@ Build/obj/callbacks.o: Autosar/Os/src/callbacks.c \
  Autosar/Mcal/Base/include/BasicTypes.h \
  Autosar/Mcal/Base/include/BaseNXP_MemMap.h Autosar/Bfx/Bfx.h \
  Autosar/Bfx/Bfx_32bits.h Autosar/Mcal/Base/include/Std_Types.h \
- Autosar/Bfx/Bfx_8bits.h Autosar/IoHwAbs/include/HwIoAb_0_Buttons.h \
+ Autosar/Bfx/Bfx_8bits.h Autosar/IoHwAbs/include/IoHwAb.h \
+ Autosar/IoHwAbs/include/HwIoAb_0_Buttons.h \
  Autosar/Mcal/Dio/include/Dio.h Autosar/Mcal/Base/include/Mcal.h \
  Autosar/Mcal/Base/include/Reg_eSys.h Build/cfg/include/Dio_Cfg.h \
  Build/cfg/include/Gpio_Dio_Ip_Cfg.h \
@@ -84,6 +85,7 @@ Autosar/Bfx/Bfx.h:
 Autosar/Bfx/Bfx_32bits.h:
 Autosar/Mcal/Base/include/Std_Types.h:
 Autosar/Bfx/Bfx_8bits.h:
+Autosar/IoHwAbs/include/IoHwAb.h:
 Autosar/IoHwAbs/include/HwIoAb_0_Buttons.h:
 Autosar/Mcal/Dio/include/Dio.h:
 Autosar/Mcal/Base/include/Mcal.h:

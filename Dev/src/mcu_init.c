@@ -58,14 +58,3 @@ void EcuM_Init( void )
     Port_Ci_Port_Ip_SetMuxModeSel( IP_PORTB, 1, PORT_MUX_ADC_INTERLEAVE );
     Port_Ci_Port_Ip_SetMuxModeSel( IP_PORTB, 13, PORT_MUX_ADC_INTERLEAVE );
 }
-
-/**
- * @brief This function initialices the hardware io abstractions.
- * 
- */
-void HwIoAb_Init( void ) {
-    HwIoAb_Buttons_Init( ButtonsCfg );  //Buttons init.
-    HwIoAb_Leds_Init( LedsCfg );    //Leds init.
-    HwIoAb_Pots_Init( NULL_PTR );   //Pots init.
-    HwIoAb_Buzzer_Init( NULL_PTR ); //Buzzer init.
-}

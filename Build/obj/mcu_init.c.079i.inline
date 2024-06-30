@@ -1,4 +1,3 @@
-IPA summary for HwIoAb_Init/7 is missing.
 IPA summary for EcuM_Init/6 is missing.
 IPA summary for MCU_clocks/5 is missing.
 
@@ -17,65 +16,12 @@ Overall time estimate: 0.000000 weighted by profile: 0.000000
 
 Why inlining failed?
 function not considered for inlining              :        1 calls, 1.000000 freq, 0 count
-function body not available                       :       14 calls, 14.000000 freq, 0 count
-IPA summary for HwIoAb_Init/7 is missing.
+function body not available                       :       10 calls, 10.000000 freq, 0 count
 IPA summary for EcuM_Init/6 is missing.
 IPA summary for MCU_clocks/5 is missing.
 Symbol table:
 
-HwIoAb_Buzzer_Init/26 (HwIoAb_Buzzer_Init) @066000e0
-  Type: function
-  Visibility: external public
-  References: 
-  Referring: 
-  Availability: not_available
-  Function flags:
-  Called by: HwIoAb_Init/7 
-  Calls: 
-HwIoAb_Pots_Init/25 (HwIoAb_Pots_Init) @06600000
-  Type: function
-  Visibility: external public
-  References: 
-  Referring: 
-  Availability: not_available
-  Function flags:
-  Called by: HwIoAb_Init/7 
-  Calls: 
-LedsCfg/24 (LedsCfg) @065fe1f8
-  Type: variable
-  Body removed by symtab_remove_unreachable_nodes
-  Visibility: external public
-  References: 
-  Referring: HwIoAb_Init/7 (addr) 
-  Availability: not_available
-  Varpool flags: read-only
-HwIoAb_Leds_Init/23 (HwIoAb_Leds_Init) @065fbee0
-  Type: function
-  Visibility: external public
-  References: 
-  Referring: 
-  Availability: not_available
-  Function flags:
-  Called by: HwIoAb_Init/7 
-  Calls: 
-ButtonsCfg/22 (ButtonsCfg) @065fe168
-  Type: variable
-  Body removed by symtab_remove_unreachable_nodes
-  Visibility: external public
-  References: 
-  Referring: HwIoAb_Init/7 (addr) 
-  Availability: not_available
-  Varpool flags: read-only
-HwIoAb_Buttons_Init/21 (HwIoAb_Buttons_Init) @065fbe00
-  Type: function
-  Visibility: external public
-  References: 
-  Referring: 
-  Availability: not_available
-  Function flags:
-  Called by: HwIoAb_Init/7 
-  Calls: 
-Port_Ci_Port_Ip_SetMuxModeSel/20 (Port_Ci_Port_Ip_SetMuxModeSel) @065fbc40
+Port_Ci_Port_Ip_SetMuxModeSel/19 (Port_Ci_Port_Ip_SetMuxModeSel) @06636ee0
   Type: function
   Visibility: external public
   References: 
@@ -84,7 +30,7 @@ Port_Ci_Port_Ip_SetMuxModeSel/20 (Port_Ci_Port_Ip_SetMuxModeSel) @065fbc40
   Function flags:
   Called by: EcuM_Init/6 EcuM_Init/6 
   Calls: 
-Pwm_Config/19 (Pwm_Config) @065e7f30
+Pwm_Config/18 (Pwm_Config) @0663b048
   Type: variable
   Body removed by symtab_remove_unreachable_nodes
   Visibility: external public
@@ -92,7 +38,7 @@ Pwm_Config/19 (Pwm_Config) @065e7f30
   Referring: EcuM_Init/6 (addr) 
   Availability: not_available
   Varpool flags: read-only
-Pwm_Init/18 (Pwm_Init) @065fbb60
+Pwm_Init/17 (Pwm_Init) @06636e00
   Type: function
   Visibility: external public
   References: 
@@ -101,7 +47,7 @@ Pwm_Init/18 (Pwm_Init) @065fbb60
   Function flags:
   Called by: EcuM_Init/6 
   Calls: 
-Adc_Config/17 (Adc_Config) @065e7ea0
+Adc_Config/16 (Adc_Config) @06634f78
   Type: variable
   Body removed by symtab_remove_unreachable_nodes
   Visibility: external public
@@ -109,7 +55,7 @@ Adc_Config/17 (Adc_Config) @065e7ea0
   Referring: EcuM_Init/6 (addr) 
   Availability: not_available
   Varpool flags: read-only
-Adc_Init/16 (Adc_Init) @065fba80
+Adc_Init/15 (Adc_Init) @06636d20
   Type: function
   Visibility: external public
   References: 
@@ -118,7 +64,7 @@ Adc_Init/16 (Adc_Init) @065fba80
   Function flags:
   Called by: EcuM_Init/6 
   Calls: 
-Port_Config/15 (Port_Config) @065e7e10
+Port_Config/14 (Port_Config) @06634ee8
   Type: variable
   Body removed by symtab_remove_unreachable_nodes
   Visibility: external public
@@ -126,7 +72,7 @@ Port_Config/15 (Port_Config) @065e7e10
   Referring: EcuM_Init/6 (addr) 
   Availability: not_available
   Varpool flags: read-only
-Port_Init/14 (Port_Init) @065fb9a0
+Port_Init/13 (Port_Init) @06636c40
   Type: function
   Visibility: external public
   References: 
@@ -135,7 +81,7 @@ Port_Init/14 (Port_Init) @065fb9a0
   Function flags:
   Called by: EcuM_Init/6 
   Calls: 
-Platform_Init/13 (Platform_Init) @065fb8c0
+Platform_Init/12 (Platform_Init) @06636b60
   Type: function
   Visibility: external public
   References: 
@@ -144,7 +90,7 @@ Platform_Init/13 (Platform_Init) @065fb8c0
   Function flags:
   Called by: EcuM_Init/6 
   Calls: 
-OsIf_Init/12 (OsIf_Init) @065fb7e0
+OsIf_Init/11 (OsIf_Init) @06636a80
   Type: function
   Visibility: external public
   References: 
@@ -153,7 +99,7 @@ OsIf_Init/12 (OsIf_Init) @065fb7e0
   Function flags:
   Called by: EcuM_Init/6 
   Calls: 
-Mcu_InitClock/11 (Mcu_InitClock) @065fb620
+Mcu_InitClock/10 (Mcu_InitClock) @066368c0
   Type: function
   Visibility: external public
   References: 
@@ -162,7 +108,7 @@ Mcu_InitClock/11 (Mcu_InitClock) @065fb620
   Function flags:
   Called by: MCU_clocks/5 
   Calls: 
-Mcu_SetMode/10 (Mcu_SetMode) @065fb540
+Mcu_SetMode/9 (Mcu_SetMode) @066367e0
   Type: function
   Visibility: external public
   References: 
@@ -171,7 +117,7 @@ Mcu_SetMode/10 (Mcu_SetMode) @065fb540
   Function flags:
   Called by: MCU_clocks/5 
   Calls: 
-Mcu_Config/9 (Mcu_Config) @065e7af8
+Mcu_Config/8 (Mcu_Config) @06634bd0
   Type: variable
   Body removed by symtab_remove_unreachable_nodes
   Visibility: external public
@@ -179,7 +125,7 @@ Mcu_Config/9 (Mcu_Config) @065e7af8
   Referring: MCU_clocks/5 (addr) 
   Availability: not_available
   Varpool flags: read-only
-Mcu_Init/8 (Mcu_Init) @065fb460
+Mcu_Init/7 (Mcu_Init) @06636700
   Type: function
   Visibility: external public
   References: 
@@ -188,35 +134,26 @@ Mcu_Init/8 (Mcu_Init) @065fb460
   Function flags:
   Called by: MCU_clocks/5 
   Calls: 
-HwIoAb_Init/7 (HwIoAb_Init) @065fb000
+EcuM_Init/6 (EcuM_Init) @066362a0
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
-  References: ButtonsCfg/22 (addr) LedsCfg/24 (addr) 
+  References: Port_Config/14 (addr) Adc_Config/16 (addr) Pwm_Config/18 (addr) 
   Referring: 
   Availability: available
   Function flags: body
   Called by: 
-  Calls: HwIoAb_Buzzer_Init/26 HwIoAb_Pots_Init/25 HwIoAb_Leds_Init/23 HwIoAb_Buttons_Init/21 
-EcuM_Init/6 (EcuM_Init) @065e5b60
+  Calls: Port_Ci_Port_Ip_SetMuxModeSel/19 Port_Ci_Port_Ip_SetMuxModeSel/19 Pwm_Init/17 Adc_Init/15 Port_Init/13 Platform_Init/12 OsIf_Init/11 MCU_clocks/5 
+MCU_clocks/5 (MCU_clocks) @06636000
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
-  References: Port_Config/15 (addr) Adc_Config/17 (addr) Pwm_Config/19 (addr) 
-  Referring: 
-  Availability: available
-  Function flags: body
-  Called by: 
-  Calls: Port_Ci_Port_Ip_SetMuxModeSel/20 Port_Ci_Port_Ip_SetMuxModeSel/20 Pwm_Init/18 Adc_Init/16 Port_Init/14 Platform_Init/13 OsIf_Init/12 MCU_clocks/5 
-MCU_clocks/5 (MCU_clocks) @065e5d20
-  Type: function definition analyzed
-  Visibility: force_output externally_visible no_reorder public
-  References: Mcu_Config/9 (addr) 
+  References: Mcu_Config/8 (addr) 
   Referring: 
   Availability: available
   Function flags: body
   Called by: EcuM_Init/6 
-  Calls: Mcu_InitClock/11 Mcu_SetMode/10 Mcu_Init/8 
+  Calls: Mcu_InitClock/10 Mcu_SetMode/9 Mcu_Init/7 
 
-;; Function MCU_clocks (MCU_clocks, funcdef_no=5, decl_uid=8176, cgraph_uid=6, symbol_order=5)
+;; Function MCU_clocks (MCU_clocks, funcdef_no=5, decl_uid=8183, cgraph_uid=6, symbol_order=5)
 
 MCU_clocks ()
 {
@@ -230,7 +167,7 @@ MCU_clocks ()
 
 
 
-;; Function EcuM_Init (EcuM_Init, funcdef_no=6, decl_uid=8178, cgraph_uid=7, symbol_order=6)
+;; Function EcuM_Init (EcuM_Init, funcdef_no=6, decl_uid=8185, cgraph_uid=7, symbol_order=6)
 
 EcuM_Init ()
 {
@@ -243,21 +180,6 @@ EcuM_Init ()
   Pwm_Init (&Pwm_Config);
   Port_Ci_Port_Ip_SetMuxModeSel (1074044928B, 1, 8);
   Port_Ci_Port_Ip_SetMuxModeSel (1074044928B, 13, 8);
-  return;
-
-}
-
-
-
-;; Function HwIoAb_Init (HwIoAb_Init, funcdef_no=7, decl_uid=8180, cgraph_uid=8, symbol_order=7)
-
-HwIoAb_Init ()
-{
-  <bb 2> :
-  HwIoAb_Buttons_Init (&ButtonsCfg);
-  HwIoAb_Leds_Init (&LedsCfg);
-  HwIoAb_Pots_Init (0B);
-  HwIoAb_Buzzer_Init (0B);
   return;
 
 }

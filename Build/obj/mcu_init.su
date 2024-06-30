@@ -1,3 +1,2 @@
 Dev/src/mcu_init.c:31:6:MCU_clocks	8	static
 Dev/src/mcu_init.c:48:6:EcuM_Init	8	static
-Dev/src/mcu_init.c:66:6:HwIoAb_Init	8	static

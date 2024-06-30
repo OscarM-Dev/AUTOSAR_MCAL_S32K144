@@ -13,16 +13,12 @@
 #include "Platform.h"
 #include "Port.h"
 #include "Adc.h"
-#include "HwIoAb_0_Buttons.h"
-#include "HwIoAb_1_Leds.h"
-#include "HwIoAb_2_Pots.h"
-#include "HwIoAb_3_Buzzer.h"
+#include "IoHwAb.h"
 #include "SEGGER_RTT.h"
 
 //Function declarations.
 void MCU_clocks( void );
 void EcuM_Init( void );
-void HwIoAb_Init( void );
 
 
 

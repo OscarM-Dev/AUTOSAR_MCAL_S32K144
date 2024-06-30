@@ -1,6 +1,6 @@
 Symbol table:
 
-Port_Ipw_RefreshPortDirection/5 (Port_Ipw_RefreshPortDirection) @06a1b000
+Port_Ipw_RefreshPortDirection/5 (Port_Ipw_RefreshPortDirection) @06a3b000
   Type: function
   Visibility: external public
   References: 
@@ -9,7 +9,7 @@ Port_Ipw_RefreshPortDirection/5 (Port_Ipw_RefreshPortDirection) @06a1b000
   Function flags:
   Called by: Port_RefreshPortDirection/3 
   Calls: 
-Port_Ipw_Init/4 (Port_Ipw_Init) @069407e0
+Port_Ipw_Init/4 (Port_Ipw_Init) @069607e0
   Type: function
   Visibility: external public
   References: 
@@ -18,7 +18,7 @@ Port_Ipw_Init/4 (Port_Ipw_Init) @069407e0
   Function flags:
   Called by: Port_Init/2 
   Calls: 
-Port_RefreshPortDirection/3 (Port_RefreshPortDirection) @06940c40
+Port_RefreshPortDirection/3 (Port_RefreshPortDirection) @06960c40
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: Port_pConfigPtr/1 (read) 
@@ -27,7 +27,7 @@ Port_RefreshPortDirection/3 (Port_RefreshPortDirection) @06940c40
   Function flags: body
   Called by: 
   Calls: Port_Ipw_RefreshPortDirection/5 
-Port_Init/2 (Port_Init) @069409a0
+Port_Init/2 (Port_Init) @069609a0
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: Port_pConfigPtr/1 (write) 
@@ -36,7 +36,7 @@ Port_Init/2 (Port_Init) @069409a0
   Function flags: body
   Called by: 
   Calls: Port_Ipw_Init/4 
-Port_pConfigPtr/1 (Port_pConfigPtr) @06a14f78
+Port_pConfigPtr/1 (Port_pConfigPtr) @06a34f78
   Type: variable definition analyzed
   Visibility: force_output no_reorder prevailing_def_ironly
   References: 

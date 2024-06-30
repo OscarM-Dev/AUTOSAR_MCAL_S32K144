@@ -15,14 +15,14 @@ Overall time estimate: 0.000000 weighted by profile: 0.000000
 Why inlining failed?
 Symbol table:
 
-OsIf_apxPredefinedConfig/1 (OsIf_apxPredefinedConfig) @06882990
+OsIf_apxPredefinedConfig/1 (OsIf_apxPredefinedConfig) @0697d990
   Type: variable definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: OsIf_xPredefinedConfig/0 (addr) 
   Referring: 
   Availability: available
   Varpool flags: initialized read-only const-value-known
-OsIf_xPredefinedConfig/0 (OsIf_xPredefinedConfig) @06882900
+OsIf_xPredefinedConfig/0 (OsIf_xPredefinedConfig) @0697d900
   Type: variable definition analyzed
   Visibility: force_output no_reorder prevailing_def_ironly
   References: 

@@ -131,7 +131,7 @@ Build/obj/mcu_init.o: Dev/src/mcu_init.c Dev/include/Mcu_init.h \
  Autosar/Mcal/Base/header/S32K144_PDB.h \
  Build/cfg/include/Adc_CfgDefines.h Build/cfg/include/Adc_PBcfg.h \
  Autosar/Mcal/Base/include/Adc_MemMap.h \
- Autosar/Mcal/Adc/include/Adc_Types.h \
+ Autosar/Mcal/Adc/include/Adc_Types.h Autosar/IoHwAbs/include/IoHwAb.h \
  Autosar/IoHwAbs/include/HwIoAb_0_Buttons.h \
  Autosar/Mcal/Dio/include/Dio.h Build/cfg/include/Dio_Cfg.h \
  Build/cfg/include/Gpio_Dio_Ip_Cfg.h \
@@ -308,6 +308,7 @@ Build/cfg/include/Adc_CfgDefines.h:
 Build/cfg/include/Adc_PBcfg.h:
 Autosar/Mcal/Base/include/Adc_MemMap.h:
 Autosar/Mcal/Adc/include/Adc_Types.h:
+Autosar/IoHwAbs/include/IoHwAb.h:
 Autosar/IoHwAbs/include/HwIoAb_0_Buttons.h:
 Autosar/Mcal/Dio/include/Dio.h:
 Build/cfg/include/Dio_Cfg.h:

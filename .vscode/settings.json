@@ -65,6 +65,8 @@
     "standardtypes.h": "c",
     "adc.h": "c",
     "hwioab_1_leds.h": "c",
-    "scheduler.h": "c"
+    "scheduler.h": "c",
+    "segger_rtt.h": "c",
+    "iohwab.h": "c"
   }
 }
