@@ -133,7 +133,7 @@ const Pwm_ChannelConfigType Pwm_Channels_PB[PWM_PB_CFG_CHANNELS_COUNT] =
         /** @brief  Channel Id */
         (Pwm_ChannelType)0U,
         /** @brief  Channel class */
-        PWM_FIXED_PERIOD,
+        PWM_VARIABLE_PERIOD,
         /** @brief  Ip channel configuration */
         {
             /** @brief  Hardware Channel Type */

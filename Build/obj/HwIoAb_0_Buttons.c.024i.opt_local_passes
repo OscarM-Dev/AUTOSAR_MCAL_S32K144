@@ -432,7 +432,7 @@ HwIoAb_Buttons_MainFunction ()
 HwIoAb_Buttons_GetEvent (uint8 Button)
 {
   uint8 event;
-  uint8 D.5474;
+  uint8 D.5476;
   struct HwIoAb_Buttons_Ctrl * ButtonsControl_Ptr.6_1;
   unsigned char _2;
   struct HwIoAb_Buttons_Ctrl * ButtonsControl_Ptr.7_3;

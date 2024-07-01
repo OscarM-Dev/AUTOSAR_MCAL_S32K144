@@ -9,7 +9,7 @@ Det_Start ()
 Det_ReportTransientFault (uint16 ModuleId, uint8 InstanceId, uint8 ApiId, uint8 FaultId)
 {
   uint32 u32CoreId;
-  Std_ReturnType D.5441;
+  Std_ReturnType D.8326;
   unsigned char _1;
   Std_ReturnType _13;
 
@@ -32,7 +32,7 @@ Det_ReportTransientFault (uint16 ModuleId, uint8 InstanceId, uint8 ApiId, uint8 
 Det_ReportRuntimeError (uint16 ModuleId, uint8 InstanceId, uint8 ApiId, uint8 ErrorId)
 {
   uint32 u32CoreId;
-  Std_ReturnType D.5439;
+  Std_ReturnType D.8324;
   unsigned char _1;
   Std_ReturnType _13;
 
@@ -55,22 +55,640 @@ Det_ReportRuntimeError (uint16 ModuleId, uint8 InstanceId, uint8 ApiId, uint8 Er
 Det_ReportError (uint16 ModuleId, uint8 InstanceId, uint8 ApiId, uint8 ErrorId)
 {
   uint32 u32CoreId;
-  Std_ReturnType D.5437;
+  char * Strings_error[3];
+  Std_ReturnType D.8321;
   unsigned char _1;
-  Std_ReturnType _13;
+  char * _2;
+  char * _3;
+  char * _4;
+  char * _5;
+  char * _6;
+  int _7;
+  char * _8;
+  Std_ReturnType _27;
 
   <bb 2> :
   _1 = Sys_GetCoreID ();
-  u32CoreId_4 = (uint32) _1;
-  Det_ModuleId[u32CoreId_4] = ModuleId_5(D);
-  Det_InstanceId[u32CoreId_4] = InstanceId_7(D);
-  Det_ApiId[u32CoreId_4] = ApiId_9(D);
-  Det_ErrorId[u32CoreId_4] = ErrorId_11(D);
-  _13 = 0;
+  u32CoreId_11 = (uint32) _1;
+  Det_ModuleId[u32CoreId_11] = ModuleId_12(D);
+  Det_InstanceId[u32CoreId_11] = InstanceId_14(D);
+  Det_ApiId[u32CoreId_11] = ApiId_16(D);
+  Det_ErrorId[u32CoreId_11] = ErrorId_18(D);
+  _2 = Det_GetModuleName (ModuleId_12(D));
+  Strings_error[0] = _2;
+  _3 = Det_GetApiName (ModuleId_12(D), ApiId_16(D));
+  Strings_error[1] = _3;
+  _4 = Det_GetErrorMeaning (ModuleId_12(D), ErrorId_18(D));
+  Strings_error[2] = _4;
+  _5 = Strings_error[0];
+  _6 = Strings_error[1];
+  _7 = (int) InstanceId_14(D);
+  _8 = Strings_error[2];
+  SEGGER_RTT_printf (0, "Error: Error in %s in function %s with the instance %d, %s\n", _5, _6, _7, _8);
+  _27 = 0;
+  Strings_error ={v} {CLOBBER};
+
+  <bb 3> :
+<L1>:
+  return _27;
+
+}
+
+
+Det_GetErrorMeaning (uint16 ModuleId, uint8 ErrorId)
+{
+  char * D.8319;
+  int _1;
+  int _2;
+  int _3;
+  int _4;
+  int _5;
+  int _6;
+  int _7;
+  char * _52;
+
+  <bb 2> :
+  _1 = (int) ModuleId_15(D);
+  switch (_1) <default: <L52> [INV], case 101: <L0> [INV], case 120: <L25> [INV], case 121: <L34> [INV], case 123: <L43> [INV], case 124: <L15> [INV], case 255: <L9> [INV]>
 
   <bb 3> :
 <L0>:
-  return _13;
+  _2 = (int) ErrorId_16(D);
+  switch (_2) <default: <L7> [INV], case 11: <L2> [INV], case 12: <L3> [INV], case 15: <L5> [INV], case 16: <L4> [INV], case 17: <L1> [INV], case 19: <L6> [INV]>
+
+  <bb 4> :
+<L1>:
+  ErrorString_Ptr[2] = "Invalid conf pointer";
+  goto <bb 11>; [INV]
+
+  <bb 5> :
+<L2>:
+  ErrorString_Ptr[2] = "Invalid input parameter";
+  goto <bb 11>; [INV]
+
+  <bb 6> :
+<L3>:
+  ErrorString_Ptr[2] = "Invalid input parameter";
+  goto <bb 11>; [INV]
+
+  <bb 7> :
+<L4>:
+  ErrorString_Ptr[2] = "Invalid input parameter";
+  goto <bb 11>; [INV]
+
+  <bb 8> :
+<L5>:
+  ErrorString_Ptr[2] = "Driver uninitialized";
+  goto <bb 11>; [INV]
+
+  <bb 9> :
+<L6>:
+  ErrorString_Ptr[2] = "Driver already initialized";
+  goto <bb 11>; [INV]
+
+  <bb 10> :
+<L7>:
+
+  <bb 11> :
+  goto <bb 56>; [INV]
+
+  <bb 12> :
+<L9>:
+  _3 = (int) ErrorId_16(D);
+  switch (_3) <default: <L13> [INV], case 1: <L10> [INV], case 2: <L12> [INV], case 4: <L11> [INV]>
+
+  <bb 13> :
+<L10>:
+  ErrorString_Ptr[2] = "Invalid pointer";
+  goto <bb 17>; [INV]
+
+  <bb 14> :
+<L11>:
+  ErrorString_Ptr[2] = "Call from wrong mapped partition";
+  goto <bb 17>; [INV]
+
+  <bb 15> :
+<L12>:
+  ErrorString_Ptr[2] = "Parameter out of range";
+  goto <bb 17>; [INV]
+
+  <bb 16> :
+<L13>:
+
+  <bb 17> :
+  goto <bb 56>; [INV]
+
+  <bb 18> :
+<L15>:
+  _4 = (int) ErrorId_16(D);
+  switch (_4) <default: <L23> [INV], case 10: <L16> [INV], case 12: <L18> [INV], case 13: <L20> [INV], case 14: <L17> [INV], case 15: <L21> [INV], case 16: <L22> [INV], case 240: <L19> [INV]>
+
+  <bb 19> :
+<L16>:
+  ErrorString_Ptr[2] = "Invalid Port Pin ID";
+  goto <bb 27>; [INV]
+
+  <bb 20> :
+<L17>:
+  ErrorString_Ptr[2] = "Port pin mode is unchangeable";
+  goto <bb 27>; [INV]
+
+  <bb 21> :
+<L18>:
+  ErrorString_Ptr[2] = "Invalid conf pointer";
+  goto <bb 27>; [INV]
+
+  <bb 22> :
+<L19>:
+  ErrorString_Ptr[2] = "Invalid conf pointer";
+  goto <bb 27>; [INV]
+
+  <bb 23> :
+<L20>:
+  ErrorString_Ptr[2] = "Invalid port pin mode";
+  goto <bb 27>; [INV]
+
+  <bb 24> :
+<L21>:
+  ErrorString_Ptr[2] = "Driver uninitialized";
+  goto <bb 27>; [INV]
+
+  <bb 25> :
+<L22>:
+  ErrorString_Ptr[2] = "Invalid input parameter";
+  goto <bb 27>; [INV]
+
+  <bb 26> :
+<L23>:
+
+  <bb 27> :
+  goto <bb 56>; [INV]
+
+  <bb 28> :
+<L25>:
+  _5 = (int) ErrorId_16(D);
+  switch (_5) <default: <L32> [INV], case 10: <L28> [INV], case 20: <L29> [INV], case 31: <L30> [INV], case 32: <L27> [INV], case 33: <L26> [INV], case 240: <L31> [INV]>
+
+  <bb 29> :
+<L26>:
+  ErrorString_Ptr[2] = "Invalid dio channel level";
+  goto <bb 36>; [INV]
+
+  <bb 30> :
+<L27>:
+  ErrorString_Ptr[2] = "Invalid input parameter";
+  goto <bb 36>; [INV]
+
+  <bb 31> :
+<L28>:
+  ErrorString_Ptr[2] = "Invalid dio channel id";
+  goto <bb 36>; [INV]
+
+  <bb 32> :
+<L29>:
+  ErrorString_Ptr[2] = "Invalid port id";
+  goto <bb 36>; [INV]
+
+  <bb 33> :
+<L30>:
+  ErrorString_Ptr[2] = "Invalid channel group id";
+  goto <bb 36>; [INV]
+
+  <bb 34> :
+<L31>:
+  ErrorString_Ptr[2] = "Invalid config parameter";
+  goto <bb 36>; [INV]
+
+  <bb 35> :
+<L32>:
+
+  <bb 36> :
+  goto <bb 56>; [INV]
+
+  <bb 37> :
+<L34>:
+  _6 = (int) ErrorId_16(D);
+  switch (_6) <default: <L41> [INV], case 16: <L35> [INV], case 17: <L36> [INV], case 18: <L38> [INV], case 19: <L39> [INV], case 20: <L37> [INV], case 21: <L40> [INV]>
+
+  <bb 38> :
+<L35>:
+  ErrorString_Ptr[2] = "Invalid config pointer";
+  goto <bb 45>; [INV]
+
+  <bb 39> :
+<L36>:
+  ErrorString_Ptr[2] = "Driver uninitialized";
+  goto <bb 45>; [INV]
+
+  <bb 40> :
+<L37>:
+  ErrorString_Ptr[2] = "Driver already initialized";
+  goto <bb 45>; [INV]
+
+  <bb 41> :
+<L38>:
+  ErrorString_Ptr[2] = "Invalid pwm channel";
+  goto <bb 45>; [INV]
+
+  <bb 42> :
+<L39>:
+  ErrorString_Ptr[2] = "Pwm channel period is unchangeable";
+  goto <bb 45>; [INV]
+
+  <bb 43> :
+<L40>:
+  ErrorString_Ptr[2] = "Invalid input parameter";
+  goto <bb 45>; [INV]
+
+  <bb 44> :
+<L41>:
+
+  <bb 45> :
+  goto <bb 56>; [INV]
+
+  <bb 46> :
+<L43>:
+  _7 = (int) ErrorId_16(D);
+  switch (_7) <default: <L50> [INV], case 10: <L44> [INV], case 13: <L45> [INV], case 20: <L46> [INV], case 21: <L47> [INV], case 25: <L48> [INV], case 43: <L49> [INV]>
+
+  <bb 47> :
+<L44>:
+  ErrorString_Ptr[2] = "Driver uninitialized";
+  goto <bb 54>; [INV]
+
+  <bb 48> :
+<L45>:
+  ErrorString_Ptr[2] = "Driver already initialized";
+  goto <bb 54>; [INV]
+
+  <bb 49> :
+<L46>:
+  ErrorString_Ptr[2] = "Invalid pointer";
+  goto <bb 54>; [INV]
+
+  <bb 50> :
+<L47>:
+  ErrorString_Ptr[2] = "Invalid adc group";
+  goto <bb 54>; [INV]
+
+  <bb 51> :
+<L48>:
+  ErrorString_Ptr[2] = "Buffer pointer not initialized";
+  goto <bb 54>; [INV]
+
+  <bb 52> :
+<L49>:
+  ErrorString_Ptr[2] = "Calibration operation timed out";
+  goto <bb 54>; [INV]
+
+  <bb 53> :
+<L50>:
+
+  <bb 54> :
+  goto <bb 56>; [INV]
+
+  <bb 55> :
+<L52>:
+
+  <bb 56> :
+  _52 = ErrorString_Ptr[2];
+
+  <bb 57> :
+<L54>:
+  return _52;
+
+}
+
+
+Det_GetApiName (uint16 ModuleId, uint8 ApiId)
+{
+  char * D.8317;
+  int _1;
+  int _2;
+  int _3;
+  int _4;
+  int _5;
+  int _6;
+  int _7;
+  char * _55;
+
+  <bb 2> :
+  _1 = (int) ModuleId_15(D);
+  switch (_1) <default: <L55> [INV], case 101: <L0> [INV], case 120: <L23> [INV], case 121: <L34> [INV], case 123: <L43> [INV], case 124: <L15> [INV], case 255: <L7> [INV]>
+
+  <bb 3> :
+<L0>:
+  _2 = (int) ApiId_16(D);
+  switch (_2) <default: <L5> [INV], case 0: <L1> [INV], case 2: <L2> [INV], case 8: <L3> [INV], case 9: <L4> [INV]>
+
+  <bb 4> :
+<L1>:
+  ErrorString_Ptr[1] = "Mcu_Init()";
+  goto <bb 9>; [INV]
+
+  <bb 5> :
+<L2>:
+  ErrorString_Ptr[1] = "Mcu_InitClock()";
+  goto <bb 9>; [INV]
+
+  <bb 6> :
+<L3>:
+  ErrorString_Ptr[1] = "Mcu_SetMode()";
+  goto <bb 9>; [INV]
+
+  <bb 7> :
+<L4>:
+  ErrorString_Ptr[1] = "Mcu_GetVersionInfo()";
+  goto <bb 9>; [INV]
+
+  <bb 8> :
+<L5>:
+
+  <bb 9> :
+  goto <bb 59>; [INV]
+
+  <bb 10> :
+<L7>:
+  _3 = (int) ApiId_16(D);
+  switch (_3) <default: <L13> [INV], case 32: <L8> [INV], case 33: <L9> [INV], case 34: <L10> [INV], case 35: <L11> [INV], case 36: <L12> [INV]>
+
+  <bb 11> :
+<L8>:
+  ErrorString_Ptr[1] = "Platform_Init()";
+  goto <bb 17>; [INV]
+
+  <bb 12> :
+<L9>:
+  ErrorString_Ptr[1] = "Platform_SetIrq()";
+  goto <bb 17>; [INV]
+
+  <bb 13> :
+<L10>:
+  ErrorString_Ptr[1] = "Platform_SetIrqPriority()";
+  goto <bb 17>; [INV]
+
+  <bb 14> :
+<L11>:
+  ErrorString_Ptr[1] = "Platform_GetIrqPriority()";
+  goto <bb 17>; [INV]
+
+  <bb 15> :
+<L12>:
+  ErrorString_Ptr[1] = "Platform_InstallIrqHandler()";
+  goto <bb 17>; [INV]
+
+  <bb 16> :
+<L13>:
+
+  <bb 17> :
+  goto <bb 59>; [INV]
+
+  <bb 18> :
+<L15>:
+  _4 = (int) ApiId_16(D);
+  switch (_4) <default: <L21> [INV], case 0: <L16> [INV], case 1: <L17> [INV], case 2: <L19> [INV], case 3: <L20> [INV], case 4: <L18> [INV]>
+
+  <bb 19> :
+<L16>:
+  ErrorString_Ptr[1] = "Port_Init()";
+  goto <bb 25>; [INV]
+
+  <bb 20> :
+<L17>:
+  ErrorString_Ptr[1] = "Port_SetPinDirection()";
+  goto <bb 25>; [INV]
+
+  <bb 21> :
+<L18>:
+  ErrorString_Ptr[1] = "Port_SetPinMode()";
+  goto <bb 25>; [INV]
+
+  <bb 22> :
+<L19>:
+  ErrorString_Ptr[1] = "Port_RefreshPortDirection()";
+  goto <bb 25>; [INV]
+
+  <bb 23> :
+<L20>:
+  ErrorString_Ptr[1] = "Port_GetVersionInfo()";
+  goto <bb 25>; [INV]
+
+  <bb 24> :
+<L21>:
+
+  <bb 25> :
+  goto <bb 59>; [INV]
+
+  <bb 26> :
+<L23>:
+  _5 = (int) ApiId_16(D);
+  switch (_5) <default: <L32> [INV], case 0: <L25> [INV], case 1: <L24> [INV], case 2: <L29> [INV], case 3: <L30> [INV], case 4: <L28> [INV], case 5: <L27> [INV], case 17: <L26> [INV], case 18: <L31> [INV]>
+
+  <bb 27> :
+<L24>:
+  ErrorString_Ptr[1] = "Dio_WriteChannel()";
+  goto <bb 36>; [INV]
+
+  <bb 28> :
+<L25>:
+  ErrorString_Ptr[1] = "Dio_ReadChannel()";
+  goto <bb 36>; [INV]
+
+  <bb 29> :
+<L26>:
+  ErrorString_Ptr[1] = "Dio_FlipChannel()";
+  goto <bb 36>; [INV]
+
+  <bb 30> :
+<L27>:
+  ErrorString_Ptr[1] = "Dio_WriteChannelGroup()";
+  goto <bb 36>; [INV]
+
+  <bb 31> :
+<L28>:
+  ErrorString_Ptr[1] = "Dio_ReadChannelGroup()";
+  goto <bb 36>; [INV]
+
+  <bb 32> :
+<L29>:
+  ErrorString_Ptr[1] = "Dio_ReadPort()";
+  goto <bb 36>; [INV]
+
+  <bb 33> :
+<L30>:
+  ErrorString_Ptr[1] = "Dio_WritePort()";
+  goto <bb 36>; [INV]
+
+  <bb 34> :
+<L31>:
+  ErrorString_Ptr[1] = "Dio_GetVersionInfo()";
+  goto <bb 36>; [INV]
+
+  <bb 35> :
+<L32>:
+
+  <bb 36> :
+  goto <bb 59>; [INV]
+
+  <bb 37> :
+<L34>:
+  _6 = (int) ApiId_16(D);
+  switch (_6) <default: <L41> [INV], case 0: <L35> [INV], case 1: <L36> [INV], case 2: <L37> [INV], case 3: <L38> [INV], case 4: <L39> [INV], case 8: <L40> [INV]>
+
+  <bb 38> :
+<L35>:
+  ErrorString_Ptr[1] = "Pwm_Init()";
+  goto <bb 45>; [INV]
+
+  <bb 39> :
+<L36>:
+  ErrorString_Ptr[1] = "Pwm_DeInit()";
+  goto <bb 45>; [INV]
+
+  <bb 40> :
+<L37>:
+  ErrorString_Ptr[1] = "Pwm_SetDutyCycle()";
+  goto <bb 45>; [INV]
+
+  <bb 41> :
+<L38>:
+  ErrorString_Ptr[1] = "Pwm_SetPeriodAndDuty()";
+  goto <bb 45>; [INV]
+
+  <bb 42> :
+<L39>:
+  ErrorString_Ptr[1] = "Pwm_SetOutputToIdle()";
+  goto <bb 45>; [INV]
+
+  <bb 43> :
+<L40>:
+  ErrorString_Ptr[1] = "Pwm_GetVersionInfo()";
+  goto <bb 45>; [INV]
+
+  <bb 44> :
+<L41>:
+
+  <bb 45> :
+  goto <bb 59>; [INV]
+
+  <bb 46> :
+<L43>:
+  _7 = (int) ApiId_16(D);
+  switch (_7) <default: <L53> [INV], case 0: <L44> [INV], case 1: <L45> [INV], case 2: <L46> [INV], case 3: <L47> [INV], case 4: <L48> [INV], case 9: <L49> [INV], case 10: <L52> [INV], case 12: <L51> [INV], case 41: <L50> [INV]>
+
+  <bb 47> :
+<L44>:
+  ErrorString_Ptr[1] = "Adc_Init()";
+  goto <bb 57>; [INV]
+
+  <bb 48> :
+<L45>:
+  ErrorString_Ptr[1] = "Adc_DeInit()";
+  goto <bb 57>; [INV]
+
+  <bb 49> :
+<L46>:
+  ErrorString_Ptr[1] = "Adc_StartGroupConversion()";
+  goto <bb 57>; [INV]
+
+  <bb 50> :
+<L47>:
+  ErrorString_Ptr[1] = "Adc_StopGroupConversion()";
+  goto <bb 57>; [INV]
+
+  <bb 51> :
+<L48>:
+  ErrorString_Ptr[1] = "Adc_ReadGroup()";
+  goto <bb 57>; [INV]
+
+  <bb 52> :
+<L49>:
+  ErrorString_Ptr[1] = "Adc_GetGroupStatus()";
+  goto <bb 57>; [INV]
+
+  <bb 53> :
+<L50>:
+  ErrorString_Ptr[1] = "Adc_Calibrate()";
+  goto <bb 57>; [INV]
+
+  <bb 54> :
+<L51>:
+  ErrorString_Ptr[1] = "Adc_SetupResultBuffer()";
+  goto <bb 57>; [INV]
+
+  <bb 55> :
+<L52>:
+  ErrorString_Ptr[1] = "Adc_GetVersionInfo()";
+  goto <bb 57>; [INV]
+
+  <bb 56> :
+<L53>:
+
+  <bb 57> :
+  goto <bb 59>; [INV]
+
+  <bb 58> :
+<L55>:
+
+  <bb 59> :
+  _55 = ErrorString_Ptr[1];
+
+  <bb 60> :
+<L57>:
+  return _55;
+
+}
+
+
+Det_GetModuleName (uint16 ModuleId)
+{
+  char * D.8315;
+  int _1;
+  char * _11;
+
+  <bb 2> :
+  _1 = (int) ModuleId_3(D);
+  switch (_1) <default: <L6> [INV], case 101: <L0> [INV], case 120: <L3> [INV], case 121: <L4> [INV], case 123: <L5> [INV], case 124: <L2> [INV], case 255: <L1> [INV]>
+
+  <bb 3> :
+<L0>:
+  ErrorString_Ptr[0] = "Mcu module";
+  goto <bb 10>; [INV]
+
+  <bb 4> :
+<L1>:
+  ErrorString_Ptr[0] = "Platform module";
+  goto <bb 10>; [INV]
+
+  <bb 5> :
+<L2>:
+  ErrorString_Ptr[0] = "Port module";
+  goto <bb 10>; [INV]
+
+  <bb 6> :
+<L3>:
+  ErrorString_Ptr[0] = "Dio module";
+  goto <bb 10>; [INV]
+
+  <bb 7> :
+<L4>:
+  ErrorString_Ptr[0] = "Pwm module";
+  goto <bb 10>; [INV]
+
+  <bb 8> :
+<L5>:
+  ErrorString_Ptr[0] = "Adc module";
+  goto <bb 10>; [INV]
+
+  <bb 9> :
+<L6>:
+
+  <bb 10> :
+  _11 = ErrorString_Ptr[0];
+
+  <bb 11> :
+<L8>:
+  return _11;
 
 }
 

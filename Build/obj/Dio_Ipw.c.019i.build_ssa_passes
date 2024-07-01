@@ -29,7 +29,7 @@ Dio_Ipw_ReadChannelGroup (const struct Dio_ChannelGroupType * pChannelGroupIdPtr
   const struct GPIO_Type * GpioBase;
   Dio_PortLevelType pinsValue;
   Dio_PortLevelType PortLevel;
-  Dio_PortLevelType D.5461;
+  Dio_PortLevelType D.5462;
 
   <bb 2> :
   PortLevel = 0;
@@ -43,11 +43,11 @@ Dio_Ipw_ReadChannelGroup (const struct Dio_ChannelGroupType * pChannelGroupIdPtr
   _6 = pChannelGroupIdPtr->u8offset;
   _7 = (int) _6;
   PortLevel = _5 >> _7;
-  D.5461 = PortLevel;
+  D.5462 = PortLevel;
 
   <bb 3> :
 <L0>:
-  return D.5461;
+  return D.5462;
 
 }
 
@@ -72,7 +72,7 @@ Dio_Ipw_ReadPort (Dio_PortType PortId)
 {
   const struct GPIO_Type * GpioBase;
   Dio_PortLevelType PortLevel;
-  Dio_PortLevelType D.5459;
+  Dio_PortLevelType D.5460;
 
   <bb 2> :
   PortLevel = 0;
@@ -80,11 +80,11 @@ Dio_Ipw_ReadPort (Dio_PortType PortId)
   _2 = GpioBaseAdresses[_1];
   GpioBase = (const struct GPIO_Type *) _2;
   PortLevel = Gpio_Dio_Ip_ReadPins (GpioBase);
-  D.5459 = PortLevel;
+  D.5460 = PortLevel;
 
   <bb 3> :
 <L0>:
-  return D.5459;
+  return D.5460;
 
 }
 
@@ -96,7 +96,7 @@ Dio_Ipw_FlipChannel (Dio_ChannelType ChannelId)
   uint32 u32PinIndex;
   uint32 u32GpioInstance;
   Dio_LevelType ChannelLevel;
-  Dio_LevelType D.5457;
+  Dio_LevelType D.5458;
 
   <bb 2> :
   ChannelLevel = 0;
@@ -113,11 +113,11 @@ Dio_Ipw_FlipChannel (Dio_ChannelType ChannelId)
   _6 = u32PortOutPutLevel & _5;
   _7 = _6 >> u32PinIndex;
   ChannelLevel = (Dio_LevelType) _7;
-  D.5457 = ChannelLevel;
+  D.5458 = ChannelLevel;
 
   <bb 3> :
 <L0>:
-  return D.5457;
+  return D.5458;
 
 }
 
@@ -147,7 +147,7 @@ Dio_Ipw_ReadChannel (Dio_ChannelType ChannelId)
   uint32 u32PinIndex;
   uint32 u32GpioInstance;
   Dio_LevelType ChannelLevel;
-  Dio_LevelType D.5455;
+  Dio_LevelType D.5456;
 
   <bb 2> :
   ChannelLevel = 0;
@@ -158,11 +158,11 @@ Dio_Ipw_ReadChannel (Dio_ChannelType ChannelId)
   _3 = GpioBaseAdresses[u32GpioInstance];
   GpioBase = (const struct GPIO_Type *) _3;
   ChannelLevel = Gpio_Dio_Ip_ReadPin (GpioBase, u32PinIndex);
-  D.5455 = ChannelLevel;
+  D.5456 = ChannelLevel;
 
   <bb 3> :
 <L0>:
-  return D.5455;
+  return D.5456;
 
 }
 

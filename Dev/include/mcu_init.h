@@ -12,7 +12,6 @@
 #include "OsIf.h"
 #include "Platform.h"
 #include "Port.h"
-#include "Adc.h"
 #include "IoHwAb.h"
 #include "SEGGER_RTT.h"
 

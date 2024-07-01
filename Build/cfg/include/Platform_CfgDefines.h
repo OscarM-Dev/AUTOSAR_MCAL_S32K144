@@ -57,7 +57,7 @@
 *                                       LOCAL MACROS
 ==================================================================================================*/
 /* Development error checking */
-#define PLATFORM_DEV_ERROR_DETECT        (STD_OFF)
+#define PLATFORM_DEV_ERROR_DETECT        (STD_ON)
 
 /* Interrupt monitoring feature enablement */
 #define PLATFORM_INT_MONITOR             (STD_OFF)

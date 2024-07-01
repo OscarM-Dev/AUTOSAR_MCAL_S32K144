@@ -96,16 +96,12 @@
                 </d:lst>
               </d:ctr>
               <d:ctr name="DioGeneral" type="IDENTIFIABLE">
-                <d:var name="DioDevErrorDetect" type="BOOLEAN" value="false">
-                  <a:a name="IMPORTER_INFO" value="@DEF"/>
-                </d:var>
+                <d:var name="DioDevErrorDetect" type="BOOLEAN" value="true"/>
                 <d:var name="GPIODioIPDevErrorDetect" type="BOOLEAN" 
                        value="false">
                   <a:a name="IMPORTER_INFO" value="@DEF"/>
                 </d:var>
-                <d:var name="DioVersionInfoApi" type="BOOLEAN" value="false">
-                  <a:a name="IMPORTER_INFO" value="@DEF"/>
-                </d:var>
+                <d:var name="DioVersionInfoApi" type="BOOLEAN" value="true"/>
                 <d:var name="DioReversePortBits" type="BOOLEAN" value="false">
                   <a:a name="IMPORTER_INFO" value="@DEF"/>
                 </d:var>

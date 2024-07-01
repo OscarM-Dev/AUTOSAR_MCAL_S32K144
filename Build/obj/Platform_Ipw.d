@@ -7,7 +7,10 @@ Build/obj/Platform_Ipw.o: Autosar/Mcal/Platform/src/Platform_Ipw.c \
  Autosar/Mcal/Base/include/Compiler_Cfg.h \
  Autosar/Mcal/Base/include/CompilerDefinition.h \
  Autosar/Mcal/Platform/include/Platform_Ipw_TypesDef.h \
- Build/cfg/include/Platform_CfgDefines.h \
+ Build/cfg/include/Platform_CfgDefines.h Autosar/Det/include/Det.h \
+ Autosar/Mcal/Base/include/Std_Types.h \
+ Autosar/Mcal/Base/include/StandardTypes.h \
+ Autosar/Mcal/Base/include/Det_MemMap.h \
  Autosar/Mcal/Platform/include/IntCtrl_Ip_TypesDef.h \
  Build/cfg/include/IntCtrl_Ip_CfgDefines.h \
  Autosar/Mcal/Base/header/S32K144.h \
@@ -53,8 +56,7 @@ Build/obj/Platform_Ipw.o: Autosar/Mcal/Platform/src/Platform_Ipw.c \
  Build/cfg/include/System_Ip_CfgDefines.h \
  Autosar/Mcal/Platform/include/System_Ip_DeviceRegisters.h \
  Autosar/Mcal/Platform/include/Mpu_Ip.h Autosar/Mcal/Base/include/Mcal.h \
- Autosar/Mcal/Base/include/StandardTypes.h Build/cfg/include/Soc_Ips.h \
- Autosar/Mcal/Base/include/Platform_Types.h \
+ Build/cfg/include/Soc_Ips.h Autosar/Mcal/Base/include/Platform_Types.h \
  Autosar/Mcal/Base/include/IpVersionMacros.h \
  Autosar/Mcal/Base/include/Reg_eSys.h \
  Autosar/Mcal/Base/include/OsIf_Internal.h Build/cfg/include/OsIf_Cfg.h \
@@ -87,6 +89,10 @@ Autosar/Mcal/Base/include/Compiler_Cfg.h:
 Autosar/Mcal/Base/include/CompilerDefinition.h:
 Autosar/Mcal/Platform/include/Platform_Ipw_TypesDef.h:
 Build/cfg/include/Platform_CfgDefines.h:
+Autosar/Det/include/Det.h:
+Autosar/Mcal/Base/include/Std_Types.h:
+Autosar/Mcal/Base/include/StandardTypes.h:
+Autosar/Mcal/Base/include/Det_MemMap.h:
 Autosar/Mcal/Platform/include/IntCtrl_Ip_TypesDef.h:
 Build/cfg/include/IntCtrl_Ip_CfgDefines.h:
 Autosar/Mcal/Base/header/S32K144.h:
@@ -133,7 +139,6 @@ Build/cfg/include/System_Ip_CfgDefines.h:
 Autosar/Mcal/Platform/include/System_Ip_DeviceRegisters.h:
 Autosar/Mcal/Platform/include/Mpu_Ip.h:
 Autosar/Mcal/Base/include/Mcal.h:
-Autosar/Mcal/Base/include/StandardTypes.h:
 Build/cfg/include/Soc_Ips.h:
 Autosar/Mcal/Base/include/Platform_Types.h:
 Autosar/Mcal/Base/include/IpVersionMacros.h:

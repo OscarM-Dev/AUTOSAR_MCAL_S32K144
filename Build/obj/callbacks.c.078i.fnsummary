@@ -1,6 +1,6 @@
 Symbol table:
 
-ButtonsControl_Ptr/66 (ButtonsControl_Ptr) @06d913a8
+ButtonsControl_Ptr/66 (ButtonsControl_Ptr) @060d23f0
   Type: variable
   Body removed by symtab_remove_unreachable_nodes
   Visibility: external public
@@ -8,7 +8,7 @@ ButtonsControl_Ptr/66 (ButtonsControl_Ptr) @06d913a8
   Referring: Task2_callback/52 (read) 
   Availability: not_available
   Varpool flags:
-HwIoAb_Pots_GetAltValue/65 (HwIoAb_Pots_GetAltValue) @06d90620
+HwIoAb_Pots_GetAltValue/65 (HwIoAb_Pots_GetAltValue) @060cc8c0
   Type: function
   Visibility: external public
   References: 
@@ -17,7 +17,7 @@ HwIoAb_Pots_GetAltValue/65 (HwIoAb_Pots_GetAltValue) @06d90620
   Function flags:
   Called by: Task2_callback/52 
   Calls: 
-HwIoAb_Buzzer_Stop/64 (HwIoAb_Buzzer_Stop) @06d90460
+HwIoAb_Buzzer_Stop/64 (HwIoAb_Buzzer_Stop) @060cc700
   Type: function
   Visibility: external public
   References: 
@@ -26,7 +26,7 @@ HwIoAb_Buzzer_Stop/64 (HwIoAb_Buzzer_Stop) @06d90460
   Function flags:
   Called by: Task2_callback/52 Task2_callback/52 Task2_callback/52 
   Calls: 
-HwIoAb_Buzzer_Beep/63 (HwIoAb_Buzzer_Beep) @06d90380
+HwIoAb_Buzzer_Beep/63 (HwIoAb_Buzzer_Beep) @060cc620
   Type: function
   Visibility: external public
   References: 
@@ -35,14 +35,14 @@ HwIoAb_Buzzer_Beep/63 (HwIoAb_Buzzer_Beep) @06d90380
   Function flags:
   Called by: Task2_callback/52 Task2_callback/52 Task2_callback/52 
   Calls: 
-flags.0/62 (flags) @06d91000
+flags.0/62 (flags) @060d2048
   Type: variable definition analyzed
   Visibility: force_output no_reorder prevailing_def_ironly
   References: 
   Referring: Task2_callback/52 (read) Task2_callback/52 (write) Task2_callback/52 (write) Task2_callback/52 (read) Task2_callback/52 (write) Task2_callback/52 (write) Task2_callback/52 (read) Task2_callback/52 (write) Task2_callback/52 (write) 
   Availability: available
   Varpool flags: initialized
-SEGGER_RTT_printf/61 (SEGGER_RTT_printf) @06d902a0
+SEGGER_RTT_printf/61 (SEGGER_RTT_printf) @060cc540
   Type: function
   Visibility: external public
   References: 
@@ -51,7 +51,7 @@ SEGGER_RTT_printf/61 (SEGGER_RTT_printf) @06d902a0
   Function flags:
   Called by: Task2_callback/52 Task2_callback/52 Task2_callback/52 
   Calls: 
-HwIoAb_Pots_GetValue/60 (HwIoAb_Pots_GetValue) @06d901c0
+HwIoAb_Pots_GetValue/60 (HwIoAb_Pots_GetValue) @060cc460
   Type: function
   Visibility: external public
   References: 
@@ -60,7 +60,7 @@ HwIoAb_Pots_GetValue/60 (HwIoAb_Pots_GetValue) @06d901c0
   Function flags:
   Called by: Task2_callback/52 Task2_callback/52 
   Calls: 
-PotsControl_Ptr/59 (PotsControl_Ptr) @06d8aee8
+PotsControl_Ptr/59 (PotsControl_Ptr) @060cbf30
   Type: variable
   Body removed by symtab_remove_unreachable_nodes
   Visibility: external public
@@ -68,7 +68,7 @@ PotsControl_Ptr/59 (PotsControl_Ptr) @06d8aee8
   Referring: Task2_callback/52 (read) Task2_callback/52 (read) Task2_callback/52 (read) Task2_callback/52 (read) Task2_callback/52 (read) Task2_callback/52 (read) Task2_callback/52 (read) 
   Availability: not_available
   Varpool flags:
-HwIoAb_Leds_TurnToggle/58 (HwIoAb_Leds_TurnToggle) @06d900e0
+HwIoAb_Leds_TurnToggle/58 (HwIoAb_Leds_TurnToggle) @060cc380
   Type: function
   Visibility: external public
   References: 
@@ -77,7 +77,7 @@ HwIoAb_Leds_TurnToggle/58 (HwIoAb_Leds_TurnToggle) @06d900e0
   Function flags:
   Called by: Task2_callback/52 Task2_callback/52 Task2_callback/52 
   Calls: 
-HwIoAb_Buttons_GetEvent/57 (HwIoAb_Buttons_GetEvent) @06d90000
+HwIoAb_Buttons_GetEvent/57 (HwIoAb_Buttons_GetEvent) @060cc2a0
   Type: function
   Visibility: external public
   References: 
@@ -86,7 +86,7 @@ HwIoAb_Buttons_GetEvent/57 (HwIoAb_Buttons_GetEvent) @06d90000
   Function flags:
   Called by: Task2_callback/52 
   Calls: 
-HwIoAb_Buttons_MainFunction/56 (HwIoAb_Buttons_MainFunction) @06d73700
+HwIoAb_Buttons_MainFunction/56 (HwIoAb_Buttons_MainFunction) @060b1ee0
   Type: function
   Visibility: external public
   References: 
@@ -95,7 +95,7 @@ HwIoAb_Buttons_MainFunction/56 (HwIoAb_Buttons_MainFunction) @06d73700
   Function flags:
   Called by: Task1_callback/51 
   Calls: 
-Timer3_callback/55 (Timer3_callback) @06d730e0
+Timer3_callback/55 (Timer3_callback) @060b1620
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: 
@@ -104,7 +104,7 @@ Timer3_callback/55 (Timer3_callback) @06d730e0
   Function flags: body
   Called by: 
   Calls: 
-Timer2_callback/54 (Timer2_callback) @06d73e00
+Timer2_callback/54 (Timer2_callback) @060b1380
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: 
@@ -113,7 +113,7 @@ Timer2_callback/54 (Timer2_callback) @06d73e00
   Function flags: body
   Called by: 
   Calls: 
-Timer1_callback/53 (Timer1_callback) @06d73b60
+Timer1_callback/53 (Timer1_callback) @060b1e00
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: 
@@ -122,7 +122,7 @@ Timer1_callback/53 (Timer1_callback) @06d73b60
   Function flags: body
   Called by: 
   Calls: 
-Task2_callback/52 (Task2_callback) @06d738c0
+Task2_callback/52 (Task2_callback) @060b1b60
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: PotsControl_Ptr/59 (read) PotsControl_Ptr/59 (read) flags.0/62 (read) flags.0/62 (write) flags.0/62 (write) PotsControl_Ptr/59 (read) PotsControl_Ptr/59 (read) flags.0/62 (read) flags.0/62 (write) flags.0/62 (write) PotsControl_Ptr/59 (read) PotsControl_Ptr/59 (read) PotsControl_Ptr/59 (read) flags.0/62 (read) flags.0/62 (write) flags.0/62 (write) ButtonsControl_Ptr/66 (read) 
@@ -131,7 +131,7 @@ Task2_callback/52 (Task2_callback) @06d738c0
   Function flags: body
   Called by: 
   Calls: HwIoAb_Buzzer_Stop/64 HwIoAb_Buzzer_Beep/63 SEGGER_RTT_printf/61 HwIoAb_Pots_GetAltValue/65 HwIoAb_Leds_TurnToggle/58 HwIoAb_Buzzer_Stop/64 HwIoAb_Buzzer_Beep/63 SEGGER_RTT_printf/61 HwIoAb_Pots_GetValue/60 HwIoAb_Leds_TurnToggle/58 HwIoAb_Buzzer_Stop/64 HwIoAb_Buzzer_Beep/63 SEGGER_RTT_printf/61 HwIoAb_Pots_GetValue/60 HwIoAb_Leds_TurnToggle/58 HwIoAb_Buttons_GetEvent/57 
-Task1_callback/51 (Task1_callback) @06d73620
+Task1_callback/51 (Task1_callback) @060b18c0
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: 

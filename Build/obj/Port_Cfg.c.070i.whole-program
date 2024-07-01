@@ -5,7 +5,7 @@ Marking local functions:
 Marking externally visible functions:
 
 
-Marking externally visible variables:
+Marking externally visible variables: Port_au16PinDescription/1
 
 
 Reclaiming functions:
@@ -13,3 +13,10 @@ Reclaiming variables:
 Clearing address taken flags:
 Symbol table:
 
+Port_au16PinDescription/1 (Port_au16PinDescription) @06a2cf78
+  Type: variable definition analyzed
+  Visibility: force_output externally_visible no_reorder public
+  References: 
+  Referring: 
+  Availability: available
+  Varpool flags: initialized read-only const-value-known

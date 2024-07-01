@@ -28,7 +28,8 @@ Build/obj/Port.o: Autosar/Mcal/Port/src/Port.c \
  Build/cfg/include/OsIf_ArchCfg.h \
  Autosar/Mcal/Base/include/StandardTypes.h \
  Autosar/Mcal/Base/header/S32K144_SYSTICK.h \
- Autosar/Mcal/Base/include/Mcal.h
+ Autosar/Mcal/Base/include/Mcal.h Autosar/Det/include/Det.h \
+ Autosar/Mcal/Base/include/Det_MemMap.h
 Autosar/Mcal/Port/include/Port.h:
 Autosar/Mcal/Base/include/Std_Types.h:
 Autosar/Mcal/Base/include/StandardTypes.h:
@@ -64,3 +65,5 @@ Build/cfg/include/OsIf_ArchCfg.h:
 Autosar/Mcal/Base/include/StandardTypes.h:
 Autosar/Mcal/Base/header/S32K144_SYSTICK.h:
 Autosar/Mcal/Base/include/Mcal.h:
+Autosar/Det/include/Det.h:
+Autosar/Mcal/Base/include/Det_MemMap.h:

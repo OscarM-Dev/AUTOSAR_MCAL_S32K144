@@ -1,6 +1,6 @@
 Symbol table:
 
-Port_Ci_Port_Ip_SetMuxModeSel/19 (Port_Ci_Port_Ip_SetMuxModeSel) @06636ee0
+Port_Ci_Port_Ip_SetMuxModeSel/19 (Port_Ci_Port_Ip_SetMuxModeSel) @072a8460
   Type: function
   Visibility: external public
   References: 
@@ -9,7 +9,7 @@ Port_Ci_Port_Ip_SetMuxModeSel/19 (Port_Ci_Port_Ip_SetMuxModeSel) @06636ee0
   Function flags:
   Called by: EcuM_Init/6 EcuM_Init/6 
   Calls: 
-Pwm_Config/18 (Pwm_Config) @0663b048
+Pwm_Config/18 (Pwm_Config) @072a9120
   Type: variable
   Body removed by symtab_remove_unreachable_nodes
   Visibility: external public
@@ -17,7 +17,7 @@ Pwm_Config/18 (Pwm_Config) @0663b048
   Referring: EcuM_Init/6 (addr) 
   Availability: not_available
   Varpool flags: read-only
-Pwm_Init/17 (Pwm_Init) @06636e00
+Pwm_Init/17 (Pwm_Init) @072a8380
   Type: function
   Visibility: external public
   References: 
@@ -26,7 +26,7 @@ Pwm_Init/17 (Pwm_Init) @06636e00
   Function flags:
   Called by: EcuM_Init/6 
   Calls: 
-Adc_Config/16 (Adc_Config) @06634f78
+Adc_Config/16 (Adc_Config) @072a9090
   Type: variable
   Body removed by symtab_remove_unreachable_nodes
   Visibility: external public
@@ -34,7 +34,7 @@ Adc_Config/16 (Adc_Config) @06634f78
   Referring: EcuM_Init/6 (addr) 
   Availability: not_available
   Varpool flags: read-only
-Adc_Init/15 (Adc_Init) @06636d20
+Adc_Init/15 (Adc_Init) @072a82a0
   Type: function
   Visibility: external public
   References: 
@@ -43,7 +43,7 @@ Adc_Init/15 (Adc_Init) @06636d20
   Function flags:
   Called by: EcuM_Init/6 
   Calls: 
-Port_Config/14 (Port_Config) @06634ee8
+Port_Config/14 (Port_Config) @072a9000
   Type: variable
   Body removed by symtab_remove_unreachable_nodes
   Visibility: external public
@@ -51,7 +51,7 @@ Port_Config/14 (Port_Config) @06634ee8
   Referring: EcuM_Init/6 (addr) 
   Availability: not_available
   Varpool flags: read-only
-Port_Init/13 (Port_Init) @06636c40
+Port_Init/13 (Port_Init) @072a81c0
   Type: function
   Visibility: external public
   References: 
@@ -60,7 +60,7 @@ Port_Init/13 (Port_Init) @06636c40
   Function flags:
   Called by: EcuM_Init/6 
   Calls: 
-Platform_Init/12 (Platform_Init) @06636b60
+Platform_Init/12 (Platform_Init) @072a80e0
   Type: function
   Visibility: external public
   References: 
@@ -69,7 +69,7 @@ Platform_Init/12 (Platform_Init) @06636b60
   Function flags:
   Called by: EcuM_Init/6 
   Calls: 
-OsIf_Init/11 (OsIf_Init) @06636a80
+OsIf_Init/11 (OsIf_Init) @072a8000
   Type: function
   Visibility: external public
   References: 
@@ -78,7 +78,7 @@ OsIf_Init/11 (OsIf_Init) @06636a80
   Function flags:
   Called by: EcuM_Init/6 
   Calls: 
-Mcu_InitClock/10 (Mcu_InitClock) @066368c0
+Mcu_InitClock/10 (Mcu_InitClock) @07291540
   Type: function
   Visibility: external public
   References: 
@@ -87,7 +87,7 @@ Mcu_InitClock/10 (Mcu_InitClock) @066368c0
   Function flags:
   Called by: MCU_clocks/5 
   Calls: 
-Mcu_SetMode/9 (Mcu_SetMode) @066367e0
+Mcu_SetMode/9 (Mcu_SetMode) @07291ee0
   Type: function
   Visibility: external public
   References: 
@@ -96,7 +96,7 @@ Mcu_SetMode/9 (Mcu_SetMode) @066367e0
   Function flags:
   Called by: MCU_clocks/5 
   Calls: 
-Mcu_Config/8 (Mcu_Config) @06634bd0
+Mcu_Config/8 (Mcu_Config) @07293ca8
   Type: variable
   Body removed by symtab_remove_unreachable_nodes
   Visibility: external public
@@ -104,7 +104,7 @@ Mcu_Config/8 (Mcu_Config) @06634bd0
   Referring: MCU_clocks/5 (addr) 
   Availability: not_available
   Varpool flags: read-only
-Mcu_Init/7 (Mcu_Init) @06636700
+Mcu_Init/7 (Mcu_Init) @07291e00
   Type: function
   Visibility: external public
   References: 
@@ -113,7 +113,7 @@ Mcu_Init/7 (Mcu_Init) @06636700
   Function flags:
   Called by: MCU_clocks/5 
   Calls: 
-EcuM_Init/6 (EcuM_Init) @066362a0
+EcuM_Init/6 (EcuM_Init) @072919a0
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: Port_Config/14 (addr) Adc_Config/16 (addr) Pwm_Config/18 (addr) 
@@ -122,7 +122,7 @@ EcuM_Init/6 (EcuM_Init) @066362a0
   Function flags: body
   Called by: 
   Calls: Port_Ci_Port_Ip_SetMuxModeSel/19 Port_Ci_Port_Ip_SetMuxModeSel/19 Pwm_Init/17 Adc_Init/15 Port_Init/13 Platform_Init/12 OsIf_Init/11 MCU_clocks/5 
-MCU_clocks/5 (MCU_clocks) @06636000
+MCU_clocks/5 (MCU_clocks) @07291700
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: Mcu_Config/8 (addr) 

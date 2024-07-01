@@ -1,13 +1,13 @@
 Symbol table:
 
-PotsControl_Ptr/1 (PotsControl_Ptr) @0690c870
+PotsControl_Ptr/1 (PotsControl_Ptr) @0697a870
   Type: variable definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: PotsCtrl/0 (addr) 
   Referring: 
   Availability: available
   Varpool flags: initialized
-PotsCtrl/0 (PotsCtrl) @0690c828
+PotsCtrl/0 (PotsCtrl) @0697a828
   Type: variable definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: 

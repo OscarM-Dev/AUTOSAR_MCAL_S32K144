@@ -40,7 +40,9 @@ Build/obj/Mcu_Ipw.o: Autosar/Mcal/Mcu/src/Mcu_Ipw.c \
  Autosar/Mcal/Mcu/include/Mcu_EnvCfg.h \
  Autosar/Mcal/Mcu/include/Clock_Ip.h Build/cfg/include/Clock_Ip_Cfg.h \
  Autosar/Mcal/Mcu/include/Power_Ip.h Build/cfg/include/Power_Ip_Cfg.h \
- Autosar/Mcal/Mcu/include/Ram_Ip.h Build/cfg/include/Ram_Ip_Cfg.h
+ Autosar/Mcal/Mcu/include/Ram_Ip.h Build/cfg/include/Ram_Ip_Cfg.h \
+ Autosar/Det/include/Det.h Autosar/Mcal/Base/include/Std_Types.h \
+ Autosar/Mcal/Base/include/Det_MemMap.h
 Autosar/Mcal/Mcu/include/Mcu_Ipw.h:
 Autosar/Mcal/Mcu/include/Mcu_Ipw_Types.h:
 Build/cfg/include/Mcu_Cfg.h:
@@ -95,3 +97,6 @@ Autosar/Mcal/Mcu/include/Power_Ip.h:
 Build/cfg/include/Power_Ip_Cfg.h:
 Autosar/Mcal/Mcu/include/Ram_Ip.h:
 Build/cfg/include/Ram_Ip_Cfg.h:
+Autosar/Det/include/Det.h:
+Autosar/Mcal/Base/include/Std_Types.h:
+Autosar/Mcal/Base/include/Det_MemMap.h:

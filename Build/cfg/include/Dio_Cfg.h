@@ -100,14 +100,14 @@ extern "C" {
 *
 * @implements     DIO_DEV_ERROR_DETECT_define
 */
-#define DIO_DEV_ERROR_DETECT    (STD_OFF)
+#define DIO_DEV_ERROR_DETECT    (STD_ON)
 
 /**
 * @brief          Function @p Dio_GetVersionInfo() enable switch.
 *
 * @implements DIO_VERSION_INFO_API_define
 */
-#define DIO_VERSION_INFO_API    (STD_OFF)
+#define DIO_VERSION_INFO_API    (STD_ON)
 
 /**
 * @brief          Function @p Dio_FlipChannel() enable switch.

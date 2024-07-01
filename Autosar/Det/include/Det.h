@@ -87,6 +87,22 @@ extern "C"{
 /* Max numbers of ECU cores supported */
 #define DET_NO_ECU_CORES                        (uint8)(1U)
 
+//Configuration macros for the det functions.
+//General.
+#define DET_MODULES 6   ///< Number of modules used in aplication.
+
+//Mcu.
+#define DET_MCU_APIS 4   ///< Number of Apis used of the Mcu module.
+#define DET_MCU_ERRORS_M 4   ///< Number of errors meanings in the Mcu module.
+
+//Platform
+#define DET_PLATFORM_APIS 5 ///< Number of Apis used of the Platform module.
+#define DET_PLATFORM_ERRORS_M 3 ///< Number of error meanings in the Platform module.
+
+//Port
+#define DET_PORT_APIS 5 ///< Number of Apis used of the Port module.
+#define DET_PORT_ERRORS_M 6 ///< Number of error meanings in the Port module.
+
 /*==================================================================================================
 *                                             ENUMS
 ==================================================================================================*/
@@ -118,6 +134,9 @@ extern uint8 Det_TransientInstanceId[DET_NO_ECU_CORES];       /**< @brief DET in
 extern uint8 Det_TransientApiId[DET_NO_ECU_CORES];            /**< @brief DET API ID*/
 extern uint8 Det_TransientFaultId[DET_NO_ECU_CORES];          /**< @brief DET Error ID*/
 #define DET_STOP_SEC_VAR_CLEARED_8_NO_CACHEABLE
+
+extern char *ErrorString_Ptr[3];   //Array of pointers to strings for the error message.
+
 /*
  * @violates @ref Det_h_REF_1 Precautions shall be taken in order to prevent the contents of a header file being included more than once
  * @violates @ref Det_h_REF_2 #Include directives should only be preceded by preprocessor directives or comments
@@ -145,6 +164,11 @@ extern uint16 Det_RuntimeModuleId[DET_NO_ECU_CORES];       /**< @brief DET modul
 ==================================================================================================*/
 #define DET_START_SEC_CODE
 #include "Det_MemMap.h"
+
+//String functions.
+char* Det_GetModuleName( uint16 ModuleId );
+char* Det_GetApiName( uint16 ModuleId, uint8 ApiId );
+char* Det_GetErrorMeaning( uint16 ModuleId, uint8 ErrorId );
 
 void Det_Init(void);
 Std_ReturnType Det_ReportError(uint16 ModuleId,

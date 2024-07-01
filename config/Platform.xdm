@@ -23,8 +23,7 @@
                 <a:a name="IMPORTER_INFO" value="@DEF"/>
               </d:var>
               <d:ctr name="GeneralConfiguration" type="IDENTIFIABLE">
-                <d:var name="PlatformDevErrorDetect" type="BOOLEAN" 
-                       value="false"/>
+                <d:var name="PlatformDevErrorDetect" type="BOOLEAN" value="true"/>
                 <d:var name="PlatformMcmConfigurable" type="BOOLEAN" 
                        value="false">
                   <a:a name="IMPORTER_INFO" value="@DEF"/>

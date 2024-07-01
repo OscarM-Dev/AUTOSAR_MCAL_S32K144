@@ -1,7 +1,7 @@
 Pwm_Ipw_GetMaxPeriodValue (const struct Pwm_IpwChannelConfigType * const IpConfig)
 {
   uint32 RetVal;
-  uint32 D.5914;
+  uint32 D.5928;
   <unnamed type> _1;
   uint32 _7;
 
@@ -28,6 +28,41 @@ Pwm_Ipw_GetMaxPeriodValue (const struct Pwm_IpwChannelConfigType * const IpConfi
   <bb 6> :
 <L4>:
   return _7;
+
+}
+
+
+Pwm_Ipw_ValidateSetOutPutToIdle (const struct Pwm_IpwChannelConfigType * const IpConfig)
+{
+  Std_ReturnType RetVal;
+  Std_ReturnType D.5926;
+  <unnamed type> _1;
+  Std_ReturnType _8;
+
+  <bb 2> :
+  RetVal_3 = 0;
+  _1 = IpConfig_5(D)->ChannelType;
+  if (_1 == 1)
+    goto <bb 3>; [INV]
+  else
+    goto <bb 4>; [INV]
+
+  <bb 3> :
+<L0>:
+  RetVal_6 = 0;
+  goto <bb 5>; [INV]
+
+  <bb 4> :
+<L1>:
+  RetVal_7 = 1;
+
+  <bb 5> :
+  # RetVal_2 = PHI <RetVal_6(3), RetVal_7(4)>
+  _8 = RetVal_2;
+
+  <bb 6> :
+<L4>:
+  return _8;
 
 }
 
@@ -166,7 +201,7 @@ Pwm_Ipw_SetDutyCycle (uint16 DutyCycle, const struct Pwm_IpwChannelConfigType * 
 {
   uint16 FtmDutyCycle;
   Std_ReturnType RetVal;
-  Std_ReturnType D.5907;
+  Std_ReturnType D.5919;
   <unnamed type> _1;
   const struct Ftm_Pwm_Ip_ChannelConfigType * _2;
   unsigned char _3;

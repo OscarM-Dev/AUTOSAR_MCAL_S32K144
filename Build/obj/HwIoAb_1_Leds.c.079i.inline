@@ -24,7 +24,7 @@ IPA summary for HwIoAb_Leds_TurnOn/1 is missing.
 IPA summary for HwIoAb_Leds_Init/0 is missing.
 Symbol table:
 
-Dio_FlipChannel/6 (Dio_FlipChannel) @069589a0
+Dio_FlipChannel/6 (Dio_FlipChannel) @068b3a80
   Type: function
   Visibility: external public
   References: 
@@ -33,7 +33,7 @@ Dio_FlipChannel/6 (Dio_FlipChannel) @069589a0
   Function flags:
   Called by: HwIoAb_Leds_TurnToggle/3 
   Calls: 
-Dio_WriteChannel/5 (Dio_WriteChannel) @06958700
+Dio_WriteChannel/5 (Dio_WriteChannel) @068b37e0
   Type: function
   Visibility: external public
   References: 
@@ -42,7 +42,7 @@ Dio_WriteChannel/5 (Dio_WriteChannel) @06958700
   Function flags:
   Called by: HwIoAb_Leds_TurnOff/2 HwIoAb_Leds_TurnOn/1 
   Calls: 
-LedsControl_Ptr/4 (LedsControl_Ptr) @069563f0
+LedsControl_Ptr/4 (LedsControl_Ptr) @068b23f0
   Type: variable
   Body removed by symtab_remove_unreachable_nodes
   Visibility: external public
@@ -50,7 +50,7 @@ LedsControl_Ptr/4 (LedsControl_Ptr) @069563f0
   Referring: HwIoAb_Leds_TurnOn/1 (read) HwIoAb_Leds_TurnOn/1 (read) HwIoAb_Leds_Init/0 (read) HwIoAb_Leds_TurnOff/2 (read) HwIoAb_Leds_TurnOff/2 (read) HwIoAb_Leds_TurnOn/1 (read) HwIoAb_Leds_Init/0 (read) HwIoAb_Leds_TurnOff/2 (read) HwIoAb_Leds_TurnToggle/3 (read) HwIoAb_Leds_TurnToggle/3 (read) 
   Availability: not_available
   Varpool flags:
-HwIoAb_Leds_TurnToggle/3 (HwIoAb_Leds_TurnToggle) @069581c0
+HwIoAb_Leds_TurnToggle/3 (HwIoAb_Leds_TurnToggle) @068b32a0
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: LedsControl_Ptr/4 (read) LedsControl_Ptr/4 (read) 
@@ -59,7 +59,7 @@ HwIoAb_Leds_TurnToggle/3 (HwIoAb_Leds_TurnToggle) @069581c0
   Function flags: body
   Called by: 
   Calls: Dio_FlipChannel/6 
-HwIoAb_Leds_TurnOff/2 (HwIoAb_Leds_TurnOff) @06906d20
+HwIoAb_Leds_TurnOff/2 (HwIoAb_Leds_TurnOff) @068b3000
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: LedsControl_Ptr/4 (read) LedsControl_Ptr/4 (read) LedsControl_Ptr/4 (read) 
@@ -68,7 +68,7 @@ HwIoAb_Leds_TurnOff/2 (HwIoAb_Leds_TurnOff) @06906d20
   Function flags: body
   Called by: 
   Calls: Dio_WriteChannel/5 
-HwIoAb_Leds_TurnOn/1 (HwIoAb_Leds_TurnOn) @06906700
+HwIoAb_Leds_TurnOn/1 (HwIoAb_Leds_TurnOn) @068d87e0
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: LedsControl_Ptr/4 (read) LedsControl_Ptr/4 (read) LedsControl_Ptr/4 (read) 
@@ -77,7 +77,7 @@ HwIoAb_Leds_TurnOn/1 (HwIoAb_Leds_TurnOn) @06906700
   Function flags: body
   Called by: 
   Calls: Dio_WriteChannel/5 
-HwIoAb_Leds_Init/0 (HwIoAb_Leds_Init) @06906ee0
+HwIoAb_Leds_Init/0 (HwIoAb_Leds_Init) @068d8620
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: LedsControl_Ptr/4 (read) LedsControl_Ptr/4 (read) 
@@ -87,7 +87,7 @@ HwIoAb_Leds_Init/0 (HwIoAb_Leds_Init) @06906ee0
   Called by: 
   Calls: 
 
-;; Function HwIoAb_Leds_Init (HwIoAb_Leds_Init, funcdef_no=0, decl_uid=5408, cgraph_uid=1, symbol_order=0)
+;; Function HwIoAb_Leds_Init (HwIoAb_Leds_Init, funcdef_no=0, decl_uid=5410, cgraph_uid=1, symbol_order=0)
 
 HwIoAb_Leds_Init (const struct HwIoAb_Leds_Config * Leds_Config)
 {
@@ -105,7 +105,7 @@ HwIoAb_Leds_Init (const struct HwIoAb_Leds_Config * Leds_Config)
 
 
 
-;; Function HwIoAb_Leds_TurnOn (HwIoAb_Leds_TurnOn, funcdef_no=1, decl_uid=5410, cgraph_uid=2, symbol_order=1)
+;; Function HwIoAb_Leds_TurnOn (HwIoAb_Leds_TurnOn, funcdef_no=1, decl_uid=5412, cgraph_uid=2, symbol_order=1)
 
 HwIoAb_Leds_TurnOn (uint8 Led)
 {
@@ -172,7 +172,7 @@ HwIoAb_Leds_TurnOn (uint8 Led)
 
 
 
-;; Function HwIoAb_Leds_TurnOff (HwIoAb_Leds_TurnOff, funcdef_no=2, decl_uid=5412, cgraph_uid=3, symbol_order=2)
+;; Function HwIoAb_Leds_TurnOff (HwIoAb_Leds_TurnOff, funcdef_no=2, decl_uid=5414, cgraph_uid=3, symbol_order=2)
 
 HwIoAb_Leds_TurnOff (uint8 Led)
 {
@@ -241,7 +241,7 @@ HwIoAb_Leds_TurnOff (uint8 Led)
 
 
 
-;; Function HwIoAb_Leds_TurnToggle (HwIoAb_Leds_TurnToggle, funcdef_no=3, decl_uid=5414, cgraph_uid=4, symbol_order=3)
+;; Function HwIoAb_Leds_TurnToggle (HwIoAb_Leds_TurnToggle, funcdef_no=3, decl_uid=5416, cgraph_uid=4, symbol_order=3)
 
 HwIoAb_Leds_TurnToggle (uint8 Led)
 {

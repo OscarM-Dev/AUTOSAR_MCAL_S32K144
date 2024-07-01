@@ -2,7 +2,7 @@ Det_TestNoTransientFault ()
 {
   uint32 u32CoreId;
   boolean result;
-  boolean D.5510;
+  boolean D.5519;
   int iftmp.5;
   unsigned char _1;
   short unsigned int _2;
@@ -80,7 +80,7 @@ Det_TestNoRuntimeError ()
 {
   uint32 u32CoreId;
   boolean result;
-  boolean D.5501;
+  boolean D.5510;
   int iftmp.4;
   unsigned char _1;
   short unsigned int _2;
@@ -158,7 +158,7 @@ Det_TestNoError ()
 {
   uint32 u32CoreId;
   boolean result;
-  boolean D.5492;
+  boolean D.5501;
   int iftmp.3;
   unsigned char _1;
   short unsigned int _2;
@@ -236,7 +236,7 @@ Det_TestLastReportTransientFault (uint16 ModuleId, uint8 InstanceId, uint8 ApiId
 {
   uint32 u32CoreId;
   boolean result;
-  boolean D.5483;
+  boolean D.5492;
   int iftmp.2;
   unsigned char _1;
   short unsigned int _2;
@@ -306,7 +306,7 @@ Det_TestLastReportRuntimeError (uint16 ModuleId, uint8 InstanceId, uint8 ApiId, 
 {
   uint32 u32CoreId;
   boolean result;
-  boolean D.5474;
+  boolean D.5483;
   int iftmp.1;
   unsigned char _1;
   short unsigned int _2;
@@ -376,7 +376,7 @@ Det_TestLastReportError (uint16 ModuleId, uint8 InstanceId, uint8 ApiId, uint8 E
 {
   uint32 u32CoreId;
   boolean result;
-  boolean D.5465;
+  boolean D.5474;
   int iftmp.0;
   unsigned char _1;
   short unsigned int _2;

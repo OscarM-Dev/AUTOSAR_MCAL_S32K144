@@ -1,8 +1,8 @@
 
-Marking local functions: Pwm_GetPartitionChannelIdx/2
+Marking local functions: Pwm_ValidateSetOutPutToIdle/10 Pwm_ValidateParamsPeriodClass/9 Pwm_ValidateParamDuty/8 Pwm_ValidateParamPtrInit/7 Pwm_EndValidateChannelConfigCall/6 Pwm_ValidateChannelConfigCall/5 Pwm_EndValidateGlobalConfigCall/4 Pwm_GetPartitionChannelIdx/2
 
 
-Marking externally visible functions: Pwm_SetOutputToIdle/7 Pwm_SetPeriodAndDuty/6 Pwm_SetDutyCycle/5 Pwm_DeInit/4 Pwm_Init/3
+Marking externally visible functions: Pwm_GetVersionInfo/16 Pwm_SetOutputToIdle/15 Pwm_SetPeriodAndDuty/14 Pwm_SetDutyCycle/13 Pwm_DeInit/12 Pwm_Init/11
 
 
 Marking externally visible variables:
@@ -13,70 +13,106 @@ Reclaiming variables:
 Clearing address taken flags:
 Symbol table:
 
-Pwm_Ipw_SetOutputToIdle/14 (Pwm_Ipw_SetOutputToIdle) @06bd79a0
+Pwm_Ipw_ValidateSetOutPutToIdle/26 (Pwm_Ipw_ValidateSetOutPutToIdle) @06aa50e0
   Type: function
   Visibility: external public
   References: 
   Referring: 
   Availability: not_available
   Function flags:
-  Called by: Pwm_SetOutputToIdle/7 
+  Called by: Pwm_ValidateSetOutPutToIdle/10 
   Calls: 
-Pwm_Ipw_SetPeriodAndDuty/13 (Pwm_Ipw_SetPeriodAndDuty) @06bd77e0
+Pwm_Ipw_SetOutputToIdle/25 (Pwm_Ipw_SetOutputToIdle) @064e2ee0
   Type: function
   Visibility: external public
   References: 
   Referring: 
   Availability: not_available
   Function flags:
-  Called by: Pwm_SetPeriodAndDuty/6 
+  Called by: Pwm_SetOutputToIdle/15 
   Calls: 
-Pwm_Ipw_SetDutyCycle/12 (Pwm_Ipw_SetDutyCycle) @06bd7540
+Pwm_Ipw_GetMaxPeriodValue/24 (Pwm_Ipw_GetMaxPeriodValue) @064e2d20
   Type: function
   Visibility: external public
   References: 
   Referring: 
   Availability: not_available
   Function flags:
-  Called by: Pwm_SetDutyCycle/5 
+  Called by: Pwm_ValidateParamsPeriodClass/9 
   Calls: 
-Pwm_Ipw_DeInitInstance/11 (Pwm_Ipw_DeInitInstance) @06bd72a0
+Pwm_Ipw_SetPeriodAndDuty/23 (Pwm_Ipw_SetPeriodAndDuty) @064e2b60
   Type: function
   Visibility: external public
   References: 
   Referring: 
   Availability: not_available
   Function flags:
-  Called by: Pwm_DeInit/4 
+  Called by: Pwm_SetPeriodAndDuty/14 
   Calls: 
-Pwm_Ipw_DeInit/10 (Pwm_Ipw_DeInit) @06bd71c0
+Pwm_Ipw_SetDutyCycle/22 (Pwm_Ipw_SetDutyCycle) @064e2620
   Type: function
   Visibility: external public
   References: 
   Referring: 
   Availability: not_available
   Function flags:
-  Called by: Pwm_DeInit/4 
+  Called by: Pwm_SetDutyCycle/13 
   Calls: 
-Pwm_Ipw_Init/9 (Pwm_Ipw_Init) @06bd7000
+Pwm_Ipw_DeInitInstance/21 (Pwm_Ipw_DeInitInstance) @064e2380
   Type: function
   Visibility: external public
   References: 
   Referring: 
   Availability: not_available
   Function flags:
-  Called by: Pwm_Init/3 
+  Called by: Pwm_DeInit/12 
   Calls: 
-Pwm_Ipw_InitInstance/8 (Pwm_Ipw_InitInstance) @0695aa80
+Pwm_Ipw_DeInit/20 (Pwm_Ipw_DeInit) @064e22a0
   Type: function
   Visibility: external public
   References: 
   Referring: 
   Availability: not_available
   Function flags:
-  Called by: Pwm_Init/3 
+  Called by: Pwm_DeInit/12 
   Calls: 
-Pwm_SetOutputToIdle/7 (Pwm_SetOutputToIdle) @0695aee0
+Pwm_Ipw_Init/19 (Pwm_Ipw_Init) @06a998c0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: Pwm_Init/11 
+  Calls: 
+Pwm_Ipw_InitInstance/18 (Pwm_Ipw_InitInstance) @06a99380
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: Pwm_Init/11 
+  Calls: 
+Det_ReportError/17 (Det_ReportError) @06a99ee0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: Pwm_GetVersionInfo/16 Pwm_ValidateSetOutPutToIdle/10 Pwm_ValidateParamsPeriodClass/9 Pwm_ValidateParamsPeriodClass/9 Pwm_ValidateParamDuty/8 Pwm_ValidateChannelConfigCall/5 Pwm_ValidateChannelConfigCall/5 Pwm_ValidateChannelConfigCall/5 Pwm_SetDutyCycle/13 Pwm_ValidateParamPtrInit/7 Pwm_ValidateGlobalConfigCall/3 Pwm_ValidateGlobalConfigCall/3 
+  Calls: 
+Pwm_GetVersionInfo/16 (Pwm_GetVersionInfo) @06a99a80
+  Type: function definition analyzed
+  Visibility: force_output externally_visible no_reorder public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: body
+  Called by: 
+  Calls: Det_ReportError/17 
+Pwm_SetOutputToIdle/15 (Pwm_SetOutputToIdle) @06a997e0
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: Pwm_aState/1 (read) Pwm_aState/1 (read) Pwm_aState/1 (write) 
@@ -84,8 +120,17 @@ Pwm_SetOutputToIdle/7 (Pwm_SetOutputToIdle) @0695aee0
   Availability: available
   Function flags: body
   Called by: 
-  Calls: Pwm_Ipw_SetOutputToIdle/14 Pwm_GetPartitionChannelIdx/2 
-Pwm_SetPeriodAndDuty/6 (Pwm_SetPeriodAndDuty) @0695ac40
+  Calls: Pwm_EndValidateChannelConfigCall/6 Pwm_Ipw_SetOutputToIdle/25 Pwm_ValidateSetOutPutToIdle/10 Pwm_GetPartitionChannelIdx/2 Pwm_ValidateChannelConfigCall/5 
+Pwm_SetPeriodAndDuty/14 (Pwm_SetPeriodAndDuty) @06a99540
+  Type: function definition analyzed
+  Visibility: force_output externally_visible no_reorder public
+  References: Pwm_aState/1 (read) Pwm_aState/1 (read) 
+  Referring: 
+  Availability: available
+  Function flags: body
+  Called by: 
+  Calls: Pwm_EndValidateChannelConfigCall/6 Pwm_Ipw_SetPeriodAndDuty/23 Pwm_ValidateParamDuty/8 Pwm_ValidateParamsPeriodClass/9 Pwm_GetPartitionChannelIdx/2 Pwm_ValidateChannelConfigCall/5 
+Pwm_SetDutyCycle/13 (Pwm_SetDutyCycle) @06a992a0
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: Pwm_aState/1 (read) 
@@ -93,17 +138,8 @@ Pwm_SetPeriodAndDuty/6 (Pwm_SetPeriodAndDuty) @0695ac40
   Availability: available
   Function flags: body
   Called by: 
-  Calls: Pwm_Ipw_SetPeriodAndDuty/13 Pwm_GetPartitionChannelIdx/2 
-Pwm_SetDutyCycle/5 (Pwm_SetDutyCycle) @0695a9a0
-  Type: function definition analyzed
-  Visibility: force_output externally_visible no_reorder public
-  References: Pwm_aState/1 (read) 
-  Referring: 
-  Availability: available
-  Function flags: body
-  Called by: 
-  Calls: Pwm_Ipw_SetDutyCycle/12 Pwm_GetPartitionChannelIdx/2 
-Pwm_DeInit/4 (Pwm_DeInit) @0695a700
+  Calls: Pwm_EndValidateChannelConfigCall/6 Det_ReportError/17 Pwm_Ipw_SetDutyCycle/22 Pwm_ValidateParamDuty/8 Pwm_GetPartitionChannelIdx/2 Pwm_ValidateChannelConfigCall/5 
+Pwm_DeInit/12 (Pwm_DeInit) @06a99000
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: Pwm_aState/1 (read) Pwm_aState/1 (read) Pwm_aState/1 (read) Pwm_aState/1 (read) Pwm_aState/1 (read) Pwm_aState/1 (write) Pwm_aState/1 (write) 
@@ -111,8 +147,8 @@ Pwm_DeInit/4 (Pwm_DeInit) @0695a700
   Availability: available
   Function flags: body
   Called by: 
-  Calls: Pwm_Ipw_DeInitInstance/11 Pwm_Ipw_DeInit/10 
-Pwm_Init/3 (Pwm_Init) @0695a460
+  Calls: Pwm_EndValidateGlobalConfigCall/4 Pwm_Ipw_DeInitInstance/21 Pwm_Ipw_DeInit/20 Pwm_ValidateGlobalConfigCall/3 
+Pwm_Init/11 (Pwm_Init) @06b33b60
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: Pwm_aState/1 (write) Pwm_aState/1 (read) Pwm_aState/1 (read) Pwm_aState/1 (read) Pwm_aState/1 (write) Pwm_aState/1 (read) Pwm_aState/1 (read) 
@@ -120,23 +156,120 @@ Pwm_Init/3 (Pwm_Init) @0695a460
   Availability: available
   Function flags: body
   Called by: 
-  Calls: Pwm_Ipw_Init/9 Pwm_Ipw_InitInstance/8 
-Pwm_GetPartitionChannelIdx/2 (Pwm_GetPartitionChannelIdx) @0695a1c0
+  Calls: Pwm_EndValidateGlobalConfigCall/4 Pwm_Ipw_Init/19 Pwm_Ipw_InitInstance/18 Pwm_ValidateParamPtrInit/7 Pwm_ValidateGlobalConfigCall/3 
+Pwm_ValidateSetOutPutToIdle/10 (Pwm_ValidateSetOutPutToIdle) @06b33620
+  Type: function definition analyzed
+  Visibility: no_reorder prevailing_def_ironly
+  References: Pwm_aState/1 (read) 
+  Referring: 
+  Availability: local
+  Function flags: body local
+  Called by: Pwm_SetOutputToIdle/15 
+  Calls: Det_ReportError/17 Pwm_Ipw_ValidateSetOutPutToIdle/26 
+Pwm_ValidateParamsPeriodClass/9 (Pwm_ValidateParamsPeriodClass) @06b330e0
+  Type: function definition analyzed
+  Visibility: no_reorder prevailing_def_ironly
+  References: Pwm_aState/1 (read) 
+  Referring: 
+  Availability: local
+  Function flags: body local
+  Called by: Pwm_SetPeriodAndDuty/14 
+  Calls: Det_ReportError/17 Pwm_Ipw_GetMaxPeriodValue/24 Det_ReportError/17 
+Pwm_ValidateParamDuty/8 (Pwm_ValidateParamDuty) @06b33d20
   Type: function definition analyzed
   Visibility: no_reorder prevailing_def_ironly
   References: 
   Referring: 
   Availability: local
   Function flags: body local
-  Called by: Pwm_SetOutputToIdle/7 Pwm_SetPeriodAndDuty/6 Pwm_SetDutyCycle/5 
+  Called by: Pwm_SetPeriodAndDuty/14 Pwm_SetDutyCycle/13 
+  Calls: Det_ReportError/17 
+Pwm_ValidateParamPtrInit/7 (Pwm_ValidateParamPtrInit) @06b33a80
+  Type: function definition analyzed
+  Visibility: no_reorder prevailing_def_ironly
+  References: 
+  Referring: 
+  Availability: local
+  Function flags: body local
+  Called by: Pwm_Init/11 
+  Calls: Det_ReportError/17 
+Pwm_EndValidateChannelConfigCall/6 (Pwm_EndValidateChannelConfigCall) @06b337e0
+  Type: function definition analyzed
+  Visibility: no_reorder prevailing_def_ironly
+  References: 
+  Referring: 
+  Availability: local
+  Function flags: body local
+  Called by: Pwm_SetOutputToIdle/15 Pwm_SetPeriodAndDuty/14 Pwm_SetDutyCycle/13 
   Calls: 
-Pwm_aState/1 (Pwm_aState) @06954558
+Pwm_ValidateChannelConfigCall/5 (Pwm_ValidateChannelConfigCall) @06b33540
+  Type: function definition analyzed
+  Visibility: no_reorder prevailing_def_ironly
+  References: Pwm_aState/1 (read) Pwm_aState/1 (read) 
+  Referring: 
+  Availability: local
+  Function flags: body local
+  Called by: Pwm_SetOutputToIdle/15 Pwm_SetPeriodAndDuty/14 Pwm_SetDutyCycle/13 
+  Calls: Det_ReportError/17 Pwm_GetPartitionChannelIdx/2 Det_ReportError/17 Det_ReportError/17 
+Pwm_EndValidateGlobalConfigCall/4 (Pwm_EndValidateGlobalConfigCall) @06b332a0
+  Type: function definition analyzed
+  Visibility: no_reorder prevailing_def_ironly
+  References: Pwm_aState/1 (write) Pwm_aState/1 (write) 
+  Referring: 
+  Availability: local
+  Function flags: body local
+  Called by: Pwm_DeInit/12 Pwm_Init/11 
+  Calls: 
+Pwm_ValidateGlobalConfigCall/3 (Pwm_ValidateGlobalConfigCall) @06b33000
+  Type: function definition analyzed
+  Visibility: force_output no_reorder prevailing_def_ironly
+  References: Pwm_aState/1 (read) 
+  Referring: 
+  Availability: available
+  Function flags: body
+  Called by: Pwm_DeInit/12 Pwm_Init/11 
+  Calls: Det_ReportError/17 Det_ReportError/17 
+Pwm_GetPartitionChannelIdx/2 (Pwm_GetPartitionChannelIdx) @06b2bee0
+  Type: function definition analyzed
+  Visibility: no_reorder prevailing_def_ironly
+  References: 
+  Referring: 
+  Availability: local
+  Function flags: body local
+  Called by: Pwm_SetOutputToIdle/15 Pwm_SetPeriodAndDuty/14 Pwm_ValidateChannelConfigCall/5 Pwm_SetDutyCycle/13 
+  Calls: 
+Pwm_aState/1 (Pwm_aState) @06b2a558
   Type: variable definition analyzed
   Visibility: force_output no_reorder prevailing_def_ironly
   References: 
-  Referring: Pwm_Init/3 (write) Pwm_Init/3 (read) Pwm_Init/3 (read) Pwm_Init/3 (read) Pwm_Init/3 (write) Pwm_Init/3 (read) Pwm_Init/3 (read) Pwm_DeInit/4 (read) Pwm_DeInit/4 (read) Pwm_DeInit/4 (read) Pwm_DeInit/4 (read) Pwm_DeInit/4 (read) Pwm_DeInit/4 (write) Pwm_DeInit/4 (write) Pwm_SetDutyCycle/5 (read) Pwm_SetPeriodAndDuty/6 (read) Pwm_SetOutputToIdle/7 (read) Pwm_SetOutputToIdle/7 (read) Pwm_SetOutputToIdle/7 (write) 
+  Referring: Pwm_ValidateGlobalConfigCall/3 (read) Pwm_Init/11 (write) Pwm_Init/11 (read) Pwm_Init/11 (read) Pwm_Init/11 (read) Pwm_Init/11 (write) Pwm_Init/11 (read) Pwm_Init/11 (read) Pwm_EndValidateGlobalConfigCall/4 (write) Pwm_EndValidateGlobalConfigCall/4 (write) Pwm_DeInit/12 (read) Pwm_DeInit/12 (read) Pwm_DeInit/12 (read) Pwm_DeInit/12 (read) Pwm_DeInit/12 (read) Pwm_DeInit/12 (write) Pwm_DeInit/12 (write) Pwm_SetDutyCycle/13 (read) Pwm_ValidateChannelConfigCall/5 (read) Pwm_ValidateChannelConfigCall/5 (read) Pwm_SetPeriodAndDuty/14 (read) Pwm_SetPeriodAndDuty/14 (read) Pwm_ValidateParamsPeriodClass/9 (read) Pwm_SetOutputToIdle/15 (read) Pwm_SetOutputToIdle/15 (read) Pwm_SetOutputToIdle/15 (write) Pwm_ValidateSetOutPutToIdle/10 (read) 
   Availability: available
   Varpool flags: initialized
+Pwm_GetVersionInfo (struct Std_VersionInfoType * versioninfo)
+{
+  <bb 2> :
+  if (versioninfo != 0B)
+    goto <bb 3>; [INV]
+  else
+    goto <bb 4>; [INV]
+
+  <bb 3> :
+  versioninfo->vendorID = 43;
+  versioninfo->moduleID = 121;
+  versioninfo->sw_major_version = 2;
+  versioninfo->sw_minor_version = 0;
+  versioninfo->sw_patch_version = 0;
+  goto <bb 5>; [INV]
+
+  <bb 4> :
+  Det_ReportError (121, 0, 8, 21);
+
+  <bb 5> :
+  return;
+
+}
+
+
 Pwm_SetOutputToIdle (Pwm_ChannelType ChannelNumber)
 {
   Pwm_ChannelType PartitionChannelIdx;
@@ -144,20 +277,37 @@ Pwm_SetOutputToIdle (Pwm_ChannelType ChannelNumber)
 
   <bb 2> :
   CoreId = 0;
+  _1 = Pwm_ValidateChannelConfigCall (CoreId, ChannelNumber, 4);
+  if (_1 == 0)
+    goto <bb 3>; [INV]
+  else
+    goto <bb 5>; [INV]
+
+  <bb 3> :
   PartitionChannelIdx = Pwm_GetPartitionChannelIdx (CoreId, ChannelNumber);
-  _1 = Pwm_aState[CoreId].PwmChannelConfigs[0];
-  _2 = (unsigned int) PartitionChannelIdx;
-  _3 = _2 * 24;
-  _4 = _1 + _3;
-  _5 = _4->ChannelIdleState;
-  _6 = Pwm_aState[CoreId].PwmChannelConfigs[0];
-  _7 = (unsigned int) PartitionChannelIdx;
-  _8 = _7 * 24;
-  _9 = _6 + _8;
-  _10 = &_9->IpwChannelCfg;
-  Pwm_Ipw_SetOutputToIdle (_5, _10);
-  _11 = (int) PartitionChannelIdx;
-  Pwm_aState[CoreId].PwmChannelIdleState[_11] = 1;
+  _2 = Pwm_ValidateSetOutPutToIdle (CoreId, PartitionChannelIdx);
+  if (_2 == 0)
+    goto <bb 4>; [INV]
+  else
+    goto <bb 5>; [INV]
+
+  <bb 4> :
+  _3 = Pwm_aState[CoreId].PwmChannelConfigs[0];
+  _4 = (unsigned int) PartitionChannelIdx;
+  _5 = _4 * 24;
+  _6 = _3 + _5;
+  _7 = _6->ChannelIdleState;
+  _8 = Pwm_aState[CoreId].PwmChannelConfigs[0];
+  _9 = (unsigned int) PartitionChannelIdx;
+  _10 = _9 * 24;
+  _11 = _8 + _10;
+  _12 = &_11->IpwChannelCfg;
+  Pwm_Ipw_SetOutputToIdle (_7, _12);
+  _13 = (int) PartitionChannelIdx;
+  Pwm_aState[CoreId].PwmChannelIdleState[_13] = 1;
+
+  <bb 5> :
+  Pwm_EndValidateChannelConfigCall (ChannelNumber);
   return;
 
 }
@@ -170,13 +320,42 @@ Pwm_SetPeriodAndDuty (Pwm_ChannelType ChannelNumber, Pwm_PeriodType Period, uint
 
   <bb 2> :
   CoreId = 0;
+  _1 = Pwm_ValidateChannelConfigCall (CoreId, ChannelNumber, 3);
+  if (_1 == 0)
+    goto <bb 3>; [INV]
+  else
+    goto <bb 6>; [INV]
+
+  <bb 3> :
   PartitionChannelIdx = Pwm_GetPartitionChannelIdx (CoreId, ChannelNumber);
-  _1 = Pwm_aState[CoreId].PwmChannelConfigs[0];
-  _2 = (unsigned int) PartitionChannelIdx;
-  _3 = _2 * 24;
-  _4 = _1 + _3;
-  _5 = &_4->IpwChannelCfg;
-  Pwm_Ipw_SetPeriodAndDuty (Period, DutyCycle, _5);
+  _2 = Pwm_aState[CoreId].PwmChannelConfigs[0];
+  _3 = (unsigned int) PartitionChannelIdx;
+  _4 = _3 * 24;
+  _5 = _2 + _4;
+  _6 = _5->PwmChannelClass;
+  _7 = Pwm_ValidateParamsPeriodClass (CoreId, PartitionChannelIdx, _6, Period, 3);
+  if (_7 == 0)
+    goto <bb 4>; [INV]
+  else
+    goto <bb 6>; [INV]
+
+  <bb 4> :
+  _8 = Pwm_ValidateParamDuty (DutyCycle, 3);
+  if (_8 == 0)
+    goto <bb 5>; [INV]
+  else
+    goto <bb 6>; [INV]
+
+  <bb 5> :
+  _9 = Pwm_aState[CoreId].PwmChannelConfigs[0];
+  _10 = (unsigned int) PartitionChannelIdx;
+  _11 = _10 * 24;
+  _12 = _9 + _11;
+  _13 = &_12->IpwChannelCfg;
+  Pwm_Ipw_SetPeriodAndDuty (Period, DutyCycle, _13);
+
+  <bb 6> :
+  Pwm_EndValidateChannelConfigCall (ChannelNumber);
   return;
 
 }
@@ -191,13 +370,37 @@ Pwm_SetDutyCycle (Pwm_ChannelType ChannelNumber, uint16 DutyCycle)
   <bb 2> :
   RetVal = 0;
   CoreId = 0;
+  _1 = Pwm_ValidateChannelConfigCall (CoreId, ChannelNumber, 2);
+  if (_1 == 0)
+    goto <bb 3>; [INV]
+  else
+    goto <bb 6>; [INV]
+
+  <bb 3> :
   PartitionChannelIdx = Pwm_GetPartitionChannelIdx (CoreId, ChannelNumber);
-  _1 = Pwm_aState[CoreId].PwmChannelConfigs[0];
-  _2 = (unsigned int) PartitionChannelIdx;
-  _3 = _2 * 24;
-  _4 = _1 + _3;
-  _5 = &_4->IpwChannelCfg;
-  RetVal = Pwm_Ipw_SetDutyCycle (DutyCycle, _5);
+  _2 = Pwm_ValidateParamDuty (DutyCycle, 2);
+  if (_2 == 0)
+    goto <bb 4>; [INV]
+  else
+    goto <bb 6>; [INV]
+
+  <bb 4> :
+  _3 = Pwm_aState[CoreId].PwmChannelConfigs[0];
+  _4 = (unsigned int) PartitionChannelIdx;
+  _5 = _4 * 24;
+  _6 = _3 + _5;
+  _7 = &_6->IpwChannelCfg;
+  RetVal = Pwm_Ipw_SetDutyCycle (DutyCycle, _7);
+  if (RetVal != 0)
+    goto <bb 5>; [INV]
+  else
+    goto <bb 6>; [INV]
+
+  <bb 5> :
+  Det_ReportError (121, 0, 2, 52);
+
+  <bb 6> :
+  Pwm_EndValidateChannelConfigCall (ChannelNumber);
   return;
 
 }
@@ -208,13 +411,21 @@ Pwm_DeInit ()
   uint8 Index;
   uint32 CoreId;
   const struct Pwm_ConfigType * ConfigPtr;
+  Std_ReturnType CallIsValid;
 
   <bb 2> :
   CoreId = 0;
-  Index = 0;
-  goto <bb 4>; [INV]
+  CallIsValid = Pwm_ValidateGlobalConfigCall (CoreId, 1);
+  if (CallIsValid == 0)
+    goto <bb 3>; [INV]
+  else
+    goto <bb 12>; [INV]
 
   <bb 3> :
+  Index = 0;
+  goto <bb 5>; [INV]
+
+  <bb 4> :
   _1 = Pwm_aState[CoreId].PwmChannelConfigs[0];
   _2 = (unsigned int) Index;
   _3 = _2 * 24;
@@ -229,20 +440,20 @@ Pwm_DeInit ()
   Index.2_11 = Index;
   Index = Index.2_11 + 1;
 
-  <bb 4> :
+  <bb 5> :
   _12 = Pwm_aState[CoreId].PwmConfig;
   _13 = _12->NumChannels;
   if (Index < _13)
-    goto <bb 3>; [INV]
+    goto <bb 4>; [INV]
   else
-    goto <bb 5>; [INV]
-
-  <bb 5> :
-  ConfigPtr = Pwm_aState[CoreId].PwmConfig;
-  Index = 0;
-  goto <bb 7>; [INV]
+    goto <bb 6>; [INV]
 
   <bb 6> :
+  ConfigPtr = Pwm_aState[CoreId].PwmConfig;
+  Index = 0;
+  goto <bb 8>; [INV]
+
+  <bb 7> :
   _14 = ConfigPtr->PwmInstancesConfig;
   _15 = (int) Index;
   _16 = &(*_14)[_15];
@@ -250,32 +461,33 @@ Pwm_DeInit ()
   Index.3_17 = Index;
   Index = Index.3_17 + 1;
 
-  <bb 7> :
+  <bb 8> :
   _18 = Pwm_aState[CoreId].PwmConfig;
   _19 = _18->NumInstances;
   if (Index < _19)
-    goto <bb 6>; [INV]
+    goto <bb 7>; [INV]
   else
-    goto <bb 8>; [INV]
-
-  <bb 8> :
-  Pwm_aState[CoreId].PwmConfig = 0B;
-  Index = 0;
-  goto <bb 10>; [INV]
+    goto <bb 9>; [INV]
 
   <bb 9> :
+  Pwm_aState[CoreId].PwmConfig = 0B;
+  Index = 0;
+  goto <bb 11>; [INV]
+
+  <bb 10> :
   _20 = (int) Index;
   Pwm_aState[CoreId].PwmChannelConfigs[_20] = 0B;
   Index.4_21 = Index;
   Index = Index.4_21 + 1;
 
-  <bb 10> :
-  if (Index == 0)
-    goto <bb 9>; [INV]
-  else
-    goto <bb 11>; [INV]
-
   <bb 11> :
+  if (Index == 0)
+    goto <bb 10>; [INV]
+  else
+    goto <bb 12>; [INV]
+
+  <bb 12> :
+  Pwm_EndValidateGlobalConfigCall (CoreId, CallIsValid, 1);
   return;
 
 }
@@ -285,14 +497,29 @@ Pwm_Init (const struct Pwm_ConfigType * ConfigPtr)
 {
   uint8 Index;
   uint32 CoreId;
+  Std_ReturnType CallIsValid;
 
   <bb 2> :
   CoreId = 0;
-  Pwm_aState[CoreId].PwmConfig = ConfigPtr;
-  Index = 0;
-  goto <bb 4>; [INV]
+  CallIsValid = Pwm_ValidateGlobalConfigCall (CoreId, 0);
+  if (CallIsValid == 0)
+    goto <bb 3>; [INV]
+  else
+    goto <bb 10>; [INV]
 
   <bb 3> :
+  CallIsValid = Pwm_ValidateParamPtrInit (CoreId, ConfigPtr);
+  if (CallIsValid == 0)
+    goto <bb 4>; [INV]
+  else
+    goto <bb 10>; [INV]
+
+  <bb 4> :
+  Pwm_aState[CoreId].PwmConfig = ConfigPtr;
+  Index = 0;
+  goto <bb 6>; [INV]
+
+  <bb 5> :
   _1 = Pwm_aState[CoreId].PwmConfig;
   _2 = _1->PwmInstancesConfig;
   _3 = (int) Index;
@@ -301,19 +528,19 @@ Pwm_Init (const struct Pwm_ConfigType * ConfigPtr)
   Index.0_5 = Index;
   Index = Index.0_5 + 1;
 
-  <bb 4> :
+  <bb 6> :
   _6 = Pwm_aState[CoreId].PwmConfig;
   _7 = _6->NumInstances;
   if (Index < _7)
-    goto <bb 3>; [INV]
-  else
     goto <bb 5>; [INV]
+  else
+    goto <bb 7>; [INV]
 
-  <bb 5> :
+  <bb 7> :
   Index = 0;
-  goto <bb 7>; [INV]
+  goto <bb 9>; [INV]
 
-  <bb 6> :
+  <bb 8> :
   _8 = Pwm_aState[CoreId].PwmConfig;
   _9 = _8->PwmChannelsConfig;
   _10 = (int) Index;
@@ -328,30 +555,292 @@ Pwm_Init (const struct Pwm_ConfigType * ConfigPtr)
   Index.1_17 = Index;
   Index = Index.1_17 + 1;
 
-  <bb 7> :
+  <bb 9> :
   _18 = Pwm_aState[CoreId].PwmConfig;
   _19 = _18->NumChannels;
   if (Index < _19)
+    goto <bb 8>; [INV]
+  else
+    goto <bb 10>; [INV]
+
+  <bb 10> :
+  Pwm_EndValidateGlobalConfigCall (CoreId, CallIsValid, 0);
+  return;
+
+}
+
+
+Pwm_ValidateSetOutPutToIdle (uint32 CoreId, Pwm_ChannelType ChannelNumber)
+{
+  Std_ReturnType RetVal;
+  Std_ReturnType D.6217;
+
+  <bb 2> :
+  RetVal = 0;
+  _1 = Pwm_aState[CoreId].PwmChannelConfigs[0];
+  _2 = (unsigned int) ChannelNumber;
+  _3 = _2 * 24;
+  _4 = _1 + _3;
+  _5 = &_4->IpwChannelCfg;
+  RetVal = Pwm_Ipw_ValidateSetOutPutToIdle (_5);
+  if (RetVal != 0)
+    goto <bb 3>; [INV]
+  else
+    goto <bb 4>; [INV]
+
+  <bb 3> :
+  Det_ReportError (121, 0, 4, 66);
+
+  <bb 4> :
+  D.6217 = RetVal;
+
+  <bb 5> :
+<L2>:
+  return D.6217;
+
+}
+
+
+Pwm_ValidateParamsPeriodClass (uint32 CoreId, Pwm_ChannelType ChannelNumber, Pwm_ChannelClassType ChannelClass, Pwm_PeriodType Period, uint8 ServiceId)
+{
+  uint32 PeriodMaxValue;
+  Std_ReturnType RetVal;
+  Std_ReturnType D.6209;
+
+  <bb 2> :
+  RetVal = 0;
+  PeriodMaxValue = 0;
+  if (ChannelClass != 0)
+    goto <bb 3>; [INV]
+  else
+    goto <bb 4>; [INV]
+
+  <bb 3> :
+  Det_ReportError (121, 0, ServiceId, 19);
+  RetVal = 1;
+  goto <bb 6>; [INV]
+
+  <bb 4> :
+  _1 = Pwm_aState[CoreId].PwmChannelConfigs[0];
+  _2 = (unsigned int) ChannelNumber;
+  _3 = _2 * 24;
+  _4 = _1 + _3;
+  _5 = &_4->IpwChannelCfg;
+  PeriodMaxValue = Pwm_Ipw_GetMaxPeriodValue (_5);
+  _6 = (long unsigned int) Period;
+  if (PeriodMaxValue < _6)
+    goto <bb 5>; [INV]
+  else
     goto <bb 6>; [INV]
+
+  <bb 5> :
+  Det_ReportError (121, 0, ServiceId, 26);
+  RetVal = 1;
+
+  <bb 6> :
+  D.6209 = RetVal;
+
+  <bb 7> :
+<L6>:
+  return D.6209;
+
+}
+
+
+Pwm_ValidateParamDuty (uint16 DutyCycle, uint8 ServiceId)
+{
+  Std_ReturnType RetVal;
+  Std_ReturnType D.6195;
+
+  <bb 2> :
+  RetVal = 0;
+  if (DutyCycle > 32768)
+    goto <bb 3>; [INV]
+  else
+    goto <bb 4>; [INV]
+
+  <bb 3> :
+  Det_ReportError (121, 0, ServiceId, 50);
+  RetVal = 1;
+
+  <bb 4> :
+  D.6195 = RetVal;
+
+  <bb 5> :
+<L2>:
+  return D.6195;
+
+}
+
+
+Pwm_ValidateParamPtrInit (uint32 CoreId, const struct Pwm_ConfigType * ConfigPtr)
+{
+  Std_ReturnType RetVal;
+  Std_ReturnType D.6165;
+
+  <bb 2> :
+  RetVal = 0;
+  if (ConfigPtr == 0B)
+    goto <bb 3>; [INV]
+  else
+    goto <bb 4>; [INV]
+
+  <bb 3> :
+  Det_ReportError (121, 0, 0, 16);
+  RetVal = 1;
+
+  <bb 4> :
+  D.6165 = RetVal;
+
+  <bb 5> :
+<L3>:
+  return D.6165;
+
+}
+
+
+Pwm_EndValidateChannelConfigCall (Pwm_ChannelType ChannelNumber)
+{
+  <bb 2> :
+  return;
+
+}
+
+
+Pwm_ValidateChannelConfigCall (uint32 CoreId, Pwm_ChannelType ChannelNumber, uint8 ServiceId)
+{
+  Pwm_ChannelType PartitionChannelIdx;
+  Std_ReturnType RetVal;
+  Std_ReturnType D.6189;
+
+  <bb 2> :
+  RetVal = 0;
+  _1 = Pwm_aState[CoreId].PwmDriverState;
+  if (_1 == 0)
+    goto <bb 3>; [INV]
+  else
+    goto <bb 4>; [INV]
+
+  <bb 3> :
+  RetVal = 1;
+  Det_ReportError (121, 0, ServiceId, 17);
+  goto <bb 8>; [INV]
+
+  <bb 4> :
+  if (ChannelNumber != 0)
+    goto <bb 5>; [INV]
+  else
+    goto <bb 6>; [INV]
+
+  <bb 5> :
+  RetVal = 1;
+  Det_ReportError (121, 0, ServiceId, 18);
+  goto <bb 8>; [INV]
+
+  <bb 6> :
+  PartitionChannelIdx = Pwm_GetPartitionChannelIdx (CoreId, ChannelNumber);
+  _2 = Pwm_aState[CoreId].PwmConfig;
+  _3 = _2->NumChannels;
+  if (PartitionChannelIdx >= _3)
+    goto <bb 7>; [INV]
   else
     goto <bb 8>; [INV]
 
+  <bb 7> :
+  RetVal = 1;
+  Det_ReportError (121, 0, ServiceId, 64);
+
   <bb 8> :
+  D.6189 = RetVal;
+
+  <bb 9> :
+<L9>:
+  return D.6189;
+
+}
+
+
+Pwm_EndValidateGlobalConfigCall (uint32 CoreId, Std_ReturnType ValidCall, uint8 ServiceId)
+{
+  <bb 2> :
+  if (ValidCall == 0)
+    goto <bb 3>; [INV]
+  else
+    goto <bb 6>; [INV]
+
+  <bb 3> :
+  if (ServiceId == 1)
+    goto <bb 4>; [INV]
+  else
+    goto <bb 5>; [INV]
+
+  <bb 4> :
+  Pwm_aState[CoreId].PwmDriverState = 0;
+  goto <bb 6>; [INV]
+
+  <bb 5> :
+  Pwm_aState[CoreId].PwmDriverState = 1;
+
+  <bb 6> :
   return;
+
+}
+
+
+Pwm_ValidateGlobalConfigCall (uint32 CoreId, uint8 ServiceId)
+{
+  Std_ReturnType RetVal;
+  Std_ReturnType D.6156;
+
+  <bb 2> :
+  RetVal = 0;
+  _1 = Pwm_aState[CoreId].PwmDriverState;
+  if (_1 == 0)
+    goto <bb 3>; [INV]
+  else
+    goto <bb 5>; [INV]
+
+  <bb 3> :
+  if (ServiceId != 0)
+    goto <bb 4>; [INV]
+  else
+    goto <bb 7>; [INV]
+
+  <bb 4> :
+  Det_ReportError (121, 0, ServiceId, 17);
+  RetVal = 1;
+  goto <bb 7>; [INV]
+
+  <bb 5> :
+  if (ServiceId == 0)
+    goto <bb 6>; [INV]
+  else
+    goto <bb 7>; [INV]
+
+  <bb 6> :
+  Det_ReportError (121, 0, ServiceId, 20);
+  RetVal = 1;
+
+  <bb 7> :
+  D.6156 = RetVal;
+
+  <bb 8> :
+<L7>:
+  return D.6156;
 
 }
 
 
 Pwm_GetPartitionChannelIdx (uint32 CoreId, Pwm_ChannelType ChannelNumber)
 {
-  uint8 D.6023;
+  uint8 D.6191;
 
   <bb 2> :
-  D.6023 = ChannelNumber;
+  D.6191 = ChannelNumber;
 
   <bb 3> :
 <L0>:
-  return D.6023;
+  return D.6191;
 
 }
 

@@ -20,7 +20,7 @@ IPA summary for IoHwAb_GetVersionInfo/2 is missing.
 IPA summary for IoHwAb_Init0/1 is missing.
 Symbol table:
 
-HwIoAb_Buzzer_Init/8 (HwIoAb_Buzzer_Init) @06958e00
+HwIoAb_Buzzer_Init/8 (HwIoAb_Buzzer_Init) @069887e0
   Type: function
   Visibility: external public
   References: 
@@ -29,7 +29,7 @@ HwIoAb_Buzzer_Init/8 (HwIoAb_Buzzer_Init) @06958e00
   Function flags:
   Called by: IoHwAb_Init0/1 
   Calls: 
-HwIoAb_Pots_Init/7 (HwIoAb_Pots_Init) @06958d20
+HwIoAb_Pots_Init/7 (HwIoAb_Pots_Init) @06988540
   Type: function
   Visibility: external public
   References: 
@@ -38,7 +38,7 @@ HwIoAb_Pots_Init/7 (HwIoAb_Pots_Init) @06958d20
   Function flags:
   Called by: IoHwAb_Init0/1 
   Calls: 
-LedsCfg/6 (LedsCfg) @06c7fcf0
+LedsCfg/6 (LedsCfg) @06c1fd38
   Type: variable
   Body removed by symtab_remove_unreachable_nodes
   Visibility: external public
@@ -46,7 +46,7 @@ LedsCfg/6 (LedsCfg) @06c7fcf0
   Referring: IoHwAb_Init0/1 (addr) 
   Availability: not_available
   Varpool flags: read-only
-HwIoAb_Leds_Init/5 (HwIoAb_Leds_Init) @06958c40
+HwIoAb_Leds_Init/5 (HwIoAb_Leds_Init) @06988ee0
   Type: function
   Visibility: external public
   References: 
@@ -55,7 +55,7 @@ HwIoAb_Leds_Init/5 (HwIoAb_Leds_Init) @06958c40
   Function flags:
   Called by: IoHwAb_Init0/1 
   Calls: 
-ButtonsCfg/4 (ButtonsCfg) @06c7fc60
+ButtonsCfg/4 (ButtonsCfg) @06c1fca8
   Type: variable
   Body removed by symtab_remove_unreachable_nodes
   Visibility: external public
@@ -63,7 +63,7 @@ ButtonsCfg/4 (ButtonsCfg) @06c7fc60
   Referring: IoHwAb_Init0/1 (addr) 
   Availability: not_available
   Varpool flags: read-only
-HwIoAb_Buttons_Init/3 (HwIoAb_Buttons_Init) @06958b60
+HwIoAb_Buttons_Init/3 (HwIoAb_Buttons_Init) @06988e00
   Type: function
   Visibility: external public
   References: 
@@ -72,7 +72,7 @@ HwIoAb_Buttons_Init/3 (HwIoAb_Buttons_Init) @06958b60
   Function flags:
   Called by: IoHwAb_Init0/1 
   Calls: 
-IoHwAb_GetVersionInfo/2 (IoHwAb_GetVersionInfo) @06958700
+IoHwAb_GetVersionInfo/2 (IoHwAb_GetVersionInfo) @069889a0
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: 
@@ -81,7 +81,7 @@ IoHwAb_GetVersionInfo/2 (IoHwAb_GetVersionInfo) @06958700
   Function flags: body
   Called by: 
   Calls: 
-IoHwAb_Init0/1 (IoHwAb_Init0) @06958460
+IoHwAb_Init0/1 (IoHwAb_Init0) @06988700
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: ButtonsCfg/4 (addr) LedsCfg/6 (addr) 
@@ -91,7 +91,7 @@ IoHwAb_Init0/1 (IoHwAb_Init0) @06958460
   Called by: 
   Calls: HwIoAb_Buzzer_Init/8 HwIoAb_Pots_Init/7 HwIoAb_Leds_Init/5 HwIoAb_Buttons_Init/3 
 
-;; Function IoHwAb_Init0 (IoHwAb_Init0, funcdef_no=1, decl_uid=6337, cgraph_uid=2, symbol_order=1)
+;; Function IoHwAb_Init0 (IoHwAb_Init0, funcdef_no=1, decl_uid=6341, cgraph_uid=2, symbol_order=1)
 
 IoHwAb_Init0 (const struct IoHwAb0_ConfigType * ConfigPtr)
 {
@@ -106,7 +106,7 @@ IoHwAb_Init0 (const struct IoHwAb0_ConfigType * ConfigPtr)
 
 
 
-;; Function IoHwAb_GetVersionInfo (IoHwAb_GetVersionInfo, funcdef_no=2, decl_uid=6339, cgraph_uid=3, symbol_order=2)
+;; Function IoHwAb_GetVersionInfo (IoHwAb_GetVersionInfo, funcdef_no=2, decl_uid=6343, cgraph_uid=3, symbol_order=2)
 
 IoHwAb_GetVersionInfo (struct Std_VersionInfoType * versioninfo)
 {

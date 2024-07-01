@@ -134,6 +134,7 @@ extern "C"{
 /** @brief      Macro used to initialize the driver state structure */
 #define PWM_DRIVER_STATE_INITIALIZATION         {\
                                                     {\
+                                                        PWM_STATE_UNINIT,\
                                                         NULL_PTR,\
                                                         PWM_NODEFINE_POWER,\
                                                         PWM_NODEFINE_POWER,\
@@ -156,7 +157,7 @@ extern "C"{
 #define PWM_PRECOMPILE_SUPPORT                  (STD_OFF)
 
 /** @brief        Switch to indicate that Pwm_SetClockMode API is supported */
-#define PWM_VERSION_INFO_API                    (STD_OFF)
+#define PWM_VERSION_INFO_API                    (STD_ON)
 
 /**
 * @brief        Switch to indicate that Pwm_ForceOutputToZero API is supported

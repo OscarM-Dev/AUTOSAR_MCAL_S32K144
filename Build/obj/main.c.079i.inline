@@ -18,7 +18,7 @@ function body not available                       :        5 calls, 5.000000 fre
 IPA summary for main/56 is missing.
 Symbol table:
 
-Scheduler_MainFunction/62 (Scheduler_MainFunction) @072a7460
+Scheduler_MainFunction/62 (Scheduler_MainFunction) @0732fa80
   Type: function
   Visibility: external public
   References: 
@@ -27,7 +27,7 @@ Scheduler_MainFunction/62 (Scheduler_MainFunction) @072a7460
   Function flags:
   Called by: main/56 
   Calls: 
-Scheduler_Control/61 (Scheduler_Control) @072aa000
+Scheduler_Control/61 (Scheduler_Control) @073320d8
   Type: variable
   Body removed by symtab_remove_unreachable_nodes
   Visibility: external public
@@ -35,7 +35,7 @@ Scheduler_Control/61 (Scheduler_Control) @072aa000
   Referring: main/56 (addr) 
   Availability: not_available
   Varpool flags:
-Scheduler_Init/60 (Scheduler_Init) @072a7380
+Scheduler_Init/60 (Scheduler_Init) @0732f9a0
   Type: function
   Visibility: external public
   References: 
@@ -44,7 +44,7 @@ Scheduler_Init/60 (Scheduler_Init) @072a7380
   Function flags:
   Called by: main/56 
   Calls: 
-SEGGER_RTT_Init/59 (SEGGER_RTT_Init) @072a72a0
+SEGGER_RTT_Init/59 (SEGGER_RTT_Init) @0732f8c0
   Type: function
   Visibility: external public
   References: 
@@ -53,7 +53,7 @@ SEGGER_RTT_Init/59 (SEGGER_RTT_Init) @072a72a0
   Function flags:
   Called by: main/56 
   Calls: 
-IoHwAb_Init0/58 (IoHwAb_Init0) @072a71c0
+IoHwAb_Init0/58 (IoHwAb_Init0) @0732f7e0
   Type: function
   Visibility: external public
   References: 
@@ -62,7 +62,7 @@ IoHwAb_Init0/58 (IoHwAb_Init0) @072a71c0
   Function flags:
   Called by: main/56 
   Calls: 
-EcuM_Init/57 (EcuM_Init) @072a70e0
+EcuM_Init/57 (EcuM_Init) @0732f700
   Type: function
   Visibility: external public
   References: 
@@ -71,7 +71,7 @@ EcuM_Init/57 (EcuM_Init) @072a70e0
   Function flags:
   Called by: main/56 
   Calls: 
-main/56 (main) @072a4c40
+main/56 (main) @0732f2a0
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: Scheduler_Control/61 (addr) 
@@ -80,7 +80,7 @@ main/56 (main) @072a4c40
   Function flags: body
   Called by: 
   Calls: Scheduler_MainFunction/62 Scheduler_Init/60 SEGGER_RTT_Init/59 IoHwAb_Init0/58 EcuM_Init/57 
-Queue1/55 (Queue1) @072a1990
+Queue1/55 (Queue1) @0732ca68
   Type: variable definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: 
@@ -88,11 +88,11 @@ Queue1/55 (Queue1) @072a1990
   Availability: available
   Varpool flags:
 
-;; Function main (main, funcdef_no=55, decl_uid=8575, cgraph_uid=56, symbol_order=56)
+;; Function main (main, funcdef_no=55, decl_uid=8638, cgraph_uid=56, symbol_order=56)
 
 main ()
 {
-  int D.8582;
+  int D.8645;
 
   <bb 2> :
   EcuM_Init ();

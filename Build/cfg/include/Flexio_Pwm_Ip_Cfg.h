@@ -135,7 +135,7 @@ extern "C"{
 /** @brief      Check to use the Flexio Ip driver */
 #define FLEXIO_PWM_IP_USED                      (STD_OFF)
 /** @brief      Switch to enable the development error detection. */
-#define FLEXIO_PWM_IP_DEV_ERROR_DETECT          (STD_OFF)
+#define FLEXIO_PWM_IP_DEV_ERROR_DETECT          (STD_ON)
 /** @brief      Number of instances for Flexio */
 #define FLEXIO_PWM_IP_INSTANCE_COUNT            (FLEXIO_INSTANCE_COUNT)
 /** @brief      Number of channels available for PWM on Flexio */

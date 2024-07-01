@@ -1,6 +1,6 @@
 Symbol table:
 
-Gpio_Dio_Ip_ClearPins/15 (Gpio_Dio_Ip_ClearPins) @06a16540
+Gpio_Dio_Ip_ClearPins/15 (Gpio_Dio_Ip_ClearPins) @06923700
   Type: function
   Visibility: external public
   References: 
@@ -9,7 +9,7 @@ Gpio_Dio_Ip_ClearPins/15 (Gpio_Dio_Ip_ClearPins) @06a16540
   Function flags:
   Called by: Dio_Ipw_WriteChannelGroup/6 
   Calls: 
-Gpio_Dio_Ip_SetPins/14 (Gpio_Dio_Ip_SetPins) @06a16460
+Gpio_Dio_Ip_SetPins/14 (Gpio_Dio_Ip_SetPins) @06923620
   Type: function
   Visibility: external public
   References: 
@@ -18,7 +18,7 @@ Gpio_Dio_Ip_SetPins/14 (Gpio_Dio_Ip_SetPins) @06a16460
   Function flags:
   Called by: Dio_Ipw_WriteChannelGroup/6 
   Calls: 
-Gpio_Dio_Ip_WritePins/13 (Gpio_Dio_Ip_WritePins) @06a161c0
+Gpio_Dio_Ip_WritePins/13 (Gpio_Dio_Ip_WritePins) @06923380
   Type: function
   Visibility: external public
   References: 
@@ -27,7 +27,7 @@ Gpio_Dio_Ip_WritePins/13 (Gpio_Dio_Ip_WritePins) @06a161c0
   Function flags:
   Called by: Dio_Ipw_WritePort/4 
   Calls: 
-Gpio_Dio_Ip_ReadPins/12 (Gpio_Dio_Ip_ReadPins) @06a16000
+Gpio_Dio_Ip_ReadPins/12 (Gpio_Dio_Ip_ReadPins) @069231c0
   Type: function
   Visibility: external public
   References: 
@@ -36,7 +36,7 @@ Gpio_Dio_Ip_ReadPins/12 (Gpio_Dio_Ip_ReadPins) @06a16000
   Function flags:
   Called by: Dio_Ipw_ReadChannelGroup/5 Dio_Ipw_ReadPort/3 
   Calls: 
-Gpio_Dio_Ip_GetPinsOutput/11 (Gpio_Dio_Ip_GetPinsOutput) @06a11380
+Gpio_Dio_Ip_GetPinsOutput/11 (Gpio_Dio_Ip_GetPinsOutput) @06923000
   Type: function
   Visibility: external public
   References: 
@@ -45,7 +45,7 @@ Gpio_Dio_Ip_GetPinsOutput/11 (Gpio_Dio_Ip_GetPinsOutput) @06a11380
   Function flags:
   Called by: Dio_Ipw_FlipChannel/2 
   Calls: 
-Gpio_Dio_Ip_TogglePins/10 (Gpio_Dio_Ip_TogglePins) @06a110e0
+Gpio_Dio_Ip_TogglePins/10 (Gpio_Dio_Ip_TogglePins) @0691e8c0
   Type: function
   Visibility: external public
   References: 
@@ -54,7 +54,7 @@ Gpio_Dio_Ip_TogglePins/10 (Gpio_Dio_Ip_TogglePins) @06a110e0
   Function flags:
   Called by: Dio_Ipw_FlipChannel/2 
   Calls: 
-Gpio_Dio_Ip_WritePin/9 (Gpio_Dio_Ip_WritePin) @06a11e00
+Gpio_Dio_Ip_WritePin/9 (Gpio_Dio_Ip_WritePin) @0691e380
   Type: function
   Visibility: external public
   References: 
@@ -63,7 +63,7 @@ Gpio_Dio_Ip_WritePin/9 (Gpio_Dio_Ip_WritePin) @06a11e00
   Function flags:
   Called by: Dio_Ipw_WriteChannel/1 
   Calls: 
-Gpio_Dio_Ip_ReadPin/8 (Gpio_Dio_Ip_ReadPin) @06a11c40
+Gpio_Dio_Ip_ReadPin/8 (Gpio_Dio_Ip_ReadPin) @0691eee0
   Type: function
   Visibility: external public
   References: 
@@ -72,7 +72,7 @@ Gpio_Dio_Ip_ReadPin/8 (Gpio_Dio_Ip_ReadPin) @06a11c40
   Function flags:
   Called by: Dio_Ipw_ReadChannel/0 
   Calls: 
-GpioBaseAdresses/7 (GpioBaseAdresses) @06a12558
+GpioBaseAdresses/7 (GpioBaseAdresses) @0691f558
   Type: variable
   Body removed by symtab_remove_unreachable_nodes
   Visibility: external public
@@ -80,7 +80,7 @@ GpioBaseAdresses/7 (GpioBaseAdresses) @06a12558
   Referring: Dio_Ipw_WritePort/4 (read) Dio_Ipw_ReadChannelGroup/5 (read) Dio_Ipw_ReadChannel/0 (read) Dio_Ipw_WriteChannel/1 (read) Dio_Ipw_FlipChannel/2 (read) Dio_Ipw_ReadPort/3 (read) Dio_Ipw_WriteChannelGroup/6 (read) 
   Availability: not_available
   Varpool flags:
-Dio_Ipw_WriteChannelGroup/6 (Dio_Ipw_WriteChannelGroup) @06a117e0
+Dio_Ipw_WriteChannelGroup/6 (Dio_Ipw_WriteChannelGroup) @0691ea80
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: GpioBaseAdresses/7 (read) 
@@ -89,7 +89,7 @@ Dio_Ipw_WriteChannelGroup/6 (Dio_Ipw_WriteChannelGroup) @06a117e0
   Function flags: body
   Called by: 
   Calls: Gpio_Dio_Ip_ClearPins/15 Gpio_Dio_Ip_SetPins/14 
-Dio_Ipw_ReadChannelGroup/5 (Dio_Ipw_ReadChannelGroup) @06a11540
+Dio_Ipw_ReadChannelGroup/5 (Dio_Ipw_ReadChannelGroup) @0691e7e0
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: GpioBaseAdresses/7 (read) 
@@ -98,7 +98,7 @@ Dio_Ipw_ReadChannelGroup/5 (Dio_Ipw_ReadChannelGroup) @06a11540
   Function flags: body
   Called by: 
   Calls: Gpio_Dio_Ip_ReadPins/12 
-Dio_Ipw_WritePort/4 (Dio_Ipw_WritePort) @06a112a0
+Dio_Ipw_WritePort/4 (Dio_Ipw_WritePort) @0691e540
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: GpioBaseAdresses/7 (read) 
@@ -107,7 +107,7 @@ Dio_Ipw_WritePort/4 (Dio_Ipw_WritePort) @06a112a0
   Function flags: body
   Called by: 
   Calls: Gpio_Dio_Ip_WritePins/13 
-Dio_Ipw_ReadPort/3 (Dio_Ipw_ReadPort) @06a11000
+Dio_Ipw_ReadPort/3 (Dio_Ipw_ReadPort) @0691e2a0
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: GpioBaseAdresses/7 (read) 
@@ -116,7 +116,7 @@ Dio_Ipw_ReadPort/3 (Dio_Ipw_ReadPort) @06a11000
   Function flags: body
   Called by: 
   Calls: Gpio_Dio_Ip_ReadPins/12 
-Dio_Ipw_FlipChannel/2 (Dio_Ipw_FlipChannel) @0687f8c0
+Dio_Ipw_FlipChannel/2 (Dio_Ipw_FlipChannel) @0691e000
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: GpioBaseAdresses/7 (read) 
@@ -125,7 +125,7 @@ Dio_Ipw_FlipChannel/2 (Dio_Ipw_FlipChannel) @0687f8c0
   Function flags: body
   Called by: 
   Calls: Gpio_Dio_Ip_GetPinsOutput/11 Gpio_Dio_Ip_TogglePins/10 
-Dio_Ipw_WriteChannel/1 (Dio_Ipw_WriteChannel) @0687fc40
+Dio_Ipw_WriteChannel/1 (Dio_Ipw_WriteChannel) @0685ee00
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: GpioBaseAdresses/7 (read) 
@@ -134,7 +134,7 @@ Dio_Ipw_WriteChannel/1 (Dio_Ipw_WriteChannel) @0687fc40
   Function flags: body
   Called by: 
   Calls: Gpio_Dio_Ip_WritePin/9 
-Dio_Ipw_ReadChannel/0 (Dio_Ipw_ReadChannel) @0687f7e0
+Dio_Ipw_ReadChannel/0 (Dio_Ipw_ReadChannel) @0685e9a0
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: GpioBaseAdresses/7 (read) 
@@ -183,7 +183,7 @@ Dio_Ipw_ReadChannelGroup (const struct Dio_ChannelGroupType * pChannelGroupIdPtr
   const struct GPIO_Type * GpioBase;
   Dio_PortLevelType pinsValue;
   Dio_PortLevelType PortLevel;
-  Dio_PortLevelType D.5461;
+  Dio_PortLevelType D.5462;
   unsigned char _1;
   int _2;
   long unsigned int _3;
@@ -236,7 +236,7 @@ Dio_Ipw_ReadPort (Dio_PortType PortId)
 {
   const struct GPIO_Type * GpioBase;
   Dio_PortLevelType PortLevel;
-  Dio_PortLevelType D.5459;
+  Dio_PortLevelType D.5460;
   int _1;
   long unsigned int _2;
   Dio_PortLevelType _9;
@@ -263,7 +263,7 @@ Dio_Ipw_FlipChannel (Dio_ChannelType ChannelId)
   uint32 u32PinIndex;
   uint32 u32GpioInstance;
   Dio_LevelType ChannelLevel;
-  Dio_LevelType D.5457;
+  Dio_LevelType D.5458;
   short unsigned int _1;
   long unsigned int _2;
   long unsigned int _3;
@@ -325,7 +325,7 @@ Dio_Ipw_ReadChannel (Dio_ChannelType ChannelId)
   uint32 u32PinIndex;
   uint32 u32GpioInstance;
   Dio_LevelType ChannelLevel;
-  Dio_LevelType D.5455;
+  Dio_LevelType D.5456;
   short unsigned int _1;
   long unsigned int _2;
   long unsigned int _3;

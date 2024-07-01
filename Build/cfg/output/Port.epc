@@ -10,6 +10,7 @@
           <SHORT-NAME>Port</SHORT-NAME>
           <DEFINITION-REF DEST="ECUC-MODULE-DEF">/TS_T40D2M20I0R0/Port</DEFINITION-REF>
           <IMPLEMENTATION-CONFIG-VARIANT>VARIANT-POST-BUILD</IMPLEMENTATION-CONFIG-VARIANT>
+          <POST-BUILD-VARIANT-USED>true</POST-BUILD-VARIANT-USED>
           <CONTAINERS>
             <ECUC-CONTAINER-VALUE>
               <SHORT-NAME>CommonPublishedInformation</SHORT-NAME>
@@ -1009,7 +1010,7 @@
                 </ECUC-NUMERICAL-PARAM-VALUE>
                 <ECUC-NUMERICAL-PARAM-VALUE>
                   <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/TS_T40D2M20I0R0/Port/PortGeneral/PortDevErrorDetect</DEFINITION-REF>
-                  <VALUE>0</VALUE>
+                  <VALUE>1</VALUE>
                 </ECUC-NUMERICAL-PARAM-VALUE>
                 <ECUC-NUMERICAL-PARAM-VALUE>
                   <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/TS_T40D2M20I0R0/Port/PortGeneral/PortEnableUserModeSupport</DEFINITION-REF>
@@ -1033,11 +1034,11 @@
                 </ECUC-NUMERICAL-PARAM-VALUE>
                 <ECUC-NUMERICAL-PARAM-VALUE>
                   <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/TS_T40D2M20I0R0/Port/PortGeneral/PortSetPinDirectionApi</DEFINITION-REF>
-                  <VALUE>0</VALUE>
+                  <VALUE>1</VALUE>
                 </ECUC-NUMERICAL-PARAM-VALUE>
                 <ECUC-NUMERICAL-PARAM-VALUE>
                   <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/TS_T40D2M20I0R0/Port/PortGeneral/PortSetPinModeApi</DEFINITION-REF>
-                  <VALUE>0</VALUE>
+                  <VALUE>1</VALUE>
                 </ECUC-NUMERICAL-PARAM-VALUE>
                 <ECUC-NUMERICAL-PARAM-VALUE>
                   <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/TS_T40D2M20I0R0/Port/PortGeneral/PortSetPinModeDoesNotTouchGpioLevel</DEFINITION-REF>
@@ -1045,7 +1046,7 @@
                 </ECUC-NUMERICAL-PARAM-VALUE>
                 <ECUC-NUMERICAL-PARAM-VALUE>
                   <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/TS_T40D2M20I0R0/Port/PortGeneral/PortVersionInfoApi</DEFINITION-REF>
-                  <VALUE>0</VALUE>
+                  <VALUE>1</VALUE>
                 </ECUC-NUMERICAL-PARAM-VALUE>
               </PARAMETER-VALUES>
             </ECUC-CONTAINER-VALUE>

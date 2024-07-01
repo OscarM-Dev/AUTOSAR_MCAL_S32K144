@@ -55,7 +55,7 @@
 *                                       LOCAL MACROS
 ==================================================================================================*/
 /* Development error detection */
-#define INT_CTRL_IP_DEV_ERROR_DETECT  (STD_OFF)
+#define INT_CTRL_IP_DEV_ERROR_DETECT  (STD_ON)
 
 
 /* VTOR address configuration enable */

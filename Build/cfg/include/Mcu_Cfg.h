@@ -251,12 +251,12 @@ extern "C"{
 * @brief            Pre-processor switch for enabling the default error detection and reporting to the DET.
 *                   The detection of default errors is configurable (ON / OFF) at pre-compile time.
 */
-#define MCU_DEV_ERROR_DETECT   (STD_OFF)
+#define MCU_DEV_ERROR_DETECT   (STD_ON)
 
 /**
 * @brief            Pre-processor switch to enable/disable the API to read out the modules version information.
 */
-#define MCU_VERSION_INFO_API   (STD_OFF)
+#define MCU_VERSION_INFO_API   (STD_ON)
 
 
 /**

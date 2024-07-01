@@ -741,7 +741,7 @@
                 <d:var name="AdcDeInitApi" type="BOOLEAN" value="true">
                   <a:a name="IMPORTER_INFO" value="@DEF"/>
                 </d:var>
-                <d:var name="AdcDevErrorDetect" type="BOOLEAN" value="false"/>
+                <d:var name="AdcDevErrorDetect" type="BOOLEAN" value="true"/>
                 <d:var name="AdcEnableLimitCheck" type="BOOLEAN" value="false"/>
                 <d:var name="AdcEnableQueuing" type="BOOLEAN" value="true">
                   <a:a name="IMPORTER_INFO" value="@DEF"/>

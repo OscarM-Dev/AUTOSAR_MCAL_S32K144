@@ -43,7 +43,9 @@ Build/obj/mcu_init.o: Dev/src/mcu_init.c Dev/include/Mcu_init.h \
  Build/cfg/include/Platform_Cfg.h \
  Autosar/Mcal/Platform/include/Platform_TypesDef.h \
  Autosar/Mcal/Platform/include/Platform_Ipw_TypesDef.h \
- Build/cfg/include/Platform_CfgDefines.h \
+ Build/cfg/include/Platform_CfgDefines.h Autosar/Det/include/Det.h \
+ Autosar/Mcal/Base/include/Std_Types.h \
+ Autosar/Mcal/Base/include/Det_MemMap.h \
  Autosar/Mcal/Platform/include/IntCtrl_Ip_TypesDef.h \
  Build/cfg/include/IntCtrl_Ip_CfgDefines.h \
  Autosar/Mcal/Base/header/S32K144.h \
@@ -106,9 +108,8 @@ Build/obj/mcu_init.o: Dev/src/mcu_init.c Dev/include/Mcu_init.h \
  Autosar/Mcal/Platform/include/System_Ip.h \
  Build/cfg/include/System_Ip_Cfg.h \
  Build/cfg/include/System_Ip_CfgDefines.h \
- Autosar/Mcal/Port/include/Port.h Autosar/Mcal/Base/include/Std_Types.h \
- Build/cfg/include/Port_Cfg.h Build/cfg/include/Port_PBcfg.h \
- Autosar/Mcal/Base/include/Port_MemMap.h \
+ Autosar/Mcal/Port/include/Port.h Build/cfg/include/Port_Cfg.h \
+ Build/cfg/include/Port_PBcfg.h Autosar/Mcal/Base/include/Port_MemMap.h \
  Autosar/Mcal/Port/include/Port_Ci_Port_Ip_Types.h \
  Build/cfg/include/Port_Ci_Port_Ip_Defines.h \
  Autosar/Mcal/Base/header/S32K144_GPIO.h \
@@ -118,8 +119,17 @@ Build/obj/mcu_init.o: Dev/src/mcu_init.c Dev/include/Mcu_init.h \
  Build/cfg/include/Port_Ci_Port_Ip_Cfg.h \
  Build/cfg/include/Port_Ci_Port_Ip_PBcfg.h \
  Autosar/Mcal/Port/include/Port_Ci_Port_Ip_Types.h \
- Autosar/Mcal/Adc/include/Adc.h Build/cfg/include/Adc_Cfg.h \
- Build/cfg/include/Adc_CfgDefines.h Autosar/Mcal/Adc/include/Adc_Types.h \
+ Autosar/IoHwAbs/include/IoHwAb.h \
+ Autosar/IoHwAbs/include/HwIoAb_0_Buttons.h \
+ Autosar/Mcal/Dio/include/Dio.h Build/cfg/include/Dio_Cfg.h \
+ Build/cfg/include/Gpio_Dio_Ip_Cfg.h \
+ Autosar/Mcal/Base/include/Dio_MemMap.h \
+ Autosar/IoHwAbs/include/HwIoAb_0_Buttons_Cfg.h \
+ Autosar/IoHwAbs/include/HwIoAb_1_Leds.h \
+ Autosar/IoHwAbs/include/HwIoAb_1_Leds_Cfg.h \
+ Autosar/IoHwAbs/include/HwIoAb_2_Pots.h Autosar/Mcal/Adc/include/Adc.h \
+ Build/cfg/include/Adc_Cfg.h Build/cfg/include/Adc_CfgDefines.h \
+ Autosar/Mcal/Adc/include/Adc_Types.h \
  Autosar/Mcal/Adc/include/Adc_Ipw_Types.h \
  Build/cfg/include/Adc_Ipw_CfgDefines.h \
  Autosar/Mcal/Adc/include/Adc_Ip_Types.h \
@@ -131,15 +141,7 @@ Build/obj/mcu_init.o: Dev/src/mcu_init.c Dev/include/Mcu_init.h \
  Autosar/Mcal/Base/header/S32K144_PDB.h \
  Build/cfg/include/Adc_CfgDefines.h Build/cfg/include/Adc_PBcfg.h \
  Autosar/Mcal/Base/include/Adc_MemMap.h \
- Autosar/Mcal/Adc/include/Adc_Types.h Autosar/IoHwAbs/include/IoHwAb.h \
- Autosar/IoHwAbs/include/HwIoAb_0_Buttons.h \
- Autosar/Mcal/Dio/include/Dio.h Build/cfg/include/Dio_Cfg.h \
- Build/cfg/include/Gpio_Dio_Ip_Cfg.h \
- Autosar/Mcal/Base/include/Dio_MemMap.h \
- Autosar/IoHwAbs/include/HwIoAb_0_Buttons_Cfg.h \
- Autosar/IoHwAbs/include/HwIoAb_1_Leds.h \
- Autosar/IoHwAbs/include/HwIoAb_1_Leds_Cfg.h \
- Autosar/IoHwAbs/include/HwIoAb_2_Pots.h \
+ Autosar/Mcal/Adc/include/Adc_Types.h \
  Autosar/IoHwAbs/include/HwIoAb_2_Pots_Cfg.h \
  Autosar/IoHwAbs/include/HwIoAb_3_Buzzer.h Autosar/Mcal/Pwm/include/Pwm.h \
  Build/cfg/include/Pwm_Cfg.h Build/cfg/include/Pwm_Ipw_Cfg.h \
@@ -213,6 +215,9 @@ Build/cfg/include/Platform_Cfg.h:
 Autosar/Mcal/Platform/include/Platform_TypesDef.h:
 Autosar/Mcal/Platform/include/Platform_Ipw_TypesDef.h:
 Build/cfg/include/Platform_CfgDefines.h:
+Autosar/Det/include/Det.h:
+Autosar/Mcal/Base/include/Std_Types.h:
+Autosar/Mcal/Base/include/Det_MemMap.h:
 Autosar/Mcal/Platform/include/IntCtrl_Ip_TypesDef.h:
 Build/cfg/include/IntCtrl_Ip_CfgDefines.h:
 Autosar/Mcal/Base/header/S32K144.h:
@@ -278,7 +283,6 @@ Autosar/Mcal/Platform/include/System_Ip.h:
 Build/cfg/include/System_Ip_Cfg.h:
 Build/cfg/include/System_Ip_CfgDefines.h:
 Autosar/Mcal/Port/include/Port.h:
-Autosar/Mcal/Base/include/Std_Types.h:
 Build/cfg/include/Port_Cfg.h:
 Build/cfg/include/Port_PBcfg.h:
 Autosar/Mcal/Base/include/Port_MemMap.h:
@@ -291,6 +295,16 @@ Autosar/Mcal/Port/include/Port_Ci_Port_Ip.h:
 Build/cfg/include/Port_Ci_Port_Ip_Cfg.h:
 Build/cfg/include/Port_Ci_Port_Ip_PBcfg.h:
 Autosar/Mcal/Port/include/Port_Ci_Port_Ip_Types.h:
+Autosar/IoHwAbs/include/IoHwAb.h:
+Autosar/IoHwAbs/include/HwIoAb_0_Buttons.h:
+Autosar/Mcal/Dio/include/Dio.h:
+Build/cfg/include/Dio_Cfg.h:
+Build/cfg/include/Gpio_Dio_Ip_Cfg.h:
+Autosar/Mcal/Base/include/Dio_MemMap.h:
+Autosar/IoHwAbs/include/HwIoAb_0_Buttons_Cfg.h:
+Autosar/IoHwAbs/include/HwIoAb_1_Leds.h:
+Autosar/IoHwAbs/include/HwIoAb_1_Leds_Cfg.h:
+Autosar/IoHwAbs/include/HwIoAb_2_Pots.h:
 Autosar/Mcal/Adc/include/Adc.h:
 Build/cfg/include/Adc_Cfg.h:
 Build/cfg/include/Adc_CfgDefines.h:
@@ -308,16 +322,6 @@ Build/cfg/include/Adc_CfgDefines.h:
 Build/cfg/include/Adc_PBcfg.h:
 Autosar/Mcal/Base/include/Adc_MemMap.h:
 Autosar/Mcal/Adc/include/Adc_Types.h:
-Autosar/IoHwAbs/include/IoHwAb.h:
-Autosar/IoHwAbs/include/HwIoAb_0_Buttons.h:
-Autosar/Mcal/Dio/include/Dio.h:
-Build/cfg/include/Dio_Cfg.h:
-Build/cfg/include/Gpio_Dio_Ip_Cfg.h:
-Autosar/Mcal/Base/include/Dio_MemMap.h:
-Autosar/IoHwAbs/include/HwIoAb_0_Buttons_Cfg.h:
-Autosar/IoHwAbs/include/HwIoAb_1_Leds.h:
-Autosar/IoHwAbs/include/HwIoAb_1_Leds_Cfg.h:
-Autosar/IoHwAbs/include/HwIoAb_2_Pots.h:
 Autosar/IoHwAbs/include/HwIoAb_2_Pots_Cfg.h:
 Autosar/IoHwAbs/include/HwIoAb_3_Buzzer.h:
 Autosar/Mcal/Pwm/include/Pwm.h:

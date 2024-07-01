@@ -1,15 +1,15 @@
 Mcu_ClkSrcFailureNotification (Clock_Ip_NameType ClockName)
 {
   <bb 2> :
-  Mcu_pConfigPtr.7_1 = Mcu_pConfigPtr;
-  if (Mcu_pConfigPtr.7_1 != 0B)
+  Mcu_pConfigPtr.11_1 = Mcu_pConfigPtr;
+  if (Mcu_pConfigPtr.11_1 != 0B)
     goto <bb 3>; [INV]
   else
     goto <bb 4>; [INV]
 
   <bb 3> :
-  Mcu_pConfigPtr.8_2 = Mcu_pConfigPtr;
-  _3 = Mcu_pConfigPtr.8_2->ClkSrcFailureNotification;
+  Mcu_pConfigPtr.12_2 = Mcu_pConfigPtr;
+  _3 = Mcu_pConfigPtr.12_2->ClkSrcFailureNotification;
 
   <bb 4> :
   return;
@@ -20,7 +20,39 @@ Mcu_ClkSrcFailureNotification (Clock_Ip_NameType ClockName)
 Mcu_SleepOnExit (Mcu_SleepOnExitType SleepOnExit)
 {
   <bb 2> :
+  _1 = Mcu_HLDChecksEntry (26);
+  if (_1 == 0)
+    goto <bb 3>; [INV]
+  else
+    goto <bb 4>; [INV]
+
+  <bb 3> :
   Mcu_Ipw_SleepOnExit (SleepOnExit);
+  Mcu_HLDChecksExit (0, 26);
+
+  <bb 4> :
+  return;
+
+}
+
+
+Mcu_GetVersionInfo (struct Std_VersionInfoType * versioninfo)
+{
+  <bb 2> :
+  _1 = Mcu_CheckGetVersionInfo (versioninfo);
+  if (_1 == 0)
+    goto <bb 3>; [INV]
+  else
+    goto <bb 4>; [INV]
+
+  <bb 3> :
+  versioninfo->vendorID = 43;
+  versioninfo->moduleID = 101;
+  versioninfo->sw_major_version = 2;
+  versioninfo->sw_minor_version = 0;
+  versioninfo->sw_patch_version = 0;
+
+  <bb 4> :
   return;
 
 }
@@ -29,15 +61,26 @@ Mcu_SleepOnExit (Mcu_SleepOnExitType SleepOnExit)
 Mcu_GetResetRawValue ()
 {
   Mcu_RawResetType RawResetValue;
-  Mcu_RawResetType D.5922;
+  Mcu_RawResetType D.6064;
 
   <bb 2> :
-  RawResetValue = Mcu_Ipw_GetResetRawValue ();
-  D.5922 = RawResetValue;
+  RawResetValue = 4294967295;
+  _1 = Mcu_HLDChecksEntry (6);
+  if (_1 == 0)
+    goto <bb 3>; [INV]
+  else
+    goto <bb 4>; [INV]
 
   <bb 3> :
-<L0>:
-  return D.5922;
+  RawResetValue = Mcu_Ipw_GetResetRawValue ();
+  Mcu_HLDChecksExit (0, 6);
+
+  <bb 4> :
+  D.6064 = RawResetValue;
+
+  <bb 5> :
+<L2>:
+  return D.6064;
 
 }
 
@@ -45,15 +88,26 @@ Mcu_GetResetRawValue ()
 Mcu_GetResetReason ()
 {
   Mcu_ResetType ResetReason;
-  Mcu_ResetType D.5920;
+  Mcu_ResetType D.6060;
 
   <bb 2> :
-  ResetReason = Mcu_Ipw_GetResetReason ();
-  D.5920 = ResetReason;
+  ResetReason = 14;
+  _1 = Mcu_HLDChecksEntry (5);
+  if (_1 == 0)
+    goto <bb 3>; [INV]
+  else
+    goto <bb 4>; [INV]
 
   <bb 3> :
-<L0>:
-  return D.5920;
+  ResetReason = Mcu_Ipw_GetResetReason ();
+  Mcu_HLDChecksExit (0, 5);
+
+  <bb 4> :
+  D.6060 = ResetReason;
+
+  <bb 5> :
+<L2>:
+  return D.6060;
 
 }
 
@@ -61,15 +115,25 @@ Mcu_GetResetReason ()
 Mcu_GetPllStatus ()
 {
   Mcu_PllStatusType PllStatus;
-  Mcu_PllStatusType D.5918;
+  Mcu_PllStatusType D.6056;
 
   <bb 2> :
   PllStatus = 2;
-  D.5918 = PllStatus;
+  _1 = Mcu_HLDChecksEntry (4);
+  if (_1 == 0)
+    goto <bb 3>; [INV]
+  else
+    goto <bb 4>; [INV]
 
   <bb 3> :
-<L0>:
-  return D.5918;
+  Mcu_HLDChecksExit (0, 4);
+
+  <bb 4> :
+  D.6056 = PllStatus;
+
+  <bb 5> :
+<L2>:
+  return D.6056;
 
 }
 
@@ -80,13 +144,32 @@ Mcu_SetMode (Mcu_ModeType McuMode)
 
   <bb 2> :
   McuModeId = Mcu_au8ModeConfigIds[McuMode];
+  _1 = Mcu_HLDChecksEntry (8);
+  if (_1 == 0)
+    goto <bb 3>; [INV]
+  else
+    goto <bb 6>; [INV]
+
+  <bb 3> :
+  _2 = Mcu_CheckSetMode (McuMode);
+  if (_2 == 0)
+    goto <bb 4>; [INV]
+  else
+    goto <bb 5>; [INV]
+
+  <bb 4> :
   SchM_Enter_Mcu_MCU_EXCLUSIVE_AREA_00 ();
-  Mcu_pConfigPtr.6_1 = Mcu_pConfigPtr;
-  _2 = Mcu_pConfigPtr.6_1->ModeConfigArrayPtr;
-  _3 = (int) McuModeId;
-  _4 = &(*_2)[_3];
-  Mcu_Ipw_SetMode (_4);
+  Mcu_pConfigPtr.10_3 = Mcu_pConfigPtr;
+  _4 = Mcu_pConfigPtr.10_3->ModeConfigArrayPtr;
+  _5 = (int) McuModeId;
+  _6 = &(*_4)[_5];
+  Mcu_Ipw_SetMode (_6);
   SchM_Exit_Mcu_MCU_EXCLUSIVE_AREA_00 ();
+
+  <bb 5> :
+  Mcu_HLDChecksExit (0, 8);
+
+  <bb 6> :
   return;
 
 }
@@ -96,21 +179,41 @@ Mcu_InitClock (Mcu_ClockType ClockSetting)
 {
   Std_ReturnType ClockStatus;
   const uint8 ClockConfigId;
-  Std_ReturnType D.5916;
+  Std_ReturnType D.6048;
 
   <bb 2> :
   ClockConfigId = Mcu_au8ClockConfigIds[ClockSetting];
-  Mcu_pConfigPtr.5_1 = Mcu_pConfigPtr;
-  _2 = Mcu_pConfigPtr.5_1->ClockConfigArrayPtr;
-  _3 = (int) ClockConfigId;
-  _4 = &(*_2)[_3];
-  Mcu_Ipw_InitClock (_4);
-  ClockStatus = 0;
-  D.5916 = ClockStatus;
+  ClockStatus = 1;
+  _1 = Mcu_HLDChecksEntry (2);
+  if (_1 == 0)
+    goto <bb 3>; [INV]
+  else
+    goto <bb 6>; [INV]
 
   <bb 3> :
-<L0>:
-  return D.5916;
+  _2 = Mcu_CheckInitClock (ClockSetting);
+  if (_2 == 0)
+    goto <bb 4>; [INV]
+  else
+    goto <bb 5>; [INV]
+
+  <bb 4> :
+  Mcu_pConfigPtr.9_3 = Mcu_pConfigPtr;
+  _4 = Mcu_pConfigPtr.9_3->ClockConfigArrayPtr;
+  _5 = (int) ClockConfigId;
+  _6 = &(*_4)[_5];
+  Mcu_Ipw_InitClock (_6);
+  ClockStatus = 0;
+
+  <bb 5> :
+  Mcu_HLDChecksExit (0, 2);
+
+  <bb 6> :
+  D.6048 = ClockStatus;
+
+  <bb 7> :
+<L4>:
+  return D.6048;
 
 }
 
@@ -118,69 +221,291 @@ Mcu_InitClock (Mcu_ClockType ClockSetting)
 Mcu_InitRamSection (Mcu_RamSectionType RamSection)
 {
   Std_ReturnType RamStatus;
-  Std_ReturnType D.5914;
+  Std_ReturnType D.6042;
 
   <bb 2> :
   RamStatus = 1;
-  D.5914 = RamStatus;
+  _1 = Mcu_HLDChecksEntry (1);
+  if (_1 == 0)
+    goto <bb 3>; [INV]
+  else
+    goto <bb 4>; [INV]
 
   <bb 3> :
-<L0>:
-  return D.5914;
+  Mcu_HLDChecksExit (0, 1);
+
+  <bb 4> :
+  D.6042 = RamStatus;
+
+  <bb 5> :
+<L2>:
+  return D.6042;
 
 }
 
 
 Mcu_Init (const struct Mcu_ConfigType * ConfigPtr)
 {
+  Std_ReturnType CheckStatus;
   uint32 NoConfigs;
 
   <bb 2> :
-  Mcu_pConfigPtr = ConfigPtr;
-  NoConfigs = 0;
-  goto <bb 4>; [INV]
+  CheckStatus = Mcu_HLDChecksEntry (0);
+  if (CheckStatus == 0)
+    goto <bb 3>; [INV]
+  else
+    goto <bb 13>; [INV]
 
   <bb 3> :
-  Mcu_pConfigPtr.0_1 = Mcu_pConfigPtr;
-  _2 = Mcu_pConfigPtr.0_1->ModeConfigArrayPtr;
+  CheckStatus = Mcu_CheckInit (ConfigPtr);
+  if (CheckStatus == 0)
+    goto <bb 4>; [INV]
+  else
+    goto <bb 11>; [INV]
+
+  <bb 4> :
+  Mcu_pConfigPtr = ConfigPtr;
+  NoConfigs = 0;
+  goto <bb 6>; [INV]
+
+  <bb 5> :
+  Mcu_pConfigPtr.4_1 = Mcu_pConfigPtr;
+  _2 = Mcu_pConfigPtr.4_1->ModeConfigArrayPtr;
   _3 = (*_2)[NoConfigs].ModeConfigId;
   _4 = (unsigned char) NoConfigs;
   Mcu_au8ModeConfigIds[_3] = _4;
   NoConfigs = NoConfigs + 1;
 
-  <bb 4> :
-  Mcu_pConfigPtr.1_5 = Mcu_pConfigPtr;
-  _6 = Mcu_pConfigPtr.1_5->NoModeConfigs;
-  if (NoConfigs < _6)
-    goto <bb 3>; [INV]
-  else
-    goto <bb 5>; [INV]
-
-  <bb 5> :
-  NoConfigs = 0;
-  goto <bb 7>; [INV]
-
   <bb 6> :
-  Mcu_pConfigPtr.2_7 = Mcu_pConfigPtr;
-  _8 = Mcu_pConfigPtr.2_7->ClockConfigArrayPtr;
+  Mcu_pConfigPtr.5_5 = Mcu_pConfigPtr;
+  _6 = Mcu_pConfigPtr.5_5->NoModeConfigs;
+  if (NoConfigs < _6)
+    goto <bb 5>; [INV]
+  else
+    goto <bb 7>; [INV]
+
+  <bb 7> :
+  NoConfigs = 0;
+  goto <bb 9>; [INV]
+
+  <bb 8> :
+  Mcu_pConfigPtr.6_7 = Mcu_pConfigPtr;
+  _8 = Mcu_pConfigPtr.6_7->ClockConfigArrayPtr;
   _9 = (*_8)[NoConfigs].ClkConfigId;
   _10 = (unsigned char) NoConfigs;
   Mcu_au8ClockConfigIds[_9] = _10;
   NoConfigs = NoConfigs + 1;
 
-  <bb 7> :
-  Mcu_pConfigPtr.3_11 = Mcu_pConfigPtr;
-  _12 = Mcu_pConfigPtr.3_11->NoClkConfigs;
+  <bb 9> :
+  Mcu_pConfigPtr.7_11 = Mcu_pConfigPtr;
+  _12 = Mcu_pConfigPtr.7_11->NoClkConfigs;
   if (NoConfigs < _12)
+    goto <bb 8>; [INV]
+  else
+    goto <bb 10>; [INV]
+
+  <bb 10> :
+  Mcu_pConfigPtr.8_13 = Mcu_pConfigPtr;
+  _14 = Mcu_pConfigPtr.8_13->HwIPsConfigPtr;
+  Mcu_Ipw_Init (_14);
+  goto <bb 12>; [INV]
+
+  <bb 11> :
+  Mcu_pConfigPtr = 0B;
+
+  <bb 12> :
+  Mcu_HLDChecksExit (CheckStatus, 0);
+
+  <bb 13> :
+  return;
+
+}
+
+
+Mcu_HLDChecksExit (Std_ReturnType RetStatus, uint8 McuServiceID)
+{
+  <bb 2> :
+  if (McuServiceID == 0)
+    goto <bb 3>; [INV]
+  else
     goto <bb 6>; [INV]
+
+  <bb 3> :
+  if (RetStatus == 0)
+    goto <bb 4>; [INV]
+  else
+    goto <bb 5>; [INV]
+
+  <bb 4> :
+  Mcu_eStatus = 12;
+  goto <bb 7>; [INV]
+
+  <bb 5> :
+  Mcu_eStatus = 3;
+  goto <bb 7>; [INV]
+
+  <bb 6> :
+  Mcu_eStatus = 12;
+
+  <bb 7> :
+  return;
+
+}
+
+
+Mcu_HLDChecksEntry (uint8 McuServiceID)
+{
+  Std_ReturnType CheckStatus;
+  Std_ReturnType D.6027;
+
+  <bb 2> :
+  CheckStatus = 0;
+  if (McuServiceID == 0)
+    goto <bb 3>; [INV]
+  else
+    goto <bb 5>; [INV]
+
+  <bb 3> :
+  Mcu_eStatus.2_1 = Mcu_eStatus;
+  if (Mcu_eStatus.2_1 != 3)
+    goto <bb 4>; [INV]
   else
     goto <bb 8>; [INV]
 
+  <bb 4> :
+  CheckStatus = 1;
+  Det_ReportError (101, 0, McuServiceID, 19);
+  goto <bb 8>; [INV]
+
+  <bb 5> :
+  Mcu_eStatus.3_2 = Mcu_eStatus;
+  if (Mcu_eStatus.3_2 == 3)
+    goto <bb 6>; [INV]
+  else
+    goto <bb 7>; [INV]
+
+  <bb 6> :
+  CheckStatus = 1;
+  Det_ReportError (101, 0, McuServiceID, 15);
+  goto <bb 8>; [INV]
+
+  <bb 7> :
+  Mcu_eStatus = 10;
+
   <bb 8> :
-  Mcu_pConfigPtr.4_13 = Mcu_pConfigPtr;
-  _14 = Mcu_pConfigPtr.4_13->HwIPsConfigPtr;
-  Mcu_Ipw_Init (_14);
-  return;
+  D.6027 = CheckStatus;
+
+  <bb 9> :
+<L8>:
+  return D.6027;
+
+}
+
+
+Mcu_CheckGetVersionInfo (const struct Std_VersionInfoType * VersionInfo)
+{
+  Std_ReturnType CheckStatus;
+  Std_ReturnType D.6017;
+
+  <bb 2> :
+  CheckStatus = 0;
+  if (VersionInfo == 0B)
+    goto <bb 3>; [INV]
+  else
+    goto <bb 4>; [INV]
+
+  <bb 3> :
+  CheckStatus = 1;
+  Det_ReportError (101, 0, 9, 16);
+
+  <bb 4> :
+  D.6017 = CheckStatus;
+
+  <bb 5> :
+<L2>:
+  return D.6017;
+
+}
+
+
+Mcu_CheckSetMode (Power_Ip_ModeType McuMode)
+{
+  Std_ReturnType CheckStatus;
+  Std_ReturnType D.6013;
+
+  <bb 2> :
+  CheckStatus = 0;
+  Mcu_pConfigPtr.1_1 = Mcu_pConfigPtr;
+  _2 = Mcu_pConfigPtr.1_1->NoModeConfigs;
+  if (McuMode >= _2)
+    goto <bb 3>; [INV]
+  else
+    goto <bb 4>; [INV]
+
+  <bb 3> :
+  CheckStatus = 1;
+  Det_ReportError (101, 0, 8, 12);
+
+  <bb 4> :
+  D.6013 = CheckStatus;
+
+  <bb 5> :
+<L2>:
+  return D.6013;
+
+}
+
+
+Mcu_CheckInitClock (Mcu_ClockType ClockSetting)
+{
+  Std_ReturnType CheckStatus;
+  Std_ReturnType D.6009;
+
+  <bb 2> :
+  CheckStatus = 0;
+  Mcu_pConfigPtr.0_1 = Mcu_pConfigPtr;
+  _2 = Mcu_pConfigPtr.0_1->NoClkConfigs;
+  if (ClockSetting >= _2)
+    goto <bb 3>; [INV]
+  else
+    goto <bb 4>; [INV]
+
+  <bb 3> :
+  CheckStatus = 1;
+  Det_ReportError (101, 0, 2, 11);
+
+  <bb 4> :
+  D.6009 = CheckStatus;
+
+  <bb 5> :
+<L2>:
+  return D.6009;
+
+}
+
+
+Mcu_CheckInit (const struct Mcu_ConfigType * ConfigPtr)
+{
+  Std_ReturnType CheckStatus;
+  Std_ReturnType D.6005;
+
+  <bb 2> :
+  CheckStatus = 0;
+  if (ConfigPtr == 0B)
+    goto <bb 3>; [INV]
+  else
+    goto <bb 4>; [INV]
+
+  <bb 3> :
+  CheckStatus = 1;
+  Det_ReportError (101, 0, 0, 17);
+
+  <bb 4> :
+  D.6005 = CheckStatus;
+
+  <bb 5> :
+<L2>:
+  return D.6005;
 
 }
 

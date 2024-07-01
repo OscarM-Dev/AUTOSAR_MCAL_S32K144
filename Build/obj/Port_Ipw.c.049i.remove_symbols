@@ -4,157 +4,289 @@ Reclaiming variables:
 Clearing address taken flags:
 Symbol table:
 
-SchM_Exit_Port_PORT_EXCLUSIVE_AREA_20/17 (SchM_Exit_Port_PORT_EXCLUSIVE_AREA_20) @06b17a80
+SchM_Exit_Port_PORT_EXCLUSIVE_AREA_20/32 (SchM_Exit_Port_PORT_EXCLUSIVE_AREA_20) @06a6aa80
   Type: function
   Visibility: external public
   References: 
   Referring: 
   Availability: not_available
   Function flags:
-  Called by: Port_Ipw_RefreshPortDirection/3 
+  Called by: Port_Ipw_RefreshPortDirection/8 
   Calls: 
-SchM_Enter_Port_PORT_EXCLUSIVE_AREA_20/16 (SchM_Enter_Port_PORT_EXCLUSIVE_AREA_20) @06b177e0
+SchM_Enter_Port_PORT_EXCLUSIVE_AREA_20/31 (SchM_Enter_Port_PORT_EXCLUSIVE_AREA_20) @06a6a8c0
   Type: function
   Visibility: external public
   References: 
   Referring: 
   Availability: not_available
   Function flags:
-  Called by: Port_Ipw_RefreshPortDirection/3 
+  Called by: Port_Ipw_RefreshPortDirection/8 
   Calls: 
-SchM_Exit_Port_PORT_EXCLUSIVE_AREA_19/15 (SchM_Exit_Port_PORT_EXCLUSIVE_AREA_19) @06b17ee0
+SchM_Exit_Port_PORT_EXCLUSIVE_AREA_19/30 (SchM_Exit_Port_PORT_EXCLUSIVE_AREA_19) @06a6a7e0
   Type: function
   Visibility: external public
   References: 
   Referring: 
   Availability: not_available
   Function flags:
-  Called by: Port_Ipw_RefreshPortDirection/3 Port_Ipw_RefreshPortDirection/3 
+  Called by: Port_Ipw_RefreshPortDirection/8 Port_Ipw_RefreshPortDirection/8 
   Calls: 
-SchM_Enter_Port_PORT_EXCLUSIVE_AREA_19/14 (SchM_Enter_Port_PORT_EXCLUSIVE_AREA_19) @06b17e00
+SchM_Enter_Port_PORT_EXCLUSIVE_AREA_19/29 (SchM_Enter_Port_PORT_EXCLUSIVE_AREA_19) @06a6a700
   Type: function
   Visibility: external public
   References: 
   Referring: 
   Availability: not_available
   Function flags:
-  Called by: Port_Ipw_RefreshPortDirection/3 Port_Ipw_RefreshPortDirection/3 
+  Called by: Port_Ipw_RefreshPortDirection/8 Port_Ipw_RefreshPortDirection/8 
   Calls: 
-SchM_Exit_Port_PORT_EXCLUSIVE_AREA_10/13 (SchM_Exit_Port_PORT_EXCLUSIVE_AREA_10) @06b17c40
+SchM_Exit_Port_PORT_EXCLUSIVE_AREA_18/28 (SchM_Exit_Port_PORT_EXCLUSIVE_AREA_18) @06a6a460
   Type: function
   Visibility: external public
   References: 
   Referring: 
   Availability: not_available
   Function flags:
-  Called by: Port_Ipw_Init_UnusedPins/1 
+  Called by: Port_Ipw_SetGpioDirChangeability/6 
   Calls: 
-SchM_Enter_Port_PORT_EXCLUSIVE_AREA_10/12 (SchM_Enter_Port_PORT_EXCLUSIVE_AREA_10) @06b17b60
+SchM_Enter_Port_PORT_EXCLUSIVE_AREA_18/27 (SchM_Enter_Port_PORT_EXCLUSIVE_AREA_18) @06a6a380
   Type: function
   Visibility: external public
   References: 
   Referring: 
   Availability: not_available
   Function flags:
-  Called by: Port_Ipw_Init_UnusedPins/1 
+  Called by: Port_Ipw_SetGpioDirChangeability/6 
   Calls: 
-SchM_Exit_Port_PORT_EXCLUSIVE_AREA_09/11 (SchM_Exit_Port_PORT_EXCLUSIVE_AREA_09) @06b179a0
+SchM_Exit_Port_PORT_EXCLUSIVE_AREA_27/26 (SchM_Exit_Port_PORT_EXCLUSIVE_AREA_27) @06a6a1c0
   Type: function
   Visibility: external public
   References: 
   Referring: 
   Availability: not_available
   Function flags:
-  Called by: Port_Ipw_Init_UnusedPins/1 Port_Ipw_Init_UnusedPins/1 
+  Called by: Port_Ipw_SetPinMode/5 
   Calls: 
-SchM_Enter_Port_PORT_EXCLUSIVE_AREA_09/10 (SchM_Enter_Port_PORT_EXCLUSIVE_AREA_09) @06b178c0
+SchM_Enter_Port_PORT_EXCLUSIVE_AREA_27/25 (SchM_Enter_Port_PORT_EXCLUSIVE_AREA_27) @06a6a0e0
   Type: function
   Visibility: external public
   References: 
   Referring: 
   Availability: not_available
   Function flags:
-  Called by: Port_Ipw_Init_UnusedPins/1 Port_Ipw_Init_UnusedPins/1 
+  Called by: Port_Ipw_SetPinMode/5 
   Calls: 
-Port_au32PortCiGpioBaseAddr/9 (Port_au32PortCiGpioBaseAddr) @06b18bd0
+Port_au16PinDescription/24 (Port_au16PinDescription) @06a69240
   Type: variable
   Body removed by symtab_remove_unreachable_nodes
   Visibility: external public
   References: 
-  Referring: Port_Ipw_Init_UnusedPins/1 (read) Port_Ipw_Init_UnusedPins/1 (read) Port_Ipw_Init_UnusedPins/1 (read) Port_Ipw_Init_UnusedPins/1 (read) Port_Ipw_Init_UnusedPins/1 (read) Port_Ipw_Init_UnusedPins/1 (read) Port_Ipw_Init_UnusedPins/1 (read) Port_Ipw_Init_UnusedPins/1 (read) Port_Ipw_Init_UnusedPins/1 (read) Port_Ipw_Init_UnusedPins/1 (read) Port_Ipw_RefreshPortDirection/3 (read) Port_Ipw_RefreshPortDirection/3 (read) Port_Ipw_RefreshPortDirection/3 (read) Port_Ipw_RefreshPortDirection/3 (read) Port_Ipw_RefreshPortDirection/3 (read) Port_Ipw_RefreshPortDirection/3 (read) Port_Ipw_RefreshPortDirection/3 (read) Port_Ipw_RefreshPortDirection/3 (read) 
+  Referring: Port_Ipw_SetPinMode/5 (read) 
   Availability: not_available
   Varpool flags: read-only
-Port_Ci_Port_Ip_Init/8 (Port_Ci_Port_Ip_Init) @06b17700
+SchM_Exit_Port_PORT_EXCLUSIVE_AREA_17/23 (SchM_Exit_Port_PORT_EXCLUSIVE_AREA_17) @06957700
   Type: function
   Visibility: external public
   References: 
   Referring: 
   Availability: not_available
   Function flags:
-  Called by: Port_Ipw_Init/2 
+  Called by: Port_Ipw_SetPinDirection/4 
   Calls: 
-SchM_Exit_Port_PORT_EXCLUSIVE_AREA_15/7 (SchM_Exit_Port_PORT_EXCLUSIVE_AREA_15) @06b17620
+SchM_Enter_Port_PORT_EXCLUSIVE_AREA_17/22 (SchM_Enter_Port_PORT_EXCLUSIVE_AREA_17) @069579a0
   Type: function
   Visibility: external public
   References: 
   Referring: 
   Availability: not_available
   Function flags:
-  Called by: Port_Ipw_Init/2 
+  Called by: Port_Ipw_SetPinDirection/4 
   Calls: 
-SchM_Enter_Port_PORT_EXCLUSIVE_AREA_15/6 (SchM_Enter_Port_PORT_EXCLUSIVE_AREA_15) @06b17540
+SchM_Exit_Port_PORT_EXCLUSIVE_AREA_16/21 (SchM_Exit_Port_PORT_EXCLUSIVE_AREA_16) @06957ee0
   Type: function
   Visibility: external public
   References: 
   Referring: 
   Availability: not_available
   Function flags:
-  Called by: Port_Ipw_Init/2 
+  Called by: Port_Ipw_SetPinDirection/4 Port_Ipw_SetPinDirection/4 
   Calls: 
-Port_Ci_Port_Ip_ConfigDigitalFilter/5 (Port_Ci_Port_Ip_ConfigDigitalFilter) @06b17460
+SchM_Enter_Port_PORT_EXCLUSIVE_AREA_16/20 (SchM_Enter_Port_PORT_EXCLUSIVE_AREA_16) @06957e00
   Type: function
   Visibility: external public
   References: 
   Referring: 
   Availability: not_available
   Function flags:
-  Called by: Port_Ipw_Init/2 
+  Called by: Port_Ipw_SetPinDirection/4 Port_Ipw_SetPinDirection/4 
   Calls: 
-Port_au32PortCiPortBaseAddr/4 (Port_au32PortCiPortBaseAddr) @06b183f0
+Det_ReportError/19 (Det_ReportError) @06957d20
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: Port_Ipw_SetPinMode/5 Port_Ipw_SetPinMode/5 Port_Ipw_SetPinMode/5 Port_Ipw_SetPinDirection/4 Port_Ipw_SetPinDirection/4 
+  Calls: 
+SchM_Exit_Port_PORT_EXCLUSIVE_AREA_10/18 (SchM_Exit_Port_PORT_EXCLUSIVE_AREA_10) @06957b60
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: Port_Ipw_Init_UnusedPins/2 
+  Calls: 
+SchM_Enter_Port_PORT_EXCLUSIVE_AREA_10/17 (SchM_Enter_Port_PORT_EXCLUSIVE_AREA_10) @06957a80
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: Port_Ipw_Init_UnusedPins/2 
+  Calls: 
+SchM_Exit_Port_PORT_EXCLUSIVE_AREA_09/16 (SchM_Exit_Port_PORT_EXCLUSIVE_AREA_09) @069578c0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: Port_Ipw_Init_UnusedPins/2 Port_Ipw_Init_UnusedPins/2 
+  Calls: 
+SchM_Enter_Port_PORT_EXCLUSIVE_AREA_09/15 (SchM_Enter_Port_PORT_EXCLUSIVE_AREA_09) @069577e0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: Port_Ipw_Init_UnusedPins/2 Port_Ipw_Init_UnusedPins/2 
+  Calls: 
+Port_au32PortCiGpioBaseAddr/14 (Port_au32PortCiGpioBaseAddr) @06952f30
   Type: variable
   Body removed by symtab_remove_unreachable_nodes
   Visibility: external public
   References: 
-  Referring: Port_Ipw_Init_UnusedPins/1 (read) Port_Ipw_Init/2 (read) Port_Ipw_Init/2 (read) Port_Ipw_Init/2 (read) 
+  Referring: Port_Ipw_Init_UnusedPins/2 (read) Port_Ipw_Init_UnusedPins/2 (read) Port_Ipw_Init_UnusedPins/2 (read) Port_Ipw_Init_UnusedPins/2 (read) Port_Ipw_Init_UnusedPins/2 (read) Port_Ipw_Init_UnusedPins/2 (read) Port_Ipw_Init_UnusedPins/2 (read) Port_Ipw_Init_UnusedPins/2 (read) Port_Ipw_SetPinDirection/4 (read) Port_Ipw_SetPinDirection/4 (read) Port_Ipw_SetPinDirection/4 (read) Port_Ipw_SetPinDirection/4 (read) Port_Ipw_SetPinDirection/4 (read) Port_Ipw_SetPinDirection/4 (read) Port_Ipw_SetPinDirection/4 (read) Port_Ipw_SetPinDirection/4 (read) Port_Ipw_SetGpioPadOutput/7 (read) Port_Ipw_SetGpioPadOutput/7 (read) Port_Ipw_Init_UnusedPins/2 (read) Port_Ipw_Init_UnusedPins/2 (read) Port_Ipw_RefreshPortDirection/8 (read) Port_Ipw_RefreshPortDirection/8 (read) Port_Ipw_RefreshPortDirection/8 (read) Port_Ipw_RefreshPortDirection/8 (read) Port_Ipw_RefreshPortDirection/8 (read) Port_Ipw_RefreshPortDirection/8 (read) Port_Ipw_RefreshPortDirection/8 (read) Port_Ipw_RefreshPortDirection/8 (read) 
   Availability: not_available
   Varpool flags: read-only
-Port_Ipw_RefreshPortDirection/3 (Port_Ipw_RefreshPortDirection) @06b17000
+Port_Ci_Port_Ip_Init/13 (Port_Ci_Port_Ip_Init) @06957620
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: Port_Ipw_Init/3 
+  Calls: 
+SchM_Exit_Port_PORT_EXCLUSIVE_AREA_15/12 (SchM_Exit_Port_PORT_EXCLUSIVE_AREA_15) @06957540
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: Port_Ipw_Init/3 
+  Calls: 
+SchM_Enter_Port_PORT_EXCLUSIVE_AREA_15/11 (SchM_Enter_Port_PORT_EXCLUSIVE_AREA_15) @06957460
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: Port_Ipw_Init/3 
+  Calls: 
+Port_Ci_Port_Ip_ConfigDigitalFilter/10 (Port_Ci_Port_Ip_ConfigDigitalFilter) @06957380
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: Port_Ipw_Init/3 
+  Calls: 
+Port_au32PortCiPortBaseAddr/9 (Port_au32PortCiPortBaseAddr) @06952750
+  Type: variable
+  Body removed by symtab_remove_unreachable_nodes
+  Visibility: external public
+  References: 
+  Referring: Port_Ipw_Init_UnusedPins/2 (read) Port_Ipw_Init/3 (read) Port_Ipw_Init/3 (read) Port_Ipw_Init/3 (read) Port_Ipw_SetPinMode/5 (read) Port_Ipw_SetPinMode/5 (read) 
+  Availability: not_available
+  Varpool flags: read-only
+Port_Ipw_RefreshPortDirection/8 (Port_Ipw_RefreshPortDirection) @069538c0
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
-  References: Port_au32PortCiGpioBaseAddr/9 (read) Port_au32PortCiGpioBaseAddr/9 (read) Port_au32PortCiGpioBaseAddr/9 (read) Port_au32PortCiGpioBaseAddr/9 (read) Port_au32PortCiGpioBaseAddr/9 (read) Port_au32PortCiGpioBaseAddr/9 (read) Port_au32PortCiGpioBaseAddr/9 (read) Port_au32PortCiGpioBaseAddr/9 (read) 
+  References: Port_au32PortCiGpioBaseAddr/14 (read) Port_au32PortCiGpioBaseAddr/14 (read) Port_au32PortCiGpioBaseAddr/14 (read) Port_au32PortCiGpioBaseAddr/14 (read) Port_au32PortCiGpioBaseAddr/14 (read) Port_au32PortCiGpioBaseAddr/14 (read) Port_au32PortCiGpioBaseAddr/14 (read) Port_au32PortCiGpioBaseAddr/14 (read) 
   Referring: 
   Availability: available
   Function flags: body
   Called by: 
-  Calls: SchM_Exit_Port_PORT_EXCLUSIVE_AREA_20/17 SchM_Enter_Port_PORT_EXCLUSIVE_AREA_20/16 SchM_Exit_Port_PORT_EXCLUSIVE_AREA_19/15 SchM_Enter_Port_PORT_EXCLUSIVE_AREA_19/14 SchM_Exit_Port_PORT_EXCLUSIVE_AREA_19/15 SchM_Enter_Port_PORT_EXCLUSIVE_AREA_19/14 
-Port_Ipw_Init/2 (Port_Ipw_Init) @06b107e0
+  Calls: SchM_Exit_Port_PORT_EXCLUSIVE_AREA_20/32 SchM_Enter_Port_PORT_EXCLUSIVE_AREA_20/31 SchM_Exit_Port_PORT_EXCLUSIVE_AREA_19/30 SchM_Enter_Port_PORT_EXCLUSIVE_AREA_19/29 SchM_Exit_Port_PORT_EXCLUSIVE_AREA_19/30 SchM_Enter_Port_PORT_EXCLUSIVE_AREA_19/29 
+Port_Ipw_SetGpioPadOutput/7 (Port_Ipw_SetGpioPadOutput) @069537e0
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
-  References: Port_au32PortCiPortBaseAddr/4 (read) Port_au32PortCiPortBaseAddr/4 (read) Port_au32PortCiPortBaseAddr/4 (read) 
+  References: Port_au32PortCiGpioBaseAddr/14 (read) Port_au32PortCiGpioBaseAddr/14 (read) 
+  Referring: 
+  Availability: available
+  Function flags: body
+  Called by: Port_Ipw_SetPinMode/5 
+  Calls: 
+Port_Ipw_SetGpioDirChangeability/6 (Port_Ipw_SetGpioDirChangeability) @069531c0
+  Type: function definition analyzed
+  Visibility: force_output externally_visible no_reorder public
+  References: Port_Ipw_au16GpioDirChangeability/1 (read) Port_Ipw_au16GpioDirChangeability/1 (write) 
+  Referring: 
+  Availability: available
+  Function flags: body
+  Called by: Port_Ipw_SetPinMode/5 Port_Ipw_SetPinMode/5 
+  Calls: SchM_Exit_Port_PORT_EXCLUSIVE_AREA_18/28 SchM_Enter_Port_PORT_EXCLUSIVE_AREA_18/27 
+Port_Ipw_SetPinMode/5 (Port_Ipw_SetPinMode) @06934c40
+  Type: function definition analyzed
+  Visibility: force_output externally_visible no_reorder public
+  References: Port_au16PinDescription/24 (read) Port_au32PortCiPortBaseAddr/9 (read) Port_au32PortCiPortBaseAddr/9 (read) 
   Referring: 
   Availability: available
   Function flags: body
   Called by: 
-  Calls: Port_Ipw_Init_UnusedPins/1 Port_Ci_Port_Ip_Init/8 SchM_Exit_Port_PORT_EXCLUSIVE_AREA_15/7 SchM_Enter_Port_PORT_EXCLUSIVE_AREA_15/6 Port_Ci_Port_Ip_ConfigDigitalFilter/5 
-Port_Ipw_Init_UnusedPins/1 (Port_Ipw_Init_UnusedPins) @06b10540
+  Calls: SchM_Exit_Port_PORT_EXCLUSIVE_AREA_27/26 SchM_Enter_Port_PORT_EXCLUSIVE_AREA_27/25 Port_Ipw_SetGpioDirChangeability/6 Port_Ipw_SetPinDirection/4 Port_Ipw_SetGpioPadOutput/7 Port_Ipw_SetGpioDirChangeability/6 Det_ReportError/19 Det_ReportError/19 Det_ReportError/19 
+Port_Ipw_SetPinDirection/4 (Port_Ipw_SetPinDirection) @06934b60
+  Type: function definition analyzed
+  Visibility: force_output externally_visible no_reorder public
+  References: Port_Ipw_au16GpioDirChangeability/1 (read) Port_au32PortCiGpioBaseAddr/14 (read) Port_au32PortCiGpioBaseAddr/14 (read) Port_au32PortCiGpioBaseAddr/14 (read) Port_au32PortCiGpioBaseAddr/14 (read) Port_au32PortCiGpioBaseAddr/14 (read) Port_au32PortCiGpioBaseAddr/14 (read) Port_au32PortCiGpioBaseAddr/14 (read) Port_au32PortCiGpioBaseAddr/14 (read) 
+  Referring: 
+  Availability: available
+  Function flags: body
+  Called by: Port_Ipw_SetPinMode/5 
+  Calls: SchM_Exit_Port_PORT_EXCLUSIVE_AREA_17/23 SchM_Enter_Port_PORT_EXCLUSIVE_AREA_17/22 SchM_Exit_Port_PORT_EXCLUSIVE_AREA_16/21 SchM_Enter_Port_PORT_EXCLUSIVE_AREA_16/20 SchM_Exit_Port_PORT_EXCLUSIVE_AREA_16/21 SchM_Enter_Port_PORT_EXCLUSIVE_AREA_16/20 Det_ReportError/19 Det_ReportError/19 
+Port_Ipw_Init/3 (Port_Ipw_Init) @069341c0
+  Type: function definition analyzed
+  Visibility: force_output externally_visible no_reorder public
+  References: Port_au32PortCiPortBaseAddr/9 (read) Port_au32PortCiPortBaseAddr/9 (read) Port_au32PortCiPortBaseAddr/9 (read) Port_Ipw_au16GpioDirChangeability/1 (write) 
+  Referring: 
+  Availability: available
+  Function flags: body
+  Called by: 
+  Calls: Port_Ipw_Init_UnusedPins/2 Port_Ci_Port_Ip_Init/13 SchM_Exit_Port_PORT_EXCLUSIVE_AREA_15/12 SchM_Enter_Port_PORT_EXCLUSIVE_AREA_15/11 Port_Ci_Port_Ip_ConfigDigitalFilter/10 
+Port_Ipw_Init_UnusedPins/2 (Port_Ipw_Init_UnusedPins) @06a071c0
   Type: function definition analyzed
   Visibility: no_reorder prevailing_def_ironly
-  References: Port_au32PortCiGpioBaseAddr/9 (read) Port_au32PortCiGpioBaseAddr/9 (read) Port_au32PortCiGpioBaseAddr/9 (read) Port_au32PortCiGpioBaseAddr/9 (read) Port_au32PortCiGpioBaseAddr/9 (read) Port_au32PortCiGpioBaseAddr/9 (read) Port_au32PortCiGpioBaseAddr/9 (read) Port_au32PortCiGpioBaseAddr/9 (read) Port_au32PortCiGpioBaseAddr/9 (read) Port_au32PortCiGpioBaseAddr/9 (read) Port_au32PortCiPortBaseAddr/4 (read) 
+  References: Port_au32PortCiGpioBaseAddr/14 (read) Port_au32PortCiGpioBaseAddr/14 (read) Port_au32PortCiGpioBaseAddr/14 (read) Port_au32PortCiGpioBaseAddr/14 (read) Port_au32PortCiGpioBaseAddr/14 (read) Port_au32PortCiGpioBaseAddr/14 (read) Port_au32PortCiGpioBaseAddr/14 (read) Port_au32PortCiGpioBaseAddr/14 (read) Port_au32PortCiGpioBaseAddr/14 (read) Port_au32PortCiGpioBaseAddr/14 (read) Port_au32PortCiPortBaseAddr/9 (read) 
   Referring: 
   Availability: local
   Function flags: body local
-  Called by: Port_Ipw_Init/2 
-  Calls: SchM_Exit_Port_PORT_EXCLUSIVE_AREA_10/13 SchM_Enter_Port_PORT_EXCLUSIVE_AREA_10/12 SchM_Exit_Port_PORT_EXCLUSIVE_AREA_09/11 SchM_Enter_Port_PORT_EXCLUSIVE_AREA_09/10 SchM_Exit_Port_PORT_EXCLUSIVE_AREA_09/11 SchM_Enter_Port_PORT_EXCLUSIVE_AREA_09/10 
+  Called by: Port_Ipw_Init/3 
+  Calls: SchM_Exit_Port_PORT_EXCLUSIVE_AREA_10/18 SchM_Enter_Port_PORT_EXCLUSIVE_AREA_10/17 SchM_Exit_Port_PORT_EXCLUSIVE_AREA_09/16 SchM_Enter_Port_PORT_EXCLUSIVE_AREA_09/15 SchM_Exit_Port_PORT_EXCLUSIVE_AREA_09/16 SchM_Enter_Port_PORT_EXCLUSIVE_AREA_09/15 
+Port_Ipw_au16GpioDirChangeability/1 (Port_Ipw_au16GpioDirChangeability) @06a007e0
+  Type: variable definition analyzed
+  Visibility: force_output no_reorder prevailing_def_ironly
+  References: 
+  Referring: Port_Ipw_Init/3 (write) Port_Ipw_SetPinDirection/4 (read) Port_Ipw_SetGpioDirChangeability/6 (read) Port_Ipw_SetGpioDirChangeability/6 (write) 
+  Availability: available
+  Varpool flags:
 Port_Ipw_RefreshPortDirection (const struct Port_ConfigType * pConfigPtr)
 {
   uint16 PinPad;
@@ -241,7 +373,7 @@ Port_Ipw_RefreshPortDirection (const struct Port_ConfigType * pConfigPtr)
   long unsigned int _79;
   struct GPIO_Type * _80;
   long unsigned int _81;
-  short unsigned int u16PinIndex.2_82;
+  short unsigned int u16PinIndex.3_82;
 
   <bb 2> :
   u16NumPins_89 = pConfigPtr_88(D)->u16NumPins;
@@ -384,8 +516,8 @@ Port_Ipw_RefreshPortDirection (const struct Port_ConfigType * pConfigPtr)
   SchM_Exit_Port_PORT_EXCLUSIVE_AREA_20 ();
 
   <bb 12> :
-  u16PinIndex.2_82 = u16PinIndex_83;
-  u16PinIndex_102 = u16PinIndex.2_82 + 1;
+  u16PinIndex.3_82 = u16PinIndex_83;
+  u16PinIndex_102 = u16PinIndex.3_82 + 1;
 
   <bb 13> :
   # u16PinIndex_83 = PHI <u16PinIndex_90(2), u16PinIndex_102(12)>
@@ -396,6 +528,586 @@ Port_Ipw_RefreshPortDirection (const struct Port_ConfigType * pConfigPtr)
 
   <bb 14> :
   return;
+
+}
+
+
+Port_Ipw_SetGpioPadOutput (Port_PinType PinIndex, const struct Port_ConfigType * pConfigPtr)
+{
+  uint8 u8LocalPDO;
+  uint16 Pin;
+  const struct Port_PinConfigType * _1;
+  long unsigned int _2;
+  const struct Port_PinConfigType * _3;
+  const struct Port_PinConfigType * _4;
+  long unsigned int _5;
+  const struct Port_PinConfigType * _6;
+  long unsigned int _7;
+  long unsigned int _8;
+  short unsigned int _9;
+  long unsigned int _10;
+  struct GPIO_Type * _11;
+  long unsigned int _12;
+  long unsigned int _13;
+  long unsigned int _14;
+  short unsigned int _15;
+  long unsigned int _16;
+  struct GPIO_Type * _17;
+  long unsigned int _18;
+
+  <bb 2> :
+  _1 = pConfigPtr_21(D)->pUsedPadConfig;
+  _2 = PinIndex_22(D) * 20;
+  _3 = _1 + _2;
+  Pin_23 = _3->Pin;
+  _4 = pConfigPtr_21(D)->pUsedPadConfig;
+  _5 = PinIndex_22(D) * 20;
+  _6 = _4 + _5;
+  u8LocalPDO_24 = _6->u8PDO;
+  if (u8LocalPDO_24 == 1)
+    goto <bb 3>; [INV]
+  else
+    goto <bb 4>; [INV]
+
+  <bb 3> :
+  _7 = (long unsigned int) Pin_23;
+  _8 = _7 & 31;
+  _9 = Pin_23 >> 5;
+  _10 = (long unsigned int) _9;
+  _11 = Port_au32PortCiGpioBaseAddr[_10];
+  _12 = 1 << _8;
+  _11->PSOR ={v} _12;
+  goto <bb 6>; [INV]
+
+  <bb 4> :
+  if (u8LocalPDO_24 == 0)
+    goto <bb 5>; [INV]
+  else
+    goto <bb 6>; [INV]
+
+  <bb 5> :
+  _13 = (long unsigned int) Pin_23;
+  _14 = _13 & 31;
+  _15 = Pin_23 >> 5;
+  _16 = (long unsigned int) _15;
+  _17 = Port_au32PortCiGpioBaseAddr[_16];
+  _18 = 1 << _14;
+  _17->PCOR ={v} _18;
+
+  <bb 6> :
+  return;
+
+}
+
+
+Port_Ipw_SetGpioDirChangeability (uint16 PadID, boolean bStatus)
+{
+  uint16 u16PinDirFlagWord;
+  uint8 u8PinBitOffset;
+  unsigned char _1;
+  unsigned char _2;
+  unsigned char _3;
+  int _4;
+  int _5;
+  long unsigned int _6;
+  short unsigned int _7;
+  int _8;
+  long unsigned int _9;
+  short unsigned int _10;
+  short unsigned int _11;
+  unsigned char _12;
+  unsigned char _13;
+  int _14;
+
+  <bb 2> :
+  SchM_Enter_Port_PORT_EXCLUSIVE_AREA_18 ();
+  _1 = (unsigned char) PadID_18(D);
+  u8PinBitOffset_19 = _1 & 15;
+  _2 = (unsigned char) PadID_18(D);
+  _3 = _2 >> 4;
+  _4 = (int) _3;
+  u16PinDirFlagWord_20 = Port_Ipw_au16GpioDirChangeability[_4];
+  if (bStatus_21(D) != 0)
+    goto <bb 3>; [INV]
+  else
+    goto <bb 4>; [INV]
+
+  <bb 3> :
+  _5 = (int) u8PinBitOffset_19;
+  _6 = 1 << _5;
+  _7 = (short unsigned int) _6;
+  u16PinDirFlagWord_23 = u16PinDirFlagWord_20 | _7;
+  goto <bb 5>; [INV]
+
+  <bb 4> :
+  _8 = (int) u8PinBitOffset_19;
+  _9 = 1 << _8;
+  _10 = (short unsigned int) _9;
+  _11 = ~_10;
+  u16PinDirFlagWord_22 = u16PinDirFlagWord_20 & _11;
+
+  <bb 5> :
+  # u16PinDirFlagWord_15 = PHI <u16PinDirFlagWord_23(3), u16PinDirFlagWord_22(4)>
+  _12 = (unsigned char) PadID_18(D);
+  _13 = _12 >> 4;
+  _14 = (int) _13;
+  Port_Ipw_au16GpioDirChangeability[_14] = u16PinDirFlagWord_15;
+  SchM_Exit_Port_PORT_EXCLUSIVE_AREA_18 ();
+  return;
+
+}
+
+
+Port_Ipw_SetPinMode (Port_PinType PinIndex, Port_PinModeType PinMode, const struct Port_ConfigType * pConfigPtr)
+{
+  Port_PinDirectionType ePadDirection;
+  uint8 CoreId;
+  uint32 u32LocalPCR;
+  uint16 u16PinDescBitOffset;
+  uint16 u16PinDescWord;
+  Port_PinModeType PinCfgRegValue;
+  uint16 PinPad;
+  Std_ReturnType PinModeError;
+  Std_ReturnType D.5837;
+  const struct Port_PinConfigType * _1;
+  long unsigned int _2;
+  const struct Port_PinConfigType * _3;
+  short unsigned int _4;
+  long unsigned int _5;
+  const uint32 * _6;
+  long unsigned int _7;
+  const uint32 * _8;
+  long unsigned int _9;
+  int _10;
+  long unsigned int _11;
+  long unsigned int _12;
+  int _13;
+  long unsigned int _14;
+  const struct Port_PinConfigType * _15;
+  long unsigned int _16;
+  const struct Port_PinConfigType * _17;
+  _Bool _18;
+  _Bool _19;
+  int _20;
+  short unsigned int _21;
+  int _22;
+  int _23;
+  int _24;
+  int _25;
+  int _26;
+  int _27;
+  const struct Port_PinConfigType * _28;
+  long unsigned int _29;
+  const struct Port_PinConfigType * _30;
+  short unsigned int _31;
+  long unsigned int _32;
+  struct PORT_Type * _33;
+  long unsigned int _34;
+  long unsigned int _35;
+  long unsigned int _36;
+  long unsigned int _37;
+  short unsigned int _38;
+  long unsigned int _39;
+  struct PORT_Type * _40;
+  long unsigned int _41;
+  long unsigned int _42;
+  Std_ReturnType _74;
+
+  <bb 2> :
+  PinModeError_47 = 0;
+  _1 = pConfigPtr_49(D)->pUsedPadConfig;
+  _2 = PinIndex_50(D) * 20;
+  _3 = _1 + _2;
+  PinPad_51 = _3->Pin;
+  PinCfgRegValue_53 = PinMode_52(D);
+  CoreId_54 = 0;
+  _4 = pConfigPtr_49(D)->u16NumPins;
+  _5 = (long unsigned int) _4;
+  if (PinIndex_50(D) >= _5)
+    goto <bb 3>; [INV]
+  else
+    goto <bb 4>; [INV]
+
+  <bb 3> :
+  Det_ReportError (124, 0, 4, 10);
+  goto <bb 19>; [INV]
+
+  <bb 4> :
+  _6 = pConfigPtr_49(D)->pau32Port_PinToPartitionMap;
+  _7 = PinIndex_50(D) * 4;
+  _8 = _6 + _7;
+  _9 = *_8;
+  _10 = (int) CoreId_54;
+  _11 = 1 << _10;
+  _12 = _9 & _11;
+  _13 = (int) CoreId_54;
+  _14 = _12 >> _13;
+  if (_14 != 1)
+    goto <bb 5>; [INV]
+  else
+    goto <bb 6>; [INV]
+
+  <bb 5> :
+  Det_ReportError (124, 0, 4, 240);
+  goto <bb 19>; [INV]
+
+  <bb 6> :
+  _15 = pConfigPtr_49(D)->pUsedPadConfig;
+  _16 = PinIndex_50(D) * 20;
+  _17 = _15 + _16;
+  _18 = _17->bMC;
+  _19 = ~_18;
+  if (_19 != 0)
+    goto <bb 7>; [INV]
+  else
+    goto <bb 8>; [INV]
+
+  <bb 7> :
+  Det_ReportError (124, 0, 4, 14);
+  goto <bb 19>; [INV]
+
+  <bb 8> :
+  if (PinMode_52(D) > 7)
+    goto <bb 9>; [INV]
+  else
+    goto <bb 10>; [INV]
+
+  <bb 9> :
+  PinModeError_70 = 13;
+  goto <bb 19>; [INV]
+
+  <bb 10> :
+  ePadDirection_55 = 0;
+  u16PinDescBitOffset_56 = PinPad_51 & 15;
+  _20 = (int) PinMode_52(D);
+  _21 = PinPad_51 >> 4;
+  _22 = (int) _21;
+  u16PinDescWord_57 = Port_au16PinDescription[_20][_22];
+  _23 = (int) u16PinDescWord_57;
+  _24 = (int) u16PinDescBitOffset_56;
+  _25 = _23 >> _24;
+  _26 = _25 & 1;
+  if (_26 != 0)
+    goto <bb 11>; [INV]
+  else
+    goto <bb 18>; [INV]
+
+  <bb 11> :
+  _27 = (int) PinMode_52(D);
+  if (_27 == 1)
+    goto <bb 12>; [INV]
+  else
+    goto <bb 16>; [INV]
+
+  <bb 12> :
+<L9>:
+  Port_Ipw_SetGpioDirChangeability (PinPad_51, 1);
+  _28 = pConfigPtr_49(D)->pUsedPadConfig;
+  _29 = PinIndex_50(D) * 20;
+  _30 = _28 + _29;
+  ePadDirection_60 = _30->ePadDir;
+  if (ePadDirection_60 != 1)
+    goto <bb 13>; [INV]
+  else
+    goto <bb 15>; [INV]
+
+  <bb 13> :
+  if (ePadDirection_60 != 3)
+    goto <bb 14>; [INV]
+  else
+    goto <bb 15>; [INV]
+
+  <bb 14> :
+  Port_Ipw_SetGpioPadOutput (PinIndex_50(D), pConfigPtr_49(D));
+
+  <bb 15> :
+  Port_Ipw_SetPinDirection (PinIndex_50(D), ePadDirection_60, pConfigPtr_49(D));
+  goto <bb 17>; [INV]
+
+  <bb 16> :
+<L14>:
+  Port_Ipw_SetGpioDirChangeability (PinPad_51, 0);
+
+  <bb 17> :
+  SchM_Enter_Port_PORT_EXCLUSIVE_AREA_27 ();
+  _31 = PinPad_51 >> 5;
+  _32 = (long unsigned int) _31;
+  _33 = Port_au32PortCiPortBaseAddr[_32];
+  _34 = (long unsigned int) PinPad_51;
+  _35 = _34 & 31;
+  u32LocalPCR_65 ={v} _33->PCR[_35];
+  u32LocalPCR_66 = u32LocalPCR_65 & 4294965503;
+  _36 = (long unsigned int) PinCfgRegValue_53;
+  _37 = _36 << 8;
+  u32LocalPCR_67 = u32LocalPCR_66 | _37;
+  _38 = PinPad_51 >> 5;
+  _39 = (long unsigned int) _38;
+  _40 = Port_au32PortCiPortBaseAddr[_39];
+  _41 = (long unsigned int) PinPad_51;
+  _42 = _41 & 31;
+  _40->PCR[_42] ={v} u32LocalPCR_67;
+  SchM_Exit_Port_PORT_EXCLUSIVE_AREA_27 ();
+  goto <bb 19>; [INV]
+
+  <bb 18> :
+  PinModeError_58 = 13;
+
+  <bb 19> :
+  # PinModeError_43 = PHI <PinModeError_47(3), PinModeError_47(5), PinModeError_47(7), PinModeError_70(9), PinModeError_47(17), PinModeError_58(18)>
+  _74 = PinModeError_43;
+
+  <bb 20> :
+<L22>:
+  return _74;
+
+}
+
+
+Port_Ipw_SetPinDirection (Port_PinType PinIndex, Port_PinDirectionType eDirection, const struct Port_ConfigType * pConfigPtr)
+{
+  uint16 u16PinChangeDirFlagWord;
+  uint8 u8PinDescBitOffset;
+  uint8 CoreId;
+  Std_ReturnType PinDirError;
+  uint16 Pin;
+  Std_ReturnType D.5816;
+  const struct Port_PinConfigType * _1;
+  long unsigned int _2;
+  const struct Port_PinConfigType * _3;
+  short unsigned int _4;
+  long unsigned int _5;
+  const uint32 * _6;
+  long unsigned int _7;
+  const uint32 * _8;
+  long unsigned int _9;
+  int _10;
+  long unsigned int _11;
+  long unsigned int _12;
+  int _13;
+  long unsigned int _14;
+  unsigned char _15;
+  short unsigned int _16;
+  unsigned char _17;
+  int _18;
+  const struct Port_PinConfigType * _19;
+  long unsigned int _20;
+  const struct Port_PinConfigType * _21;
+  _Bool _22;
+  int _23;
+  long unsigned int _24;
+  short unsigned int _25;
+  short unsigned int _26;
+  short unsigned int _27;
+  long unsigned int _28;
+  struct GPIO_Type * _29;
+  long unsigned int _30;
+  long unsigned int _31;
+  long unsigned int _32;
+  long unsigned int _33;
+  short unsigned int _34;
+  long unsigned int _35;
+  struct GPIO_Type * _36;
+  long unsigned int _37;
+  short unsigned int _38;
+  long unsigned int _39;
+  struct GPIO_Type * _40;
+  long unsigned int _41;
+  long unsigned int _42;
+  long unsigned int _43;
+  long unsigned int _44;
+  long unsigned int _45;
+  short unsigned int _46;
+  long unsigned int _47;
+  struct GPIO_Type * _48;
+  long unsigned int _49;
+  short unsigned int _50;
+  long unsigned int _51;
+  struct GPIO_Type * _52;
+  long unsigned int _53;
+  long unsigned int _54;
+  long unsigned int _55;
+  long unsigned int _56;
+  long unsigned int _57;
+  short unsigned int _58;
+  long unsigned int _59;
+  struct GPIO_Type * _60;
+  long unsigned int _61;
+  short unsigned int _62;
+  long unsigned int _63;
+  struct GPIO_Type * _64;
+  long unsigned int _65;
+  long unsigned int _66;
+  long unsigned int _67;
+  long unsigned int _68;
+  short unsigned int _69;
+  long unsigned int _70;
+  struct GPIO_Type * _71;
+  long unsigned int _72;
+  Std_ReturnType _99;
+
+  <bb 2> :
+  _1 = pConfigPtr_78(D)->pUsedPadConfig;
+  _2 = PinIndex_79(D) * 20;
+  _3 = _1 + _2;
+  Pin_80 = _3->Pin;
+  PinDirError_81 = 0;
+  CoreId_82 = 0;
+  _4 = pConfigPtr_78(D)->u16NumPins;
+  _5 = (long unsigned int) _4;
+  if (PinIndex_79(D) >= _5)
+    goto <bb 3>; [INV]
+  else
+    goto <bb 4>; [INV]
+
+  <bb 3> :
+  Det_ReportError (124, 0, 1, 10);
+  goto <bb 17>; [INV]
+
+  <bb 4> :
+  _6 = pConfigPtr_78(D)->pau32Port_PinToPartitionMap;
+  _7 = PinIndex_79(D) * 4;
+  _8 = _6 + _7;
+  _9 = *_8;
+  _10 = (int) CoreId_82;
+  _11 = 1 << _10;
+  _12 = _9 & _11;
+  _13 = (int) CoreId_82;
+  _14 = _12 >> _13;
+  if (_14 != 1)
+    goto <bb 5>; [INV]
+  else
+    goto <bb 6>; [INV]
+
+  <bb 5> :
+  Det_ReportError (124, 0, 1, 240);
+  goto <bb 17>; [INV]
+
+  <bb 6> :
+  _15 = (unsigned char) Pin_80;
+  u8PinDescBitOffset_83 = _15 & 15;
+  _16 = Pin_80 >> 4;
+  _17 = (unsigned char) _16;
+  _18 = (int) _17;
+  u16PinChangeDirFlagWord_84 = Port_Ipw_au16GpioDirChangeability[_18];
+  _19 = pConfigPtr_78(D)->pUsedPadConfig;
+  _20 = PinIndex_79(D) * 20;
+  _21 = _19 + _20;
+  _22 = _21->bDC;
+  if (_22 != 0)
+    goto <bb 8>; [INV]
+  else
+    goto <bb 7>; [INV]
+
+  <bb 7> :
+  _23 = (int) u8PinDescBitOffset_83;
+  _24 = 1 << _23;
+  _25 = (short unsigned int) _24;
+  _26 = u16PinChangeDirFlagWord_84 & _25;
+  if (_26 != 0)
+    goto <bb 8>; [INV]
+  else
+    goto <bb 16>; [INV]
+
+  <bb 8> :
+  if (eDirection_86(D) == 2)
+    goto <bb 9>; [INV]
+  else
+    goto <bb 10>; [INV]
+
+  <bb 9> :
+  SchM_Enter_Port_PORT_EXCLUSIVE_AREA_16 ();
+  _27 = Pin_80 >> 5;
+  _28 = (long unsigned int) _27;
+  _29 = Port_au32PortCiGpioBaseAddr[_28];
+  _30 ={v} _29->PDDR;
+  _31 = (long unsigned int) Pin_80;
+  _32 = _31 & 31;
+  _33 = 1 << _32;
+  _34 = Pin_80 >> 5;
+  _35 = (long unsigned int) _34;
+  _36 = Port_au32PortCiGpioBaseAddr[_35];
+  _37 = _30 | _33;
+  _36->PDDR ={v} _37;
+  SchM_Exit_Port_PORT_EXCLUSIVE_AREA_16 ();
+  goto <bb 15>; [INV]
+
+  <bb 10> :
+  if (eDirection_86(D) == 1)
+    goto <bb 12>; [INV]
+  else
+    goto <bb 11>; [INV]
+
+  <bb 11> :
+  if (eDirection_86(D) == 3)
+    goto <bb 12>; [INV]
+  else
+    goto <bb 15>; [INV]
+
+  <bb 12> :
+  SchM_Enter_Port_PORT_EXCLUSIVE_AREA_16 ();
+  _38 = Pin_80 >> 5;
+  _39 = (long unsigned int) _38;
+  _40 = Port_au32PortCiGpioBaseAddr[_39];
+  _41 ={v} _40->PDDR;
+  _42 = (long unsigned int) Pin_80;
+  _43 = _42 & 31;
+  _44 = 1 << _43;
+  _45 = ~_44;
+  _46 = Pin_80 >> 5;
+  _47 = (long unsigned int) _46;
+  _48 = Port_au32PortCiGpioBaseAddr[_47];
+  _49 = _41 & _45;
+  _48->PDDR ={v} _49;
+  SchM_Exit_Port_PORT_EXCLUSIVE_AREA_16 ();
+  SchM_Enter_Port_PORT_EXCLUSIVE_AREA_17 ();
+  _50 = Pin_80 >> 5;
+  _51 = (long unsigned int) _50;
+  _52 = Port_au32PortCiGpioBaseAddr[_51];
+  _53 ={v} _52->PIDR;
+  _54 = (long unsigned int) Pin_80;
+  _55 = _54 & 31;
+  _56 = 1 << _55;
+  _57 = ~_56;
+  _58 = Pin_80 >> 5;
+  _59 = (long unsigned int) _58;
+  _60 = Port_au32PortCiGpioBaseAddr[_59];
+  _61 = _53 & _57;
+  _60->PIDR ={v} _61;
+  if (eDirection_86(D) == 3)
+    goto <bb 13>; [INV]
+  else
+    goto <bb 14>; [INV]
+
+  <bb 13> :
+  _62 = Pin_80 >> 5;
+  _63 = (long unsigned int) _62;
+  _64 = Port_au32PortCiGpioBaseAddr[_63];
+  _65 ={v} _64->PIDR;
+  _66 = (long unsigned int) Pin_80;
+  _67 = _66 & 31;
+  _68 = 1 << _67;
+  _69 = Pin_80 >> 5;
+  _70 = (long unsigned int) _69;
+  _71 = Port_au32PortCiGpioBaseAddr[_70];
+  _72 = _65 | _68;
+  _71->PIDR ={v} _72;
+
+  <bb 14> :
+  SchM_Exit_Port_PORT_EXCLUSIVE_AREA_17 ();
+
+  <bb 15> :
+  goto <bb 17>; [INV]
+
+  <bb 16> :
+  PinDirError_85 = 1;
+
+  <bb 17> :
+  # PinDirError_73 = PHI <PinDirError_81(3), PinDirError_81(5), PinDirError_81(15), PinDirError_85(16)>
+  _99 = PinDirError_73;
+
+  <bb 18> :
+<L18>:
+  return _99;
 
 }
 
@@ -429,54 +1141,73 @@ Port_Ipw_Init (const struct Port_ConfigType * pConfigPtr)
   short unsigned int u16PinIndex.0_22;
   short unsigned int _23;
   const struct Port_Ci_Port_Ip_PinSettingsConfig * _24;
+  int _25;
+  short unsigned int u16PinIndex.1_26;
 
   <bb 2> :
-  u8NumDigFilterPorts_29 = pConfigPtr_28(D)->u8NumDigitalFilterPorts;
-  u16PinIndex_30 = 0;
+  u8NumDigFilterPorts_33 = pConfigPtr_32(D)->u8NumDigitalFilterPorts;
+  u16PinIndex_34 = 0;
   goto <bb 4>; [INV]
 
   <bb 3> :
-  _1 = pConfigPtr_28(D)->pDigitalFilterConfig;
-  _2 = (unsigned int) u16PinIndex_25;
+  _1 = pConfigPtr_32(D)->pDigitalFilterConfig;
+  _2 = (unsigned int) u16PinIndex_27;
   _3 = _2 * 8;
   _4 = _1 + _3;
-  u8Port_33 = _4->u8Port;
-  _5 = (int) u8Port_33;
+  u8Port_40 = _4->u8Port;
+  _5 = (int) u8Port_40;
   _6 = Port_au32PortCiPortBaseAddr[_5];
-  _7 = pConfigPtr_28(D)->pDigitalFilterConfig;
-  _8 = (unsigned int) u16PinIndex_25;
+  _7 = pConfigPtr_32(D)->pDigitalFilterConfig;
+  _8 = (unsigned int) u16PinIndex_27;
   _9 = _8 * 8;
   _10 = _7 + _9;
   Port_Ci_Port_Ip_ConfigDigitalFilter (_6, _10);
   SchM_Enter_Port_PORT_EXCLUSIVE_AREA_15 ();
-  _11 = (int) u8Port_33;
+  _11 = (int) u8Port_40;
   _12 = Port_au32PortCiPortBaseAddr[_11];
   _13 ={v} _12->DFER;
-  _14 = pConfigPtr_28(D)->pDigitalFilterConfig;
-  _15 = (unsigned int) u16PinIndex_25;
+  _14 = pConfigPtr_32(D)->pDigitalFilterConfig;
+  _15 = (unsigned int) u16PinIndex_27;
   _16 = _15 * 8;
   _17 = _14 + _16;
   _18 = _17->u32PinMask;
-  _19 = (int) u8Port_33;
+  _19 = (int) u8Port_40;
   _20 = Port_au32PortCiPortBaseAddr[_19];
   _21 = _13 | _18;
   _20->DFER ={v} _21;
   SchM_Exit_Port_PORT_EXCLUSIVE_AREA_15 ();
-  u16PinIndex.0_22 = u16PinIndex_25;
-  u16PinIndex_38 = u16PinIndex.0_22 + 1;
+  u16PinIndex.0_22 = u16PinIndex_27;
+  u16PinIndex_45 = u16PinIndex.0_22 + 1;
 
   <bb 4> :
-  # u16PinIndex_25 = PHI <u16PinIndex_30(2), u16PinIndex_38(3)>
-  _23 = (short unsigned int) u8NumDigFilterPorts_29;
-  if (u16PinIndex_25 < _23)
+  # u16PinIndex_27 = PHI <u16PinIndex_34(2), u16PinIndex_45(3)>
+  _23 = (short unsigned int) u8NumDigFilterPorts_33;
+  if (u16PinIndex_27 < _23)
     goto <bb 3>; [INV]
   else
     goto <bb 5>; [INV]
 
   <bb 5> :
-  _24 = pConfigPtr_28(D)->IpConfigPtr;
+  _24 = pConfigPtr_32(D)->IpConfigPtr;
   Port_Ci_Port_Ip_Init (12, _24);
-  Port_Ipw_Init_UnusedPins (pConfigPtr_28(D));
+  Port_Ipw_Init_UnusedPins (pConfigPtr_32(D));
+  u16PinIndex_37 = 0;
+  goto <bb 7>; [INV]
+
+  <bb 6> :
+  _25 = (int) u16PinIndex_28;
+  Port_Ipw_au16GpioDirChangeability[_25] = 0;
+  u16PinIndex.1_26 = u16PinIndex_28;
+  u16PinIndex_39 = u16PinIndex.1_26 + 1;
+
+  <bb 7> :
+  # u16PinIndex_28 = PHI <u16PinIndex_37(5), u16PinIndex_39(6)>
+  if (u16PinIndex_28 <= 9)
+    goto <bb 6>; [INV]
+  else
+    goto <bb 8>; [INV]
+
+  <bb 8> :
   return;
 
 }
@@ -645,7 +1376,7 @@ Port_Ipw_Init_UnusedPins (const struct Port_ConfigType * pConfigPtr)
   short unsigned int _154;
   long unsigned int _155;
   long unsigned int _156;
-  short unsigned int u16PinIndex.1_157;
+  short unsigned int u16PinIndex.2_157;
 
   <bb 2> :
   u16NumUnusedPins_165 = pConfigPtr_164(D)->u16NumUnusedPins;
@@ -861,8 +1592,8 @@ Port_Ipw_Init_UnusedPins (const struct Port_ConfigType * pConfigPtr)
   _155 = (long unsigned int) _154;
   _156 = _155 & 31;
   _149->PCR[_156] ={v} u32LocalPCR_167;
-  u16PinIndex.1_157 = u16PinIndex_158;
-  u16PinIndex_183 = u16PinIndex.1_157 + 1;
+  u16PinIndex.2_157 = u16PinIndex_158;
+  u16PinIndex_183 = u16PinIndex.2_157 + 1;
 
   <bb 13> :
   # u16PinIndex_158 = PHI <u16PinIndex_169(2), u16PinIndex_183(12)>

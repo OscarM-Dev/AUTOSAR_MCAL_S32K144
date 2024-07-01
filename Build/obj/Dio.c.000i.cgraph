@@ -1,65 +1,94 @@
-Trivially needed symbols: Dio_WriteChannelGroup/6 Dio_ReadChannelGroup/5 Dio_WritePort/4 Dio_ReadPort/3 Dio_FlipChannel/2 Dio_WriteChannel/1 Dio_ReadChannel/0
+Trivially needed symbols: Dio_WriteChannelGroup/14 Dio_ReadChannelGroup/13 Dio_WritePort/12 Dio_ReadPort/11 Dio_FlipChannel/10 Dio_WriteChannel/9 Dio_ReadChannel/8 Dio_GetVersionInfo/7
 
 
 Initial Symbol table:
 
-Dio_Ipw_WriteChannelGroup/13 (Dio_Ipw_WriteChannelGroup) @06898460
+Dio_Ipw_WriteChannelGroup/25 (Dio_Ipw_WriteChannelGroup) @05e611c0
   Type: function
   Visibility: external public
   References: 
   Referring: 
   Function flags:
-  Called by: Dio_WriteChannelGroup/6 
+  Called by: Dio_WriteChannelGroup/14 
   Calls: 
-Dio_Ipw_ReadChannelGroup/12 (Dio_Ipw_ReadChannelGroup) @068982a0
+Dio_Ipw_ReadChannelGroup/24 (Dio_Ipw_ReadChannelGroup) @05e52ee0
   Type: function
   Visibility: external public
   References: 
   Referring: 
   Function flags:
-  Called by: Dio_ReadChannelGroup/5 
+  Called by: Dio_ReadChannelGroup/13 
   Calls: 
-Dio_Ipw_WritePort/11 (Dio_Ipw_WritePort) @068980e0
+Dio_Ipw_WritePort/23 (Dio_Ipw_WritePort) @05e52c40
   Type: function
   Visibility: external public
   References: 
   Referring: 
   Function flags:
-  Called by: Dio_WritePort/4 
+  Called by: Dio_WritePort/12 
   Calls: 
-Dio_Ipw_ReadPort/10 (Dio_Ipw_ReadPort) @06892620
+Dio_Ipw_ReadPort/22 (Dio_Ipw_ReadPort) @05e529a0
   Type: function
   Visibility: external public
   References: 
   Referring: 
   Function flags:
-  Called by: Dio_ReadPort/3 
+  Called by: Dio_ReadPort/11 
   Calls: 
-Dio_Ipw_FlipChannel/9 (Dio_Ipw_FlipChannel) @068920e0
+Dio_Ipw_FlipChannel/21 (Dio_Ipw_FlipChannel) @05e527e0
   Type: function
   Visibility: external public
   References: 
   Referring: 
   Function flags:
-  Called by: Dio_FlipChannel/2 
+  Called by: Dio_FlipChannel/10 
   Calls: 
-Dio_Ipw_WriteChannel/8 (Dio_Ipw_WriteChannel) @06892e00
+Dio_aAvailablePinsForWrite/20 (Dio_aAvailablePinsForWrite) @05e57360
+  Type: variable
+  Visibility: external public
+  References: 
+  Referring: Dio_ValidateChannelForWrite/1 (read) Dio_ValidatePortForWrite/3 (read) Dio_ValidateChannelGroupForWrite/5 (read) 
+  Availability: not-ready
+  Varpool flags: read-only
+Dio_Ipw_WriteChannel/19 (Dio_Ipw_WriteChannel) @05e52460
   Type: function
   Visibility: external public
   References: 
   Referring: 
   Function flags:
-  Called by: Dio_WriteChannel/1 
+  Called by: Dio_WriteChannel/9 
   Calls: 
-Dio_Ipw_ReadChannel/7 (Dio_Ipw_ReadChannel) @06892c40
+Dio_Config/18 (Dio_Config) @05e4dca8
+  Type: variable
+  Visibility: external public
+  References: 
+  Referring: Dio_ValidateChannelForRead/2 (read) Dio_ValidateChannelForWrite/1 (read) Dio_ValidatePortForRead/4 (read) Dio_ValidatePortForWrite/3 (read) Dio_ValidateChannelGroupForRead/6 (read) Dio_ValidateChannelGroupForRead/6 (read) Dio_ValidateChannelGroupForRead/6 (read) Dio_ValidateChannelGroupForWrite/5 (read) Dio_ValidateChannelGroupForWrite/5 (read) Dio_ValidateChannelGroupForWrite/5 (read) 
+  Availability: not-ready
+  Varpool flags: read-only
+Dio_aAvailablePinsForRead/17 (Dio_aAvailablePinsForRead) @05e4dc60
+  Type: variable
+  Visibility: external public
+  References: 
+  Referring: Dio_ValidateChannelForRead/2 (read) Dio_ValidatePortForRead/4 (read) Dio_ValidateChannelGroupForRead/6 (read) 
+  Availability: not-ready
+  Varpool flags: read-only
+Dio_Ipw_ReadChannel/16 (Dio_Ipw_ReadChannel) @05e521c0
   Type: function
   Visibility: external public
   References: 
   Referring: 
   Function flags:
-  Called by: Dio_ReadChannel/0 
+  Called by: Dio_ReadChannel/8 
   Calls: 
-Dio_WriteChannelGroup/6 (Dio_WriteChannelGroup) @068927e0
+Det_ReportError/15 (Det_ReportError) @05e52000
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: Dio_ValidateChannelGroupForWrite/5 Dio_ValidateChannelGroupForRead/6 Dio_ValidatePortForWrite/3 Dio_ValidatePortForWrite/3 Dio_ValidatePortForRead/4 Dio_ValidatePortForRead/4 Dio_ValidateChannelLevel/0 Dio_ValidateChannelForWrite/1 Dio_ValidateChannelForWrite/1 Dio_ValidateChannelForRead/2 Dio_ValidateChannelForRead/2 Dio_GetVersionInfo/7 
+  Calls: 
+Dio_WriteChannelGroup/14 (Dio_WriteChannelGroup) @05cba2a0
   Type: function definition analyzed
   Visibility: force_output no_reorder public
   Aux: @01981040
@@ -67,481 +96,865 @@ Dio_WriteChannelGroup/6 (Dio_WriteChannelGroup) @068927e0
   Referring: 
   Function flags: body
   Called by: 
-  Calls: Dio_Ipw_WriteChannelGroup/13 
-Dio_ReadChannelGroup/5 (Dio_ReadChannelGroup) @06892540
+  Calls: Dio_Ipw_WriteChannelGroup/25 Dio_ValidateChannelGroupForWrite/5 
+Dio_ReadChannelGroup/13 (Dio_ReadChannelGroup) @05cbaee0
   Type: function definition analyzed
   Visibility: force_output no_reorder public
-  Aux: @068927e0
+  Aux: @05cba2a0
   References: 
   Referring: 
   Function flags: body
   Called by: 
-  Calls: Dio_Ipw_ReadChannelGroup/12 
-Dio_WritePort/4 (Dio_WritePort) @068922a0
+  Calls: Dio_Ipw_ReadChannelGroup/24 Dio_ValidateChannelGroupForRead/6 
+Dio_WritePort/12 (Dio_WritePort) @05cbac40
   Type: function definition analyzed
   Visibility: force_output no_reorder public
-  Aux: @06892540
+  Aux: @05cbaee0
   References: 
   Referring: 
   Function flags: body
   Called by: 
-  Calls: Dio_Ipw_WritePort/11 
-Dio_ReadPort/3 (Dio_ReadPort) @06892000
+  Calls: Dio_Ipw_WritePort/23 Dio_ValidatePortForWrite/3 
+Dio_ReadPort/11 (Dio_ReadPort) @05cba9a0
   Type: function definition analyzed
   Visibility: force_output no_reorder public
-  Aux: @068922a0
+  Aux: @05cbac40
   References: 
   Referring: 
   Function flags: body
   Called by: 
-  Calls: Dio_Ipw_ReadPort/10 
-Dio_FlipChannel/2 (Dio_FlipChannel) @068c5a80
+  Calls: Dio_Ipw_ReadPort/22 Dio_ValidatePortForRead/4 
+Dio_FlipChannel/10 (Dio_FlipChannel) @05cba700
   Type: function definition analyzed
   Visibility: force_output no_reorder public
-  Aux: @06892000
+  Aux: @05cba9a0
   References: 
   Referring: 
   Function flags: body
   Called by: 
-  Calls: Dio_Ipw_FlipChannel/9 
-Dio_WriteChannel/1 (Dio_WriteChannel) @068c5ee0
+  Calls: Dio_Ipw_FlipChannel/21 Dio_ValidateChannelForWrite/1 
+Dio_WriteChannel/9 (Dio_WriteChannel) @05cba460
   Type: function definition analyzed
   Visibility: force_output no_reorder public
-  Aux: @068c5a80
+  Aux: @05cba700
   References: 
   Referring: 
   Function flags: body
   Called by: 
-  Calls: Dio_Ipw_WriteChannel/8 
-Dio_ReadChannel/0 (Dio_ReadChannel) @068c5c40
+  Calls: Dio_Ipw_WriteChannel/19 Dio_ValidateChannelLevel/0 Dio_ValidateChannelForWrite/1 
+Dio_ReadChannel/8 (Dio_ReadChannel) @05cba1c0
   Type: function definition analyzed
   Visibility: force_output no_reorder public
-  Aux: @068c5ee0
+  Aux: @05cba460
   References: 
   Referring: 
   Function flags: body
   Called by: 
-  Calls: Dio_Ipw_ReadChannel/7 
+  Calls: Dio_Ipw_ReadChannel/16 Dio_ValidateChannelForRead/2 
+Dio_GetVersionInfo/7 (Dio_GetVersionInfo) @05cafee0
+  Type: function definition analyzed
+  Visibility: force_output no_reorder public
+  Aux: @05cba1c0
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: Det_ReportError/15 
+Dio_ValidateChannelGroupForRead/6 (Dio_ValidateChannelGroupForRead) @05caf9a0
+  Type: function definition analyzed
+  Visibility: no_reorder
+  Aux: @05cba2a0
+  References: Dio_Config/18 (read) Dio_Config/18 (read) Dio_Config/18 (read) Dio_aAvailablePinsForRead/17 (read) 
+  Referring: 
+  Function flags: body
+  Called by: Dio_ReadChannelGroup/13 
+  Calls: Det_ReportError/15 
+Dio_ValidateChannelGroupForWrite/5 (Dio_ValidateChannelGroupForWrite) @05caf460
+  Type: function definition analyzed
+  Visibility: no_reorder
+  Aux: @01981040
+  References: Dio_Config/18 (read) Dio_Config/18 (read) Dio_Config/18 (read) Dio_aAvailablePinsForWrite/20 (read) 
+  Referring: 
+  Function flags: body
+  Called by: Dio_WriteChannelGroup/14 
+  Calls: Det_ReportError/15 
+Dio_ValidatePortForRead/4 (Dio_ValidatePortForRead) @05cafe00
+  Type: function definition analyzed
+  Visibility: no_reorder
+  Aux: @05cbac40
+  References: Dio_aAvailablePinsForRead/17 (read) Dio_Config/18 (read) 
+  Referring: 
+  Function flags: body
+  Called by: Dio_ReadPort/11 
+  Calls: Det_ReportError/15 Det_ReportError/15 
+Dio_ValidatePortForWrite/3 (Dio_ValidatePortForWrite) @05cafb60
+  Type: function definition analyzed
+  Visibility: no_reorder
+  Aux: @05cbaee0
+  References: Dio_aAvailablePinsForWrite/20 (read) Dio_Config/18 (read) 
+  Referring: 
+  Function flags: body
+  Called by: Dio_WritePort/12 
+  Calls: Det_ReportError/15 Det_ReportError/15 
+Dio_ValidateChannelForRead/2 (Dio_ValidateChannelForRead) @05caf8c0
+  Type: function definition analyzed
+  Visibility: no_reorder
+  Aux: @05cba460
+  References: Dio_aAvailablePinsForRead/17 (read) Dio_Config/18 (read) 
+  Referring: 
+  Function flags: body
+  Called by: Dio_ReadChannel/8 
+  Calls: Det_ReportError/15 Det_ReportError/15 
+Dio_ValidateChannelForWrite/1 (Dio_ValidateChannelForWrite) @05caf620
+  Type: function definition analyzed
+  Visibility: no_reorder
+  Aux: @05caf380
+  References: Dio_aAvailablePinsForWrite/20 (read) Dio_Config/18 (read) 
+  Referring: 
+  Function flags: body
+  Called by: Dio_FlipChannel/10 Dio_WriteChannel/9 
+  Calls: Det_ReportError/15 Det_ReportError/15 
+Dio_ValidateChannelLevel/0 (Dio_ValidateChannelLevel) @05caf380
+  Type: function definition analyzed
+  Visibility: no_reorder
+  Aux: @05cba700
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: Dio_WriteChannel/9 
+  Calls: Det_ReportError/15 
 
 Removing unused symbols:
 
 Reclaimed Symbol table:
 
-Dio_Ipw_WriteChannelGroup/13 (Dio_Ipw_WriteChannelGroup) @06898460
+Dio_Ipw_WriteChannelGroup/25 (Dio_Ipw_WriteChannelGroup) @05e611c0
   Type: function
   Visibility: external public
   References: 
   Referring: 
   Function flags:
-  Called by: Dio_WriteChannelGroup/6 
+  Called by: Dio_WriteChannelGroup/14 
   Calls: 
-Dio_Ipw_ReadChannelGroup/12 (Dio_Ipw_ReadChannelGroup) @068982a0
+Dio_Ipw_ReadChannelGroup/24 (Dio_Ipw_ReadChannelGroup) @05e52ee0
   Type: function
   Visibility: external public
   References: 
   Referring: 
   Function flags:
-  Called by: Dio_ReadChannelGroup/5 
+  Called by: Dio_ReadChannelGroup/13 
   Calls: 
-Dio_Ipw_WritePort/11 (Dio_Ipw_WritePort) @068980e0
+Dio_Ipw_WritePort/23 (Dio_Ipw_WritePort) @05e52c40
   Type: function
   Visibility: external public
   References: 
   Referring: 
   Function flags:
-  Called by: Dio_WritePort/4 
+  Called by: Dio_WritePort/12 
   Calls: 
-Dio_Ipw_ReadPort/10 (Dio_Ipw_ReadPort) @06892620
+Dio_Ipw_ReadPort/22 (Dio_Ipw_ReadPort) @05e529a0
   Type: function
   Visibility: external public
   References: 
   Referring: 
   Function flags:
-  Called by: Dio_ReadPort/3 
+  Called by: Dio_ReadPort/11 
   Calls: 
-Dio_Ipw_FlipChannel/9 (Dio_Ipw_FlipChannel) @068920e0
+Dio_Ipw_FlipChannel/21 (Dio_Ipw_FlipChannel) @05e527e0
   Type: function
   Visibility: external public
   References: 
   Referring: 
   Function flags:
-  Called by: Dio_FlipChannel/2 
+  Called by: Dio_FlipChannel/10 
   Calls: 
-Dio_Ipw_WriteChannel/8 (Dio_Ipw_WriteChannel) @06892e00
+Dio_aAvailablePinsForWrite/20 (Dio_aAvailablePinsForWrite) @05e57360
+  Type: variable
+  Visibility: external public
+  References: 
+  Referring: Dio_ValidateChannelForWrite/1 (read) Dio_ValidatePortForWrite/3 (read) Dio_ValidateChannelGroupForWrite/5 (read) 
+  Availability: not-ready
+  Varpool flags: read-only
+Dio_Ipw_WriteChannel/19 (Dio_Ipw_WriteChannel) @05e52460
   Type: function
   Visibility: external public
   References: 
   Referring: 
   Function flags:
-  Called by: Dio_WriteChannel/1 
+  Called by: Dio_WriteChannel/9 
   Calls: 
-Dio_Ipw_ReadChannel/7 (Dio_Ipw_ReadChannel) @06892c40
+Dio_Config/18 (Dio_Config) @05e4dca8
+  Type: variable
+  Visibility: external public
+  References: 
+  Referring: Dio_ValidateChannelForRead/2 (read) Dio_ValidateChannelForWrite/1 (read) Dio_ValidatePortForRead/4 (read) Dio_ValidatePortForWrite/3 (read) Dio_ValidateChannelGroupForRead/6 (read) Dio_ValidateChannelGroupForRead/6 (read) Dio_ValidateChannelGroupForRead/6 (read) Dio_ValidateChannelGroupForWrite/5 (read) Dio_ValidateChannelGroupForWrite/5 (read) Dio_ValidateChannelGroupForWrite/5 (read) 
+  Availability: not-ready
+  Varpool flags: read-only
+Dio_aAvailablePinsForRead/17 (Dio_aAvailablePinsForRead) @05e4dc60
+  Type: variable
+  Visibility: external public
+  References: 
+  Referring: Dio_ValidateChannelForRead/2 (read) Dio_ValidatePortForRead/4 (read) Dio_ValidateChannelGroupForRead/6 (read) 
+  Availability: not-ready
+  Varpool flags: read-only
+Dio_Ipw_ReadChannel/16 (Dio_Ipw_ReadChannel) @05e521c0
   Type: function
   Visibility: external public
   References: 
   Referring: 
   Function flags:
-  Called by: Dio_ReadChannel/0 
+  Called by: Dio_ReadChannel/8 
   Calls: 
-Dio_WriteChannelGroup/6 (Dio_WriteChannelGroup) @068927e0
+Det_ReportError/15 (Det_ReportError) @05e52000
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: Dio_ValidateChannelGroupForWrite/5 Dio_ValidateChannelGroupForRead/6 Dio_ValidatePortForWrite/3 Dio_ValidatePortForWrite/3 Dio_ValidatePortForRead/4 Dio_ValidatePortForRead/4 Dio_ValidateChannelLevel/0 Dio_ValidateChannelForWrite/1 Dio_ValidateChannelForWrite/1 Dio_ValidateChannelForRead/2 Dio_ValidateChannelForRead/2 Dio_GetVersionInfo/7 
+  Calls: 
+Dio_WriteChannelGroup/14 (Dio_WriteChannelGroup) @05cba2a0
   Type: function definition analyzed
   Visibility: force_output no_reorder public
   References: 
   Referring: 
   Function flags: body
   Called by: 
-  Calls: Dio_Ipw_WriteChannelGroup/13 
-Dio_ReadChannelGroup/5 (Dio_ReadChannelGroup) @06892540
+  Calls: Dio_Ipw_WriteChannelGroup/25 Dio_ValidateChannelGroupForWrite/5 
+Dio_ReadChannelGroup/13 (Dio_ReadChannelGroup) @05cbaee0
   Type: function definition analyzed
   Visibility: force_output no_reorder public
   References: 
   Referring: 
   Function flags: body
   Called by: 
-  Calls: Dio_Ipw_ReadChannelGroup/12 
-Dio_WritePort/4 (Dio_WritePort) @068922a0
+  Calls: Dio_Ipw_ReadChannelGroup/24 Dio_ValidateChannelGroupForRead/6 
+Dio_WritePort/12 (Dio_WritePort) @05cbac40
   Type: function definition analyzed
   Visibility: force_output no_reorder public
   References: 
   Referring: 
   Function flags: body
   Called by: 
-  Calls: Dio_Ipw_WritePort/11 
-Dio_ReadPort/3 (Dio_ReadPort) @06892000
+  Calls: Dio_Ipw_WritePort/23 Dio_ValidatePortForWrite/3 
+Dio_ReadPort/11 (Dio_ReadPort) @05cba9a0
   Type: function definition analyzed
   Visibility: force_output no_reorder public
   References: 
   Referring: 
   Function flags: body
   Called by: 
-  Calls: Dio_Ipw_ReadPort/10 
-Dio_FlipChannel/2 (Dio_FlipChannel) @068c5a80
+  Calls: Dio_Ipw_ReadPort/22 Dio_ValidatePortForRead/4 
+Dio_FlipChannel/10 (Dio_FlipChannel) @05cba700
   Type: function definition analyzed
   Visibility: force_output no_reorder public
   References: 
   Referring: 
   Function flags: body
   Called by: 
-  Calls: Dio_Ipw_FlipChannel/9 
-Dio_WriteChannel/1 (Dio_WriteChannel) @068c5ee0
+  Calls: Dio_Ipw_FlipChannel/21 Dio_ValidateChannelForWrite/1 
+Dio_WriteChannel/9 (Dio_WriteChannel) @05cba460
   Type: function definition analyzed
   Visibility: force_output no_reorder public
   References: 
   Referring: 
   Function flags: body
   Called by: 
-  Calls: Dio_Ipw_WriteChannel/8 
-Dio_ReadChannel/0 (Dio_ReadChannel) @068c5c40
+  Calls: Dio_Ipw_WriteChannel/19 Dio_ValidateChannelLevel/0 Dio_ValidateChannelForWrite/1 
+Dio_ReadChannel/8 (Dio_ReadChannel) @05cba1c0
   Type: function definition analyzed
   Visibility: force_output no_reorder public
   References: 
   Referring: 
   Function flags: body
   Called by: 
-  Calls: Dio_Ipw_ReadChannel/7 
+  Calls: Dio_Ipw_ReadChannel/16 Dio_ValidateChannelForRead/2 
+Dio_GetVersionInfo/7 (Dio_GetVersionInfo) @05cafee0
+  Type: function definition analyzed
+  Visibility: force_output no_reorder public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: Det_ReportError/15 
+Dio_ValidateChannelGroupForRead/6 (Dio_ValidateChannelGroupForRead) @05caf9a0
+  Type: function definition analyzed
+  Visibility: no_reorder
+  References: Dio_Config/18 (read) Dio_Config/18 (read) Dio_Config/18 (read) Dio_aAvailablePinsForRead/17 (read) 
+  Referring: 
+  Function flags: body
+  Called by: Dio_ReadChannelGroup/13 
+  Calls: Det_ReportError/15 
+Dio_ValidateChannelGroupForWrite/5 (Dio_ValidateChannelGroupForWrite) @05caf460
+  Type: function definition analyzed
+  Visibility: no_reorder
+  References: Dio_Config/18 (read) Dio_Config/18 (read) Dio_Config/18 (read) Dio_aAvailablePinsForWrite/20 (read) 
+  Referring: 
+  Function flags: body
+  Called by: Dio_WriteChannelGroup/14 
+  Calls: Det_ReportError/15 
+Dio_ValidatePortForRead/4 (Dio_ValidatePortForRead) @05cafe00
+  Type: function definition analyzed
+  Visibility: no_reorder
+  References: Dio_aAvailablePinsForRead/17 (read) Dio_Config/18 (read) 
+  Referring: 
+  Function flags: body
+  Called by: Dio_ReadPort/11 
+  Calls: Det_ReportError/15 Det_ReportError/15 
+Dio_ValidatePortForWrite/3 (Dio_ValidatePortForWrite) @05cafb60
+  Type: function definition analyzed
+  Visibility: no_reorder
+  References: Dio_aAvailablePinsForWrite/20 (read) Dio_Config/18 (read) 
+  Referring: 
+  Function flags: body
+  Called by: Dio_WritePort/12 
+  Calls: Det_ReportError/15 Det_ReportError/15 
+Dio_ValidateChannelForRead/2 (Dio_ValidateChannelForRead) @05caf8c0
+  Type: function definition analyzed
+  Visibility: no_reorder
+  References: Dio_aAvailablePinsForRead/17 (read) Dio_Config/18 (read) 
+  Referring: 
+  Function flags: body
+  Called by: Dio_ReadChannel/8 
+  Calls: Det_ReportError/15 Det_ReportError/15 
+Dio_ValidateChannelForWrite/1 (Dio_ValidateChannelForWrite) @05caf620
+  Type: function definition analyzed
+  Visibility: no_reorder
+  References: Dio_aAvailablePinsForWrite/20 (read) Dio_Config/18 (read) 
+  Referring: 
+  Function flags: body
+  Called by: Dio_FlipChannel/10 Dio_WriteChannel/9 
+  Calls: Det_ReportError/15 Det_ReportError/15 
+Dio_ValidateChannelLevel/0 (Dio_ValidateChannelLevel) @05caf380
+  Type: function definition analyzed
+  Visibility: no_reorder
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: Dio_WriteChannel/9 
+  Calls: Det_ReportError/15 
 
 
 Initial Symbol table:
 
-Dio_Ipw_WriteChannelGroup/13 (Dio_Ipw_WriteChannelGroup) @06898460
+Dio_Ipw_WriteChannelGroup/25 (Dio_Ipw_WriteChannelGroup) @05e611c0
   Type: function
   Visibility: external public
   References: 
   Referring: 
   Function flags:
-  Called by: Dio_WriteChannelGroup/6 
+  Called by: Dio_WriteChannelGroup/14 
   Calls: 
-Dio_Ipw_ReadChannelGroup/12 (Dio_Ipw_ReadChannelGroup) @068982a0
+Dio_Ipw_ReadChannelGroup/24 (Dio_Ipw_ReadChannelGroup) @05e52ee0
   Type: function
   Visibility: external public
   References: 
   Referring: 
   Function flags:
-  Called by: Dio_ReadChannelGroup/5 
+  Called by: Dio_ReadChannelGroup/13 
   Calls: 
-Dio_Ipw_WritePort/11 (Dio_Ipw_WritePort) @068980e0
+Dio_Ipw_WritePort/23 (Dio_Ipw_WritePort) @05e52c40
   Type: function
   Visibility: external public
   References: 
   Referring: 
   Function flags:
-  Called by: Dio_WritePort/4 
+  Called by: Dio_WritePort/12 
   Calls: 
-Dio_Ipw_ReadPort/10 (Dio_Ipw_ReadPort) @06892620
+Dio_Ipw_ReadPort/22 (Dio_Ipw_ReadPort) @05e529a0
   Type: function
   Visibility: external public
   References: 
   Referring: 
   Function flags:
-  Called by: Dio_ReadPort/3 
+  Called by: Dio_ReadPort/11 
   Calls: 
-Dio_Ipw_FlipChannel/9 (Dio_Ipw_FlipChannel) @068920e0
+Dio_Ipw_FlipChannel/21 (Dio_Ipw_FlipChannel) @05e527e0
   Type: function
   Visibility: external public
   References: 
   Referring: 
   Function flags:
-  Called by: Dio_FlipChannel/2 
+  Called by: Dio_FlipChannel/10 
   Calls: 
-Dio_Ipw_WriteChannel/8 (Dio_Ipw_WriteChannel) @06892e00
+Dio_aAvailablePinsForWrite/20 (Dio_aAvailablePinsForWrite) @05e57360
+  Type: variable
+  Visibility: external public
+  References: 
+  Referring: Dio_ValidateChannelForWrite/1 (read) Dio_ValidatePortForWrite/3 (read) Dio_ValidateChannelGroupForWrite/5 (read) 
+  Availability: not-ready
+  Varpool flags: read-only
+Dio_Ipw_WriteChannel/19 (Dio_Ipw_WriteChannel) @05e52460
   Type: function
   Visibility: external public
   References: 
   Referring: 
   Function flags:
-  Called by: Dio_WriteChannel/1 
+  Called by: Dio_WriteChannel/9 
   Calls: 
-Dio_Ipw_ReadChannel/7 (Dio_Ipw_ReadChannel) @06892c40
+Dio_Config/18 (Dio_Config) @05e4dca8
+  Type: variable
+  Visibility: external public
+  References: 
+  Referring: Dio_ValidateChannelForRead/2 (read) Dio_ValidateChannelForWrite/1 (read) Dio_ValidatePortForRead/4 (read) Dio_ValidatePortForWrite/3 (read) Dio_ValidateChannelGroupForRead/6 (read) Dio_ValidateChannelGroupForRead/6 (read) Dio_ValidateChannelGroupForRead/6 (read) Dio_ValidateChannelGroupForWrite/5 (read) Dio_ValidateChannelGroupForWrite/5 (read) Dio_ValidateChannelGroupForWrite/5 (read) 
+  Availability: not-ready
+  Varpool flags: read-only
+Dio_aAvailablePinsForRead/17 (Dio_aAvailablePinsForRead) @05e4dc60
+  Type: variable
+  Visibility: external public
+  References: 
+  Referring: Dio_ValidateChannelForRead/2 (read) Dio_ValidatePortForRead/4 (read) Dio_ValidateChannelGroupForRead/6 (read) 
+  Availability: not-ready
+  Varpool flags: read-only
+Dio_Ipw_ReadChannel/16 (Dio_Ipw_ReadChannel) @05e521c0
   Type: function
   Visibility: external public
   References: 
   Referring: 
   Function flags:
-  Called by: Dio_ReadChannel/0 
+  Called by: Dio_ReadChannel/8 
   Calls: 
-Dio_WriteChannelGroup/6 (Dio_WriteChannelGroup) @068927e0
+Det_ReportError/15 (Det_ReportError) @05e52000
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: Dio_ValidateChannelGroupForWrite/5 Dio_ValidateChannelGroupForRead/6 Dio_ValidatePortForWrite/3 Dio_ValidatePortForWrite/3 Dio_ValidatePortForRead/4 Dio_ValidatePortForRead/4 Dio_ValidateChannelLevel/0 Dio_ValidateChannelForWrite/1 Dio_ValidateChannelForWrite/1 Dio_ValidateChannelForRead/2 Dio_ValidateChannelForRead/2 Dio_GetVersionInfo/7 
+  Calls: 
+Dio_WriteChannelGroup/14 (Dio_WriteChannelGroup) @05cba2a0
   Type: function definition analyzed
   Visibility: force_output no_reorder public
   References: 
   Referring: 
   Function flags: body
   Called by: 
-  Calls: Dio_Ipw_WriteChannelGroup/13 
-Dio_ReadChannelGroup/5 (Dio_ReadChannelGroup) @06892540
+  Calls: Dio_Ipw_WriteChannelGroup/25 Dio_ValidateChannelGroupForWrite/5 
+Dio_ReadChannelGroup/13 (Dio_ReadChannelGroup) @05cbaee0
   Type: function definition analyzed
   Visibility: force_output no_reorder public
   References: 
   Referring: 
   Function flags: body
   Called by: 
-  Calls: Dio_Ipw_ReadChannelGroup/12 
-Dio_WritePort/4 (Dio_WritePort) @068922a0
+  Calls: Dio_Ipw_ReadChannelGroup/24 Dio_ValidateChannelGroupForRead/6 
+Dio_WritePort/12 (Dio_WritePort) @05cbac40
   Type: function definition analyzed
   Visibility: force_output no_reorder public
   References: 
   Referring: 
   Function flags: body
   Called by: 
-  Calls: Dio_Ipw_WritePort/11 
-Dio_ReadPort/3 (Dio_ReadPort) @06892000
+  Calls: Dio_Ipw_WritePort/23 Dio_ValidatePortForWrite/3 
+Dio_ReadPort/11 (Dio_ReadPort) @05cba9a0
   Type: function definition analyzed
   Visibility: force_output no_reorder public
   References: 
   Referring: 
   Function flags: body
   Called by: 
-  Calls: Dio_Ipw_ReadPort/10 
-Dio_FlipChannel/2 (Dio_FlipChannel) @068c5a80
+  Calls: Dio_Ipw_ReadPort/22 Dio_ValidatePortForRead/4 
+Dio_FlipChannel/10 (Dio_FlipChannel) @05cba700
   Type: function definition analyzed
   Visibility: force_output no_reorder public
   References: 
   Referring: 
   Function flags: body
   Called by: 
-  Calls: Dio_Ipw_FlipChannel/9 
-Dio_WriteChannel/1 (Dio_WriteChannel) @068c5ee0
+  Calls: Dio_Ipw_FlipChannel/21 Dio_ValidateChannelForWrite/1 
+Dio_WriteChannel/9 (Dio_WriteChannel) @05cba460
   Type: function definition analyzed
   Visibility: force_output no_reorder public
   References: 
   Referring: 
   Function flags: body
   Called by: 
-  Calls: Dio_Ipw_WriteChannel/8 
-Dio_ReadChannel/0 (Dio_ReadChannel) @068c5c40
+  Calls: Dio_Ipw_WriteChannel/19 Dio_ValidateChannelLevel/0 Dio_ValidateChannelForWrite/1 
+Dio_ReadChannel/8 (Dio_ReadChannel) @05cba1c0
   Type: function definition analyzed
   Visibility: force_output no_reorder public
   References: 
   Referring: 
   Function flags: body
   Called by: 
-  Calls: Dio_Ipw_ReadChannel/7 
+  Calls: Dio_Ipw_ReadChannel/16 Dio_ValidateChannelForRead/2 
+Dio_GetVersionInfo/7 (Dio_GetVersionInfo) @05cafee0
+  Type: function definition analyzed
+  Visibility: force_output no_reorder public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: Det_ReportError/15 
+Dio_ValidateChannelGroupForRead/6 (Dio_ValidateChannelGroupForRead) @05caf9a0
+  Type: function definition analyzed
+  Visibility: no_reorder
+  References: Dio_Config/18 (read) Dio_Config/18 (read) Dio_Config/18 (read) Dio_aAvailablePinsForRead/17 (read) 
+  Referring: 
+  Function flags: body
+  Called by: Dio_ReadChannelGroup/13 
+  Calls: Det_ReportError/15 
+Dio_ValidateChannelGroupForWrite/5 (Dio_ValidateChannelGroupForWrite) @05caf460
+  Type: function definition analyzed
+  Visibility: no_reorder
+  References: Dio_Config/18 (read) Dio_Config/18 (read) Dio_Config/18 (read) Dio_aAvailablePinsForWrite/20 (read) 
+  Referring: 
+  Function flags: body
+  Called by: Dio_WriteChannelGroup/14 
+  Calls: Det_ReportError/15 
+Dio_ValidatePortForRead/4 (Dio_ValidatePortForRead) @05cafe00
+  Type: function definition analyzed
+  Visibility: no_reorder
+  References: Dio_aAvailablePinsForRead/17 (read) Dio_Config/18 (read) 
+  Referring: 
+  Function flags: body
+  Called by: Dio_ReadPort/11 
+  Calls: Det_ReportError/15 Det_ReportError/15 
+Dio_ValidatePortForWrite/3 (Dio_ValidatePortForWrite) @05cafb60
+  Type: function definition analyzed
+  Visibility: no_reorder
+  References: Dio_aAvailablePinsForWrite/20 (read) Dio_Config/18 (read) 
+  Referring: 
+  Function flags: body
+  Called by: Dio_WritePort/12 
+  Calls: Det_ReportError/15 Det_ReportError/15 
+Dio_ValidateChannelForRead/2 (Dio_ValidateChannelForRead) @05caf8c0
+  Type: function definition analyzed
+  Visibility: no_reorder
+  References: Dio_aAvailablePinsForRead/17 (read) Dio_Config/18 (read) 
+  Referring: 
+  Function flags: body
+  Called by: Dio_ReadChannel/8 
+  Calls: Det_ReportError/15 Det_ReportError/15 
+Dio_ValidateChannelForWrite/1 (Dio_ValidateChannelForWrite) @05caf620
+  Type: function definition analyzed
+  Visibility: no_reorder
+  References: Dio_aAvailablePinsForWrite/20 (read) Dio_Config/18 (read) 
+  Referring: 
+  Function flags: body
+  Called by: Dio_FlipChannel/10 Dio_WriteChannel/9 
+  Calls: Det_ReportError/15 Det_ReportError/15 
+Dio_ValidateChannelLevel/0 (Dio_ValidateChannelLevel) @05caf380
+  Type: function definition analyzed
+  Visibility: no_reorder
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: Dio_WriteChannel/9 
+  Calls: Det_ReportError/15 
 
 Removing unused symbols:
 
 Reclaimed Symbol table:
 
-Dio_Ipw_WriteChannelGroup/13 (Dio_Ipw_WriteChannelGroup) @06898460
+Dio_Ipw_WriteChannelGroup/25 (Dio_Ipw_WriteChannelGroup) @05e611c0
   Type: function
   Visibility: external public
   References: 
   Referring: 
   Function flags:
-  Called by: Dio_WriteChannelGroup/6 
+  Called by: Dio_WriteChannelGroup/14 
   Calls: 
-Dio_Ipw_ReadChannelGroup/12 (Dio_Ipw_ReadChannelGroup) @068982a0
+Dio_Ipw_ReadChannelGroup/24 (Dio_Ipw_ReadChannelGroup) @05e52ee0
   Type: function
   Visibility: external public
   References: 
   Referring: 
   Function flags:
-  Called by: Dio_ReadChannelGroup/5 
+  Called by: Dio_ReadChannelGroup/13 
   Calls: 
-Dio_Ipw_WritePort/11 (Dio_Ipw_WritePort) @068980e0
+Dio_Ipw_WritePort/23 (Dio_Ipw_WritePort) @05e52c40
   Type: function
   Visibility: external public
   References: 
   Referring: 
   Function flags:
-  Called by: Dio_WritePort/4 
+  Called by: Dio_WritePort/12 
   Calls: 
-Dio_Ipw_ReadPort/10 (Dio_Ipw_ReadPort) @06892620
+Dio_Ipw_ReadPort/22 (Dio_Ipw_ReadPort) @05e529a0
   Type: function
   Visibility: external public
   References: 
   Referring: 
   Function flags:
-  Called by: Dio_ReadPort/3 
+  Called by: Dio_ReadPort/11 
   Calls: 
-Dio_Ipw_FlipChannel/9 (Dio_Ipw_FlipChannel) @068920e0
+Dio_Ipw_FlipChannel/21 (Dio_Ipw_FlipChannel) @05e527e0
   Type: function
   Visibility: external public
   References: 
   Referring: 
   Function flags:
-  Called by: Dio_FlipChannel/2 
+  Called by: Dio_FlipChannel/10 
   Calls: 
-Dio_Ipw_WriteChannel/8 (Dio_Ipw_WriteChannel) @06892e00
+Dio_aAvailablePinsForWrite/20 (Dio_aAvailablePinsForWrite) @05e57360
+  Type: variable
+  Visibility: external public
+  References: 
+  Referring: Dio_ValidateChannelForWrite/1 (read) Dio_ValidatePortForWrite/3 (read) Dio_ValidateChannelGroupForWrite/5 (read) 
+  Availability: not-ready
+  Varpool flags: read-only
+Dio_Ipw_WriteChannel/19 (Dio_Ipw_WriteChannel) @05e52460
   Type: function
   Visibility: external public
   References: 
   Referring: 
   Function flags:
-  Called by: Dio_WriteChannel/1 
+  Called by: Dio_WriteChannel/9 
   Calls: 
-Dio_Ipw_ReadChannel/7 (Dio_Ipw_ReadChannel) @06892c40
+Dio_Config/18 (Dio_Config) @05e4dca8
+  Type: variable
+  Visibility: external public
+  References: 
+  Referring: Dio_ValidateChannelForRead/2 (read) Dio_ValidateChannelForWrite/1 (read) Dio_ValidatePortForRead/4 (read) Dio_ValidatePortForWrite/3 (read) Dio_ValidateChannelGroupForRead/6 (read) Dio_ValidateChannelGroupForRead/6 (read) Dio_ValidateChannelGroupForRead/6 (read) Dio_ValidateChannelGroupForWrite/5 (read) Dio_ValidateChannelGroupForWrite/5 (read) Dio_ValidateChannelGroupForWrite/5 (read) 
+  Availability: not-ready
+  Varpool flags: read-only
+Dio_aAvailablePinsForRead/17 (Dio_aAvailablePinsForRead) @05e4dc60
+  Type: variable
+  Visibility: external public
+  References: 
+  Referring: Dio_ValidateChannelForRead/2 (read) Dio_ValidatePortForRead/4 (read) Dio_ValidateChannelGroupForRead/6 (read) 
+  Availability: not-ready
+  Varpool flags: read-only
+Dio_Ipw_ReadChannel/16 (Dio_Ipw_ReadChannel) @05e521c0
   Type: function
   Visibility: external public
   References: 
   Referring: 
   Function flags:
-  Called by: Dio_ReadChannel/0 
+  Called by: Dio_ReadChannel/8 
   Calls: 
-Dio_WriteChannelGroup/6 (Dio_WriteChannelGroup) @068927e0
+Det_ReportError/15 (Det_ReportError) @05e52000
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: Dio_ValidateChannelGroupForWrite/5 Dio_ValidateChannelGroupForRead/6 Dio_ValidatePortForWrite/3 Dio_ValidatePortForWrite/3 Dio_ValidatePortForRead/4 Dio_ValidatePortForRead/4 Dio_ValidateChannelLevel/0 Dio_ValidateChannelForWrite/1 Dio_ValidateChannelForWrite/1 Dio_ValidateChannelForRead/2 Dio_ValidateChannelForRead/2 Dio_GetVersionInfo/7 
+  Calls: 
+Dio_WriteChannelGroup/14 (Dio_WriteChannelGroup) @05cba2a0
   Type: function definition analyzed
   Visibility: force_output no_reorder public
   References: 
   Referring: 
   Function flags: body
   Called by: 
-  Calls: Dio_Ipw_WriteChannelGroup/13 
-Dio_ReadChannelGroup/5 (Dio_ReadChannelGroup) @06892540
+  Calls: Dio_Ipw_WriteChannelGroup/25 Dio_ValidateChannelGroupForWrite/5 
+Dio_ReadChannelGroup/13 (Dio_ReadChannelGroup) @05cbaee0
   Type: function definition analyzed
   Visibility: force_output no_reorder public
   References: 
   Referring: 
   Function flags: body
   Called by: 
-  Calls: Dio_Ipw_ReadChannelGroup/12 
-Dio_WritePort/4 (Dio_WritePort) @068922a0
+  Calls: Dio_Ipw_ReadChannelGroup/24 Dio_ValidateChannelGroupForRead/6 
+Dio_WritePort/12 (Dio_WritePort) @05cbac40
   Type: function definition analyzed
   Visibility: force_output no_reorder public
   References: 
   Referring: 
   Function flags: body
   Called by: 
-  Calls: Dio_Ipw_WritePort/11 
-Dio_ReadPort/3 (Dio_ReadPort) @06892000
+  Calls: Dio_Ipw_WritePort/23 Dio_ValidatePortForWrite/3 
+Dio_ReadPort/11 (Dio_ReadPort) @05cba9a0
   Type: function definition analyzed
   Visibility: force_output no_reorder public
   References: 
   Referring: 
   Function flags: body
   Called by: 
-  Calls: Dio_Ipw_ReadPort/10 
-Dio_FlipChannel/2 (Dio_FlipChannel) @068c5a80
+  Calls: Dio_Ipw_ReadPort/22 Dio_ValidatePortForRead/4 
+Dio_FlipChannel/10 (Dio_FlipChannel) @05cba700
   Type: function definition analyzed
   Visibility: force_output no_reorder public
   References: 
   Referring: 
   Function flags: body
   Called by: 
-  Calls: Dio_Ipw_FlipChannel/9 
-Dio_WriteChannel/1 (Dio_WriteChannel) @068c5ee0
+  Calls: Dio_Ipw_FlipChannel/21 Dio_ValidateChannelForWrite/1 
+Dio_WriteChannel/9 (Dio_WriteChannel) @05cba460
   Type: function definition analyzed
   Visibility: force_output no_reorder public
   References: 
   Referring: 
   Function flags: body
   Called by: 
-  Calls: Dio_Ipw_WriteChannel/8 
-Dio_ReadChannel/0 (Dio_ReadChannel) @068c5c40
+  Calls: Dio_Ipw_WriteChannel/19 Dio_ValidateChannelLevel/0 Dio_ValidateChannelForWrite/1 
+Dio_ReadChannel/8 (Dio_ReadChannel) @05cba1c0
   Type: function definition analyzed
   Visibility: force_output no_reorder public
   References: 
   Referring: 
   Function flags: body
   Called by: 
-  Calls: Dio_Ipw_ReadChannel/7 
+  Calls: Dio_Ipw_ReadChannel/16 Dio_ValidateChannelForRead/2 
+Dio_GetVersionInfo/7 (Dio_GetVersionInfo) @05cafee0
+  Type: function definition analyzed
+  Visibility: force_output no_reorder public
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: 
+  Calls: Det_ReportError/15 
+Dio_ValidateChannelGroupForRead/6 (Dio_ValidateChannelGroupForRead) @05caf9a0
+  Type: function definition analyzed
+  Visibility: no_reorder
+  References: Dio_Config/18 (read) Dio_Config/18 (read) Dio_Config/18 (read) Dio_aAvailablePinsForRead/17 (read) 
+  Referring: 
+  Function flags: body
+  Called by: Dio_ReadChannelGroup/13 
+  Calls: Det_ReportError/15 
+Dio_ValidateChannelGroupForWrite/5 (Dio_ValidateChannelGroupForWrite) @05caf460
+  Type: function definition analyzed
+  Visibility: no_reorder
+  References: Dio_Config/18 (read) Dio_Config/18 (read) Dio_Config/18 (read) Dio_aAvailablePinsForWrite/20 (read) 
+  Referring: 
+  Function flags: body
+  Called by: Dio_WriteChannelGroup/14 
+  Calls: Det_ReportError/15 
+Dio_ValidatePortForRead/4 (Dio_ValidatePortForRead) @05cafe00
+  Type: function definition analyzed
+  Visibility: no_reorder
+  References: Dio_aAvailablePinsForRead/17 (read) Dio_Config/18 (read) 
+  Referring: 
+  Function flags: body
+  Called by: Dio_ReadPort/11 
+  Calls: Det_ReportError/15 Det_ReportError/15 
+Dio_ValidatePortForWrite/3 (Dio_ValidatePortForWrite) @05cafb60
+  Type: function definition analyzed
+  Visibility: no_reorder
+  References: Dio_aAvailablePinsForWrite/20 (read) Dio_Config/18 (read) 
+  Referring: 
+  Function flags: body
+  Called by: Dio_WritePort/12 
+  Calls: Det_ReportError/15 Det_ReportError/15 
+Dio_ValidateChannelForRead/2 (Dio_ValidateChannelForRead) @05caf8c0
+  Type: function definition analyzed
+  Visibility: no_reorder
+  References: Dio_aAvailablePinsForRead/17 (read) Dio_Config/18 (read) 
+  Referring: 
+  Function flags: body
+  Called by: Dio_ReadChannel/8 
+  Calls: Det_ReportError/15 Det_ReportError/15 
+Dio_ValidateChannelForWrite/1 (Dio_ValidateChannelForWrite) @05caf620
+  Type: function definition analyzed
+  Visibility: no_reorder
+  References: Dio_aAvailablePinsForWrite/20 (read) Dio_Config/18 (read) 
+  Referring: 
+  Function flags: body
+  Called by: Dio_FlipChannel/10 Dio_WriteChannel/9 
+  Calls: Det_ReportError/15 Det_ReportError/15 
+Dio_ValidateChannelLevel/0 (Dio_ValidateChannelLevel) @05caf380
+  Type: function definition analyzed
+  Visibility: no_reorder
+  References: 
+  Referring: 
+  Function flags: body
+  Called by: Dio_WriteChannel/9 
+  Calls: Det_ReportError/15 
 
 Reclaiming functions:
 Reclaiming variables:
 Clearing address taken flags:
 Optimized Symbol table:
 
-Dio_Ipw_WriteChannelGroup/13 (Dio_Ipw_WriteChannelGroup) @06898460
+Dio_Ipw_WriteChannelGroup/25 (Dio_Ipw_WriteChannelGroup) @05e611c0
   Type: function
   Visibility: external public
   References: 
   Referring: 
   Availability: not_available
   Function flags:
-  Called by: Dio_WriteChannelGroup/6 
+  Called by: Dio_WriteChannelGroup/14 
   Calls: 
-Dio_Ipw_ReadChannelGroup/12 (Dio_Ipw_ReadChannelGroup) @068982a0
+Dio_Ipw_ReadChannelGroup/24 (Dio_Ipw_ReadChannelGroup) @05e52ee0
   Type: function
   Visibility: external public
   References: 
   Referring: 
   Availability: not_available
   Function flags:
-  Called by: Dio_ReadChannelGroup/5 
+  Called by: Dio_ReadChannelGroup/13 
   Calls: 
-Dio_Ipw_WritePort/11 (Dio_Ipw_WritePort) @068980e0
+Dio_Ipw_WritePort/23 (Dio_Ipw_WritePort) @05e52c40
   Type: function
   Visibility: external public
   References: 
   Referring: 
   Availability: not_available
   Function flags:
-  Called by: Dio_WritePort/4 
+  Called by: Dio_WritePort/12 
   Calls: 
-Dio_Ipw_ReadPort/10 (Dio_Ipw_ReadPort) @06892620
+Dio_Ipw_ReadPort/22 (Dio_Ipw_ReadPort) @05e529a0
   Type: function
   Visibility: external public
   References: 
   Referring: 
   Availability: not_available
   Function flags:
-  Called by: Dio_ReadPort/3 
+  Called by: Dio_ReadPort/11 
   Calls: 
-Dio_Ipw_FlipChannel/9 (Dio_Ipw_FlipChannel) @068920e0
+Dio_Ipw_FlipChannel/21 (Dio_Ipw_FlipChannel) @05e527e0
   Type: function
   Visibility: external public
   References: 
   Referring: 
   Availability: not_available
   Function flags:
-  Called by: Dio_FlipChannel/2 
+  Called by: Dio_FlipChannel/10 
   Calls: 
-Dio_Ipw_WriteChannel/8 (Dio_Ipw_WriteChannel) @06892e00
+Dio_aAvailablePinsForWrite/20 (Dio_aAvailablePinsForWrite) @05e57360
+  Type: variable
+  Body removed by symtab_remove_unreachable_nodes
+  Visibility: external public
+  References: 
+  Referring: Dio_ValidateChannelForWrite/1 (read) Dio_ValidatePortForWrite/3 (read) Dio_ValidateChannelGroupForWrite/5 (read) 
+  Availability: not_available
+  Varpool flags: read-only
+Dio_Ipw_WriteChannel/19 (Dio_Ipw_WriteChannel) @05e52460
   Type: function
   Visibility: external public
   References: 
   Referring: 
   Availability: not_available
   Function flags:
-  Called by: Dio_WriteChannel/1 
+  Called by: Dio_WriteChannel/9 
   Calls: 
-Dio_Ipw_ReadChannel/7 (Dio_Ipw_ReadChannel) @06892c40
+Dio_Config/18 (Dio_Config) @05e4dca8
+  Type: variable
+  Body removed by symtab_remove_unreachable_nodes
+  Visibility: external public
+  References: 
+  Referring: Dio_ValidatePortForWrite/3 (read) Dio_ValidateChannelGroupForRead/6 (read) Dio_ValidateChannelForRead/2 (read) Dio_ValidateChannelForWrite/1 (read) Dio_ValidateChannelGroupForRead/6 (read) Dio_ValidateChannelGroupForRead/6 (read) Dio_ValidatePortForRead/4 (read) Dio_ValidateChannelGroupForWrite/5 (read) Dio_ValidateChannelGroupForWrite/5 (read) Dio_ValidateChannelGroupForWrite/5 (read) 
+  Availability: not_available
+  Varpool flags: read-only
+Dio_aAvailablePinsForRead/17 (Dio_aAvailablePinsForRead) @05e4dc60
+  Type: variable
+  Body removed by symtab_remove_unreachable_nodes
+  Visibility: external public
+  References: 
+  Referring: Dio_ValidateChannelForRead/2 (read) Dio_ValidatePortForRead/4 (read) Dio_ValidateChannelGroupForRead/6 (read) 
+  Availability: not_available
+  Varpool flags: read-only
+Dio_Ipw_ReadChannel/16 (Dio_Ipw_ReadChannel) @05e521c0
   Type: function
   Visibility: external public
   References: 
   Referring: 
   Availability: not_available
   Function flags:
-  Called by: Dio_ReadChannel/0 
+  Called by: Dio_ReadChannel/8 
   Calls: 
-Dio_WriteChannelGroup/6 (Dio_WriteChannelGroup) @068927e0
+Det_ReportError/15 (Det_ReportError) @05e52000
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: Dio_GetVersionInfo/7 Dio_ValidateChannelGroupForWrite/5 Dio_ValidateChannelGroupForRead/6 Dio_ValidatePortForWrite/3 Dio_ValidatePortForWrite/3 Dio_ValidatePortForRead/4 Dio_ValidatePortForRead/4 Dio_ValidateChannelLevel/0 Dio_ValidateChannelForWrite/1 Dio_ValidateChannelForWrite/1 Dio_ValidateChannelForRead/2 Dio_ValidateChannelForRead/2 
+  Calls: 
+Dio_WriteChannelGroup/14 (Dio_WriteChannelGroup) @05cba2a0
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: 
@@ -549,8 +962,8 @@ Dio_WriteChannelGroup/6 (Dio_WriteChannelGroup) @068927e0
   Availability: available
   Function flags: body
   Called by: 
-  Calls: Dio_Ipw_WriteChannelGroup/13 
-Dio_ReadChannelGroup/5 (Dio_ReadChannelGroup) @06892540
+  Calls: Dio_Ipw_WriteChannelGroup/25 Dio_ValidateChannelGroupForWrite/5 
+Dio_ReadChannelGroup/13 (Dio_ReadChannelGroup) @05cbaee0
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: 
@@ -558,8 +971,8 @@ Dio_ReadChannelGroup/5 (Dio_ReadChannelGroup) @06892540
   Availability: available
   Function flags: body
   Called by: 
-  Calls: Dio_Ipw_ReadChannelGroup/12 
-Dio_WritePort/4 (Dio_WritePort) @068922a0
+  Calls: Dio_Ipw_ReadChannelGroup/24 Dio_ValidateChannelGroupForRead/6 
+Dio_WritePort/12 (Dio_WritePort) @05cbac40
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: 
@@ -567,8 +980,8 @@ Dio_WritePort/4 (Dio_WritePort) @068922a0
   Availability: available
   Function flags: body
   Called by: 
-  Calls: Dio_Ipw_WritePort/11 
-Dio_ReadPort/3 (Dio_ReadPort) @06892000
+  Calls: Dio_Ipw_WritePort/23 Dio_ValidatePortForWrite/3 
+Dio_ReadPort/11 (Dio_ReadPort) @05cba9a0
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: 
@@ -576,8 +989,8 @@ Dio_ReadPort/3 (Dio_ReadPort) @06892000
   Availability: available
   Function flags: body
   Called by: 
-  Calls: Dio_Ipw_ReadPort/10 
-Dio_FlipChannel/2 (Dio_FlipChannel) @068c5a80
+  Calls: Dio_Ipw_ReadPort/22 Dio_ValidatePortForRead/4 
+Dio_FlipChannel/10 (Dio_FlipChannel) @05cba700
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: 
@@ -585,8 +998,8 @@ Dio_FlipChannel/2 (Dio_FlipChannel) @068c5a80
   Availability: available
   Function flags: body
   Called by: 
-  Calls: Dio_Ipw_FlipChannel/9 
-Dio_WriteChannel/1 (Dio_WriteChannel) @068c5ee0
+  Calls: Dio_Ipw_FlipChannel/21 Dio_ValidateChannelForWrite/1 
+Dio_WriteChannel/9 (Dio_WriteChannel) @05cba460
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: 
@@ -594,8 +1007,8 @@ Dio_WriteChannel/1 (Dio_WriteChannel) @068c5ee0
   Availability: available
   Function flags: body
   Called by: 
-  Calls: Dio_Ipw_WriteChannel/8 
-Dio_ReadChannel/0 (Dio_ReadChannel) @068c5c40
+  Calls: Dio_Ipw_WriteChannel/19 Dio_ValidateChannelLevel/0 Dio_ValidateChannelForWrite/1 
+Dio_ReadChannel/8 (Dio_ReadChannel) @05cba1c0
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: 
@@ -603,7 +1016,79 @@ Dio_ReadChannel/0 (Dio_ReadChannel) @068c5c40
   Availability: available
   Function flags: body
   Called by: 
-  Calls: Dio_Ipw_ReadChannel/7 
+  Calls: Dio_Ipw_ReadChannel/16 Dio_ValidateChannelForRead/2 
+Dio_GetVersionInfo/7 (Dio_GetVersionInfo) @05cafee0
+  Type: function definition analyzed
+  Visibility: force_output externally_visible no_reorder public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: body
+  Called by: 
+  Calls: Det_ReportError/15 
+Dio_ValidateChannelGroupForRead/6 (Dio_ValidateChannelGroupForRead) @05caf9a0
+  Type: function definition analyzed
+  Visibility: no_reorder prevailing_def_ironly
+  References: Dio_Config/18 (read) Dio_Config/18 (read) Dio_Config/18 (read) Dio_aAvailablePinsForRead/17 (read) 
+  Referring: 
+  Availability: local
+  Function flags: body local
+  Called by: Dio_ReadChannelGroup/13 
+  Calls: Det_ReportError/15 
+Dio_ValidateChannelGroupForWrite/5 (Dio_ValidateChannelGroupForWrite) @05caf460
+  Type: function definition analyzed
+  Visibility: no_reorder prevailing_def_ironly
+  References: Dio_Config/18 (read) Dio_Config/18 (read) Dio_Config/18 (read) Dio_aAvailablePinsForWrite/20 (read) 
+  Referring: 
+  Availability: local
+  Function flags: body local
+  Called by: Dio_WriteChannelGroup/14 
+  Calls: Det_ReportError/15 
+Dio_ValidatePortForRead/4 (Dio_ValidatePortForRead) @05cafe00
+  Type: function definition analyzed
+  Visibility: no_reorder prevailing_def_ironly
+  References: Dio_aAvailablePinsForRead/17 (read) Dio_Config/18 (read) 
+  Referring: 
+  Availability: local
+  Function flags: body local
+  Called by: Dio_ReadPort/11 
+  Calls: Det_ReportError/15 Det_ReportError/15 
+Dio_ValidatePortForWrite/3 (Dio_ValidatePortForWrite) @05cafb60
+  Type: function definition analyzed
+  Visibility: no_reorder prevailing_def_ironly
+  References: Dio_aAvailablePinsForWrite/20 (read) Dio_Config/18 (read) 
+  Referring: 
+  Availability: local
+  Function flags: body local
+  Called by: Dio_WritePort/12 
+  Calls: Det_ReportError/15 Det_ReportError/15 
+Dio_ValidateChannelForRead/2 (Dio_ValidateChannelForRead) @05caf8c0
+  Type: function definition analyzed
+  Visibility: no_reorder prevailing_def_ironly
+  References: Dio_aAvailablePinsForRead/17 (read) Dio_Config/18 (read) 
+  Referring: 
+  Availability: local
+  Function flags: body local
+  Called by: Dio_ReadChannel/8 
+  Calls: Det_ReportError/15 Det_ReportError/15 
+Dio_ValidateChannelForWrite/1 (Dio_ValidateChannelForWrite) @05caf620
+  Type: function definition analyzed
+  Visibility: no_reorder prevailing_def_ironly
+  References: Dio_aAvailablePinsForWrite/20 (read) Dio_Config/18 (read) 
+  Referring: 
+  Availability: local
+  Function flags: body local
+  Called by: Dio_FlipChannel/10 Dio_WriteChannel/9 
+  Calls: Det_ReportError/15 Det_ReportError/15 
+Dio_ValidateChannelLevel/0 (Dio_ValidateChannelLevel) @05caf380
+  Type: function definition analyzed
+  Visibility: no_reorder prevailing_def_ironly
+  References: 
+  Referring: 
+  Availability: local
+  Function flags: body local
+  Called by: Dio_WriteChannel/9 
+  Calls: Det_ReportError/15 
 Materializing clones
 Materialization Call site updates done.
 
@@ -615,7 +1100,7 @@ Removing variables:
 
 Final Symbol table:
 
-Dio_Ipw_WriteChannelGroup/13 (Dio_Ipw_WriteChannelGroup) @06898460
+Dio_Ipw_WriteChannelGroup/25 (Dio_Ipw_WriteChannelGroup) @05e611c0
   Type: function
   Visibility: external public
   References: 
@@ -624,7 +1109,7 @@ Dio_Ipw_WriteChannelGroup/13 (Dio_Ipw_WriteChannelGroup) @06898460
   Function flags:
   Called by: 
   Calls: 
-Dio_Ipw_ReadChannelGroup/12 (Dio_Ipw_ReadChannelGroup) @068982a0
+Dio_Ipw_ReadChannelGroup/24 (Dio_Ipw_ReadChannelGroup) @05e52ee0
   Type: function
   Visibility: external public
   References: 
@@ -633,7 +1118,7 @@ Dio_Ipw_ReadChannelGroup/12 (Dio_Ipw_ReadChannelGroup) @068982a0
   Function flags:
   Called by: 
   Calls: 
-Dio_Ipw_WritePort/11 (Dio_Ipw_WritePort) @068980e0
+Dio_Ipw_WritePort/23 (Dio_Ipw_WritePort) @05e52c40
   Type: function
   Visibility: external public
   References: 
@@ -642,7 +1127,7 @@ Dio_Ipw_WritePort/11 (Dio_Ipw_WritePort) @068980e0
   Function flags:
   Called by: 
   Calls: 
-Dio_Ipw_ReadPort/10 (Dio_Ipw_ReadPort) @06892620
+Dio_Ipw_ReadPort/22 (Dio_Ipw_ReadPort) @05e529a0
   Type: function
   Visibility: external public
   References: 
@@ -651,7 +1136,7 @@ Dio_Ipw_ReadPort/10 (Dio_Ipw_ReadPort) @06892620
   Function flags:
   Called by: 
   Calls: 
-Dio_Ipw_FlipChannel/9 (Dio_Ipw_FlipChannel) @068920e0
+Dio_Ipw_FlipChannel/21 (Dio_Ipw_FlipChannel) @05e527e0
   Type: function
   Visibility: external public
   References: 
@@ -660,7 +1145,15 @@ Dio_Ipw_FlipChannel/9 (Dio_Ipw_FlipChannel) @068920e0
   Function flags:
   Called by: 
   Calls: 
-Dio_Ipw_WriteChannel/8 (Dio_Ipw_WriteChannel) @06892e00
+Dio_aAvailablePinsForWrite/20 (Dio_aAvailablePinsForWrite) @05e57360
+  Type: variable
+  Body removed by symtab_remove_unreachable_nodes
+  Visibility: external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Varpool flags: read-only
+Dio_Ipw_WriteChannel/19 (Dio_Ipw_WriteChannel) @05e52460
   Type: function
   Visibility: external public
   References: 
@@ -669,7 +1162,23 @@ Dio_Ipw_WriteChannel/8 (Dio_Ipw_WriteChannel) @06892e00
   Function flags:
   Called by: 
   Calls: 
-Dio_Ipw_ReadChannel/7 (Dio_Ipw_ReadChannel) @06892c40
+Dio_Config/18 (Dio_Config) @05e4dca8
+  Type: variable
+  Body removed by symtab_remove_unreachable_nodes
+  Visibility: external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Varpool flags: read-only
+Dio_aAvailablePinsForRead/17 (Dio_aAvailablePinsForRead) @05e4dc60
+  Type: variable
+  Body removed by symtab_remove_unreachable_nodes
+  Visibility: external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Varpool flags: read-only
+Dio_Ipw_ReadChannel/16 (Dio_Ipw_ReadChannel) @05e521c0
   Type: function
   Visibility: external public
   References: 
@@ -678,7 +1187,16 @@ Dio_Ipw_ReadChannel/7 (Dio_Ipw_ReadChannel) @06892c40
   Function flags:
   Called by: 
   Calls: 
-Dio_WriteChannelGroup/6 (Dio_WriteChannelGroup) @068927e0
+Det_ReportError/15 (Det_ReportError) @05e52000
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+Dio_WriteChannelGroup/14 (Dio_WriteChannelGroup) @05cba2a0
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder asm_written public section:.text.Dio_WriteChannelGroup (implicit_section)
   References: 
@@ -687,7 +1205,7 @@ Dio_WriteChannelGroup/6 (Dio_WriteChannelGroup) @068927e0
   Function flags:
   Called by: 
   Calls: 
-Dio_ReadChannelGroup/5 (Dio_ReadChannelGroup) @06892540
+Dio_ReadChannelGroup/13 (Dio_ReadChannelGroup) @05cbaee0
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder asm_written public section:.text.Dio_ReadChannelGroup (implicit_section)
   References: 
@@ -696,7 +1214,7 @@ Dio_ReadChannelGroup/5 (Dio_ReadChannelGroup) @06892540
   Function flags:
   Called by: 
   Calls: 
-Dio_WritePort/4 (Dio_WritePort) @068922a0
+Dio_WritePort/12 (Dio_WritePort) @05cbac40
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder asm_written public section:.text.Dio_WritePort (implicit_section)
   References: 
@@ -705,7 +1223,7 @@ Dio_WritePort/4 (Dio_WritePort) @068922a0
   Function flags:
   Called by: 
   Calls: 
-Dio_ReadPort/3 (Dio_ReadPort) @06892000
+Dio_ReadPort/11 (Dio_ReadPort) @05cba9a0
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder asm_written public section:.text.Dio_ReadPort (implicit_section)
   References: 
@@ -714,7 +1232,7 @@ Dio_ReadPort/3 (Dio_ReadPort) @06892000
   Function flags:
   Called by: 
   Calls: 
-Dio_FlipChannel/2 (Dio_FlipChannel) @068c5a80
+Dio_FlipChannel/10 (Dio_FlipChannel) @05cba700
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder asm_written public section:.text.Dio_FlipChannel (implicit_section)
   References: 
@@ -723,7 +1241,7 @@ Dio_FlipChannel/2 (Dio_FlipChannel) @068c5a80
   Function flags:
   Called by: 
   Calls: 
-Dio_WriteChannel/1 (Dio_WriteChannel) @068c5ee0
+Dio_WriteChannel/9 (Dio_WriteChannel) @05cba460
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder asm_written public section:.text.Dio_WriteChannel (implicit_section)
   References: 
@@ -732,12 +1250,84 @@ Dio_WriteChannel/1 (Dio_WriteChannel) @068c5ee0
   Function flags:
   Called by: 
   Calls: 
-Dio_ReadChannel/0 (Dio_ReadChannel) @068c5c40
+Dio_ReadChannel/8 (Dio_ReadChannel) @05cba1c0
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder asm_written public section:.text.Dio_ReadChannel (implicit_section)
   References: 
   Referring: 
   Availability: available
   Function flags:
+  Called by: 
+  Calls: 
+Dio_GetVersionInfo/7 (Dio_GetVersionInfo) @05cafee0
+  Type: function definition analyzed
+  Visibility: force_output externally_visible no_reorder asm_written public section:.text.Dio_GetVersionInfo (implicit_section)
+  References: 
+  Referring: 
+  Availability: available
+  Function flags:
+  Called by: 
+  Calls: 
+Dio_ValidateChannelGroupForRead/6 (Dio_ValidateChannelGroupForRead) @05caf9a0
+  Type: function definition analyzed
+  Visibility: no_reorder prevailing_def_ironly asm_written section:.text.Dio_ValidateChannelGroupForRead (implicit_section)
+  References: 
+  Referring: 
+  Availability: local
+  Function flags: local
+  Called by: 
+  Calls: 
+Dio_ValidateChannelGroupForWrite/5 (Dio_ValidateChannelGroupForWrite) @05caf460
+  Type: function definition analyzed
+  Visibility: no_reorder prevailing_def_ironly asm_written section:.text.Dio_ValidateChannelGroupForWrite (implicit_section)
+  References: 
+  Referring: 
+  Availability: local
+  Function flags: local
+  Called by: 
+  Calls: 
+Dio_ValidatePortForRead/4 (Dio_ValidatePortForRead) @05cafe00
+  Type: function definition analyzed
+  Visibility: no_reorder prevailing_def_ironly asm_written section:.text.Dio_ValidatePortForRead (implicit_section)
+  References: 
+  Referring: 
+  Availability: local
+  Function flags: local
+  Called by: 
+  Calls: 
+Dio_ValidatePortForWrite/3 (Dio_ValidatePortForWrite) @05cafb60
+  Type: function definition analyzed
+  Visibility: no_reorder prevailing_def_ironly asm_written section:.text.Dio_ValidatePortForWrite (implicit_section)
+  References: 
+  Referring: 
+  Availability: local
+  Function flags: local
+  Called by: 
+  Calls: 
+Dio_ValidateChannelForRead/2 (Dio_ValidateChannelForRead) @05caf8c0
+  Type: function definition analyzed
+  Visibility: no_reorder prevailing_def_ironly asm_written section:.text.Dio_ValidateChannelForRead (implicit_section)
+  References: 
+  Referring: 
+  Availability: local
+  Function flags: local
+  Called by: 
+  Calls: 
+Dio_ValidateChannelForWrite/1 (Dio_ValidateChannelForWrite) @05caf620
+  Type: function definition analyzed
+  Visibility: no_reorder prevailing_def_ironly asm_written section:.text.Dio_ValidateChannelForWrite (implicit_section)
+  References: 
+  Referring: 
+  Availability: local
+  Function flags: local
+  Called by: 
+  Calls: 
+Dio_ValidateChannelLevel/0 (Dio_ValidateChannelLevel) @05caf380
+  Type: function definition analyzed
+  Visibility: no_reorder prevailing_def_ironly asm_written section:.text.Dio_ValidateChannelLevel (implicit_section)
+  References: 
+  Referring: 
+  Availability: local
+  Function flags: local
   Called by: 
   Calls: 

@@ -22,7 +22,7 @@ IPA summary for HwIoAb_Buzzer_Beep/2 is missing.
 IPA summary for HwIoAb_Buzzer_Init/1 is missing.
 Symbol table:
 
-Pwm_SetOutputToIdle/5 (Pwm_SetOutputToIdle) @06a70000
+Pwm_SetOutputToIdle/5 (Pwm_SetOutputToIdle) @06a5f1c0
   Type: function
   Visibility: external public
   References: 
@@ -31,7 +31,7 @@ Pwm_SetOutputToIdle/5 (Pwm_SetOutputToIdle) @06a70000
   Function flags:
   Called by: HwIoAb_Buzzer_Stop/3 
   Calls: 
-Pwm_SetPeriodAndDuty/4 (Pwm_SetPeriodAndDuty) @06a6a700
+Pwm_SetPeriodAndDuty/4 (Pwm_SetPeriodAndDuty) @06a5f000
   Type: function
   Visibility: external public
   References: 
@@ -40,7 +40,7 @@ Pwm_SetPeriodAndDuty/4 (Pwm_SetPeriodAndDuty) @06a6a700
   Function flags:
   Called by: HwIoAb_Buzzer_Beep/2 HwIoAb_Buzzer_Beep/2 HwIoAb_Buzzer_Beep/2 
   Calls: 
-HwIoAb_Buzzer_Stop/3 (HwIoAb_Buzzer_Stop) @06a6ab60
+HwIoAb_Buzzer_Stop/3 (HwIoAb_Buzzer_Stop) @06a5bd20
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: 
@@ -49,7 +49,7 @@ HwIoAb_Buzzer_Stop/3 (HwIoAb_Buzzer_Stop) @06a6ab60
   Function flags: body
   Called by: 
   Calls: Pwm_SetOutputToIdle/5 
-HwIoAb_Buzzer_Beep/2 (HwIoAb_Buzzer_Beep) @06a6a8c0
+HwIoAb_Buzzer_Beep/2 (HwIoAb_Buzzer_Beep) @06a5ba80
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: 
@@ -58,7 +58,7 @@ HwIoAb_Buzzer_Beep/2 (HwIoAb_Buzzer_Beep) @06a6a8c0
   Function flags: body
   Called by: 
   Calls: Pwm_SetPeriodAndDuty/4 Pwm_SetPeriodAndDuty/4 Pwm_SetPeriodAndDuty/4 
-HwIoAb_Buzzer_Init/1 (HwIoAb_Buzzer_Init) @06a6a620
+HwIoAb_Buzzer_Init/1 (HwIoAb_Buzzer_Init) @06a5b7e0
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: 
@@ -68,7 +68,7 @@ HwIoAb_Buzzer_Init/1 (HwIoAb_Buzzer_Init) @06a6a620
   Called by: 
   Calls: 
 
-;; Function HwIoAb_Buzzer_Init (HwIoAb_Buzzer_Init, funcdef_no=1, decl_uid=5807, cgraph_uid=2, symbol_order=1)
+;; Function HwIoAb_Buzzer_Init (HwIoAb_Buzzer_Init, funcdef_no=1, decl_uid=5809, cgraph_uid=2, symbol_order=1)
 
 HwIoAb_Buzzer_Init (const struct HwIoAb_Buzzer_Config * Buzzer_Config)
 {
@@ -79,7 +79,7 @@ HwIoAb_Buzzer_Init (const struct HwIoAb_Buzzer_Config * Buzzer_Config)
 
 
 
-;; Function HwIoAb_Buzzer_Beep (HwIoAb_Buzzer_Beep, funcdef_no=2, decl_uid=5809, cgraph_uid=3, symbol_order=2)
+;; Function HwIoAb_Buzzer_Beep (HwIoAb_Buzzer_Beep, funcdef_no=2, decl_uid=5811, cgraph_uid=3, symbol_order=2)
 
 HwIoAb_Buzzer_Beep (uint8 Tone)
 {
@@ -114,7 +114,7 @@ HwIoAb_Buzzer_Beep (uint8 Tone)
 
 
 
-;; Function HwIoAb_Buzzer_Stop (HwIoAb_Buzzer_Stop, funcdef_no=3, decl_uid=5811, cgraph_uid=4, symbol_order=3)
+;; Function HwIoAb_Buzzer_Stop (HwIoAb_Buzzer_Stop, funcdef_no=3, decl_uid=5813, cgraph_uid=4, symbol_order=3)
 
 HwIoAb_Buzzer_Stop ()
 {

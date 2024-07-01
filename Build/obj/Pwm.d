@@ -32,7 +32,8 @@ Build/obj/Pwm.o: Autosar/Mcal/Pwm/src/Pwm.c \
  Autosar/Mcal/Pwm/include/Pwm_EnvCfg.h \
  Autosar/Mcal/Pwm/include/Pwm_Notif.h Autosar/Mcal/Pwm/include/Pwm.h \
  Autosar/Mcal/Pwm/include/Pwm_Ipw.h Autosar/Rte/include/SchM_Pwm.h \
- Autosar/Mcal/Base/include/Rte_MemMap.h
+ Autosar/Mcal/Base/include/Rte_MemMap.h Autosar/Det/include/Det.h \
+ Autosar/Mcal/Base/include/Det_MemMap.h
 Autosar/Mcal/Base/include/Std_Types.h:
 Autosar/Mcal/Base/include/StandardTypes.h:
 Autosar/Mcal/Base/include/Platform_Types.h:
@@ -77,3 +78,5 @@ Autosar/Mcal/Pwm/include/Pwm.h:
 Autosar/Mcal/Pwm/include/Pwm_Ipw.h:
 Autosar/Rte/include/SchM_Pwm.h:
 Autosar/Mcal/Base/include/Rte_MemMap.h:
+Autosar/Det/include/Det.h:
+Autosar/Mcal/Base/include/Det_MemMap.h:

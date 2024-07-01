@@ -39,7 +39,9 @@ Build/obj/Mcu.o: Autosar/Mcal/Mcu/src/Mcu.c \
  Autosar/Mcal/Mcu/include/Power_Ip_Types.h \
  Autosar/Mcal/Mcu/include/Ram_Ip_Types.h \
  Autosar/Mcal/Mcu/include/Mcu_Ipw.h Autosar/Rte/include/SchM_Mcu.h \
- Autosar/Mcal/Base/include/Rte_MemMap.h
+ Autosar/Mcal/Base/include/Rte_MemMap.h Autosar/Det/include/Det.h \
+ Autosar/Mcal/Base/include/Std_Types.h \
+ Autosar/Mcal/Base/include/Det_MemMap.h
 Autosar/Mcal/Base/include/Mcal.h:
 Autosar/Mcal/Base/include/Compiler.h:
 Autosar/Mcal/Base/include/Compiler_Cfg.h:
@@ -91,3 +93,6 @@ Autosar/Mcal/Mcu/include/Ram_Ip_Types.h:
 Autosar/Mcal/Mcu/include/Mcu_Ipw.h:
 Autosar/Rte/include/SchM_Mcu.h:
 Autosar/Mcal/Base/include/Rte_MemMap.h:
+Autosar/Det/include/Det.h:
+Autosar/Mcal/Base/include/Std_Types.h:
+Autosar/Mcal/Base/include/Det_MemMap.h:

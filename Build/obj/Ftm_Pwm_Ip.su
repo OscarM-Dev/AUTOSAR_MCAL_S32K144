@@ -1,4 +1,6 @@
+Autosar/Mcal/Base/include/Devassert.h:85:20:DevAssert	8	static
 Autosar/Mcal/Pwm/include/Ftm_Pwm_Ip_HwAccess.h:134:20:Ftm_Pwm_Ip_SetClockPs	8	static
+Autosar/Mcal/Pwm/include/Ftm_Pwm_Ip_HwAccess.h:147:21:Ftm_Pwm_Ip_GetClockPs	8	static
 Autosar/Mcal/Pwm/include/Ftm_Pwm_Ip_HwAccess.h:162:20:Ftm_Pwm_Ip_SetClockSource	8	static
 Autosar/Mcal/Pwm/include/Ftm_Pwm_Ip_HwAccess.h:193:20:Ftm_Pwm_Ip_SetCpwms	8	static
 Autosar/Mcal/Pwm/include/Ftm_Pwm_Ip_HwAccess.h:208:42:Ftm_Pwm_Ip_GetCpwms	8	static
@@ -15,6 +17,7 @@ Autosar/Mcal/Pwm/include/Ftm_Pwm_Ip_HwAccess.h:540:20:Ftm_Pwm_Ip_UpdateChnInt	8	
 Autosar/Mcal/Pwm/include/Ftm_Pwm_Ip_HwAccess.h:564:20:Ftm_Pwm_Ip_ClearChnEventFlag	8	static
 Autosar/Mcal/Pwm/include/Ftm_Pwm_Ip_HwAccess.h:601:23:Ftm_Pwm_Ip_GetChOutputValue	8	static
 Autosar/Mcal/Pwm/include/Ftm_Pwm_Ip_HwAccess.h:616:20:Ftm_Pwm_Ip_SetChnCountVal	8	static
+Autosar/Mcal/Pwm/include/Ftm_Pwm_Ip_HwAccess.h:633:22:Ftm_Pwm_Ip_GetChnCountVal	8	static
 Autosar/Mcal/Pwm/include/Ftm_Pwm_Ip_HwAccess.h:647:20:Ftm_Pwm_Ip_SetCounterInitVal	8	static
 Autosar/Mcal/Pwm/include/Ftm_Pwm_Ip_HwAccess.h:715:20:Ftm_Pwm_Ip_Enable	8	static
 Autosar/Mcal/Pwm/include/Ftm_Pwm_Ip_HwAccess.h:760:20:Ftm_Pwm_Ip_SetPwmSyncMode	8	static
@@ -35,6 +38,7 @@ Autosar/Mcal/Pwm/include/Ftm_Pwm_Ip_HwAccess.h:1061:20:Ftm_Pwm_Ip_SetDualChnPwmS
 Autosar/Mcal/Pwm/include/Ftm_Pwm_Ip_HwAccess.h:1085:20:Ftm_Pwm_Ip_SetDualChnMCombineCmd	8	static
 Autosar/Mcal/Pwm/include/Ftm_Pwm_Ip_HwAccess.h:1128:20:Ftm_Pwm_Ip_SetDeadtimeCount	8	static
 Autosar/Mcal/Pwm/include/Ftm_Pwm_Ip_HwAccess.h:1143:20:Ftm_Pwm_Ip_SetDeadtimePrescaler	8	static
+Autosar/Mcal/Pwm/include/Ftm_Pwm_Ip_HwAccess.h:1154:21:Ftm_Pwm_Ip_GetDeadtimePrescaler	8	static
 Autosar/Mcal/Pwm/include/Ftm_Pwm_Ip_HwAccess.h:1165:20:Ftm_Pwm_Ip_SetExtDeadtimeValue	8	static
 Autosar/Mcal/Pwm/include/Ftm_Pwm_Ip_HwAccess.h:1181:20:Ftm_Pwm_Ip_SetInitTriggerCmd	8	static
 Autosar/Mcal/Pwm/include/Ftm_Pwm_Ip_HwAccess.h:1215:20:Ftm_Pwm_Ip_DisableTriggerMask	8	static
@@ -66,6 +70,8 @@ Autosar/Mcal/Pwm/include/Ftm_Pwm_Ip_HwAccess.h:1766:20:Ftm_Pwm_Ip_SetHalfCycleCm
 Autosar/Mcal/Pwm/include/Ftm_Pwm_Ip_HwAccess.h:1849:20:Ftm_Pwm_Ip_SetHalfCycleValue	8	static
 Autosar/Mcal/Pwm/include/Ftm_Pwm_Ip_HwAccess.h:2017:22:Ftm_Pwm_Ip_GetSoftwareOutputControl	8	static
 Autosar/Mcal/Pwm/include/Ftm_Pwm_Ip_HwAccess.h:2031:22:Ftm_Pwm_Ip_GetPolInstance	8	static
+Autosar/Mcal/Pwm/include/Ftm_Pwm_Ip_HwAccess.h:2046:23:Ftm_Pwm_Ip_GetDualChnCompCmd	16	static
+Autosar/Mcal/Pwm/include/Ftm_Pwm_Ip_HwAccess.h:2064:23:Ftm_Pwm_Ip_GetDualChnDeadtimeCmd	16	static
 Autosar/Mcal/Pwm/include/Ftm_Pwm_Ip_HwAccess.h:2075:42:Ftm_Pwm_Ip_GetChannelMode	24	static
 Autosar/Mcal/Pwm/include/Ftm_Pwm_Ip_HwAccess.h:2133:20:Ftm_Pwm_Ip_UpdateWriteProtection	8	static
 Autosar/Mcal/Pwm/include/Ftm_Pwm_Ip_HwAccess.h:2158:20:Ftm_Pwm_Ip_Reset	24	static
@@ -80,6 +86,7 @@ Autosar/Mcal/Pwm/include/Ftm_Pwm_Ip_HwAccess.h:2456:20:Ftm_Pwm_Ip_SetFaultPolari
 Autosar/Mcal/Pwm/include/Ftm_Pwm_Ip_HwAccess.h:2469:20:Ftm_Pwm_Ip_SetFaultInputEn	16	static
 Autosar/Mcal/Pwm/include/Ftm_Pwm_Ip_HwAccess.h:2482:20:Ftm_Pwm_Ip_SetFaultFilterEn	16	static
 Autosar/Mcal/Pwm/include/Ftm_Pwm_Ip_HwAccess.h:2498:20:Ftm_Pwm_Ip_SetSimOutputBufferEn	8	static
+Autosar/Mcal/Pwm/src/Ftm_Pwm_Ip.c:348:16:Ftm_Pwm_Ip_ValidateParamDeadTime	40	static
 Autosar/Mcal/Pwm/src/Ftm_Pwm_Ip.c:394:15:Ftm_Pwm_Ip_CalculatePhaseShift	16	static
 Autosar/Mcal/Pwm/src/Ftm_Pwm_Ip.c:428:14:Ftm_Pwm_Ip_InitPair	24	static
 Autosar/Mcal/Pwm/src/Ftm_Pwm_Ip.c:510:13:Ftm_Pwm_Ip_DisableCmpIrq	24	static
@@ -109,12 +116,12 @@ Autosar/Mcal/Pwm/src/Ftm_Pwm_Ip.c:1995:6:Ftm_Pwm_Ip_EnableNotification	24	static
 Autosar/Mcal/Pwm/src/Ftm_Pwm_Ip.c:2094:6:Ftm_Pwm_Ip_SetPowerState	24	static
 Autosar/Mcal/Pwm/src/Ftm_Pwm_Ip.c:2122:6:Ftm_Pwm_Ip_SetClockMode	24	static
 Autosar/Mcal/Pwm/src/Ftm_Pwm_Ip.c:2149:6:Ftm_Pwm_Ip_ResetCounter	24	static
-Autosar/Mcal/Pwm/src/Ftm_Pwm_Ip.c:2170:8:Ftm_Pwm_Ip_GetChannelState	16	static
+Autosar/Mcal/Pwm/src/Ftm_Pwm_Ip.c:2170:8:Ftm_Pwm_Ip_GetChannelState	24	static
 Autosar/Mcal/Pwm/src/Ftm_Pwm_Ip.c:2191:6:Ftm_Pwm_Ip_FastUpdatePwmDuty	32	static
 Autosar/Mcal/Pwm/src/Ftm_Pwm_Ip.c:2223:6:Ftm_Pwm_Ip_MaskOutputChannels	24	static
 Autosar/Mcal/Pwm/src/Ftm_Pwm_Ip.c:2249:6:Ftm_Pwm_Ip_UnMaskOutputChannels	24	static
-Autosar/Mcal/Pwm/src/Ftm_Pwm_Ip.c:2274:6:Ftm_Pwm_Ip_SetPhaseShift	24	static
-Autosar/Mcal/Pwm/src/Ftm_Pwm_Ip.c:2358:6:Ftm_Pwm_Ip_SetDutyPhaseShift	32	static
+Autosar/Mcal/Pwm/src/Ftm_Pwm_Ip.c:2274:6:Ftm_Pwm_Ip_SetPhaseShift	40	static
+Autosar/Mcal/Pwm/src/Ftm_Pwm_Ip.c:2358:6:Ftm_Pwm_Ip_SetDutyPhaseShift	48	static
 Autosar/Mcal/Pwm/src/Ftm_Pwm_Ip.c:2456:7:Ftm_Pwm_Ip_DisableTrigger	24	static
 Autosar/Mcal/Pwm/src/Ftm_Pwm_Ip.c:2479:7:Ftm_Pwm_Ip_EnableTrigger	24	static
 Autosar/Mcal/Pwm/src/Ftm_Pwm_Ip.c:2502:6:Ftm_Pwm_Ip_SyncUpdate	24	static

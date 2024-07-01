@@ -19,9 +19,7 @@
             <d:ctr type="MODULE-CONFIGURATION">
               <a:a name="DEF" value="ASPath:/TS_T40D2M20I0R0/Port"/>
               <a:a name="IMPORTER_INFO" value="@REC"/>
-              <d:var name="POST_BUILD_VARIANT_USED" type="BOOLEAN" value="false">
-                <a:a name="IMPORTER_INFO" value="@DEF"/>
-              </d:var>
+              <d:var name="POST_BUILD_VARIANT_USED" type="BOOLEAN" value="true"/>
               <d:var name="IMPLEMENTATION_CONFIG_VARIANT" type="ENUMERATION" 
                      value="VariantPostBuild">
                 <a:a name="IMPORTER_INFO" value="@REC"/>
@@ -478,9 +476,7 @@
                           <a:a name="IMPORTER_INFO" value="@DEF"/>
                         </d:var>
                         <d:var name="PortPinModeChangeable" type="BOOLEAN" 
-                               value="true">
-                          <a:a name="IMPORTER_INFO" value="@DEF"/>
-                        </d:var>
+                               value="true"/>
                         <d:var name="PortPinId" type="INTEGER" value="8">
                           <a:a name="IMPORTER_INFO">
                             <a:v>@DEF</a:v>
@@ -791,19 +787,18 @@
                 <d:lst name="DigitalFilter" type="MAP"/>
               </d:ctr>
               <d:ctr name="PortGeneral" type="IDENTIFIABLE">
-                <d:var name="PortDevErrorDetect" type="BOOLEAN" value="false"/>
+                <d:var name="PortDevErrorDetect" type="BOOLEAN" value="true"/>
                 <d:var name="PortCiPortIPDevErrorDetect" type="BOOLEAN" 
                        value="false">
                   <a:a name="IMPORTER_INFO" value="@DEF"/>
                 </d:var>
-                <d:var name="PortSetPinDirectionApi" type="BOOLEAN" 
-                       value="false"/>
+                <d:var name="PortSetPinDirectionApi" type="BOOLEAN" value="true"/>
                 <d:var name="PortSet2PinsDirectionApi" type="BOOLEAN" 
                        value="false">
                   <a:a name="IMPORTER_INFO" value="@DEF"/>
                 </d:var>
-                <d:var name="PortSetPinModeApi" type="BOOLEAN" value="false"/>
-                <d:var name="PortVersionInfoApi" type="BOOLEAN" value="false"/>
+                <d:var name="PortSetPinModeApi" type="BOOLEAN" value="true"/>
+                <d:var name="PortVersionInfoApi" type="BOOLEAN" value="true"/>
                 <d:var name="PortSetPinModeDoesNotTouchGpioLevel" 
                        type="BOOLEAN" value="false">
                   <a:a name="IMPORTER_INFO" value="@DEF"/>

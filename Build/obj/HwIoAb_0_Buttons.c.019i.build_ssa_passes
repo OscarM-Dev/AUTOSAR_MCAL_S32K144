@@ -303,7 +303,7 @@ HwIoAb_Buttons_MainFunction ()
 HwIoAb_Buttons_GetEvent (uint8 Button)
 {
   uint8 event;
-  uint8 D.5474;
+  uint8 D.5476;
 
   <bb 2> :
   event = 0;
@@ -331,11 +331,11 @@ HwIoAb_Buttons_GetEvent (uint8 Button)
   ButtonsControl_Ptr.8_6->Events[_8] = 0;
 
   <bb 5> :
-  D.5474 = event;
+  D.5476 = event;
 
   <bb 6> :
 <L4>:
-  return D.5474;
+  return D.5476;
 
 }
 

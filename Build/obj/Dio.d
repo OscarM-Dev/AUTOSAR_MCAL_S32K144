@@ -21,7 +21,8 @@ Build/obj/Dio.o: Autosar/Mcal/Dio/src/Dio.c \
  Autosar/Mcal/Base/include/Dio_MemMap.h \
  Autosar/Mcal/Dio/include/Dio_Ipw.h \
  Autosar/Mcal/Dio/include/Gpio_Dio_Ip.h \
- Build/cfg/include/Gpio_Dio_Ip_Cfg.h
+ Build/cfg/include/Gpio_Dio_Ip_Cfg.h Autosar/Det/include/Det.h \
+ Autosar/Mcal/Base/include/Det_MemMap.h
 Autosar/Mcal/Dio/include/Dio.h:
 Autosar/Mcal/Base/include/Std_Types.h:
 Autosar/Mcal/Base/include/StandardTypes.h:
@@ -49,3 +50,5 @@ Autosar/Mcal/Base/include/Dio_MemMap.h:
 Autosar/Mcal/Dio/include/Dio_Ipw.h:
 Autosar/Mcal/Dio/include/Gpio_Dio_Ip.h:
 Build/cfg/include/Gpio_Dio_Ip_Cfg.h:
+Autosar/Det/include/Det.h:
+Autosar/Mcal/Base/include/Det_MemMap.h:

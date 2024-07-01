@@ -67,6 +67,11 @@
     "hwioab_1_leds.h": "c",
     "scheduler.h": "c",
     "segger_rtt.h": "c",
-    "iohwab.h": "c"
+    "iohwab.h": "c",
+    "mcu_pbcfg.h": "c",
+    "mcal.h": "c",
+    "port_cfg.h": "c",
+    "hwioab_0_buttons.h": "c",
+    "hwioab_3_buzzer.h": "c"
   }
 }

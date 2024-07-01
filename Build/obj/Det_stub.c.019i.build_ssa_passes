@@ -2,7 +2,7 @@ Det_TestNoTransientFault ()
 {
   uint32 u32CoreId;
   boolean result;
-  boolean D.5510;
+  boolean D.5519;
   int iftmp.5;
 
   <bb 2> :
@@ -53,11 +53,11 @@ Det_TestNoTransientFault ()
   _7 = _6 != 0;
   _8 = ~_7;
   _9 = (int) _8;
-  D.5510 = (boolean) _9;
+  D.5519 = (boolean) _9;
 
   <bb 9> :
 <L6>:
-  return D.5510;
+  return D.5519;
 
 }
 
@@ -66,7 +66,7 @@ Det_TestNoRuntimeError ()
 {
   uint32 u32CoreId;
   boolean result;
-  boolean D.5501;
+  boolean D.5510;
   int iftmp.4;
 
   <bb 2> :
@@ -117,11 +117,11 @@ Det_TestNoRuntimeError ()
   _7 = _6 != 0;
   _8 = ~_7;
   _9 = (int) _8;
-  D.5501 = (boolean) _9;
+  D.5510 = (boolean) _9;
 
   <bb 9> :
 <L6>:
-  return D.5501;
+  return D.5510;
 
 }
 
@@ -130,7 +130,7 @@ Det_TestNoError ()
 {
   uint32 u32CoreId;
   boolean result;
-  boolean D.5492;
+  boolean D.5501;
   int iftmp.3;
 
   <bb 2> :
@@ -181,11 +181,11 @@ Det_TestNoError ()
   _7 = _6 != 0;
   _8 = ~_7;
   _9 = (int) _8;
-  D.5492 = (boolean) _9;
+  D.5501 = (boolean) _9;
 
   <bb 9> :
 <L6>:
-  return D.5492;
+  return D.5501;
 
 }
 
@@ -194,7 +194,7 @@ Det_TestLastReportTransientFault (uint16 ModuleId, uint8 InstanceId, uint8 ApiId
 {
   uint32 u32CoreId;
   boolean result;
-  boolean D.5483;
+  boolean D.5492;
   int iftmp.2;
 
   <bb 2> :
@@ -241,11 +241,11 @@ Det_TestLastReportTransientFault (uint16 ModuleId, uint8 InstanceId, uint8 ApiId
   Det_TransientInstanceId[u32CoreId] = 0;
   Det_TransientApiId[u32CoreId] = 0;
   Det_TransientFaultId[u32CoreId] = 0;
-  D.5483 = result;
+  D.5492 = result;
 
   <bb 9> :
 <L6>:
-  return D.5483;
+  return D.5492;
 
 }
 
@@ -254,7 +254,7 @@ Det_TestLastReportRuntimeError (uint16 ModuleId, uint8 InstanceId, uint8 ApiId, 
 {
   uint32 u32CoreId;
   boolean result;
-  boolean D.5474;
+  boolean D.5483;
   int iftmp.1;
 
   <bb 2> :
@@ -301,11 +301,11 @@ Det_TestLastReportRuntimeError (uint16 ModuleId, uint8 InstanceId, uint8 ApiId, 
   Det_RuntimeInstanceId[u32CoreId] = 0;
   Det_RuntimeApiId[u32CoreId] = 0;
   Det_RuntimeErrorId[u32CoreId] = 0;
-  D.5474 = result;
+  D.5483 = result;
 
   <bb 9> :
 <L6>:
-  return D.5474;
+  return D.5483;
 
 }
 
@@ -314,7 +314,7 @@ Det_TestLastReportError (uint16 ModuleId, uint8 InstanceId, uint8 ApiId, uint8 E
 {
   uint32 u32CoreId;
   boolean result;
-  boolean D.5465;
+  boolean D.5474;
   int iftmp.0;
 
   <bb 2> :
@@ -361,11 +361,11 @@ Det_TestLastReportError (uint16 ModuleId, uint8 InstanceId, uint8 ApiId, uint8 E
   Det_InstanceId[u32CoreId] = 0;
   Det_ApiId[u32CoreId] = 0;
   Det_ErrorId[u32CoreId] = 0;
-  D.5465 = result;
+  D.5474 = result;
 
   <bb 9> :
 <L6>:
-  return D.5465;
+  return D.5474;
 
 }
 

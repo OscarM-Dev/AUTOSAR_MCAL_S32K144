@@ -29,7 +29,8 @@ Build/obj/Port_Ipw.o: Autosar/Mcal/Port/src/Port_Ipw.c \
  Autosar/Mcal/Base/header/S32K144_SYSTICK.h Build/cfg/include/Port_Cfg.h \
  Build/cfg/include/Port_PBcfg.h Autosar/Mcal/Port/include/Port.h \
  Autosar/Mcal/Port/include/Port_Ipw.h Autosar/Mcal/Base/include/Mcal.h \
- Autosar/Rte/include/SchM_Port.h Autosar/Mcal/Base/include/Rte_MemMap.h
+ Autosar/Rte/include/SchM_Port.h Autosar/Mcal/Base/include/Rte_MemMap.h \
+ Autosar/Det/include/Det.h Autosar/Mcal/Base/include/Det_MemMap.h
 Autosar/Mcal/Port/include/Port_Ipw.h:
 Autosar/Mcal/Port/include/Port_Ci_Port_Ip.h:
 Autosar/Mcal/Base/include/Std_Types.h:
@@ -68,3 +69,5 @@ Autosar/Mcal/Port/include/Port_Ipw.h:
 Autosar/Mcal/Base/include/Mcal.h:
 Autosar/Rte/include/SchM_Port.h:
 Autosar/Mcal/Base/include/Rte_MemMap.h:
+Autosar/Det/include/Det.h:
+Autosar/Mcal/Base/include/Det_MemMap.h:

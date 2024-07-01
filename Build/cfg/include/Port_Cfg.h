@@ -633,14 +633,14 @@ PORT_CONFIG_PB
 *
 * @implements   PORT_DEV_ERROR_DETECT_define
 */
-#define PORT_DEV_ERROR_DETECT           (STD_OFF)
+#define PORT_DEV_ERROR_DETECT           (STD_ON)
 
 /**
 * @brief Use/remove Port_SetPinDirection function from the compiled driver
 *
 * @implements   PORT_SET_PIN_DIRECTION_API_define
 */
-#define PORT_SET_PIN_DIRECTION_API      (STD_OFF)
+#define PORT_SET_PIN_DIRECTION_API      (STD_ON)
 
 /**
 * @brief Use/remove Port_Set2PinsDirection function from the compiled driver
@@ -658,7 +658,7 @@ PORT_CONFIG_PB
 *
 * @implements   PORT_SET_PIN_MODE_API_define
 */
-#define PORT_SET_PIN_MODE_API           (STD_OFF)
+#define PORT_SET_PIN_MODE_API           (STD_ON)
 
 /**
 * @brief Use/remove Port_SetAsUnusedPin/Port_SetAsUsedPin function from the compiled driver.
@@ -682,7 +682,7 @@ PORT_CONFIG_PB
 *
 * @implements   PORT_VERSION_INFO_API_define
 */
-#define PORT_VERSION_INFO_API           (STD_OFF)
+#define PORT_VERSION_INFO_API           (STD_ON)
 
 /**
 * @brief The number of configured partition on the platform

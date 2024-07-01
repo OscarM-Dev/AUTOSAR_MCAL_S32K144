@@ -36,9 +36,8 @@
                     <d:ref name="PwmHwChannel" type="REFERENCE" 
                            value="ASPath:/Pwm/Pwm/PwmChannelConfigSet/Ftm1/Ftm1Ch7"/>
                     <d:var name="PwmChannelClass" type="ENUMERATION" 
-                           value="PWM_FIXED_PERIOD">
-                      <a:a name="ENABLE" value="false"/>
-                      <a:a name="IMPORTER_INFO" value="@DEF"/>
+                           value="PWM_VARIABLE_PERIOD">
+                      <a:a name="ENABLE" value="true"/>
                     </d:var>
                     <d:var name="PwmPeriodInTicks" type="BOOLEAN" value="true">
                       <a:a name="IMPORTER_INFO" value="@DEF"/>
@@ -378,7 +377,7 @@
                 <d:var name="PwmMulticoreEnabled" type="BOOLEAN" value="false">
                   <a:a name="IMPORTER_INFO" value="@DEF"/>
                 </d:var>
-                <d:var name="PwmDevErrorDetect" type="BOOLEAN" value="false"/>
+                <d:var name="PwmDevErrorDetect" type="BOOLEAN" value="true"/>
                 <d:var name="PwmDutycycleUpdatedEndperiod" type="BOOLEAN" 
                        value="false">
                   <a:a name="IMPORTER_INFO" value="@DEF"/>
@@ -450,9 +449,7 @@
                 <d:var name="PwmSetDutyCycle" type="BOOLEAN" value="true"/>
                 <d:var name="PwmSetOutputToIdle" type="BOOLEAN" value="true"/>
                 <d:var name="PwmSetPeriodAndDuty" type="BOOLEAN" value="true"/>
-                <d:var name="PwmVersionInfoApi" type="BOOLEAN" value="false">
-                  <a:a name="IMPORTER_INFO" value="@DEF"/>
-                </d:var>
+                <d:var name="PwmVersionInfoApi" type="BOOLEAN" value="true"/>
                 <d:var name="PwmGetChannelStateApi" type="BOOLEAN" value="false">
                   <a:a name="IMPORTER_INFO" value="@DEF"/>
                 </d:var>

@@ -140,7 +140,7 @@ extern "C"{
 *                                      DEFINES AND MACROS
 ==================================================================================================*/
 /** @brief      Switch to enable the development error detection. */
-#define FTM_PWM_IP_DEV_ERROR_DETECT           (STD_OFF)
+#define FTM_PWM_IP_DEV_ERROR_DETECT           (STD_ON)
 
 /** @brief        Switch to enable the notifications feature */
 #define FTM_PWM_IP_NOTIFICATION_SUPPORTED     (STD_OFF)

@@ -18,7 +18,9 @@ Build/obj/Platform.o: Autosar/Mcal/Platform/src/Platform.c \
  Build/cfg/include/Platform_Cfg.h \
  Autosar/Mcal/Platform/include/Platform_TypesDef.h \
  Autosar/Mcal/Platform/include/Platform_Ipw_TypesDef.h \
- Build/cfg/include/Platform_CfgDefines.h \
+ Build/cfg/include/Platform_CfgDefines.h Autosar/Det/include/Det.h \
+ Autosar/Mcal/Base/include/Std_Types.h \
+ Autosar/Mcal/Base/include/Det_MemMap.h \
  Autosar/Mcal/Platform/include/IntCtrl_Ip_TypesDef.h \
  Build/cfg/include/IntCtrl_Ip_CfgDefines.h \
  Autosar/Mcal/Base/header/S32K144.h \
@@ -104,6 +106,9 @@ Build/cfg/include/Platform_Cfg.h:
 Autosar/Mcal/Platform/include/Platform_TypesDef.h:
 Autosar/Mcal/Platform/include/Platform_Ipw_TypesDef.h:
 Build/cfg/include/Platform_CfgDefines.h:
+Autosar/Det/include/Det.h:
+Autosar/Mcal/Base/include/Std_Types.h:
+Autosar/Mcal/Base/include/Det_MemMap.h:
 Autosar/Mcal/Platform/include/IntCtrl_Ip_TypesDef.h:
 Build/cfg/include/IntCtrl_Ip_CfgDefines.h:
 Autosar/Mcal/Base/header/S32K144.h:
