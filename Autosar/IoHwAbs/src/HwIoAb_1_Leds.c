@@ -14,9 +14,21 @@
  * @param [in] Leds_Config Pointer to configuration array.
  */
 void HwIoAb_Leds_Init( const HwIoAb_Leds_Config *Leds_Config ) {
-    //Initializing members.
-    LedsControl_Ptr->Leds = HWIOAB_LEDS;
-    LedsControl_Ptr->LedsConfig_Ptr = Leds_Config;
+    //local data.
+    uint8 status = TRUE;
+    
+    #if ( HWIOAB_LEDS_DEV_ERROR_DETECT == STD_ON )
+        if ( Leds_Config == NULL_PTR ) {
+            Det_ReportError( HWIOAB_LEDS_MODULE_ID, HWIOAB_LEDS_INSTANCE_ID, HWIOAB_LEDS_INIT_ID, HWIOAB_LEDS_E_CONFIG );
+            status = FALSE;
+        }
+    #endif
+    
+    if ( status == TRUE ) {
+        //Initializing members.
+        LedsControl_Ptr->Leds = HWIOAB_LEDS;
+        LedsControl_Ptr->LedsConfig_Ptr = Leds_Config;
+    }
 }
 
 /**
@@ -42,6 +54,12 @@ void HwIoAb_Leds_TurnOn( uint8 Led ) {
         }
         
         Dio_WriteChannel( LedsControl_Ptr->LedsConfig_Ptr[ Led ].Led, active );
+    }
+
+    else {  //Invalid ID.
+        #if ( HWIOAB_LEDS_DEV_ERROR_DETECT == STD_ON )
+            Det_ReportError( HWIOAB_LEDS_MODULE_ID, HWIOAB_LEDS_INSTANCE_ID, HWIOAB_LEDS_TURNON_ID, HWIOAB_LEDS_E_LED_ID );
+        #endif
     }
 }
 
@@ -69,6 +87,12 @@ void HwIoAb_Leds_TurnOff( uint8 Led ) {
         
         Dio_WriteChannel( LedsControl_Ptr->LedsConfig_Ptr[ Led ].Led, !active );
     }
+
+    else {  //Invalid ID.
+        #if ( HWIOAB_LEDS_DEV_ERROR_DETECT == STD_ON )
+            Det_ReportError( HWIOAB_LEDS_MODULE_ID, HWIOAB_LEDS_INSTANCE_ID, HWIOAB_LEDS_TURNOFF_ID, HWIOAB_LEDS_E_LED_ID );
+        #endif
+    }
 }
 
 /**
@@ -82,5 +106,11 @@ void HwIoAb_Leds_TurnToggle( uint8 Led ) {
     //Verifying if the ID is valid.
     if ( Led <= LedsControl_Ptr->Leds - 1 ) {   //Valid ID.
         Dio_FlipChannel( LedsControl_Ptr->LedsConfig_Ptr[ Led ].Led );
+    }
+    
+    else {  //Invalid id.
+        #if ( HWIOAB_LEDS_DEV_ERROR_DETECT == STD_ON )
+            Det_ReportError( HWIOAB_LEDS_MODULE_ID, HWIOAB_LEDS_INSTANCE_ID, HWIOAB_LEDS_TURNTOGGLE_ID, HWIOAB_LEDS_E_LED_ID );
+        #endif
     }
 }

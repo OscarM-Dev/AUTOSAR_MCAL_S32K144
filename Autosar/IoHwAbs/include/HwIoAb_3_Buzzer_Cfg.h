@@ -7,6 +7,8 @@
 #ifndef HWIOAB_3_BUZZER_CFG_H
 #define HWIOAB_3_BUZZER_CFG_H
 
+#define HWIOAB_BUZZER_DEV_ERROR_DETECT STD_OFF  ///< Dev error detect. 
+
 #define HWIOAB_BUZZER_CH Ftm1Ch7   ///< Pwm channel for the buzzer.
 
 #define HWIOAB_BUZZER_PERIOD_1 5333 ///< Period value for tone 1 ( 1.5 Khz ).

@@ -303,7 +303,7 @@ HwIoAb_Buttons_MainFunction ()
 HwIoAb_Buttons_GetEvent (uint8 Button)
 {
   uint8 event;
-  uint8 D.5476;
+  uint8 D.5519;
 
   <bb 2> :
   event = 0;
@@ -329,31 +329,43 @@ HwIoAb_Buttons_GetEvent (uint8 Button)
   _7 = (int) Button;
   _8 = _7 + -1;
   ButtonsControl_Ptr.8_6->Events[_8] = 0;
+  goto <bb 6>; [INV]
 
   <bb 5> :
-  D.5476 = event;
+  event = 50;
 
   <bb 6> :
+  D.5519 = event;
+
+  <bb 7> :
 <L4>:
-  return D.5476;
+  return D.5519;
 
 }
 
 
 HwIoAb_Buttons_Init (const struct HwIoAb_Buttons_Config * Buttons_Config)
 {
+  boolean status;
   uint8 i;
 
   <bb 2> :
   i = 0;
+  status = 1;
+  if (status != 0)
+    goto <bb 3>; [INV]
+  else
+    goto <bb 6>; [INV]
+
+  <bb 3> :
   ButtonsControl_Ptr.0_1 = ButtonsControl_Ptr;
   ButtonsControl_Ptr.0_1->Buttons = 3;
   ButtonsControl_Ptr.1_2 = ButtonsControl_Ptr;
   ButtonsControl_Ptr.1_2->ButtonsConfig_Ptr = Buttons_Config;
   i = 0;
-  goto <bb 4>; [INV]
+  goto <bb 5>; [INV]
 
-  <bb 3> :
+  <bb 4> :
   ButtonsControl_Ptr.2_3 = ButtonsControl_Ptr;
   _4 = (int) i;
   ButtonsControl_Ptr.2_3->States[_4] = 0;
@@ -363,15 +375,15 @@ HwIoAb_Buttons_Init (const struct HwIoAb_Buttons_Config * Buttons_Config)
   i.4_7 = i;
   i = i.4_7 + 1;
 
-  <bb 4> :
+  <bb 5> :
   ButtonsControl_Ptr.5_8 = ButtonsControl_Ptr;
   _9 = ButtonsControl_Ptr.5_8->Buttons;
   if (i < _9)
-    goto <bb 3>; [INV]
+    goto <bb 4>; [INV]
   else
-    goto <bb 5>; [INV]
+    goto <bb 6>; [INV]
 
-  <bb 5> :
+  <bb 6> :
   return;
 
 }

@@ -10,7 +10,22 @@
 
 //Headers.
 #include "StandardTypes.h"
+#include "Det.h"
 #include "Pwm.h"
+
+//General configuration.
+#define HWIOAB_BUZZER_MODULE_ID 304 ///< Module id.
+#define HWIOAB_BUZZER_INSTANCE_ID 0 ///< Instance id.
+
+//Api ids.
+#define HWIOAB_BUZZER_INIT_ID 0x00  ///< HwIoAb_Buzzer_Init() id.
+
+#define HWIOAB_BUZZER_BEEP_ID 0x01  ///< HwIoAb_Buzzer_Beep() id.
+
+#define HWIOAB_BUZZER_STOP_ID 0x02  ///< HwIoAb_Buzzer_Stop() id.
+
+//Error ids.
+#define HWIOAB_BUZZER_E_TONE 0x00   ///< "Invalid buzzer tone" -->BuzzerBeep.
 
 //Enums.
 typedef enum {

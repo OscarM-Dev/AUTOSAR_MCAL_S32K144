@@ -10,7 +10,26 @@
 
 //Headers.
 #include "StandardTypes.h"
+#include "Det.h"
 #include "Dio.h"
+
+//General information.
+#define HWIOAB_LEDS_MODULE_ID 302 ///< Module ID.
+#define HWIOAB_LEDS_INSTANCE_ID 0   ///< Instance ID.
+
+//Api ids.
+#define HWIOAB_LEDS_INIT_ID 0x00   ///< HwIoAb_Leds_Init() id.
+
+#define HWIOAB_LEDS_TURNON_ID 0x01  ///< HwIoAb_Leds_TurnOn() id.
+
+#define HWIOAB_LEDS_TURNOFF_ID 0x02 ///< HwIoAb_Leds_TurnOff() id.
+
+#define HWIOAB_LEDS_TURNTOGGLE_ID 0x03  ///< HwIoAb_Leds_TurnToggle() id.
+
+//Error ids.
+#define HWIOAB_LEDS_E_CONFIG 0x00   ///< "Invalid config pointer" -->Leds_Init
+
+#define HWIOAB_LEDS_E_LED_ID 0x01   ///< "Invalid led id" --> Leds_TurnOn, Leds_TurnOff, Leds_TurnToggle
 
 //Enums
 typedef enum {

@@ -7,6 +7,8 @@
 #ifndef HWIOAB_0_BUTTONS_CFG_H
 #define HWIOAB_0_BUTTONS_CFG_H
 
+#define HWIOAB_BUTTONS_DEV_ERROR_DETECT STD_OFF  ///< Dev error detect. 
+
 #define HWIOAB_BUTTONS_MAX 3 ///< Max number of buttons to manage.
 
 #define HWIOAB_BUTTONS_PERIOD 50    ///< Periodicity for the main function in ms.

@@ -10,7 +10,26 @@
 
 //Headers
 #include "StandardTypes.h"
+#include "Det.h"
 #include "Dio.h"
+
+//General information.
+#define HWIOAB_BUTTONS_MODULE_ID 301    ///< Module id.
+#define HWIOAB_BUTTONS_INSTANCE_ID 0   ///< Instance id.
+
+//Api ids.
+#define HWIOAB_BUTTONS_INIT_ID 0x00 ///< HwIoAb_Buttons_Init() id.
+
+#define HWIOAB_BUTTONS_GETEVENT_ID 0x01 ///< HwIoAb_Buttons_GetEvent() id.
+
+#define HWIOAB_BUTTONS_MAINFUNCTION_ID 0x02 ///< HwIoAb_Buttons_MainFunction() id.
+
+//Error ids.
+#define HWIOAB_BUTTONS_E_CONFIG 0x00 ///<"Invalid config pointer" --> Buttons_Init
+
+#define HWIOAB_BUTTONS_E_BUTTON_ID 0x01 ///<"Invalid button id" --> Buttons_GetEvent
+
+#define HWIOAB_BUTTONS_E_STATE 0x02 ///<"Invalid button state" -->Buttons_MainFunction
 
 //Enums.
 typedef enum {

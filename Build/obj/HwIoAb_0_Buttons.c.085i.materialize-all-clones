@@ -432,7 +432,7 @@ HwIoAb_Buttons_MainFunction ()
 HwIoAb_Buttons_GetEvent (uint8 Button)
 {
   uint8 event;
-  uint8 D.5476;
+  uint8 D.5519;
   struct HwIoAb_Buttons_Ctrl * ButtonsControl_Ptr.6_1;
   unsigned char _2;
   struct HwIoAb_Buttons_Ctrl * ButtonsControl_Ptr.7_3;
@@ -441,7 +441,7 @@ HwIoAb_Buttons_GetEvent (uint8 Button)
   struct HwIoAb_Buttons_Ctrl * ButtonsControl_Ptr.8_6;
   int _7;
   int _8;
-  uint8 _16;
+  uint8 _17;
 
   <bb 2> :
   event_11 = 0;
@@ -467,20 +467,25 @@ HwIoAb_Buttons_GetEvent (uint8 Button)
   _7 = (int) Button_12(D);
   _8 = _7 + -1;
   ButtonsControl_Ptr.8_6->Events[_8] = 0;
+  goto <bb 6>; [INV]
 
   <bb 5> :
-  # event_9 = PHI <event_11(2), event_11(3), event_14(4)>
-  _16 = event_9;
+  event_16 = 50;
 
   <bb 6> :
+  # event_9 = PHI <event_14(4), event_16(5)>
+  _17 = event_9;
+
+  <bb 7> :
 <L4>:
-  return _16;
+  return _17;
 
 }
 
 
 HwIoAb_Buttons_Init (const struct HwIoAb_Buttons_Config * Buttons_Config)
 {
+  boolean status;
   uint8 i;
   struct HwIoAb_Buttons_Ctrl * ButtonsControl_Ptr.0_1;
   struct HwIoAb_Buttons_Ctrl * ButtonsControl_Ptr.1_2;
@@ -493,15 +498,22 @@ HwIoAb_Buttons_Init (const struct HwIoAb_Buttons_Config * Buttons_Config)
   unsigned char _9;
 
   <bb 2> :
-  i_12 = 0;
+  i_13 = 0;
+  status_14 = 1;
+  if (status_14 != 0)
+    goto <bb 3>; [INV]
+  else
+    goto <bb 6>; [INV]
+
+  <bb 3> :
   ButtonsControl_Ptr.0_1 = ButtonsControl_Ptr;
   ButtonsControl_Ptr.0_1->Buttons = 3;
   ButtonsControl_Ptr.1_2 = ButtonsControl_Ptr;
-  ButtonsControl_Ptr.1_2->ButtonsConfig_Ptr = Buttons_Config_15(D);
-  i_17 = 0;
-  goto <bb 4>; [INV]
+  ButtonsControl_Ptr.1_2->ButtonsConfig_Ptr = Buttons_Config_17(D);
+  i_19 = 0;
+  goto <bb 5>; [INV]
 
-  <bb 3> :
+  <bb 4> :
   ButtonsControl_Ptr.2_3 = ButtonsControl_Ptr;
   _4 = (int) i_10;
   ButtonsControl_Ptr.2_3->States[_4] = 0;
@@ -509,18 +521,18 @@ HwIoAb_Buttons_Init (const struct HwIoAb_Buttons_Config * Buttons_Config)
   _6 = (int) i_10;
   ButtonsControl_Ptr.3_5->Events[_6] = 0;
   i.4_7 = i_10;
-  i_20 = i.4_7 + 1;
+  i_22 = i.4_7 + 1;
 
-  <bb 4> :
-  # i_10 = PHI <i_17(2), i_20(3)>
+  <bb 5> :
+  # i_10 = PHI <i_19(3), i_22(4)>
   ButtonsControl_Ptr.5_8 = ButtonsControl_Ptr;
   _9 = ButtonsControl_Ptr.5_8->Buttons;
   if (i_10 < _9)
-    goto <bb 3>; [INV]
+    goto <bb 4>; [INV]
   else
-    goto <bb 5>; [INV]
+    goto <bb 6>; [INV]
 
-  <bb 5> :
+  <bb 6> :
   return;
 
 }

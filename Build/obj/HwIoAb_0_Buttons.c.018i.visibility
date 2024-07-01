@@ -13,7 +13,7 @@ Reclaiming variables:
 Clearing address taken flags:
 Symbol table:
 
-Dio_ReadChannel/6 (Dio_ReadChannel) @06977000
+Dio_ReadChannel/6 (Dio_ReadChannel) @05d69ee0
   Type: function
   Visibility: external public
   References: 
@@ -22,21 +22,21 @@ Dio_ReadChannel/6 (Dio_ReadChannel) @06977000
   Function flags:
   Called by: HwIoAb_Buttons_MainFunction/2 HwIoAb_Buttons_MainFunction/2 HwIoAb_Buttons_MainFunction/2 HwIoAb_Buttons_MainFunction/2 HwIoAb_Buttons_MainFunction/2 
   Calls: 
-count.0/5 (count) @06a411b0
+count.0/5 (count) @05dbd480
   Type: variable definition analyzed
   Visibility: force_output no_reorder prevailing_def_ironly
   References: 
   Referring: HwIoAb_Buttons_MainFunction/2 (read) HwIoAb_Buttons_MainFunction/2 (write) HwIoAb_Buttons_MainFunction/2 (read) HwIoAb_Buttons_MainFunction/2 (write) HwIoAb_Buttons_MainFunction/2 (read) HwIoAb_Buttons_MainFunction/2 (read) HwIoAb_Buttons_MainFunction/2 (write) HwIoAb_Buttons_MainFunction/2 (read) 
   Availability: available
   Varpool flags: initialized
-count_flags.1/4 (count_flags) @06a41168
+count_flags.1/4 (count_flags) @05dbd438
   Type: variable definition analyzed
   Visibility: force_output no_reorder prevailing_def_ironly
   References: 
   Referring: HwIoAb_Buttons_MainFunction/2 (read) HwIoAb_Buttons_MainFunction/2 (write) HwIoAb_Buttons_MainFunction/2 (write) HwIoAb_Buttons_MainFunction/2 (write) 
   Availability: available
   Varpool flags: initialized
-ButtonsControl_Ptr/3 (ButtonsControl_Ptr) @06975b88
+ButtonsControl_Ptr/3 (ButtonsControl_Ptr) @05d53e10
   Type: variable
   Body removed by symtab_remove_unreachable_nodes
   Visibility: external public
@@ -44,7 +44,7 @@ ButtonsControl_Ptr/3 (ButtonsControl_Ptr) @06975b88
   Referring: HwIoAb_Buttons_Init/0 (read) HwIoAb_Buttons_Init/0 (read) HwIoAb_Buttons_Init/0 (read) HwIoAb_Buttons_Init/0 (read) HwIoAb_Buttons_Init/0 (read) HwIoAb_Buttons_GetEvent/1 (read) HwIoAb_Buttons_GetEvent/1 (read) HwIoAb_Buttons_GetEvent/1 (read) HwIoAb_Buttons_MainFunction/2 (read) HwIoAb_Buttons_MainFunction/2 (read) HwIoAb_Buttons_MainFunction/2 (read) HwIoAb_Buttons_MainFunction/2 (read) HwIoAb_Buttons_MainFunction/2 (read) HwIoAb_Buttons_MainFunction/2 (read) HwIoAb_Buttons_MainFunction/2 (read) HwIoAb_Buttons_MainFunction/2 (read) HwIoAb_Buttons_MainFunction/2 (read) HwIoAb_Buttons_MainFunction/2 (read) HwIoAb_Buttons_MainFunction/2 (read) HwIoAb_Buttons_MainFunction/2 (read) HwIoAb_Buttons_MainFunction/2 (read) HwIoAb_Buttons_MainFunction/2 (read) HwIoAb_Buttons_MainFunction/2 (read) HwIoAb_Buttons_MainFunction/2 (read) HwIoAb_Buttons_MainFunction/2 (read) HwIoAb_Buttons_MainFunction/2 (read) HwIoAb_Buttons_MainFunction/2 (read) HwIoAb_Buttons_MainFunction/2 (read) HwIoAb_Buttons_MainFunction/2 (read) HwIoAb_Buttons_MainFunction/2 (read) HwIoAb_Buttons_MainFunction/2 (read) HwIoAb_Buttons_MainFunction/2 (read) HwIoAb_Buttons_MainFunction/2 (read) 
   Availability: not_available
   Varpool flags:
-HwIoAb_Buttons_MainFunction/2 (HwIoAb_Buttons_MainFunction) @06977700
+HwIoAb_Buttons_MainFunction/2 (HwIoAb_Buttons_MainFunction) @05d69540
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: count_flags.1/4 (read) count.0/5 (read) count.0/5 (write) count.0/5 (read) ButtonsControl_Ptr/3 (read) count_flags.1/4 (write) ButtonsControl_Ptr/3 (read) ButtonsControl_Ptr/3 (read) ButtonsControl_Ptr/3 (read) ButtonsControl_Ptr/3 (read) count_flags.1/4 (write) count.0/5 (write) ButtonsControl_Ptr/3 (read) count.0/5 (read) ButtonsControl_Ptr/3 (read) ButtonsControl_Ptr/3 (read) ButtonsControl_Ptr/3 (read) ButtonsControl_Ptr/3 (read) count.0/5 (read) ButtonsControl_Ptr/3 (read) ButtonsControl_Ptr/3 (read) ButtonsControl_Ptr/3 (read) ButtonsControl_Ptr/3 (read) count_flags.1/4 (write) count.0/5 (write) ButtonsControl_Ptr/3 (read) count.0/5 (read) ButtonsControl_Ptr/3 (read) ButtonsControl_Ptr/3 (read) ButtonsControl_Ptr/3 (read) ButtonsControl_Ptr/3 (read) ButtonsControl_Ptr/3 (read) ButtonsControl_Ptr/3 (read) ButtonsControl_Ptr/3 (read) ButtonsControl_Ptr/3 (read) ButtonsControl_Ptr/3 (read) ButtonsControl_Ptr/3 (read) 
@@ -53,7 +53,7 @@ HwIoAb_Buttons_MainFunction/2 (HwIoAb_Buttons_MainFunction) @06977700
   Function flags: body
   Called by: 
   Calls: Dio_ReadChannel/6 Dio_ReadChannel/6 Dio_ReadChannel/6 Dio_ReadChannel/6 Dio_ReadChannel/6 
-HwIoAb_Buttons_GetEvent/1 (HwIoAb_Buttons_GetEvent) @06977460
+HwIoAb_Buttons_GetEvent/1 (HwIoAb_Buttons_GetEvent) @05d692a0
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: ButtonsControl_Ptr/3 (read) ButtonsControl_Ptr/3 (read) ButtonsControl_Ptr/3 (read) 
@@ -62,7 +62,7 @@ HwIoAb_Buttons_GetEvent/1 (HwIoAb_Buttons_GetEvent) @06977460
   Function flags: body
   Called by: 
   Calls: 
-HwIoAb_Buttons_Init/0 (HwIoAb_Buttons_Init) @069771c0
+HwIoAb_Buttons_Init/0 (HwIoAb_Buttons_Init) @05d69000
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: ButtonsControl_Ptr/3 (read) ButtonsControl_Ptr/3 (read) ButtonsControl_Ptr/3 (read) ButtonsControl_Ptr/3 (read) ButtonsControl_Ptr/3 (read) 
@@ -376,7 +376,7 @@ HwIoAb_Buttons_MainFunction ()
 HwIoAb_Buttons_GetEvent (uint8 Button)
 {
   uint8 event;
-  uint8 D.5476;
+  uint8 D.5519;
 
   <bb 2> :
   event = 0;
@@ -402,31 +402,43 @@ HwIoAb_Buttons_GetEvent (uint8 Button)
   _7 = (int) Button;
   _8 = _7 + -1;
   ButtonsControl_Ptr.8_6->Events[_8] = 0;
+  goto <bb 6>; [INV]
 
   <bb 5> :
-  D.5476 = event;
+  event = 50;
 
   <bb 6> :
+  D.5519 = event;
+
+  <bb 7> :
 <L4>:
-  return D.5476;
+  return D.5519;
 
 }
 
 
 HwIoAb_Buttons_Init (const struct HwIoAb_Buttons_Config * Buttons_Config)
 {
+  boolean status;
   uint8 i;
 
   <bb 2> :
   i = 0;
+  status = 1;
+  if (status != 0)
+    goto <bb 3>; [INV]
+  else
+    goto <bb 6>; [INV]
+
+  <bb 3> :
   ButtonsControl_Ptr.0_1 = ButtonsControl_Ptr;
   ButtonsControl_Ptr.0_1->Buttons = 3;
   ButtonsControl_Ptr.1_2 = ButtonsControl_Ptr;
   ButtonsControl_Ptr.1_2->ButtonsConfig_Ptr = Buttons_Config;
   i = 0;
-  goto <bb 4>; [INV]
+  goto <bb 5>; [INV]
 
-  <bb 3> :
+  <bb 4> :
   ButtonsControl_Ptr.2_3 = ButtonsControl_Ptr;
   _4 = (int) i;
   ButtonsControl_Ptr.2_3->States[_4] = 0;
@@ -436,15 +448,15 @@ HwIoAb_Buttons_Init (const struct HwIoAb_Buttons_Config * Buttons_Config)
   i.4_7 = i;
   i = i.4_7 + 1;
 
-  <bb 4> :
+  <bb 5> :
   ButtonsControl_Ptr.5_8 = ButtonsControl_Ptr;
   _9 = ButtonsControl_Ptr.5_8->Buttons;
   if (i < _9)
-    goto <bb 3>; [INV]
+    goto <bb 4>; [INV]
   else
-    goto <bb 5>; [INV]
+    goto <bb 6>; [INV]
 
-  <bb 5> :
+  <bb 6> :
   return;
 
 }

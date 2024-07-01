@@ -7,6 +7,8 @@
 #ifndef HWIOAB_2_POTS_CFG_H
 #define HWIOAB_2_POTS_CFG_H
 
+#define HWIOAB_POTS_DEV_ERROR_DETECT STD_OFF  ///< Dev error detect. 
+
 #define HWIOAB_POTS 2 ///< Number of pots to handle on board.
 
 #define HWIOAB_POTS_TOTAL_RESISTANCE 10000  ///< Total resistance in ohms of each pot.

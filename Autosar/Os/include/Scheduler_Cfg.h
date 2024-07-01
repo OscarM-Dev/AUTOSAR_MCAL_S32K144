@@ -11,7 +11,7 @@
 /** 
   * @defgroup Parameters, macros for operating the scheduler.
   @{ */
-#define SCHEDULER_DEV_ERROR_DETECT STD_ON ///< Scheduler dev error detect.
+#define SCHEDULER_DEV_ERROR_DETECT STD_OFF ///< Scheduler dev error detect.
 
 #define SCHEDULER_TICK 10 ///< Value for the time monitoring interval (ms).
 

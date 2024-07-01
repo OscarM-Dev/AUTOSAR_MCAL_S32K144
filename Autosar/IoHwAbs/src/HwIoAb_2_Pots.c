@@ -46,18 +46,28 @@ void HwIoAb_Pots_Init( const HwIoAb_Pots_Config *Pots_Config ) {
 void HwIoAb_Pots_GetValue( uint16 *Pots ) {
     //local data.
     uint8 i = 0;
+    uint8 status = TRUE;
 
-    Adc_StartGroupConversion( Adc0Group_0 );    //Triggering group conversion.
-    while( Adc_GetGroupStatus( Adc0Group_0 ) == ADC_BUSY ); //Wating until group conversion is done.
-    Adc_ReadGroup( Adc0Group_0, HWIOAB_POTS_MAIN_RAW_RESULTS ); //Reading group conversion values and storing them to the raw result array.
+    #if ( HWIOAB_POTS_DEV_ERROR_DETECT == STD_ON )
+        if ( Pots == NULL_PTR ) {
+            Det_ReportError( HWIOAB_POTS_MODULE_ID, HWIOAB_POTS_INSTANCE_ID, HWIOAB_POTS_GETVALUE_ID, HWIOAB_POTS_E_PARAM );
+            status = FALSE;
+        }
+    #endif
 
-    //Calculating resistance of each Pot.
-    for ( i = 0; i < PotsControl_Ptr->Pots; i++ ) {
-        Pots[i] = HWIOAB_POTS_TOTAL_RESISTANCE * 
-        ( ( float ) PotsControl_Ptr->Raw_results_main[i] / HWIOAB_MAX_ADC_VALUE_12_B );
+    if ( status == TRUE ) {
+        Adc_StartGroupConversion( Adc0Group_0 );    //Triggering group conversion.
+        while( Adc_GetGroupStatus( Adc0Group_0 ) == ADC_BUSY ); //Wating until group conversion is done.
+        Adc_ReadGroup( Adc0Group_0, HWIOAB_POTS_MAIN_RAW_RESULTS ); //Reading group conversion values and storing them to the raw result array.
 
-        if ( Pots[i] > HWIOAB_POTS_TOTAL_RESISTANCE ) { //Saturating value if needed.
-            Pots[i] = HWIOAB_POTS_TOTAL_RESISTANCE;
+        //Calculating resistance of each Pot.
+        for ( i = 0; i < PotsControl_Ptr->Pots; i++ ) {
+            Pots[i] = HWIOAB_POTS_TOTAL_RESISTANCE * 
+            ( ( float ) PotsControl_Ptr->Raw_results_main[i] / HWIOAB_MAX_ADC_VALUE_12_B );
+
+            if ( Pots[i] > HWIOAB_POTS_TOTAL_RESISTANCE ) { //Saturating value if needed.
+                Pots[i] = HWIOAB_POTS_TOTAL_RESISTANCE;
+            }
         }
     }
 }
@@ -75,18 +85,28 @@ void HwIoAb_Pots_GetValue( uint16 *Pots ) {
 void HwIoAb_Pots_GetAltValue( uint16 *AltPots ) {
     //local data.
     uint8 i = 0;
+    uint8 status = TRUE;
 
-    Adc_StartGroupConversion( Adc1Group_0 );    //Triggering group conversion.
-    while( Adc_GetGroupStatus( Adc1Group_0 ) == ADC_BUSY ); //Wating until group conversion is done.
-    Adc_ReadGroup( Adc1Group_0, HWIOAB_POTS_ALTER_RAW_RESULTS ); //Reading group conversion values and storing them to the raw result array.
+    #if ( HWIOAB_POTS_DEV_ERROR_DETECT == STD_ON )
+        if ( AltPots == NULL_PTR ) {
+            Det_ReportError( HWIOAB_POTS_MODULE_ID, HWIOAB_POTS_INSTANCE_ID, HWIOAB_POTS_GETALTVALUE_ID, HWIOAB_POTS_E_PARAM );
+            status = FALSE;
+        }
+    #endif
 
-    //Calculating resistance of each Pot.
-    for ( i = 0; i < PotsControl_Ptr->Pots; i++ ) {
-        AltPots[i] = HWIOAB_POTS_TOTAL_RESISTANCE *
-        ( ( float ) PotsControl_Ptr->Raw_results_alter[i] / HWIOAB_MAX_ADC_VALUE_12_B );
+    if ( status == TRUE ) {
+        Adc_StartGroupConversion( Adc1Group_0 );    //Triggering group conversion.
+        while( Adc_GetGroupStatus( Adc1Group_0 ) == ADC_BUSY ); //Wating until group conversion is done.
+        Adc_ReadGroup( Adc1Group_0, HWIOAB_POTS_ALTER_RAW_RESULTS ); //Reading group conversion values and storing them to the raw result array.
 
-        if ( AltPots[i] > HWIOAB_POTS_TOTAL_RESISTANCE ) { //Saturating value if needed.
-            AltPots[i] = HWIOAB_POTS_TOTAL_RESISTANCE;
+        //Calculating resistance of each Pot.
+        for ( i = 0; i < PotsControl_Ptr->Pots; i++ ) {
+            AltPots[i] = HWIOAB_POTS_TOTAL_RESISTANCE *
+            ( ( float ) PotsControl_Ptr->Raw_results_alter[i] / HWIOAB_MAX_ADC_VALUE_12_B );
+
+            if ( AltPots[i] > HWIOAB_POTS_TOTAL_RESISTANCE ) { //Saturating value if needed.
+                AltPots[i] = HWIOAB_POTS_TOTAL_RESISTANCE;
+            }
         }
     }
 }

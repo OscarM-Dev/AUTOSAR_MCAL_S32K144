@@ -66,6 +66,7 @@ extern "C"{
 #include "Pwm.h"
 #include "Adc.h"
 #include "Scheduler.h"
+#include "IoHwAb.h"
 #include "SEGGER_RTT.h"
 
 /*==================================================================================================
@@ -219,7 +220,10 @@ char* Det_GetModuleName( uint16 ModuleId ) {
         case PWM_MODULE_ID: ErrorString_Ptr[0] = "Pwm module"; break;
         case ADC_MODULE_ID: ErrorString_Ptr[0] = "Adc module"; break;
         case SCHEDULER_MODULE_ID: ErrorString_Ptr[0] = "Scheduler module"; break;
-
+        case HWIOAB_BUTTONS_MODULE_ID: ErrorString_Ptr[0] = "Buttons IO abstraction module"; break;
+        case HWIOAB_LEDS_MODULE_ID: ErrorString_Ptr[0] = "Leds IO abstraction module"; break;
+        case HWIOAB_POTS_MODULE_ID: ErrorString_Ptr[0] = "Pots IO abstraction module"; break;
+        case HWIOAB_BUZZER_MODULE_ID: ErrorString_Ptr[0] = "Buzzer IO abstraction module"; break;
         default: break;    //Module ID is not used in aplication.
     }
 
@@ -328,6 +332,43 @@ char* Det_GetApiName( uint16 ModuleId, uint8 ApiId ) {
             }
         break;
 
+        case HWIOAB_BUTTONS_MODULE_ID:
+            switch ( ApiId ) {  //3 Apis that report det errors.
+                case HWIOAB_BUTTONS_INIT_ID: ErrorString_Ptr[1] = "HwIoAb_Buttons_Init()"; break;
+                case HWIOAB_BUTTONS_GETEVENT_ID: ErrorString_Ptr[1] = "HwIoAb_Buttons_GetEvent()"; break;
+                case HWIOAB_BUTTONS_MAINFUNCTION_ID: ErrorString_Ptr[1] = "HwIoAb_Buttons_MainFunction()"; break;
+                default: break; //Api doesnt report det error or is not used.
+            }
+        break;
+    
+        case HWIOAB_LEDS_MODULE_ID:
+            switch ( ApiId ) {  //4 Apis that report det errors.
+                case HWIOAB_LEDS_INIT_ID: ErrorString_Ptr[1] = "HwIoAb_Leds_Init()"; break;
+                case HWIOAB_LEDS_TURNON_ID: ErrorString_Ptr[1] = "HwIoAb_Leds_TurnOn()"; break;
+                case HWIOAB_LEDS_TURNOFF_ID: ErrorString_Ptr[1] = "HwIoAb_Leds_TurnOff()"; break;
+                case HWIOAB_LEDS_TURNTOGGLE_ID: ErrorString_Ptr[1] = "HwIoAb_Leds_TurnToggle()"; break;
+                default: break; //Api doesnt report det error or is not used.
+            }
+        break;
+
+        case HWIOAB_POTS_MODULE_ID:
+            switch ( ApiId ) {  //3 Apis that report det errors.
+                case HWIOAB_POTS_INIT_ID: ErrorString_Ptr[1] = "HwIoAb_Pots_Init()"; break;
+                case HWIOAB_POTS_GETVALUE_ID: ErrorString_Ptr[1] = "HwIoAb_Pots_GetValue()"; break;
+                case HWIOAB_POTS_GETALTVALUE_ID: ErrorString_Ptr[1] = "HwIoAb_Pots_GetAltValue()"; break;
+                default: break; //Api doesnt report det error or is not used.
+            }
+        break;
+
+        case HWIOAB_BUZZER_MODULE_ID:
+            switch ( ApiId ) {  //3 Apis that report det errors.
+                case HWIOAB_BUZZER_INIT_ID: ErrorString_Ptr[1] = "HwIoAb_Buzzer_Init()"; break;
+                case HWIOAB_BUZZER_BEEP_ID: ErrorString_Ptr[1] = "HwIoAb_Buzzer_Beep()"; break;
+                case HWIOAB_BUZZER_STOP_ID: ErrorString_Ptr[1] = "HwIoAb_Buzzer_Stop()"; break;
+                default: break; //Api doesnt report det error or is not used.
+            }
+        break;
+
         default: //Module ID is not used in aplication.
         break;
     }
@@ -424,6 +465,37 @@ char* Det_GetErrorMeaning( uint16 ModuleId, uint8 ErrorId ) {
                 case SCHEDULER_E_TASK_ID: ErrorString_Ptr[2] = "Invalid task id"; break;
                 case SCHEDULER_E_PERIODICITY: ErrorString_Ptr[2] = "Invalid task or timer periodicity"; break;
                 case SCHEDULER_E_TIMER_ID : ErrorString_Ptr[2] = "Invalid timer id"; break;
+                default: break; //Error ID not registered.
+            }
+        break;
+
+        case HWIOAB_BUTTONS_MODULE_ID: //3 errors.
+            switch ( ErrorId ) {
+                case HWIOAB_BUTTONS_E_CONFIG: ErrorString_Ptr[2] = "Invalid config pointer"; break;
+                case HWIOAB_BUTTONS_E_BUTTON_ID: ErrorString_Ptr[2] = "Invalid button id"; break;
+                case HWIOAB_BUTTONS_E_STATE: ErrorString_Ptr[2] = "Invalid button state"; break;
+                default: break; //Error ID not registered.
+            }
+        break;
+
+        case HWIOAB_LEDS_MODULE_ID: //2 errors.
+            switch ( ErrorId ) {
+                case HWIOAB_LEDS_E_CONFIG: ErrorString_Ptr[2] = "Invalid config pointer"; break;
+                case HWIOAB_LEDS_E_LED_ID: ErrorString_Ptr[2] = "Invalid led id"; break;
+                default: break; //Error ID not registered.
+            }
+        break;
+
+        case HWIOAB_POTS_MODULE_ID: //1 error.
+            switch ( ErrorId ) {
+                case HWIOAB_POTS_E_PARAM: ErrorString_Ptr[2] = "Invalid input pointer"; break;
+                default: break; //Error ID not registered.
+            }
+        break;
+
+        case HWIOAB_BUZZER_MODULE_ID: //1 error.
+            switch ( ErrorId ) {
+                case HWIOAB_BUZZER_E_TONE: ErrorString_Ptr[2] = "Invalid buzzer tone"; break;
                 default: break; //Error ID not registered.
             }
         break;

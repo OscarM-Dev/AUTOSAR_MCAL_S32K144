@@ -39,6 +39,9 @@ void HwIoAb_Buzzer_Beep( uint8 Tone ) {
             Pwm_SetPeriodAndDuty( HWIOAB_BUZZER_CH, HWIOAB_BUZZER_PERIOD_3, HWIOAB_BUZZER_25_DUTY_CYCLE );
         break;
         default:    //Invalid tone.
+            #if ( HWIOAB_BUZZER_DEV_ERROR_DETECT == STD_ON )
+                Det_ReportError( HWIOAB_BUZZER_MODULE_ID, HWIOAB_BUZZER_INSTANCE_ID, HWIOAB_BUZZER_BEEP_ID, HWIOAB_BUZZER_E_TONE );
+           #endif
         break;
     }
 }

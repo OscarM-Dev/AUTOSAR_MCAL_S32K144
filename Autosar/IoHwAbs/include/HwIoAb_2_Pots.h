@@ -9,7 +9,22 @@
 
 //Headers.
 #include "StandardTypes.h"
+#include "Det.h"
 #include "Adc.h"
+
+//General information.
+#define HWIOAB_POTS_MODULE_ID 303 ///< Module id.
+#define HWIOAB_POTS_INSTANCE_ID 0   ///<Instance id.
+
+//Api ids.
+#define HWIOAB_POTS_INIT_ID 0x00    ///< HwIoAb_Pots_Init() id.
+
+#define HWIOAB_POTS_GETVALUE_ID 0x01    ///< HwIoAb_Pots_GetValue() id.
+
+#define HWIOAB_POTS_GETALTVALUE_ID 0x02 ///< HwIoAb_Pots_GetAltValue() id.
+
+//Error ids.
+#define HWIOAB_POTS_E_PARAM 0x00    ///<"Invalid input pointer" -->Pots_GetValue, Pots_GetAltValue
 
 //Config structures.
 /**

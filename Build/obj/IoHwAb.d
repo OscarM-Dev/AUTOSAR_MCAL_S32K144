@@ -6,9 +6,10 @@ Build/obj/IoHwAb.o: Autosar/IoHwAbs/src/IoHwAb.c \
  Autosar/Mcal/Base/include/PlatformTypes.h \
  Autosar/Mcal/Base/include/Compiler.h \
  Autosar/Mcal/Base/include/Compiler_Cfg.h \
- Autosar/Mcal/Base/include/CompilerDefinition.h \
- Autosar/Mcal/Dio/include/Dio.h Autosar/Mcal/Base/include/Std_Types.h \
+ Autosar/Mcal/Base/include/CompilerDefinition.h Autosar/Det/include/Det.h \
+ Autosar/Mcal/Base/include/Std_Types.h \
  Autosar/Mcal/Base/include/StandardTypes.h \
+ Autosar/Mcal/Base/include/Det_MemMap.h Autosar/Mcal/Dio/include/Dio.h \
  Autosar/Mcal/Base/include/Mcal.h Build/cfg/include/Soc_Ips.h \
  Autosar/Mcal/Base/include/Platform_Types.h \
  Autosar/Mcal/Base/include/IpVersionMacros.h \
@@ -66,9 +67,11 @@ Autosar/Mcal/Base/include/PlatformTypes.h:
 Autosar/Mcal/Base/include/Compiler.h:
 Autosar/Mcal/Base/include/Compiler_Cfg.h:
 Autosar/Mcal/Base/include/CompilerDefinition.h:
-Autosar/Mcal/Dio/include/Dio.h:
+Autosar/Det/include/Det.h:
 Autosar/Mcal/Base/include/Std_Types.h:
 Autosar/Mcal/Base/include/StandardTypes.h:
+Autosar/Mcal/Base/include/Det_MemMap.h:
+Autosar/Mcal/Dio/include/Dio.h:
 Autosar/Mcal/Base/include/Mcal.h:
 Build/cfg/include/Soc_Ips.h:
 Autosar/Mcal/Base/include/Platform_Types.h:

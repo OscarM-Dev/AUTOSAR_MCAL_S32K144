@@ -11,9 +11,9 @@ Autosar/Os/src/Scheduler.c:212:16:Scheduler_ReadQueue	32	static
 Autosar/Os/src/Scheduler.c:270:16:Scheduler_Init	24	static
 Autosar/Os/src/Scheduler.c:315:16:Scheduler_StopTask	24	static
 Autosar/Os/src/Scheduler.c:346:16:Scheduler_StartTask	24	static
-Autosar/Os/src/Scheduler.c:378:16:Scheduler_PeriodTask	24	static
+Autosar/Os/src/Scheduler.c:378:16:Scheduler_PeriodTask	16	static
 Autosar/Os/src/Scheduler.c:421:16:Scheduler_StartTimer	24	static
 Autosar/Os/src/Scheduler.c:458:16:Scheduler_StopTimer	24	static
-Autosar/Os/src/Scheduler.c:489:8:Scheduler_GetTimer	24	static
+Autosar/Os/src/Scheduler.c:489:8:Scheduler_GetTimer	16	static
 Autosar/Os/src/Scheduler.c:524:16:Scheduler_ReloadTimer	24	static
 Autosar/Os/src/Scheduler.c:567:6:Scheduler_MainFunction	24	static

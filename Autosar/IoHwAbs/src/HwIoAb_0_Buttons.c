@@ -18,15 +18,26 @@
 void HwIoAb_Buttons_Init( const HwIoAb_Buttons_Config *Buttons_Config ) {
     //local data 
     uint8 i = 0;
+    boolean status = TRUE;
 
-    //Initializing members.
-    ButtonsControl_Ptr->Buttons = HWIOAB_BUTTONS_MAX;
-    ButtonsControl_Ptr->ButtonsConfig_Ptr = Buttons_Config;
+    #if ( HWIOAB_BUTTONS_DEV_ERROR_DETECT == STD_ON )
+            if ( Buttons_Config == NULL_PTR ) {
+                Det_ReportError( HWIOAB_BUTTONS_MODULE_ID, HWIOAB_BUTTONS_INSTANCE_ID, HWIOAB_BUTTONS_INIT_ID, HWIOAB_BUTTONS_E_CONFIG );
+                status = FALSE;
+            }
+    #endif
 
-    for ( i = 0; i < ButtonsControl_Ptr->Buttons; i++ ) {   //All button states and events to IDLE.
-        ButtonsControl_Ptr->States[i] = HWIOAB_BTN_STATE_IDLE;
-        ButtonsControl_Ptr->Events[i] = HWIOAB_BTN_EVENT_IDLE;
+    if ( status == TRUE ) {
+        //Initializing members.
+        ButtonsControl_Ptr->Buttons = HWIOAB_BUTTONS_MAX;
+        ButtonsControl_Ptr->ButtonsConfig_Ptr = Buttons_Config;
+
+        for ( i = 0; i < ButtonsControl_Ptr->Buttons; i++ ) {   //All button states and events to IDLE.
+            ButtonsControl_Ptr->States[i] = HWIOAB_BTN_STATE_IDLE;
+            ButtonsControl_Ptr->Events[i] = HWIOAB_BTN_EVENT_IDLE;
+        }
     }
+
 }
 
 /**
@@ -45,6 +56,13 @@ uint8 HwIoAb_Buttons_GetEvent( uint8 Button ) {
     if ( ( Button != 0 ) && ( Button <= ButtonsControl_Ptr->Buttons ) ) {
         event = ButtonsControl_Ptr->Events[ Button - 1 ]; //Obtaining last event.
         ButtonsControl_Ptr->Events[ Button - 1 ] = HWIOAB_BTN_EVENT_IDLE;   //Clearing event of button.
+    }
+
+    else {  //Invalid ID.
+        #if ( HWIOAB_BUTTONS_DEV_ERROR_DETECT == STD_ON )
+            Det_ReportError( HWIOAB_BUTTONS_MODULE_ID, HWIOAB_BUTTONS_INSTANCE_ID, HWIOAB_BUTTONS_GETEVENT_ID, HWIOAB_BUTTONS_E_BUTTON_ID );
+        #endif
+        event = 50;
     }
 
     return event;
@@ -146,7 +164,10 @@ void HwIoAb_Buttons_MainFunction( void ) {
                 }
             break;
         
-            default :
+            default: //Invalid state
+                #if ( HWIOAB_BUTTONS_DEV_ERROR_DETECT == STD_ON )
+                    Det_ReportError( HWIOAB_BUTTONS_MODULE_ID, HWIOAB_BUTTONS_INSTANCE_ID, HWIOAB_BUTTONS_MAINFUNCTION_ID, HWIOAB_BUTTONS_E_STATE );
+                #endif
             break;
         }
     }

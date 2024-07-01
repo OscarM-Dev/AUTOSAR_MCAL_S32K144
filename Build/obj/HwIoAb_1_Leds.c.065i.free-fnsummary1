@@ -164,14 +164,24 @@ HwIoAb_Leds_TurnOn (uint8 Led)
 
 HwIoAb_Leds_Init (const struct HwIoAb_Leds_Config * Leds_Config)
 {
+  uint8 status;
   struct HwIoAb_Leds_Ctrl * LedsControl_Ptr.0_1;
   struct HwIoAb_Leds_Ctrl * LedsControl_Ptr.1_2;
 
   <bb 2> :
+  status_4 = 1;
+  if (status_4 == 1)
+    goto <bb 3>; [INV]
+  else
+    goto <bb 4>; [INV]
+
+  <bb 3> :
   LedsControl_Ptr.0_1 = LedsControl_Ptr;
   LedsControl_Ptr.0_1->Leds = 3;
   LedsControl_Ptr.1_2 = LedsControl_Ptr;
-  LedsControl_Ptr.1_2->LedsConfig_Ptr = Leds_Config_5(D);
+  LedsControl_Ptr.1_2->LedsConfig_Ptr = Leds_Config_7(D);
+
+  <bb 4> :
   return;
 
 }

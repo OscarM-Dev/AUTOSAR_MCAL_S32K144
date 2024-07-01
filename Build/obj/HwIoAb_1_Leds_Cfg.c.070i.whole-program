@@ -13,21 +13,21 @@ Reclaiming variables:
 Clearing address taken flags:
 Symbol table:
 
-LedsControl_Ptr/2 (LedsControl_Ptr) @06904000
+LedsControl_Ptr/2 (LedsControl_Ptr) @05cd41f8
   Type: variable definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: LedsCtrl/1 (addr) 
   Referring: 
   Availability: available
   Varpool flags: initialized
-LedsCtrl/1 (LedsCtrl) @06927f78
+LedsCtrl/1 (LedsCtrl) @05cd41b0
   Type: variable definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: 
   Referring: LedsControl_Ptr/2 (addr) 
   Availability: available
   Varpool flags:
-LedsCfg/0 (LedsCfg) @06927f30
+LedsCfg/0 (LedsCfg) @05cd4168
   Type: variable definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: 

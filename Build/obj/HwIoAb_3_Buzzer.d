@@ -5,12 +5,14 @@ Build/obj/HwIoAb_3_Buzzer.o: Autosar/IoHwAbs/src/HwIoAb_3_Buzzer.c \
  Autosar/Mcal/Base/include/PlatformTypes.h \
  Autosar/Mcal/Base/include/Compiler.h \
  Autosar/Mcal/Base/include/Compiler_Cfg.h \
- Autosar/Mcal/Base/include/CompilerDefinition.h \
- Autosar/Mcal/Pwm/include/Pwm.h Autosar/Mcal/Base/include/Std_Types.h \
- Autosar/Mcal/Base/include/StandardTypes.h Build/cfg/include/Pwm_Cfg.h \
- Build/cfg/include/Pwm_Ipw_Cfg.h Build/cfg/include/Ftm_Pwm_Ip_Cfg.h \
- Autosar/Mcal/Base/include/Devassert.h Autosar/Mcal/Base/include/Mcal.h \
- Build/cfg/include/Soc_Ips.h Autosar/Mcal/Base/include/Platform_Types.h \
+ Autosar/Mcal/Base/include/CompilerDefinition.h Autosar/Det/include/Det.h \
+ Autosar/Mcal/Base/include/Std_Types.h \
+ Autosar/Mcal/Base/include/StandardTypes.h \
+ Autosar/Mcal/Base/include/Det_MemMap.h Autosar/Mcal/Pwm/include/Pwm.h \
+ Build/cfg/include/Pwm_Cfg.h Build/cfg/include/Pwm_Ipw_Cfg.h \
+ Build/cfg/include/Ftm_Pwm_Ip_Cfg.h Autosar/Mcal/Base/include/Devassert.h \
+ Autosar/Mcal/Base/include/Mcal.h Build/cfg/include/Soc_Ips.h \
+ Autosar/Mcal/Base/include/Platform_Types.h \
  Autosar/Mcal/Base/include/IpVersionMacros.h \
  Autosar/Mcal/Base/include/Reg_eSys.h \
  Autosar/Mcal/Base/include/OsIf_Internal.h Build/cfg/include/OsIf_Cfg.h \
@@ -38,9 +40,11 @@ Autosar/Mcal/Base/include/PlatformTypes.h:
 Autosar/Mcal/Base/include/Compiler.h:
 Autosar/Mcal/Base/include/Compiler_Cfg.h:
 Autosar/Mcal/Base/include/CompilerDefinition.h:
-Autosar/Mcal/Pwm/include/Pwm.h:
+Autosar/Det/include/Det.h:
 Autosar/Mcal/Base/include/Std_Types.h:
 Autosar/Mcal/Base/include/StandardTypes.h:
+Autosar/Mcal/Base/include/Det_MemMap.h:
+Autosar/Mcal/Pwm/include/Pwm.h:
 Build/cfg/include/Pwm_Cfg.h:
 Build/cfg/include/Pwm_Ipw_Cfg.h:
 Build/cfg/include/Ftm_Pwm_Ip_Cfg.h:

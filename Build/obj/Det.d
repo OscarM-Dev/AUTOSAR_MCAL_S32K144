@@ -150,7 +150,16 @@ Build/obj/Det.o: Autosar/Det/src/Det.c Autosar/Mcal/Base/include/Mcal.h \
  Autosar/Mcal/Base/include/Adc_MemMap.h \
  Autosar/Mcal/Adc/include/Adc_Types.h Autosar/Os/include/Scheduler.h \
  Autosar/Os/include/Scheduler_Cfg.h Autosar/Bfx/Bfx.h \
- Autosar/Bfx/Bfx_32bits.h Autosar/Bfx/Bfx_8bits.h Rtt/SEGGER/SEGGER_RTT.h \
+ Autosar/Bfx/Bfx_32bits.h Autosar/Bfx/Bfx_8bits.h \
+ Autosar/IoHwAbs/include/IoHwAb.h \
+ Autosar/IoHwAbs/include/HwIoAb_0_Buttons.h \
+ Autosar/IoHwAbs/include/HwIoAb_0_Buttons_Cfg.h \
+ Autosar/IoHwAbs/include/HwIoAb_1_Leds.h \
+ Autosar/IoHwAbs/include/HwIoAb_1_Leds_Cfg.h \
+ Autosar/IoHwAbs/include/HwIoAb_2_Pots.h \
+ Autosar/IoHwAbs/include/HwIoAb_2_Pots_Cfg.h \
+ Autosar/IoHwAbs/include/HwIoAb_3_Buzzer.h \
+ Autosar/IoHwAbs/include/HwIoAb_3_Buzzer_Cfg.h Rtt/SEGGER/SEGGER_RTT.h \
  Rtt/Config/SEGGER_RTT_Conf.h
 Autosar/Mcal/Base/include/Mcal.h:
 Autosar/Mcal/Base/include/Compiler.h:
@@ -331,5 +340,14 @@ Autosar/Os/include/Scheduler_Cfg.h:
 Autosar/Bfx/Bfx.h:
 Autosar/Bfx/Bfx_32bits.h:
 Autosar/Bfx/Bfx_8bits.h:
+Autosar/IoHwAbs/include/IoHwAb.h:
+Autosar/IoHwAbs/include/HwIoAb_0_Buttons.h:
+Autosar/IoHwAbs/include/HwIoAb_0_Buttons_Cfg.h:
+Autosar/IoHwAbs/include/HwIoAb_1_Leds.h:
+Autosar/IoHwAbs/include/HwIoAb_1_Leds_Cfg.h:
+Autosar/IoHwAbs/include/HwIoAb_2_Pots.h:
+Autosar/IoHwAbs/include/HwIoAb_2_Pots_Cfg.h:
+Autosar/IoHwAbs/include/HwIoAb_3_Buzzer.h:
+Autosar/IoHwAbs/include/HwIoAb_3_Buzzer_Cfg.h:
 Rtt/SEGGER/SEGGER_RTT.h:
 Rtt/Config/SEGGER_RTT_Conf.h:
