@@ -5,10 +5,12 @@ Build/obj/callbacks.o: Autosar/Os/src/callbacks.c \
  Autosar/Mcal/Base/include/PlatformTypes.h \
  Autosar/Mcal/Base/include/Compiler.h \
  Autosar/Mcal/Base/include/Compiler_Cfg.h \
- Autosar/Mcal/Base/include/CompilerDefinition.h \
+ Autosar/Mcal/Base/include/CompilerDefinition.h Autosar/Det/include/Det.h \
+ Autosar/Mcal/Base/include/Std_Types.h \
+ Autosar/Mcal/Base/include/StandardTypes.h \
+ Autosar/Mcal/Base/include/Det_MemMap.h \
  Autosar/Os/include/Scheduler_Cfg.h Autosar/Mcal/Base/include/OsIf.h \
- Autosar/Mcal/Base/include/OsIf_Internal.h \
- Autosar/Mcal/Base/include/StandardTypes.h Build/cfg/include/Soc_Ips.h \
+ Autosar/Mcal/Base/include/OsIf_Internal.h Build/cfg/include/Soc_Ips.h \
  Autosar/Mcal/Base/include/Platform_Types.h \
  Autosar/Mcal/Base/include/IpVersionMacros.h Build/cfg/include/OsIf_Cfg.h \
  Build/cfg/include/OsIf_ArchCfg.h \
@@ -16,8 +18,8 @@ Build/obj/callbacks.o: Autosar/Os/src/callbacks.c \
  Autosar/Mcal/Base/header/S32K144_COMMON.h \
  Autosar/Mcal/Base/include/BasicTypes.h \
  Autosar/Mcal/Base/include/BaseNXP_MemMap.h Autosar/Bfx/Bfx.h \
- Autosar/Bfx/Bfx_32bits.h Autosar/Mcal/Base/include/Std_Types.h \
- Autosar/Bfx/Bfx_8bits.h Autosar/IoHwAbs/include/IoHwAb.h \
+ Autosar/Bfx/Bfx_32bits.h Autosar/Bfx/Bfx_8bits.h \
+ Autosar/IoHwAbs/include/IoHwAb.h \
  Autosar/IoHwAbs/include/HwIoAb_0_Buttons.h \
  Autosar/Mcal/Dio/include/Dio.h Autosar/Mcal/Base/include/Mcal.h \
  Autosar/Mcal/Base/include/Reg_eSys.h Build/cfg/include/Dio_Cfg.h \
@@ -68,10 +70,13 @@ Autosar/Mcal/Base/include/PlatformTypes.h:
 Autosar/Mcal/Base/include/Compiler.h:
 Autosar/Mcal/Base/include/Compiler_Cfg.h:
 Autosar/Mcal/Base/include/CompilerDefinition.h:
+Autosar/Det/include/Det.h:
+Autosar/Mcal/Base/include/Std_Types.h:
+Autosar/Mcal/Base/include/StandardTypes.h:
+Autosar/Mcal/Base/include/Det_MemMap.h:
 Autosar/Os/include/Scheduler_Cfg.h:
 Autosar/Mcal/Base/include/OsIf.h:
 Autosar/Mcal/Base/include/OsIf_Internal.h:
-Autosar/Mcal/Base/include/StandardTypes.h:
 Build/cfg/include/Soc_Ips.h:
 Autosar/Mcal/Base/include/Platform_Types.h:
 Autosar/Mcal/Base/include/IpVersionMacros.h:
@@ -83,7 +88,6 @@ Autosar/Mcal/Base/include/BasicTypes.h:
 Autosar/Mcal/Base/include/BaseNXP_MemMap.h:
 Autosar/Bfx/Bfx.h:
 Autosar/Bfx/Bfx_32bits.h:
-Autosar/Mcal/Base/include/Std_Types.h:
 Autosar/Bfx/Bfx_8bits.h:
 Autosar/IoHwAbs/include/IoHwAb.h:
 Autosar/IoHwAbs/include/HwIoAb_0_Buttons.h:

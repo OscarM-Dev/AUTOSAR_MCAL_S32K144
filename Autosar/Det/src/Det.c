@@ -65,6 +65,7 @@ extern "C"{
 #include "Dio.h"
 #include "Pwm.h"
 #include "Adc.h"
+#include "Scheduler.h"
 #include "SEGGER_RTT.h"
 
 /*==================================================================================================
@@ -217,6 +218,7 @@ char* Det_GetModuleName( uint16 ModuleId ) {
         case DIO_MODULE_ID: ErrorString_Ptr[0] = "Dio module"; break;
         case PWM_MODULE_ID: ErrorString_Ptr[0] = "Pwm module"; break;
         case ADC_MODULE_ID: ErrorString_Ptr[0] = "Adc module"; break;
+        case SCHEDULER_MODULE_ID: ErrorString_Ptr[0] = "Scheduler module"; break;
 
         default: break;    //Module ID is not used in aplication.
     }
@@ -308,6 +310,24 @@ char* Det_GetApiName( uint16 ModuleId, uint8 ApiId ) {
             }
         break;
 
+        case SCHEDULER_MODULE_ID:
+            switch ( ApiId ) {  //12 Apis that report det errors.
+                case SCHEDULER_INIT_ID: ErrorString_Ptr[1] = "Scheduler_Init()"; break;
+                case SCHEDULER_GETSTATUSQUEUE_ID: ErrorString_Ptr[1] = "Scheduler_GetStatusQueue()"; break;
+                case SCHEDULER_FLUSHQUEUE_ID: ErrorString_Ptr[1] = "Scheduler_FlushQueue()"; break;
+                case SCHEDULER_WRITEQUEUE_ID: ErrorString_Ptr[1] = "Scheduler_WriteQueue()"; break;
+                case SCHEDULER_READQUEUE_ID: ErrorString_Ptr[1] = "Scheduler_ReadQueue()"; break;
+                case SCHEDULER_STARTTASK_ID: ErrorString_Ptr[1] = "Scheduler_StartTask()"; break;
+                case SCHEDULER_STOPTASK_ID: ErrorString_Ptr[1] = "Scheduler_StopTask()"; break;
+                case SCHEDULER_PERIODTASK_ID: ErrorString_Ptr[1] = "Scheduler_PeriodTask()"; break;
+                case SCHEDULER_STARTTIMER_ID: ErrorString_Ptr[1] = "Scheduler_StartTimer()"; break;
+                case SCHEDULER_STOPTIMER_ID: ErrorString_Ptr[1] = "Scheduler_StopTimer()"; break;
+                case SCHEDULER_GETTIMER_ID: ErrorString_Ptr[1] = "Scheduler_GetTimer()"; break;
+                case SCHEDULER_RELOADTIMER_ID: ErrorString_Ptr[1] = "Scheduler_ReloadTimer()"; break;
+                default: break; //Api doesnt report det error or is not used.
+            }
+        break;
+
         default: //Module ID is not used in aplication.
         break;
     }
@@ -392,6 +412,18 @@ char* Det_GetErrorMeaning( uint16 ModuleId, uint8 ErrorId ) {
                 case ADC_E_PARAM_GROUP: ErrorString_Ptr[2] = "Invalid adc group"; break;
                 case ADC_E_BUFFER_UNINIT: ErrorString_Ptr[2] = "Buffer pointer not initialized"; break;
                 case ADC_E_TIMEOUT: ErrorString_Ptr[2] = "Calibration operation timed out"; break;
+                default: break; //Error ID not registered.
+            }
+        break;
+
+        case SCHEDULER_MODULE_ID: //6 errors.
+            switch ( ErrorId ) {
+                case SCHEDULER_E_PARAM_CONFIG: ErrorString_Ptr[2] = "Invalid config pointer"; break;
+                case SCHEDULER_E_QUEUE_ID: ErrorString_Ptr[2] = "Invalid queue id"; break;
+                case SCHEDULER_E_QUEUE_STATUS: ErrorString_Ptr[2] = "Invalid queue status flag"; break;
+                case SCHEDULER_E_TASK_ID: ErrorString_Ptr[2] = "Invalid task id"; break;
+                case SCHEDULER_E_PERIODICITY: ErrorString_Ptr[2] = "Invalid task or timer periodicity"; break;
+                case SCHEDULER_E_TIMER_ID : ErrorString_Ptr[2] = "Invalid timer id"; break;
                 default: break; //Error ID not registered.
             }
         break;

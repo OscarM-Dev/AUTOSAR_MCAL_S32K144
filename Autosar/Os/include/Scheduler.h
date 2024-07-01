@@ -10,9 +10,56 @@
 #define SCHEDULER_H
 //Headers.
 #include "StandardTypes.h"
+#include "Det.h"
 #include "Scheduler_Cfg.h"
 #include "OsIf.h"
 #include "Bfx.h"
+
+//General information
+#define SCHEDULER_MODULE_ID 300 ///< Module ID.
+#define SCHEDULER_INSTANCE_ID 0 ///< Instance ID.
+
+//Api Adis
+#define SCHEDULER_INIT_ID 0x00  ///< Scheduler_Init() Id.
+
+#define SCHEDULER_INITQUEUE_ID 0x01 ///< Scheduler_InitQueue() Id.
+
+#define SCHEDULER_GETSTATUSQUEUE_ID 0x02  ///< Scheduler_GetStatusQueue() Id.
+
+#define SCHEDULER_FLUSHQUEUE_ID 0x03  ///< Scheduler_FlushQueue() Id.
+
+#define SCHEDULER_WRITEQUEUE_ID 0x04  ///< Scheduler_WriteQueue() Id.
+
+#define SCHEDULER_READQUEUE_ID 0x05 ///< Scheduler_ReadQueue() Id.
+
+#define SCHEDULER_STARTTASK_ID 0x06 ///< Scheduler_StartTask() Id.
+
+#define SCHEDULER_STOPTASK_ID 0x07  ///< Scheduler_StopTask() Id.
+
+#define SCHEDULER_PERIODTASK_ID 0x08  ///< Scheduler_PeriodTask() Id.
+
+#define SCHEDULER_STARTTIMER_ID 0x09  ///< Scheduler_StartTimer() Id.
+
+#define SCHEDULER_STOPTIMER_ID 0x0A ///< Scheduler_StopTimer() Id.
+
+#define SCHEDULER_GETTIMER_ID 0x0B  ///< Scheduler_GetTimer() Id.
+
+#define SCHEDULER_RELOADTIMER_ID  0x0C  ///< Scheduler_ReloadTimer() Id.
+
+#define SCHEDULER_MAINFUNCTION_ID   0x0D ///< Scheduler_MainFunction() Id.
+
+//Error Ids.
+#define SCHEDULER_E_PARAM_CONFIG 0x00 ///< "invalid config pointer" -->Scheduler_Init.
+
+#define SCHEDULER_E_QUEUE_ID 0x01 ///< "Invalid queue id" -->GetStatusQueue, Flushqueue, WriteQueue, ReadQueue.
+
+#define SCHEDULER_E_QUEUE_STATUS 0x02 ///< "Invalid queue status flag" -->GetStatusQueue.
+
+#define SCHEDULER_E_TASK_ID 0x03  ///< "Invalid task id" -->StartTask, StopTask, PeriodTask.
+
+#define SCHEDULER_E_PERIODICITY 0x04  ///< "Invalid task or timer periodicity" -->PeriodTask, ReloadTimer.
+
+#define SCHEDULER_E_TIMER_ID 0x05 ///< "Invalid timer id" -->StartTimer, StopTimer, GetTimer y ReloadTimer.
 
 //Types
 typedef uint32 TickType; ///< Type for tick value.

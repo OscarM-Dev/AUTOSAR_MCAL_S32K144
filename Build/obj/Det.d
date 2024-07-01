@@ -148,7 +148,9 @@ Build/obj/Det.o: Autosar/Det/src/Det.c Autosar/Mcal/Base/include/Mcal.h \
  Autosar/Mcal/Base/header/S32K144_PDB.h \
  Build/cfg/include/Adc_CfgDefines.h Build/cfg/include/Adc_PBcfg.h \
  Autosar/Mcal/Base/include/Adc_MemMap.h \
- Autosar/Mcal/Adc/include/Adc_Types.h Rtt/SEGGER/SEGGER_RTT.h \
+ Autosar/Mcal/Adc/include/Adc_Types.h Autosar/Os/include/Scheduler.h \
+ Autosar/Os/include/Scheduler_Cfg.h Autosar/Bfx/Bfx.h \
+ Autosar/Bfx/Bfx_32bits.h Autosar/Bfx/Bfx_8bits.h Rtt/SEGGER/SEGGER_RTT.h \
  Rtt/Config/SEGGER_RTT_Conf.h
 Autosar/Mcal/Base/include/Mcal.h:
 Autosar/Mcal/Base/include/Compiler.h:
@@ -324,5 +326,10 @@ Build/cfg/include/Adc_CfgDefines.h:
 Build/cfg/include/Adc_PBcfg.h:
 Autosar/Mcal/Base/include/Adc_MemMap.h:
 Autosar/Mcal/Adc/include/Adc_Types.h:
+Autosar/Os/include/Scheduler.h:
+Autosar/Os/include/Scheduler_Cfg.h:
+Autosar/Bfx/Bfx.h:
+Autosar/Bfx/Bfx_32bits.h:
+Autosar/Bfx/Bfx_8bits.h:
 Rtt/SEGGER/SEGGER_RTT.h:
 Rtt/Config/SEGGER_RTT_Conf.h:

@@ -1,6 +1,6 @@
 Symbol table:
 
-Power_Ip_EnableSleepOnExit/12 (Power_Ip_EnableSleepOnExit) @06ae0380
+Power_Ip_EnableSleepOnExit/12 (Power_Ip_EnableSleepOnExit) @05dc0380
   Type: function
   Visibility: external public
   References: 
@@ -9,7 +9,7 @@ Power_Ip_EnableSleepOnExit/12 (Power_Ip_EnableSleepOnExit) @06ae0380
   Function flags:
   Called by: Mcu_Ipw_SleepOnExit/5 
   Calls: 
-Power_Ip_DisableSleepOnExit/11 (Power_Ip_DisableSleepOnExit) @06ae02a0
+Power_Ip_DisableSleepOnExit/11 (Power_Ip_DisableSleepOnExit) @05dc02a0
   Type: function
   Visibility: external public
   References: 
@@ -18,7 +18,7 @@ Power_Ip_DisableSleepOnExit/11 (Power_Ip_DisableSleepOnExit) @06ae02a0
   Function flags:
   Called by: Mcu_Ipw_SleepOnExit/5 
   Calls: 
-Power_Ip_GetResetRawValue/10 (Power_Ip_GetResetRawValue) @06ae00e0
+Power_Ip_GetResetRawValue/10 (Power_Ip_GetResetRawValue) @05dc00e0
   Type: function
   Visibility: external public
   References: 
@@ -27,7 +27,7 @@ Power_Ip_GetResetRawValue/10 (Power_Ip_GetResetRawValue) @06ae00e0
   Function flags:
   Called by: Mcu_Ipw_GetResetRawValue/4 
   Calls: 
-Power_Ip_GetResetReason/9 (Power_Ip_GetResetReason) @06adf620
+Power_Ip_GetResetReason/9 (Power_Ip_GetResetReason) @05dbf620
   Type: function
   Visibility: external public
   References: 
@@ -36,7 +36,7 @@ Power_Ip_GetResetReason/9 (Power_Ip_GetResetReason) @06adf620
   Function flags:
   Called by: Mcu_Ipw_GetResetReason/3 
   Calls: 
-Power_Ip_SetMode/8 (Power_Ip_SetMode) @06adf0e0
+Power_Ip_SetMode/8 (Power_Ip_SetMode) @05dbf0e0
   Type: function
   Visibility: external public
   References: 
@@ -45,7 +45,7 @@ Power_Ip_SetMode/8 (Power_Ip_SetMode) @06adf0e0
   Function flags:
   Called by: Mcu_Ipw_SetMode/2 
   Calls: 
-Clock_Ip_InitClock/7 (Clock_Ip_InitClock) @06adfe00
+Clock_Ip_InitClock/7 (Clock_Ip_InitClock) @05dbfe00
   Type: function
   Visibility: external public
   References: 
@@ -54,7 +54,7 @@ Clock_Ip_InitClock/7 (Clock_Ip_InitClock) @06adfe00
   Function flags:
   Called by: Mcu_Ipw_InitClock/1 
   Calls: 
-Power_Ip_Init/6 (Power_Ip_Init) @06adfc40
+Power_Ip_Init/6 (Power_Ip_Init) @05dbfc40
   Type: function
   Visibility: external public
   References: 
@@ -63,7 +63,7 @@ Power_Ip_Init/6 (Power_Ip_Init) @06adfc40
   Function flags:
   Called by: Mcu_Ipw_Init/0 
   Calls: 
-Mcu_Ipw_SleepOnExit/5 (Mcu_Ipw_SleepOnExit) @06adf7e0
+Mcu_Ipw_SleepOnExit/5 (Mcu_Ipw_SleepOnExit) @05dbf7e0
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: 
@@ -72,7 +72,7 @@ Mcu_Ipw_SleepOnExit/5 (Mcu_Ipw_SleepOnExit) @06adf7e0
   Function flags: body
   Called by: 
   Calls: Power_Ip_EnableSleepOnExit/12 Power_Ip_DisableSleepOnExit/11 
-Mcu_Ipw_GetResetRawValue/4 (Mcu_Ipw_GetResetRawValue) @06adf540
+Mcu_Ipw_GetResetRawValue/4 (Mcu_Ipw_GetResetRawValue) @05dbf540
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: 
@@ -81,7 +81,7 @@ Mcu_Ipw_GetResetRawValue/4 (Mcu_Ipw_GetResetRawValue) @06adf540
   Function flags: body
   Called by: 
   Calls: Power_Ip_GetResetRawValue/10 
-Mcu_Ipw_GetResetReason/3 (Mcu_Ipw_GetResetReason) @06adf2a0
+Mcu_Ipw_GetResetReason/3 (Mcu_Ipw_GetResetReason) @05dbf2a0
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: 
@@ -90,7 +90,7 @@ Mcu_Ipw_GetResetReason/3 (Mcu_Ipw_GetResetReason) @06adf2a0
   Function flags: body
   Called by: 
   Calls: Power_Ip_GetResetReason/9 
-Mcu_Ipw_SetMode/2 (Mcu_Ipw_SetMode) @06adf000
+Mcu_Ipw_SetMode/2 (Mcu_Ipw_SetMode) @05dbf000
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: 
@@ -99,7 +99,7 @@ Mcu_Ipw_SetMode/2 (Mcu_Ipw_SetMode) @06adf000
   Function flags: body
   Called by: 
   Calls: Power_Ip_SetMode/8 
-Mcu_Ipw_InitClock/1 (Mcu_Ipw_InitClock) @06a0b620
+Mcu_Ipw_InitClock/1 (Mcu_Ipw_InitClock) @05ceb620
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: 
@@ -108,7 +108,7 @@ Mcu_Ipw_InitClock/1 (Mcu_Ipw_InitClock) @06a0b620
   Function flags: body
   Called by: 
   Calls: Clock_Ip_InitClock/7 
-Mcu_Ipw_Init/0 (Mcu_Ipw_Init) @06a0b540
+Mcu_Ipw_Init/0 (Mcu_Ipw_Init) @05ceb540
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: 

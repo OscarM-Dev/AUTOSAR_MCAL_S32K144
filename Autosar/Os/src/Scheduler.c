@@ -69,13 +69,20 @@ uint8 Scheduler_GetStatusQueue( QueueType Queue, uint8 Status ) {
             case SCHEDULER_QUEUE_FULL_STATUS:
                 status = Bfx_GetBit_u32u8_u8( SchedulerCtrl_Ptr->QueueFulls, Queue - 1 ); 
             break;
-            default:    //Invalid Status flag.
+            default:  //Invalid Status flag.
+                    #if ( SCHEDULER_DEV_ERROR_DETECT == STD_ON )
+                        Det_ReportError( SCHEDULER_MODULE_ID, SCHEDULER_INSTANCE_ID, SCHEDULER_GETSTATUSQUEUE_ID, SCHEDULER_E_QUEUE_STATUS );
+                    #endif
+                    status = FALSE;
             break;
         }
     } 
     
-    else {
-        status = FALSE; //Invalid ID.
+    else {  //Invalid ID.
+        #if ( SCHEDULER_DEV_ERROR_DETECT == STD_ON )
+            Det_ReportError( SCHEDULER_MODULE_ID, SCHEDULER_INSTANCE_ID, SCHEDULER_GETSTATUSQUEUE_ID, SCHEDULER_E_QUEUE_ID );
+        #endif
+        status = FALSE; 
     }
 
     return status;
@@ -103,6 +110,9 @@ Std_ReturnType Scheduler_FlushQueue( QueueType Queue ) {
     }
 
     else {  //Invalid ID.
+        #if ( SCHEDULER_DEV_ERROR_DETECT == STD_ON )
+            Det_ReportError( SCHEDULER_MODULE_ID, SCHEDULER_INSTANCE_ID, SCHEDULER_FLUSHQUEUE_ID, SCHEDULER_E_QUEUE_ID );
+        #endif
         status = FALSE; 
     }
 
@@ -167,6 +177,9 @@ Std_ReturnType Scheduler_WriteQueue( QueueType Queue, void *Data ) {
     }
 
     else {  //Invalid ID.
+        #if ( SCHEDULER_DEV_ERROR_DETECT == STD_ON )
+            Det_ReportError( SCHEDULER_MODULE_ID, SCHEDULER_INSTANCE_ID, SCHEDULER_WRITEQUEUE_ID, SCHEDULER_E_QUEUE_ID );
+        #endif
         status = FALSE; 
     }
 
@@ -232,6 +245,9 @@ Std_ReturnType Scheduler_ReadQueue( QueueType Queue, void *Data ) {
     }
 
     else {  //Invalid ID.
+        #if ( SCHEDULER_DEV_ERROR_DETECT == STD_ON )
+            Det_ReportError( SCHEDULER_MODULE_ID, SCHEDULER_INSTANCE_ID, SCHEDULER_READQUEUE_ID, SCHEDULER_E_QUEUE_ID );
+        #endif
         status = FALSE; 
     }
 
@@ -256,21 +272,31 @@ Std_ReturnType Scheduler_Init( Scheduler_CtrlType *SchedulerPtr ) {
     Std_ReturnType status = TRUE;
     uint8 i = 0;
 
-    //Initializing tasks related parameters.
-    for ( i = 0; i < SCHEDULER_TASKS; i++ ) {
-        SchedulerPtr->TaskPeriod[i] = SchedulerConfig_Ptr->TaskPtr[i].InitPeriod;   //Registering initial periodicity value of each task.
-        SchedulerPtr->TaskElapsed[i] = 0;   //Initializing time follow up of each task.
-        Bfx_PutBit_u32u8u8( &SchedulerPtr->TaskFlags, i, SchedulerConfig_Ptr->TaskPtr[i].InitFlag  );   //Registering initial flag of each task. 
+    //Verifying config pointer.
+    #if ( SCHEDULER_DEV_ERROR_DETECT == STD_ON )
+        if ( SchedulerPtr == NULL_PTR ) { //Invalid pointer
+            Det_ReportError( SCHEDULER_MODULE_ID, SCHEDULER_INSTANCE_ID, SCHEDULER_INIT_ID, SCHEDULER_E_PARAM_CONFIG );
+            status = FALSE;
+        }
+    #endif
+
+    if ( status == TRUE ) {
+        //Initializing tasks related parameters.
+        for ( i = 0; i < SCHEDULER_TASKS; i++ ) {
+            SchedulerPtr->TaskPeriod[i] = SchedulerConfig_Ptr->TaskPtr[i].InitPeriod;   //Registering initial periodicity value of each task.
+            SchedulerPtr->TaskElapsed[i] = 0;   //Initializing time follow up of each task.
+            Bfx_PutBit_u32u8u8( &SchedulerPtr->TaskFlags, i, SchedulerConfig_Ptr->TaskPtr[i].InitFlag  );   //Registering initial flag of each task. 
+        }
+
+        //Initializing timers related parameters.
+        for ( i = 0; i < SCHEDULER_TIMERS; i++ ) {
+            SchedulerPtr->TimerTimeout[i] = SchedulerConfig_Ptr->TimerPtr[i].InitTimeout;   //Registering initial timeout value of each timer.
+            SchedulerPtr->TimerCount[i] = SchedulerConfig_Ptr->TimerPtr[i].InitTimeout; //Initializing timer count of each timer.
+            Bfx_PutBit_u32u8u8( &SchedulerPtr->TimerFlags, i, SchedulerConfig_Ptr->TimerPtr[i].InitFlag  );   //Registering initial flag of each timer.
+        } 
+
+        Scheduler_InitQueue( SchedulerPtr ); //Initializing queues related parameters.   
     }
-
-    //Initializing timers related parameters.
-    for ( i = 0; i < SCHEDULER_TIMERS; i++ ) {
-        SchedulerPtr->TimerTimeout[i] = SchedulerConfig_Ptr->TimerPtr[i].InitTimeout;   //Registering initial timeout value of each timer.
-        SchedulerPtr->TimerCount[i] = SchedulerConfig_Ptr->TimerPtr[i].InitTimeout; //Initializing timer count of each timer.
-        Bfx_PutBit_u32u8u8( &SchedulerPtr->TimerFlags, i, SchedulerConfig_Ptr->TimerPtr[i].InitFlag  );   //Registering initial flag of each timer.
-    } 
-
-    Scheduler_InitQueue( SchedulerPtr ); //Initializing queues related parameters.   
 
     return status;
 }
@@ -297,6 +323,9 @@ Std_ReturnType Scheduler_StopTask( TaskType Task ) {
     }
 
     else {
+        #if ( SCHEDULER_DEV_ERROR_DETECT == STD_ON )
+            Det_ReportError( SCHEDULER_MODULE_ID, SCHEDULER_INSTANCE_ID, SCHEDULER_STOPTASK_ID, SCHEDULER_E_TASK_ID );
+        #endif
         status = FALSE; //invalid ID.
     }
 
@@ -325,6 +354,9 @@ Std_ReturnType Scheduler_StartTask( TaskType Task ) {
     }
 
     else {
+        #if ( SCHEDULER_DEV_ERROR_DETECT == STD_ON )
+            Det_ReportError( SCHEDULER_MODULE_ID, SCHEDULER_INSTANCE_ID, SCHEDULER_STARTTASK_ID, SCHEDULER_E_TASK_ID );
+        #endif
         status = FALSE; //invalid ID.
     }
     
@@ -356,11 +388,17 @@ Std_ReturnType Scheduler_PeriodTask( TaskType Task, uint32 NewPeriod ){
         }
 
         else {
+            #if ( SCHEDULER_DEV_ERROR_DETECT == STD_ON )
+                Det_ReportError( SCHEDULER_MODULE_ID, SCHEDULER_INSTANCE_ID, SCHEDULER_PERIODTASK_ID, SCHEDULER_E_PERIODICITY );
+            #endif
             status = FALSE; //invalid periodicity.
         }
     }
 
     else {
+        #if ( SCHEDULER_DEV_ERROR_DETECT == STD_ON )
+            Det_ReportError( SCHEDULER_MODULE_ID, SCHEDULER_INSTANCE_ID, SCHEDULER_PERIODTASK_ID, SCHEDULER_E_TASK_ID );
+        #endif
         status = FALSE; //invalid ID.
     }
 
@@ -397,6 +435,9 @@ Std_ReturnType Scheduler_StartTimer( TimerType Timer ) {
     }
 
     else {
+        #if ( SCHEDULER_DEV_ERROR_DETECT == STD_ON )
+            Det_ReportError( SCHEDULER_MODULE_ID, SCHEDULER_INSTANCE_ID, SCHEDULER_STARTTIMER_ID, SCHEDULER_E_TIMER_ID );
+        #endif
         status = FALSE; //invalid ID.
     }
 
@@ -425,6 +466,9 @@ Std_ReturnType Scheduler_StopTimer( TimerType Timer ) {
     }
 
     else {
+        #if ( SCHEDULER_DEV_ERROR_DETECT == STD_ON )
+            Det_ReportError( SCHEDULER_MODULE_ID, SCHEDULER_INSTANCE_ID, SCHEDULER_STOPTIMER_ID, SCHEDULER_E_TIMER_ID );
+        #endif
         status = FALSE;//invalid ID.
     }
 
@@ -452,6 +496,9 @@ uint32 Scheduler_GetTimer( TimerType Timer ) {
     }
 
     else {
+        #if ( SCHEDULER_DEV_ERROR_DETECT == STD_ON )
+            Det_ReportError( SCHEDULER_MODULE_ID, SCHEDULER_INSTANCE_ID, SCHEDULER_GETTIMER_ID, SCHEDULER_E_TIMER_ID );
+        #endif
         counter_value = FALSE;  //invalid ID.
     }
 
@@ -489,11 +536,17 @@ Std_ReturnType Scheduler_ReloadTimer( TimerType Timer, uint32 NewTimeout ) {
         }
 
         else {
+            #if ( SCHEDULER_DEV_ERROR_DETECT == STD_ON )
+                Det_ReportError( SCHEDULER_MODULE_ID, SCHEDULER_INSTANCE_ID, SCHEDULER_RELOADTIMER_ID, SCHEDULER_E_PERIODICITY );
+            #endif
             status = FALSE; //Invalid timeout.
         }
      }
 
     else {
+        #if ( SCHEDULER_DEV_ERROR_DETECT == STD_ON )
+            Det_ReportError( SCHEDULER_MODULE_ID, SCHEDULER_INSTANCE_ID, SCHEDULER_RELOADTIMER_ID, SCHEDULER_E_TIMER_ID );
+        #endif
         status = FALSE; //invalid ID.
     }
 

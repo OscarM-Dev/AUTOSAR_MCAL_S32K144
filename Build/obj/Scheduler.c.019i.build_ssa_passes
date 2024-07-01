@@ -4,7 +4,7 @@ Scheduler_MainFunction ()
   uint32 elapsed_time;
   uint32 count_value;
   uint32 tick_value;
-  long unsigned int D.5949;
+  long unsigned int D.5993;
 
   <bb 2> :
   SchedulerConfig_Ptr.67_1 = SchedulerConfig_Ptr;
@@ -17,8 +17,8 @@ Scheduler_MainFunction ()
   i = 0;
 
   <bb 3> :
-  D.5949 = OsIf_GetElapsed (&count_value, 1);
-  elapsed_time = D.5949 + elapsed_time;
+  D.5993 = OsIf_GetElapsed (&count_value, 1);
+  elapsed_time = D.5993 + elapsed_time;
   if (elapsed_time >= tick_value)
     goto <bb 4>; [INV]
   else
@@ -145,7 +145,7 @@ Scheduler_MainFunction ()
 Scheduler_ReloadTimer (TimerType Timer, uint32 NewTimeout)
 {
   Std_ReturnType status;
-  Std_ReturnType D.5947;
+  Std_ReturnType D.5991;
 
   <bb 2> :
   status = 0;
@@ -193,20 +193,22 @@ Scheduler_ReloadTimer (TimerType Timer, uint32 NewTimeout)
   goto <bb 8>; [INV]
 
   <bb 7> :
+  Det_ReportError (300, 0, 12, 4);
   status = 0;
 
   <bb 8> :
   goto <bb 10>; [INV]
 
   <bb 9> :
+  Det_ReportError (300, 0, 12, 5);
   status = 0;
 
   <bb 10> :
-  D.5947 = status;
+  D.5991 = status;
 
   <bb 11> :
 <L8>:
-  return D.5947;
+  return D.5991;
 
 }
 
@@ -214,7 +216,7 @@ Scheduler_ReloadTimer (TimerType Timer, uint32 NewTimeout)
 Scheduler_GetTimer (TimerType Timer)
 {
   uint32 counter_value;
-  uint32 D.5937;
+  uint32 D.5981;
 
   <bb 2> :
   counter_value = 0;
@@ -239,14 +241,15 @@ Scheduler_GetTimer (TimerType Timer)
   goto <bb 6>; [INV]
 
   <bb 5> :
+  Det_ReportError (300, 0, 11, 5);
   counter_value = 0;
 
   <bb 6> :
-  D.5937 = counter_value;
+  D.5981 = counter_value;
 
   <bb 7> :
 <L4>:
-  return D.5937;
+  return D.5981;
 
 }
 
@@ -254,7 +257,7 @@ Scheduler_GetTimer (TimerType Timer)
 Scheduler_StopTimer (TimerType Timer)
 {
   Std_ReturnType status;
-  Std_ReturnType D.5931;
+  Std_ReturnType D.5975;
 
   <bb 2> :
   status = 0;
@@ -280,14 +283,15 @@ Scheduler_StopTimer (TimerType Timer)
   goto <bb 6>; [INV]
 
   <bb 5> :
+  Det_ReportError (300, 0, 10, 5);
   status = 0;
 
   <bb 6> :
-  D.5931 = status;
+  D.5975 = status;
 
   <bb 7> :
 <L4>:
-  return D.5931;
+  return D.5975;
 
 }
 
@@ -295,7 +299,7 @@ Scheduler_StopTimer (TimerType Timer)
 Scheduler_StartTimer (TimerType Timer)
 {
   Std_ReturnType status;
-  Std_ReturnType D.5925;
+  Std_ReturnType D.5969;
 
   <bb 2> :
   status = 0;
@@ -341,14 +345,15 @@ Scheduler_StartTimer (TimerType Timer)
   goto <bb 8>; [INV]
 
   <bb 7> :
+  Det_ReportError (300, 0, 9, 5);
   status = 0;
 
   <bb 8> :
-  D.5925 = status;
+  D.5969 = status;
 
   <bb 9> :
 <L6>:
-  return D.5925;
+  return D.5969;
 
 }
 
@@ -356,7 +361,7 @@ Scheduler_StartTimer (TimerType Timer)
 Scheduler_PeriodTask (TaskType Task, uint32 NewPeriod)
 {
   Std_ReturnType status;
-  Std_ReturnType D.5917;
+  Std_ReturnType D.5961;
 
   <bb 2> :
   status = 0;
@@ -399,20 +404,22 @@ Scheduler_PeriodTask (TaskType Task, uint32 NewPeriod)
   goto <bb 8>; [INV]
 
   <bb 7> :
+  Det_ReportError (300, 0, 8, 4);
   status = 0;
 
   <bb 8> :
   goto <bb 10>; [INV]
 
   <bb 9> :
+  Det_ReportError (300, 0, 8, 3);
   status = 0;
 
   <bb 10> :
-  D.5917 = status;
+  D.5961 = status;
 
   <bb 11> :
 <L8>:
-  return D.5917;
+  return D.5961;
 
 }
 
@@ -420,7 +427,7 @@ Scheduler_PeriodTask (TaskType Task, uint32 NewPeriod)
 Scheduler_StartTask (TaskType Task)
 {
   Std_ReturnType status;
-  Std_ReturnType D.5907;
+  Std_ReturnType D.5951;
 
   <bb 2> :
   status = 0;
@@ -446,14 +453,15 @@ Scheduler_StartTask (TaskType Task)
   goto <bb 6>; [INV]
 
   <bb 5> :
+  Det_ReportError (300, 0, 6, 3);
   status = 0;
 
   <bb 6> :
-  D.5907 = status;
+  D.5951 = status;
 
   <bb 7> :
 <L4>:
-  return D.5907;
+  return D.5951;
 
 }
 
@@ -461,7 +469,7 @@ Scheduler_StartTask (TaskType Task)
 Scheduler_StopTask (TaskType Task)
 {
   Std_ReturnType status;
-  Std_ReturnType D.5901;
+  Std_ReturnType D.5945;
 
   <bb 2> :
   status = 0;
@@ -487,14 +495,15 @@ Scheduler_StopTask (TaskType Task)
   goto <bb 6>; [INV]
 
   <bb 5> :
+  Det_ReportError (300, 0, 7, 3);
   status = 0;
 
   <bb 6> :
-  D.5901 = status;
+  D.5945 = status;
 
   <bb 7> :
 <L4>:
-  return D.5901;
+  return D.5945;
 
 }
 
@@ -503,15 +512,31 @@ Scheduler_Init (struct Scheduler_CtrlType * SchedulerPtr)
 {
   uint8 i;
   Std_ReturnType status;
-  Std_ReturnType D.5892;
+  Std_ReturnType D.5936;
 
   <bb 2> :
   status = 1;
   i = 0;
-  i = 0;
-  goto <bb 4>; [INV]
+  if (SchedulerPtr == 0B)
+    goto <bb 3>; [INV]
+  else
+    goto <bb 4>; [INV]
 
   <bb 3> :
+  Det_ReportError (300, 0, 0, 0);
+  status = 0;
+
+  <bb 4> :
+  if (status == 1)
+    goto <bb 5>; [INV]
+  else
+    goto <bb 12>; [INV]
+
+  <bb 5> :
+  i = 0;
+  goto <bb 7>; [INV]
+
+  <bb 6> :
   SchedulerConfig_Ptr.38_1 = SchedulerConfig_Ptr;
   _2 = SchedulerConfig_Ptr.38_1->TaskPtr;
   _3 = (unsigned int) i;
@@ -534,17 +559,17 @@ Scheduler_Init (struct Scheduler_CtrlType * SchedulerPtr)
   i.40_17 = i;
   i = i.40_17 + 1;
 
-  <bb 4> :
+  <bb 7> :
   if (i <= 1)
-    goto <bb 3>; [INV]
+    goto <bb 6>; [INV]
   else
-    goto <bb 5>; [INV]
+    goto <bb 8>; [INV]
 
-  <bb 5> :
+  <bb 8> :
   i = 0;
-  goto <bb 7>; [INV]
+  goto <bb 10>; [INV]
 
-  <bb 6> :
+  <bb 9> :
   SchedulerConfig_Ptr.41_18 = SchedulerConfig_Ptr;
   _19 = SchedulerConfig_Ptr.41_18->TimerPtr;
   _20 = (unsigned int) i;
@@ -573,19 +598,21 @@ Scheduler_Init (struct Scheduler_CtrlType * SchedulerPtr)
   i.44_40 = i;
   i = i.44_40 + 1;
 
-  <bb 7> :
+  <bb 10> :
   if (i == 0)
-    goto <bb 6>; [INV]
+    goto <bb 9>; [INV]
   else
-    goto <bb 8>; [INV]
+    goto <bb 11>; [INV]
 
-  <bb 8> :
+  <bb 11> :
   Scheduler_InitQueue (SchedulerPtr);
-  D.5892 = status;
 
-  <bb 9> :
-<L6>:
-  return D.5892;
+  <bb 12> :
+  D.5936 = status;
+
+  <bb 13> :
+<L10>:
+  return D.5936;
 
 }
 
@@ -595,7 +622,7 @@ Scheduler_ReadQueue (QueueType Queue, void * Data)
   uint32 actual_add;
   uint32 base_add;
   Std_ReturnType status;
-  Std_ReturnType D.5890;
+  Std_ReturnType D.5930;
 
   <bb 2> :
   status = 0;
@@ -722,14 +749,15 @@ Scheduler_ReadQueue (QueueType Queue, void * Data)
   goto <bb 14>; [INV]
 
   <bb 13> :
+  Det_ReportError (300, 0, 5, 1);
   status = 0;
 
   <bb 14> :
-  D.5890 = status;
+  D.5930 = status;
 
   <bb 15> :
 <L12>:
-  return D.5890;
+  return D.5930;
 
 }
 
@@ -739,7 +767,7 @@ Scheduler_WriteQueue (QueueType Queue, void * Data)
   uint32 actual_add;
   uint32 base_add;
   Std_ReturnType status;
-  Std_ReturnType D.5876;
+  Std_ReturnType D.5916;
 
   <bb 2> :
   status = 0;
@@ -866,14 +894,15 @@ Scheduler_WriteQueue (QueueType Queue, void * Data)
   goto <bb 14>; [INV]
 
   <bb 13> :
+  Det_ReportError (300, 0, 4, 1);
   status = 0;
 
   <bb 14> :
-  D.5876 = status;
+  D.5916 = status;
 
   <bb 15> :
 <L12>:
-  return D.5876;
+  return D.5916;
 
 }
 
@@ -881,7 +910,7 @@ Scheduler_WriteQueue (QueueType Queue, void * Data)
 Scheduler_FlushQueue (QueueType Queue)
 {
   Std_ReturnType status;
-  Std_ReturnType D.5862;
+  Std_ReturnType D.5902;
 
   <bb 2> :
   status = 0;
@@ -919,14 +948,15 @@ Scheduler_FlushQueue (QueueType Queue)
   goto <bb 6>; [INV]
 
   <bb 5> :
+  Det_ReportError (300, 0, 3, 1);
   status = 0;
 
   <bb 6> :
-  D.5862 = status;
+  D.5902 = status;
 
   <bb 7> :
 <L4>:
-  return D.5862;
+  return D.5902;
 
 }
 
@@ -934,7 +964,7 @@ Scheduler_FlushQueue (QueueType Queue)
 Scheduler_GetStatusQueue (QueueType Queue, uint8 Status)
 {
   uint8 status;
-  uint8 D.5854;
+  uint8 D.5894;
 
   <bb 2> :
   status = 0;
@@ -975,19 +1005,22 @@ Scheduler_GetStatusQueue (QueueType Queue, uint8 Status)
 
   <bb 7> :
 <L4>:
+  Det_ReportError (300, 0, 2, 2);
+  status = 0;
 
   <bb 8> :
   goto <bb 10>; [INV]
 
   <bb 9> :
+  Det_ReportError (300, 0, 2, 1);
   status = 0;
 
   <bb 10> :
-  D.5854 = status;
+  D.5894 = status;
 
   <bb 11> :
 <L8>:
-  return D.5854;
+  return D.5894;
 
 }
 
@@ -1096,7 +1129,7 @@ Bfx_PutBit_u32u8u8 (uint32 * Data, uint8 BitPn, boolean Status)
 Bfx_GetBit_u32u8_u8 (uint32 Data, uint8 BitPn)
 {
   boolean Result;
-  boolean D.5856;
+  boolean D.5896;
 
   <bb 2> :
   Result = 0;
@@ -1105,11 +1138,11 @@ Bfx_GetBit_u32u8_u8 (uint32 Data, uint8 BitPn)
   _3 = (long unsigned int) _2;
   _4 = Data & _3;
   Result = _4 != 0;
-  D.5856 = Result;
+  D.5896 = Result;
 
   <bb 3> :
 <L0>:
-  return D.5856;
+  return D.5896;
 
 }
 

@@ -87,22 +87,6 @@ extern "C"{
 /* Max numbers of ECU cores supported */
 #define DET_NO_ECU_CORES                        (uint8)(1U)
 
-//Configuration macros for the det functions.
-//General.
-#define DET_MODULES 6   ///< Number of modules used in aplication.
-
-//Mcu.
-#define DET_MCU_APIS 4   ///< Number of Apis used of the Mcu module.
-#define DET_MCU_ERRORS_M 4   ///< Number of errors meanings in the Mcu module.
-
-//Platform
-#define DET_PLATFORM_APIS 5 ///< Number of Apis used of the Platform module.
-#define DET_PLATFORM_ERRORS_M 3 ///< Number of error meanings in the Platform module.
-
-//Port
-#define DET_PORT_APIS 5 ///< Number of Apis used of the Port module.
-#define DET_PORT_ERRORS_M 6 ///< Number of error meanings in the Port module.
-
 /*==================================================================================================
 *                                             ENUMS
 ==================================================================================================*/

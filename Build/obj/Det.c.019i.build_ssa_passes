@@ -9,7 +9,7 @@ Det_Start ()
 Det_ReportTransientFault (uint16 ModuleId, uint8 InstanceId, uint8 ApiId, uint8 FaultId)
 {
   uint32 u32CoreId;
-  Std_ReturnType D.8326;
+  Std_ReturnType D.8738;
 
   <bb 2> :
   _1 = Sys_GetCoreID ();
@@ -18,11 +18,11 @@ Det_ReportTransientFault (uint16 ModuleId, uint8 InstanceId, uint8 ApiId, uint8 
   Det_TransientInstanceId[u32CoreId] = InstanceId;
   Det_TransientApiId[u32CoreId] = ApiId;
   Det_TransientFaultId[u32CoreId] = FaultId;
-  D.8326 = 0;
+  D.8738 = 0;
 
   <bb 3> :
 <L0>:
-  return D.8326;
+  return D.8738;
 
 }
 
@@ -30,7 +30,7 @@ Det_ReportTransientFault (uint16 ModuleId, uint8 InstanceId, uint8 ApiId, uint8 
 Det_ReportRuntimeError (uint16 ModuleId, uint8 InstanceId, uint8 ApiId, uint8 ErrorId)
 {
   uint32 u32CoreId;
-  Std_ReturnType D.8324;
+  Std_ReturnType D.8736;
 
   <bb 2> :
   _1 = Sys_GetCoreID ();
@@ -39,11 +39,11 @@ Det_ReportRuntimeError (uint16 ModuleId, uint8 InstanceId, uint8 ApiId, uint8 Er
   Det_RuntimeInstanceId[u32CoreId] = InstanceId;
   Det_RuntimeApiId[u32CoreId] = ApiId;
   Det_RuntimeErrorId[u32CoreId] = ErrorId;
-  D.8324 = 0;
+  D.8736 = 0;
 
   <bb 3> :
 <L0>:
-  return D.8324;
+  return D.8736;
 
 }
 
@@ -52,7 +52,7 @@ Det_ReportError (uint16 ModuleId, uint8 InstanceId, uint8 ApiId, uint8 ErrorId)
 {
   uint32 u32CoreId;
   char * Strings_error[3];
-  Std_ReturnType D.8321;
+  Std_ReturnType D.8733;
 
   <bb 2> :
   _1 = Sys_GetCoreID ();
@@ -72,23 +72,23 @@ Det_ReportError (uint16 ModuleId, uint8 InstanceId, uint8 ApiId, uint8 ErrorId)
   _7 = (int) InstanceId;
   _8 = Strings_error[2];
   SEGGER_RTT_printf (0, "Error: Error in %s in function %s with the instance %d, %s\n", _5, _6, _7, _8);
-  D.8321 = 0;
+  D.8733 = 0;
   Strings_error = {CLOBBER};
 
   <bb 3> :
 <L1>:
-  return D.8321;
+  return D.8733;
 
 }
 
 
 Det_GetErrorMeaning (uint16 ModuleId, uint8 ErrorId)
 {
-  char * D.8319;
+  char * D.8731;
 
   <bb 2> :
   _1 = (int) ModuleId;
-  switch (_1) <default: <L52> [INV], case 101: <L0> [INV], case 120: <L25> [INV], case 121: <L34> [INV], case 123: <L43> [INV], case 124: <L15> [INV], case 255: <L9> [INV]>
+  switch (_1) <default: <L61> [INV], case 101: <L0> [INV], case 120: <L25> [INV], case 121: <L34> [INV], case 123: <L43> [INV], case 124: <L15> [INV], case 255: <L9> [INV], case 300: <L52> [INV]>
 
   <bb 3> :
 <L0>:
@@ -129,7 +129,7 @@ Det_GetErrorMeaning (uint16 ModuleId, uint8 ErrorId)
 <L7>:
 
   <bb 11> :
-  goto <bb 56>; [INV]
+  goto <bb 65>; [INV]
 
   <bb 12> :
 <L9>:
@@ -155,7 +155,7 @@ Det_GetErrorMeaning (uint16 ModuleId, uint8 ErrorId)
 <L13>:
 
   <bb 17> :
-  goto <bb 56>; [INV]
+  goto <bb 65>; [INV]
 
   <bb 18> :
 <L15>:
@@ -201,7 +201,7 @@ Det_GetErrorMeaning (uint16 ModuleId, uint8 ErrorId)
 <L23>:
 
   <bb 27> :
-  goto <bb 56>; [INV]
+  goto <bb 65>; [INV]
 
   <bb 28> :
 <L25>:
@@ -242,7 +242,7 @@ Det_GetErrorMeaning (uint16 ModuleId, uint8 ErrorId)
 <L32>:
 
   <bb 36> :
-  goto <bb 56>; [INV]
+  goto <bb 65>; [INV]
 
   <bb 37> :
 <L34>:
@@ -283,7 +283,7 @@ Det_GetErrorMeaning (uint16 ModuleId, uint8 ErrorId)
 <L41>:
 
   <bb 45> :
-  goto <bb 56>; [INV]
+  goto <bb 65>; [INV]
 
   <bb 46> :
 <L43>:
@@ -324,28 +324,69 @@ Det_GetErrorMeaning (uint16 ModuleId, uint8 ErrorId)
 <L50>:
 
   <bb 54> :
-  goto <bb 56>; [INV]
+  goto <bb 65>; [INV]
 
   <bb 55> :
 <L52>:
+  _8 = (int) ErrorId;
+  switch (_8) <default: <L59> [INV], case 0: <L53> [INV], case 1: <L54> [INV], case 2: <L55> [INV], case 3: <L56> [INV], case 4: <L57> [INV], case 5: <L58> [INV]>
 
   <bb 56> :
-  D.8319 = ErrorString_Ptr[2];
+<L53>:
+  ErrorString_Ptr[2] = "Invalid config pointer";
+  goto <bb 63>; [INV]
 
   <bb 57> :
 <L54>:
-  return D.8319;
+  ErrorString_Ptr[2] = "Invalid queue id";
+  goto <bb 63>; [INV]
+
+  <bb 58> :
+<L55>:
+  ErrorString_Ptr[2] = "Invalid queue status flag";
+  goto <bb 63>; [INV]
+
+  <bb 59> :
+<L56>:
+  ErrorString_Ptr[2] = "Invalid task id";
+  goto <bb 63>; [INV]
+
+  <bb 60> :
+<L57>:
+  ErrorString_Ptr[2] = "Invalid task or timer periodicity";
+  goto <bb 63>; [INV]
+
+  <bb 61> :
+<L58>:
+  ErrorString_Ptr[2] = "Invalid timer id";
+  goto <bb 63>; [INV]
+
+  <bb 62> :
+<L59>:
+
+  <bb 63> :
+  goto <bb 65>; [INV]
+
+  <bb 64> :
+<L61>:
+
+  <bb 65> :
+  D.8731 = ErrorString_Ptr[2];
+
+  <bb 66> :
+<L63>:
+  return D.8731;
 
 }
 
 
 Det_GetApiName (uint16 ModuleId, uint8 ApiId)
 {
-  char * D.8317;
+  char * D.8729;
 
   <bb 2> :
   _1 = (int) ModuleId;
-  switch (_1) <default: <L55> [INV], case 101: <L0> [INV], case 120: <L23> [INV], case 121: <L34> [INV], case 123: <L43> [INV], case 124: <L15> [INV], case 255: <L7> [INV]>
+  switch (_1) <default: <L70> [INV], case 101: <L0> [INV], case 120: <L23> [INV], case 121: <L34> [INV], case 123: <L43> [INV], case 124: <L15> [INV], case 255: <L7> [INV], case 300: <L55> [INV]>
 
   <bb 3> :
 <L0>:
@@ -376,7 +417,7 @@ Det_GetApiName (uint16 ModuleId, uint8 ApiId)
 <L5>:
 
   <bb 9> :
-  goto <bb 59>; [INV]
+  goto <bb 74>; [INV]
 
   <bb 10> :
 <L7>:
@@ -412,7 +453,7 @@ Det_GetApiName (uint16 ModuleId, uint8 ApiId)
 <L13>:
 
   <bb 17> :
-  goto <bb 59>; [INV]
+  goto <bb 74>; [INV]
 
   <bb 18> :
 <L15>:
@@ -448,7 +489,7 @@ Det_GetApiName (uint16 ModuleId, uint8 ApiId)
 <L21>:
 
   <bb 25> :
-  goto <bb 59>; [INV]
+  goto <bb 74>; [INV]
 
   <bb 26> :
 <L23>:
@@ -499,7 +540,7 @@ Det_GetApiName (uint16 ModuleId, uint8 ApiId)
 <L32>:
 
   <bb 36> :
-  goto <bb 59>; [INV]
+  goto <bb 74>; [INV]
 
   <bb 37> :
 <L34>:
@@ -540,7 +581,7 @@ Det_GetApiName (uint16 ModuleId, uint8 ApiId)
 <L41>:
 
   <bb 45> :
-  goto <bb 59>; [INV]
+  goto <bb 74>; [INV]
 
   <bb 46> :
 <L43>:
@@ -596,68 +637,144 @@ Det_GetApiName (uint16 ModuleId, uint8 ApiId)
 <L53>:
 
   <bb 57> :
-  goto <bb 59>; [INV]
+  goto <bb 74>; [INV]
 
   <bb 58> :
 <L55>:
+  _8 = (int) ApiId;
+  switch (_8) <default: <L68> [INV], case 0: <L56> [INV], case 2: <L57> [INV], case 3: <L58> [INV], case 4: <L59> [INV], case 5: <L60> [INV], case 6: <L61> [INV], case 7: <L62> [INV], case 8: <L63> [INV], case 9: <L64> [INV], case 10: <L65> [INV], case 11: <L66> [INV], case 12: <L67> [INV]>
 
   <bb 59> :
-  D.8317 = ErrorString_Ptr[1];
+<L56>:
+  ErrorString_Ptr[1] = "Scheduler_Init()";
+  goto <bb 72>; [INV]
 
   <bb 60> :
 <L57>:
-  return D.8317;
+  ErrorString_Ptr[1] = "Scheduler_GetStatusQueue()";
+  goto <bb 72>; [INV]
+
+  <bb 61> :
+<L58>:
+  ErrorString_Ptr[1] = "Scheduler_FlushQueue()";
+  goto <bb 72>; [INV]
+
+  <bb 62> :
+<L59>:
+  ErrorString_Ptr[1] = "Scheduler_WriteQueue()";
+  goto <bb 72>; [INV]
+
+  <bb 63> :
+<L60>:
+  ErrorString_Ptr[1] = "Scheduler_ReadQueue()";
+  goto <bb 72>; [INV]
+
+  <bb 64> :
+<L61>:
+  ErrorString_Ptr[1] = "Scheduler_StartTask()";
+  goto <bb 72>; [INV]
+
+  <bb 65> :
+<L62>:
+  ErrorString_Ptr[1] = "Scheduler_StopTask()";
+  goto <bb 72>; [INV]
+
+  <bb 66> :
+<L63>:
+  ErrorString_Ptr[1] = "Scheduler_PeriodTask()";
+  goto <bb 72>; [INV]
+
+  <bb 67> :
+<L64>:
+  ErrorString_Ptr[1] = "Scheduler_StartTimer()";
+  goto <bb 72>; [INV]
+
+  <bb 68> :
+<L65>:
+  ErrorString_Ptr[1] = "Scheduler_StopTimer()";
+  goto <bb 72>; [INV]
+
+  <bb 69> :
+<L66>:
+  ErrorString_Ptr[1] = "Scheduler_GetTimer()";
+  goto <bb 72>; [INV]
+
+  <bb 70> :
+<L67>:
+  ErrorString_Ptr[1] = "Scheduler_ReloadTimer()";
+  goto <bb 72>; [INV]
+
+  <bb 71> :
+<L68>:
+
+  <bb 72> :
+  goto <bb 74>; [INV]
+
+  <bb 73> :
+<L70>:
+
+  <bb 74> :
+  D.8729 = ErrorString_Ptr[1];
+
+  <bb 75> :
+<L72>:
+  return D.8729;
 
 }
 
 
 Det_GetModuleName (uint16 ModuleId)
 {
-  char * D.8315;
+  char * D.8727;
 
   <bb 2> :
   _1 = (int) ModuleId;
-  switch (_1) <default: <L6> [INV], case 101: <L0> [INV], case 120: <L3> [INV], case 121: <L4> [INV], case 123: <L5> [INV], case 124: <L2> [INV], case 255: <L1> [INV]>
+  switch (_1) <default: <L7> [INV], case 101: <L0> [INV], case 120: <L3> [INV], case 121: <L4> [INV], case 123: <L5> [INV], case 124: <L2> [INV], case 255: <L1> [INV], case 300: <L6> [INV]>
 
   <bb 3> :
 <L0>:
   ErrorString_Ptr[0] = "Mcu module";
-  goto <bb 10>; [INV]
+  goto <bb 11>; [INV]
 
   <bb 4> :
 <L1>:
   ErrorString_Ptr[0] = "Platform module";
-  goto <bb 10>; [INV]
+  goto <bb 11>; [INV]
 
   <bb 5> :
 <L2>:
   ErrorString_Ptr[0] = "Port module";
-  goto <bb 10>; [INV]
+  goto <bb 11>; [INV]
 
   <bb 6> :
 <L3>:
   ErrorString_Ptr[0] = "Dio module";
-  goto <bb 10>; [INV]
+  goto <bb 11>; [INV]
 
   <bb 7> :
 <L4>:
   ErrorString_Ptr[0] = "Pwm module";
-  goto <bb 10>; [INV]
+  goto <bb 11>; [INV]
 
   <bb 8> :
 <L5>:
   ErrorString_Ptr[0] = "Adc module";
-  goto <bb 10>; [INV]
+  goto <bb 11>; [INV]
 
   <bb 9> :
 <L6>:
+  ErrorString_Ptr[0] = "Scheduler module";
+  goto <bb 11>; [INV]
 
   <bb 10> :
-  D.8315 = ErrorString_Ptr[0];
+<L7>:
 
   <bb 11> :
-<L8>:
-  return D.8315;
+  D.8727 = ErrorString_Ptr[0];
+
+  <bb 12> :
+<L9>:
+  return D.8727;
 
 }
 
