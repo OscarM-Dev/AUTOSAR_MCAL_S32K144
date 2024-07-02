@@ -4,7 +4,7 @@
  * 
  * @note The register of tasks and timers is done in the initialization of the buffers
  * @note The periodicity and timeout value must be >= tick and a multiple of tick.
- * @note The timer, task o queue ID is the element of the buffer where it was registered + 1.
+ * @note The timer, task or queue ID is the element of the buffer where it was registered.
  * @note In order to register new timers or tasks is neccesary to do it manually.
  * @note Remember that all the timers and tasks registered must be different, different callback functions!!.
  * 
@@ -18,7 +18,7 @@ extern QueueMessage Queue1[ SCHEDULER_QUEUE1_ELEMENTS ];
 
 //Constant control structure global instances.
 //Queue buffer.
-const Queue_ConfigType Queue_Config[ SCHEDULER_QUEUES ] = 
+const Queue_ConfigType Queue_Config[ SCHEDULER_MAX_QUEUES ] = 
 {
     {
         .Size = SCHEDULER_QUEUE1_SIZE,
@@ -28,7 +28,7 @@ const Queue_ConfigType Queue_Config[ SCHEDULER_QUEUES ] =
 };
 
 //Task buffer.
-const Task_ConfigType Task_Config[ SCHEDULER_TASKS ]  = {
+const Task_ConfigType Task_Config[ SCHEDULER_MAX_TASKS ]  = {
     {
         .InitPeriod = SCHEDULER_TASK1_PERIOD_50MS,
         .InitFlag = TRUE,
@@ -42,7 +42,7 @@ const Task_ConfigType Task_Config[ SCHEDULER_TASKS ]  = {
 };
 
 //Timer buffer.
-const Timer_ConfigType Timer_Config[ SCHEDULER_TIMERS ] = {
+const Timer_ConfigType Timer_Config[ SCHEDULER_MAX_TIMERS ] = {
     {
         .InitTimeout = SCHEDULER_TIMER1_TIMEOUT_100MS,
         .InitFlag = FALSE,
@@ -53,11 +53,11 @@ const Timer_ConfigType Timer_Config[ SCHEDULER_TIMERS ] = {
 //Scheduler config structure instance.
 const Scheduler_ConfigType Scheduler_Config = {
     .Tick = SCHEDULER_TICK,
-    .Tasks = SCHEDULER_TASKS,
+    .Tasks = SCHEDULER_MAX_TASKS,
     .TaskPtr = Task_Config,
-    .Timers = SCHEDULER_TIMERS,
+    .Timers = SCHEDULER_MAX_TIMERS,
     .TimerPtr = Timer_Config,
-    .Queues = SCHEDULER_QUEUES,
+    .Queues = SCHEDULER_MAX_QUEUES,
     .QueuePtr = Queue_Config
 };
 

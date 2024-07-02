@@ -12,9 +12,9 @@
 /**
  * @brief This function copies and pastes size bytes of data from src to dest.
  * 
- * @param Dest Void pointer to destiny, destiny base memory address.
- * @param Src Void pointer to source, source base memory address.
- * @param Size Number of bytes to copy and paste.
+ * @param[in] Dest Void pointer to destiny, destiny base memory address.
+ * @param[in] Src Void pointer to source, source base memory address.
+ * @param[in] Size Number of bytes to copy and paste.
  */
 void MemCopy( void *Dest, void *Src, uint32 Size ) {
     //local data.
@@ -31,14 +31,14 @@ void MemCopy( void *Dest, void *Src, uint32 Size ) {
 /**
  * @brief This function initialices the queue buffer control members.
  * 
- * @param SchedulerPtr Ptr to control struct instance, it allows the init of the members.
+ * @param[in] SchedulerPtr Ptr to control struct instance, it allows the init of the members.
  */
 void Scheduler_InitQueue( Scheduler_CtrlType *SchedulerPtr ) {
     //local data.
     uint8 i = 0;
 
     //Initializing members.
-    for ( i = 0; i < SCHEDULER_QUEUES; i++ ) {
+    for ( i = 0; i < SCHEDULER_MAX_QUEUES; i++ ) {
         SchedulerPtr->QueueHeads[i] = 0;
         SchedulerPtr->QueueTails[i] = 0;
         Bfx_ClrBit_u32u8( &SchedulerPtr->QueueFulls, i );
@@ -49,8 +49,8 @@ void Scheduler_InitQueue( Scheduler_CtrlType *SchedulerPtr ) {
 /**
  * @brief This function indicates the value of the specified status flag of a given queue.
  * 
- * @param Queue Queue ID.
- * @param Status Status flag of interest.
+ * @param[in] Queue Queue ID.
+ * @param[in] Status Status flag of interest.
  * 
  * @return status Value of the queue flag of interest.
  * 
@@ -58,31 +58,35 @@ void Scheduler_InitQueue( Scheduler_CtrlType *SchedulerPtr ) {
  */
 uint8 Scheduler_GetStatusQueue( QueueType Queue, uint8 Status ) {
     //local data.
-    uint8 status = FALSE;
+    uint8 status = E_OK;
 
-    //Verifying if the ID is valid.
-    if ( ( Queue != 0 ) && ( Queue <= SchedulerConfig_Ptr->Queues ) ) { //Valid ID.      
+    #if ( SCHEDULER_DEV_ERROR_DETECT == STD_ON )
+        if ( SchedulerCtrl_Ptr->SchedulerInit  == FALSE ) { //Scheduler not initialized.
+            Det_ReportError( SCHEDULER_MODULE_ID, SCHEDULER_INSTANCE_ID, SCHEDULER_GETSTATUSQUEUE_ID, SCHEDULER_E_UNINIT );
+            status = E_NOT_OK;
+        }
+
+        if ( Queue > SchedulerConfig_Ptr->Queues - 1 ) {    //Invalid queue id.
+            Det_ReportError( SCHEDULER_MODULE_ID, SCHEDULER_INSTANCE_ID, SCHEDULER_GETSTATUSQUEUE_ID, SCHEDULER_E_QUEUE_ID );
+            status = E_NOT_OK;
+        } 
+    #endif
+    
+    if ( status == E_OK ) {
         switch ( Status ) { //Checking status flag of interest.
             case SCHEDULER_QUEUE_EMPTY_STATUS: 
-                status = Bfx_GetBit_u32u8_u8( SchedulerCtrl_Ptr->QueueEmpties, Queue - 1 ); 
+                status = Bfx_GetBit_u32u8_u8( SchedulerCtrl_Ptr->QueueEmpties, Queue ); 
             break;
             case SCHEDULER_QUEUE_FULL_STATUS:
-                status = Bfx_GetBit_u32u8_u8( SchedulerCtrl_Ptr->QueueFulls, Queue - 1 ); 
+                status = Bfx_GetBit_u32u8_u8( SchedulerCtrl_Ptr->QueueFulls, Queue ); 
             break;
             default:  //Invalid Status flag.
                     #if ( SCHEDULER_DEV_ERROR_DETECT == STD_ON )
                         Det_ReportError( SCHEDULER_MODULE_ID, SCHEDULER_INSTANCE_ID, SCHEDULER_GETSTATUSQUEUE_ID, SCHEDULER_E_QUEUE_STATUS );
                     #endif
-                    status = FALSE;
+                    status = E_NOT_OK;
             break;
         }
-    } 
-    
-    else {  //Invalid ID.
-        #if ( SCHEDULER_DEV_ERROR_DETECT == STD_ON )
-            Det_ReportError( SCHEDULER_MODULE_ID, SCHEDULER_INSTANCE_ID, SCHEDULER_GETSTATUSQUEUE_ID, SCHEDULER_E_QUEUE_ID );
-        #endif
-        status = FALSE; 
     }
 
     return status;
@@ -91,29 +95,33 @@ uint8 Scheduler_GetStatusQueue( QueueType Queue, uint8 Status ) {
 /**
  * @brief This function empties a given queue.
  * 
- * @param Queue Queue ID.
+ * @param[in] Queue Queue ID.
  * 
- * @return status Status of the operation, successfull 1 or not 0.
+ * @return status Status of the operation, successfull 0 or not 1.
  * 
  * @note The queue ID must be valid.
  */
 Std_ReturnType Scheduler_FlushQueue( QueueType Queue ) {
     //local data
-    Std_ReturnType status = FALSE;
+    Std_ReturnType status = E_OK;
 
-    //Verifying if the ID is valid.
-    if ( ( Queue != 0 ) && ( Queue <= SchedulerConfig_Ptr->Queues ) ) { //Valid ID.   
-        SchedulerCtrl_Ptr->QueueTails[ Queue - 1 ] = SchedulerCtrl_Ptr->QueueHeads[ Queue - 1 ];    //Emptying queue.
-        Bfx_ClrBit_u32u8( &SchedulerCtrl_Ptr->QueueFulls, Queue - 1 );
-        Bfx_SetBit_u32u8( &SchedulerCtrl_Ptr->QueueEmpties, Queue - 1 );
-        status = TRUE;
-    }
+    #if ( SCHEDULER_DEV_ERROR_DETECT == STD_ON )
+        if ( SchedulerCtrl_Ptr->SchedulerInit  == FALSE ) { //Scheduler not initialized.
+            Det_ReportError( SCHEDULER_MODULE_ID, SCHEDULER_INSTANCE_ID, SCHEDULER_GETSTATUSQUEUE_ID, SCHEDULER_E_UNINIT );
+            status = E_NOT_OK;
+        }
 
-    else {  //Invalid ID.
-        #if ( SCHEDULER_DEV_ERROR_DETECT == STD_ON )
-            Det_ReportError( SCHEDULER_MODULE_ID, SCHEDULER_INSTANCE_ID, SCHEDULER_FLUSHQUEUE_ID, SCHEDULER_E_QUEUE_ID );
-        #endif
-        status = FALSE; 
+        if ( Queue > SchedulerConfig_Ptr->Queues - 1 ) {    //Invalid queue id.
+            Det_ReportError( SCHEDULER_MODULE_ID, SCHEDULER_INSTANCE_ID, SCHEDULER_GETSTATUSQUEUE_ID, SCHEDULER_E_QUEUE_ID );
+            status = E_NOT_OK;
+        }
+    #endif
+
+    if ( status == E_OK ) {
+        SchedulerCtrl_Ptr->QueueTails[ Queue ] = SchedulerCtrl_Ptr->QueueHeads[ Queue ];    //Emptying queue.
+        Bfx_ClrBit_u32u8( &SchedulerCtrl_Ptr->QueueFulls, Queue );
+        Bfx_SetBit_u32u8( &SchedulerCtrl_Ptr->QueueEmpties, Queue );
+        status = E_OK;
     }
 
     return status;
@@ -122,7 +130,7 @@ Std_ReturnType Scheduler_FlushQueue( QueueType Queue ) {
 /**
  * @brief This function writes a single data to a given queue.
  *
- * This function writes a single data to the queue if there´s an avalaible space 
+ * This function writes a single data to the queue if there´s an available space 
  * if not it doesn´t modified the queue.
  * 
  * For achieving this it copies and pastes size bytes of info from data to the head element of the queue.
@@ -137,50 +145,54 @@ Std_ReturnType Scheduler_FlushQueue( QueueType Queue ) {
  * @param[in] Queue Queue ID.
  * @param[in] Data Void ptr to the data to be written, allows the access to the data.
  *
- * @retval status Status of the write operation, write operation was succesfull 1 or not 0.
+ * @retval status Status of the write operation, write operation was succesfull 0 or not 1.
  * 
  * @note The queue ID must be valid.
 */
 Std_ReturnType Scheduler_WriteQueue( QueueType Queue, void *Data ) {
     //Local data
-    Std_ReturnType status = FALSE;
+    Std_ReturnType status = E_OK;
 
-     //Verifying if the ID is valid.
-    if ( ( Queue != 0 ) && ( Queue <= SchedulerConfig_Ptr->Queues ) ) { //Valid ID.  
-        uint32 base_add = ( uint32 ) SchedulerConfig_Ptr->QueuePtr[ Queue - 1 ].Buffer; //queue element 0 memory address.
+    #if ( SCHEDULER_DEV_ERROR_DETECT == STD_ON )
+        if ( SchedulerCtrl_Ptr->SchedulerInit  == FALSE ) { //Scheduler not initialized.
+            Det_ReportError( SCHEDULER_MODULE_ID, SCHEDULER_INSTANCE_ID, SCHEDULER_GETSTATUSQUEUE_ID, SCHEDULER_E_UNINIT );
+            status = E_NOT_OK;
+        }
+
+        if ( Queue > SchedulerConfig_Ptr->Queues - 1 ) {    //Invalid queue id.
+            Det_ReportError( SCHEDULER_MODULE_ID, SCHEDULER_INSTANCE_ID, SCHEDULER_GETSTATUSQUEUE_ID, SCHEDULER_E_QUEUE_ID );
+            status = E_NOT_OK;
+        }
+    #endif
+
+    if ( status == E_OK ) {   
+        uint32 base_add = ( uint32 ) SchedulerConfig_Ptr->QueuePtr[ Queue ].Buffer; //queue element 0 memory address.
         uint32 actual_add = 0;  //memory address of the actual queue element.
 
         //Verifying if the queue is availabe to be written.
         if ( Scheduler_GetStatusQueue( Queue, SCHEDULER_QUEUE_FULL_STATUS ) == FALSE ) {    //Spaces available.
 
             //Writing to array, copying and pasting size bytes of info from data to queue.
-            actual_add = base_add + ( SchedulerCtrl_Ptr->QueueHeads[ Queue - 1 ] * SchedulerConfig_Ptr->QueuePtr[ Queue - 1 ].Size );
-            MemCopy( ( void* )actual_add, Data, SchedulerConfig_Ptr->QueuePtr[ Queue - 1 ].Size );
+            actual_add = base_add + ( SchedulerCtrl_Ptr->QueueHeads[ Queue ] * SchedulerConfig_Ptr->QueuePtr[ Queue ].Size );
+            MemCopy( ( void* )actual_add, Data, SchedulerConfig_Ptr->QueuePtr[ Queue ].Size );
 
-            SchedulerCtrl_Ptr->QueueHeads[ Queue - 1 ]++;  //next value to be written.
+            SchedulerCtrl_Ptr->QueueHeads[ Queue ]++;  //next value to be written.
 
-            if ( SchedulerCtrl_Ptr->QueueHeads[ Queue - 1 ] > SchedulerConfig_Ptr->QueuePtr[ Queue - 1 ].Elements - 1 ) {
-                SchedulerCtrl_Ptr->QueueHeads[ Queue - 1 ] = 0;    //Reseting write index.
+            if ( SchedulerCtrl_Ptr->QueueHeads[ Queue ] > SchedulerConfig_Ptr->QueuePtr[ Queue ].Elements - 1 ) {
+                SchedulerCtrl_Ptr->QueueHeads[ Queue ] = 0;    //Reseting write index.
             }
 
             if ( Scheduler_GetStatusQueue( Queue, SCHEDULER_QUEUE_EMPTY_STATUS ) == TRUE ) {
-                Bfx_ClrBit_u32u8( &SchedulerCtrl_Ptr->QueueEmpties, Queue - 1 );    //Once data is written the queue is no longer empty.
+                Bfx_ClrBit_u32u8( &SchedulerCtrl_Ptr->QueueEmpties, Queue );    //Once data is written the queue is no longer empty.
             }
 
             //Verifying if queue is full with the last data written.
-            if ( SchedulerCtrl_Ptr->QueueHeads[ Queue - 1 ] == SchedulerCtrl_Ptr->QueueTails[ Queue - 1 ] ) {
-                Bfx_SetBit_u32u8( &SchedulerCtrl_Ptr->QueueFulls, Queue - 1 );
+            if ( SchedulerCtrl_Ptr->QueueHeads[ Queue ] == SchedulerCtrl_Ptr->QueueTails[ Queue ] ) {
+                Bfx_SetBit_u32u8( &SchedulerCtrl_Ptr->QueueFulls, Queue );
             }
 
-            status = TRUE;  //Succesfull operation.
+            status = E_OK;  //Succesfull operation.
         }
-    }
-
-    else {  //Invalid ID.
-        #if ( SCHEDULER_DEV_ERROR_DETECT == STD_ON )
-            Det_ReportError( SCHEDULER_MODULE_ID, SCHEDULER_INSTANCE_ID, SCHEDULER_WRITEQUEUE_ID, SCHEDULER_E_QUEUE_ID );
-        #endif
-        status = FALSE; 
     }
 
     return status;
@@ -205,50 +217,54 @@ Std_ReturnType Scheduler_WriteQueue( QueueType Queue, void *Data ) {
  * @param[in] Queue Queue ID.
  * @param[in] Data Void ptr to the variable to put the read data from the queue, allows the read from the queue.
  *
- * @retval status Status of the read operation, read operation was succesfull 1 or not 0.
+ * @retval status Status of the read operation, read operation was succesfull 0 or not 1.
  * 
  * @note The queue ID must be valid.
 */
 Std_ReturnType Scheduler_ReadQueue( QueueType Queue, void *Data ) {
     //Local data
-    Std_ReturnType status = FALSE;
+    Std_ReturnType status = E_OK;
 
-     //Verifying if the ID is valid.
-    if ( ( Queue != 0 ) && ( Queue <= SchedulerConfig_Ptr->Queues ) ) { //Valid ID.
-        uint32 base_add = ( uint32 ) SchedulerConfig_Ptr->QueuePtr[ Queue - 1 ].Buffer; //queue element 0 memory address.
+    #if ( SCHEDULER_DEV_ERROR_DETECT == STD_ON )
+        if ( SchedulerCtrl_Ptr->SchedulerInit  == FALSE ) { //Scheduler not initialized.
+            Det_ReportError( SCHEDULER_MODULE_ID, SCHEDULER_INSTANCE_ID, SCHEDULER_GETSTATUSQUEUE_ID, SCHEDULER_E_UNINIT );
+            status = E_NOT_OK;
+        }
+
+        if ( Queue > SchedulerConfig_Ptr->Queues - 1 ) {    //Invalid queue id.
+            Det_ReportError( SCHEDULER_MODULE_ID, SCHEDULER_INSTANCE_ID, SCHEDULER_GETSTATUSQUEUE_ID, SCHEDULER_E_QUEUE_ID );
+            status = E_NOT_OK;
+        }
+    #endif
+
+    if ( status == E_OK ) {
+        uint32 base_add = ( uint32 ) SchedulerConfig_Ptr->QueuePtr[ Queue ].Buffer; //queue element 0 memory address.
         uint32 actual_add = 0;  //memory address of the actual queue element.     
         
         //Verifying if the queue has data available to be read.
         if ( Scheduler_GetStatusQueue( Queue, SCHEDULER_QUEUE_EMPTY_STATUS ) == FALSE ) { 
         
             //Reading from array, copying and pasting size bytes of info from queue to data.
-            actual_add = base_add + ( SchedulerCtrl_Ptr->QueueTails[ Queue - 1 ] * SchedulerConfig_Ptr->QueuePtr[ Queue - 1 ].Size );
-            MemCopy( Data, ( void* )actual_add, SchedulerConfig_Ptr->QueuePtr[ Queue - 1 ].Size );            
+            actual_add = base_add + ( SchedulerCtrl_Ptr->QueueTails[ Queue ] * SchedulerConfig_Ptr->QueuePtr[ Queue ].Size );
+            MemCopy( Data, ( void* )actual_add, SchedulerConfig_Ptr->QueuePtr[ Queue ].Size );            
         
-            SchedulerCtrl_Ptr->QueueTails[ Queue - 1 ]++;  //next value to be read.
+            SchedulerCtrl_Ptr->QueueTails[ Queue ]++;  //next value to be read.
 
-            if ( SchedulerCtrl_Ptr->QueueTails[ Queue - 1 ] > SchedulerConfig_Ptr->QueuePtr[ Queue - 1 ].Elements - 1 )  {
-                SchedulerCtrl_Ptr->QueueTails[ Queue - 1 ] = 0; //Reseting read index.
+            if ( SchedulerCtrl_Ptr->QueueTails[ Queue ] > SchedulerConfig_Ptr->QueuePtr[ Queue ].Elements - 1 ) {
+                SchedulerCtrl_Ptr->QueueTails[ Queue ] = 0; //Reseting read index.
             }
 
             if ( Scheduler_GetStatusQueue( Queue, SCHEDULER_QUEUE_FULL_STATUS ) == TRUE ) {
-                Bfx_ClrBit_u32u8( &SchedulerCtrl_Ptr->QueueFulls, Queue - 1 );  //Once data is read the queue is no longer full.
+                Bfx_ClrBit_u32u8( &SchedulerCtrl_Ptr->QueueFulls, Queue );  //Once data is read the queue is no longer full.
             }
 
             //Verifying if the queue is empty with the last data read.
-            if ( SchedulerCtrl_Ptr->QueueTails[ Queue - 1 ] == SchedulerCtrl_Ptr->QueueHeads[ Queue - 1 ] ) {
-                Bfx_SetBit_u32u8( &SchedulerCtrl_Ptr->QueueEmpties, Queue - 1 );
+            if ( SchedulerCtrl_Ptr->QueueTails[ Queue ] == SchedulerCtrl_Ptr->QueueHeads[ Queue ] ) {
+                Bfx_SetBit_u32u8( &SchedulerCtrl_Ptr->QueueEmpties, Queue );
             }
             
-            status = TRUE; //Succesfull operation.            
+            status = E_OK; //Succesfull operation.            
         }
-    }
-
-    else {  //Invalid ID.
-        #if ( SCHEDULER_DEV_ERROR_DETECT == STD_ON )
-            Det_ReportError( SCHEDULER_MODULE_ID, SCHEDULER_INSTANCE_ID, SCHEDULER_READQUEUE_ID, SCHEDULER_E_QUEUE_ID );
-        #endif
-        status = FALSE; 
     }
 
     return status;  
@@ -261,7 +277,7 @@ Std_ReturnType Scheduler_ReadQueue( QueueType Queue, void *Data ) {
  * 
  * @param[in] SchedulerPtr Ptr to control struct instance, it allows the init of the members.
  *
- * @retval status Status of the operation, successfull 1 or not 0.
+ * @retval status Status of the operation, successfull 0 or not 1.
  *
  * @note The timeout and periodicity values are the initial values registered in the buffers.
  * @note The elapsed and count values are initialized to 0 and timeout values respectively.
@@ -269,33 +285,34 @@ Std_ReturnType Scheduler_ReadQueue( QueueType Queue, void *Data ) {
  */
 Std_ReturnType Scheduler_Init( Scheduler_CtrlType *SchedulerPtr ) {
     //local data 
-    Std_ReturnType status = TRUE;
+    Std_ReturnType status = E_OK;
     uint8 i = 0;
 
     //Verifying config pointer.
     #if ( SCHEDULER_DEV_ERROR_DETECT == STD_ON )
         if ( SchedulerPtr == NULL_PTR ) { //Invalid pointer
             Det_ReportError( SCHEDULER_MODULE_ID, SCHEDULER_INSTANCE_ID, SCHEDULER_INIT_ID, SCHEDULER_E_PARAM_CONFIG );
-            status = FALSE;
+            status = E_NOT_OK;
         }
     #endif
 
-    if ( status == TRUE ) {
+    if ( status == E_OK ) {
         //Initializing tasks related parameters.
-        for ( i = 0; i < SCHEDULER_TASKS; i++ ) {
+        for ( i = 0; i < SCHEDULER_MAX_TASKS; i++ ) {
             SchedulerPtr->TaskPeriod[i] = SchedulerConfig_Ptr->TaskPtr[i].InitPeriod;   //Registering initial periodicity value of each task.
             SchedulerPtr->TaskElapsed[i] = 0;   //Initializing time follow up of each task.
             Bfx_PutBit_u32u8u8( &SchedulerPtr->TaskFlags, i, SchedulerConfig_Ptr->TaskPtr[i].InitFlag  );   //Registering initial flag of each task. 
         }
 
         //Initializing timers related parameters.
-        for ( i = 0; i < SCHEDULER_TIMERS; i++ ) {
+        for ( i = 0; i < SCHEDULER_MAX_TIMERS; i++ ) {
             SchedulerPtr->TimerTimeout[i] = SchedulerConfig_Ptr->TimerPtr[i].InitTimeout;   //Registering initial timeout value of each timer.
             SchedulerPtr->TimerCount[i] = SchedulerConfig_Ptr->TimerPtr[i].InitTimeout; //Initializing timer count of each timer.
             Bfx_PutBit_u32u8u8( &SchedulerPtr->TimerFlags, i, SchedulerConfig_Ptr->TimerPtr[i].InitFlag  );   //Registering initial flag of each timer.
         } 
 
-        Scheduler_InitQueue( SchedulerPtr ); //Initializing queues related parameters.   
+        Scheduler_InitQueue( SchedulerPtr ); //Initializing queues related parameters.
+        SchedulerPtr->SchedulerInit = TRUE;   
     }
 
     return status;
@@ -308,25 +325,29 @@ Std_ReturnType Scheduler_Init( Scheduler_CtrlType *SchedulerPtr ) {
  *
  * @param[in] Task Task ID of the task to be stopped.
  *
- * @retval status Status of the operation, successfull 1 or not 0. 
+ * @retval status Status of the operation, successfull 0 or not 1. 
  *
  * @note The task ID must be valid.
  */
 Std_ReturnType Scheduler_StopTask( TaskType Task ) {
     //local data
-    Std_ReturnType status = FALSE; 
+    Std_ReturnType status = E_OK; 
 
-    //Verifying if the task ID is valid.
-    if ( ( Task != 0 ) && ( Task <= SchedulerConfig_Ptr->Tasks ) ) {    //valid ID
-        Bfx_ClrBit_u32u8( &SchedulerCtrl_Ptr->TaskFlags, Task - 1 );
-        status = TRUE;
-    }
+    #if ( SCHEDULER_DEV_ERROR_DETECT == STD_ON )
+        if ( SchedulerCtrl_Ptr->SchedulerInit  == FALSE ) { //Scheduler not initialized.
+            Det_ReportError( SCHEDULER_MODULE_ID, SCHEDULER_INSTANCE_ID, SCHEDULER_GETSTATUSQUEUE_ID, SCHEDULER_E_UNINIT );
+            status = E_NOT_OK;
+        }
 
-    else {
-        #if ( SCHEDULER_DEV_ERROR_DETECT == STD_ON )
-            Det_ReportError( SCHEDULER_MODULE_ID, SCHEDULER_INSTANCE_ID, SCHEDULER_STOPTASK_ID, SCHEDULER_E_TASK_ID );
-        #endif
-        status = FALSE; //invalid ID.
+        if ( Task > SchedulerConfig_Ptr->Tasks - 1 ) {    //Invalid task id.
+            Det_ReportError( SCHEDULER_MODULE_ID, SCHEDULER_INSTANCE_ID, SCHEDULER_GETSTATUSQUEUE_ID, SCHEDULER_E_TASK_ID );
+            status = E_NOT_OK;
+        }
+    #endif  
+
+    if ( status == E_OK ) {
+        Bfx_ClrBit_u32u8( &SchedulerCtrl_Ptr->TaskFlags, Task );
+        status = E_OK;
     }
 
     return status;
@@ -339,25 +360,29 @@ Std_ReturnType Scheduler_StopTask( TaskType Task ) {
  *
  * @param[in] Task Task ID of the task to be started.
  *
- * @retval status Status of the operation, successfull 1 or not 0. 
+ * @retval status Status of the operation, successfull 0 or not 1. 
  *
  * @note The task ID must be valid.
  */
 Std_ReturnType Scheduler_StartTask( TaskType Task ) {
     //local data
-    Std_ReturnType status = FALSE;
+    Std_ReturnType status = E_OK;
+    
+    #if ( SCHEDULER_DEV_ERROR_DETECT == STD_ON )
+        if ( SchedulerCtrl_Ptr->SchedulerInit  == FALSE ) { //Scheduler not initialized.
+            Det_ReportError( SCHEDULER_MODULE_ID, SCHEDULER_INSTANCE_ID, SCHEDULER_GETSTATUSQUEUE_ID, SCHEDULER_E_UNINIT );
+            status = E_NOT_OK;
+        }
 
-    //Verifying if the task ID is valid.
-    if ( ( Task != 0 ) && ( Task <= SchedulerConfig_Ptr->Tasks ) ) {    //valid ID
-        Bfx_SetBit_u32u8( &SchedulerCtrl_Ptr->TaskFlags, Task - 1 );
-        status = TRUE;
-    }
-
-    else {
-        #if ( SCHEDULER_DEV_ERROR_DETECT == STD_ON )
-            Det_ReportError( SCHEDULER_MODULE_ID, SCHEDULER_INSTANCE_ID, SCHEDULER_STARTTASK_ID, SCHEDULER_E_TASK_ID );
-        #endif
-        status = FALSE; //invalid ID.
+        if ( Task > SchedulerConfig_Ptr->Tasks - 1 ) {    //Invalid task id.
+            Det_ReportError( SCHEDULER_MODULE_ID, SCHEDULER_INSTANCE_ID, SCHEDULER_GETSTATUSQUEUE_ID, SCHEDULER_E_TASK_ID );
+            status = E_NOT_OK;
+        }
+    #endif  
+    
+    if ( status == E_OK ) {
+        Bfx_SetBit_u32u8( &SchedulerCtrl_Ptr->TaskFlags, Task );
+        status = E_OK;
     }
     
     return status;
@@ -371,39 +396,37 @@ Std_ReturnType Scheduler_StartTask( TaskType Task ) {
  * @param[in] Task Task ID of the task to be modified.
  * @param[in] NewPeriod Periodicity value to be set.
  *
- * @retval status Status of the operation, successfull 1 or not 0. 
+ * @retval status Status of the operation, successfull 0 or not 1. 
  *
  * @note The periodicity value must be >= tick and a multiple of tick.
  */
 Std_ReturnType Scheduler_PeriodTask( TaskType Task, uint32 NewPeriod ){
     //local data.
-    Std_ReturnType status = FALSE;
+    Std_ReturnType status = E_OK;
 
-    //Verifying if the task ID is valid.
-    if ( ( Task != 0 ) && ( Task <= SchedulerConfig_Ptr->Tasks ) ) {    //valid ID
-        //Verifying if periodicity value is valid according to tick value. Period >= tick, period must be multiple of tick.
-        if ( ( NewPeriod >= SchedulerConfig_Ptr->Tick ) && ( NewPeriod % SchedulerConfig_Ptr->Tick == 0 ) ) {   //valid periodicity.
-            SchedulerCtrl_Ptr->TaskPeriod[ Task - 1 ] = NewPeriod;
-            status = TRUE;
+    #if ( SCHEDULER_DEV_ERROR_DETECT == STD_ON )
+        if ( SchedulerCtrl_Ptr->SchedulerInit  == FALSE ) { //Scheduler not initialized.
+            Det_ReportError( SCHEDULER_MODULE_ID, SCHEDULER_INSTANCE_ID, SCHEDULER_GETSTATUSQUEUE_ID, SCHEDULER_E_UNINIT );
+            status = E_NOT_OK;
         }
 
-        else {
-            #if ( SCHEDULER_DEV_ERROR_DETECT == STD_ON )
-                Det_ReportError( SCHEDULER_MODULE_ID, SCHEDULER_INSTANCE_ID, SCHEDULER_PERIODTASK_ID, SCHEDULER_E_PERIODICITY );
-            #endif
-            status = FALSE; //invalid periodicity.
+        if ( Task > SchedulerConfig_Ptr->Tasks - 1 ) {    //Invalid task id.
+            Det_ReportError( SCHEDULER_MODULE_ID, SCHEDULER_INSTANCE_ID, SCHEDULER_GETSTATUSQUEUE_ID, SCHEDULER_E_TASK_ID );
+            status = E_NOT_OK;
         }
-    }
 
-    else {
-        #if ( SCHEDULER_DEV_ERROR_DETECT == STD_ON )
-            Det_ReportError( SCHEDULER_MODULE_ID, SCHEDULER_INSTANCE_ID, SCHEDULER_PERIODTASK_ID, SCHEDULER_E_TASK_ID );
-        #endif
-        status = FALSE; //invalid ID.
+        if ( ( NewPeriod < SchedulerConfig_Ptr->Tick ) || ( NewPeriod % SchedulerConfig_Ptr->Tick != 0 ) ) {    //Invalid periodicity
+            Det_ReportError( SCHEDULER_MODULE_ID, SCHEDULER_INSTANCE_ID, SCHEDULER_PERIODTASK_ID, SCHEDULER_E_PERIODICITY );
+            status = E_NOT_OK;
+        }
+    #endif  
+
+    if ( status == E_OK ) {
+        SchedulerCtrl_Ptr->TaskPeriod[ Task ] = NewPeriod;
+        status = E_OK;
     }
 
     return status;
-
 }
 
 /**
@@ -414,31 +437,35 @@ Std_ReturnType Scheduler_PeriodTask( TaskType Task, uint32 NewPeriod ){
  *
  * @param[in] Timer Timer ID of the timer to be started.
  *
- * @retval status Status of the operation, successfull 1 or not 0. 
+ * @retval status Status of the operation, successfull 0 or not 1. 
  *
  * @note The timer ID must be valid.
  */
 Std_ReturnType Scheduler_StartTimer( TimerType Timer ) {
     //local data
-    Std_ReturnType status = FALSE;
+    Std_ReturnType status = E_OK;
 
-    //Verifying if the timer ID is valid.
-    if ( ( Timer != 0 ) && ( Timer <= SchedulerConfig_Ptr->Timers ) ) { //valid ID
-        Bfx_SetBit_u32u8( &SchedulerCtrl_Ptr->TimerFlags , Timer - 1 ); 
-
-        //Verifying if timer has reach 0.
-        if ( SchedulerCtrl_Ptr->TimerCount[ Timer - 1 ] == 0 ) {
-             SchedulerCtrl_Ptr->TimerCount[ Timer - 1 ] = SchedulerCtrl_Ptr->TimerTimeout[ Timer - 1 ]; //restarting timer.
+    #if ( SCHEDULER_DEV_ERROR_DETECT == STD_ON )
+        if ( SchedulerCtrl_Ptr->SchedulerInit  == FALSE ) { //Scheduler not initialized.
+            Det_ReportError( SCHEDULER_MODULE_ID, SCHEDULER_INSTANCE_ID, SCHEDULER_GETSTATUSQUEUE_ID, SCHEDULER_E_UNINIT );
+            status = E_NOT_OK;
         }
 
-        status = TRUE;
-    }
+        if ( Timer > SchedulerConfig_Ptr->Timers - 1 ) {    //Invalid timer id.
+            Det_ReportError( SCHEDULER_MODULE_ID, SCHEDULER_INSTANCE_ID, SCHEDULER_GETSTATUSQUEUE_ID, SCHEDULER_E_TIMER_ID );
+            status = E_NOT_OK;
+        }
+    #endif
 
-    else {
-        #if ( SCHEDULER_DEV_ERROR_DETECT == STD_ON )
-            Det_ReportError( SCHEDULER_MODULE_ID, SCHEDULER_INSTANCE_ID, SCHEDULER_STARTTIMER_ID, SCHEDULER_E_TIMER_ID );
-        #endif
-        status = FALSE; //invalid ID.
+    if ( status == E_OK ) {
+        Bfx_SetBit_u32u8( &SchedulerCtrl_Ptr->TimerFlags , Timer ); 
+
+        //Verifying if timer has reach 0.
+        if ( SchedulerCtrl_Ptr->TimerCount[ Timer ] == 0 ) {
+             SchedulerCtrl_Ptr->TimerCount[ Timer ] = SchedulerCtrl_Ptr->TimerTimeout[ Timer ]; //restarting timer.
+        }
+
+        status = E_OK;
     }
 
     return status;
@@ -451,25 +478,29 @@ Std_ReturnType Scheduler_StartTimer( TimerType Timer ) {
  *
  * @param[in] Timer Timer ID of the timer to be stopped.
  *
- * @retval status Status of the operation, successfull 1 or not 0. 
+ * @retval status Status of the operation, successfull 0 or not 1. 
  *
  * @note The timer ID must be valid.
  */
 Std_ReturnType Scheduler_StopTimer( TimerType Timer ) {
     //local data
-    Std_ReturnType status = FALSE; 
+    Std_ReturnType status = E_OK; 
 
-    //Verifying if the timer ID is valid.
-    if ( ( Timer != 0 ) && ( Timer <= SchedulerConfig_Ptr->Timers ) ) {//valid ID
-        Bfx_ClrBit_u32u8( &SchedulerCtrl_Ptr->TimerFlags , Timer - 1 );
-        status = TRUE;
-    }
+    #if ( SCHEDULER_DEV_ERROR_DETECT == STD_ON )
+        if ( SchedulerCtrl_Ptr->SchedulerInit  == FALSE ) { //Scheduler not initialized.
+            Det_ReportError( SCHEDULER_MODULE_ID, SCHEDULER_INSTANCE_ID, SCHEDULER_GETSTATUSQUEUE_ID, SCHEDULER_E_UNINIT );
+            status = E_NOT_OK;
+        }
 
-    else {
-        #if ( SCHEDULER_DEV_ERROR_DETECT == STD_ON )
-            Det_ReportError( SCHEDULER_MODULE_ID, SCHEDULER_INSTANCE_ID, SCHEDULER_STOPTIMER_ID, SCHEDULER_E_TIMER_ID );
-        #endif
-        status = FALSE;//invalid ID.
+        if ( Timer > SchedulerConfig_Ptr->Timers - 1 ) {    //Invalid timer id.
+            Det_ReportError( SCHEDULER_MODULE_ID, SCHEDULER_INSTANCE_ID, SCHEDULER_GETSTATUSQUEUE_ID, SCHEDULER_E_TIMER_ID );
+            status = E_NOT_OK;
+        }
+    #endif
+
+    if ( status == E_OK ) {//valid ID
+        Bfx_ClrBit_u32u8( &SchedulerCtrl_Ptr->TimerFlags , Timer );
+        status = E_OK;
     }
 
     return status;
@@ -482,24 +513,31 @@ Std_ReturnType Scheduler_StopTimer( TimerType Timer ) {
  *
  * @param[in] Timer Timer ID of the timer to obtain count value.
  *
- * @retval counter_value Actual count value of timer, if operation was a success counter_value = n, otherwise 0. 
+ * @retval counter_value Actual count value of timer, if operation was a success counter_value = n, otherwise 1. 
  *
  * @note The timer ID must be valid.
  */
 uint32 Scheduler_GetTimer( TimerType Timer ) {
     //local data
     uint32 counter_value = 0;
+    uint8 status = E_OK;
 
-    //Verifying if the timer ID is valid.
-    if ( ( Timer != 0 ) && ( Timer <= SchedulerConfig_Ptr->Timers ) ) { //valid ID
-        counter_value = SchedulerCtrl_Ptr->TimerCount[ Timer - 1 ];
-    }
+    #if ( SCHEDULER_DEV_ERROR_DETECT == STD_ON )
+        if ( SchedulerCtrl_Ptr->SchedulerInit  == FALSE ) { //Scheduler not initialized.
+            Det_ReportError( SCHEDULER_MODULE_ID, SCHEDULER_INSTANCE_ID, SCHEDULER_GETSTATUSQUEUE_ID, SCHEDULER_E_UNINIT );
+            status = E_NOT_OK;
+            counter_value = E_NOT_OK;
+        }
 
-    else {
-        #if ( SCHEDULER_DEV_ERROR_DETECT == STD_ON )
-            Det_ReportError( SCHEDULER_MODULE_ID, SCHEDULER_INSTANCE_ID, SCHEDULER_GETTIMER_ID, SCHEDULER_E_TIMER_ID );
-        #endif
-        counter_value = FALSE;  //invalid ID.
+        if ( Timer > SchedulerConfig_Ptr->Timers - 1 ) {    //Invalid timer id.
+            Det_ReportError( SCHEDULER_MODULE_ID, SCHEDULER_INSTANCE_ID, SCHEDULER_GETSTATUSQUEUE_ID, SCHEDULER_E_TIMER_ID );
+            status = E_NOT_OK;
+            counter_value = E_NOT_OK;
+        }
+    #endif
+
+    if ( status == E_OK ) {
+        counter_value = SchedulerCtrl_Ptr->TimerCount[ Timer ];
     }
 
     return counter_value;
@@ -516,39 +554,38 @@ uint32 Scheduler_GetTimer( TimerType Timer ) {
  * @param[in] Timer Timer ID of the timer to be modified.
  * @param[in] NewTimeout Timeout value to be set.
  *
- * @retval status Status of the operation, successfull 1 or not 0. 
+ * @retval status Status of the operation, successfull 0 or not 1. 
  *
  * @note The timeout value must be >= tick and a multiple of tick.
  * @note The timer ID must be valid.
  */
 Std_ReturnType Scheduler_ReloadTimer( TimerType Timer, uint32 NewTimeout ) {
     //local data
-    Std_ReturnType status = FALSE;
+    Std_ReturnType status = E_OK;
 
-    //Verifying if the timer ID is valid.
-    if ( ( Timer != 0 ) && ( Timer <= SchedulerConfig_Ptr->Timers ) ) { //valid ID
-        //Verifying if timeout value is valid according to tick value. timeout >= tick, timeout must be multiple of tick.
-        if ( ( NewTimeout >= SchedulerConfig_Ptr->Tick ) && ( NewTimeout % SchedulerConfig_Ptr->Tick == 0 ) ) { //valid timeout.
-            SchedulerCtrl_Ptr->TimerTimeout[ Timer - 1 ] = NewTimeout;
-            SchedulerCtrl_Ptr->TimerCount[ Timer - 1 ]  = NewTimeout; //reseting timer to new reference value.
-            Scheduler_StartTimer( Timer );
-            status = TRUE;
+    #if ( SCHEDULER_DEV_ERROR_DETECT == STD_ON )
+        if ( SchedulerCtrl_Ptr->SchedulerInit  == FALSE ) { //Scheduler not initialized.
+            Det_ReportError( SCHEDULER_MODULE_ID, SCHEDULER_INSTANCE_ID, SCHEDULER_GETSTATUSQUEUE_ID, SCHEDULER_E_UNINIT );
+            status = E_NOT_OK;
         }
 
-        else {
-            #if ( SCHEDULER_DEV_ERROR_DETECT == STD_ON )
-                Det_ReportError( SCHEDULER_MODULE_ID, SCHEDULER_INSTANCE_ID, SCHEDULER_RELOADTIMER_ID, SCHEDULER_E_PERIODICITY );
-            #endif
-            status = FALSE; //Invalid timeout.
+        if ( Timer > SchedulerConfig_Ptr->Timers - 1 ) {    //Invalid timer id.
+            Det_ReportError( SCHEDULER_MODULE_ID, SCHEDULER_INSTANCE_ID, SCHEDULER_GETSTATUSQUEUE_ID, SCHEDULER_E_TIMER_ID );
+            status = E_NOT_OK;
         }
+
+        if ( ( NewTimeout < SchedulerConfig_Ptr->Tick ) || ( NewTimeout % SchedulerConfig_Ptr->Tick != 0 ) ) {    //Invalid periodicity
+            Det_ReportError( SCHEDULER_MODULE_ID, SCHEDULER_INSTANCE_ID, SCHEDULER_PERIODTASK_ID, SCHEDULER_E_PERIODICITY );
+            status = E_NOT_OK;
+        }
+    #endif
+
+    if ( status == E_OK ) { 
+        SchedulerCtrl_Ptr->TimerTimeout[ Timer ] = NewTimeout;
+        SchedulerCtrl_Ptr->TimerCount[ Timer ]  = NewTimeout; //reseting timer to new reference value.
+        Scheduler_StartTimer( Timer );
+        status = E_OK;
      }
-
-    else {
-        #if ( SCHEDULER_DEV_ERROR_DETECT == STD_ON )
-            Det_ReportError( SCHEDULER_MODULE_ID, SCHEDULER_INSTANCE_ID, SCHEDULER_RELOADTIMER_ID, SCHEDULER_E_TIMER_ID );
-        #endif
-        status = FALSE; //invalid ID.
-    }
 
     return status;
 }
@@ -570,42 +607,52 @@ void Scheduler_MainFunction( void ) {
     uint32 count_value = OsIf_GetCounter( OSIF_COUNTER_SYSTEM );    //First counter value capture.
     uint32 elapsed_time = 0;    //Time follow up for tick (timer increments).
     uint8 i = 0;
+    uint8 status = E_OK;
 
-    while( 1 ) {    //tasks are executed during timeout.
-        //Time follow up update for tick.
-        elapsed_time += OsIf_GetElapsed( &count_value, OSIF_COUNTER_SYSTEM );   //time capture update
+    #if ( SCHEDULER_DEV_ERROR_DETECT == STD_ON )
+        if ( SchedulerCtrl_Ptr->SchedulerInit  == FALSE ) { //Scheduler not initialized.
+            Det_ReportError( SCHEDULER_MODULE_ID, SCHEDULER_INSTANCE_ID, SCHEDULER_GETSTATUSQUEUE_ID, SCHEDULER_E_UNINIT );
+            status = E_NOT_OK;
+        }
+    #endif
+      
+    if ( status == E_OK ) {
+        while( 1 ) {    //tasks are executed during timeout.
+            //Time follow up update for tick.
+            elapsed_time += OsIf_GetElapsed( &count_value, OSIF_COUNTER_SYSTEM );   //time capture update
         
-        //Verifying if a scheduler´s tick has occurred.
-        if ( elapsed_time >= tick_value ) {          
+            //Verifying if a scheduler´s tick has occurred.
+            if ( elapsed_time >= tick_value ) {          
             
-            //Executing timers
-            for ( i = 0; i < SchedulerConfig_Ptr->Timers; i++ ) {
-                //Verifying execution of timer i
-                if ( Bfx_GetBit_u32u8_u8( SchedulerCtrl_Ptr->TimerFlags, i ) == TRUE ) {    //timer activated
-                    SchedulerCtrl_Ptr->TimerCount[i] -= SchedulerConfig_Ptr->Tick;    //decrement
+                //Executing timers
+                for ( i = 0; i < SchedulerConfig_Ptr->Timers; i++ ) {
+                    //Verifying execution of timer i
+                    if ( Bfx_GetBit_u32u8_u8( SchedulerCtrl_Ptr->TimerFlags, i ) == TRUE ) {    //timer activated
+                        SchedulerCtrl_Ptr->TimerCount[i] -= SchedulerConfig_Ptr->Tick;    //decrement
                     
-                    //Verifying execution of callback i
-                    if ( Scheduler_GetTimer( i + 1 ) == 0 ) {   //timeout achieved.
-                        SchedulerConfig_Ptr->TimerPtr[i].CallbackFunc();
+                        //Verifying execution of callback i
+                        if ( Scheduler_GetTimer( i ) == 0 ) {   //timeout achieved.
+                            SchedulerConfig_Ptr->TimerPtr[i].CallbackFunc();
+                        }
                     }
                 }
-            }
 
-            //Executing tasks.
-            for ( i = 0; i < SchedulerConfig_Ptr->Tasks; i++ ) {
-                //Verifying execution of task i
-                if ( Bfx_GetBit_u32u8_u8( SchedulerCtrl_Ptr->TaskFlags, i ) == TRUE ) {
-                    SchedulerCtrl_Ptr->TaskElapsed[i] += SchedulerConfig_Ptr->Tick;   //Time follow-up update for task i.
+                //Executing tasks.
+                for ( i = 0; i < SchedulerConfig_Ptr->Tasks; i++ ) {
+                    //Verifying execution of task i
+                    if ( Bfx_GetBit_u32u8_u8( SchedulerCtrl_Ptr->TaskFlags, i ) == TRUE ) {
+                        SchedulerCtrl_Ptr->TaskElapsed[i] += SchedulerConfig_Ptr->Tick;   //Time follow-up update for task i.
                 
-                    //Verifying the execution of callback i.
-                    if ( SchedulerCtrl_Ptr->TaskElapsed[i] >= SchedulerCtrl_Ptr->TaskPeriod[i] ) {  //periodicity achieved.
-                        SchedulerConfig_Ptr->TaskPtr[i].TaskFunc();
-                        SchedulerCtrl_Ptr->TaskElapsed[i] = 0;  //Time follow-up reset for task i.
+                        //Verifying the execution of callback i.
+                        if ( SchedulerCtrl_Ptr->TaskElapsed[i] >= SchedulerCtrl_Ptr->TaskPeriod[i] ) {  //periodicity achieved.
+                            SchedulerConfig_Ptr->TaskPtr[i].TaskFunc();
+                            SchedulerCtrl_Ptr->TaskElapsed[i] = 0;  //Time follow-up reset for task i.
+                        }
                     }
                 }
-            }
 
-            elapsed_time = 0;   //Reset time follow up for tick.
+                elapsed_time = 0;   //Reset time follow up for tick.
+            }
         }
     }
 }

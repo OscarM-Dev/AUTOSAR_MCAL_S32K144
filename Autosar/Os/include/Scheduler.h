@@ -51,15 +51,17 @@
 //Error Ids.
 #define SCHEDULER_E_PARAM_CONFIG 0x00 ///< "invalid config pointer" -->Scheduler_Init.
 
-#define SCHEDULER_E_QUEUE_ID 0x01 ///< "Invalid queue id" -->GetStatusQueue, Flushqueue, WriteQueue, ReadQueue.
+#define SCHEDULER_E_QUEUE_ID 0x01 ///< "Queue id out of range" -->GetStatusQueue, Flushqueue, WriteQueue, ReadQueue.
 
 #define SCHEDULER_E_QUEUE_STATUS 0x02 ///< "Invalid queue status flag" -->GetStatusQueue.
 
-#define SCHEDULER_E_TASK_ID 0x03  ///< "Invalid task id" -->StartTask, StopTask, PeriodTask.
+#define SCHEDULER_E_TASK_ID 0x03  ///< "Task id out of range" -->StartTask, StopTask, PeriodTask.
 
 #define SCHEDULER_E_PERIODICITY 0x04  ///< "Invalid task or timer periodicity" -->PeriodTask, ReloadTimer.
 
-#define SCHEDULER_E_TIMER_ID 0x05 ///< "Invalid timer id" -->StartTimer, StopTimer, GetTimer y ReloadTimer.
+#define SCHEDULER_E_TIMER_ID 0x05 ///< "Timer id out of range" -->StartTimer, StopTimer, GetTimer y ReloadTimer.
+
+#define SCHEDULER_E_UNINIT 0x06 ///< "Scheduler uninitialized" --> All apis.
 
 //Types
 typedef uint32 TickType; ///< Type for tick value.
@@ -126,16 +128,17 @@ typedef struct _Scheduler_ConfigType {
 */
 typedef struct _Scheduler_CtrlType { 
     //members
-    uint32 TaskPeriod[ SCHEDULER_TASKS ]; ///< Actual periodicity values of the tasks in ms, element n is the periodicity of task n (id - 1).
-    uint32 TaskElapsed[ SCHEDULER_TASKS ]; ///< Time since last task execution (time follow up of task), element n is the time follow up of task n (id - 1).
-    uint32 TimerTimeout[ SCHEDULER_TIMERS ];  ///< Actual reference values for timers -->desired timing in ms, element n is the reference value for timer n (id - 1).
-    uint32 TimerCount[ SCHEDULER_TIMERS ]; ///< Timers counter values, element n is the counter value of timer n   (id - 1).
+    uint32 TaskPeriod[ SCHEDULER_MAX_TASKS ]; ///< Actual periodicity values of the tasks in ms, element n is the periodicity of task n (id - 1).
+    uint32 TaskElapsed[ SCHEDULER_MAX_TASKS ]; ///< Time since last task execution (time follow up of task), element n is the time follow up of task n (id - 1).
+    uint32 TimerTimeout[ SCHEDULER_MAX_TIMERS ];  ///< Actual reference values for timers -->desired timing in ms, element n is the reference value for timer n (id - 1).
+    uint32 TimerCount[ SCHEDULER_MAX_TIMERS ]; ///< Timers counter values, element n is the counter value of timer n   (id - 1).
     uint32 TaskFlags; ///< Start flags for tasks, each bit is a flag, bit n flag n.
     uint32 TimerFlags; ///< Start flags for timers, each bit is a flag, bit n flag n.
-    uint32 QueueHeads[ SCHEDULER_QUEUES ]; ///< Indexes for writing, element n is the Head index of queue n.
-    uint32 QueueTails[ SCHEDULER_QUEUES ];  ///< Indexes for reading, element n is the Tail index of queue n.
+    uint32 QueueHeads[ SCHEDULER_MAX_QUEUES ]; ///< Indexes for writing, element n is the Head index of queue n.
+    uint32 QueueTails[ SCHEDULER_MAX_QUEUES ];  ///< Indexes for reading, element n is the Tail index of queue n.
     uint32 QueueEmpties;  ///< Empty flags, each bit is a flag, bit n flag n.
     uint32 QueueFulls;  ///< Full flags, each bit is a flag, bit n flag n.
+    boolean SchedulerInit;  ///< Flag that indicates if the control structure was initialized.
 } Scheduler_CtrlType;
 
 //Reference to global data.
