@@ -31,6 +31,8 @@
 
 #define HWIOAB_BUTTONS_E_STATE 0x02 ///<"Invalid button state" -->Buttons_MainFunction
 
+#define HWIOAB_BUTTONS_E_UNINIT 0x03    ///< "Module uninitialized" --> All apis except init.
+
 //Enums.
 typedef enum {
     HWIOAB_BTN_STATE_IDLE,         ///< Not a press has happened yet.
@@ -45,7 +47,8 @@ typedef enum {
     HWIOAB_BTN_EVENT_SINGLE_CLICK, ///< Single click.
     HWIOAB_BTN_EVENT_DOUBLE_CLICK, ///< Double click.
     HWIOAB_BTN_EVENT_HOLD_CLICK,   ///< Hold click.
-    HWIOAB_BTN_EVENT_RELEASE    ///< Release event.
+    HWIOAB_BTN_EVENT_RELEASE,    ///< Release event.
+    HWIOAB_BTN_EVENT_NULL = 50  ///< Null event.
 } ButtonEvents; //Button events.
 
 typedef enum {
@@ -82,6 +85,7 @@ typedef struct _HwIoAb_Buttons_Ctrl
     const HwIoAb_Buttons_Config *ButtonsConfig_Ptr; ///< Ptr to configuration array.
     uint8 States[ HWIOAB_BUTTONS_MAX ]; ///< Actual state of each button.
     uint8 Events[ HWIOAB_BUTTONS_MAX ]; ///< Actual event of each button.
+    boolean Buttons_init;   ///< Boolean flag that indicates if the control structure was initialized.
 } HwIoAb_Buttons_Ctrl;
 
 

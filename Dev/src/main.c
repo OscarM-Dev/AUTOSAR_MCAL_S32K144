@@ -21,7 +21,6 @@ QueueMessage Queue1[ SCHEDULER_QUEUE1_ELEMENTS ];
 */
 int main( void ) {
     EcuM_Init();    //MCU configuration.
-    IoHwAb_Init0( NULL_PTR );  //Initializing IO hardware abstractions.
     SEGGER_RTT_Init();  //Initializing RTT library.
     Scheduler_Init( &Scheduler_Control );   //Initializing control structure for scheduler.
 

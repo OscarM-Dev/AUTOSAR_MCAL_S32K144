@@ -1,10 +1,9 @@
 main ()
 {
-  int D.8646;
+  int D.8650;
 
   <bb 2> :
   EcuM_Init ();
-  IoHwAb_Init0 (0B);
   SEGGER_RTT_Init ();
   Scheduler_Init (&Scheduler_Control);
 

@@ -35,21 +35,20 @@ Task2_callback ()
   goto <bb 34>; [INV]
 
   <bb 3> :
-  _1 = i + 1;
-  actual_event = HwIoAb_Buttons_GetEvent (_1);
+  actual_event = HwIoAb_Buttons_GetEvent (i);
   if (actual_event != 0)
     goto <bb 4>; [INV]
   else
     goto <bb 33>; [INV]
 
   <bb 4> :
-  _2 = (int) i;
-  switch (_2) <default: <L29> [INV], case 0: <L2> [INV], case 1: <L11> [INV], case 2: <L20> [INV]>
+  _1 = (int) i;
+  switch (_1) <default: <L29> [INV], case 0: <L2> [INV], case 1: <L11> [INV], case 2: <L20> [INV]>
 
   <bb 5> :
 <L2>:
-  _3 = (int) actual_event;
-  switch (_3) <default: <L9> [INV], case 1: <L3> [INV], case 2: <L4> [INV], case 3: <L5> [INV], case 4: <L8> [INV]>
+  _2 = (int) actual_event;
+  switch (_2) <default: <L9> [INV], case 1: <L3> [INV], case 2: <L4> [INV], case 3: <L5> [INV], case 4: <L8> [INV]>
 
   <bb 6> :
 <L3>:
@@ -58,28 +57,28 @@ Task2_callback ()
 
   <bb 7> :
 <L4>:
-  PotsControl_Ptr.0_4 = PotsControl_Ptr;
-  _5 = &PotsControl_Ptr.0_4->Ohms_results_main;
-  HwIoAb_Pots_GetValue (_5);
-  PotsControl_Ptr.1_6 = PotsControl_Ptr;
-  _7 = PotsControl_Ptr.1_6->Ohms_results_main[0];
-  _8 = (int) _7;
-  SEGGER_RTT_printf (0, "Pot 1 resistance value in ohms: %d\n", _8);
+  PotsControl_Ptr.0_3 = PotsControl_Ptr;
+  _4 = &PotsControl_Ptr.0_3->Ohms_results_main;
+  HwIoAb_Pots_GetValue (_4);
+  PotsControl_Ptr.1_5 = PotsControl_Ptr;
+  _6 = PotsControl_Ptr.1_5->Ohms_results_main[0];
+  _7 = (int) _6;
+  SEGGER_RTT_printf (0, "Pot 1 resistance value in ohms: %d\n", _7);
   goto <bb 13>; [INV]
 
   <bb 8> :
 <L5>:
-  _9 = (int) i;
-  _10 = flags[_9];
-  if (_10 != 0)
+  _8 = (int) i;
+  _9 = flags[_8];
+  if (_9 != 0)
     goto <bb 9>; [INV]
   else
     goto <bb 10>; [INV]
 
   <bb 9> :
   HwIoAb_Buzzer_Beep (0);
-  _11 = (int) i;
-  flags[_11] = 0;
+  _10 = (int) i;
+  flags[_10] = 0;
 
   <bb 10> :
   goto <bb 13>; [INV]
@@ -87,8 +86,8 @@ Task2_callback ()
   <bb 11> :
 <L8>:
   HwIoAb_Buzzer_Stop ();
-  _12 = (int) i;
-  flags[_12] = 1;
+  _11 = (int) i;
+  flags[_11] = 1;
   goto <bb 13>; [INV]
 
   <bb 12> :
@@ -99,8 +98,8 @@ Task2_callback ()
 
   <bb 14> :
 <L11>:
-  _13 = (int) actual_event;
-  switch (_13) <default: <L18> [INV], case 1: <L12> [INV], case 2: <L13> [INV], case 3: <L14> [INV], case 4: <L17> [INV]>
+  _12 = (int) actual_event;
+  switch (_12) <default: <L18> [INV], case 1: <L12> [INV], case 2: <L13> [INV], case 3: <L14> [INV], case 4: <L17> [INV]>
 
   <bb 15> :
 <L12>:
@@ -109,28 +108,28 @@ Task2_callback ()
 
   <bb 16> :
 <L13>:
-  PotsControl_Ptr.2_14 = PotsControl_Ptr;
-  _15 = &PotsControl_Ptr.2_14->Ohms_results_main;
-  HwIoAb_Pots_GetValue (_15);
-  PotsControl_Ptr.3_16 = PotsControl_Ptr;
-  _17 = PotsControl_Ptr.3_16->Ohms_results_main[1];
-  _18 = (int) _17;
-  SEGGER_RTT_printf (0, "Pot 2 resistance value in ohms: %d\n", _18);
+  PotsControl_Ptr.2_13 = PotsControl_Ptr;
+  _14 = &PotsControl_Ptr.2_13->Ohms_results_main;
+  HwIoAb_Pots_GetValue (_14);
+  PotsControl_Ptr.3_15 = PotsControl_Ptr;
+  _16 = PotsControl_Ptr.3_15->Ohms_results_main[1];
+  _17 = (int) _16;
+  SEGGER_RTT_printf (0, "Pot 2 resistance value in ohms: %d\n", _17);
   goto <bb 22>; [INV]
 
   <bb 17> :
 <L14>:
-  _19 = (int) i;
-  _20 = flags[_19];
-  if (_20 != 0)
+  _18 = (int) i;
+  _19 = flags[_18];
+  if (_19 != 0)
     goto <bb 18>; [INV]
   else
     goto <bb 19>; [INV]
 
   <bb 18> :
   HwIoAb_Buzzer_Beep (1);
-  _21 = (int) i;
-  flags[_21] = 0;
+  _20 = (int) i;
+  flags[_20] = 0;
 
   <bb 19> :
   goto <bb 22>; [INV]
@@ -138,8 +137,8 @@ Task2_callback ()
   <bb 20> :
 <L17>:
   HwIoAb_Buzzer_Stop ();
-  _22 = (int) i;
-  flags[_22] = 1;
+  _21 = (int) i;
+  flags[_21] = 1;
   goto <bb 22>; [INV]
 
   <bb 21> :
@@ -150,8 +149,8 @@ Task2_callback ()
 
   <bb 23> :
 <L20>:
-  _23 = (int) actual_event;
-  switch (_23) <default: <L27> [INV], case 1: <L21> [INV], case 2: <L22> [INV], case 3: <L23> [INV], case 4: <L26> [INV]>
+  _22 = (int) actual_event;
+  switch (_22) <default: <L27> [INV], case 1: <L21> [INV], case 2: <L22> [INV], case 3: <L23> [INV], case 4: <L26> [INV]>
 
   <bb 24> :
 <L21>:
@@ -160,31 +159,31 @@ Task2_callback ()
 
   <bb 25> :
 <L22>:
-  PotsControl_Ptr.4_24 = PotsControl_Ptr;
-  _25 = &PotsControl_Ptr.4_24->Ohms_results_alter;
-  HwIoAb_Pots_GetAltValue (_25);
-  PotsControl_Ptr.5_26 = PotsControl_Ptr;
-  _27 = PotsControl_Ptr.5_26->Ohms_results_alter[0];
-  _28 = (int) _27;
-  PotsControl_Ptr.6_29 = PotsControl_Ptr;
-  _30 = PotsControl_Ptr.6_29->Ohms_results_alter[1];
-  _31 = (int) _30;
-  SEGGER_RTT_printf (0, "Pot 1 resistance value in ohms: %d, Pot 2 resistance value in ohms: %d\n", _28, _31);
+  PotsControl_Ptr.4_23 = PotsControl_Ptr;
+  _24 = &PotsControl_Ptr.4_23->Ohms_results_alter;
+  HwIoAb_Pots_GetAltValue (_24);
+  PotsControl_Ptr.5_25 = PotsControl_Ptr;
+  _26 = PotsControl_Ptr.5_25->Ohms_results_alter[0];
+  _27 = (int) _26;
+  PotsControl_Ptr.6_28 = PotsControl_Ptr;
+  _29 = PotsControl_Ptr.6_28->Ohms_results_alter[1];
+  _30 = (int) _29;
+  SEGGER_RTT_printf (0, "Pot 1 resistance value in ohms: %d, Pot 2 resistance value in ohms: %d\n", _27, _30);
   goto <bb 31>; [INV]
 
   <bb 26> :
 <L23>:
-  _32 = (int) i;
-  _33 = flags[_32];
-  if (_33 != 0)
+  _31 = (int) i;
+  _32 = flags[_31];
+  if (_32 != 0)
     goto <bb 27>; [INV]
   else
     goto <bb 28>; [INV]
 
   <bb 27> :
   HwIoAb_Buzzer_Beep (2);
-  _34 = (int) i;
-  flags[_34] = 0;
+  _33 = (int) i;
+  flags[_33] = 0;
 
   <bb 28> :
   goto <bb 31>; [INV]
@@ -192,8 +191,8 @@ Task2_callback ()
   <bb 29> :
 <L26>:
   HwIoAb_Buzzer_Stop ();
-  _35 = (int) i;
-  flags[_35] = 1;
+  _34 = (int) i;
+  flags[_34] = 1;
   goto <bb 31>; [INV]
 
   <bb 30> :
@@ -206,13 +205,13 @@ Task2_callback ()
 <L29>:
 
   <bb 33> :
-  i.7_36 = i;
-  i = i.7_36 + 1;
+  i.7_35 = i;
+  i = i.7_35 + 1;
 
   <bb 34> :
-  ButtonsControl_Ptr.8_37 = ButtonsControl_Ptr;
-  _38 = ButtonsControl_Ptr.8_37->Buttons;
-  if (i < _38)
+  ButtonsControl_Ptr.8_36 = ButtonsControl_Ptr;
+  _37 = ButtonsControl_Ptr.8_36->Buttons;
+  if (i < _37)
     goto <bb 3>; [INV]
   else
     goto <bb 35>; [INV]

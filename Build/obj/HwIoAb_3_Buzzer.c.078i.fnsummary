@@ -1,6 +1,6 @@
 Symbol table:
 
-Pwm_SetOutputToIdle/5 (Pwm_SetOutputToIdle) @06a960e0
+Pwm_SetOutputToIdle/6 (Pwm_SetOutputToIdle) @05dca1c0
   Type: function
   Visibility: external public
   References: 
@@ -9,7 +9,16 @@ Pwm_SetOutputToIdle/5 (Pwm_SetOutputToIdle) @06a960e0
   Function flags:
   Called by: HwIoAb_Buzzer_Stop/3 
   Calls: 
-Pwm_SetPeriodAndDuty/4 (Pwm_SetPeriodAndDuty) @06a95a80
+Det_ReportError/5 (Det_ReportError) @05dca000
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: HwIoAb_Buzzer_Beep/2 
+  Calls: 
+Pwm_SetPeriodAndDuty/4 (Pwm_SetPeriodAndDuty) @05dc9a80
   Type: function
   Visibility: external public
   References: 
@@ -18,7 +27,7 @@ Pwm_SetPeriodAndDuty/4 (Pwm_SetPeriodAndDuty) @06a95a80
   Function flags:
   Called by: HwIoAb_Buzzer_Beep/2 HwIoAb_Buzzer_Beep/2 HwIoAb_Buzzer_Beep/2 
   Calls: 
-HwIoAb_Buzzer_Stop/3 (HwIoAb_Buzzer_Stop) @06a95c40
+HwIoAb_Buzzer_Stop/3 (HwIoAb_Buzzer_Stop) @05dc9c40
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: 
@@ -26,8 +35,8 @@ HwIoAb_Buzzer_Stop/3 (HwIoAb_Buzzer_Stop) @06a95c40
   Availability: available
   Function flags: body
   Called by: 
-  Calls: Pwm_SetOutputToIdle/5 
-HwIoAb_Buzzer_Beep/2 (HwIoAb_Buzzer_Beep) @06a959a0
+  Calls: Pwm_SetOutputToIdle/6 
+HwIoAb_Buzzer_Beep/2 (HwIoAb_Buzzer_Beep) @05dc99a0
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: 
@@ -35,8 +44,8 @@ HwIoAb_Buzzer_Beep/2 (HwIoAb_Buzzer_Beep) @06a959a0
   Availability: available
   Function flags: body
   Called by: 
-  Calls: Pwm_SetPeriodAndDuty/4 Pwm_SetPeriodAndDuty/4 Pwm_SetPeriodAndDuty/4 
-HwIoAb_Buzzer_Init/1 (HwIoAb_Buzzer_Init) @06a95700
+  Calls: Det_ReportError/5 Pwm_SetPeriodAndDuty/4 Pwm_SetPeriodAndDuty/4 Pwm_SetPeriodAndDuty/4 
+HwIoAb_Buzzer_Init/1 (HwIoAb_Buzzer_Init) @05dc9700
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: 
@@ -79,6 +88,7 @@ HwIoAb_Buzzer_Beep (uint8 Tone)
 
   <bb 6> :
 <L3>:
+  Det_ReportError (304, 0, 1, 0);
 
   <bb 7> :
   return;

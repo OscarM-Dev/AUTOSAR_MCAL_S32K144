@@ -13,21 +13,21 @@ Reclaiming variables:
 Clearing address taken flags:
 Symbol table:
 
-ButtonsControl_Ptr/2 (ButtonsControl_Ptr) @05e82678
+ButtonsControl_Ptr/2 (ButtonsControl_Ptr) @06975750
   Type: variable definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: ButtonsCtrl/1 (addr) 
   Referring: 
   Availability: available
   Varpool flags: initialized
-ButtonsCtrl/1 (ButtonsCtrl) @05e82630
+ButtonsCtrl/1 (ButtonsCtrl) @06975708
   Type: variable definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: 
   Referring: ButtonsControl_Ptr/2 (addr) 
   Availability: available
   Varpool flags:
-ButtonsCfg/0 (ButtonsCfg) @05e825e8
+ButtonsCfg/0 (ButtonsCfg) @069756c0
   Type: variable definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: 

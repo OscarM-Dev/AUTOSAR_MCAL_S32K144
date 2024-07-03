@@ -7,15 +7,15 @@
 #ifndef HWIOAB_0_BUTTONS_CFG_H
 #define HWIOAB_0_BUTTONS_CFG_H
 
-#define HWIOAB_BUTTONS_DEV_ERROR_DETECT STD_OFF  ///< Dev error detect. 
+#define HWIOAB_BUTTONS_DEV_ERROR_DETECT STD_ON  ///< Dev error detect. 
 
 #define HWIOAB_BUTTONS_MAX 3 ///< Max number of buttons to manage.
 
 #define HWIOAB_BUTTONS_PERIOD 50    ///< Periodicity for the main function in ms.
 
-#define HWI0AB_BUTTONS_1_ID 1   ///< Button 1 ID.
-#define HWIOAB_BUTTONS_2_1D 2   ///< Button 2 ID.
-#define HWIOAB_BUTTONS_3_ID 3   ///< Button 3 ID.
+#define HWI0AB_BUTTONS_1_ID 0   ///< Button 1 ID.
+#define HWIOAB_BUTTONS_2_1D 1   ///< Button 2 ID.
+#define HWIOAB_BUTTONS_3_ID 2   ///< Button 3 ID.
 
 #define HWIOAB_BUTTONS_1_CHANNEL DioConf_DioChannel_PTE12 ///< Dio channel where the button 1 is connected.
 #define HWIOAB_BUTTONS_2_CHANNEL DioConf_DioChannel_PTD17 ///< Dio channel where the button 2 is connected.

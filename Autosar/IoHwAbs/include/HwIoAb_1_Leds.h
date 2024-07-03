@@ -31,6 +31,8 @@
 
 #define HWIOAB_LEDS_E_LED_ID 0x01   ///< "Invalid led id" --> Leds_TurnOn, Leds_TurnOff, Leds_TurnToggle
 
+#define HWIOAB_LEDS_E_UNINIT 0x02   ///< "Module uninitialized" --> All apis except init.
+
 //Enums
 typedef enum {
     HWIOAB_LED_ACTIVE_LOW,         ///< LED is active low.
@@ -63,6 +65,7 @@ typedef struct _HwIoAb_Leds_Ctrl
 {
     uint8 Leds;  ///< Number of leds to handle.
     const HwIoAb_Leds_Config *LedsConfig_Ptr; ///< Ptr to configuration array.
+    boolean Leds_init;  ///< Flag that indicates if control structure was initialized.
 } HwIoAb_Leds_Ctrl;
 
 //Reference to global data.

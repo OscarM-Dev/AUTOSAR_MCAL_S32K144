@@ -31,6 +31,7 @@ void HwIoAb_Pots_Init( const HwIoAb_Pots_Config *Pots_Config ) {
     Adc_SetupResultBuffer( Adc1Group_0, HWIOAB_POTS_ALTER_RAW_RESULTS );
 
     PotsControl_Ptr->Pots = HWIOAB_POTS;
+    PotsControl_Ptr->Pots_init = TRUE;
 }
 
 /**
@@ -46,16 +47,21 @@ void HwIoAb_Pots_Init( const HwIoAb_Pots_Config *Pots_Config ) {
 void HwIoAb_Pots_GetValue( uint16 *Pots ) {
     //local data.
     uint8 i = 0;
-    uint8 status = TRUE;
+    uint8 status = E_OK;
 
     #if ( HWIOAB_POTS_DEV_ERROR_DETECT == STD_ON )
+        if ( PotsControl_Ptr->Pots_init == FALSE ) {
+            Det_ReportError( HWIOAB_POTS_MODULE_ID, HWIOAB_POTS_INSTANCE_ID, HWIOAB_POTS_GETVALUE_ID, HWIOAB_POTS_E_UNINIT );
+            status = E_NOT_OK;
+        }
+
         if ( Pots == NULL_PTR ) {
             Det_ReportError( HWIOAB_POTS_MODULE_ID, HWIOAB_POTS_INSTANCE_ID, HWIOAB_POTS_GETVALUE_ID, HWIOAB_POTS_E_PARAM );
-            status = FALSE;
+            status = E_NOT_OK;
         }
     #endif
 
-    if ( status == TRUE ) {
+    if ( status == E_OK ) {
         Adc_StartGroupConversion( Adc0Group_0 );    //Triggering group conversion.
         while( Adc_GetGroupStatus( Adc0Group_0 ) == ADC_BUSY ); //Wating until group conversion is done.
         Adc_ReadGroup( Adc0Group_0, HWIOAB_POTS_MAIN_RAW_RESULTS ); //Reading group conversion values and storing them to the raw result array.
@@ -85,16 +91,21 @@ void HwIoAb_Pots_GetValue( uint16 *Pots ) {
 void HwIoAb_Pots_GetAltValue( uint16 *AltPots ) {
     //local data.
     uint8 i = 0;
-    uint8 status = TRUE;
+    uint8 status = E_OK;
 
     #if ( HWIOAB_POTS_DEV_ERROR_DETECT == STD_ON )
+        if ( PotsControl_Ptr->Pots_init == FALSE ) {
+            Det_ReportError( HWIOAB_POTS_MODULE_ID, HWIOAB_POTS_INSTANCE_ID, HWIOAB_POTS_GETVALUE_ID, HWIOAB_POTS_E_UNINIT );
+            status = E_NOT_OK;
+        }
+
         if ( AltPots == NULL_PTR ) {
-            Det_ReportError( HWIOAB_POTS_MODULE_ID, HWIOAB_POTS_INSTANCE_ID, HWIOAB_POTS_GETALTVALUE_ID, HWIOAB_POTS_E_PARAM );
-            status = FALSE;
+            Det_ReportError( HWIOAB_POTS_MODULE_ID, HWIOAB_POTS_INSTANCE_ID, HWIOAB_POTS_GETVALUE_ID, HWIOAB_POTS_E_PARAM );
+            status = E_NOT_OK;
         }
     #endif
 
-    if ( status == TRUE ) {
+    if ( status == E_OK ) {
         Adc_StartGroupConversion( Adc1Group_0 );    //Triggering group conversion.
         while( Adc_GetGroupStatus( Adc1Group_0 ) == ADC_BUSY ); //Wating until group conversion is done.
         Adc_ReadGroup( Adc1Group_0, HWIOAB_POTS_ALTER_RAW_RESULTS ); //Reading group conversion values and storing them to the raw result array.

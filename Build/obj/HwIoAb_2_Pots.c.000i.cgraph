@@ -3,7 +3,7 @@ Trivially needed symbols: HwIoAb_Pots_GetAltValue/2 HwIoAb_Pots_GetValue/1 HwIoA
 
 Initial Symbol table:
 
-Adc_ReadGroup/8 (Adc_ReadGroup) @0687f7e0
+Adc_ReadGroup/9 (Adc_ReadGroup) @067ab9a0
   Type: function
   Visibility: external public
   References: 
@@ -11,7 +11,7 @@ Adc_ReadGroup/8 (Adc_ReadGroup) @0687f7e0
   Function flags:
   Called by: HwIoAb_Pots_GetAltValue/2 HwIoAb_Pots_GetValue/1 
   Calls: 
-Adc_GetGroupStatus/7 (Adc_GetGroupStatus) @0687f700
+Adc_GetGroupStatus/8 (Adc_GetGroupStatus) @067ab8c0
   Type: function
   Visibility: external public
   References: 
@@ -19,7 +19,7 @@ Adc_GetGroupStatus/7 (Adc_GetGroupStatus) @0687f700
   Function flags:
   Called by: HwIoAb_Pots_GetAltValue/2 HwIoAb_Pots_GetValue/1 
   Calls: 
-Adc_StartGroupConversion/6 (Adc_StartGroupConversion) @0687f620
+Adc_StartGroupConversion/7 (Adc_StartGroupConversion) @067ab7e0
   Type: function
   Visibility: external public
   References: 
@@ -27,7 +27,15 @@ Adc_StartGroupConversion/6 (Adc_StartGroupConversion) @0687f620
   Function flags:
   Called by: HwIoAb_Pots_GetAltValue/2 HwIoAb_Pots_GetValue/1 
   Calls: 
-Adc_SetupResultBuffer/5 (Adc_SetupResultBuffer) @0687f460
+Det_ReportError/6 (Det_ReportError) @067ab700
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: HwIoAb_Pots_GetAltValue/2 HwIoAb_Pots_GetAltValue/2 HwIoAb_Pots_GetValue/1 HwIoAb_Pots_GetValue/1 
+  Calls: 
+Adc_SetupResultBuffer/5 (Adc_SetupResultBuffer) @067ab540
   Type: function
   Visibility: external public
   References: 
@@ -35,14 +43,14 @@ Adc_SetupResultBuffer/5 (Adc_SetupResultBuffer) @0687f460
   Function flags:
   Called by: HwIoAb_Pots_Init/0 HwIoAb_Pots_Init/0 
   Calls: 
-PotsControl_Ptr/4 (PotsControl_Ptr) @06880048
+PotsControl_Ptr/4 (PotsControl_Ptr) @067ac120
   Type: variable
   Visibility: external public
   References: 
-  Referring: HwIoAb_Pots_Init/0 (read) HwIoAb_Pots_Init/0 (read) HwIoAb_Pots_Init/0 (read) HwIoAb_Pots_GetValue/1 (read) HwIoAb_Pots_GetValue/1 (read) HwIoAb_Pots_GetValue/1 (read) HwIoAb_Pots_GetAltValue/2 (read) HwIoAb_Pots_GetAltValue/2 (read) HwIoAb_Pots_GetAltValue/2 (read) 
+  Referring: HwIoAb_Pots_Init/0 (read) HwIoAb_Pots_Init/0 (read) HwIoAb_Pots_Init/0 (read) HwIoAb_Pots_Init/0 (read) HwIoAb_Pots_GetValue/1 (read) HwIoAb_Pots_GetValue/1 (read) HwIoAb_Pots_GetValue/1 (read) HwIoAb_Pots_GetValue/1 (read) HwIoAb_Pots_GetAltValue/2 (read) HwIoAb_Pots_GetAltValue/2 (read) HwIoAb_Pots_GetAltValue/2 (read) HwIoAb_Pots_GetAltValue/2 (read) 
   Availability: not-ready
   Varpool flags:
-Adc_Calibrate/3 (Adc_Calibrate) @0687f380
+Adc_Calibrate/3 (Adc_Calibrate) @067ab460
   Type: function
   Visibility: external public
   References: 
@@ -50,29 +58,29 @@ Adc_Calibrate/3 (Adc_Calibrate) @0687f380
   Function flags:
   Called by: HwIoAb_Pots_Init/0 HwIoAb_Pots_Init/0 
   Calls: 
-HwIoAb_Pots_GetAltValue/2 (HwIoAb_Pots_GetAltValue) @06a3aee0
+HwIoAb_Pots_GetAltValue/2 (HwIoAb_Pots_GetAltValue) @067ab000
   Type: function definition analyzed
   Visibility: force_output no_reorder public
   Aux: @01981040
-  References: PotsControl_Ptr/4 (read) PotsControl_Ptr/4 (read) PotsControl_Ptr/4 (read) 
+  References: PotsControl_Ptr/4 (read) PotsControl_Ptr/4 (read) PotsControl_Ptr/4 (read) PotsControl_Ptr/4 (read) 
   Referring: 
   Function flags: body
   Called by: 
-  Calls: Adc_ReadGroup/8 Adc_GetGroupStatus/7 Adc_StartGroupConversion/6 
-HwIoAb_Pots_GetValue/1 (HwIoAb_Pots_GetValue) @06a3a7e0
+  Calls: Adc_ReadGroup/9 Adc_GetGroupStatus/8 Adc_StartGroupConversion/7 Det_ReportError/6 Det_ReportError/6 
+HwIoAb_Pots_GetValue/1 (HwIoAb_Pots_GetValue) @069787e0
   Type: function definition analyzed
   Visibility: force_output no_reorder public
-  Aux: @06a3aee0
-  References: PotsControl_Ptr/4 (read) PotsControl_Ptr/4 (read) PotsControl_Ptr/4 (read) 
+  Aux: @067ab000
+  References: PotsControl_Ptr/4 (read) PotsControl_Ptr/4 (read) PotsControl_Ptr/4 (read) PotsControl_Ptr/4 (read) 
   Referring: 
   Function flags: body
   Called by: 
-  Calls: Adc_ReadGroup/8 Adc_GetGroupStatus/7 Adc_StartGroupConversion/6 
-HwIoAb_Pots_Init/0 (HwIoAb_Pots_Init) @06a3ae00
+  Calls: Adc_ReadGroup/9 Adc_GetGroupStatus/8 Adc_StartGroupConversion/7 Det_ReportError/6 Det_ReportError/6 
+HwIoAb_Pots_Init/0 (HwIoAb_Pots_Init) @06978ee0
   Type: function definition analyzed
   Visibility: force_output no_reorder public
-  Aux: @06a3a7e0
-  References: PotsControl_Ptr/4 (read) PotsControl_Ptr/4 (read) PotsControl_Ptr/4 (read) 
+  Aux: @069787e0
+  References: PotsControl_Ptr/4 (read) PotsControl_Ptr/4 (read) PotsControl_Ptr/4 (read) PotsControl_Ptr/4 (read) 
   Referring: 
   Function flags: body
   Called by: 
@@ -82,7 +90,7 @@ Removing unused symbols:
 
 Reclaimed Symbol table:
 
-Adc_ReadGroup/8 (Adc_ReadGroup) @0687f7e0
+Adc_ReadGroup/9 (Adc_ReadGroup) @067ab9a0
   Type: function
   Visibility: external public
   References: 
@@ -90,7 +98,7 @@ Adc_ReadGroup/8 (Adc_ReadGroup) @0687f7e0
   Function flags:
   Called by: HwIoAb_Pots_GetAltValue/2 HwIoAb_Pots_GetValue/1 
   Calls: 
-Adc_GetGroupStatus/7 (Adc_GetGroupStatus) @0687f700
+Adc_GetGroupStatus/8 (Adc_GetGroupStatus) @067ab8c0
   Type: function
   Visibility: external public
   References: 
@@ -98,7 +106,7 @@ Adc_GetGroupStatus/7 (Adc_GetGroupStatus) @0687f700
   Function flags:
   Called by: HwIoAb_Pots_GetAltValue/2 HwIoAb_Pots_GetValue/1 
   Calls: 
-Adc_StartGroupConversion/6 (Adc_StartGroupConversion) @0687f620
+Adc_StartGroupConversion/7 (Adc_StartGroupConversion) @067ab7e0
   Type: function
   Visibility: external public
   References: 
@@ -106,7 +114,15 @@ Adc_StartGroupConversion/6 (Adc_StartGroupConversion) @0687f620
   Function flags:
   Called by: HwIoAb_Pots_GetAltValue/2 HwIoAb_Pots_GetValue/1 
   Calls: 
-Adc_SetupResultBuffer/5 (Adc_SetupResultBuffer) @0687f460
+Det_ReportError/6 (Det_ReportError) @067ab700
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: HwIoAb_Pots_GetAltValue/2 HwIoAb_Pots_GetAltValue/2 HwIoAb_Pots_GetValue/1 HwIoAb_Pots_GetValue/1 
+  Calls: 
+Adc_SetupResultBuffer/5 (Adc_SetupResultBuffer) @067ab540
   Type: function
   Visibility: external public
   References: 
@@ -114,14 +130,14 @@ Adc_SetupResultBuffer/5 (Adc_SetupResultBuffer) @0687f460
   Function flags:
   Called by: HwIoAb_Pots_Init/0 HwIoAb_Pots_Init/0 
   Calls: 
-PotsControl_Ptr/4 (PotsControl_Ptr) @06880048
+PotsControl_Ptr/4 (PotsControl_Ptr) @067ac120
   Type: variable
   Visibility: external public
   References: 
-  Referring: HwIoAb_Pots_Init/0 (read) HwIoAb_Pots_Init/0 (read) HwIoAb_Pots_Init/0 (read) HwIoAb_Pots_GetValue/1 (read) HwIoAb_Pots_GetValue/1 (read) HwIoAb_Pots_GetValue/1 (read) HwIoAb_Pots_GetAltValue/2 (read) HwIoAb_Pots_GetAltValue/2 (read) HwIoAb_Pots_GetAltValue/2 (read) 
+  Referring: HwIoAb_Pots_Init/0 (read) HwIoAb_Pots_Init/0 (read) HwIoAb_Pots_Init/0 (read) HwIoAb_Pots_Init/0 (read) HwIoAb_Pots_GetValue/1 (read) HwIoAb_Pots_GetValue/1 (read) HwIoAb_Pots_GetValue/1 (read) HwIoAb_Pots_GetValue/1 (read) HwIoAb_Pots_GetAltValue/2 (read) HwIoAb_Pots_GetAltValue/2 (read) HwIoAb_Pots_GetAltValue/2 (read) HwIoAb_Pots_GetAltValue/2 (read) 
   Availability: not-ready
   Varpool flags:
-Adc_Calibrate/3 (Adc_Calibrate) @0687f380
+Adc_Calibrate/3 (Adc_Calibrate) @067ab460
   Type: function
   Visibility: external public
   References: 
@@ -129,26 +145,26 @@ Adc_Calibrate/3 (Adc_Calibrate) @0687f380
   Function flags:
   Called by: HwIoAb_Pots_Init/0 HwIoAb_Pots_Init/0 
   Calls: 
-HwIoAb_Pots_GetAltValue/2 (HwIoAb_Pots_GetAltValue) @06a3aee0
+HwIoAb_Pots_GetAltValue/2 (HwIoAb_Pots_GetAltValue) @067ab000
   Type: function definition analyzed
   Visibility: force_output no_reorder public
-  References: PotsControl_Ptr/4 (read) PotsControl_Ptr/4 (read) PotsControl_Ptr/4 (read) 
+  References: PotsControl_Ptr/4 (read) PotsControl_Ptr/4 (read) PotsControl_Ptr/4 (read) PotsControl_Ptr/4 (read) 
   Referring: 
   Function flags: body
   Called by: 
-  Calls: Adc_ReadGroup/8 Adc_GetGroupStatus/7 Adc_StartGroupConversion/6 
-HwIoAb_Pots_GetValue/1 (HwIoAb_Pots_GetValue) @06a3a7e0
+  Calls: Adc_ReadGroup/9 Adc_GetGroupStatus/8 Adc_StartGroupConversion/7 Det_ReportError/6 Det_ReportError/6 
+HwIoAb_Pots_GetValue/1 (HwIoAb_Pots_GetValue) @069787e0
   Type: function definition analyzed
   Visibility: force_output no_reorder public
-  References: PotsControl_Ptr/4 (read) PotsControl_Ptr/4 (read) PotsControl_Ptr/4 (read) 
+  References: PotsControl_Ptr/4 (read) PotsControl_Ptr/4 (read) PotsControl_Ptr/4 (read) PotsControl_Ptr/4 (read) 
   Referring: 
   Function flags: body
   Called by: 
-  Calls: Adc_ReadGroup/8 Adc_GetGroupStatus/7 Adc_StartGroupConversion/6 
-HwIoAb_Pots_Init/0 (HwIoAb_Pots_Init) @06a3ae00
+  Calls: Adc_ReadGroup/9 Adc_GetGroupStatus/8 Adc_StartGroupConversion/7 Det_ReportError/6 Det_ReportError/6 
+HwIoAb_Pots_Init/0 (HwIoAb_Pots_Init) @06978ee0
   Type: function definition analyzed
   Visibility: force_output no_reorder public
-  References: PotsControl_Ptr/4 (read) PotsControl_Ptr/4 (read) PotsControl_Ptr/4 (read) 
+  References: PotsControl_Ptr/4 (read) PotsControl_Ptr/4 (read) PotsControl_Ptr/4 (read) PotsControl_Ptr/4 (read) 
   Referring: 
   Function flags: body
   Called by: 
@@ -157,7 +173,7 @@ HwIoAb_Pots_Init/0 (HwIoAb_Pots_Init) @06a3ae00
 
 Initial Symbol table:
 
-Adc_ReadGroup/8 (Adc_ReadGroup) @0687f7e0
+Adc_ReadGroup/9 (Adc_ReadGroup) @067ab9a0
   Type: function
   Visibility: external public
   References: 
@@ -165,7 +181,7 @@ Adc_ReadGroup/8 (Adc_ReadGroup) @0687f7e0
   Function flags:
   Called by: HwIoAb_Pots_GetAltValue/2 HwIoAb_Pots_GetValue/1 
   Calls: 
-Adc_GetGroupStatus/7 (Adc_GetGroupStatus) @0687f700
+Adc_GetGroupStatus/8 (Adc_GetGroupStatus) @067ab8c0
   Type: function
   Visibility: external public
   References: 
@@ -173,7 +189,7 @@ Adc_GetGroupStatus/7 (Adc_GetGroupStatus) @0687f700
   Function flags:
   Called by: HwIoAb_Pots_GetAltValue/2 HwIoAb_Pots_GetValue/1 
   Calls: 
-Adc_StartGroupConversion/6 (Adc_StartGroupConversion) @0687f620
+Adc_StartGroupConversion/7 (Adc_StartGroupConversion) @067ab7e0
   Type: function
   Visibility: external public
   References: 
@@ -181,7 +197,15 @@ Adc_StartGroupConversion/6 (Adc_StartGroupConversion) @0687f620
   Function flags:
   Called by: HwIoAb_Pots_GetAltValue/2 HwIoAb_Pots_GetValue/1 
   Calls: 
-Adc_SetupResultBuffer/5 (Adc_SetupResultBuffer) @0687f460
+Det_ReportError/6 (Det_ReportError) @067ab700
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: HwIoAb_Pots_GetAltValue/2 HwIoAb_Pots_GetAltValue/2 HwIoAb_Pots_GetValue/1 HwIoAb_Pots_GetValue/1 
+  Calls: 
+Adc_SetupResultBuffer/5 (Adc_SetupResultBuffer) @067ab540
   Type: function
   Visibility: external public
   References: 
@@ -189,14 +213,14 @@ Adc_SetupResultBuffer/5 (Adc_SetupResultBuffer) @0687f460
   Function flags:
   Called by: HwIoAb_Pots_Init/0 HwIoAb_Pots_Init/0 
   Calls: 
-PotsControl_Ptr/4 (PotsControl_Ptr) @06880048
+PotsControl_Ptr/4 (PotsControl_Ptr) @067ac120
   Type: variable
   Visibility: external public
   References: 
-  Referring: HwIoAb_Pots_Init/0 (read) HwIoAb_Pots_Init/0 (read) HwIoAb_Pots_Init/0 (read) HwIoAb_Pots_GetValue/1 (read) HwIoAb_Pots_GetValue/1 (read) HwIoAb_Pots_GetValue/1 (read) HwIoAb_Pots_GetAltValue/2 (read) HwIoAb_Pots_GetAltValue/2 (read) HwIoAb_Pots_GetAltValue/2 (read) 
+  Referring: HwIoAb_Pots_Init/0 (read) HwIoAb_Pots_Init/0 (read) HwIoAb_Pots_Init/0 (read) HwIoAb_Pots_Init/0 (read) HwIoAb_Pots_GetValue/1 (read) HwIoAb_Pots_GetValue/1 (read) HwIoAb_Pots_GetValue/1 (read) HwIoAb_Pots_GetValue/1 (read) HwIoAb_Pots_GetAltValue/2 (read) HwIoAb_Pots_GetAltValue/2 (read) HwIoAb_Pots_GetAltValue/2 (read) HwIoAb_Pots_GetAltValue/2 (read) 
   Availability: not-ready
   Varpool flags:
-Adc_Calibrate/3 (Adc_Calibrate) @0687f380
+Adc_Calibrate/3 (Adc_Calibrate) @067ab460
   Type: function
   Visibility: external public
   References: 
@@ -204,26 +228,26 @@ Adc_Calibrate/3 (Adc_Calibrate) @0687f380
   Function flags:
   Called by: HwIoAb_Pots_Init/0 HwIoAb_Pots_Init/0 
   Calls: 
-HwIoAb_Pots_GetAltValue/2 (HwIoAb_Pots_GetAltValue) @06a3aee0
+HwIoAb_Pots_GetAltValue/2 (HwIoAb_Pots_GetAltValue) @067ab000
   Type: function definition analyzed
   Visibility: force_output no_reorder public
-  References: PotsControl_Ptr/4 (read) PotsControl_Ptr/4 (read) PotsControl_Ptr/4 (read) 
+  References: PotsControl_Ptr/4 (read) PotsControl_Ptr/4 (read) PotsControl_Ptr/4 (read) PotsControl_Ptr/4 (read) 
   Referring: 
   Function flags: body
   Called by: 
-  Calls: Adc_ReadGroup/8 Adc_GetGroupStatus/7 Adc_StartGroupConversion/6 
-HwIoAb_Pots_GetValue/1 (HwIoAb_Pots_GetValue) @06a3a7e0
+  Calls: Adc_ReadGroup/9 Adc_GetGroupStatus/8 Adc_StartGroupConversion/7 Det_ReportError/6 Det_ReportError/6 
+HwIoAb_Pots_GetValue/1 (HwIoAb_Pots_GetValue) @069787e0
   Type: function definition analyzed
   Visibility: force_output no_reorder public
-  References: PotsControl_Ptr/4 (read) PotsControl_Ptr/4 (read) PotsControl_Ptr/4 (read) 
+  References: PotsControl_Ptr/4 (read) PotsControl_Ptr/4 (read) PotsControl_Ptr/4 (read) PotsControl_Ptr/4 (read) 
   Referring: 
   Function flags: body
   Called by: 
-  Calls: Adc_ReadGroup/8 Adc_GetGroupStatus/7 Adc_StartGroupConversion/6 
-HwIoAb_Pots_Init/0 (HwIoAb_Pots_Init) @06a3ae00
+  Calls: Adc_ReadGroup/9 Adc_GetGroupStatus/8 Adc_StartGroupConversion/7 Det_ReportError/6 Det_ReportError/6 
+HwIoAb_Pots_Init/0 (HwIoAb_Pots_Init) @06978ee0
   Type: function definition analyzed
   Visibility: force_output no_reorder public
-  References: PotsControl_Ptr/4 (read) PotsControl_Ptr/4 (read) PotsControl_Ptr/4 (read) 
+  References: PotsControl_Ptr/4 (read) PotsControl_Ptr/4 (read) PotsControl_Ptr/4 (read) PotsControl_Ptr/4 (read) 
   Referring: 
   Function flags: body
   Called by: 
@@ -233,7 +257,7 @@ Removing unused symbols:
 
 Reclaimed Symbol table:
 
-Adc_ReadGroup/8 (Adc_ReadGroup) @0687f7e0
+Adc_ReadGroup/9 (Adc_ReadGroup) @067ab9a0
   Type: function
   Visibility: external public
   References: 
@@ -241,7 +265,7 @@ Adc_ReadGroup/8 (Adc_ReadGroup) @0687f7e0
   Function flags:
   Called by: HwIoAb_Pots_GetAltValue/2 HwIoAb_Pots_GetValue/1 
   Calls: 
-Adc_GetGroupStatus/7 (Adc_GetGroupStatus) @0687f700
+Adc_GetGroupStatus/8 (Adc_GetGroupStatus) @067ab8c0
   Type: function
   Visibility: external public
   References: 
@@ -249,7 +273,7 @@ Adc_GetGroupStatus/7 (Adc_GetGroupStatus) @0687f700
   Function flags:
   Called by: HwIoAb_Pots_GetAltValue/2 HwIoAb_Pots_GetValue/1 
   Calls: 
-Adc_StartGroupConversion/6 (Adc_StartGroupConversion) @0687f620
+Adc_StartGroupConversion/7 (Adc_StartGroupConversion) @067ab7e0
   Type: function
   Visibility: external public
   References: 
@@ -257,7 +281,15 @@ Adc_StartGroupConversion/6 (Adc_StartGroupConversion) @0687f620
   Function flags:
   Called by: HwIoAb_Pots_GetAltValue/2 HwIoAb_Pots_GetValue/1 
   Calls: 
-Adc_SetupResultBuffer/5 (Adc_SetupResultBuffer) @0687f460
+Det_ReportError/6 (Det_ReportError) @067ab700
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags:
+  Called by: HwIoAb_Pots_GetAltValue/2 HwIoAb_Pots_GetAltValue/2 HwIoAb_Pots_GetValue/1 HwIoAb_Pots_GetValue/1 
+  Calls: 
+Adc_SetupResultBuffer/5 (Adc_SetupResultBuffer) @067ab540
   Type: function
   Visibility: external public
   References: 
@@ -265,14 +297,14 @@ Adc_SetupResultBuffer/5 (Adc_SetupResultBuffer) @0687f460
   Function flags:
   Called by: HwIoAb_Pots_Init/0 HwIoAb_Pots_Init/0 
   Calls: 
-PotsControl_Ptr/4 (PotsControl_Ptr) @06880048
+PotsControl_Ptr/4 (PotsControl_Ptr) @067ac120
   Type: variable
   Visibility: external public
   References: 
-  Referring: HwIoAb_Pots_Init/0 (read) HwIoAb_Pots_Init/0 (read) HwIoAb_Pots_Init/0 (read) HwIoAb_Pots_GetValue/1 (read) HwIoAb_Pots_GetValue/1 (read) HwIoAb_Pots_GetValue/1 (read) HwIoAb_Pots_GetAltValue/2 (read) HwIoAb_Pots_GetAltValue/2 (read) HwIoAb_Pots_GetAltValue/2 (read) 
+  Referring: HwIoAb_Pots_Init/0 (read) HwIoAb_Pots_Init/0 (read) HwIoAb_Pots_Init/0 (read) HwIoAb_Pots_Init/0 (read) HwIoAb_Pots_GetValue/1 (read) HwIoAb_Pots_GetValue/1 (read) HwIoAb_Pots_GetValue/1 (read) HwIoAb_Pots_GetValue/1 (read) HwIoAb_Pots_GetAltValue/2 (read) HwIoAb_Pots_GetAltValue/2 (read) HwIoAb_Pots_GetAltValue/2 (read) HwIoAb_Pots_GetAltValue/2 (read) 
   Availability: not-ready
   Varpool flags:
-Adc_Calibrate/3 (Adc_Calibrate) @0687f380
+Adc_Calibrate/3 (Adc_Calibrate) @067ab460
   Type: function
   Visibility: external public
   References: 
@@ -280,26 +312,26 @@ Adc_Calibrate/3 (Adc_Calibrate) @0687f380
   Function flags:
   Called by: HwIoAb_Pots_Init/0 HwIoAb_Pots_Init/0 
   Calls: 
-HwIoAb_Pots_GetAltValue/2 (HwIoAb_Pots_GetAltValue) @06a3aee0
+HwIoAb_Pots_GetAltValue/2 (HwIoAb_Pots_GetAltValue) @067ab000
   Type: function definition analyzed
   Visibility: force_output no_reorder public
-  References: PotsControl_Ptr/4 (read) PotsControl_Ptr/4 (read) PotsControl_Ptr/4 (read) 
+  References: PotsControl_Ptr/4 (read) PotsControl_Ptr/4 (read) PotsControl_Ptr/4 (read) PotsControl_Ptr/4 (read) 
   Referring: 
   Function flags: body
   Called by: 
-  Calls: Adc_ReadGroup/8 Adc_GetGroupStatus/7 Adc_StartGroupConversion/6 
-HwIoAb_Pots_GetValue/1 (HwIoAb_Pots_GetValue) @06a3a7e0
+  Calls: Adc_ReadGroup/9 Adc_GetGroupStatus/8 Adc_StartGroupConversion/7 Det_ReportError/6 Det_ReportError/6 
+HwIoAb_Pots_GetValue/1 (HwIoAb_Pots_GetValue) @069787e0
   Type: function definition analyzed
   Visibility: force_output no_reorder public
-  References: PotsControl_Ptr/4 (read) PotsControl_Ptr/4 (read) PotsControl_Ptr/4 (read) 
+  References: PotsControl_Ptr/4 (read) PotsControl_Ptr/4 (read) PotsControl_Ptr/4 (read) PotsControl_Ptr/4 (read) 
   Referring: 
   Function flags: body
   Called by: 
-  Calls: Adc_ReadGroup/8 Adc_GetGroupStatus/7 Adc_StartGroupConversion/6 
-HwIoAb_Pots_Init/0 (HwIoAb_Pots_Init) @06a3ae00
+  Calls: Adc_ReadGroup/9 Adc_GetGroupStatus/8 Adc_StartGroupConversion/7 Det_ReportError/6 Det_ReportError/6 
+HwIoAb_Pots_Init/0 (HwIoAb_Pots_Init) @06978ee0
   Type: function definition analyzed
   Visibility: force_output no_reorder public
-  References: PotsControl_Ptr/4 (read) PotsControl_Ptr/4 (read) PotsControl_Ptr/4 (read) 
+  References: PotsControl_Ptr/4 (read) PotsControl_Ptr/4 (read) PotsControl_Ptr/4 (read) PotsControl_Ptr/4 (read) 
   Referring: 
   Function flags: body
   Called by: 
@@ -310,7 +342,7 @@ Reclaiming variables:
 Clearing address taken flags:
 Optimized Symbol table:
 
-Adc_ReadGroup/8 (Adc_ReadGroup) @0687f7e0
+Adc_ReadGroup/9 (Adc_ReadGroup) @067ab9a0
   Type: function
   Visibility: external public
   References: 
@@ -319,7 +351,7 @@ Adc_ReadGroup/8 (Adc_ReadGroup) @0687f7e0
   Function flags:
   Called by: HwIoAb_Pots_GetAltValue/2 HwIoAb_Pots_GetValue/1 
   Calls: 
-Adc_GetGroupStatus/7 (Adc_GetGroupStatus) @0687f700
+Adc_GetGroupStatus/8 (Adc_GetGroupStatus) @067ab8c0
   Type: function
   Visibility: external public
   References: 
@@ -328,7 +360,7 @@ Adc_GetGroupStatus/7 (Adc_GetGroupStatus) @0687f700
   Function flags:
   Called by: HwIoAb_Pots_GetAltValue/2 HwIoAb_Pots_GetValue/1 
   Calls: 
-Adc_StartGroupConversion/6 (Adc_StartGroupConversion) @0687f620
+Adc_StartGroupConversion/7 (Adc_StartGroupConversion) @067ab7e0
   Type: function
   Visibility: external public
   References: 
@@ -337,7 +369,16 @@ Adc_StartGroupConversion/6 (Adc_StartGroupConversion) @0687f620
   Function flags:
   Called by: HwIoAb_Pots_GetAltValue/2 HwIoAb_Pots_GetValue/1 
   Calls: 
-Adc_SetupResultBuffer/5 (Adc_SetupResultBuffer) @0687f460
+Det_ReportError/6 (Det_ReportError) @067ab700
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: HwIoAb_Pots_GetAltValue/2 HwIoAb_Pots_GetAltValue/2 HwIoAb_Pots_GetValue/1 HwIoAb_Pots_GetValue/1 
+  Calls: 
+Adc_SetupResultBuffer/5 (Adc_SetupResultBuffer) @067ab540
   Type: function
   Visibility: external public
   References: 
@@ -346,15 +387,15 @@ Adc_SetupResultBuffer/5 (Adc_SetupResultBuffer) @0687f460
   Function flags:
   Called by: HwIoAb_Pots_Init/0 HwIoAb_Pots_Init/0 
   Calls: 
-PotsControl_Ptr/4 (PotsControl_Ptr) @06880048
+PotsControl_Ptr/4 (PotsControl_Ptr) @067ac120
   Type: variable
   Body removed by symtab_remove_unreachable_nodes
   Visibility: external public
   References: 
-  Referring: HwIoAb_Pots_Init/0 (read) HwIoAb_Pots_Init/0 (read) HwIoAb_Pots_Init/0 (read) HwIoAb_Pots_GetValue/1 (read) HwIoAb_Pots_GetValue/1 (read) HwIoAb_Pots_GetValue/1 (read) HwIoAb_Pots_GetAltValue/2 (read) HwIoAb_Pots_GetAltValue/2 (read) HwIoAb_Pots_GetAltValue/2 (read) 
+  Referring: HwIoAb_Pots_Init/0 (read) HwIoAb_Pots_Init/0 (read) HwIoAb_Pots_Init/0 (read) HwIoAb_Pots_Init/0 (read) HwIoAb_Pots_GetValue/1 (read) HwIoAb_Pots_GetValue/1 (read) HwIoAb_Pots_GetValue/1 (read) HwIoAb_Pots_GetValue/1 (read) HwIoAb_Pots_GetAltValue/2 (read) HwIoAb_Pots_GetAltValue/2 (read) HwIoAb_Pots_GetAltValue/2 (read) HwIoAb_Pots_GetAltValue/2 (read) 
   Availability: not_available
   Varpool flags:
-Adc_Calibrate/3 (Adc_Calibrate) @0687f380
+Adc_Calibrate/3 (Adc_Calibrate) @067ab460
   Type: function
   Visibility: external public
   References: 
@@ -363,28 +404,28 @@ Adc_Calibrate/3 (Adc_Calibrate) @0687f380
   Function flags:
   Called by: HwIoAb_Pots_Init/0 HwIoAb_Pots_Init/0 
   Calls: 
-HwIoAb_Pots_GetAltValue/2 (HwIoAb_Pots_GetAltValue) @06a3aee0
+HwIoAb_Pots_GetAltValue/2 (HwIoAb_Pots_GetAltValue) @067ab000
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
-  References: PotsControl_Ptr/4 (read) PotsControl_Ptr/4 (read) PotsControl_Ptr/4 (read) 
+  References: PotsControl_Ptr/4 (read) PotsControl_Ptr/4 (read) PotsControl_Ptr/4 (read) PotsControl_Ptr/4 (read) 
   Referring: 
   Availability: available
   Function flags: body
   Called by: 
-  Calls: Adc_ReadGroup/8 Adc_GetGroupStatus/7 Adc_StartGroupConversion/6 
-HwIoAb_Pots_GetValue/1 (HwIoAb_Pots_GetValue) @06a3a7e0
+  Calls: Adc_ReadGroup/9 Adc_GetGroupStatus/8 Adc_StartGroupConversion/7 Det_ReportError/6 Det_ReportError/6 
+HwIoAb_Pots_GetValue/1 (HwIoAb_Pots_GetValue) @069787e0
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
-  References: PotsControl_Ptr/4 (read) PotsControl_Ptr/4 (read) PotsControl_Ptr/4 (read) 
+  References: PotsControl_Ptr/4 (read) PotsControl_Ptr/4 (read) PotsControl_Ptr/4 (read) PotsControl_Ptr/4 (read) 
   Referring: 
   Availability: available
   Function flags: body
   Called by: 
-  Calls: Adc_ReadGroup/8 Adc_GetGroupStatus/7 Adc_StartGroupConversion/6 
-HwIoAb_Pots_Init/0 (HwIoAb_Pots_Init) @06a3ae00
+  Calls: Adc_ReadGroup/9 Adc_GetGroupStatus/8 Adc_StartGroupConversion/7 Det_ReportError/6 Det_ReportError/6 
+HwIoAb_Pots_Init/0 (HwIoAb_Pots_Init) @06978ee0
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
-  References: PotsControl_Ptr/4 (read) PotsControl_Ptr/4 (read) PotsControl_Ptr/4 (read) 
+  References: PotsControl_Ptr/4 (read) PotsControl_Ptr/4 (read) PotsControl_Ptr/4 (read) PotsControl_Ptr/4 (read) 
   Referring: 
   Availability: available
   Function flags: body
@@ -401,7 +442,7 @@ Removing variables:
 
 Final Symbol table:
 
-Adc_ReadGroup/8 (Adc_ReadGroup) @0687f7e0
+Adc_ReadGroup/9 (Adc_ReadGroup) @067ab9a0
   Type: function
   Visibility: external public
   References: 
@@ -410,7 +451,7 @@ Adc_ReadGroup/8 (Adc_ReadGroup) @0687f7e0
   Function flags:
   Called by: 
   Calls: 
-Adc_GetGroupStatus/7 (Adc_GetGroupStatus) @0687f700
+Adc_GetGroupStatus/8 (Adc_GetGroupStatus) @067ab8c0
   Type: function
   Visibility: external public
   References: 
@@ -419,7 +460,7 @@ Adc_GetGroupStatus/7 (Adc_GetGroupStatus) @0687f700
   Function flags:
   Called by: 
   Calls: 
-Adc_StartGroupConversion/6 (Adc_StartGroupConversion) @0687f620
+Adc_StartGroupConversion/7 (Adc_StartGroupConversion) @067ab7e0
   Type: function
   Visibility: external public
   References: 
@@ -428,7 +469,7 @@ Adc_StartGroupConversion/6 (Adc_StartGroupConversion) @0687f620
   Function flags:
   Called by: 
   Calls: 
-Adc_SetupResultBuffer/5 (Adc_SetupResultBuffer) @0687f460
+Det_ReportError/6 (Det_ReportError) @067ab700
   Type: function
   Visibility: external public
   References: 
@@ -437,7 +478,16 @@ Adc_SetupResultBuffer/5 (Adc_SetupResultBuffer) @0687f460
   Function flags:
   Called by: 
   Calls: 
-PotsControl_Ptr/4 (PotsControl_Ptr) @06880048
+Adc_SetupResultBuffer/5 (Adc_SetupResultBuffer) @067ab540
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags:
+  Called by: 
+  Calls: 
+PotsControl_Ptr/4 (PotsControl_Ptr) @067ac120
   Type: variable
   Body removed by symtab_remove_unreachable_nodes
   Visibility: external public
@@ -445,7 +495,7 @@ PotsControl_Ptr/4 (PotsControl_Ptr) @06880048
   Referring: 
   Availability: not_available
   Varpool flags:
-Adc_Calibrate/3 (Adc_Calibrate) @0687f380
+Adc_Calibrate/3 (Adc_Calibrate) @067ab460
   Type: function
   Visibility: external public
   References: 
@@ -454,7 +504,7 @@ Adc_Calibrate/3 (Adc_Calibrate) @0687f380
   Function flags:
   Called by: 
   Calls: 
-HwIoAb_Pots_GetAltValue/2 (HwIoAb_Pots_GetAltValue) @06a3aee0
+HwIoAb_Pots_GetAltValue/2 (HwIoAb_Pots_GetAltValue) @067ab000
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder asm_written public section:.text.HwIoAb_Pots_GetAltValue (implicit_section)
   References: 
@@ -463,7 +513,7 @@ HwIoAb_Pots_GetAltValue/2 (HwIoAb_Pots_GetAltValue) @06a3aee0
   Function flags:
   Called by: 
   Calls: 
-HwIoAb_Pots_GetValue/1 (HwIoAb_Pots_GetValue) @06a3a7e0
+HwIoAb_Pots_GetValue/1 (HwIoAb_Pots_GetValue) @069787e0
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder asm_written public section:.text.HwIoAb_Pots_GetValue (implicit_section)
   References: 
@@ -472,7 +522,7 @@ HwIoAb_Pots_GetValue/1 (HwIoAb_Pots_GetValue) @06a3a7e0
   Function flags:
   Called by: 
   Calls: 
-HwIoAb_Pots_Init/0 (HwIoAb_Pots_Init) @06a3ae00
+HwIoAb_Pots_Init/0 (HwIoAb_Pots_Init) @06978ee0
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder asm_written public section:.text.HwIoAb_Pots_Init (implicit_section)
   References: 

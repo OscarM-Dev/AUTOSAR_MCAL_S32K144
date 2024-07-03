@@ -4,7 +4,7 @@
  * structures related to the IO hardware abstraction for the buttons on board.
  * 
  * @note Here you register the buttons to be used in the state machine.
- * @note The button ID is the element of the configuration array where it was registered + 1. 
+ * @note The button ID is the element of the configuration array where it was registered. 
  * 
  */
 

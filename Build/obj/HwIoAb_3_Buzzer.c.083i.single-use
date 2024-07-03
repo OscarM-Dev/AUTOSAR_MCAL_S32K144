@@ -32,6 +32,7 @@ HwIoAb_Buzzer_Beep (uint8 Tone)
 
   <bb 6> :
 <L3>:
+  Det_ReportError (304, 0, 1, 0);
 
   <bb 7> :
   return;

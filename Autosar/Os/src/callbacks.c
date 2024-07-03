@@ -33,9 +33,9 @@ void Task2_callback( void ) {
     uint8 i = 0;
     uint8 actual_event = 0; //Actual event of button.
 
-
     for ( i = 0; i < ButtonsControl_Ptr->Buttons; i++ ) { //Checking each button and its event detected.
-        actual_event =  HwIoAb_Buttons_GetEvent( i + 1 );   //Obtaining event of actual button.
+        actual_event =  HwIoAb_Buttons_GetEvent( i );   //Obtaining event of actual button.
+        
         if ( actual_event != HWIOAB_BTN_EVENT_IDLE ) {  //A click was detected.
             switch ( i ) {    
                 case BTN_1: 
@@ -57,7 +57,7 @@ void Task2_callback( void ) {
                             HwIoAb_Buzzer_Stop();
                             flags[i] = TRUE;
                         break;
-                        default:    //No click.
+                        default:    //Null event.
                         break;
                     }
                 break;
@@ -81,7 +81,7 @@ void Task2_callback( void ) {
                             HwIoAb_Buzzer_Stop();
                             flags[i] = TRUE;
                         break;
-                        default:    //No click.
+                        default:    //Null event.
                         break;
                     }
                 break;
@@ -106,7 +106,7 @@ void Task2_callback( void ) {
                                 HwIoAb_Buzzer_Stop();
                                 flags[i] = TRUE;
                             break;
-                            default:    //No click.
+                            default:    //Null event.
                             break;
                         }
                 break;

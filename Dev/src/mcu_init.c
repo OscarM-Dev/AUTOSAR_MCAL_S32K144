@@ -57,4 +57,6 @@ void EcuM_Init( void )
     //Configuring interleave for PTB1 and PTB13.
     Port_Ci_Port_Ip_SetMuxModeSel( IP_PORTB, 1, PORT_MUX_ADC_INTERLEAVE );
     Port_Ci_Port_Ip_SetMuxModeSel( IP_PORTB, 13, PORT_MUX_ADC_INTERLEAVE );
+
+    IoHwAb_Init0( NULL_PTR );  //Initializing IO hardware abstractions.
 }

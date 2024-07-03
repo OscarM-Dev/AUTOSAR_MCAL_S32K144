@@ -3,7 +3,7 @@ Trivially needed symbols: main/56 Queue1/55
 
 Initial Symbol table:
 
-Scheduler_MainFunction/62 (Scheduler_MainFunction) @06a58b60
+Scheduler_MainFunction/61 (Scheduler_MainFunction) @0730ae00
   Type: function
   Visibility: external public
   References: 
@@ -11,14 +11,14 @@ Scheduler_MainFunction/62 (Scheduler_MainFunction) @06a58b60
   Function flags:
   Called by: main/56 
   Calls: 
-Scheduler_Control/61 (Scheduler_Control) @06a55e10
+Scheduler_Control/60 (Scheduler_Control) @0730c000
   Type: variable
   Visibility: external public
   References: 
   Referring: main/56 (addr) 
   Availability: not-ready
   Varpool flags:
-Scheduler_Init/60 (Scheduler_Init) @06a58a80
+Scheduler_Init/59 (Scheduler_Init) @0730ad20
   Type: function
   Visibility: external public
   References: 
@@ -26,7 +26,7 @@ Scheduler_Init/60 (Scheduler_Init) @06a58a80
   Function flags:
   Called by: main/56 
   Calls: 
-SEGGER_RTT_Init/59 (SEGGER_RTT_Init) @06a589a0
+SEGGER_RTT_Init/58 (SEGGER_RTT_Init) @0730ac40
   Type: function
   Visibility: external public
   References: 
@@ -34,7 +34,7 @@ SEGGER_RTT_Init/59 (SEGGER_RTT_Init) @06a589a0
   Function flags:
   Called by: main/56 
   Calls: 
-IoHwAb_Init0/58 (IoHwAb_Init0) @06a588c0
+EcuM_Init/57 (EcuM_Init) @0730ab60
   Type: function
   Visibility: external public
   References: 
@@ -42,32 +42,24 @@ IoHwAb_Init0/58 (IoHwAb_Init0) @06a588c0
   Function flags:
   Called by: main/56 
   Calls: 
-EcuM_Init/57 (EcuM_Init) @06a587e0
-  Type: function
-  Visibility: external public
-  References: 
-  Referring: 
-  Function flags:
-  Called by: main/56 
-  Calls: 
-main/56 (main) @06a58380
+main/56 (main) @0730a700
   Type: function definition analyzed
   Visibility: force_output no_reorder public
   Aux: @01981040
-  References: Scheduler_Control/61 (addr) 
+  References: Scheduler_Control/60 (addr) 
   Referring: 
   Function flags: body
   Called by: 
-  Calls: Scheduler_MainFunction/62 Scheduler_Init/60 SEGGER_RTT_Init/59 IoHwAb_Init0/58 EcuM_Init/57 
-Queue1/55 (Queue1) @06a557e0
+  Calls: Scheduler_MainFunction/61 Scheduler_Init/59 SEGGER_RTT_Init/58 EcuM_Init/57 
+Queue1/55 (Queue1) @073079d8
   Type: variable definition analyzed
   Visibility: force_output no_reorder public
-  Aux: @06a58380
+  Aux: @0730a700
   References: 
   Referring: 
   Availability: not-ready
   Varpool flags:
-Bfx_CountLeadingZeros_u8/54 (Bfx_CountLeadingZeros_u8) @072c7e00
+Bfx_CountLeadingZeros_u8/54 (Bfx_CountLeadingZeros_u8) @072fd1c0
   Type: function definition
   Visibility: no_reorder
   References: 
@@ -75,7 +67,7 @@ Bfx_CountLeadingZeros_u8/54 (Bfx_CountLeadingZeros_u8) @072c7e00
   Function flags:
   Called by: 
   Calls: 
-Bfx_CountLeadingSigns_s8/53 (Bfx_CountLeadingSigns_s8) @072c7b60
+Bfx_CountLeadingSigns_s8/53 (Bfx_CountLeadingSigns_s8) @072f6ee0
   Type: function definition
   Visibility: no_reorder
   References: 
@@ -83,7 +75,7 @@ Bfx_CountLeadingSigns_s8/53 (Bfx_CountLeadingSigns_s8) @072c7b60
   Function flags:
   Called by: 
   Calls: 
-Bfx_CountLeadingOnes_u8/52 (Bfx_CountLeadingOnes_u8) @072c78c0
+Bfx_CountLeadingOnes_u8/52 (Bfx_CountLeadingOnes_u8) @072f6c40
   Type: function definition
   Visibility: no_reorder
   References: 
@@ -91,7 +83,7 @@ Bfx_CountLeadingOnes_u8/52 (Bfx_CountLeadingOnes_u8) @072c78c0
   Function flags:
   Called by: 
   Calls: 
-Bfx_ShiftBitSat_s8s8_s8/51 (Bfx_ShiftBitSat_s8s8_s8) @072c7620
+Bfx_ShiftBitSat_s8s8_s8/51 (Bfx_ShiftBitSat_s8s8_s8) @072f69a0
   Type: function definition
   Visibility: no_reorder
   References: 
@@ -99,7 +91,7 @@ Bfx_ShiftBitSat_s8s8_s8/51 (Bfx_ShiftBitSat_s8s8_s8) @072c7620
   Function flags:
   Called by: 
   Calls: 
-Bfx_ShiftBitSat_u8s8_u8/50 (Bfx_ShiftBitSat_u8s8_u8) @072c7380
+Bfx_ShiftBitSat_u8s8_u8/50 (Bfx_ShiftBitSat_u8s8_u8) @072f6700
   Type: function definition
   Visibility: no_reorder
   References: 
@@ -107,7 +99,7 @@ Bfx_ShiftBitSat_u8s8_u8/50 (Bfx_ShiftBitSat_u8s8_u8) @072c7380
   Function flags:
   Called by: 
   Calls: 
-Bfx_PutBits_u8u8u8u8/49 (Bfx_PutBits_u8u8u8u8) @072c70e0
+Bfx_PutBits_u8u8u8u8/49 (Bfx_PutBits_u8u8u8u8) @072f6460
   Type: function definition
   Visibility: no_reorder
   References: 
@@ -115,7 +107,7 @@ Bfx_PutBits_u8u8u8u8/49 (Bfx_PutBits_u8u8u8u8) @072c70e0
   Function flags:
   Called by: 
   Calls: 
-Bfx_PutBitsMask_u8u8u8/48 (Bfx_PutBitsMask_u8u8u8) @072c1e00
+Bfx_PutBitsMask_u8u8u8/48 (Bfx_PutBitsMask_u8u8u8) @072f61c0
   Type: function definition
   Visibility: no_reorder
   References: 
@@ -123,7 +115,7 @@ Bfx_PutBitsMask_u8u8u8/48 (Bfx_PutBitsMask_u8u8u8) @072c1e00
   Function flags:
   Called by: 
   Calls: 
-Bfx_PutBit_u8u8u8/47 (Bfx_PutBit_u8u8u8) @072c1b60
+Bfx_PutBit_u8u8u8/47 (Bfx_PutBit_u8u8u8) @072f2ee0
   Type: function definition
   Visibility: no_reorder
   References: 
@@ -131,7 +123,7 @@ Bfx_PutBit_u8u8u8/47 (Bfx_PutBit_u8u8u8) @072c1b60
   Function flags:
   Called by: 
   Calls: 
-Bfx_CopyBit_u8u8u8u8/46 (Bfx_CopyBit_u8u8u8u8) @072c18c0
+Bfx_CopyBit_u8u8u8u8/46 (Bfx_CopyBit_u8u8u8u8) @072f2c40
   Type: function definition
   Visibility: no_reorder
   References: 
@@ -139,7 +131,7 @@ Bfx_CopyBit_u8u8u8u8/46 (Bfx_CopyBit_u8u8u8u8) @072c18c0
   Function flags:
   Called by: 
   Calls: 
-Bfx_RotBitLt_u8u8/45 (Bfx_RotBitLt_u8u8) @072c1620
+Bfx_RotBitLt_u8u8/45 (Bfx_RotBitLt_u8u8) @072f29a0
   Type: function definition
   Visibility: no_reorder
   References: 
@@ -147,7 +139,7 @@ Bfx_RotBitLt_u8u8/45 (Bfx_RotBitLt_u8u8) @072c1620
   Function flags:
   Called by: 
   Calls: 
-Bfx_RotBitRt_u8u8/44 (Bfx_RotBitRt_u8u8) @072c1380
+Bfx_RotBitRt_u8u8/44 (Bfx_RotBitRt_u8u8) @072f2700
   Type: function definition
   Visibility: no_reorder
   References: 
@@ -155,7 +147,7 @@ Bfx_RotBitRt_u8u8/44 (Bfx_RotBitRt_u8u8) @072c1380
   Function flags:
   Called by: 
   Calls: 
-Bfx_ShiftBitLt_u8u8/43 (Bfx_ShiftBitLt_u8u8) @072c10e0
+Bfx_ShiftBitLt_u8u8/43 (Bfx_ShiftBitLt_u8u8) @072f2460
   Type: function definition
   Visibility: no_reorder
   References: 
@@ -163,7 +155,7 @@ Bfx_ShiftBitLt_u8u8/43 (Bfx_ShiftBitLt_u8u8) @072c10e0
   Function flags:
   Called by: 
   Calls: 
-Bfx_ShiftBitRt_u8u8/42 (Bfx_ShiftBitRt_u8u8) @072bee00
+Bfx_ShiftBitRt_u8u8/42 (Bfx_ShiftBitRt_u8u8) @072f21c0
   Type: function definition
   Visibility: no_reorder
   References: 
@@ -171,7 +163,7 @@ Bfx_ShiftBitRt_u8u8/42 (Bfx_ShiftBitRt_u8u8) @072bee00
   Function flags:
   Called by: 
   Calls: 
-Bfx_ToggleBitMask_u8u8/41 (Bfx_ToggleBitMask_u8u8) @072beb60
+Bfx_ToggleBitMask_u8u8/41 (Bfx_ToggleBitMask_u8u8) @072eeee0
   Type: function definition
   Visibility: no_reorder
   References: 
@@ -179,7 +171,7 @@ Bfx_ToggleBitMask_u8u8/41 (Bfx_ToggleBitMask_u8u8) @072beb60
   Function flags:
   Called by: 
   Calls: 
-Bfx_ToggleBits_u8/40 (Bfx_ToggleBits_u8) @072be8c0
+Bfx_ToggleBits_u8/40 (Bfx_ToggleBits_u8) @072eec40
   Type: function definition
   Visibility: no_reorder
   References: 
@@ -187,7 +179,7 @@ Bfx_ToggleBits_u8/40 (Bfx_ToggleBits_u8) @072be8c0
   Function flags:
   Called by: 
   Calls: 
-Bfx_TstParityEven_u8_u8/39 (Bfx_TstParityEven_u8_u8) @072be620
+Bfx_TstParityEven_u8_u8/39 (Bfx_TstParityEven_u8_u8) @072ee9a0
   Type: function definition
   Visibility: no_reorder
   References: 
@@ -195,7 +187,7 @@ Bfx_TstParityEven_u8_u8/39 (Bfx_TstParityEven_u8_u8) @072be620
   Function flags:
   Called by: 
   Calls: 
-Bfx_TstBitLnMask_u8u8_u8/38 (Bfx_TstBitLnMask_u8u8_u8) @072be380
+Bfx_TstBitLnMask_u8u8_u8/38 (Bfx_TstBitLnMask_u8u8_u8) @072ee700
   Type: function definition
   Visibility: no_reorder
   References: 
@@ -203,7 +195,7 @@ Bfx_TstBitLnMask_u8u8_u8/38 (Bfx_TstBitLnMask_u8u8_u8) @072be380
   Function flags:
   Called by: 
   Calls: 
-Bfx_TstBitMask_u8u8_u8/37 (Bfx_TstBitMask_u8u8_u8) @072be0e0
+Bfx_TstBitMask_u8u8_u8/37 (Bfx_TstBitMask_u8u8_u8) @072ee460
   Type: function definition
   Visibility: no_reorder
   References: 
@@ -211,7 +203,7 @@ Bfx_TstBitMask_u8u8_u8/37 (Bfx_TstBitMask_u8u8_u8) @072be0e0
   Function flags:
   Called by: 
   Calls: 
-Bfx_ClrBitMask_u8u8/36 (Bfx_ClrBitMask_u8u8) @072bae00
+Bfx_ClrBitMask_u8u8/36 (Bfx_ClrBitMask_u8u8) @072ee1c0
   Type: function definition
   Visibility: no_reorder
   References: 
@@ -219,7 +211,7 @@ Bfx_ClrBitMask_u8u8/36 (Bfx_ClrBitMask_u8u8) @072bae00
   Function flags:
   Called by: 
   Calls: 
-Bfx_SetBitMask_u8u8/35 (Bfx_SetBitMask_u8u8) @072bab60
+Bfx_SetBitMask_u8u8/35 (Bfx_SetBitMask_u8u8) @072e9ee0
   Type: function definition
   Visibility: no_reorder
   References: 
@@ -227,7 +219,7 @@ Bfx_SetBitMask_u8u8/35 (Bfx_SetBitMask_u8u8) @072bab60
   Function flags:
   Called by: 
   Calls: 
-Bfx_GetBits_u8u8u8_u8/34 (Bfx_GetBits_u8u8u8_u8) @072ba8c0
+Bfx_GetBits_u8u8u8_u8/34 (Bfx_GetBits_u8u8u8_u8) @072e9c40
   Type: function definition
   Visibility: no_reorder
   References: 
@@ -235,7 +227,7 @@ Bfx_GetBits_u8u8u8_u8/34 (Bfx_GetBits_u8u8u8_u8) @072ba8c0
   Function flags:
   Called by: 
   Calls: 
-Bfx_SetBits_u8u8u8u8/33 (Bfx_SetBits_u8u8u8u8) @072ba620
+Bfx_SetBits_u8u8u8u8/33 (Bfx_SetBits_u8u8u8u8) @072e99a0
   Type: function definition
   Visibility: no_reorder
   References: 
@@ -243,7 +235,7 @@ Bfx_SetBits_u8u8u8u8/33 (Bfx_SetBits_u8u8u8u8) @072ba620
   Function flags:
   Called by: 
   Calls: 
-Bfx_GetBit_u8u8_u8/32 (Bfx_GetBit_u8u8_u8) @072ba380
+Bfx_GetBit_u8u8_u8/32 (Bfx_GetBit_u8u8_u8) @072e9700
   Type: function definition
   Visibility: no_reorder
   References: 
@@ -251,7 +243,7 @@ Bfx_GetBit_u8u8_u8/32 (Bfx_GetBit_u8u8_u8) @072ba380
   Function flags:
   Called by: 
   Calls: 
-Bfx_ClrBit_u8u8/31 (Bfx_ClrBit_u8u8) @072ba0e0
+Bfx_ClrBit_u8u8/31 (Bfx_ClrBit_u8u8) @072e9460
   Type: function definition
   Visibility: no_reorder
   References: 
@@ -259,7 +251,7 @@ Bfx_ClrBit_u8u8/31 (Bfx_ClrBit_u8u8) @072ba0e0
   Function flags:
   Called by: 
   Calls: 
-Bfx_SetBit_u8u8/30 (Bfx_SetBit_u8u8) @072b2e00
+Bfx_SetBit_u8u8/30 (Bfx_SetBit_u8u8) @072e91c0
   Type: function definition
   Visibility: no_reorder
   References: 
@@ -267,7 +259,7 @@ Bfx_SetBit_u8u8/30 (Bfx_SetBit_u8u8) @072b2e00
   Function flags:
   Called by: 
   Calls: 
-Bfx_CountLeadingZeros_u32/29 (Bfx_CountLeadingZeros_u32) @072b2b60
+Bfx_CountLeadingZeros_u32/29 (Bfx_CountLeadingZeros_u32) @072e2ee0
   Type: function definition
   Visibility: no_reorder
   References: 
@@ -275,7 +267,7 @@ Bfx_CountLeadingZeros_u32/29 (Bfx_CountLeadingZeros_u32) @072b2b60
   Function flags:
   Called by: 
   Calls: 
-Bfx_CountLeadingSigns_s32/28 (Bfx_CountLeadingSigns_s32) @072b28c0
+Bfx_CountLeadingSigns_s32/28 (Bfx_CountLeadingSigns_s32) @072e2c40
   Type: function definition
   Visibility: no_reorder
   References: 
@@ -283,7 +275,7 @@ Bfx_CountLeadingSigns_s32/28 (Bfx_CountLeadingSigns_s32) @072b28c0
   Function flags:
   Called by: 
   Calls: 
-Bfx_CountLeadingOnes_u32/27 (Bfx_CountLeadingOnes_u32) @072b2620
+Bfx_CountLeadingOnes_u32/27 (Bfx_CountLeadingOnes_u32) @072e29a0
   Type: function definition
   Visibility: no_reorder
   References: 
@@ -291,7 +283,7 @@ Bfx_CountLeadingOnes_u32/27 (Bfx_CountLeadingOnes_u32) @072b2620
   Function flags:
   Called by: 
   Calls: 
-Bfx_ShiftBitSat_s32s8_s32/26 (Bfx_ShiftBitSat_s32s8_s32) @072b2380
+Bfx_ShiftBitSat_s32s8_s32/26 (Bfx_ShiftBitSat_s32s8_s32) @072e2700
   Type: function definition
   Visibility: no_reorder
   References: 
@@ -299,7 +291,7 @@ Bfx_ShiftBitSat_s32s8_s32/26 (Bfx_ShiftBitSat_s32s8_s32) @072b2380
   Function flags:
   Called by: 
   Calls: 
-Bfx_ShiftBitSat_u32s8_u32/25 (Bfx_ShiftBitSat_u32s8_u32) @072b20e0
+Bfx_ShiftBitSat_u32s8_u32/25 (Bfx_ShiftBitSat_u32s8_u32) @072e2460
   Type: function definition
   Visibility: no_reorder
   References: 
@@ -307,7 +299,7 @@ Bfx_ShiftBitSat_u32s8_u32/25 (Bfx_ShiftBitSat_u32s8_u32) @072b20e0
   Function flags:
   Called by: 
   Calls: 
-Bfx_PutBits_u32u8u8u32/24 (Bfx_PutBits_u32u8u8u32) @0729ce00
+Bfx_PutBits_u32u8u8u32/24 (Bfx_PutBits_u32u8u8u32) @072e21c0
   Type: function definition
   Visibility: no_reorder
   References: 
@@ -315,7 +307,7 @@ Bfx_PutBits_u32u8u8u32/24 (Bfx_PutBits_u32u8u8u32) @0729ce00
   Function flags:
   Called by: 
   Calls: 
-Bfx_PutBitsMask_u32u32u32/23 (Bfx_PutBitsMask_u32u32u32) @0729cb60
+Bfx_PutBitsMask_u32u32u32/23 (Bfx_PutBitsMask_u32u32u32) @072ccee0
   Type: function definition
   Visibility: no_reorder
   References: 
@@ -323,7 +315,7 @@ Bfx_PutBitsMask_u32u32u32/23 (Bfx_PutBitsMask_u32u32u32) @0729cb60
   Function flags:
   Called by: 
   Calls: 
-Bfx_PutBit_u32u8u8/22 (Bfx_PutBit_u32u8u8) @0729c8c0
+Bfx_PutBit_u32u8u8/22 (Bfx_PutBit_u32u8u8) @072ccc40
   Type: function definition
   Visibility: no_reorder
   References: 
@@ -331,7 +323,7 @@ Bfx_PutBit_u32u8u8/22 (Bfx_PutBit_u32u8u8) @0729c8c0
   Function flags:
   Called by: 
   Calls: 
-Bfx_CopyBit_u32u8u32u8/21 (Bfx_CopyBit_u32u8u32u8) @0729c620
+Bfx_CopyBit_u32u8u32u8/21 (Bfx_CopyBit_u32u8u32u8) @072cc9a0
   Type: function definition
   Visibility: no_reorder
   References: 
@@ -339,7 +331,7 @@ Bfx_CopyBit_u32u8u32u8/21 (Bfx_CopyBit_u32u8u32u8) @0729c620
   Function flags:
   Called by: 
   Calls: 
-Bfx_RotBitLt_u32u8/20 (Bfx_RotBitLt_u32u8) @0729c380
+Bfx_RotBitLt_u32u8/20 (Bfx_RotBitLt_u32u8) @072cc700
   Type: function definition
   Visibility: no_reorder
   References: 
@@ -347,7 +339,7 @@ Bfx_RotBitLt_u32u8/20 (Bfx_RotBitLt_u32u8) @0729c380
   Function flags:
   Called by: 
   Calls: 
-Bfx_RotBitRt_u32u8/19 (Bfx_RotBitRt_u32u8) @0729c0e0
+Bfx_RotBitRt_u32u8/19 (Bfx_RotBitRt_u32u8) @072cc460
   Type: function definition
   Visibility: no_reorder
   References: 
@@ -355,7 +347,7 @@ Bfx_RotBitRt_u32u8/19 (Bfx_RotBitRt_u32u8) @0729c0e0
   Function flags:
   Called by: 
   Calls: 
-Bfx_ShiftBitLt_u32u8/18 (Bfx_ShiftBitLt_u32u8) @07297e00
+Bfx_ShiftBitLt_u32u8/18 (Bfx_ShiftBitLt_u32u8) @072cc1c0
   Type: function definition
   Visibility: no_reorder
   References: 
@@ -363,7 +355,7 @@ Bfx_ShiftBitLt_u32u8/18 (Bfx_ShiftBitLt_u32u8) @07297e00
   Function flags:
   Called by: 
   Calls: 
-Bfx_ShiftBitRt_u32u8/17 (Bfx_ShiftBitRt_u32u8) @07297b60
+Bfx_ShiftBitRt_u32u8/17 (Bfx_ShiftBitRt_u32u8) @072c7ee0
   Type: function definition
   Visibility: no_reorder
   References: 
@@ -371,7 +363,7 @@ Bfx_ShiftBitRt_u32u8/17 (Bfx_ShiftBitRt_u32u8) @07297b60
   Function flags:
   Called by: 
   Calls: 
-Bfx_ToggleBitMask_u32u32/16 (Bfx_ToggleBitMask_u32u32) @072978c0
+Bfx_ToggleBitMask_u32u32/16 (Bfx_ToggleBitMask_u32u32) @072c7c40
   Type: function definition
   Visibility: no_reorder
   References: 
@@ -379,7 +371,7 @@ Bfx_ToggleBitMask_u32u32/16 (Bfx_ToggleBitMask_u32u32) @072978c0
   Function flags:
   Called by: 
   Calls: 
-Bfx_ToggleBits_u32/15 (Bfx_ToggleBits_u32) @07297620
+Bfx_ToggleBits_u32/15 (Bfx_ToggleBits_u32) @072c79a0
   Type: function definition
   Visibility: no_reorder
   References: 
@@ -387,7 +379,7 @@ Bfx_ToggleBits_u32/15 (Bfx_ToggleBits_u32) @07297620
   Function flags:
   Called by: 
   Calls: 
-Bfx_TstParityEven_u32_u8/14 (Bfx_TstParityEven_u32_u8) @07297380
+Bfx_TstParityEven_u32_u8/14 (Bfx_TstParityEven_u32_u8) @072c7700
   Type: function definition
   Visibility: no_reorder
   References: 
@@ -395,7 +387,7 @@ Bfx_TstParityEven_u32_u8/14 (Bfx_TstParityEven_u32_u8) @07297380
   Function flags:
   Called by: 
   Calls: 
-Bfx_TstBitLnMask_u32u32_u8/13 (Bfx_TstBitLnMask_u32u32_u8) @072970e0
+Bfx_TstBitLnMask_u32u32_u8/13 (Bfx_TstBitLnMask_u32u32_u8) @072c7460
   Type: function definition
   Visibility: no_reorder
   References: 
@@ -403,7 +395,7 @@ Bfx_TstBitLnMask_u32u32_u8/13 (Bfx_TstBitLnMask_u32u32_u8) @072970e0
   Function flags:
   Called by: 
   Calls: 
-Bfx_TstBitMask_u32u32_u8/12 (Bfx_TstBitMask_u32u32_u8) @07292e00
+Bfx_TstBitMask_u32u32_u8/12 (Bfx_TstBitMask_u32u32_u8) @072c71c0
   Type: function definition
   Visibility: no_reorder
   References: 
@@ -411,7 +403,7 @@ Bfx_TstBitMask_u32u32_u8/12 (Bfx_TstBitMask_u32u32_u8) @07292e00
   Function flags:
   Called by: 
   Calls: 
-Bfx_ClrBitMask_u32u32/11 (Bfx_ClrBitMask_u32u32) @07292b60
+Bfx_ClrBitMask_u32u32/11 (Bfx_ClrBitMask_u32u32) @072c3ee0
   Type: function definition
   Visibility: no_reorder
   References: 
@@ -419,7 +411,7 @@ Bfx_ClrBitMask_u32u32/11 (Bfx_ClrBitMask_u32u32) @07292b60
   Function flags:
   Called by: 
   Calls: 
-Bfx_SetBitMask_u32u32/10 (Bfx_SetBitMask_u32u32) @072928c0
+Bfx_SetBitMask_u32u32/10 (Bfx_SetBitMask_u32u32) @072c3c40
   Type: function definition
   Visibility: no_reorder
   References: 
@@ -427,7 +419,7 @@ Bfx_SetBitMask_u32u32/10 (Bfx_SetBitMask_u32u32) @072928c0
   Function flags:
   Called by: 
   Calls: 
-Bfx_GetBits_u32u8u8_u32/9 (Bfx_GetBits_u32u8u8_u32) @07292620
+Bfx_GetBits_u32u8u8_u32/9 (Bfx_GetBits_u32u8u8_u32) @072c39a0
   Type: function definition
   Visibility: no_reorder
   References: 
@@ -435,7 +427,7 @@ Bfx_GetBits_u32u8u8_u32/9 (Bfx_GetBits_u32u8u8_u32) @07292620
   Function flags:
   Called by: 
   Calls: 
-Bfx_SetBits_u32u8u8u8/8 (Bfx_SetBits_u32u8u8u8) @07292380
+Bfx_SetBits_u32u8u8u8/8 (Bfx_SetBits_u32u8u8u8) @072c3700
   Type: function definition
   Visibility: no_reorder
   References: 
@@ -443,7 +435,7 @@ Bfx_SetBits_u32u8u8u8/8 (Bfx_SetBits_u32u8u8u8) @07292380
   Function flags:
   Called by: 
   Calls: 
-Bfx_GetBit_u32u8_u8/7 (Bfx_GetBit_u32u8_u8) @072920e0
+Bfx_GetBit_u32u8_u8/7 (Bfx_GetBit_u32u8_u8) @072c3460
   Type: function definition
   Visibility: no_reorder
   References: 
@@ -451,7 +443,7 @@ Bfx_GetBit_u32u8_u8/7 (Bfx_GetBit_u32u8_u8) @072920e0
   Function flags:
   Called by: 
   Calls: 
-Bfx_ClrBit_u32u8/6 (Bfx_ClrBit_u32u8) @0728be00
+Bfx_ClrBit_u32u8/6 (Bfx_ClrBit_u32u8) @072c31c0
   Type: function definition
   Visibility: no_reorder
   References: 
@@ -459,7 +451,7 @@ Bfx_ClrBit_u32u8/6 (Bfx_ClrBit_u32u8) @0728be00
   Function flags:
   Called by: 
   Calls: 
-Bfx_SetBit_u32u8/5 (Bfx_SetBit_u32u8) @0728bb60
+Bfx_SetBit_u32u8/5 (Bfx_SetBit_u32u8) @072bbee0
   Type: function definition
   Visibility: no_reorder
   References: 
@@ -467,7 +459,7 @@ Bfx_SetBit_u32u8/5 (Bfx_SetBit_u32u8) @0728bb60
   Function flags:
   Called by: 
   Calls: 
-Platform_Ipw_InstallIrqHandler/4 (Platform_Ipw_InstallIrqHandler) @06b811c0
+Platform_Ipw_InstallIrqHandler/4 (Platform_Ipw_InstallIrqHandler) @06c011c0
   Type: function definition
   Visibility: no_reorder
   References: 
@@ -475,7 +467,7 @@ Platform_Ipw_InstallIrqHandler/4 (Platform_Ipw_InstallIrqHandler) @06b811c0
   Function flags:
   Called by: 
   Calls: 
-Platform_Ipw_GetIrqPriority/3 (Platform_Ipw_GetIrqPriority) @06b7a700
+Platform_Ipw_GetIrqPriority/3 (Platform_Ipw_GetIrqPriority) @06bfa700
   Type: function definition
   Visibility: no_reorder
   References: 
@@ -483,7 +475,7 @@ Platform_Ipw_GetIrqPriority/3 (Platform_Ipw_GetIrqPriority) @06b7a700
   Function flags:
   Called by: 
   Calls: 
-Platform_Ipw_SetIrqPriority/2 (Platform_Ipw_SetIrqPriority) @06b7ad20
+Platform_Ipw_SetIrqPriority/2 (Platform_Ipw_SetIrqPriority) @06bfad20
   Type: function definition
   Visibility: no_reorder
   References: 
@@ -491,7 +483,7 @@ Platform_Ipw_SetIrqPriority/2 (Platform_Ipw_SetIrqPriority) @06b7ad20
   Function flags:
   Called by: 
   Calls: 
-Platform_Ipw_SetIrq/1 (Platform_Ipw_SetIrq) @06b7aa80
+Platform_Ipw_SetIrq/1 (Platform_Ipw_SetIrq) @06bfaa80
   Type: function definition
   Visibility: no_reorder
   References: 
@@ -499,7 +491,7 @@ Platform_Ipw_SetIrq/1 (Platform_Ipw_SetIrq) @06b7aa80
   Function flags:
   Called by: 
   Calls: 
-DevAssert/0 (DevAssert) @06e58e00
+DevAssert/0 (DevAssert) @06ec0e00
   Type: function definition
   Visibility: no_reorder
   References: 
@@ -512,7 +504,7 @@ Removing unused symbols: Bfx_CountLeadingZeros_u8/54 Bfx_CountLeadingSigns_s8/53
 
 Reclaimed Symbol table:
 
-Scheduler_MainFunction/62 (Scheduler_MainFunction) @06a58b60
+Scheduler_MainFunction/61 (Scheduler_MainFunction) @0730ae00
   Type: function
   Visibility: external public
   References: 
@@ -520,14 +512,14 @@ Scheduler_MainFunction/62 (Scheduler_MainFunction) @06a58b60
   Function flags:
   Called by: main/56 
   Calls: 
-Scheduler_Control/61 (Scheduler_Control) @06a55e10
+Scheduler_Control/60 (Scheduler_Control) @0730c000
   Type: variable
   Visibility: external public
   References: 
   Referring: main/56 (addr) 
   Availability: not-ready
   Varpool flags:
-Scheduler_Init/60 (Scheduler_Init) @06a58a80
+Scheduler_Init/59 (Scheduler_Init) @0730ad20
   Type: function
   Visibility: external public
   References: 
@@ -535,7 +527,7 @@ Scheduler_Init/60 (Scheduler_Init) @06a58a80
   Function flags:
   Called by: main/56 
   Calls: 
-SEGGER_RTT_Init/59 (SEGGER_RTT_Init) @06a589a0
+SEGGER_RTT_Init/58 (SEGGER_RTT_Init) @0730ac40
   Type: function
   Visibility: external public
   References: 
@@ -543,7 +535,7 @@ SEGGER_RTT_Init/59 (SEGGER_RTT_Init) @06a589a0
   Function flags:
   Called by: main/56 
   Calls: 
-IoHwAb_Init0/58 (IoHwAb_Init0) @06a588c0
+EcuM_Init/57 (EcuM_Init) @0730ab60
   Type: function
   Visibility: external public
   References: 
@@ -551,23 +543,15 @@ IoHwAb_Init0/58 (IoHwAb_Init0) @06a588c0
   Function flags:
   Called by: main/56 
   Calls: 
-EcuM_Init/57 (EcuM_Init) @06a587e0
-  Type: function
-  Visibility: external public
-  References: 
-  Referring: 
-  Function flags:
-  Called by: main/56 
-  Calls: 
-main/56 (main) @06a58380
+main/56 (main) @0730a700
   Type: function definition analyzed
   Visibility: force_output no_reorder public
-  References: Scheduler_Control/61 (addr) 
+  References: Scheduler_Control/60 (addr) 
   Referring: 
   Function flags: body
   Called by: 
-  Calls: Scheduler_MainFunction/62 Scheduler_Init/60 SEGGER_RTT_Init/59 IoHwAb_Init0/58 EcuM_Init/57 
-Queue1/55 (Queue1) @06a557e0
+  Calls: Scheduler_MainFunction/61 Scheduler_Init/59 SEGGER_RTT_Init/58 EcuM_Init/57 
+Queue1/55 (Queue1) @073079d8
   Type: variable definition analyzed
   Visibility: force_output no_reorder public
   References: 
@@ -578,7 +562,7 @@ Queue1/55 (Queue1) @06a557e0
 
 Initial Symbol table:
 
-Scheduler_MainFunction/62 (Scheduler_MainFunction) @06a58b60
+Scheduler_MainFunction/61 (Scheduler_MainFunction) @0730ae00
   Type: function
   Visibility: external public
   References: 
@@ -586,14 +570,14 @@ Scheduler_MainFunction/62 (Scheduler_MainFunction) @06a58b60
   Function flags:
   Called by: main/56 
   Calls: 
-Scheduler_Control/61 (Scheduler_Control) @06a55e10
+Scheduler_Control/60 (Scheduler_Control) @0730c000
   Type: variable
   Visibility: external public
   References: 
   Referring: main/56 (addr) 
   Availability: not-ready
   Varpool flags:
-Scheduler_Init/60 (Scheduler_Init) @06a58a80
+Scheduler_Init/59 (Scheduler_Init) @0730ad20
   Type: function
   Visibility: external public
   References: 
@@ -601,7 +585,7 @@ Scheduler_Init/60 (Scheduler_Init) @06a58a80
   Function flags:
   Called by: main/56 
   Calls: 
-SEGGER_RTT_Init/59 (SEGGER_RTT_Init) @06a589a0
+SEGGER_RTT_Init/58 (SEGGER_RTT_Init) @0730ac40
   Type: function
   Visibility: external public
   References: 
@@ -609,7 +593,7 @@ SEGGER_RTT_Init/59 (SEGGER_RTT_Init) @06a589a0
   Function flags:
   Called by: main/56 
   Calls: 
-IoHwAb_Init0/58 (IoHwAb_Init0) @06a588c0
+EcuM_Init/57 (EcuM_Init) @0730ab60
   Type: function
   Visibility: external public
   References: 
@@ -617,23 +601,15 @@ IoHwAb_Init0/58 (IoHwAb_Init0) @06a588c0
   Function flags:
   Called by: main/56 
   Calls: 
-EcuM_Init/57 (EcuM_Init) @06a587e0
-  Type: function
-  Visibility: external public
-  References: 
-  Referring: 
-  Function flags:
-  Called by: main/56 
-  Calls: 
-main/56 (main) @06a58380
+main/56 (main) @0730a700
   Type: function definition analyzed
   Visibility: force_output no_reorder public
-  References: Scheduler_Control/61 (addr) 
+  References: Scheduler_Control/60 (addr) 
   Referring: 
   Function flags: body
   Called by: 
-  Calls: Scheduler_MainFunction/62 Scheduler_Init/60 SEGGER_RTT_Init/59 IoHwAb_Init0/58 EcuM_Init/57 
-Queue1/55 (Queue1) @06a557e0
+  Calls: Scheduler_MainFunction/61 Scheduler_Init/59 SEGGER_RTT_Init/58 EcuM_Init/57 
+Queue1/55 (Queue1) @073079d8
   Type: variable definition analyzed
   Visibility: force_output no_reorder public
   References: 
@@ -645,7 +621,7 @@ Removing unused symbols:
 
 Reclaimed Symbol table:
 
-Scheduler_MainFunction/62 (Scheduler_MainFunction) @06a58b60
+Scheduler_MainFunction/61 (Scheduler_MainFunction) @0730ae00
   Type: function
   Visibility: external public
   References: 
@@ -653,14 +629,14 @@ Scheduler_MainFunction/62 (Scheduler_MainFunction) @06a58b60
   Function flags:
   Called by: main/56 
   Calls: 
-Scheduler_Control/61 (Scheduler_Control) @06a55e10
+Scheduler_Control/60 (Scheduler_Control) @0730c000
   Type: variable
   Visibility: external public
   References: 
   Referring: main/56 (addr) 
   Availability: not-ready
   Varpool flags:
-Scheduler_Init/60 (Scheduler_Init) @06a58a80
+Scheduler_Init/59 (Scheduler_Init) @0730ad20
   Type: function
   Visibility: external public
   References: 
@@ -668,7 +644,7 @@ Scheduler_Init/60 (Scheduler_Init) @06a58a80
   Function flags:
   Called by: main/56 
   Calls: 
-SEGGER_RTT_Init/59 (SEGGER_RTT_Init) @06a589a0
+SEGGER_RTT_Init/58 (SEGGER_RTT_Init) @0730ac40
   Type: function
   Visibility: external public
   References: 
@@ -676,7 +652,7 @@ SEGGER_RTT_Init/59 (SEGGER_RTT_Init) @06a589a0
   Function flags:
   Called by: main/56 
   Calls: 
-IoHwAb_Init0/58 (IoHwAb_Init0) @06a588c0
+EcuM_Init/57 (EcuM_Init) @0730ab60
   Type: function
   Visibility: external public
   References: 
@@ -684,23 +660,15 @@ IoHwAb_Init0/58 (IoHwAb_Init0) @06a588c0
   Function flags:
   Called by: main/56 
   Calls: 
-EcuM_Init/57 (EcuM_Init) @06a587e0
-  Type: function
-  Visibility: external public
-  References: 
-  Referring: 
-  Function flags:
-  Called by: main/56 
-  Calls: 
-main/56 (main) @06a58380
+main/56 (main) @0730a700
   Type: function definition analyzed
   Visibility: force_output no_reorder public
-  References: Scheduler_Control/61 (addr) 
+  References: Scheduler_Control/60 (addr) 
   Referring: 
   Function flags: body
   Called by: 
-  Calls: Scheduler_MainFunction/62 Scheduler_Init/60 SEGGER_RTT_Init/59 IoHwAb_Init0/58 EcuM_Init/57 
-Queue1/55 (Queue1) @06a557e0
+  Calls: Scheduler_MainFunction/61 Scheduler_Init/59 SEGGER_RTT_Init/58 EcuM_Init/57 
+Queue1/55 (Queue1) @073079d8
   Type: variable definition analyzed
   Visibility: force_output no_reorder public
   References: 
@@ -713,7 +681,7 @@ Reclaiming variables:
 Clearing address taken flags:
 Optimized Symbol table:
 
-Scheduler_MainFunction/62 (Scheduler_MainFunction) @06a58b60
+Scheduler_MainFunction/61 (Scheduler_MainFunction) @0730ae00
   Type: function
   Visibility: external public
   References: 
@@ -722,7 +690,7 @@ Scheduler_MainFunction/62 (Scheduler_MainFunction) @06a58b60
   Function flags:
   Called by: main/56 
   Calls: 
-Scheduler_Control/61 (Scheduler_Control) @06a55e10
+Scheduler_Control/60 (Scheduler_Control) @0730c000
   Type: variable
   Body removed by symtab_remove_unreachable_nodes
   Visibility: external public
@@ -730,7 +698,7 @@ Scheduler_Control/61 (Scheduler_Control) @06a55e10
   Referring: main/56 (addr) 
   Availability: not_available
   Varpool flags:
-Scheduler_Init/60 (Scheduler_Init) @06a58a80
+Scheduler_Init/59 (Scheduler_Init) @0730ad20
   Type: function
   Visibility: external public
   References: 
@@ -739,7 +707,7 @@ Scheduler_Init/60 (Scheduler_Init) @06a58a80
   Function flags:
   Called by: main/56 
   Calls: 
-SEGGER_RTT_Init/59 (SEGGER_RTT_Init) @06a589a0
+SEGGER_RTT_Init/58 (SEGGER_RTT_Init) @0730ac40
   Type: function
   Visibility: external public
   References: 
@@ -748,7 +716,7 @@ SEGGER_RTT_Init/59 (SEGGER_RTT_Init) @06a589a0
   Function flags:
   Called by: main/56 
   Calls: 
-IoHwAb_Init0/58 (IoHwAb_Init0) @06a588c0
+EcuM_Init/57 (EcuM_Init) @0730ab60
   Type: function
   Visibility: external public
   References: 
@@ -757,25 +725,16 @@ IoHwAb_Init0/58 (IoHwAb_Init0) @06a588c0
   Function flags:
   Called by: main/56 
   Calls: 
-EcuM_Init/57 (EcuM_Init) @06a587e0
-  Type: function
-  Visibility: external public
-  References: 
-  Referring: 
-  Availability: not_available
-  Function flags:
-  Called by: main/56 
-  Calls: 
-main/56 (main) @06a58380
+main/56 (main) @0730a700
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
-  References: Scheduler_Control/61 (addr) 
+  References: Scheduler_Control/60 (addr) 
   Referring: 
   Availability: available
   Function flags: body
   Called by: 
-  Calls: Scheduler_MainFunction/62 Scheduler_Init/60 SEGGER_RTT_Init/59 IoHwAb_Init0/58 EcuM_Init/57 
-Queue1/55 (Queue1) @06a557e0
+  Calls: Scheduler_MainFunction/61 Scheduler_Init/59 SEGGER_RTT_Init/58 EcuM_Init/57 
+Queue1/55 (Queue1) @073079d8
   Type: variable definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: 
@@ -793,7 +752,7 @@ Removing variables:
 
 Final Symbol table:
 
-Scheduler_MainFunction/62 (Scheduler_MainFunction) @06a58b60
+Scheduler_MainFunction/61 (Scheduler_MainFunction) @0730ae00
   Type: function
   Visibility: external public
   References: 
@@ -802,7 +761,7 @@ Scheduler_MainFunction/62 (Scheduler_MainFunction) @06a58b60
   Function flags:
   Called by: 
   Calls: 
-Scheduler_Control/61 (Scheduler_Control) @06a55e10
+Scheduler_Control/60 (Scheduler_Control) @0730c000
   Type: variable
   Body removed by symtab_remove_unreachable_nodes
   Visibility: external public
@@ -810,7 +769,7 @@ Scheduler_Control/61 (Scheduler_Control) @06a55e10
   Referring: 
   Availability: not_available
   Varpool flags:
-Scheduler_Init/60 (Scheduler_Init) @06a58a80
+Scheduler_Init/59 (Scheduler_Init) @0730ad20
   Type: function
   Visibility: external public
   References: 
@@ -819,7 +778,7 @@ Scheduler_Init/60 (Scheduler_Init) @06a58a80
   Function flags:
   Called by: 
   Calls: 
-SEGGER_RTT_Init/59 (SEGGER_RTT_Init) @06a589a0
+SEGGER_RTT_Init/58 (SEGGER_RTT_Init) @0730ac40
   Type: function
   Visibility: external public
   References: 
@@ -828,7 +787,7 @@ SEGGER_RTT_Init/59 (SEGGER_RTT_Init) @06a589a0
   Function flags:
   Called by: 
   Calls: 
-IoHwAb_Init0/58 (IoHwAb_Init0) @06a588c0
+EcuM_Init/57 (EcuM_Init) @0730ab60
   Type: function
   Visibility: external public
   References: 
@@ -837,16 +796,7 @@ IoHwAb_Init0/58 (IoHwAb_Init0) @06a588c0
   Function flags:
   Called by: 
   Calls: 
-EcuM_Init/57 (EcuM_Init) @06a587e0
-  Type: function
-  Visibility: external public
-  References: 
-  Referring: 
-  Availability: not_available
-  Function flags:
-  Called by: 
-  Calls: 
-main/56 (main) @06a58380
+main/56 (main) @0730a700
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder asm_written public section:.text.main (implicit_section)
   References: 
@@ -855,7 +805,7 @@ main/56 (main) @06a58380
   Function flags:
   Called by: 
   Calls: 
-Queue1/55 (Queue1) @06a557e0
+Queue1/55 (Queue1) @073079d8
   Type: variable definition analyzed
   Visibility: force_output externally_visible no_reorder asm_written public section:.bss.Queue1 (implicit_section)
   Aux: @00000001

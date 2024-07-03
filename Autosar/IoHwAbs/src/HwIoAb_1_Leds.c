@@ -15,19 +15,20 @@
  */
 void HwIoAb_Leds_Init( const HwIoAb_Leds_Config *Leds_Config ) {
     //local data.
-    uint8 status = TRUE;
+    uint8 status = E_OK;
     
     #if ( HWIOAB_LEDS_DEV_ERROR_DETECT == STD_ON )
         if ( Leds_Config == NULL_PTR ) {
             Det_ReportError( HWIOAB_LEDS_MODULE_ID, HWIOAB_LEDS_INSTANCE_ID, HWIOAB_LEDS_INIT_ID, HWIOAB_LEDS_E_CONFIG );
-            status = FALSE;
+            status = E_NOT_OK;
         }
     #endif
     
-    if ( status == TRUE ) {
+    if ( status == E_OK ) {
         //Initializing members.
         LedsControl_Ptr->Leds = HWIOAB_LEDS;
         LedsControl_Ptr->LedsConfig_Ptr = Leds_Config;
+        LedsControl_Ptr->Leds_init = TRUE;
     }
 }
 
@@ -40,26 +41,22 @@ void HwIoAb_Leds_Init( const HwIoAb_Leds_Config *Leds_Config ) {
  */
 void HwIoAb_Leds_TurnOn( uint8 Led ) {
     //local data,
-    boolean active = FALSE;
+    uint8 status = E_OK;
     
-    //Verifying if the ID is valid.
-    if ( Led <= LedsControl_Ptr->Leds - 1 ) {   //Valid ID.
-        //Defining active value according to active status of given led.
-        if ( LedsControl_Ptr->LedsConfig_Ptr[ Led ].Active == HWIOAB_LED_ACTIVE_HIGH ) {
-            active = STD_HIGH;
+    #if ( HWIOAB_LEDS_DEV_ERROR_DETECT == STD_ON )
+        if ( LedsControl_Ptr->Leds_init == FALSE ) {
+            Det_ReportError( HWIOAB_LEDS_MODULE_ID, HWIOAB_LEDS_INSTANCE_ID, HWIOAB_LEDS_TURNON_ID, HWIOAB_LEDS_E_UNINIT );
+            status = E_NOT_OK;
         }
 
-        else {
-            active = STD_LOW;
-        }
-        
-        Dio_WriteChannel( LedsControl_Ptr->LedsConfig_Ptr[ Led ].Led, active );
-    }
-
-    else {  //Invalid ID.
-        #if ( HWIOAB_LEDS_DEV_ERROR_DETECT == STD_ON )
+        if ( Led > LedsControl_Ptr->Leds - 1 ) {
             Det_ReportError( HWIOAB_LEDS_MODULE_ID, HWIOAB_LEDS_INSTANCE_ID, HWIOAB_LEDS_TURNON_ID, HWIOAB_LEDS_E_LED_ID );
-        #endif
+            status = E_NOT_OK;
+        }
+    #endif
+
+    if ( status == E_OK ) {
+        Dio_WriteChannel( LedsControl_Ptr->LedsConfig_Ptr[ Led ].Led, LedsControl_Ptr->LedsConfig_Ptr[ Led ].Active );
     }
 }
 
@@ -72,26 +69,22 @@ void HwIoAb_Leds_TurnOn( uint8 Led ) {
  */
 void HwIoAb_Leds_TurnOff( uint8 Led ) {
     //local data,
-    boolean active = FALSE;
+    uint8 status = E_OK;
     
-    //Verifying if the ID is valid.
-    if ( Led <= LedsControl_Ptr->Leds - 1 ) {   //Valid ID.
-        //Defining active value according to active status of given led.
-        if ( LedsControl_Ptr->LedsConfig_Ptr[ Led ].Active == HWIOAB_LED_ACTIVE_HIGH ) {
-            active = STD_HIGH;
+    #if ( HWIOAB_LEDS_DEV_ERROR_DETECT == STD_ON )
+        if ( LedsControl_Ptr->Leds_init == FALSE ) {
+            Det_ReportError( HWIOAB_LEDS_MODULE_ID, HWIOAB_LEDS_INSTANCE_ID, HWIOAB_LEDS_TURNON_ID, HWIOAB_LEDS_E_UNINIT );
+            status = E_NOT_OK;
         }
 
-        else {
-            active = STD_LOW;
+        if ( Led > LedsControl_Ptr->Leds - 1 ) {
+            Det_ReportError( HWIOAB_LEDS_MODULE_ID, HWIOAB_LEDS_INSTANCE_ID, HWIOAB_LEDS_TURNON_ID, HWIOAB_LEDS_E_LED_ID );
+            status = E_NOT_OK;
         }
-        
-        Dio_WriteChannel( LedsControl_Ptr->LedsConfig_Ptr[ Led ].Led, !active );
-    }
+    #endif
 
-    else {  //Invalid ID.
-        #if ( HWIOAB_LEDS_DEV_ERROR_DETECT == STD_ON )
-            Det_ReportError( HWIOAB_LEDS_MODULE_ID, HWIOAB_LEDS_INSTANCE_ID, HWIOAB_LEDS_TURNOFF_ID, HWIOAB_LEDS_E_LED_ID );
-        #endif
+    if ( status == E_OK ) {
+        Dio_WriteChannel( LedsControl_Ptr->LedsConfig_Ptr[ Led ].Led, !LedsControl_Ptr->LedsConfig_Ptr[ Led ].Active );
     }
 }
 
@@ -103,14 +96,22 @@ void HwIoAb_Leds_TurnOff( uint8 Led ) {
  * @note The led ID must be valid.
  */
 void HwIoAb_Leds_TurnToggle( uint8 Led ) {
-    //Verifying if the ID is valid.
-    if ( Led <= LedsControl_Ptr->Leds - 1 ) {   //Valid ID.
+    //local data.
+    uint8 status = E_OK;    
+
+    #if ( HWIOAB_LEDS_DEV_ERROR_DETECT == STD_ON )
+        if ( LedsControl_Ptr->Leds_init == FALSE ) {
+            Det_ReportError( HWIOAB_LEDS_MODULE_ID, HWIOAB_LEDS_INSTANCE_ID, HWIOAB_LEDS_TURNON_ID, HWIOAB_LEDS_E_UNINIT );
+            status = E_NOT_OK;
+        }
+
+        if ( Led > LedsControl_Ptr->Leds - 1 ) {
+            Det_ReportError( HWIOAB_LEDS_MODULE_ID, HWIOAB_LEDS_INSTANCE_ID, HWIOAB_LEDS_TURNON_ID, HWIOAB_LEDS_E_LED_ID );
+            status = E_NOT_OK;
+        }
+    #endif
+
+    if ( status == E_OK ) {
         Dio_FlipChannel( LedsControl_Ptr->LedsConfig_Ptr[ Led ].Led );
-    }
-    
-    else {  //Invalid id.
-        #if ( HWIOAB_LEDS_DEV_ERROR_DETECT == STD_ON )
-            Det_ReportError( HWIOAB_LEDS_MODULE_ID, HWIOAB_LEDS_INSTANCE_ID, HWIOAB_LEDS_TURNTOGGLE_ID, HWIOAB_LEDS_E_LED_ID );
-        #endif
     }
 }

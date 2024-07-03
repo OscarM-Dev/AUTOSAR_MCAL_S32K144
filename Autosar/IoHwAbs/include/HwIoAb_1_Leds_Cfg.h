@@ -7,7 +7,7 @@
 #ifndef HWIOAB_1_LEDS_CFG_H
 #define HWIOAB_1_LEDS_CFG_H
 
-#define HWIOAB_LEDS_DEV_ERROR_DETECT STD_OFF  ///< Dev error detect. 
+#define HWIOAB_LEDS_DEV_ERROR_DETECT STD_ON  ///< Dev error detect. 
 
 #define HWIOAB_LEDS 3   ///< Number of leds to handle on board.
 

@@ -18,16 +18,16 @@
 void HwIoAb_Buttons_Init( const HwIoAb_Buttons_Config *Buttons_Config ) {
     //local data 
     uint8 i = 0;
-    boolean status = TRUE;
+    uint8 status = E_OK;
 
     #if ( HWIOAB_BUTTONS_DEV_ERROR_DETECT == STD_ON )
             if ( Buttons_Config == NULL_PTR ) {
                 Det_ReportError( HWIOAB_BUTTONS_MODULE_ID, HWIOAB_BUTTONS_INSTANCE_ID, HWIOAB_BUTTONS_INIT_ID, HWIOAB_BUTTONS_E_CONFIG );
-                status = FALSE;
+                status = E_NOT_OK;
             }
     #endif
 
-    if ( status == TRUE ) {
+    if ( status == E_OK ) {
         //Initializing members.
         ButtonsControl_Ptr->Buttons = HWIOAB_BUTTONS_MAX;
         ButtonsControl_Ptr->ButtonsConfig_Ptr = Buttons_Config;
@@ -36,8 +36,9 @@ void HwIoAb_Buttons_Init( const HwIoAb_Buttons_Config *Buttons_Config ) {
             ButtonsControl_Ptr->States[i] = HWIOAB_BTN_STATE_IDLE;
             ButtonsControl_Ptr->Events[i] = HWIOAB_BTN_EVENT_IDLE;
         }
-    }
 
+        ButtonsControl_Ptr->Buttons_init = TRUE;
+    }
 }
 
 /**
@@ -50,19 +51,26 @@ void HwIoAb_Buttons_Init( const HwIoAb_Buttons_Config *Buttons_Config ) {
  */
 uint8 HwIoAb_Buttons_GetEvent( uint8 Button ) {
     //local data.
+    uint8 status = E_OK;
     uint8 event = 0;
 
-    //Verifying if ID is valid
-    if ( ( Button != 0 ) && ( Button <= ButtonsControl_Ptr->Buttons ) ) {
-        event = ButtonsControl_Ptr->Events[ Button - 1 ]; //Obtaining last event.
-        ButtonsControl_Ptr->Events[ Button - 1 ] = HWIOAB_BTN_EVENT_IDLE;   //Clearing event of button.
-    }
+    #if ( HWIOAB_BUTTONS_DEV_ERROR_DETECT == STD_ON )
+        if ( ButtonsControl_Ptr->Buttons_init == FALSE ) {
+            Det_ReportError( HWIOAB_BUTTONS_MODULE_ID, HWIOAB_BUTTONS_INSTANCE_ID, HWIOAB_BUTTONS_GETEVENT_ID, HWIOAB_BUTTONS_E_UNINIT );
+            status = E_NOT_OK;
+            event = HWIOAB_BTN_EVENT_NULL;
+        }
 
-    else {  //Invalid ID.
-        #if ( HWIOAB_BUTTONS_DEV_ERROR_DETECT == STD_ON )
-            Det_ReportError( HWIOAB_BUTTONS_MODULE_ID, HWIOAB_BUTTONS_INSTANCE_ID, HWIOAB_BUTTONS_GETEVENT_ID, HWIOAB_BUTTONS_E_BUTTON_ID );
-        #endif
-        event = 50;
+        if ( Button > ButtonsControl_Ptr->Buttons - 1 ) {
+             Det_ReportError( HWIOAB_BUTTONS_MODULE_ID, HWIOAB_BUTTONS_INSTANCE_ID, HWIOAB_BUTTONS_GETEVENT_ID, HWIOAB_BUTTONS_E_BUTTON_ID );
+             status = E_NOT_OK;
+             event = HWIOAB_BTN_EVENT_NULL;
+        }
+    #endif
+
+    if ( status == E_OK ) {
+        event = ButtonsControl_Ptr->Events[ Button ]; //Obtaining last event.
+        ButtonsControl_Ptr->Events[ Button ] = HWIOAB_BTN_EVENT_IDLE;   //Clearing event of button.
     }
 
     return event;
@@ -78,97 +86,88 @@ uint8 HwIoAb_Buttons_GetEvent( uint8 Button ) {
  */
 void HwIoAb_Buttons_MainFunction( void ) {
     //local data
-    static boolean count_flags[ HWIOAB_BUTTONS_MAX ] = { FALSE, FALSE, FALSE };
     static uint32 count[ HWIOAB_BUTTONS_MAX ] = { 0, 0, 0 };
     uint8 i = 0;
-    boolean active = FALSE;
-    
-    //Counting in every function call
-    for ( i = 0; i < ButtonsControl_Ptr->Buttons; i++ ) {   //Counting for each button.
-        if ( count_flags[i] == TRUE ) {
-            count[i] += HWIOAB_BUTTONS_PERIOD;
+    uint8 status = E_OK;
 
-            if ( count[i] == ButtonsControl_Ptr->ButtonsConfig_Ptr[i].Timeout ) {   //Once reaching timeout count stops.
-                count_flags[i] = FALSE;
+    #if ( HWIOAB_BUTTONS_DEV_ERROR_DETECT == STD_ON )
+        if ( ButtonsControl_Ptr->Buttons_init == FALSE ) {
+            Det_ReportError( HWIOAB_BUTTONS_MODULE_ID, HWIOAB_BUTTONS_INSTANCE_ID, HWIOAB_BUTTONS_GETEVENT_ID, HWIOAB_BUTTONS_E_UNINIT );
+            status = E_NOT_OK;
+        }
+    #endif
+
+    if ( status == E_OK ) {
+        for ( i = 0; i < ButtonsControl_Ptr->Buttons; i++ ) { //Executing state machine for each button.
+            switch( ButtonsControl_Ptr->States[i] ) {
+                case HWIOAB_BTN_STATE_IDLE :
+                    //Checks if the button is pressed.
+                    if ( Dio_ReadChannel( ButtonsControl_Ptr->ButtonsConfig_Ptr[i].Button ) == ButtonsControl_Ptr->ButtonsConfig_Ptr[i].Active ) {
+                        count[i] = 0;   //Restarting count.
+                        ButtonsControl_Ptr->States[i] = HWIOAB_BTN_STATE_SINGLE_PRESS;
+                    }
+                break;
+        
+                case HWIOAB_BTN_STATE_SINGLE_PRESS :
+                    count[i] += HWIOAB_BUTTONS_PERIOD;
+                
+                    //Checking count timeout.
+                    if ( count[i] == ButtonsControl_Ptr->ButtonsConfig_Ptr[i].Timeout ) {
+                        ButtonsControl_Ptr->States[i] = HWIOAB_BTN_STATE_HOLD_PRESS;
+                    }
+
+                    //Checking if the button is released.
+                    if ( Dio_ReadChannel( ButtonsControl_Ptr->ButtonsConfig_Ptr[i].Button ) == !ButtonsControl_Ptr->ButtonsConfig_Ptr[i].Active  ) {
+                        ButtonsControl_Ptr->States[i] = HWIOAB_BTN_STATE_RELEASE;
+                    }
+                break;
+        
+                case HWIOAB_BTN_STATE_RELEASE :
+                    count[i] += HWIOAB_BUTTONS_PERIOD;
+
+                    //Checking count timeout.
+                    if ( count[i] == ButtonsControl_Ptr->ButtonsConfig_Ptr[i].Timeout ) { //Single click
+                        ButtonsControl_Ptr->Events[i] = HWIOAB_BTN_EVENT_SINGLE_CLICK;
+                        ButtonsControl_Ptr->States[i] = HWIOAB_BTN_STATE_IDLE;
+                    }
+
+                    //Checks if the button is pressed.
+                    if ( Dio_ReadChannel( ButtonsControl_Ptr->ButtonsConfig_Ptr[i].Button ) == ButtonsControl_Ptr->ButtonsConfig_Ptr[i].Active  ) {
+                        count[i] = 0;   //Restarting count.
+                        ButtonsControl_Ptr->States[i] = HWIOAB_BTN_STATE_DOUBLE_PRESS;
+                    }
+                break;
+        
+                case HWIOAB_BTN_STATE_DOUBLE_PRESS :
+                    count[i] += HWIOAB_BUTTONS_PERIOD;
+
+                    //Checking count timeout.
+                    if ( count[i] == ButtonsControl_Ptr->ButtonsConfig_Ptr[i].Timeout ) {
+                        ButtonsControl_Ptr->States[i] = HWIOAB_BTN_STATE_HOLD_PRESS;
+                    }
+
+                    //Checking if the button is released.
+                    if ( Dio_ReadChannel( ButtonsControl_Ptr->ButtonsConfig_Ptr[i].Button ) == !ButtonsControl_Ptr->ButtonsConfig_Ptr[i].Active ) {  //Double click.
+                        ButtonsControl_Ptr->Events[i] = HWIOAB_BTN_EVENT_DOUBLE_CLICK;
+                        ButtonsControl_Ptr->States[i] = HWIOAB_BTN_STATE_IDLE;
+                    }
+                break;
+        
+                case HWIOAB_BTN_STATE_HOLD_PRESS :  //Hold click.
+                    ButtonsControl_Ptr->Events[i] = HWIOAB_BTN_EVENT_HOLD_CLICK;
+                    //Checking if the button is released.
+                    if ( Dio_ReadChannel( ButtonsControl_Ptr->ButtonsConfig_Ptr[i].Button ) == !ButtonsControl_Ptr->ButtonsConfig_Ptr[i].Active ) {
+                        ButtonsControl_Ptr->Events[i] = HWIOAB_BTN_EVENT_RELEASE;
+                        ButtonsControl_Ptr->States[i] = HWIOAB_BTN_STATE_IDLE;
+                    }
+                break;
+        
+                default: //Invalid state
+                    #if ( HWIOAB_BUTTONS_DEV_ERROR_DETECT == STD_ON )
+                        Det_ReportError( HWIOAB_BUTTONS_MODULE_ID, HWIOAB_BUTTONS_INSTANCE_ID, HWIOAB_BUTTONS_MAINFUNCTION_ID, HWIOAB_BUTTONS_E_STATE );
+                    #endif
+                break;
             }
-        }
-    }
-
-    for ( i = 0; i < ButtonsControl_Ptr->Buttons; i++ ) { //Executing state machine for each button.
-        
-        //Defining the active value according to the active status.
-        if ( ButtonsControl_Ptr->ButtonsConfig_Ptr[i].Active == HWIOAB_BTN_ACTIVE_HIGH ) {  //Pull down.
-            active = STD_HIGH;
-        }
-
-        else {  //Pull up.
-            active = STD_LOW;
-        }
-        
-        switch( ButtonsControl_Ptr->States[i] ) {
-            case HWIOAB_BTN_STATE_IDLE :
-                //Checks if the button is pressed.
-                if ( Dio_ReadChannel( ButtonsControl_Ptr->ButtonsConfig_Ptr[i].Button ) == active ) {
-                    count_flags[i] = TRUE;  //Starting count.
-                    count[i] = 0;   //Restarting count.
-                    ButtonsControl_Ptr->States[i] = HWIOAB_BTN_STATE_SINGLE_PRESS;
-                }
-            break;
-        
-            case HWIOAB_BTN_STATE_SINGLE_PRESS :
-                //Checking count timeout.
-                if ( count[i] == ButtonsControl_Ptr->ButtonsConfig_Ptr[i].Timeout ) {
-                    ButtonsControl_Ptr->States[i] = HWIOAB_BTN_STATE_HOLD_PRESS;
-                }
-
-                //Checking if the button is released.
-                if ( Dio_ReadChannel( ButtonsControl_Ptr->ButtonsConfig_Ptr[i].Button ) == !active ) {
-                    ButtonsControl_Ptr->States[i] = HWIOAB_BTN_STATE_RELEASE;
-                }
-            break;
-        
-            case HWIOAB_BTN_STATE_RELEASE :
-                //Checking count timeout.
-                if ( count[i] == ButtonsControl_Ptr->ButtonsConfig_Ptr[i].Timeout ) { //Single click
-                    ButtonsControl_Ptr->Events[i] = HWIOAB_BTN_EVENT_SINGLE_CLICK;
-                    ButtonsControl_Ptr->States[i] = HWIOAB_BTN_STATE_IDLE;
-                }
-
-                //Checks if the button is pressed.
-                if ( Dio_ReadChannel( ButtonsControl_Ptr->ButtonsConfig_Ptr[i].Button ) == active ) {
-                    count_flags[i] = TRUE;  //Starting count.
-                    count[i] = 0;   //Restarting count.
-                    ButtonsControl_Ptr->States[i] = HWIOAB_BTN_STATE_DOUBLE_PRESS;
-                }
-            break;
-        
-            case HWIOAB_BTN_STATE_DOUBLE_PRESS :
-                //Checking count timeout.
-                if ( count[i] == ButtonsControl_Ptr->ButtonsConfig_Ptr[i].Timeout ) {
-                    ButtonsControl_Ptr->States[i] = HWIOAB_BTN_STATE_HOLD_PRESS;
-                }
-
-                //Checking if the button is released.
-                if ( Dio_ReadChannel( ButtonsControl_Ptr->ButtonsConfig_Ptr[i].Button ) == !active ) {  //Double click.
-                    ButtonsControl_Ptr->Events[i] = HWIOAB_BTN_EVENT_DOUBLE_CLICK;
-                    ButtonsControl_Ptr->States[i] = HWIOAB_BTN_STATE_IDLE;
-                }
-            break;
-        
-            case HWIOAB_BTN_STATE_HOLD_PRESS :  //Hold click.
-                ButtonsControl_Ptr->Events[i] = HWIOAB_BTN_EVENT_HOLD_CLICK;
-                //Checking if the button is released.
-                if ( Dio_ReadChannel( ButtonsControl_Ptr->ButtonsConfig_Ptr[i].Button ) == !active ) {
-                    ButtonsControl_Ptr->Events[i] = HWIOAB_BTN_EVENT_RELEASE;
-                    ButtonsControl_Ptr->States[i] = HWIOAB_BTN_STATE_IDLE;
-                }
-            break;
-        
-            default: //Invalid state
-                #if ( HWIOAB_BUTTONS_DEV_ERROR_DETECT == STD_ON )
-                    Det_ReportError( HWIOAB_BUTTONS_MODULE_ID, HWIOAB_BUTTONS_INSTANCE_ID, HWIOAB_BUTTONS_MAINFUNCTION_ID, HWIOAB_BUTTONS_E_STATE );
-                #endif
-            break;
         }
     }
 }

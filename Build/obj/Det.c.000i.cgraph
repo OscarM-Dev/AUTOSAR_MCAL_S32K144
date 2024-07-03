@@ -3,7 +3,7 @@ Trivially needed symbols: Det_Start/75 Det_ReportTransientFault/74 Det_ReportRun
 
 Initial Symbol table:
 
-SEGGER_RTT_printf/77 (SEGGER_RTT_printf) @073f1ee0
+SEGGER_RTT_printf/77 (SEGGER_RTT_printf) @0a2a37e0
   Type: function
   Visibility: external public
   References: 
@@ -11,7 +11,7 @@ SEGGER_RTT_printf/77 (SEGGER_RTT_printf) @073f1ee0
   Function flags:
   Called by: Det_ReportError/72 
   Calls: 
-Sys_GetCoreID/76 (Sys_GetCoreID) @073f17e0
+Sys_GetCoreID/76 (Sys_GetCoreID) @0a2a3700
   Type: function
   Visibility: external public
   References: 
@@ -19,7 +19,7 @@ Sys_GetCoreID/76 (Sys_GetCoreID) @073f17e0
   Function flags:
   Called by: Det_ReportTransientFault/74 Det_ReportRuntimeError/73 Det_ReportError/72 
   Calls: 
-Det_Start/75 (Det_Start) @073f19a0
+Det_Start/75 (Det_Start) @06c43ee0
   Type: function definition analyzed
   Visibility: force_output no_reorder public
   Aux: @01981040
@@ -28,174 +28,174 @@ Det_Start/75 (Det_Start) @073f19a0
   Function flags: body
   Called by: 
   Calls: 
-Det_ReportTransientFault/74 (Det_ReportTransientFault) @073f1700
+Det_ReportTransientFault/74 (Det_ReportTransientFault) @06c43c40
   Type: function definition analyzed
   Visibility: force_output no_reorder public
-  Aux: @073f19a0
+  Aux: @06c43ee0
   References: Det_TransientModuleId/65 (write) Det_TransientInstanceId/61 (write) Det_TransientApiId/62 (write) Det_TransientFaultId/63 (write) 
   Referring: 
   Function flags: body
   Called by: 
   Calls: Sys_GetCoreID/76 
-Det_ReportRuntimeError/73 (Det_ReportRuntimeError) @073f1460
+Det_ReportRuntimeError/73 (Det_ReportRuntimeError) @06c439a0
   Type: function definition analyzed
   Visibility: force_output no_reorder public
-  Aux: @073f1700
+  Aux: @06c43c40
   References: Det_RuntimeModuleId/67 (write) Det_RuntimeInstanceId/58 (write) Det_RuntimeApiId/59 (write) Det_RuntimeErrorId/60 (write) 
   Referring: 
   Function flags: body
   Called by: 
   Calls: Sys_GetCoreID/76 
-Det_ReportError/72 (Det_ReportError) @073f11c0
+Det_ReportError/72 (Det_ReportError) @06c43700
   Type: function definition analyzed
   Visibility: force_output no_reorder public
-  Aux: @073f1460
+  Aux: @06c439a0
   References: Det_ModuleId/66 (write) Det_InstanceId/55 (write) Det_ApiId/56 (write) Det_ErrorId/57 (write) 
   Referring: 
   Function flags: body
   Called by: 
   Calls: SEGGER_RTT_printf/77 Det_GetErrorMeaning/71 Det_GetApiName/70 Det_GetModuleName/69 Sys_GetCoreID/76 
-Det_GetErrorMeaning/71 (Det_GetErrorMeaning) @0735fe00
+Det_GetErrorMeaning/71 (Det_GetErrorMeaning) @06c43460
   Type: function definition analyzed
   Visibility: force_output no_reorder public
-  Aux: @073f11c0
+  Aux: @06c43700
   References: ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (read) 
   Referring: 
   Function flags: body
   Called by: Det_ReportError/72 
   Calls: 
-Det_GetApiName/70 (Det_GetApiName) @0735f8c0
+Det_GetApiName/70 (Det_GetApiName) @06c431c0
   Type: function definition analyzed
   Visibility: force_output no_reorder public
-  Aux: @0735fe00
+  Aux: @06c43460
   References: ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (read) 
   Referring: 
   Function flags: body
   Called by: Det_ReportError/72 
   Calls: 
-Det_GetModuleName/69 (Det_GetModuleName) @0735fd20
+Det_GetModuleName/69 (Det_GetModuleName) @072e3ee0
   Type: function definition analyzed
   Visibility: force_output no_reorder public
-  Aux: @0735f8c0
+  Aux: @06c431c0
   References: ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (read) 
   Referring: 
   Function flags: body
   Called by: Det_ReportError/72 
   Calls: 
-Det_Init/68 (Det_Init) @0735fa80
+Det_Init/68 (Det_Init) @072e3e00
   Type: function definition analyzed
   Visibility: force_output no_reorder public
-  Aux: @0735fd20
+  Aux: @072e3ee0
   References: 
   Referring: 
   Function flags: body
   Called by: 
   Calls: 
-Det_RuntimeModuleId/67 (Det_RuntimeModuleId) @0735ec60
+Det_RuntimeModuleId/67 (Det_RuntimeModuleId) @072e4e58
   Type: variable definition analyzed
   Visibility: force_output no_reorder public
-  Aux: @0735fa80
+  Aux: @072e3e00
   References: 
   Referring: Det_ReportRuntimeError/73 (write) 
   Availability: not-ready
   Varpool flags:
-Det_ModuleId/66 (Det_ModuleId) @0735ec18
+Det_ModuleId/66 (Det_ModuleId) @072e4e10
   Type: variable definition analyzed
   Visibility: force_output no_reorder public
-  Aux: @0735ec60
+  Aux: @072e4e58
   References: 
   Referring: Det_ReportError/72 (write) 
   Availability: not-ready
   Varpool flags:
-Det_TransientModuleId/65 (Det_TransientModuleId) @0735ebd0
+Det_TransientModuleId/65 (Det_TransientModuleId) @072e4dc8
   Type: variable definition analyzed
   Visibility: force_output no_reorder public
-  Aux: @0735ec18
+  Aux: @072e4e10
   References: 
   Referring: Det_ReportTransientFault/74 (write) 
   Availability: not-ready
   Varpool flags:
-ErrorString_Ptr/64 (ErrorString_Ptr) @0735eb88
+ErrorString_Ptr/64 (ErrorString_Ptr) @072e4d80
   Type: variable definition analyzed
   Visibility: force_output no_reorder public
-  Aux: @0735ebd0
+  Aux: @072e4dc8
   References: 
   Referring: Det_GetModuleName/69 (write) Det_GetModuleName/69 (write) Det_GetModuleName/69 (write) Det_GetModuleName/69 (write) Det_GetModuleName/69 (write) Det_GetModuleName/69 (write) Det_GetModuleName/69 (write) Det_GetModuleName/69 (write) Det_GetModuleName/69 (write) Det_GetModuleName/69 (write) Det_GetModuleName/69 (write) Det_GetModuleName/69 (read) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (read) Det_GetErrorMeaning/71 (write) Det_GetErrorMeaning/71 (write) Det_GetErrorMeaning/71 (write) Det_GetErrorMeaning/71 (write) Det_GetErrorMeaning/71 (write) Det_GetErrorMeaning/71 (write) Det_GetErrorMeaning/71 (write) Det_GetErrorMeaning/71 (write) Det_GetErrorMeaning/71 (write) Det_GetErrorMeaning/71 (write) Det_GetErrorMeaning/71 (write) Det_GetErrorMeaning/71 (write) Det_GetErrorMeaning/71 (write) Det_GetErrorMeaning/71 (write) Det_GetErrorMeaning/71 (write) Det_GetErrorMeaning/71 (write) Det_GetErrorMeaning/71 (write) Det_GetErrorMeaning/71 (write) Det_GetErrorMeaning/71 (write) Det_GetErrorMeaning/71 (write) Det_GetErrorMeaning/71 (write) Det_GetErrorMeaning/71 (write) Det_GetErrorMeaning/71 (write) Det_GetErrorMeaning/71 (write) Det_GetErrorMeaning/71 (write) Det_GetErrorMeaning/71 (write) Det_GetErrorMeaning/71 (write) Det_GetErrorMeaning/71 (write) Det_GetErrorMeaning/71 (write) Det_GetErrorMeaning/71 (write) Det_GetErrorMeaning/71 (write) Det_GetErrorMeaning/71 (write) Det_GetErrorMeaning/71 (write) Det_GetErrorMeaning/71 (write) Det_GetErrorMeaning/71 (write) Det_GetErrorMeaning/71 (write) Det_GetErrorMeaning/71 (write) Det_GetErrorMeaning/71 (write) Det_GetErrorMeaning/71 (write) Det_GetErrorMeaning/71 (write) Det_GetErrorMeaning/71 (write) Det_GetErrorMeaning/71 (write) Det_GetErrorMeaning/71 (write) Det_GetErrorMeaning/71 (write) Det_GetErrorMeaning/71 (write) Det_GetErrorMeaning/71 (write) Det_GetErrorMeaning/71 (write) Det_GetErrorMeaning/71 (read) 
   Availability: not-ready
   Varpool flags:
-Det_TransientFaultId/63 (Det_TransientFaultId) @0735eb40
+Det_TransientFaultId/63 (Det_TransientFaultId) @072e4d38
   Type: variable definition analyzed
   Visibility: force_output no_reorder public
-  Aux: @0735eb88
+  Aux: @072e4d80
   References: 
   Referring: Det_ReportTransientFault/74 (write) 
   Availability: not-ready
   Varpool flags:
-Det_TransientApiId/62 (Det_TransientApiId) @0735eaf8
+Det_TransientApiId/62 (Det_TransientApiId) @072e4cf0
   Type: variable definition analyzed
   Visibility: force_output no_reorder public
-  Aux: @0735eb40
+  Aux: @072e4d38
   References: 
   Referring: Det_ReportTransientFault/74 (write) 
   Availability: not-ready
   Varpool flags:
-Det_TransientInstanceId/61 (Det_TransientInstanceId) @0735eab0
+Det_TransientInstanceId/61 (Det_TransientInstanceId) @072e4ca8
   Type: variable definition analyzed
   Visibility: force_output no_reorder public
-  Aux: @0735eaf8
+  Aux: @072e4cf0
   References: 
   Referring: Det_ReportTransientFault/74 (write) 
   Availability: not-ready
   Varpool flags:
-Det_RuntimeErrorId/60 (Det_RuntimeErrorId) @0735ea68
+Det_RuntimeErrorId/60 (Det_RuntimeErrorId) @072e4c60
   Type: variable definition analyzed
   Visibility: force_output no_reorder public
-  Aux: @0735eab0
+  Aux: @072e4ca8
   References: 
   Referring: Det_ReportRuntimeError/73 (write) 
   Availability: not-ready
   Varpool flags:
-Det_RuntimeApiId/59 (Det_RuntimeApiId) @0735ea20
+Det_RuntimeApiId/59 (Det_RuntimeApiId) @072e4c18
   Type: variable definition analyzed
   Visibility: force_output no_reorder public
-  Aux: @0735ea68
+  Aux: @072e4c60
   References: 
   Referring: Det_ReportRuntimeError/73 (write) 
   Availability: not-ready
   Varpool flags:
-Det_RuntimeInstanceId/58 (Det_RuntimeInstanceId) @0735e9d8
+Det_RuntimeInstanceId/58 (Det_RuntimeInstanceId) @072e4bd0
   Type: variable definition analyzed
   Visibility: force_output no_reorder public
-  Aux: @0735ea20
+  Aux: @072e4c18
   References: 
   Referring: Det_ReportRuntimeError/73 (write) 
   Availability: not-ready
   Varpool flags:
-Det_ErrorId/57 (Det_ErrorId) @0735e990
+Det_ErrorId/57 (Det_ErrorId) @072e4b88
   Type: variable definition analyzed
   Visibility: force_output no_reorder public
-  Aux: @0735e9d8
+  Aux: @072e4bd0
   References: 
   Referring: Det_ReportError/72 (write) 
   Availability: not-ready
   Varpool flags:
-Det_ApiId/56 (Det_ApiId) @0735e948
+Det_ApiId/56 (Det_ApiId) @072e4b40
   Type: variable definition analyzed
   Visibility: force_output no_reorder public
-  Aux: @0735e990
+  Aux: @072e4b88
   References: 
   Referring: Det_ReportError/72 (write) 
   Availability: not-ready
   Varpool flags:
-Det_InstanceId/55 (Det_InstanceId) @0735e900
+Det_InstanceId/55 (Det_InstanceId) @072e4af8
   Type: variable definition analyzed
   Visibility: force_output no_reorder public
-  Aux: @0735e948
+  Aux: @072e4b40
   References: 
   Referring: Det_ReportError/72 (write) 
   Availability: not-ready
   Varpool flags:
-Bfx_CountLeadingZeros_u8/54 (Bfx_CountLeadingZeros_u8) @072ce380
+Bfx_CountLeadingZeros_u8/54 (Bfx_CountLeadingZeros_u8) @07257380
   Type: function definition
   Visibility: no_reorder
   References: 
@@ -203,7 +203,7 @@ Bfx_CountLeadingZeros_u8/54 (Bfx_CountLeadingZeros_u8) @072ce380
   Function flags:
   Called by: 
   Calls: 
-Bfx_CountLeadingSigns_s8/53 (Bfx_CountLeadingSigns_s8) @072ce0e0
+Bfx_CountLeadingSigns_s8/53 (Bfx_CountLeadingSigns_s8) @072570e0
   Type: function definition
   Visibility: no_reorder
   References: 
@@ -211,7 +211,7 @@ Bfx_CountLeadingSigns_s8/53 (Bfx_CountLeadingSigns_s8) @072ce0e0
   Function flags:
   Called by: 
   Calls: 
-Bfx_CountLeadingOnes_u8/52 (Bfx_CountLeadingOnes_u8) @072cae00
+Bfx_CountLeadingOnes_u8/52 (Bfx_CountLeadingOnes_u8) @07253e00
   Type: function definition
   Visibility: no_reorder
   References: 
@@ -219,7 +219,7 @@ Bfx_CountLeadingOnes_u8/52 (Bfx_CountLeadingOnes_u8) @072cae00
   Function flags:
   Called by: 
   Calls: 
-Bfx_ShiftBitSat_s8s8_s8/51 (Bfx_ShiftBitSat_s8s8_s8) @072cab60
+Bfx_ShiftBitSat_s8s8_s8/51 (Bfx_ShiftBitSat_s8s8_s8) @07253b60
   Type: function definition
   Visibility: no_reorder
   References: 
@@ -227,7 +227,7 @@ Bfx_ShiftBitSat_s8s8_s8/51 (Bfx_ShiftBitSat_s8s8_s8) @072cab60
   Function flags:
   Called by: 
   Calls: 
-Bfx_ShiftBitSat_u8s8_u8/50 (Bfx_ShiftBitSat_u8s8_u8) @072ca8c0
+Bfx_ShiftBitSat_u8s8_u8/50 (Bfx_ShiftBitSat_u8s8_u8) @072538c0
   Type: function definition
   Visibility: no_reorder
   References: 
@@ -235,7 +235,7 @@ Bfx_ShiftBitSat_u8s8_u8/50 (Bfx_ShiftBitSat_u8s8_u8) @072ca8c0
   Function flags:
   Called by: 
   Calls: 
-Bfx_PutBits_u8u8u8u8/49 (Bfx_PutBits_u8u8u8u8) @072ca620
+Bfx_PutBits_u8u8u8u8/49 (Bfx_PutBits_u8u8u8u8) @07253620
   Type: function definition
   Visibility: no_reorder
   References: 
@@ -243,7 +243,7 @@ Bfx_PutBits_u8u8u8u8/49 (Bfx_PutBits_u8u8u8u8) @072ca620
   Function flags:
   Called by: 
   Calls: 
-Bfx_PutBitsMask_u8u8u8/48 (Bfx_PutBitsMask_u8u8u8) @072ca380
+Bfx_PutBitsMask_u8u8u8/48 (Bfx_PutBitsMask_u8u8u8) @07253380
   Type: function definition
   Visibility: no_reorder
   References: 
@@ -251,7 +251,7 @@ Bfx_PutBitsMask_u8u8u8/48 (Bfx_PutBitsMask_u8u8u8) @072ca380
   Function flags:
   Called by: 
   Calls: 
-Bfx_PutBit_u8u8u8/47 (Bfx_PutBit_u8u8u8) @072ca0e0
+Bfx_PutBit_u8u8u8/47 (Bfx_PutBit_u8u8u8) @072530e0
   Type: function definition
   Visibility: no_reorder
   References: 
@@ -259,7 +259,7 @@ Bfx_PutBit_u8u8u8/47 (Bfx_PutBit_u8u8u8) @072ca0e0
   Function flags:
   Called by: 
   Calls: 
-Bfx_CopyBit_u8u8u8u8/46 (Bfx_CopyBit_u8u8u8u8) @072c4e00
+Bfx_CopyBit_u8u8u8u8/46 (Bfx_CopyBit_u8u8u8u8) @0724de00
   Type: function definition
   Visibility: no_reorder
   References: 
@@ -267,7 +267,7 @@ Bfx_CopyBit_u8u8u8u8/46 (Bfx_CopyBit_u8u8u8u8) @072c4e00
   Function flags:
   Called by: 
   Calls: 
-Bfx_RotBitLt_u8u8/45 (Bfx_RotBitLt_u8u8) @072c4b60
+Bfx_RotBitLt_u8u8/45 (Bfx_RotBitLt_u8u8) @0724db60
   Type: function definition
   Visibility: no_reorder
   References: 
@@ -275,7 +275,7 @@ Bfx_RotBitLt_u8u8/45 (Bfx_RotBitLt_u8u8) @072c4b60
   Function flags:
   Called by: 
   Calls: 
-Bfx_RotBitRt_u8u8/44 (Bfx_RotBitRt_u8u8) @072c48c0
+Bfx_RotBitRt_u8u8/44 (Bfx_RotBitRt_u8u8) @0724d8c0
   Type: function definition
   Visibility: no_reorder
   References: 
@@ -283,7 +283,7 @@ Bfx_RotBitRt_u8u8/44 (Bfx_RotBitRt_u8u8) @072c48c0
   Function flags:
   Called by: 
   Calls: 
-Bfx_ShiftBitLt_u8u8/43 (Bfx_ShiftBitLt_u8u8) @072c4620
+Bfx_ShiftBitLt_u8u8/43 (Bfx_ShiftBitLt_u8u8) @0724d620
   Type: function definition
   Visibility: no_reorder
   References: 
@@ -291,7 +291,7 @@ Bfx_ShiftBitLt_u8u8/43 (Bfx_ShiftBitLt_u8u8) @072c4620
   Function flags:
   Called by: 
   Calls: 
-Bfx_ShiftBitRt_u8u8/42 (Bfx_ShiftBitRt_u8u8) @072c4380
+Bfx_ShiftBitRt_u8u8/42 (Bfx_ShiftBitRt_u8u8) @0724d380
   Type: function definition
   Visibility: no_reorder
   References: 
@@ -299,7 +299,7 @@ Bfx_ShiftBitRt_u8u8/42 (Bfx_ShiftBitRt_u8u8) @072c4380
   Function flags:
   Called by: 
   Calls: 
-Bfx_ToggleBitMask_u8u8/41 (Bfx_ToggleBitMask_u8u8) @072c40e0
+Bfx_ToggleBitMask_u8u8/41 (Bfx_ToggleBitMask_u8u8) @0724d0e0
   Type: function definition
   Visibility: no_reorder
   References: 
@@ -307,7 +307,7 @@ Bfx_ToggleBitMask_u8u8/41 (Bfx_ToggleBitMask_u8u8) @072c40e0
   Function flags:
   Called by: 
   Calls: 
-Bfx_ToggleBits_u8/40 (Bfx_ToggleBits_u8) @072c0e00
+Bfx_ToggleBits_u8/40 (Bfx_ToggleBits_u8) @07249e00
   Type: function definition
   Visibility: no_reorder
   References: 
@@ -315,7 +315,7 @@ Bfx_ToggleBits_u8/40 (Bfx_ToggleBits_u8) @072c0e00
   Function flags:
   Called by: 
   Calls: 
-Bfx_TstParityEven_u8_u8/39 (Bfx_TstParityEven_u8_u8) @072c0b60
+Bfx_TstParityEven_u8_u8/39 (Bfx_TstParityEven_u8_u8) @07249b60
   Type: function definition
   Visibility: no_reorder
   References: 
@@ -323,7 +323,7 @@ Bfx_TstParityEven_u8_u8/39 (Bfx_TstParityEven_u8_u8) @072c0b60
   Function flags:
   Called by: 
   Calls: 
-Bfx_TstBitLnMask_u8u8_u8/38 (Bfx_TstBitLnMask_u8u8_u8) @072c08c0
+Bfx_TstBitLnMask_u8u8_u8/38 (Bfx_TstBitLnMask_u8u8_u8) @072498c0
   Type: function definition
   Visibility: no_reorder
   References: 
@@ -331,7 +331,7 @@ Bfx_TstBitLnMask_u8u8_u8/38 (Bfx_TstBitLnMask_u8u8_u8) @072c08c0
   Function flags:
   Called by: 
   Calls: 
-Bfx_TstBitMask_u8u8_u8/37 (Bfx_TstBitMask_u8u8_u8) @072c0620
+Bfx_TstBitMask_u8u8_u8/37 (Bfx_TstBitMask_u8u8_u8) @07249620
   Type: function definition
   Visibility: no_reorder
   References: 
@@ -339,7 +339,7 @@ Bfx_TstBitMask_u8u8_u8/37 (Bfx_TstBitMask_u8u8_u8) @072c0620
   Function flags:
   Called by: 
   Calls: 
-Bfx_ClrBitMask_u8u8/36 (Bfx_ClrBitMask_u8u8) @072c0380
+Bfx_ClrBitMask_u8u8/36 (Bfx_ClrBitMask_u8u8) @07249380
   Type: function definition
   Visibility: no_reorder
   References: 
@@ -347,7 +347,7 @@ Bfx_ClrBitMask_u8u8/36 (Bfx_ClrBitMask_u8u8) @072c0380
   Function flags:
   Called by: 
   Calls: 
-Bfx_SetBitMask_u8u8/35 (Bfx_SetBitMask_u8u8) @072c00e0
+Bfx_SetBitMask_u8u8/35 (Bfx_SetBitMask_u8u8) @072490e0
   Type: function definition
   Visibility: no_reorder
   References: 
@@ -355,7 +355,7 @@ Bfx_SetBitMask_u8u8/35 (Bfx_SetBitMask_u8u8) @072c00e0
   Function flags:
   Called by: 
   Calls: 
-Bfx_GetBits_u8u8u8_u8/34 (Bfx_GetBits_u8u8u8_u8) @072b8e00
+Bfx_GetBits_u8u8u8_u8/34 (Bfx_GetBits_u8u8u8_u8) @0715fe00
   Type: function definition
   Visibility: no_reorder
   References: 
@@ -363,7 +363,7 @@ Bfx_GetBits_u8u8u8_u8/34 (Bfx_GetBits_u8u8u8_u8) @072b8e00
   Function flags:
   Called by: 
   Calls: 
-Bfx_SetBits_u8u8u8u8/33 (Bfx_SetBits_u8u8u8u8) @072b8b60
+Bfx_SetBits_u8u8u8u8/33 (Bfx_SetBits_u8u8u8u8) @0715fb60
   Type: function definition
   Visibility: no_reorder
   References: 
@@ -371,7 +371,7 @@ Bfx_SetBits_u8u8u8u8/33 (Bfx_SetBits_u8u8u8u8) @072b8b60
   Function flags:
   Called by: 
   Calls: 
-Bfx_GetBit_u8u8_u8/32 (Bfx_GetBit_u8u8_u8) @072b88c0
+Bfx_GetBit_u8u8_u8/32 (Bfx_GetBit_u8u8_u8) @0715f8c0
   Type: function definition
   Visibility: no_reorder
   References: 
@@ -379,7 +379,7 @@ Bfx_GetBit_u8u8_u8/32 (Bfx_GetBit_u8u8_u8) @072b88c0
   Function flags:
   Called by: 
   Calls: 
-Bfx_ClrBit_u8u8/31 (Bfx_ClrBit_u8u8) @072b8620
+Bfx_ClrBit_u8u8/31 (Bfx_ClrBit_u8u8) @0715f620
   Type: function definition
   Visibility: no_reorder
   References: 
@@ -387,7 +387,7 @@ Bfx_ClrBit_u8u8/31 (Bfx_ClrBit_u8u8) @072b8620
   Function flags:
   Called by: 
   Calls: 
-Bfx_SetBit_u8u8/30 (Bfx_SetBit_u8u8) @072b8380
+Bfx_SetBit_u8u8/30 (Bfx_SetBit_u8u8) @0715f380
   Type: function definition
   Visibility: no_reorder
   References: 
@@ -395,7 +395,7 @@ Bfx_SetBit_u8u8/30 (Bfx_SetBit_u8u8) @072b8380
   Function flags:
   Called by: 
   Calls: 
-Bfx_CountLeadingZeros_u32/29 (Bfx_CountLeadingZeros_u32) @072b80e0
+Bfx_CountLeadingZeros_u32/29 (Bfx_CountLeadingZeros_u32) @0715f0e0
   Type: function definition
   Visibility: no_reorder
   References: 
@@ -403,7 +403,7 @@ Bfx_CountLeadingZeros_u32/29 (Bfx_CountLeadingZeros_u32) @072b80e0
   Function flags:
   Called by: 
   Calls: 
-Bfx_CountLeadingSigns_s32/28 (Bfx_CountLeadingSigns_s32) @072b2e00
+Bfx_CountLeadingSigns_s32/28 (Bfx_CountLeadingSigns_s32) @07159e00
   Type: function definition
   Visibility: no_reorder
   References: 
@@ -411,7 +411,7 @@ Bfx_CountLeadingSigns_s32/28 (Bfx_CountLeadingSigns_s32) @072b2e00
   Function flags:
   Called by: 
   Calls: 
-Bfx_CountLeadingOnes_u32/27 (Bfx_CountLeadingOnes_u32) @072b2b60
+Bfx_CountLeadingOnes_u32/27 (Bfx_CountLeadingOnes_u32) @07159b60
   Type: function definition
   Visibility: no_reorder
   References: 
@@ -419,7 +419,7 @@ Bfx_CountLeadingOnes_u32/27 (Bfx_CountLeadingOnes_u32) @072b2b60
   Function flags:
   Called by: 
   Calls: 
-Bfx_ShiftBitSat_s32s8_s32/26 (Bfx_ShiftBitSat_s32s8_s32) @072b28c0
+Bfx_ShiftBitSat_s32s8_s32/26 (Bfx_ShiftBitSat_s32s8_s32) @071598c0
   Type: function definition
   Visibility: no_reorder
   References: 
@@ -427,7 +427,7 @@ Bfx_ShiftBitSat_s32s8_s32/26 (Bfx_ShiftBitSat_s32s8_s32) @072b28c0
   Function flags:
   Called by: 
   Calls: 
-Bfx_ShiftBitSat_u32s8_u32/25 (Bfx_ShiftBitSat_u32s8_u32) @072b2620
+Bfx_ShiftBitSat_u32s8_u32/25 (Bfx_ShiftBitSat_u32s8_u32) @07159620
   Type: function definition
   Visibility: no_reorder
   References: 
@@ -435,7 +435,7 @@ Bfx_ShiftBitSat_u32s8_u32/25 (Bfx_ShiftBitSat_u32s8_u32) @072b2620
   Function flags:
   Called by: 
   Calls: 
-Bfx_PutBits_u32u8u8u32/24 (Bfx_PutBits_u32u8u8u32) @072b2380
+Bfx_PutBits_u32u8u8u32/24 (Bfx_PutBits_u32u8u8u32) @07159380
   Type: function definition
   Visibility: no_reorder
   References: 
@@ -443,7 +443,7 @@ Bfx_PutBits_u32u8u8u32/24 (Bfx_PutBits_u32u8u8u32) @072b2380
   Function flags:
   Called by: 
   Calls: 
-Bfx_PutBitsMask_u32u32u32/23 (Bfx_PutBitsMask_u32u32u32) @072b20e0
+Bfx_PutBitsMask_u32u32u32/23 (Bfx_PutBitsMask_u32u32u32) @071590e0
   Type: function definition
   Visibility: no_reorder
   References: 
@@ -451,7 +451,7 @@ Bfx_PutBitsMask_u32u32u32/23 (Bfx_PutBitsMask_u32u32u32) @072b20e0
   Function flags:
   Called by: 
   Calls: 
-Bfx_PutBit_u32u8u8/22 (Bfx_PutBit_u32u8u8) @072ace00
+Bfx_PutBit_u32u8u8/22 (Bfx_PutBit_u32u8u8) @07153e00
   Type: function definition
   Visibility: no_reorder
   References: 
@@ -459,7 +459,7 @@ Bfx_PutBit_u32u8u8/22 (Bfx_PutBit_u32u8u8) @072ace00
   Function flags:
   Called by: 
   Calls: 
-Bfx_CopyBit_u32u8u32u8/21 (Bfx_CopyBit_u32u8u32u8) @072acb60
+Bfx_CopyBit_u32u8u32u8/21 (Bfx_CopyBit_u32u8u32u8) @07153b60
   Type: function definition
   Visibility: no_reorder
   References: 
@@ -467,7 +467,7 @@ Bfx_CopyBit_u32u8u32u8/21 (Bfx_CopyBit_u32u8u32u8) @072acb60
   Function flags:
   Called by: 
   Calls: 
-Bfx_RotBitLt_u32u8/20 (Bfx_RotBitLt_u32u8) @072ac8c0
+Bfx_RotBitLt_u32u8/20 (Bfx_RotBitLt_u32u8) @071538c0
   Type: function definition
   Visibility: no_reorder
   References: 
@@ -475,7 +475,7 @@ Bfx_RotBitLt_u32u8/20 (Bfx_RotBitLt_u32u8) @072ac8c0
   Function flags:
   Called by: 
   Calls: 
-Bfx_RotBitRt_u32u8/19 (Bfx_RotBitRt_u32u8) @072ac620
+Bfx_RotBitRt_u32u8/19 (Bfx_RotBitRt_u32u8) @07153620
   Type: function definition
   Visibility: no_reorder
   References: 
@@ -483,7 +483,7 @@ Bfx_RotBitRt_u32u8/19 (Bfx_RotBitRt_u32u8) @072ac620
   Function flags:
   Called by: 
   Calls: 
-Bfx_ShiftBitLt_u32u8/18 (Bfx_ShiftBitLt_u32u8) @072ac380
+Bfx_ShiftBitLt_u32u8/18 (Bfx_ShiftBitLt_u32u8) @07153380
   Type: function definition
   Visibility: no_reorder
   References: 
@@ -491,7 +491,7 @@ Bfx_ShiftBitLt_u32u8/18 (Bfx_ShiftBitLt_u32u8) @072ac380
   Function flags:
   Called by: 
   Calls: 
-Bfx_ShiftBitRt_u32u8/17 (Bfx_ShiftBitRt_u32u8) @072ac0e0
+Bfx_ShiftBitRt_u32u8/17 (Bfx_ShiftBitRt_u32u8) @071530e0
   Type: function definition
   Visibility: no_reorder
   References: 
@@ -499,7 +499,7 @@ Bfx_ShiftBitRt_u32u8/17 (Bfx_ShiftBitRt_u32u8) @072ac0e0
   Function flags:
   Called by: 
   Calls: 
-Bfx_ToggleBitMask_u32u32/16 (Bfx_ToggleBitMask_u32u32) @071d2e00
+Bfx_ToggleBitMask_u32u32/16 (Bfx_ToggleBitMask_u32u32) @07241e00
   Type: function definition
   Visibility: no_reorder
   References: 
@@ -507,7 +507,7 @@ Bfx_ToggleBitMask_u32u32/16 (Bfx_ToggleBitMask_u32u32) @071d2e00
   Function flags:
   Called by: 
   Calls: 
-Bfx_ToggleBits_u32/15 (Bfx_ToggleBits_u32) @071d2b60
+Bfx_ToggleBits_u32/15 (Bfx_ToggleBits_u32) @07241b60
   Type: function definition
   Visibility: no_reorder
   References: 
@@ -515,7 +515,7 @@ Bfx_ToggleBits_u32/15 (Bfx_ToggleBits_u32) @071d2b60
   Function flags:
   Called by: 
   Calls: 
-Bfx_TstParityEven_u32_u8/14 (Bfx_TstParityEven_u32_u8) @071d28c0
+Bfx_TstParityEven_u32_u8/14 (Bfx_TstParityEven_u32_u8) @072418c0
   Type: function definition
   Visibility: no_reorder
   References: 
@@ -523,7 +523,7 @@ Bfx_TstParityEven_u32_u8/14 (Bfx_TstParityEven_u32_u8) @071d28c0
   Function flags:
   Called by: 
   Calls: 
-Bfx_TstBitLnMask_u32u32_u8/13 (Bfx_TstBitLnMask_u32u32_u8) @071d2620
+Bfx_TstBitLnMask_u32u32_u8/13 (Bfx_TstBitLnMask_u32u32_u8) @07241620
   Type: function definition
   Visibility: no_reorder
   References: 
@@ -531,7 +531,7 @@ Bfx_TstBitLnMask_u32u32_u8/13 (Bfx_TstBitLnMask_u32u32_u8) @071d2620
   Function flags:
   Called by: 
   Calls: 
-Bfx_TstBitMask_u32u32_u8/12 (Bfx_TstBitMask_u32u32_u8) @071d2380
+Bfx_TstBitMask_u32u32_u8/12 (Bfx_TstBitMask_u32u32_u8) @07241380
   Type: function definition
   Visibility: no_reorder
   References: 
@@ -539,7 +539,7 @@ Bfx_TstBitMask_u32u32_u8/12 (Bfx_TstBitMask_u32u32_u8) @071d2380
   Function flags:
   Called by: 
   Calls: 
-Bfx_ClrBitMask_u32u32/11 (Bfx_ClrBitMask_u32u32) @071d20e0
+Bfx_ClrBitMask_u32u32/11 (Bfx_ClrBitMask_u32u32) @072410e0
   Type: function definition
   Visibility: no_reorder
   References: 
@@ -547,7 +547,7 @@ Bfx_ClrBitMask_u32u32/11 (Bfx_ClrBitMask_u32u32) @071d20e0
   Function flags:
   Called by: 
   Calls: 
-Bfx_SetBitMask_u32u32/10 (Bfx_SetBitMask_u32u32) @071cfe00
+Bfx_SetBitMask_u32u32/10 (Bfx_SetBitMask_u32u32) @0723ee00
   Type: function definition
   Visibility: no_reorder
   References: 
@@ -555,7 +555,7 @@ Bfx_SetBitMask_u32u32/10 (Bfx_SetBitMask_u32u32) @071cfe00
   Function flags:
   Called by: 
   Calls: 
-Bfx_GetBits_u32u8u8_u32/9 (Bfx_GetBits_u32u8u8_u32) @071cfb60
+Bfx_GetBits_u32u8u8_u32/9 (Bfx_GetBits_u32u8u8_u32) @0723eb60
   Type: function definition
   Visibility: no_reorder
   References: 
@@ -563,7 +563,7 @@ Bfx_GetBits_u32u8u8_u32/9 (Bfx_GetBits_u32u8u8_u32) @071cfb60
   Function flags:
   Called by: 
   Calls: 
-Bfx_SetBits_u32u8u8u8/8 (Bfx_SetBits_u32u8u8u8) @071cf8c0
+Bfx_SetBits_u32u8u8u8/8 (Bfx_SetBits_u32u8u8u8) @0723e8c0
   Type: function definition
   Visibility: no_reorder
   References: 
@@ -571,7 +571,7 @@ Bfx_SetBits_u32u8u8u8/8 (Bfx_SetBits_u32u8u8u8) @071cf8c0
   Function flags:
   Called by: 
   Calls: 
-Bfx_GetBit_u32u8_u8/7 (Bfx_GetBit_u32u8_u8) @071cf620
+Bfx_GetBit_u32u8_u8/7 (Bfx_GetBit_u32u8_u8) @0723e620
   Type: function definition
   Visibility: no_reorder
   References: 
@@ -579,7 +579,7 @@ Bfx_GetBit_u32u8_u8/7 (Bfx_GetBit_u32u8_u8) @071cf620
   Function flags:
   Called by: 
   Calls: 
-Bfx_ClrBit_u32u8/6 (Bfx_ClrBit_u32u8) @071cf380
+Bfx_ClrBit_u32u8/6 (Bfx_ClrBit_u32u8) @0723e380
   Type: function definition
   Visibility: no_reorder
   References: 
@@ -587,7 +587,7 @@ Bfx_ClrBit_u32u8/6 (Bfx_ClrBit_u32u8) @071cf380
   Function flags:
   Called by: 
   Calls: 
-Bfx_SetBit_u32u8/5 (Bfx_SetBit_u32u8) @071cf0e0
+Bfx_SetBit_u32u8/5 (Bfx_SetBit_u32u8) @0723e0e0
   Type: function definition
   Visibility: no_reorder
   References: 
@@ -595,7 +595,7 @@ Bfx_SetBit_u32u8/5 (Bfx_SetBit_u32u8) @071cf0e0
   Function flags:
   Called by: 
   Calls: 
-Platform_Ipw_InstallIrqHandler/4 (Platform_Ipw_InstallIrqHandler) @06f591c0
+Platform_Ipw_InstallIrqHandler/4 (Platform_Ipw_InstallIrqHandler) @06b751c0
   Type: function definition
   Visibility: no_reorder
   References: 
@@ -603,7 +603,7 @@ Platform_Ipw_InstallIrqHandler/4 (Platform_Ipw_InstallIrqHandler) @06f591c0
   Function flags:
   Called by: 
   Calls: 
-Platform_Ipw_GetIrqPriority/3 (Platform_Ipw_GetIrqPriority) @06f52700
+Platform_Ipw_GetIrqPriority/3 (Platform_Ipw_GetIrqPriority) @06b6e700
   Type: function definition
   Visibility: no_reorder
   References: 
@@ -611,7 +611,7 @@ Platform_Ipw_GetIrqPriority/3 (Platform_Ipw_GetIrqPriority) @06f52700
   Function flags:
   Called by: 
   Calls: 
-Platform_Ipw_SetIrqPriority/2 (Platform_Ipw_SetIrqPriority) @06f52d20
+Platform_Ipw_SetIrqPriority/2 (Platform_Ipw_SetIrqPriority) @06b6ed20
   Type: function definition
   Visibility: no_reorder
   References: 
@@ -619,7 +619,7 @@ Platform_Ipw_SetIrqPriority/2 (Platform_Ipw_SetIrqPriority) @06f52d20
   Function flags:
   Called by: 
   Calls: 
-Platform_Ipw_SetIrq/1 (Platform_Ipw_SetIrq) @06f52a80
+Platform_Ipw_SetIrq/1 (Platform_Ipw_SetIrq) @06b6ea80
   Type: function definition
   Visibility: no_reorder
   References: 
@@ -627,7 +627,7 @@ Platform_Ipw_SetIrq/1 (Platform_Ipw_SetIrq) @06f52a80
   Function flags:
   Called by: 
   Calls: 
-DevAssert/0 (DevAssert) @06f21e00
+DevAssert/0 (DevAssert) @06ec1e00
   Type: function definition
   Visibility: no_reorder
   References: 
@@ -640,7 +640,7 @@ Removing unused symbols: Bfx_CountLeadingZeros_u8/54 Bfx_CountLeadingSigns_s8/53
 
 Reclaimed Symbol table:
 
-SEGGER_RTT_printf/77 (SEGGER_RTT_printf) @073f1ee0
+SEGGER_RTT_printf/77 (SEGGER_RTT_printf) @0a2a37e0
   Type: function
   Visibility: external public
   References: 
@@ -648,7 +648,7 @@ SEGGER_RTT_printf/77 (SEGGER_RTT_printf) @073f1ee0
   Function flags:
   Called by: Det_ReportError/72 
   Calls: 
-Sys_GetCoreID/76 (Sys_GetCoreID) @073f17e0
+Sys_GetCoreID/76 (Sys_GetCoreID) @0a2a3700
   Type: function
   Visibility: external public
   References: 
@@ -656,7 +656,7 @@ Sys_GetCoreID/76 (Sys_GetCoreID) @073f17e0
   Function flags:
   Called by: Det_ReportTransientFault/74 Det_ReportRuntimeError/73 Det_ReportError/72 
   Calls: 
-Det_Start/75 (Det_Start) @073f19a0
+Det_Start/75 (Det_Start) @06c43ee0
   Type: function definition analyzed
   Visibility: force_output no_reorder public
   References: 
@@ -664,7 +664,7 @@ Det_Start/75 (Det_Start) @073f19a0
   Function flags: body
   Called by: 
   Calls: 
-Det_ReportTransientFault/74 (Det_ReportTransientFault) @073f1700
+Det_ReportTransientFault/74 (Det_ReportTransientFault) @06c43c40
   Type: function definition analyzed
   Visibility: force_output no_reorder public
   References: Det_TransientModuleId/65 (write) Det_TransientInstanceId/61 (write) Det_TransientApiId/62 (write) Det_TransientFaultId/63 (write) 
@@ -672,7 +672,7 @@ Det_ReportTransientFault/74 (Det_ReportTransientFault) @073f1700
   Function flags: body
   Called by: 
   Calls: Sys_GetCoreID/76 
-Det_ReportRuntimeError/73 (Det_ReportRuntimeError) @073f1460
+Det_ReportRuntimeError/73 (Det_ReportRuntimeError) @06c439a0
   Type: function definition analyzed
   Visibility: force_output no_reorder public
   References: Det_RuntimeModuleId/67 (write) Det_RuntimeInstanceId/58 (write) Det_RuntimeApiId/59 (write) Det_RuntimeErrorId/60 (write) 
@@ -680,7 +680,7 @@ Det_ReportRuntimeError/73 (Det_ReportRuntimeError) @073f1460
   Function flags: body
   Called by: 
   Calls: Sys_GetCoreID/76 
-Det_ReportError/72 (Det_ReportError) @073f11c0
+Det_ReportError/72 (Det_ReportError) @06c43700
   Type: function definition analyzed
   Visibility: force_output no_reorder public
   References: Det_ModuleId/66 (write) Det_InstanceId/55 (write) Det_ApiId/56 (write) Det_ErrorId/57 (write) 
@@ -688,7 +688,7 @@ Det_ReportError/72 (Det_ReportError) @073f11c0
   Function flags: body
   Called by: 
   Calls: SEGGER_RTT_printf/77 Det_GetErrorMeaning/71 Det_GetApiName/70 Det_GetModuleName/69 Sys_GetCoreID/76 
-Det_GetErrorMeaning/71 (Det_GetErrorMeaning) @0735fe00
+Det_GetErrorMeaning/71 (Det_GetErrorMeaning) @06c43460
   Type: function definition analyzed
   Visibility: force_output no_reorder public
   References: ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (read) 
@@ -696,7 +696,7 @@ Det_GetErrorMeaning/71 (Det_GetErrorMeaning) @0735fe00
   Function flags: body
   Called by: Det_ReportError/72 
   Calls: 
-Det_GetApiName/70 (Det_GetApiName) @0735f8c0
+Det_GetApiName/70 (Det_GetApiName) @06c431c0
   Type: function definition analyzed
   Visibility: force_output no_reorder public
   References: ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (read) 
@@ -704,7 +704,7 @@ Det_GetApiName/70 (Det_GetApiName) @0735f8c0
   Function flags: body
   Called by: Det_ReportError/72 
   Calls: 
-Det_GetModuleName/69 (Det_GetModuleName) @0735fd20
+Det_GetModuleName/69 (Det_GetModuleName) @072e3ee0
   Type: function definition analyzed
   Visibility: force_output no_reorder public
   References: ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (read) 
@@ -712,7 +712,7 @@ Det_GetModuleName/69 (Det_GetModuleName) @0735fd20
   Function flags: body
   Called by: Det_ReportError/72 
   Calls: 
-Det_Init/68 (Det_Init) @0735fa80
+Det_Init/68 (Det_Init) @072e3e00
   Type: function definition analyzed
   Visibility: force_output no_reorder public
   References: 
@@ -720,91 +720,91 @@ Det_Init/68 (Det_Init) @0735fa80
   Function flags: body
   Called by: 
   Calls: 
-Det_RuntimeModuleId/67 (Det_RuntimeModuleId) @0735ec60
+Det_RuntimeModuleId/67 (Det_RuntimeModuleId) @072e4e58
   Type: variable definition analyzed
   Visibility: force_output no_reorder public
   References: 
   Referring: Det_ReportRuntimeError/73 (write) 
   Availability: not-ready
   Varpool flags:
-Det_ModuleId/66 (Det_ModuleId) @0735ec18
+Det_ModuleId/66 (Det_ModuleId) @072e4e10
   Type: variable definition analyzed
   Visibility: force_output no_reorder public
   References: 
   Referring: Det_ReportError/72 (write) 
   Availability: not-ready
   Varpool flags:
-Det_TransientModuleId/65 (Det_TransientModuleId) @0735ebd0
+Det_TransientModuleId/65 (Det_TransientModuleId) @072e4dc8
   Type: variable definition analyzed
   Visibility: force_output no_reorder public
   References: 
   Referring: Det_ReportTransientFault/74 (write) 
   Availability: not-ready
   Varpool flags:
-ErrorString_Ptr/64 (ErrorString_Ptr) @0735eb88
+ErrorString_Ptr/64 (ErrorString_Ptr) @072e4d80
   Type: variable definition analyzed
   Visibility: force_output no_reorder public
   References: 
   Referring: Det_GetModuleName/69 (write) Det_GetModuleName/69 (write) Det_GetModuleName/69 (write) Det_GetModuleName/69 (write) Det_GetModuleName/69 (write) Det_GetModuleName/69 (write) Det_GetModuleName/69 (write) Det_GetModuleName/69 (write) Det_GetModuleName/69 (write) Det_GetModuleName/69 (write) Det_GetModuleName/69 (write) Det_GetModuleName/69 (read) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (read) Det_GetErrorMeaning/71 (write) Det_GetErrorMeaning/71 (write) Det_GetErrorMeaning/71 (write) Det_GetErrorMeaning/71 (write) Det_GetErrorMeaning/71 (write) Det_GetErrorMeaning/71 (write) Det_GetErrorMeaning/71 (write) Det_GetErrorMeaning/71 (write) Det_GetErrorMeaning/71 (write) Det_GetErrorMeaning/71 (write) Det_GetErrorMeaning/71 (write) Det_GetErrorMeaning/71 (write) Det_GetErrorMeaning/71 (write) Det_GetErrorMeaning/71 (write) Det_GetErrorMeaning/71 (write) Det_GetErrorMeaning/71 (write) Det_GetErrorMeaning/71 (write) Det_GetErrorMeaning/71 (write) Det_GetErrorMeaning/71 (write) Det_GetErrorMeaning/71 (write) Det_GetErrorMeaning/71 (write) Det_GetErrorMeaning/71 (write) Det_GetErrorMeaning/71 (write) Det_GetErrorMeaning/71 (write) Det_GetErrorMeaning/71 (write) Det_GetErrorMeaning/71 (write) Det_GetErrorMeaning/71 (write) Det_GetErrorMeaning/71 (write) Det_GetErrorMeaning/71 (write) Det_GetErrorMeaning/71 (write) Det_GetErrorMeaning/71 (write) Det_GetErrorMeaning/71 (write) Det_GetErrorMeaning/71 (write) Det_GetErrorMeaning/71 (write) Det_GetErrorMeaning/71 (write) Det_GetErrorMeaning/71 (write) Det_GetErrorMeaning/71 (write) Det_GetErrorMeaning/71 (write) Det_GetErrorMeaning/71 (write) Det_GetErrorMeaning/71 (write) Det_GetErrorMeaning/71 (write) Det_GetErrorMeaning/71 (write) Det_GetErrorMeaning/71 (write) Det_GetErrorMeaning/71 (write) Det_GetErrorMeaning/71 (write) Det_GetErrorMeaning/71 (write) Det_GetErrorMeaning/71 (write) Det_GetErrorMeaning/71 (read) 
   Availability: not-ready
   Varpool flags:
-Det_TransientFaultId/63 (Det_TransientFaultId) @0735eb40
+Det_TransientFaultId/63 (Det_TransientFaultId) @072e4d38
   Type: variable definition analyzed
   Visibility: force_output no_reorder public
   References: 
   Referring: Det_ReportTransientFault/74 (write) 
   Availability: not-ready
   Varpool flags:
-Det_TransientApiId/62 (Det_TransientApiId) @0735eaf8
+Det_TransientApiId/62 (Det_TransientApiId) @072e4cf0
   Type: variable definition analyzed
   Visibility: force_output no_reorder public
   References: 
   Referring: Det_ReportTransientFault/74 (write) 
   Availability: not-ready
   Varpool flags:
-Det_TransientInstanceId/61 (Det_TransientInstanceId) @0735eab0
+Det_TransientInstanceId/61 (Det_TransientInstanceId) @072e4ca8
   Type: variable definition analyzed
   Visibility: force_output no_reorder public
   References: 
   Referring: Det_ReportTransientFault/74 (write) 
   Availability: not-ready
   Varpool flags:
-Det_RuntimeErrorId/60 (Det_RuntimeErrorId) @0735ea68
+Det_RuntimeErrorId/60 (Det_RuntimeErrorId) @072e4c60
   Type: variable definition analyzed
   Visibility: force_output no_reorder public
   References: 
   Referring: Det_ReportRuntimeError/73 (write) 
   Availability: not-ready
   Varpool flags:
-Det_RuntimeApiId/59 (Det_RuntimeApiId) @0735ea20
+Det_RuntimeApiId/59 (Det_RuntimeApiId) @072e4c18
   Type: variable definition analyzed
   Visibility: force_output no_reorder public
   References: 
   Referring: Det_ReportRuntimeError/73 (write) 
   Availability: not-ready
   Varpool flags:
-Det_RuntimeInstanceId/58 (Det_RuntimeInstanceId) @0735e9d8
+Det_RuntimeInstanceId/58 (Det_RuntimeInstanceId) @072e4bd0
   Type: variable definition analyzed
   Visibility: force_output no_reorder public
   References: 
   Referring: Det_ReportRuntimeError/73 (write) 
   Availability: not-ready
   Varpool flags:
-Det_ErrorId/57 (Det_ErrorId) @0735e990
+Det_ErrorId/57 (Det_ErrorId) @072e4b88
   Type: variable definition analyzed
   Visibility: force_output no_reorder public
   References: 
   Referring: Det_ReportError/72 (write) 
   Availability: not-ready
   Varpool flags:
-Det_ApiId/56 (Det_ApiId) @0735e948
+Det_ApiId/56 (Det_ApiId) @072e4b40
   Type: variable definition analyzed
   Visibility: force_output no_reorder public
   References: 
   Referring: Det_ReportError/72 (write) 
   Availability: not-ready
   Varpool flags:
-Det_InstanceId/55 (Det_InstanceId) @0735e900
+Det_InstanceId/55 (Det_InstanceId) @072e4af8
   Type: variable definition analyzed
   Visibility: force_output no_reorder public
   References: 
@@ -815,7 +815,7 @@ Det_InstanceId/55 (Det_InstanceId) @0735e900
 
 Initial Symbol table:
 
-SEGGER_RTT_printf/77 (SEGGER_RTT_printf) @073f1ee0
+SEGGER_RTT_printf/77 (SEGGER_RTT_printf) @0a2a37e0
   Type: function
   Visibility: external public
   References: 
@@ -823,7 +823,7 @@ SEGGER_RTT_printf/77 (SEGGER_RTT_printf) @073f1ee0
   Function flags:
   Called by: Det_ReportError/72 
   Calls: 
-Sys_GetCoreID/76 (Sys_GetCoreID) @073f17e0
+Sys_GetCoreID/76 (Sys_GetCoreID) @0a2a3700
   Type: function
   Visibility: external public
   References: 
@@ -831,7 +831,7 @@ Sys_GetCoreID/76 (Sys_GetCoreID) @073f17e0
   Function flags:
   Called by: Det_ReportTransientFault/74 Det_ReportRuntimeError/73 Det_ReportError/72 
   Calls: 
-Det_Start/75 (Det_Start) @073f19a0
+Det_Start/75 (Det_Start) @06c43ee0
   Type: function definition analyzed
   Visibility: force_output no_reorder public
   References: 
@@ -839,7 +839,7 @@ Det_Start/75 (Det_Start) @073f19a0
   Function flags: body
   Called by: 
   Calls: 
-Det_ReportTransientFault/74 (Det_ReportTransientFault) @073f1700
+Det_ReportTransientFault/74 (Det_ReportTransientFault) @06c43c40
   Type: function definition analyzed
   Visibility: force_output no_reorder public
   References: Det_TransientModuleId/65 (write) Det_TransientInstanceId/61 (write) Det_TransientApiId/62 (write) Det_TransientFaultId/63 (write) 
@@ -847,7 +847,7 @@ Det_ReportTransientFault/74 (Det_ReportTransientFault) @073f1700
   Function flags: body
   Called by: 
   Calls: Sys_GetCoreID/76 
-Det_ReportRuntimeError/73 (Det_ReportRuntimeError) @073f1460
+Det_ReportRuntimeError/73 (Det_ReportRuntimeError) @06c439a0
   Type: function definition analyzed
   Visibility: force_output no_reorder public
   References: Det_RuntimeModuleId/67 (write) Det_RuntimeInstanceId/58 (write) Det_RuntimeApiId/59 (write) Det_RuntimeErrorId/60 (write) 
@@ -855,7 +855,7 @@ Det_ReportRuntimeError/73 (Det_ReportRuntimeError) @073f1460
   Function flags: body
   Called by: 
   Calls: Sys_GetCoreID/76 
-Det_ReportError/72 (Det_ReportError) @073f11c0
+Det_ReportError/72 (Det_ReportError) @06c43700
   Type: function definition analyzed
   Visibility: force_output no_reorder public
   References: Det_ModuleId/66 (write) Det_InstanceId/55 (write) Det_ApiId/56 (write) Det_ErrorId/57 (write) 
@@ -863,7 +863,7 @@ Det_ReportError/72 (Det_ReportError) @073f11c0
   Function flags: body
   Called by: 
   Calls: SEGGER_RTT_printf/77 Det_GetErrorMeaning/71 Det_GetApiName/70 Det_GetModuleName/69 Sys_GetCoreID/76 
-Det_GetErrorMeaning/71 (Det_GetErrorMeaning) @0735fe00
+Det_GetErrorMeaning/71 (Det_GetErrorMeaning) @06c43460
   Type: function definition analyzed
   Visibility: force_output no_reorder public
   References: ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (read) 
@@ -871,7 +871,7 @@ Det_GetErrorMeaning/71 (Det_GetErrorMeaning) @0735fe00
   Function flags: body
   Called by: Det_ReportError/72 
   Calls: 
-Det_GetApiName/70 (Det_GetApiName) @0735f8c0
+Det_GetApiName/70 (Det_GetApiName) @06c431c0
   Type: function definition analyzed
   Visibility: force_output no_reorder public
   References: ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (read) 
@@ -879,7 +879,7 @@ Det_GetApiName/70 (Det_GetApiName) @0735f8c0
   Function flags: body
   Called by: Det_ReportError/72 
   Calls: 
-Det_GetModuleName/69 (Det_GetModuleName) @0735fd20
+Det_GetModuleName/69 (Det_GetModuleName) @072e3ee0
   Type: function definition analyzed
   Visibility: force_output no_reorder public
   References: ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (read) 
@@ -887,7 +887,7 @@ Det_GetModuleName/69 (Det_GetModuleName) @0735fd20
   Function flags: body
   Called by: Det_ReportError/72 
   Calls: 
-Det_Init/68 (Det_Init) @0735fa80
+Det_Init/68 (Det_Init) @072e3e00
   Type: function definition analyzed
   Visibility: force_output no_reorder public
   References: 
@@ -895,91 +895,91 @@ Det_Init/68 (Det_Init) @0735fa80
   Function flags: body
   Called by: 
   Calls: 
-Det_RuntimeModuleId/67 (Det_RuntimeModuleId) @0735ec60
+Det_RuntimeModuleId/67 (Det_RuntimeModuleId) @072e4e58
   Type: variable definition analyzed
   Visibility: force_output no_reorder public
   References: 
   Referring: Det_ReportRuntimeError/73 (write) 
   Availability: not-ready
   Varpool flags:
-Det_ModuleId/66 (Det_ModuleId) @0735ec18
+Det_ModuleId/66 (Det_ModuleId) @072e4e10
   Type: variable definition analyzed
   Visibility: force_output no_reorder public
   References: 
   Referring: Det_ReportError/72 (write) 
   Availability: not-ready
   Varpool flags:
-Det_TransientModuleId/65 (Det_TransientModuleId) @0735ebd0
+Det_TransientModuleId/65 (Det_TransientModuleId) @072e4dc8
   Type: variable definition analyzed
   Visibility: force_output no_reorder public
   References: 
   Referring: Det_ReportTransientFault/74 (write) 
   Availability: not-ready
   Varpool flags:
-ErrorString_Ptr/64 (ErrorString_Ptr) @0735eb88
+ErrorString_Ptr/64 (ErrorString_Ptr) @072e4d80
   Type: variable definition analyzed
   Visibility: force_output no_reorder public
   References: 
   Referring: Det_GetModuleName/69 (write) Det_GetModuleName/69 (write) Det_GetModuleName/69 (write) Det_GetModuleName/69 (write) Det_GetModuleName/69 (write) Det_GetModuleName/69 (write) Det_GetModuleName/69 (write) Det_GetModuleName/69 (write) Det_GetModuleName/69 (write) Det_GetModuleName/69 (write) Det_GetModuleName/69 (write) Det_GetModuleName/69 (read) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (read) Det_GetErrorMeaning/71 (write) Det_GetErrorMeaning/71 (write) Det_GetErrorMeaning/71 (write) Det_GetErrorMeaning/71 (write) Det_GetErrorMeaning/71 (write) Det_GetErrorMeaning/71 (write) Det_GetErrorMeaning/71 (write) Det_GetErrorMeaning/71 (write) Det_GetErrorMeaning/71 (write) Det_GetErrorMeaning/71 (write) Det_GetErrorMeaning/71 (write) Det_GetErrorMeaning/71 (write) Det_GetErrorMeaning/71 (write) Det_GetErrorMeaning/71 (write) Det_GetErrorMeaning/71 (write) Det_GetErrorMeaning/71 (write) Det_GetErrorMeaning/71 (write) Det_GetErrorMeaning/71 (write) Det_GetErrorMeaning/71 (write) Det_GetErrorMeaning/71 (write) Det_GetErrorMeaning/71 (write) Det_GetErrorMeaning/71 (write) Det_GetErrorMeaning/71 (write) Det_GetErrorMeaning/71 (write) Det_GetErrorMeaning/71 (write) Det_GetErrorMeaning/71 (write) Det_GetErrorMeaning/71 (write) Det_GetErrorMeaning/71 (write) Det_GetErrorMeaning/71 (write) Det_GetErrorMeaning/71 (write) Det_GetErrorMeaning/71 (write) Det_GetErrorMeaning/71 (write) Det_GetErrorMeaning/71 (write) Det_GetErrorMeaning/71 (write) Det_GetErrorMeaning/71 (write) Det_GetErrorMeaning/71 (write) Det_GetErrorMeaning/71 (write) Det_GetErrorMeaning/71 (write) Det_GetErrorMeaning/71 (write) Det_GetErrorMeaning/71 (write) Det_GetErrorMeaning/71 (write) Det_GetErrorMeaning/71 (write) Det_GetErrorMeaning/71 (write) Det_GetErrorMeaning/71 (write) Det_GetErrorMeaning/71 (write) Det_GetErrorMeaning/71 (write) Det_GetErrorMeaning/71 (write) Det_GetErrorMeaning/71 (read) 
   Availability: not-ready
   Varpool flags:
-Det_TransientFaultId/63 (Det_TransientFaultId) @0735eb40
+Det_TransientFaultId/63 (Det_TransientFaultId) @072e4d38
   Type: variable definition analyzed
   Visibility: force_output no_reorder public
   References: 
   Referring: Det_ReportTransientFault/74 (write) 
   Availability: not-ready
   Varpool flags:
-Det_TransientApiId/62 (Det_TransientApiId) @0735eaf8
+Det_TransientApiId/62 (Det_TransientApiId) @072e4cf0
   Type: variable definition analyzed
   Visibility: force_output no_reorder public
   References: 
   Referring: Det_ReportTransientFault/74 (write) 
   Availability: not-ready
   Varpool flags:
-Det_TransientInstanceId/61 (Det_TransientInstanceId) @0735eab0
+Det_TransientInstanceId/61 (Det_TransientInstanceId) @072e4ca8
   Type: variable definition analyzed
   Visibility: force_output no_reorder public
   References: 
   Referring: Det_ReportTransientFault/74 (write) 
   Availability: not-ready
   Varpool flags:
-Det_RuntimeErrorId/60 (Det_RuntimeErrorId) @0735ea68
+Det_RuntimeErrorId/60 (Det_RuntimeErrorId) @072e4c60
   Type: variable definition analyzed
   Visibility: force_output no_reorder public
   References: 
   Referring: Det_ReportRuntimeError/73 (write) 
   Availability: not-ready
   Varpool flags:
-Det_RuntimeApiId/59 (Det_RuntimeApiId) @0735ea20
+Det_RuntimeApiId/59 (Det_RuntimeApiId) @072e4c18
   Type: variable definition analyzed
   Visibility: force_output no_reorder public
   References: 
   Referring: Det_ReportRuntimeError/73 (write) 
   Availability: not-ready
   Varpool flags:
-Det_RuntimeInstanceId/58 (Det_RuntimeInstanceId) @0735e9d8
+Det_RuntimeInstanceId/58 (Det_RuntimeInstanceId) @072e4bd0
   Type: variable definition analyzed
   Visibility: force_output no_reorder public
   References: 
   Referring: Det_ReportRuntimeError/73 (write) 
   Availability: not-ready
   Varpool flags:
-Det_ErrorId/57 (Det_ErrorId) @0735e990
+Det_ErrorId/57 (Det_ErrorId) @072e4b88
   Type: variable definition analyzed
   Visibility: force_output no_reorder public
   References: 
   Referring: Det_ReportError/72 (write) 
   Availability: not-ready
   Varpool flags:
-Det_ApiId/56 (Det_ApiId) @0735e948
+Det_ApiId/56 (Det_ApiId) @072e4b40
   Type: variable definition analyzed
   Visibility: force_output no_reorder public
   References: 
   Referring: Det_ReportError/72 (write) 
   Availability: not-ready
   Varpool flags:
-Det_InstanceId/55 (Det_InstanceId) @0735e900
+Det_InstanceId/55 (Det_InstanceId) @072e4af8
   Type: variable definition analyzed
   Visibility: force_output no_reorder public
   References: 
@@ -991,7 +991,7 @@ Removing unused symbols:
 
 Reclaimed Symbol table:
 
-SEGGER_RTT_printf/77 (SEGGER_RTT_printf) @073f1ee0
+SEGGER_RTT_printf/77 (SEGGER_RTT_printf) @0a2a37e0
   Type: function
   Visibility: external public
   References: 
@@ -999,7 +999,7 @@ SEGGER_RTT_printf/77 (SEGGER_RTT_printf) @073f1ee0
   Function flags:
   Called by: Det_ReportError/72 
   Calls: 
-Sys_GetCoreID/76 (Sys_GetCoreID) @073f17e0
+Sys_GetCoreID/76 (Sys_GetCoreID) @0a2a3700
   Type: function
   Visibility: external public
   References: 
@@ -1007,7 +1007,7 @@ Sys_GetCoreID/76 (Sys_GetCoreID) @073f17e0
   Function flags:
   Called by: Det_ReportTransientFault/74 Det_ReportRuntimeError/73 Det_ReportError/72 
   Calls: 
-Det_Start/75 (Det_Start) @073f19a0
+Det_Start/75 (Det_Start) @06c43ee0
   Type: function definition analyzed
   Visibility: force_output no_reorder public
   References: 
@@ -1015,7 +1015,7 @@ Det_Start/75 (Det_Start) @073f19a0
   Function flags: body
   Called by: 
   Calls: 
-Det_ReportTransientFault/74 (Det_ReportTransientFault) @073f1700
+Det_ReportTransientFault/74 (Det_ReportTransientFault) @06c43c40
   Type: function definition analyzed
   Visibility: force_output no_reorder public
   References: Det_TransientModuleId/65 (write) Det_TransientInstanceId/61 (write) Det_TransientApiId/62 (write) Det_TransientFaultId/63 (write) 
@@ -1023,7 +1023,7 @@ Det_ReportTransientFault/74 (Det_ReportTransientFault) @073f1700
   Function flags: body
   Called by: 
   Calls: Sys_GetCoreID/76 
-Det_ReportRuntimeError/73 (Det_ReportRuntimeError) @073f1460
+Det_ReportRuntimeError/73 (Det_ReportRuntimeError) @06c439a0
   Type: function definition analyzed
   Visibility: force_output no_reorder public
   References: Det_RuntimeModuleId/67 (write) Det_RuntimeInstanceId/58 (write) Det_RuntimeApiId/59 (write) Det_RuntimeErrorId/60 (write) 
@@ -1031,7 +1031,7 @@ Det_ReportRuntimeError/73 (Det_ReportRuntimeError) @073f1460
   Function flags: body
   Called by: 
   Calls: Sys_GetCoreID/76 
-Det_ReportError/72 (Det_ReportError) @073f11c0
+Det_ReportError/72 (Det_ReportError) @06c43700
   Type: function definition analyzed
   Visibility: force_output no_reorder public
   References: Det_ModuleId/66 (write) Det_InstanceId/55 (write) Det_ApiId/56 (write) Det_ErrorId/57 (write) 
@@ -1039,7 +1039,7 @@ Det_ReportError/72 (Det_ReportError) @073f11c0
   Function flags: body
   Called by: 
   Calls: SEGGER_RTT_printf/77 Det_GetErrorMeaning/71 Det_GetApiName/70 Det_GetModuleName/69 Sys_GetCoreID/76 
-Det_GetErrorMeaning/71 (Det_GetErrorMeaning) @0735fe00
+Det_GetErrorMeaning/71 (Det_GetErrorMeaning) @06c43460
   Type: function definition analyzed
   Visibility: force_output no_reorder public
   References: ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (read) 
@@ -1047,7 +1047,7 @@ Det_GetErrorMeaning/71 (Det_GetErrorMeaning) @0735fe00
   Function flags: body
   Called by: Det_ReportError/72 
   Calls: 
-Det_GetApiName/70 (Det_GetApiName) @0735f8c0
+Det_GetApiName/70 (Det_GetApiName) @06c431c0
   Type: function definition analyzed
   Visibility: force_output no_reorder public
   References: ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (read) 
@@ -1055,7 +1055,7 @@ Det_GetApiName/70 (Det_GetApiName) @0735f8c0
   Function flags: body
   Called by: Det_ReportError/72 
   Calls: 
-Det_GetModuleName/69 (Det_GetModuleName) @0735fd20
+Det_GetModuleName/69 (Det_GetModuleName) @072e3ee0
   Type: function definition analyzed
   Visibility: force_output no_reorder public
   References: ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (read) 
@@ -1063,7 +1063,7 @@ Det_GetModuleName/69 (Det_GetModuleName) @0735fd20
   Function flags: body
   Called by: Det_ReportError/72 
   Calls: 
-Det_Init/68 (Det_Init) @0735fa80
+Det_Init/68 (Det_Init) @072e3e00
   Type: function definition analyzed
   Visibility: force_output no_reorder public
   References: 
@@ -1071,91 +1071,91 @@ Det_Init/68 (Det_Init) @0735fa80
   Function flags: body
   Called by: 
   Calls: 
-Det_RuntimeModuleId/67 (Det_RuntimeModuleId) @0735ec60
+Det_RuntimeModuleId/67 (Det_RuntimeModuleId) @072e4e58
   Type: variable definition analyzed
   Visibility: force_output no_reorder public
   References: 
   Referring: Det_ReportRuntimeError/73 (write) 
   Availability: not-ready
   Varpool flags:
-Det_ModuleId/66 (Det_ModuleId) @0735ec18
+Det_ModuleId/66 (Det_ModuleId) @072e4e10
   Type: variable definition analyzed
   Visibility: force_output no_reorder public
   References: 
   Referring: Det_ReportError/72 (write) 
   Availability: not-ready
   Varpool flags:
-Det_TransientModuleId/65 (Det_TransientModuleId) @0735ebd0
+Det_TransientModuleId/65 (Det_TransientModuleId) @072e4dc8
   Type: variable definition analyzed
   Visibility: force_output no_reorder public
   References: 
   Referring: Det_ReportTransientFault/74 (write) 
   Availability: not-ready
   Varpool flags:
-ErrorString_Ptr/64 (ErrorString_Ptr) @0735eb88
+ErrorString_Ptr/64 (ErrorString_Ptr) @072e4d80
   Type: variable definition analyzed
   Visibility: force_output no_reorder public
   References: 
   Referring: Det_GetModuleName/69 (write) Det_GetModuleName/69 (write) Det_GetModuleName/69 (write) Det_GetModuleName/69 (write) Det_GetModuleName/69 (write) Det_GetModuleName/69 (write) Det_GetModuleName/69 (write) Det_GetModuleName/69 (write) Det_GetModuleName/69 (write) Det_GetModuleName/69 (write) Det_GetModuleName/69 (write) Det_GetModuleName/69 (read) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (read) Det_GetErrorMeaning/71 (write) Det_GetErrorMeaning/71 (write) Det_GetErrorMeaning/71 (write) Det_GetErrorMeaning/71 (write) Det_GetErrorMeaning/71 (write) Det_GetErrorMeaning/71 (write) Det_GetErrorMeaning/71 (write) Det_GetErrorMeaning/71 (write) Det_GetErrorMeaning/71 (write) Det_GetErrorMeaning/71 (write) Det_GetErrorMeaning/71 (write) Det_GetErrorMeaning/71 (write) Det_GetErrorMeaning/71 (write) Det_GetErrorMeaning/71 (write) Det_GetErrorMeaning/71 (write) Det_GetErrorMeaning/71 (write) Det_GetErrorMeaning/71 (write) Det_GetErrorMeaning/71 (write) Det_GetErrorMeaning/71 (write) Det_GetErrorMeaning/71 (write) Det_GetErrorMeaning/71 (write) Det_GetErrorMeaning/71 (write) Det_GetErrorMeaning/71 (write) Det_GetErrorMeaning/71 (write) Det_GetErrorMeaning/71 (write) Det_GetErrorMeaning/71 (write) Det_GetErrorMeaning/71 (write) Det_GetErrorMeaning/71 (write) Det_GetErrorMeaning/71 (write) Det_GetErrorMeaning/71 (write) Det_GetErrorMeaning/71 (write) Det_GetErrorMeaning/71 (write) Det_GetErrorMeaning/71 (write) Det_GetErrorMeaning/71 (write) Det_GetErrorMeaning/71 (write) Det_GetErrorMeaning/71 (write) Det_GetErrorMeaning/71 (write) Det_GetErrorMeaning/71 (write) Det_GetErrorMeaning/71 (write) Det_GetErrorMeaning/71 (write) Det_GetErrorMeaning/71 (write) Det_GetErrorMeaning/71 (write) Det_GetErrorMeaning/71 (write) Det_GetErrorMeaning/71 (write) Det_GetErrorMeaning/71 (write) Det_GetErrorMeaning/71 (write) Det_GetErrorMeaning/71 (write) Det_GetErrorMeaning/71 (read) 
   Availability: not-ready
   Varpool flags:
-Det_TransientFaultId/63 (Det_TransientFaultId) @0735eb40
+Det_TransientFaultId/63 (Det_TransientFaultId) @072e4d38
   Type: variable definition analyzed
   Visibility: force_output no_reorder public
   References: 
   Referring: Det_ReportTransientFault/74 (write) 
   Availability: not-ready
   Varpool flags:
-Det_TransientApiId/62 (Det_TransientApiId) @0735eaf8
+Det_TransientApiId/62 (Det_TransientApiId) @072e4cf0
   Type: variable definition analyzed
   Visibility: force_output no_reorder public
   References: 
   Referring: Det_ReportTransientFault/74 (write) 
   Availability: not-ready
   Varpool flags:
-Det_TransientInstanceId/61 (Det_TransientInstanceId) @0735eab0
+Det_TransientInstanceId/61 (Det_TransientInstanceId) @072e4ca8
   Type: variable definition analyzed
   Visibility: force_output no_reorder public
   References: 
   Referring: Det_ReportTransientFault/74 (write) 
   Availability: not-ready
   Varpool flags:
-Det_RuntimeErrorId/60 (Det_RuntimeErrorId) @0735ea68
+Det_RuntimeErrorId/60 (Det_RuntimeErrorId) @072e4c60
   Type: variable definition analyzed
   Visibility: force_output no_reorder public
   References: 
   Referring: Det_ReportRuntimeError/73 (write) 
   Availability: not-ready
   Varpool flags:
-Det_RuntimeApiId/59 (Det_RuntimeApiId) @0735ea20
+Det_RuntimeApiId/59 (Det_RuntimeApiId) @072e4c18
   Type: variable definition analyzed
   Visibility: force_output no_reorder public
   References: 
   Referring: Det_ReportRuntimeError/73 (write) 
   Availability: not-ready
   Varpool flags:
-Det_RuntimeInstanceId/58 (Det_RuntimeInstanceId) @0735e9d8
+Det_RuntimeInstanceId/58 (Det_RuntimeInstanceId) @072e4bd0
   Type: variable definition analyzed
   Visibility: force_output no_reorder public
   References: 
   Referring: Det_ReportRuntimeError/73 (write) 
   Availability: not-ready
   Varpool flags:
-Det_ErrorId/57 (Det_ErrorId) @0735e990
+Det_ErrorId/57 (Det_ErrorId) @072e4b88
   Type: variable definition analyzed
   Visibility: force_output no_reorder public
   References: 
   Referring: Det_ReportError/72 (write) 
   Availability: not-ready
   Varpool flags:
-Det_ApiId/56 (Det_ApiId) @0735e948
+Det_ApiId/56 (Det_ApiId) @072e4b40
   Type: variable definition analyzed
   Visibility: force_output no_reorder public
   References: 
   Referring: Det_ReportError/72 (write) 
   Availability: not-ready
   Varpool flags:
-Det_InstanceId/55 (Det_InstanceId) @0735e900
+Det_InstanceId/55 (Det_InstanceId) @072e4af8
   Type: variable definition analyzed
   Visibility: force_output no_reorder public
   References: 
@@ -1168,7 +1168,7 @@ Reclaiming variables:
 Clearing address taken flags:
 Optimized Symbol table:
 
-SEGGER_RTT_printf/77 (SEGGER_RTT_printf) @073f1ee0
+SEGGER_RTT_printf/77 (SEGGER_RTT_printf) @0a2a37e0
   Type: function
   Visibility: external public
   References: 
@@ -1177,7 +1177,7 @@ SEGGER_RTT_printf/77 (SEGGER_RTT_printf) @073f1ee0
   Function flags:
   Called by: Det_ReportError/72 
   Calls: 
-Sys_GetCoreID/76 (Sys_GetCoreID) @073f17e0
+Sys_GetCoreID/76 (Sys_GetCoreID) @0a2a3700
   Type: function
   Visibility: external public
   References: 
@@ -1186,7 +1186,7 @@ Sys_GetCoreID/76 (Sys_GetCoreID) @073f17e0
   Function flags:
   Called by: Det_ReportTransientFault/74 Det_ReportRuntimeError/73 Det_ReportError/72 
   Calls: 
-Det_Start/75 (Det_Start) @073f19a0
+Det_Start/75 (Det_Start) @06c43ee0
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: 
@@ -1195,7 +1195,7 @@ Det_Start/75 (Det_Start) @073f19a0
   Function flags: body
   Called by: 
   Calls: 
-Det_ReportTransientFault/74 (Det_ReportTransientFault) @073f1700
+Det_ReportTransientFault/74 (Det_ReportTransientFault) @06c43c40
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: Det_TransientModuleId/65 (write) Det_TransientInstanceId/61 (write) Det_TransientApiId/62 (write) Det_TransientFaultId/63 (write) 
@@ -1204,7 +1204,7 @@ Det_ReportTransientFault/74 (Det_ReportTransientFault) @073f1700
   Function flags: body
   Called by: 
   Calls: Sys_GetCoreID/76 
-Det_ReportRuntimeError/73 (Det_ReportRuntimeError) @073f1460
+Det_ReportRuntimeError/73 (Det_ReportRuntimeError) @06c439a0
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: Det_RuntimeModuleId/67 (write) Det_RuntimeInstanceId/58 (write) Det_RuntimeApiId/59 (write) Det_RuntimeErrorId/60 (write) 
@@ -1213,7 +1213,7 @@ Det_ReportRuntimeError/73 (Det_ReportRuntimeError) @073f1460
   Function flags: body
   Called by: 
   Calls: Sys_GetCoreID/76 
-Det_ReportError/72 (Det_ReportError) @073f11c0
+Det_ReportError/72 (Det_ReportError) @06c43700
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: Det_ModuleId/66 (write) Det_InstanceId/55 (write) Det_ApiId/56 (write) Det_ErrorId/57 (write) 
@@ -1222,7 +1222,7 @@ Det_ReportError/72 (Det_ReportError) @073f11c0
   Function flags: body
   Called by: 
   Calls: SEGGER_RTT_printf/77 Det_GetErrorMeaning/71 Det_GetApiName/70 Det_GetModuleName/69 Sys_GetCoreID/76 
-Det_GetErrorMeaning/71 (Det_GetErrorMeaning) @0735fe00
+Det_GetErrorMeaning/71 (Det_GetErrorMeaning) @06c43460
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (read) 
@@ -1231,7 +1231,7 @@ Det_GetErrorMeaning/71 (Det_GetErrorMeaning) @0735fe00
   Function flags: body
   Called by: Det_ReportError/72 
   Calls: 
-Det_GetApiName/70 (Det_GetApiName) @0735f8c0
+Det_GetApiName/70 (Det_GetApiName) @06c431c0
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (read) 
@@ -1240,7 +1240,7 @@ Det_GetApiName/70 (Det_GetApiName) @0735f8c0
   Function flags: body
   Called by: Det_ReportError/72 
   Calls: 
-Det_GetModuleName/69 (Det_GetModuleName) @0735fd20
+Det_GetModuleName/69 (Det_GetModuleName) @072e3ee0
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (write) ErrorString_Ptr/64 (read) 
@@ -1249,7 +1249,7 @@ Det_GetModuleName/69 (Det_GetModuleName) @0735fd20
   Function flags: body
   Called by: Det_ReportError/72 
   Calls: 
-Det_Init/68 (Det_Init) @0735fa80
+Det_Init/68 (Det_Init) @072e3e00
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: 
@@ -1258,91 +1258,91 @@ Det_Init/68 (Det_Init) @0735fa80
   Function flags: body
   Called by: 
   Calls: 
-Det_RuntimeModuleId/67 (Det_RuntimeModuleId) @0735ec60
+Det_RuntimeModuleId/67 (Det_RuntimeModuleId) @072e4e58
   Type: variable definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: 
   Referring: Det_ReportRuntimeError/73 (write) 
   Availability: available
   Varpool flags:
-Det_ModuleId/66 (Det_ModuleId) @0735ec18
+Det_ModuleId/66 (Det_ModuleId) @072e4e10
   Type: variable definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: 
   Referring: Det_ReportError/72 (write) 
   Availability: available
   Varpool flags:
-Det_TransientModuleId/65 (Det_TransientModuleId) @0735ebd0
+Det_TransientModuleId/65 (Det_TransientModuleId) @072e4dc8
   Type: variable definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: 
   Referring: Det_ReportTransientFault/74 (write) 
   Availability: available
   Varpool flags:
-ErrorString_Ptr/64 (ErrorString_Ptr) @0735eb88
+ErrorString_Ptr/64 (ErrorString_Ptr) @072e4d80
   Type: variable definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: 
   Referring: Det_GetModuleName/69 (write) Det_GetModuleName/69 (write) Det_GetModuleName/69 (write) Det_GetModuleName/69 (write) Det_GetModuleName/69 (write) Det_GetModuleName/69 (write) Det_GetModuleName/69 (write) Det_GetModuleName/69 (write) Det_GetModuleName/69 (write) Det_GetModuleName/69 (write) Det_GetModuleName/69 (write) Det_GetModuleName/69 (read) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (read) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetApiName/70 (write) Det_GetErrorMeaning/71 (write) Det_GetErrorMeaning/71 (write) Det_GetErrorMeaning/71 (write) Det_GetErrorMeaning/71 (write) Det_GetErrorMeaning/71 (write) Det_GetErrorMeaning/71 (write) Det_GetErrorMeaning/71 (write) Det_GetErrorMeaning/71 (write) Det_GetErrorMeaning/71 (write) Det_GetErrorMeaning/71 (write) Det_GetErrorMeaning/71 (write) Det_GetErrorMeaning/71 (write) Det_GetErrorMeaning/71 (write) Det_GetErrorMeaning/71 (write) Det_GetErrorMeaning/71 (write) Det_GetErrorMeaning/71 (write) Det_GetErrorMeaning/71 (write) Det_GetErrorMeaning/71 (write) Det_GetErrorMeaning/71 (write) Det_GetErrorMeaning/71 (write) Det_GetErrorMeaning/71 (write) Det_GetErrorMeaning/71 (write) Det_GetErrorMeaning/71 (write) Det_GetErrorMeaning/71 (write) Det_GetErrorMeaning/71 (write) Det_GetErrorMeaning/71 (write) Det_GetErrorMeaning/71 (write) Det_GetErrorMeaning/71 (write) Det_GetErrorMeaning/71 (write) Det_GetErrorMeaning/71 (write) Det_GetErrorMeaning/71 (write) Det_GetErrorMeaning/71 (write) Det_GetErrorMeaning/71 (write) Det_GetErrorMeaning/71 (write) Det_GetErrorMeaning/71 (write) Det_GetErrorMeaning/71 (write) Det_GetErrorMeaning/71 (write) Det_GetErrorMeaning/71 (write) Det_GetErrorMeaning/71 (write) Det_GetErrorMeaning/71 (write) Det_GetErrorMeaning/71 (write) Det_GetErrorMeaning/71 (write) Det_GetErrorMeaning/71 (write) Det_GetErrorMeaning/71 (write) Det_GetErrorMeaning/71 (write) Det_GetErrorMeaning/71 (write) Det_GetErrorMeaning/71 (write) Det_GetErrorMeaning/71 (read) 
   Availability: available
   Varpool flags:
-Det_TransientFaultId/63 (Det_TransientFaultId) @0735eb40
+Det_TransientFaultId/63 (Det_TransientFaultId) @072e4d38
   Type: variable definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: 
   Referring: Det_ReportTransientFault/74 (write) 
   Availability: available
   Varpool flags:
-Det_TransientApiId/62 (Det_TransientApiId) @0735eaf8
+Det_TransientApiId/62 (Det_TransientApiId) @072e4cf0
   Type: variable definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: 
   Referring: Det_ReportTransientFault/74 (write) 
   Availability: available
   Varpool flags:
-Det_TransientInstanceId/61 (Det_TransientInstanceId) @0735eab0
+Det_TransientInstanceId/61 (Det_TransientInstanceId) @072e4ca8
   Type: variable definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: 
   Referring: Det_ReportTransientFault/74 (write) 
   Availability: available
   Varpool flags:
-Det_RuntimeErrorId/60 (Det_RuntimeErrorId) @0735ea68
+Det_RuntimeErrorId/60 (Det_RuntimeErrorId) @072e4c60
   Type: variable definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: 
   Referring: Det_ReportRuntimeError/73 (write) 
   Availability: available
   Varpool flags:
-Det_RuntimeApiId/59 (Det_RuntimeApiId) @0735ea20
+Det_RuntimeApiId/59 (Det_RuntimeApiId) @072e4c18
   Type: variable definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: 
   Referring: Det_ReportRuntimeError/73 (write) 
   Availability: available
   Varpool flags:
-Det_RuntimeInstanceId/58 (Det_RuntimeInstanceId) @0735e9d8
+Det_RuntimeInstanceId/58 (Det_RuntimeInstanceId) @072e4bd0
   Type: variable definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: 
   Referring: Det_ReportRuntimeError/73 (write) 
   Availability: available
   Varpool flags:
-Det_ErrorId/57 (Det_ErrorId) @0735e990
+Det_ErrorId/57 (Det_ErrorId) @072e4b88
   Type: variable definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: 
   Referring: Det_ReportError/72 (write) 
   Availability: available
   Varpool flags:
-Det_ApiId/56 (Det_ApiId) @0735e948
+Det_ApiId/56 (Det_ApiId) @072e4b40
   Type: variable definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: 
   Referring: Det_ReportError/72 (write) 
   Availability: available
   Varpool flags:
-Det_InstanceId/55 (Det_InstanceId) @0735e900
+Det_InstanceId/55 (Det_InstanceId) @072e4af8
   Type: variable definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: 
@@ -1360,7 +1360,7 @@ Removing variables:
 
 Final Symbol table:
 
-SEGGER_RTT_printf/77 (SEGGER_RTT_printf) @073f1ee0
+SEGGER_RTT_printf/77 (SEGGER_RTT_printf) @0a2a37e0
   Type: function
   Visibility: external public
   References: 
@@ -1369,7 +1369,7 @@ SEGGER_RTT_printf/77 (SEGGER_RTT_printf) @073f1ee0
   Function flags:
   Called by: 
   Calls: 
-Sys_GetCoreID/76 (Sys_GetCoreID) @073f17e0
+Sys_GetCoreID/76 (Sys_GetCoreID) @0a2a3700
   Type: function
   Visibility: external public
   References: 
@@ -1378,7 +1378,7 @@ Sys_GetCoreID/76 (Sys_GetCoreID) @073f17e0
   Function flags:
   Called by: 
   Calls: 
-Det_Start/75 (Det_Start) @073f19a0
+Det_Start/75 (Det_Start) @06c43ee0
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder asm_written public section:.text.Det_Start (implicit_section)
   References: 
@@ -1387,7 +1387,7 @@ Det_Start/75 (Det_Start) @073f19a0
   Function flags:
   Called by: 
   Calls: 
-Det_ReportTransientFault/74 (Det_ReportTransientFault) @073f1700
+Det_ReportTransientFault/74 (Det_ReportTransientFault) @06c43c40
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder asm_written public section:.text.Det_ReportTransientFault (implicit_section)
   References: 
@@ -1396,7 +1396,7 @@ Det_ReportTransientFault/74 (Det_ReportTransientFault) @073f1700
   Function flags:
   Called by: 
   Calls: 
-Det_ReportRuntimeError/73 (Det_ReportRuntimeError) @073f1460
+Det_ReportRuntimeError/73 (Det_ReportRuntimeError) @06c439a0
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder asm_written public section:.text.Det_ReportRuntimeError (implicit_section)
   References: 
@@ -1405,7 +1405,7 @@ Det_ReportRuntimeError/73 (Det_ReportRuntimeError) @073f1460
   Function flags:
   Called by: 
   Calls: 
-Det_ReportError/72 (Det_ReportError) @073f11c0
+Det_ReportError/72 (Det_ReportError) @06c43700
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder asm_written public section:.text.Det_ReportError (implicit_section)
   References: 
@@ -1414,7 +1414,7 @@ Det_ReportError/72 (Det_ReportError) @073f11c0
   Function flags:
   Called by: 
   Calls: 
-Det_GetErrorMeaning/71 (Det_GetErrorMeaning) @0735fe00
+Det_GetErrorMeaning/71 (Det_GetErrorMeaning) @06c43460
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder asm_written public section:.text.Det_GetErrorMeaning (implicit_section)
   References: 
@@ -1423,7 +1423,7 @@ Det_GetErrorMeaning/71 (Det_GetErrorMeaning) @0735fe00
   Function flags:
   Called by: 
   Calls: 
-Det_GetApiName/70 (Det_GetApiName) @0735f8c0
+Det_GetApiName/70 (Det_GetApiName) @06c431c0
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder asm_written public section:.text.Det_GetApiName (implicit_section)
   References: 
@@ -1432,7 +1432,7 @@ Det_GetApiName/70 (Det_GetApiName) @0735f8c0
   Function flags:
   Called by: 
   Calls: 
-Det_GetModuleName/69 (Det_GetModuleName) @0735fd20
+Det_GetModuleName/69 (Det_GetModuleName) @072e3ee0
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder asm_written public section:.text.Det_GetModuleName (implicit_section)
   References: 
@@ -1441,7 +1441,7 @@ Det_GetModuleName/69 (Det_GetModuleName) @0735fd20
   Function flags:
   Called by: 
   Calls: 
-Det_Init/68 (Det_Init) @0735fa80
+Det_Init/68 (Det_Init) @072e3e00
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder asm_written public section:.text.Det_Init (implicit_section)
   References: 
@@ -1450,7 +1450,7 @@ Det_Init/68 (Det_Init) @0735fa80
   Function flags:
   Called by: 
   Calls: 
-Det_RuntimeModuleId/67 (Det_RuntimeModuleId) @0735ec60
+Det_RuntimeModuleId/67 (Det_RuntimeModuleId) @072e4e58
   Type: variable definition analyzed
   Visibility: force_output externally_visible no_reorder asm_written public section:.bss.Det_RuntimeModuleId (implicit_section)
   Aux: @00000001
@@ -1458,98 +1458,98 @@ Det_RuntimeModuleId/67 (Det_RuntimeModuleId) @0735ec60
   Referring: 
   Availability: available
   Varpool flags:
-Det_ModuleId/66 (Det_ModuleId) @0735ec18
+Det_ModuleId/66 (Det_ModuleId) @072e4e10
   Type: variable definition analyzed
   Visibility: force_output externally_visible no_reorder asm_written public section:.bss.Det_ModuleId (implicit_section)
-  Aux: @0735ec60
+  Aux: @072e4e58
   References: 
   Referring: 
   Availability: available
   Varpool flags:
-Det_TransientModuleId/65 (Det_TransientModuleId) @0735ebd0
+Det_TransientModuleId/65 (Det_TransientModuleId) @072e4dc8
   Type: variable definition analyzed
   Visibility: force_output externally_visible no_reorder asm_written public section:.bss.Det_TransientModuleId (implicit_section)
-  Aux: @0735ec18
+  Aux: @072e4e10
   References: 
   Referring: 
   Availability: available
   Varpool flags:
-ErrorString_Ptr/64 (ErrorString_Ptr) @0735eb88
+ErrorString_Ptr/64 (ErrorString_Ptr) @072e4d80
   Type: variable definition analyzed
   Visibility: force_output externally_visible no_reorder asm_written public section:.bss.ErrorString_Ptr (implicit_section)
-  Aux: @0735ebd0
+  Aux: @072e4dc8
   References: 
   Referring: 
   Availability: available
   Varpool flags:
-Det_TransientFaultId/63 (Det_TransientFaultId) @0735eb40
+Det_TransientFaultId/63 (Det_TransientFaultId) @072e4d38
   Type: variable definition analyzed
   Visibility: force_output externally_visible no_reorder asm_written public section:.bss.Det_TransientFaultId (implicit_section)
-  Aux: @0735eb88
+  Aux: @072e4d80
   References: 
   Referring: 
   Availability: available
   Varpool flags:
-Det_TransientApiId/62 (Det_TransientApiId) @0735eaf8
+Det_TransientApiId/62 (Det_TransientApiId) @072e4cf0
   Type: variable definition analyzed
   Visibility: force_output externally_visible no_reorder asm_written public section:.bss.Det_TransientApiId (implicit_section)
-  Aux: @0735eb40
+  Aux: @072e4d38
   References: 
   Referring: 
   Availability: available
   Varpool flags:
-Det_TransientInstanceId/61 (Det_TransientInstanceId) @0735eab0
+Det_TransientInstanceId/61 (Det_TransientInstanceId) @072e4ca8
   Type: variable definition analyzed
   Visibility: force_output externally_visible no_reorder asm_written public section:.bss.Det_TransientInstanceId (implicit_section)
-  Aux: @0735eaf8
+  Aux: @072e4cf0
   References: 
   Referring: 
   Availability: available
   Varpool flags:
-Det_RuntimeErrorId/60 (Det_RuntimeErrorId) @0735ea68
+Det_RuntimeErrorId/60 (Det_RuntimeErrorId) @072e4c60
   Type: variable definition analyzed
   Visibility: force_output externally_visible no_reorder asm_written public section:.bss.Det_RuntimeErrorId (implicit_section)
-  Aux: @0735eab0
+  Aux: @072e4ca8
   References: 
   Referring: 
   Availability: available
   Varpool flags:
-Det_RuntimeApiId/59 (Det_RuntimeApiId) @0735ea20
+Det_RuntimeApiId/59 (Det_RuntimeApiId) @072e4c18
   Type: variable definition analyzed
   Visibility: force_output externally_visible no_reorder asm_written public section:.bss.Det_RuntimeApiId (implicit_section)
-  Aux: @0735ea68
+  Aux: @072e4c60
   References: 
   Referring: 
   Availability: available
   Varpool flags:
-Det_RuntimeInstanceId/58 (Det_RuntimeInstanceId) @0735e9d8
+Det_RuntimeInstanceId/58 (Det_RuntimeInstanceId) @072e4bd0
   Type: variable definition analyzed
   Visibility: force_output externally_visible no_reorder asm_written public section:.bss.Det_RuntimeInstanceId (implicit_section)
-  Aux: @0735ea20
+  Aux: @072e4c18
   References: 
   Referring: 
   Availability: available
   Varpool flags:
-Det_ErrorId/57 (Det_ErrorId) @0735e990
+Det_ErrorId/57 (Det_ErrorId) @072e4b88
   Type: variable definition analyzed
   Visibility: force_output externally_visible no_reorder asm_written public section:.bss.Det_ErrorId (implicit_section)
-  Aux: @0735e9d8
+  Aux: @072e4bd0
   References: 
   Referring: 
   Availability: available
   Varpool flags:
-Det_ApiId/56 (Det_ApiId) @0735e948
+Det_ApiId/56 (Det_ApiId) @072e4b40
   Type: variable definition analyzed
   Visibility: force_output externally_visible no_reorder asm_written public section:.bss.Det_ApiId (implicit_section)
-  Aux: @0735e990
+  Aux: @072e4b88
   References: 
   Referring: 
   Availability: available
   Varpool flags:
-Det_InstanceId/55 (Det_InstanceId) @0735e900
+Det_InstanceId/55 (Det_InstanceId) @072e4af8
   Type: variable definition analyzed
   Visibility: force_output externally_visible no_reorder asm_written public section:.bss.Det_InstanceId (implicit_section)
-  Aux: @0735e948
+  Aux: @072e4b40
   References: 
   Referring: 
   Availability: available

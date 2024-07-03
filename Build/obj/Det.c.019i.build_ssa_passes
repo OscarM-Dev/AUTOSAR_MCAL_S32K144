@@ -9,7 +9,7 @@ Det_Start ()
 Det_ReportTransientFault (uint16 ModuleId, uint8 InstanceId, uint8 ApiId, uint8 FaultId)
 {
   uint32 u32CoreId;
-  Std_ReturnType D.8892;
+  Std_ReturnType D.8896;
 
   <bb 2> :
   _1 = Sys_GetCoreID ();
@@ -18,11 +18,11 @@ Det_ReportTransientFault (uint16 ModuleId, uint8 InstanceId, uint8 ApiId, uint8 
   Det_TransientInstanceId[u32CoreId] = InstanceId;
   Det_TransientApiId[u32CoreId] = ApiId;
   Det_TransientFaultId[u32CoreId] = FaultId;
-  D.8892 = 0;
+  D.8896 = 0;
 
   <bb 3> :
 <L0>:
-  return D.8892;
+  return D.8896;
 
 }
 
@@ -30,7 +30,7 @@ Det_ReportTransientFault (uint16 ModuleId, uint8 InstanceId, uint8 ApiId, uint8 
 Det_ReportRuntimeError (uint16 ModuleId, uint8 InstanceId, uint8 ApiId, uint8 ErrorId)
 {
   uint32 u32CoreId;
-  Std_ReturnType D.8890;
+  Std_ReturnType D.8894;
 
   <bb 2> :
   _1 = Sys_GetCoreID ();
@@ -39,11 +39,11 @@ Det_ReportRuntimeError (uint16 ModuleId, uint8 InstanceId, uint8 ApiId, uint8 Er
   Det_RuntimeInstanceId[u32CoreId] = InstanceId;
   Det_RuntimeApiId[u32CoreId] = ApiId;
   Det_RuntimeErrorId[u32CoreId] = ErrorId;
-  D.8890 = 0;
+  D.8894 = 0;
 
   <bb 3> :
 <L0>:
-  return D.8890;
+  return D.8894;
 
 }
 
@@ -52,7 +52,7 @@ Det_ReportError (uint16 ModuleId, uint8 InstanceId, uint8 ApiId, uint8 ErrorId)
 {
   uint32 u32CoreId;
   char * Strings_error[3];
-  Std_ReturnType D.8887;
+  Std_ReturnType D.8891;
 
   <bb 2> :
   _1 = Sys_GetCoreID ();
@@ -72,19 +72,19 @@ Det_ReportError (uint16 ModuleId, uint8 InstanceId, uint8 ApiId, uint8 ErrorId)
   _7 = (int) InstanceId;
   _8 = Strings_error[2];
   SEGGER_RTT_printf (0, "Error: Error in %s in function %s with the instance %d, %s\n", _5, _6, _7, _8);
-  D.8887 = 0;
+  D.8891 = 0;
   Strings_error = {CLOBBER};
 
   <bb 3> :
 <L1>:
-  return D.8887;
+  return D.8891;
 
 }
 
 
 Det_GetErrorMeaning (uint16 ModuleId, uint8 ErrorId)
 {
-  char * D.8885;
+  char * D.8889;
 
   <bb 2> :
   _1 = (int) ModuleId;
@@ -456,18 +456,18 @@ Det_GetErrorMeaning (uint16 ModuleId, uint8 ErrorId)
 <L80>:
 
   <bb 84> :
-  D.8885 = ErrorString_Ptr[2];
+  D.8889 = ErrorString_Ptr[2];
 
   <bb 85> :
 <L82>:
-  return D.8885;
+  return D.8889;
 
 }
 
 
 Det_GetApiName (uint16 ModuleId, uint8 ApiId)
 {
-  char * D.8883;
+  char * D.8887;
 
   <bb 2> :
   _1 = (int) ModuleId;
@@ -908,18 +908,18 @@ Det_GetApiName (uint16 ModuleId, uint8 ApiId)
 <L95>:
 
   <bb 99> :
-  D.8883 = ErrorString_Ptr[1];
+  D.8887 = ErrorString_Ptr[1];
 
   <bb 100> :
 <L97>:
-  return D.8883;
+  return D.8887;
 
 }
 
 
 Det_GetModuleName (uint16 ModuleId)
 {
-  char * D.8881;
+  char * D.8885;
 
   <bb 2> :
   _1 = (int) ModuleId;
@@ -984,11 +984,11 @@ Det_GetModuleName (uint16 ModuleId)
 <L11>:
 
   <bb 15> :
-  D.8881 = ErrorString_Ptr[0];
+  D.8885 = ErrorString_Ptr[0];
 
   <bb 16> :
 <L13>:
-  return D.8881;
+  return D.8885;
 
 }
 

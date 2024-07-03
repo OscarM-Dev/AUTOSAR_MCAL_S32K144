@@ -5,69 +5,92 @@ HwIoAb_Pots_GetAltValue (uint16 * AltPots)
 
   <bb 2> :
   i = 0;
-  status = 1;
-  if (status == 1)
+  status = 0;
+  PotsControl_Ptr.9_1 = PotsControl_Ptr;
+  _2 = PotsControl_Ptr.9_1->Pots_init;
+  _3 = ~_2;
+  if (_3 != 0)
     goto <bb 3>; [INV]
   else
-    goto <bb 10>; [INV]
+    goto <bb 4>; [INV]
 
   <bb 3> :
-  Adc_StartGroupConversion (1);
+  Det_ReportError (303, 0, 1, 1);
+  status = 1;
 
   <bb 4> :
-  _1 = Adc_GetGroupStatus (1);
-  if (_1 == 1)
-    goto <bb 4>; [INV]
-  else
+  if (AltPots == 0B)
     goto <bb 5>; [INV]
+  else
+    goto <bb 6>; [INV]
 
   <bb 5> :
-  PotsControl_Ptr.7_2 = PotsControl_Ptr;
-  _3 = &PotsControl_Ptr.7_2->Raw_results_alter;
-  Adc_ReadGroup (1, _3);
-  i = 0;
-  goto <bb 9>; [INV]
+  Det_ReportError (303, 0, 1, 0);
+  status = 1;
 
   <bb 6> :
-  PotsControl_Ptr.8_4 = PotsControl_Ptr;
-  _5 = (int) i;
-  _6 = PotsControl_Ptr.8_4->Raw_results_alter[_5];
-  _7 = (float) _6;
-  _8 = _7 / 2.832e+3;
-  _9 = _8 * 1.0e+4;
-  _10 = (unsigned int) i;
-  _11 = _10 * 2;
-  _12 = AltPots + _11;
-  _13 = (short unsigned int) _9;
-  *_12 = _13;
-  _14 = (unsigned int) i;
-  _15 = _14 * 2;
-  _16 = AltPots + _15;
-  _17 = *_16;
-  if (_17 > 10000)
+  if (status == 0)
     goto <bb 7>; [INV]
   else
-    goto <bb 8>; [INV]
+    goto <bb 14>; [INV]
 
   <bb 7> :
-  _18 = (unsigned int) i;
-  _19 = _18 * 2;
-  _20 = AltPots + _19;
-  *_20 = 10000;
+  Adc_StartGroupConversion (1);
 
   <bb 8> :
-  i.9_21 = i;
-  i = i.9_21 + 1;
+  _4 = Adc_GetGroupStatus (1);
+  if (_4 == 1)
+    goto <bb 8>; [INV]
+  else
+    goto <bb 9>; [INV]
 
   <bb 9> :
-  PotsControl_Ptr.10_22 = PotsControl_Ptr;
-  _23 = PotsControl_Ptr.10_22->Pots;
-  if (i < _23)
-    goto <bb 6>; [INV]
-  else
-    goto <bb 10>; [INV]
+  PotsControl_Ptr.10_5 = PotsControl_Ptr;
+  _6 = &PotsControl_Ptr.10_5->Raw_results_alter;
+  Adc_ReadGroup (1, _6);
+  i = 0;
+  goto <bb 13>; [INV]
 
   <bb 10> :
+  PotsControl_Ptr.11_7 = PotsControl_Ptr;
+  _8 = (int) i;
+  _9 = PotsControl_Ptr.11_7->Raw_results_alter[_8];
+  _10 = (float) _9;
+  _11 = _10 / 2.832e+3;
+  _12 = _11 * 1.0e+4;
+  _13 = (unsigned int) i;
+  _14 = _13 * 2;
+  _15 = AltPots + _14;
+  _16 = (short unsigned int) _12;
+  *_15 = _16;
+  _17 = (unsigned int) i;
+  _18 = _17 * 2;
+  _19 = AltPots + _18;
+  _20 = *_19;
+  if (_20 > 10000)
+    goto <bb 11>; [INV]
+  else
+    goto <bb 12>; [INV]
+
+  <bb 11> :
+  _21 = (unsigned int) i;
+  _22 = _21 * 2;
+  _23 = AltPots + _22;
+  *_23 = 10000;
+
+  <bb 12> :
+  i.12_24 = i;
+  i = i.12_24 + 1;
+
+  <bb 13> :
+  PotsControl_Ptr.13_25 = PotsControl_Ptr;
+  _26 = PotsControl_Ptr.13_25->Pots;
+  if (i < _26)
+    goto <bb 10>; [INV]
+  else
+    goto <bb 14>; [INV]
+
+  <bb 14> :
   return;
 
 }
@@ -80,69 +103,92 @@ HwIoAb_Pots_GetValue (uint16 * Pots)
 
   <bb 2> :
   i = 0;
-  status = 1;
-  if (status == 1)
+  status = 0;
+  PotsControl_Ptr.4_1 = PotsControl_Ptr;
+  _2 = PotsControl_Ptr.4_1->Pots_init;
+  _3 = ~_2;
+  if (_3 != 0)
     goto <bb 3>; [INV]
   else
-    goto <bb 10>; [INV]
+    goto <bb 4>; [INV]
 
   <bb 3> :
-  Adc_StartGroupConversion (0);
+  Det_ReportError (303, 0, 1, 1);
+  status = 1;
 
   <bb 4> :
-  _1 = Adc_GetGroupStatus (0);
-  if (_1 == 1)
-    goto <bb 4>; [INV]
-  else
+  if (Pots == 0B)
     goto <bb 5>; [INV]
+  else
+    goto <bb 6>; [INV]
 
   <bb 5> :
-  PotsControl_Ptr.3_2 = PotsControl_Ptr;
-  _3 = &PotsControl_Ptr.3_2->Raw_results_main;
-  Adc_ReadGroup (0, _3);
-  i = 0;
-  goto <bb 9>; [INV]
+  Det_ReportError (303, 0, 1, 0);
+  status = 1;
 
   <bb 6> :
-  PotsControl_Ptr.4_4 = PotsControl_Ptr;
-  _5 = (int) i;
-  _6 = PotsControl_Ptr.4_4->Raw_results_main[_5];
-  _7 = (float) _6;
-  _8 = _7 / 2.832e+3;
-  _9 = _8 * 1.0e+4;
-  _10 = (unsigned int) i;
-  _11 = _10 * 2;
-  _12 = Pots + _11;
-  _13 = (short unsigned int) _9;
-  *_12 = _13;
-  _14 = (unsigned int) i;
-  _15 = _14 * 2;
-  _16 = Pots + _15;
-  _17 = *_16;
-  if (_17 > 10000)
+  if (status == 0)
     goto <bb 7>; [INV]
   else
-    goto <bb 8>; [INV]
+    goto <bb 14>; [INV]
 
   <bb 7> :
-  _18 = (unsigned int) i;
-  _19 = _18 * 2;
-  _20 = Pots + _19;
-  *_20 = 10000;
+  Adc_StartGroupConversion (0);
 
   <bb 8> :
-  i.5_21 = i;
-  i = i.5_21 + 1;
+  _4 = Adc_GetGroupStatus (0);
+  if (_4 == 1)
+    goto <bb 8>; [INV]
+  else
+    goto <bb 9>; [INV]
 
   <bb 9> :
-  PotsControl_Ptr.6_22 = PotsControl_Ptr;
-  _23 = PotsControl_Ptr.6_22->Pots;
-  if (i < _23)
-    goto <bb 6>; [INV]
-  else
-    goto <bb 10>; [INV]
+  PotsControl_Ptr.5_5 = PotsControl_Ptr;
+  _6 = &PotsControl_Ptr.5_5->Raw_results_main;
+  Adc_ReadGroup (0, _6);
+  i = 0;
+  goto <bb 13>; [INV]
 
   <bb 10> :
+  PotsControl_Ptr.6_7 = PotsControl_Ptr;
+  _8 = (int) i;
+  _9 = PotsControl_Ptr.6_7->Raw_results_main[_8];
+  _10 = (float) _9;
+  _11 = _10 / 2.832e+3;
+  _12 = _11 * 1.0e+4;
+  _13 = (unsigned int) i;
+  _14 = _13 * 2;
+  _15 = Pots + _14;
+  _16 = (short unsigned int) _12;
+  *_15 = _16;
+  _17 = (unsigned int) i;
+  _18 = _17 * 2;
+  _19 = Pots + _18;
+  _20 = *_19;
+  if (_20 > 10000)
+    goto <bb 11>; [INV]
+  else
+    goto <bb 12>; [INV]
+
+  <bb 11> :
+  _21 = (unsigned int) i;
+  _22 = _21 * 2;
+  _23 = Pots + _22;
+  *_23 = 10000;
+
+  <bb 12> :
+  i.7_24 = i;
+  i = i.7_24 + 1;
+
+  <bb 13> :
+  PotsControl_Ptr.8_25 = PotsControl_Ptr;
+  _26 = PotsControl_Ptr.8_25->Pots;
+  if (i < _26)
+    goto <bb 10>; [INV]
+  else
+    goto <bb 14>; [INV]
+
+  <bb 14> :
   return;
 
 }
@@ -164,6 +210,8 @@ HwIoAb_Pots_Init (const struct HwIoAb_Pots_Config * Pots_Config)
   Adc_SetupResultBuffer (1, _4);
   PotsControl_Ptr.2_5 = PotsControl_Ptr;
   PotsControl_Ptr.2_5->Pots = 2;
+  PotsControl_Ptr.3_6 = PotsControl_Ptr;
+  PotsControl_Ptr.3_6->Pots_init = 1;
   Calib_Status_ADC0 = {CLOBBER};
   Calib_Status_ADC1 = {CLOBBER};
   return;

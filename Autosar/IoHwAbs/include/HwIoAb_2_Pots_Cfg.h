@@ -7,7 +7,7 @@
 #ifndef HWIOAB_2_POTS_CFG_H
 #define HWIOAB_2_POTS_CFG_H
 
-#define HWIOAB_POTS_DEV_ERROR_DETECT STD_OFF  ///< Dev error detect. 
+#define HWIOAB_POTS_DEV_ERROR_DETECT STD_ON  ///< Dev error detect. 
 
 #define HWIOAB_POTS 2 ///< Number of pots to handle on board.
 

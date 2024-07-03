@@ -26,6 +26,8 @@
 //Error ids.
 #define HWIOAB_POTS_E_PARAM 0x00    ///<"Invalid input pointer" -->Pots_GetValue, Pots_GetAltValue
 
+#define HWIOAB_POTS_E_UNINIT 0x01   ///< "Module uninitialized" --> All apis except init.
+
 //Config structures.
 /**
  * @brief Configuration structure for each Pot
@@ -56,6 +58,7 @@ typedef struct _HwIoAb_Pots_Ctrl {
     uint16 Raw_results_alter[ HWIOAB_POTS ];    ///< Raw conversion results array for the alter ADC (1).
     uint16 Ohms_results_main[ HWIOAB_POTS ];    ///< Ohms conversion results array for the main ADC (0).
     uint16 Ohms_results_alter[ HWIOAB_POTS ];   ///< Ohms conversion results array for the main ADC (1).
+    boolean Pots_init;  ///< Boolean flag that indicates if the control structure was initialized.
 } HwIoAb_Pots_Ctrl;
 
 //Reference to global data.
