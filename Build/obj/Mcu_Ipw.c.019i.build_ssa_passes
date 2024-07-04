@@ -21,28 +21,28 @@ Mcu_Ipw_SleepOnExit (Mcu_SleepOnExitType SleepOnExit)
 
 Mcu_Ipw_GetResetRawValue ()
 {
-  Mcu_RawResetType D.5927;
+  Mcu_RawResetType D.5972;
 
   <bb 2> :
-  D.5927 = Power_Ip_GetResetRawValue ();
+  D.5972 = Power_Ip_GetResetRawValue ();
 
   <bb 3> :
 <L0>:
-  return D.5927;
+  return D.5972;
 
 }
 
 
 Mcu_Ipw_GetResetReason ()
 {
-  Mcu_ResetType D.5925;
+  Mcu_ResetType D.5970;
 
   <bb 2> :
-  D.5925 = Power_Ip_GetResetReason ();
+  D.5970 = Power_Ip_GetResetReason ();
 
   <bb 3> :
 <L0>:
-  return D.5925;
+  return D.5970;
 
 }
 

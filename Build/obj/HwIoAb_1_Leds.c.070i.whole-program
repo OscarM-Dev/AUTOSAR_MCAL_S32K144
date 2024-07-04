@@ -13,7 +13,7 @@ Reclaiming variables:
 Clearing address taken flags:
 Symbol table:
 
-Dio_FlipChannel/7 (Dio_FlipChannel) @05e4ab60
+Dio_FlipChannel/7 (Dio_FlipChannel) @0693d7e0
   Type: function
   Visibility: external public
   References: 
@@ -22,7 +22,7 @@ Dio_FlipChannel/7 (Dio_FlipChannel) @05e4ab60
   Function flags:
   Called by: HwIoAb_Leds_TurnToggle/3 
   Calls: 
-Dio_WriteChannel/6 (Dio_WriteChannel) @05e4a8c0
+Dio_WriteChannel/6 (Dio_WriteChannel) @0693d540
   Type: function
   Visibility: external public
   References: 
@@ -31,7 +31,7 @@ Dio_WriteChannel/6 (Dio_WriteChannel) @05e4a8c0
   Function flags:
   Called by: HwIoAb_Leds_TurnOff/2 HwIoAb_Leds_TurnOn/1 
   Calls: 
-LedsControl_Ptr/5 (LedsControl_Ptr) @05e33828
+LedsControl_Ptr/5 (LedsControl_Ptr) @069269d8
   Type: variable
   Body removed by symtab_remove_unreachable_nodes
   Visibility: external public
@@ -39,7 +39,7 @@ LedsControl_Ptr/5 (LedsControl_Ptr) @05e33828
   Referring: HwIoAb_Leds_TurnOn/1 (read) HwIoAb_Leds_TurnOn/1 (read) HwIoAb_Leds_TurnOn/1 (read) HwIoAb_Leds_Init/0 (read) HwIoAb_Leds_TurnOff/2 (read) HwIoAb_Leds_TurnOff/2 (read) HwIoAb_Leds_TurnOff/2 (read) HwIoAb_Leds_TurnOn/1 (read) HwIoAb_Leds_Init/0 (read) HwIoAb_Leds_Init/0 (read) HwIoAb_Leds_TurnOff/2 (read) HwIoAb_Leds_TurnToggle/3 (read) HwIoAb_Leds_TurnToggle/3 (read) HwIoAb_Leds_TurnToggle/3 (read) 
   Availability: not_available
   Varpool flags:
-Det_ReportError/4 (Det_ReportError) @05e4a700
+Det_ReportError/4 (Det_ReportError) @0693d380
   Type: function
   Visibility: external public
   References: 
@@ -48,7 +48,7 @@ Det_ReportError/4 (Det_ReportError) @05e4a700
   Function flags:
   Called by: HwIoAb_Leds_TurnToggle/3 HwIoAb_Leds_TurnToggle/3 HwIoAb_Leds_TurnOff/2 HwIoAb_Leds_TurnOff/2 HwIoAb_Leds_TurnOn/1 HwIoAb_Leds_TurnOn/1 HwIoAb_Leds_Init/0 
   Calls: 
-HwIoAb_Leds_TurnToggle/3 (HwIoAb_Leds_TurnToggle) @05e4a2a0
+HwIoAb_Leds_TurnToggle/3 (HwIoAb_Leds_TurnToggle) @06927e00
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: LedsControl_Ptr/5 (read) LedsControl_Ptr/5 (read) LedsControl_Ptr/5 (read) 
@@ -57,7 +57,7 @@ HwIoAb_Leds_TurnToggle/3 (HwIoAb_Leds_TurnToggle) @05e4a2a0
   Function flags: body
   Called by: 
   Calls: Dio_FlipChannel/7 Det_ReportError/4 Det_ReportError/4 
-HwIoAb_Leds_TurnOff/2 (HwIoAb_Leds_TurnOff) @05e4a000
+HwIoAb_Leds_TurnOff/2 (HwIoAb_Leds_TurnOff) @06927540
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: LedsControl_Ptr/5 (read) LedsControl_Ptr/5 (read) LedsControl_Ptr/5 (read) LedsControl_Ptr/5 (read) 
@@ -66,7 +66,7 @@ HwIoAb_Leds_TurnOff/2 (HwIoAb_Leds_TurnOff) @05e4a000
   Function flags: body
   Called by: 
   Calls: Dio_WriteChannel/6 Det_ReportError/4 Det_ReportError/4 
-HwIoAb_Leds_TurnOn/1 (HwIoAb_Leds_TurnOn) @05e317e0
+HwIoAb_Leds_TurnOn/1 (HwIoAb_Leds_TurnOn) @06927380
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: LedsControl_Ptr/5 (read) LedsControl_Ptr/5 (read) LedsControl_Ptr/5 (read) LedsControl_Ptr/5 (read) 
@@ -75,7 +75,7 @@ HwIoAb_Leds_TurnOn/1 (HwIoAb_Leds_TurnOn) @05e317e0
   Function flags: body
   Called by: 
   Calls: Dio_WriteChannel/6 Det_ReportError/4 Det_ReportError/4 
-HwIoAb_Leds_Init/0 (HwIoAb_Leds_Init) @05e31620
+HwIoAb_Leds_Init/0 (HwIoAb_Leds_Init) @06927d20
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: LedsControl_Ptr/5 (read) LedsControl_Ptr/5 (read) LedsControl_Ptr/5 (read) 
@@ -110,7 +110,7 @@ HwIoAb_Leds_TurnToggle (uint8 Led)
     goto <bb 4>; [INV]
 
   <bb 3> :
-  Det_ReportError (302, 0, 1, 2);
+  Det_ReportError (302, 0, 3, 2);
   status_20 = 1;
 
   <bb 4> :
@@ -123,7 +123,7 @@ HwIoAb_Leds_TurnToggle (uint8 Led)
     goto <bb 6>; [INV]
 
   <bb 5> :
-  Det_ReportError (302, 0, 1, 1);
+  Det_ReportError (302, 0, 3, 1);
   status_23 = 1;
 
   <bb 6> :
@@ -182,7 +182,7 @@ HwIoAb_Leds_TurnOff (uint8 Led)
     goto <bb 4>; [INV]
 
   <bb 3> :
-  Det_ReportError (302, 0, 1, 2);
+  Det_ReportError (302, 0, 2, 2);
   status_28 = 1;
 
   <bb 4> :
@@ -195,7 +195,7 @@ HwIoAb_Leds_TurnOff (uint8 Led)
     goto <bb 6>; [INV]
 
   <bb 5> :
-  Det_ReportError (302, 0, 1, 1);
+  Det_ReportError (302, 0, 2, 1);
   status_31 = 1;
 
   <bb 6> :

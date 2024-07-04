@@ -1,7 +1,7 @@
 Platform_InstallIrqHandler (IRQn_Type eIrqNumber, void (*Platform_IrqHandlerType) (void) pfNewHandler, void (*Platform_IrqHandlerType) (void) * const pfOldHandler)
 {
   Std_ReturnType RetValue;
-  Std_ReturnType D.6271;
+  Std_ReturnType D.6316;
 
   <bb 2> :
   RetValue = 0;
@@ -25,11 +25,11 @@ Platform_InstallIrqHandler (IRQn_Type eIrqNumber, void (*Platform_IrqHandlerType
   Platform_Ipw_InstallIrqHandler (eIrqNumber, pfNewHandler, pfOldHandler);
 
   <bb 6> :
-  D.6271 = RetValue;
+  D.6316 = RetValue;
 
   <bb 7> :
 <L4>:
-  return D.6271;
+  return D.6316;
 
 }
 
@@ -37,7 +37,7 @@ Platform_InstallIrqHandler (IRQn_Type eIrqNumber, void (*Platform_IrqHandlerType
 Platform_GetIrqPriority (IRQn_Type eIrqNumber, uint8 * u8Priority)
 {
   Std_ReturnType RetValue;
-  Std_ReturnType D.6263;
+  Std_ReturnType D.6308;
 
   <bb 2> :
   RetValue = 0;
@@ -73,11 +73,11 @@ Platform_GetIrqPriority (IRQn_Type eIrqNumber, uint8 * u8Priority)
   *u8Priority = _1;
 
   <bb 8> :
-  D.6263 = RetValue;
+  D.6308 = RetValue;
 
   <bb 9> :
 <L7>:
-  return D.6263;
+  return D.6308;
 
 }
 
@@ -85,7 +85,7 @@ Platform_GetIrqPriority (IRQn_Type eIrqNumber, uint8 * u8Priority)
 Platform_SetIrqPriority (IRQn_Type eIrqNumber, uint8 u8Priority)
 {
   Std_ReturnType RetValue;
-  Std_ReturnType D.6254;
+  Std_ReturnType D.6299;
 
   <bb 2> :
   RetValue = 0;
@@ -115,11 +115,11 @@ Platform_SetIrqPriority (IRQn_Type eIrqNumber, uint8 u8Priority)
   Platform_Ipw_SetIrqPriority (eIrqNumber, u8Priority);
 
   <bb 7> :
-  D.6254 = RetValue;
+  D.6299 = RetValue;
 
   <bb 8> :
 <L5>:
-  return D.6254;
+  return D.6299;
 
 }
 
@@ -127,7 +127,7 @@ Platform_SetIrqPriority (IRQn_Type eIrqNumber, uint8 u8Priority)
 Platform_SetIrq (IRQn_Type eIrqNumber, boolean bEnable)
 {
   Std_ReturnType RetValue;
-  Std_ReturnType D.6244;
+  Std_ReturnType D.6289;
 
   <bb 2> :
   RetValue = 0;
@@ -151,11 +151,11 @@ Platform_SetIrq (IRQn_Type eIrqNumber, boolean bEnable)
   Platform_Ipw_SetIrq (eIrqNumber, bEnable);
 
   <bb 6> :
-  D.6244 = RetValue;
+  D.6289 = RetValue;
 
   <bb 7> :
 <L4>:
-  return D.6244;
+  return D.6289;
 
 }
 
@@ -198,14 +198,14 @@ Platform_Ipw_InstallIrqHandler (IRQn_Type eIrqNumber, void (*IntCtrl_Ip_IrqHandl
 
 Platform_Ipw_GetIrqPriority (IRQn_Type eIrqNumber)
 {
-  uint8 D.6265;
+  uint8 D.6310;
 
   <bb 2> :
-  D.6265 = IntCtrl_Ip_GetPriority (eIrqNumber);
+  D.6310 = IntCtrl_Ip_GetPriority (eIrqNumber);
 
   <bb 3> :
 <L0>:
-  return D.6265;
+  return D.6310;
 
 }
 

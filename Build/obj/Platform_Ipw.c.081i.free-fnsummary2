@@ -36,7 +36,7 @@ Platform_Ipw_Init (const struct Platform_Ipw_ConfigType * pConfig)
 Platform_Ipw_InitIntCtrl (const struct IntCtrl_Ip_CtrlConfigType * pIntCtrlCtrlConfig)
 {
   uint32 irqIdx;
-  Std_ReturnType D.6210;
+  Std_ReturnType D.6255;
   const struct IntCtrl_Ip_IrqConfigType * _1;
   long unsigned int _2;
   const struct IntCtrl_Ip_IrqConfigType * _3;
@@ -56,7 +56,7 @@ Platform_Ipw_InitIntCtrl (const struct IntCtrl_Ip_CtrlConfigType * pIntCtrlCtrlC
   const struct IntCtrl_Ip_IrqConfigType * _17;
   long unsigned int _18;
   const struct IntCtrl_Ip_IrqConfigType * _19;
-  void (*<T633>) (void) _20;
+  void (*<T68a>) (void) _20;
   const struct IntCtrl_Ip_IrqConfigType * _21;
   long unsigned int _22;
   const struct IntCtrl_Ip_IrqConfigType * _23;

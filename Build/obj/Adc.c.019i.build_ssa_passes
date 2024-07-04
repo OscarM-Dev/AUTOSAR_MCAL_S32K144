@@ -93,7 +93,7 @@ Adc_GetStreamLastPointer (Adc_GroupType Group, Adc_ValueGroupType * * PtrToSampl
   Adc_StreamNumSampleType NumberOfResults;
   Adc_GroupType GroupIndex;
   volatile uint8 CoreId;
-  Adc_StreamNumSampleType D.7043;
+  Adc_StreamNumSampleType D.7088;
 
   <bb 2> :
   _1 = Adc_GetCoreID ();
@@ -195,11 +195,11 @@ Adc_GetStreamLastPointer (Adc_GroupType Group, Adc_ValueGroupType * * PtrToSampl
   *PtrToSamplePtr = 0B;
 
   <bb 12> :
-  D.7043 = NumberOfResults;
+  D.7088 = NumberOfResults;
 
   <bb 13> :
 <L13>:
-  return D.7043;
+  return D.7088;
 
 }
 
@@ -208,7 +208,7 @@ Adc_GetGroupStatus (Adc_GroupType Group)
 {
   Adc_StatusType TempReturn;
   volatile uint8 CoreId;
-  Adc_StatusType D.7028;
+  Adc_StatusType D.7073;
 
   <bb 2> :
   TempReturn = 0;
@@ -226,11 +226,11 @@ Adc_GetGroupStatus (Adc_GroupType Group)
   TempReturn = Adc_axGroupStatus[_4].Conversion;
 
   <bb 4> :
-  D.7028 = TempReturn;
+  D.7073 = TempReturn;
 
   <bb 5> :
 <L2>:
-  return D.7028;
+  return D.7073;
 
 }
 
@@ -240,7 +240,7 @@ Adc_ReadGroup (Adc_GroupType Group, Adc_ValueGroupType * DataBufferPtr)
   boolean Flag;
   Std_ReturnType GroupRet;
   volatile uint8 CoreId;
-  Std_ReturnType D.6991;
+  Std_ReturnType D.7036;
 
   <bb 2> :
   GroupRet = 1;
@@ -291,12 +291,12 @@ Adc_ReadGroup (Adc_GroupType Group, Adc_ValueGroupType * DataBufferPtr)
   Adc_UpdateStatusReadGroup (Group, Flag.40_10, CoreId.41_11);
 
   <bb 8> :
-  D.6991 = GroupRet;
+  D.7036 = GroupRet;
   Flag = {CLOBBER};
 
   <bb 9> :
 <L10>:
-  return D.6991;
+  return D.7036;
 
 }
 
@@ -522,7 +522,7 @@ Adc_SetupResultBuffer (Adc_GroupType Group, Adc_ValueGroupType * const DataBuffe
 {
   volatile uint8 CoreId;
   Std_ReturnType TempReturn;
-  Std_ReturnType D.6831;
+  Std_ReturnType D.6876;
 
   <bb 2> :
   TempReturn = 1;
@@ -555,11 +555,11 @@ Adc_SetupResultBuffer (Adc_GroupType Group, Adc_ValueGroupType * const DataBuffe
   TempReturn = 0;
 
   <bb 6> :
-  D.6831 = TempReturn;
+  D.6876 = TempReturn;
 
   <bb 7> :
 <L6>:
-  return D.6831;
+  return D.6876;
 
 }
 
@@ -1159,7 +1159,7 @@ Adc_StopSwGroupConversion (Adc_QueueIndexType * RemovedPos, Adc_GroupType Group,
   Adc_QueueIndexType NumOfSwNormalQueue;
   Adc_QueueIndexType SwNormalQueueIndex;
   Std_ReturnType TimeOutStatus;
-  Std_ReturnType D.6980;
+  Std_ReturnType D.7025;
 
   <bb 2> :
   TimeOutStatus = 0;
@@ -1204,11 +1204,11 @@ Adc_StopSwGroupConversion (Adc_QueueIndexType * RemovedPos, Adc_GroupType Group,
     goto <bb 9>; [INV]
 
   <bb 9> :
-  D.6980 = TimeOutStatus;
+  D.7025 = TimeOutStatus;
 
   <bb 10> :
 <L7>:
-  return D.6980;
+  return D.7025;
 
 }
 
@@ -1297,7 +1297,7 @@ Adc_CheckCurrentCoreId (const struct Adc_ConfigType * CfgPtr, uint8 CoreId)
 {
   Std_ReturnType ValidCoreId;
   uint8 Index;
-  Std_ReturnType D.6816;
+  Std_ReturnType D.6861;
 
   <bb 2> :
   Index = 0;
@@ -1338,11 +1338,11 @@ Adc_CheckCurrentCoreId (const struct Adc_ConfigType * CfgPtr, uint8 CoreId)
     goto <bb 8>; [INV]
 
   <bb 8> :
-  D.6816 = ValidCoreId;
+  D.6861 = ValidCoreId;
 
   <bb 9> :
 <L7>:
-  return D.6816;
+  return D.6861;
 
 }
 
@@ -1459,7 +1459,7 @@ Adc_ValidateCallAndUnit (uint8 ServiceId, Adc_HwUnitType Unit, uint8 CoreId)
 {
   Std_ReturnType ValidCoreId;
   Std_ReturnType ValidCallAndUnit;
-  Std_ReturnType D.7083;
+  Std_ReturnType D.7128;
 
   <bb 2> :
   ValidCallAndUnit = 1;
@@ -1516,11 +1516,11 @@ Adc_ValidateCallAndUnit (uint8 ServiceId, Adc_HwUnitType Unit, uint8 CoreId)
   Adc_ReportDetError (ServiceId, 14);
 
   <bb 11> :
-  D.7083 = ValidCallAndUnit;
+  D.7128 = ValidCallAndUnit;
 
   <bb 12> :
 <L12>:
-  return D.7083;
+  return D.7128;
 
 }
 
@@ -1530,7 +1530,7 @@ Adc_ValidateCallAndGroup (uint8 ServiceId, Adc_GroupType Group, uint8 CoreId)
   Adc_GroupType GroupIndex;
   Std_ReturnType ValidCoreId;
   Std_ReturnType ValidCallAndGroup;
-  Std_ReturnType D.6845;
+  Std_ReturnType D.6890;
 
   <bb 2> :
   ValidCallAndGroup = 1;
@@ -1598,11 +1598,11 @@ Adc_ValidateCallAndGroup (uint8 ServiceId, Adc_GroupType Group, uint8 CoreId)
   Adc_ReportDetError (ServiceId, 14);
 
   <bb 11> :
-  D.6845 = ValidCallAndGroup;
+  D.6890 = ValidCallAndGroup;
 
   <bb 12> :
 <L12>:
-  return D.6845;
+  return D.6890;
 
 }
 
@@ -1610,7 +1610,7 @@ Adc_ValidateCallAndGroup (uint8 ServiceId, Adc_GroupType Group, uint8 CoreId)
 Adc_ValidateStateNotIdle (uint8 ServiceId, Adc_GroupType Group, uint8 CoreId)
 {
   Std_ReturnType ValidState;
-  Std_ReturnType D.6962;
+  Std_ReturnType D.7007;
 
   <bb 2> :
   ValidState = 0;
@@ -1677,11 +1677,11 @@ Adc_ValidateStateNotIdle (uint8 ServiceId, Adc_GroupType Group, uint8 CoreId)
 <L12>:
 
   <bb 14> :
-  D.6962 = ValidState;
+  D.7007 = ValidState;
 
   <bb 15> :
 <L14>:
-  return D.6962;
+  return D.7007;
 
 }
 
@@ -1691,7 +1691,7 @@ Adc_ValidateStateStartGroupConvNotBusy (Adc_GroupType Group, uint8 CoreId)
   boolean Implicitly;
   Std_ReturnType ValidState;
   Adc_GroupType GroupIndex;
-  Std_ReturnType D.6901;
+  Std_ReturnType D.6946;
 
   <bb 2> :
   ValidState = 0;
@@ -1771,11 +1771,11 @@ Adc_ValidateStateStartGroupConvNotBusy (Adc_GroupType Group, uint8 CoreId)
   ValidState = Adc_ValidateNotBusyNoPrio (Group, Implicitly, CoreId);
 
   <bb 10> :
-  D.6901 = ValidState;
+  D.6946 = ValidState;
 
   <bb 11> :
 <L8>:
-  return D.6901;
+  return D.6946;
 
 }
 
@@ -1783,7 +1783,7 @@ Adc_ValidateStateStartGroupConvNotBusy (Adc_GroupType Group, uint8 CoreId)
 Adc_ValidateSetupBufferNotBusy (Adc_GroupType Group)
 {
   Std_ReturnType ValidState;
-  Std_ReturnType D.6854;
+  Std_ReturnType D.6899;
 
   <bb 2> :
   ValidState = 1;
@@ -1802,11 +1802,11 @@ Adc_ValidateSetupBufferNotBusy (Adc_GroupType Group)
   ValidState = 0;
 
   <bb 5> :
-  D.6854 = ValidState;
+  D.6899 = ValidState;
 
   <bb 6> :
 <L3>:
-  return D.6854;
+  return D.6899;
 
 }
 
@@ -1816,7 +1816,7 @@ Adc_ValidateDeInitNotBusy (uint8 CoreId)
   Adc_HwUnitType LogicalHwUnitId;
   Std_ReturnType ValidState;
   Std_ReturnType ErrorFound;
-  Std_ReturnType D.6875;
+  Std_ReturnType D.6920;
 
   <bb 2> :
   ErrorFound = 0;
@@ -1873,11 +1873,11 @@ Adc_ValidateDeInitNotBusy (uint8 CoreId)
   ValidState = 0;
 
   <bb 11> :
-  D.6875 = ValidState;
+  D.6920 = ValidState;
 
   <bb 12> :
 <L11>:
-  return D.6875;
+  return D.6920;
 
 }
 
@@ -1888,7 +1888,7 @@ Adc_ValidateCheckGroupNotConversion (uint8 ServiceId, uint8 CoreId)
   Adc_GroupType GroupId;
   Adc_GroupType GroupIter;
   Adc_StatusType Conversion;
-  Std_ReturnType D.6885;
+  Std_ReturnType D.6930;
 
   <bb 2> :
   ErrorFound = 0;
@@ -1934,11 +1934,11 @@ Adc_ValidateCheckGroupNotConversion (uint8 ServiceId, uint8 CoreId)
     goto <bb 8>; [INV]
 
   <bb 8> :
-  D.6885 = ErrorFound;
+  D.6930 = ErrorFound;
 
   <bb 9> :
 <L7>:
-  return D.6885;
+  return D.6930;
 
 }
 
@@ -1947,7 +1947,7 @@ Adc_ValidateNotBusyNoPrio (Adc_GroupType Group, boolean Implicitly, uint8 CoreId
 {
   Adc_StatusType Conversion;
   Std_ReturnType ValidState;
-  Std_ReturnType D.6912;
+  Std_ReturnType D.6957;
 
   <bb 2> :
   ValidState = 1;
@@ -1995,11 +1995,11 @@ Adc_ValidateNotBusyNoPrio (Adc_GroupType Group, boolean Implicitly, uint8 CoreId
   ValidState = 0;
 
   <bb 10> :
-  D.6912 = ValidState;
+  D.6957 = ValidState;
 
   <bb 11> :
 <L9>:
-  return D.6912;
+  return D.6957;
 
 }
 
@@ -2008,7 +2008,7 @@ Adc_ValidateNotBusyNoQueue (Adc_HwUnitType Unit, uint8 ServiceId)
 {
   const Adc_QueueIndexType NoGroupsInSwNormalQueue;
   Std_ReturnType ErrorFound;
-  Std_ReturnType D.6879;
+  Std_ReturnType D.6924;
 
   <bb 2> :
   ErrorFound = 0;
@@ -2024,11 +2024,11 @@ Adc_ValidateNotBusyNoQueue (Adc_HwUnitType Unit, uint8 ServiceId)
   ErrorFound = 1;
 
   <bb 4> :
-  D.6879 = ErrorFound;
+  D.6924 = ErrorFound;
 
   <bb 5> :
 <L2>:
-  return D.6879;
+  return D.6924;
 
 }
 
@@ -2065,7 +2065,7 @@ Adc_EndValidateGloballCall (Std_ReturnType ValidCall, uint8 ServiceId, uint8 Cor
 Adc_ValidateExtraParams (uint8 ServiceId, uint32 ErrorIdList, Adc_GroupType Group, uint8 CoreId)
 {
   struct Adc_ValidationResultType ValidationStatus;
-  Std_ReturnType D.6926;
+  Std_ReturnType D.6971;
 
   <bb 2> :
   ValidationStatus.EndValidations = 0;
@@ -2124,12 +2124,12 @@ Adc_ValidateExtraParams (uint8 ServiceId, uint32 ErrorIdList, Adc_GroupType Grou
   Adc_ValidateQueueNotFull (&ValidationStatus, ServiceId, Group, CoreId);
 
   <bb 11> :
-  D.6926 = ValidationStatus.ValidParams;
+  D.6971 = ValidationStatus.ValidParams;
   ValidationStatus = {CLOBBER};
 
   <bb 12> :
 <L13>:
-  return D.6926;
+  return D.6971;
 
 }
 
@@ -2200,8 +2200,8 @@ Adc_ValidateQueueNotFull (struct Adc_ValidationResultType * ReturnValue, uint8 S
 
 Adc_ValidateTriggerSrc (struct Adc_ValidationResultType * ReturnValue, uint8 ServiceId, Adc_GroupType Group, uint8 CoreId)
 {
-  unsigned int D.6934;
-  unsigned int D.6933;
+  unsigned int D.6979;
+  unsigned int D.6978;
   Adc_GroupType GroupIndex;
 
   <bb 2> :
@@ -2213,9 +2213,9 @@ Adc_ValidateTriggerSrc (struct Adc_ValidationResultType * ReturnValue, uint8 Ser
   _6 = _3 + _5;
   GroupIndex = *_6;
   _7 = (int) ServiceId;
-  D.6933 = (unsigned int) _7;
-  D.6934 = D.6933 + 4294967294;
-  if (D.6934 <= 1)
+  D.6978 = (unsigned int) _7;
+  D.6979 = D.6978 + 4294967294;
+  if (D.6979 <= 1)
     goto <bb 3>; [INV]
   else
     goto <bb 6>; [INV]
@@ -2285,7 +2285,7 @@ Adc_ValidateBufferUninit (struct Adc_ValidationResultType * ReturnValue, uint8 S
 Adc_ValidatePtr (uint8 ServiceId, const void * PtrVal)
 {
   Std_ReturnType ValidPtr;
-  Std_ReturnType D.6849;
+  Std_ReturnType D.6894;
 
   <bb 2> :
   ValidPtr = 0;
@@ -2299,11 +2299,11 @@ Adc_ValidatePtr (uint8 ServiceId, const void * PtrVal)
   Adc_ReportDetError (ServiceId, 20);
 
   <bb 4> :
-  D.6849 = ValidPtr;
+  D.6894 = ValidPtr;
 
   <bb 5> :
 <L2>:
-  return D.6849;
+  return D.6894;
 
 }
 
@@ -2311,7 +2311,7 @@ Adc_ValidatePtr (uint8 ServiceId, const void * PtrVal)
 Adc_ValidatePtrInit (const struct Adc_ConfigType * ConfigPtr)
 {
   Std_ReturnType ValidPtr;
-  Std_ReturnType D.6810;
+  Std_ReturnType D.6855;
 
   <bb 2> :
   ValidPtr = 0;
@@ -2325,11 +2325,11 @@ Adc_ValidatePtrInit (const struct Adc_ConfigType * ConfigPtr)
   Adc_ReportDetError (0, 20);
 
   <bb 4> :
-  D.6810 = ValidPtr;
+  D.6855 = ValidPtr;
 
   <bb 5> :
 <L2>:
-  return D.6810;
+  return D.6855;
 
 }
 
@@ -2337,7 +2337,7 @@ Adc_ValidatePtrInit (const struct Adc_ConfigType * ConfigPtr)
 Adc_ValidateGloballCall (uint8 ServiceId, uint8 CoreId)
 {
   Std_ReturnType ValidState;
-  Std_ReturnType D.6806;
+  Std_ReturnType D.6851;
 
   <bb 2> :
   ValidState = 1;
@@ -2376,11 +2376,11 @@ Adc_ValidateGloballCall (uint8 ServiceId, uint8 CoreId)
   ValidState = 0;
 
   <bb 9> :
-  D.6806 = ValidState;
+  D.6851 = ValidState;
 
   <bb 10> :
 <L9>:
-  return D.6806;
+  return D.6851;
 
 }
 

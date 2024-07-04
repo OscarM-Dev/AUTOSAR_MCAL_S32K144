@@ -92,7 +92,7 @@ void HwIoAb_Buttons_MainFunction( void ) {
 
     #if ( HWIOAB_BUTTONS_DEV_ERROR_DETECT == STD_ON )
         if ( ButtonsControl_Ptr->Buttons_init == FALSE ) {
-            Det_ReportError( HWIOAB_BUTTONS_MODULE_ID, HWIOAB_BUTTONS_INSTANCE_ID, HWIOAB_BUTTONS_GETEVENT_ID, HWIOAB_BUTTONS_E_UNINIT );
+            Det_ReportError( HWIOAB_BUTTONS_MODULE_ID, HWIOAB_BUTTONS_INSTANCE_ID, HWIOAB_BUTTONS_MAINFUNCTION_ID, HWIOAB_BUTTONS_E_UNINIT );
             status = E_NOT_OK;
         }
     #endif

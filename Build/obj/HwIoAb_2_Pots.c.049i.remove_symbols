@@ -4,7 +4,7 @@ Reclaiming variables:
 Clearing address taken flags:
 Symbol table:
 
-Adc_ReadGroup/9 (Adc_ReadGroup) @067ab9a0
+Adc_ReadGroup/9 (Adc_ReadGroup) @0681f700
   Type: function
   Visibility: external public
   References: 
@@ -13,7 +13,7 @@ Adc_ReadGroup/9 (Adc_ReadGroup) @067ab9a0
   Function flags:
   Called by: HwIoAb_Pots_GetAltValue/2 HwIoAb_Pots_GetValue/1 
   Calls: 
-Adc_GetGroupStatus/8 (Adc_GetGroupStatus) @067ab8c0
+Adc_GetGroupStatus/8 (Adc_GetGroupStatus) @0681f620
   Type: function
   Visibility: external public
   References: 
@@ -22,7 +22,7 @@ Adc_GetGroupStatus/8 (Adc_GetGroupStatus) @067ab8c0
   Function flags:
   Called by: HwIoAb_Pots_GetAltValue/2 HwIoAb_Pots_GetValue/1 
   Calls: 
-Adc_StartGroupConversion/7 (Adc_StartGroupConversion) @067ab7e0
+Adc_StartGroupConversion/7 (Adc_StartGroupConversion) @0681f540
   Type: function
   Visibility: external public
   References: 
@@ -31,7 +31,7 @@ Adc_StartGroupConversion/7 (Adc_StartGroupConversion) @067ab7e0
   Function flags:
   Called by: HwIoAb_Pots_GetAltValue/2 HwIoAb_Pots_GetValue/1 
   Calls: 
-Det_ReportError/6 (Det_ReportError) @067ab700
+Det_ReportError/6 (Det_ReportError) @0681f460
   Type: function
   Visibility: external public
   References: 
@@ -40,7 +40,7 @@ Det_ReportError/6 (Det_ReportError) @067ab700
   Function flags:
   Called by: HwIoAb_Pots_GetAltValue/2 HwIoAb_Pots_GetAltValue/2 HwIoAb_Pots_GetValue/1 HwIoAb_Pots_GetValue/1 
   Calls: 
-Adc_SetupResultBuffer/5 (Adc_SetupResultBuffer) @067ab540
+Adc_SetupResultBuffer/5 (Adc_SetupResultBuffer) @0681f2a0
   Type: function
   Visibility: external public
   References: 
@@ -49,7 +49,7 @@ Adc_SetupResultBuffer/5 (Adc_SetupResultBuffer) @067ab540
   Function flags:
   Called by: HwIoAb_Pots_Init/0 HwIoAb_Pots_Init/0 
   Calls: 
-PotsControl_Ptr/4 (PotsControl_Ptr) @067ac120
+PotsControl_Ptr/4 (PotsControl_Ptr) @068202d0
   Type: variable
   Body removed by symtab_remove_unreachable_nodes
   Visibility: external public
@@ -57,7 +57,7 @@ PotsControl_Ptr/4 (PotsControl_Ptr) @067ac120
   Referring: HwIoAb_Pots_Init/0 (read) HwIoAb_Pots_Init/0 (read) HwIoAb_Pots_Init/0 (read) HwIoAb_Pots_Init/0 (read) HwIoAb_Pots_GetValue/1 (read) HwIoAb_Pots_GetValue/1 (read) HwIoAb_Pots_GetValue/1 (read) HwIoAb_Pots_GetValue/1 (read) HwIoAb_Pots_GetAltValue/2 (read) HwIoAb_Pots_GetAltValue/2 (read) HwIoAb_Pots_GetAltValue/2 (read) HwIoAb_Pots_GetAltValue/2 (read) 
   Availability: not_available
   Varpool flags:
-Adc_Calibrate/3 (Adc_Calibrate) @067ab460
+Adc_Calibrate/3 (Adc_Calibrate) @0681f1c0
   Type: function
   Visibility: external public
   References: 
@@ -66,7 +66,7 @@ Adc_Calibrate/3 (Adc_Calibrate) @067ab460
   Function flags:
   Called by: HwIoAb_Pots_Init/0 HwIoAb_Pots_Init/0 
   Calls: 
-HwIoAb_Pots_GetAltValue/2 (HwIoAb_Pots_GetAltValue) @067ab000
+HwIoAb_Pots_GetAltValue/2 (HwIoAb_Pots_GetAltValue) @06994540
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: PotsControl_Ptr/4 (read) PotsControl_Ptr/4 (read) PotsControl_Ptr/4 (read) PotsControl_Ptr/4 (read) 
@@ -75,7 +75,7 @@ HwIoAb_Pots_GetAltValue/2 (HwIoAb_Pots_GetAltValue) @067ab000
   Function flags: body
   Called by: 
   Calls: Adc_ReadGroup/9 Adc_GetGroupStatus/8 Adc_StartGroupConversion/7 Det_ReportError/6 Det_ReportError/6 
-HwIoAb_Pots_GetValue/1 (HwIoAb_Pots_GetValue) @069787e0
+HwIoAb_Pots_GetValue/1 (HwIoAb_Pots_GetValue) @06994ee0
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: PotsControl_Ptr/4 (read) PotsControl_Ptr/4 (read) PotsControl_Ptr/4 (read) PotsControl_Ptr/4 (read) 
@@ -84,7 +84,7 @@ HwIoAb_Pots_GetValue/1 (HwIoAb_Pots_GetValue) @069787e0
   Function flags: body
   Called by: 
   Calls: Adc_ReadGroup/9 Adc_GetGroupStatus/8 Adc_StartGroupConversion/7 Det_ReportError/6 Det_ReportError/6 
-HwIoAb_Pots_Init/0 (HwIoAb_Pots_Init) @06978ee0
+HwIoAb_Pots_Init/0 (HwIoAb_Pots_Init) @06994c40
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: PotsControl_Ptr/4 (read) PotsControl_Ptr/4 (read) PotsControl_Ptr/4 (read) PotsControl_Ptr/4 (read) 
@@ -136,7 +136,7 @@ HwIoAb_Pots_GetAltValue (uint16 * AltPots)
     goto <bb 4>; [INV]
 
   <bb 3> :
-  Det_ReportError (303, 0, 1, 1);
+  Det_ReportError (303, 0, 2, 1);
   status_40 = 1;
 
   <bb 4> :
@@ -147,7 +147,7 @@ HwIoAb_Pots_GetAltValue (uint16 * AltPots)
     goto <bb 6>; [INV]
 
   <bb 5> :
-  Det_ReportError (303, 0, 1, 0);
+  Det_ReportError (303, 0, 2, 0);
   status_43 = 1;
 
   <bb 6> :

@@ -263,7 +263,7 @@ Port_Ipw_SetPinMode (Port_PinType PinIndex, Port_PinModeType PinMode, const stru
   Port_PinModeType PinCfgRegValue;
   uint16 PinPad;
   Std_ReturnType PinModeError;
-  Std_ReturnType D.5837;
+  Std_ReturnType D.5882;
 
   <bb 2> :
   PinModeError = 0;
@@ -405,11 +405,11 @@ Port_Ipw_SetPinMode (Port_PinType PinIndex, Port_PinModeType PinMode, const stru
   PinModeError = 13;
 
   <bb 19> :
-  D.5837 = PinModeError;
+  D.5882 = PinModeError;
 
   <bb 20> :
 <L22>:
-  return D.5837;
+  return D.5882;
 
 }
 
@@ -421,7 +421,7 @@ Port_Ipw_SetPinDirection (Port_PinType PinIndex, Port_PinDirectionType eDirectio
   uint8 CoreId;
   Std_ReturnType PinDirError;
   uint16 Pin;
-  Std_ReturnType D.5816;
+  Std_ReturnType D.5861;
 
   <bb 2> :
   _1 = pConfigPtr->pUsedPadConfig;
@@ -580,11 +580,11 @@ Port_Ipw_SetPinDirection (Port_PinType PinIndex, Port_PinDirectionType eDirectio
   PinDirError = 1;
 
   <bb 17> :
-  D.5816 = PinDirError;
+  D.5861 = PinDirError;
 
   <bb 18> :
 <L18>:
-  return D.5816;
+  return D.5861;
 
 }
 

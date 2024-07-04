@@ -326,7 +326,7 @@ Pwm_Init (const struct Pwm_ConfigType * ConfigPtr)
 Pwm_ValidateSetOutPutToIdle (uint32 CoreId, Pwm_ChannelType ChannelNumber)
 {
   Std_ReturnType RetVal;
-  Std_ReturnType D.6217;
+  Std_ReturnType D.6262;
 
   <bb 2> :
   RetVal = 0;
@@ -345,11 +345,11 @@ Pwm_ValidateSetOutPutToIdle (uint32 CoreId, Pwm_ChannelType ChannelNumber)
   Det_ReportError (121, 0, 4, 66);
 
   <bb 4> :
-  D.6217 = RetVal;
+  D.6262 = RetVal;
 
   <bb 5> :
 <L2>:
-  return D.6217;
+  return D.6262;
 
 }
 
@@ -358,7 +358,7 @@ Pwm_ValidateParamsPeriodClass (uint32 CoreId, Pwm_ChannelType ChannelNumber, Pwm
 {
   uint32 PeriodMaxValue;
   Std_ReturnType RetVal;
-  Std_ReturnType D.6209;
+  Std_ReturnType D.6254;
 
   <bb 2> :
   RetVal = 0;
@@ -391,11 +391,11 @@ Pwm_ValidateParamsPeriodClass (uint32 CoreId, Pwm_ChannelType ChannelNumber, Pwm
   RetVal = 1;
 
   <bb 6> :
-  D.6209 = RetVal;
+  D.6254 = RetVal;
 
   <bb 7> :
 <L6>:
-  return D.6209;
+  return D.6254;
 
 }
 
@@ -403,7 +403,7 @@ Pwm_ValidateParamsPeriodClass (uint32 CoreId, Pwm_ChannelType ChannelNumber, Pwm
 Pwm_ValidateParamDuty (uint16 DutyCycle, uint8 ServiceId)
 {
   Std_ReturnType RetVal;
-  Std_ReturnType D.6195;
+  Std_ReturnType D.6240;
 
   <bb 2> :
   RetVal = 0;
@@ -417,11 +417,11 @@ Pwm_ValidateParamDuty (uint16 DutyCycle, uint8 ServiceId)
   RetVal = 1;
 
   <bb 4> :
-  D.6195 = RetVal;
+  D.6240 = RetVal;
 
   <bb 5> :
 <L2>:
-  return D.6195;
+  return D.6240;
 
 }
 
@@ -429,7 +429,7 @@ Pwm_ValidateParamDuty (uint16 DutyCycle, uint8 ServiceId)
 Pwm_ValidateParamPtrInit (uint32 CoreId, const struct Pwm_ConfigType * ConfigPtr)
 {
   Std_ReturnType RetVal;
-  Std_ReturnType D.6165;
+  Std_ReturnType D.6210;
 
   <bb 2> :
   RetVal = 0;
@@ -443,11 +443,11 @@ Pwm_ValidateParamPtrInit (uint32 CoreId, const struct Pwm_ConfigType * ConfigPtr
   RetVal = 1;
 
   <bb 4> :
-  D.6165 = RetVal;
+  D.6210 = RetVal;
 
   <bb 5> :
 <L3>:
-  return D.6165;
+  return D.6210;
 
 }
 
@@ -464,7 +464,7 @@ Pwm_ValidateChannelConfigCall (uint32 CoreId, Pwm_ChannelType ChannelNumber, uin
 {
   Pwm_ChannelType PartitionChannelIdx;
   Std_ReturnType RetVal;
-  Std_ReturnType D.6189;
+  Std_ReturnType D.6234;
 
   <bb 2> :
   RetVal = 0;
@@ -504,11 +504,11 @@ Pwm_ValidateChannelConfigCall (uint32 CoreId, Pwm_ChannelType ChannelNumber, uin
   Det_ReportError (121, 0, ServiceId, 64);
 
   <bb 8> :
-  D.6189 = RetVal;
+  D.6234 = RetVal;
 
   <bb 9> :
 <L9>:
-  return D.6189;
+  return D.6234;
 
 }
 
@@ -543,7 +543,7 @@ Pwm_EndValidateGlobalConfigCall (uint32 CoreId, Std_ReturnType ValidCall, uint8 
 Pwm_ValidateGlobalConfigCall (uint32 CoreId, uint8 ServiceId)
 {
   Std_ReturnType RetVal;
-  Std_ReturnType D.6156;
+  Std_ReturnType D.6201;
 
   <bb 2> :
   RetVal = 0;
@@ -575,25 +575,25 @@ Pwm_ValidateGlobalConfigCall (uint32 CoreId, uint8 ServiceId)
   RetVal = 1;
 
   <bb 7> :
-  D.6156 = RetVal;
+  D.6201 = RetVal;
 
   <bb 8> :
 <L7>:
-  return D.6156;
+  return D.6201;
 
 }
 
 
 Pwm_GetPartitionChannelIdx (uint32 CoreId, Pwm_ChannelType ChannelNumber)
 {
-  uint8 D.6191;
+  uint8 D.6236;
 
   <bb 2> :
-  D.6191 = ChannelNumber;
+  D.6236 = ChannelNumber;
 
   <bb 3> :
 <L0>:
-  return D.6191;
+  return D.6236;
 
 }
 

@@ -13,7 +13,7 @@ HwIoAb_Leds_TurnToggle (uint8 Led)
     goto <bb 4>; [INV]
 
   <bb 3> :
-  Det_ReportError (302, 0, 1, 2);
+  Det_ReportError (302, 0, 3, 2);
   status = 1;
 
   <bb 4> :
@@ -25,7 +25,7 @@ HwIoAb_Leds_TurnToggle (uint8 Led)
     goto <bb 6>; [INV]
 
   <bb 5> :
-  Det_ReportError (302, 0, 1, 1);
+  Det_ReportError (302, 0, 3, 1);
   status = 1;
 
   <bb 6> :
@@ -64,7 +64,7 @@ HwIoAb_Leds_TurnOff (uint8 Led)
     goto <bb 4>; [INV]
 
   <bb 3> :
-  Det_ReportError (302, 0, 1, 2);
+  Det_ReportError (302, 0, 2, 2);
   status = 1;
 
   <bb 4> :
@@ -76,7 +76,7 @@ HwIoAb_Leds_TurnOff (uint8 Led)
     goto <bb 6>; [INV]
 
   <bb 5> :
-  Det_ReportError (302, 0, 1, 1);
+  Det_ReportError (302, 0, 2, 1);
   status = 1;
 
   <bb 6> :

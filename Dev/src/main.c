@@ -21,7 +21,6 @@ QueueMessage Queue1[ SCHEDULER_QUEUE1_ELEMENTS ];
 */
 int main( void ) {
     EcuM_Init();    //MCU configuration.
-    SEGGER_RTT_Init();  //Initializing RTT library.
     Scheduler_Init( &Scheduler_Control );   //Initializing control structure for scheduler.
 
     while( 1u ) {

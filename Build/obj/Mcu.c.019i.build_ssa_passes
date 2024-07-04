@@ -61,7 +61,7 @@ Mcu_GetVersionInfo (struct Std_VersionInfoType * versioninfo)
 Mcu_GetResetRawValue ()
 {
   Mcu_RawResetType RawResetValue;
-  Mcu_RawResetType D.6064;
+  Mcu_RawResetType D.6109;
 
   <bb 2> :
   RawResetValue = 4294967295;
@@ -76,11 +76,11 @@ Mcu_GetResetRawValue ()
   Mcu_HLDChecksExit (0, 6);
 
   <bb 4> :
-  D.6064 = RawResetValue;
+  D.6109 = RawResetValue;
 
   <bb 5> :
 <L2>:
-  return D.6064;
+  return D.6109;
 
 }
 
@@ -88,7 +88,7 @@ Mcu_GetResetRawValue ()
 Mcu_GetResetReason ()
 {
   Mcu_ResetType ResetReason;
-  Mcu_ResetType D.6060;
+  Mcu_ResetType D.6105;
 
   <bb 2> :
   ResetReason = 14;
@@ -103,11 +103,11 @@ Mcu_GetResetReason ()
   Mcu_HLDChecksExit (0, 5);
 
   <bb 4> :
-  D.6060 = ResetReason;
+  D.6105 = ResetReason;
 
   <bb 5> :
 <L2>:
-  return D.6060;
+  return D.6105;
 
 }
 
@@ -115,7 +115,7 @@ Mcu_GetResetReason ()
 Mcu_GetPllStatus ()
 {
   Mcu_PllStatusType PllStatus;
-  Mcu_PllStatusType D.6056;
+  Mcu_PllStatusType D.6101;
 
   <bb 2> :
   PllStatus = 2;
@@ -129,11 +129,11 @@ Mcu_GetPllStatus ()
   Mcu_HLDChecksExit (0, 4);
 
   <bb 4> :
-  D.6056 = PllStatus;
+  D.6101 = PllStatus;
 
   <bb 5> :
 <L2>:
-  return D.6056;
+  return D.6101;
 
 }
 
@@ -179,7 +179,7 @@ Mcu_InitClock (Mcu_ClockType ClockSetting)
 {
   Std_ReturnType ClockStatus;
   const uint8 ClockConfigId;
-  Std_ReturnType D.6048;
+  Std_ReturnType D.6093;
 
   <bb 2> :
   ClockConfigId = Mcu_au8ClockConfigIds[ClockSetting];
@@ -209,11 +209,11 @@ Mcu_InitClock (Mcu_ClockType ClockSetting)
   Mcu_HLDChecksExit (0, 2);
 
   <bb 6> :
-  D.6048 = ClockStatus;
+  D.6093 = ClockStatus;
 
   <bb 7> :
 <L4>:
-  return D.6048;
+  return D.6093;
 
 }
 
@@ -221,7 +221,7 @@ Mcu_InitClock (Mcu_ClockType ClockSetting)
 Mcu_InitRamSection (Mcu_RamSectionType RamSection)
 {
   Std_ReturnType RamStatus;
-  Std_ReturnType D.6042;
+  Std_ReturnType D.6087;
 
   <bb 2> :
   RamStatus = 1;
@@ -235,11 +235,11 @@ Mcu_InitRamSection (Mcu_RamSectionType RamSection)
   Mcu_HLDChecksExit (0, 1);
 
   <bb 4> :
-  D.6042 = RamStatus;
+  D.6087 = RamStatus;
 
   <bb 5> :
 <L2>:
-  return D.6042;
+  return D.6087;
 
 }
 
@@ -356,7 +356,7 @@ Mcu_HLDChecksExit (Std_ReturnType RetStatus, uint8 McuServiceID)
 Mcu_HLDChecksEntry (uint8 McuServiceID)
 {
   Std_ReturnType CheckStatus;
-  Std_ReturnType D.6027;
+  Std_ReturnType D.6072;
 
   <bb 2> :
   CheckStatus = 0;
@@ -393,11 +393,11 @@ Mcu_HLDChecksEntry (uint8 McuServiceID)
   Mcu_eStatus = 10;
 
   <bb 8> :
-  D.6027 = CheckStatus;
+  D.6072 = CheckStatus;
 
   <bb 9> :
 <L8>:
-  return D.6027;
+  return D.6072;
 
 }
 
@@ -405,7 +405,7 @@ Mcu_HLDChecksEntry (uint8 McuServiceID)
 Mcu_CheckGetVersionInfo (const struct Std_VersionInfoType * VersionInfo)
 {
   Std_ReturnType CheckStatus;
-  Std_ReturnType D.6017;
+  Std_ReturnType D.6062;
 
   <bb 2> :
   CheckStatus = 0;
@@ -419,11 +419,11 @@ Mcu_CheckGetVersionInfo (const struct Std_VersionInfoType * VersionInfo)
   Det_ReportError (101, 0, 9, 16);
 
   <bb 4> :
-  D.6017 = CheckStatus;
+  D.6062 = CheckStatus;
 
   <bb 5> :
 <L2>:
-  return D.6017;
+  return D.6062;
 
 }
 
@@ -431,7 +431,7 @@ Mcu_CheckGetVersionInfo (const struct Std_VersionInfoType * VersionInfo)
 Mcu_CheckSetMode (Power_Ip_ModeType McuMode)
 {
   Std_ReturnType CheckStatus;
-  Std_ReturnType D.6013;
+  Std_ReturnType D.6058;
 
   <bb 2> :
   CheckStatus = 0;
@@ -447,11 +447,11 @@ Mcu_CheckSetMode (Power_Ip_ModeType McuMode)
   Det_ReportError (101, 0, 8, 12);
 
   <bb 4> :
-  D.6013 = CheckStatus;
+  D.6058 = CheckStatus;
 
   <bb 5> :
 <L2>:
-  return D.6013;
+  return D.6058;
 
 }
 
@@ -459,7 +459,7 @@ Mcu_CheckSetMode (Power_Ip_ModeType McuMode)
 Mcu_CheckInitClock (Mcu_ClockType ClockSetting)
 {
   Std_ReturnType CheckStatus;
-  Std_ReturnType D.6009;
+  Std_ReturnType D.6054;
 
   <bb 2> :
   CheckStatus = 0;
@@ -475,11 +475,11 @@ Mcu_CheckInitClock (Mcu_ClockType ClockSetting)
   Det_ReportError (101, 0, 2, 11);
 
   <bb 4> :
-  D.6009 = CheckStatus;
+  D.6054 = CheckStatus;
 
   <bb 5> :
 <L2>:
-  return D.6009;
+  return D.6054;
 
 }
 
@@ -487,7 +487,7 @@ Mcu_CheckInitClock (Mcu_ClockType ClockSetting)
 Mcu_CheckInit (const struct Mcu_ConfigType * ConfigPtr)
 {
   Std_ReturnType CheckStatus;
-  Std_ReturnType D.6005;
+  Std_ReturnType D.6050;
 
   <bb 2> :
   CheckStatus = 0;
@@ -501,11 +501,11 @@ Mcu_CheckInit (const struct Mcu_ConfigType * ConfigPtr)
   Det_ReportError (101, 0, 0, 17);
 
   <bb 4> :
-  D.6005 = CheckStatus;
+  D.6050 = CheckStatus;
 
   <bb 5> :
 <L2>:
-  return D.6005;
+  return D.6050;
 
 }
 

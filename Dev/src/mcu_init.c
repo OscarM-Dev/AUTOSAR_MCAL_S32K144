@@ -45,8 +45,7 @@ void MCU_clocks( void ) {
  * 
  * 
  */
-void EcuM_Init( void )
-{   
+void EcuM_Init( void ) {   
     MCU_clocks();
     OsIf_Init( NULL_PTR );  //Init Osif timer.
     Platform_Init( NULL_PTR );  //Init platform driver and configuration.
@@ -59,4 +58,5 @@ void EcuM_Init( void )
     Port_Ci_Port_Ip_SetMuxModeSel( IP_PORTB, 13, PORT_MUX_ADC_INTERLEAVE );
 
     IoHwAb_Init0( NULL_PTR );  //Initializing IO hardware abstractions.
+    Det_Init(); //Initializing det.
 }

@@ -107,12 +107,12 @@ Std_ReturnType Scheduler_FlushQueue( QueueType Queue ) {
 
     #if ( SCHEDULER_DEV_ERROR_DETECT == STD_ON )
         if ( SchedulerCtrl_Ptr->SchedulerInit  == FALSE ) { //Scheduler not initialized.
-            Det_ReportError( SCHEDULER_MODULE_ID, SCHEDULER_INSTANCE_ID, SCHEDULER_GETSTATUSQUEUE_ID, SCHEDULER_E_UNINIT );
+            Det_ReportError( SCHEDULER_MODULE_ID, SCHEDULER_INSTANCE_ID, SCHEDULER_FLUSHQUEUE_ID, SCHEDULER_E_UNINIT );
             status = E_NOT_OK;
         }
 
         if ( Queue > SchedulerConfig_Ptr->Queues - 1 ) {    //Invalid queue id.
-            Det_ReportError( SCHEDULER_MODULE_ID, SCHEDULER_INSTANCE_ID, SCHEDULER_GETSTATUSQUEUE_ID, SCHEDULER_E_QUEUE_ID );
+            Det_ReportError( SCHEDULER_MODULE_ID, SCHEDULER_INSTANCE_ID, SCHEDULER_FLUSHQUEUE_ID, SCHEDULER_E_QUEUE_ID );
             status = E_NOT_OK;
         }
     #endif
@@ -155,12 +155,12 @@ Std_ReturnType Scheduler_WriteQueue( QueueType Queue, void *Data ) {
 
     #if ( SCHEDULER_DEV_ERROR_DETECT == STD_ON )
         if ( SchedulerCtrl_Ptr->SchedulerInit  == FALSE ) { //Scheduler not initialized.
-            Det_ReportError( SCHEDULER_MODULE_ID, SCHEDULER_INSTANCE_ID, SCHEDULER_GETSTATUSQUEUE_ID, SCHEDULER_E_UNINIT );
+            Det_ReportError( SCHEDULER_MODULE_ID, SCHEDULER_INSTANCE_ID, SCHEDULER_WRITEQUEUE_ID, SCHEDULER_E_UNINIT );
             status = E_NOT_OK;
         }
 
         if ( Queue > SchedulerConfig_Ptr->Queues - 1 ) {    //Invalid queue id.
-            Det_ReportError( SCHEDULER_MODULE_ID, SCHEDULER_INSTANCE_ID, SCHEDULER_GETSTATUSQUEUE_ID, SCHEDULER_E_QUEUE_ID );
+            Det_ReportError( SCHEDULER_MODULE_ID, SCHEDULER_INSTANCE_ID, SCHEDULER_WRITEQUEUE_ID, SCHEDULER_E_QUEUE_ID );
             status = E_NOT_OK;
         }
     #endif
@@ -227,12 +227,12 @@ Std_ReturnType Scheduler_ReadQueue( QueueType Queue, void *Data ) {
 
     #if ( SCHEDULER_DEV_ERROR_DETECT == STD_ON )
         if ( SchedulerCtrl_Ptr->SchedulerInit  == FALSE ) { //Scheduler not initialized.
-            Det_ReportError( SCHEDULER_MODULE_ID, SCHEDULER_INSTANCE_ID, SCHEDULER_GETSTATUSQUEUE_ID, SCHEDULER_E_UNINIT );
+            Det_ReportError( SCHEDULER_MODULE_ID, SCHEDULER_INSTANCE_ID, SCHEDULER_READQUEUE_ID, SCHEDULER_E_UNINIT );
             status = E_NOT_OK;
         }
 
         if ( Queue > SchedulerConfig_Ptr->Queues - 1 ) {    //Invalid queue id.
-            Det_ReportError( SCHEDULER_MODULE_ID, SCHEDULER_INSTANCE_ID, SCHEDULER_GETSTATUSQUEUE_ID, SCHEDULER_E_QUEUE_ID );
+            Det_ReportError( SCHEDULER_MODULE_ID, SCHEDULER_INSTANCE_ID, SCHEDULER_READQUEUE_ID, SCHEDULER_E_QUEUE_ID );
             status = E_NOT_OK;
         }
     #endif
@@ -335,12 +335,12 @@ Std_ReturnType Scheduler_StopTask( TaskType Task ) {
 
     #if ( SCHEDULER_DEV_ERROR_DETECT == STD_ON )
         if ( SchedulerCtrl_Ptr->SchedulerInit  == FALSE ) { //Scheduler not initialized.
-            Det_ReportError( SCHEDULER_MODULE_ID, SCHEDULER_INSTANCE_ID, SCHEDULER_GETSTATUSQUEUE_ID, SCHEDULER_E_UNINIT );
+            Det_ReportError( SCHEDULER_MODULE_ID, SCHEDULER_INSTANCE_ID, SCHEDULER_STOPTASK_ID, SCHEDULER_E_UNINIT );
             status = E_NOT_OK;
         }
 
         if ( Task > SchedulerConfig_Ptr->Tasks - 1 ) {    //Invalid task id.
-            Det_ReportError( SCHEDULER_MODULE_ID, SCHEDULER_INSTANCE_ID, SCHEDULER_GETSTATUSQUEUE_ID, SCHEDULER_E_TASK_ID );
+            Det_ReportError( SCHEDULER_MODULE_ID, SCHEDULER_INSTANCE_ID, SCHEDULER_STOPTASK_ID, SCHEDULER_E_TASK_ID );
             status = E_NOT_OK;
         }
     #endif  
@@ -370,12 +370,12 @@ Std_ReturnType Scheduler_StartTask( TaskType Task ) {
     
     #if ( SCHEDULER_DEV_ERROR_DETECT == STD_ON )
         if ( SchedulerCtrl_Ptr->SchedulerInit  == FALSE ) { //Scheduler not initialized.
-            Det_ReportError( SCHEDULER_MODULE_ID, SCHEDULER_INSTANCE_ID, SCHEDULER_GETSTATUSQUEUE_ID, SCHEDULER_E_UNINIT );
+            Det_ReportError( SCHEDULER_MODULE_ID, SCHEDULER_INSTANCE_ID, SCHEDULER_STARTTASK_ID, SCHEDULER_E_UNINIT );
             status = E_NOT_OK;
         }
 
         if ( Task > SchedulerConfig_Ptr->Tasks - 1 ) {    //Invalid task id.
-            Det_ReportError( SCHEDULER_MODULE_ID, SCHEDULER_INSTANCE_ID, SCHEDULER_GETSTATUSQUEUE_ID, SCHEDULER_E_TASK_ID );
+            Det_ReportError( SCHEDULER_MODULE_ID, SCHEDULER_INSTANCE_ID, SCHEDULER_STARTTASK_ID, SCHEDULER_E_TASK_ID );
             status = E_NOT_OK;
         }
     #endif  
@@ -406,12 +406,12 @@ Std_ReturnType Scheduler_PeriodTask( TaskType Task, uint32 NewPeriod ){
 
     #if ( SCHEDULER_DEV_ERROR_DETECT == STD_ON )
         if ( SchedulerCtrl_Ptr->SchedulerInit  == FALSE ) { //Scheduler not initialized.
-            Det_ReportError( SCHEDULER_MODULE_ID, SCHEDULER_INSTANCE_ID, SCHEDULER_GETSTATUSQUEUE_ID, SCHEDULER_E_UNINIT );
+            Det_ReportError( SCHEDULER_MODULE_ID, SCHEDULER_INSTANCE_ID, SCHEDULER_PERIODTASK_ID, SCHEDULER_E_UNINIT );
             status = E_NOT_OK;
         }
 
         if ( Task > SchedulerConfig_Ptr->Tasks - 1 ) {    //Invalid task id.
-            Det_ReportError( SCHEDULER_MODULE_ID, SCHEDULER_INSTANCE_ID, SCHEDULER_GETSTATUSQUEUE_ID, SCHEDULER_E_TASK_ID );
+            Det_ReportError( SCHEDULER_MODULE_ID, SCHEDULER_INSTANCE_ID, SCHEDULER_PERIODTASK_ID, SCHEDULER_E_TASK_ID );
             status = E_NOT_OK;
         }
 
@@ -447,12 +447,12 @@ Std_ReturnType Scheduler_StartTimer( TimerType Timer ) {
 
     #if ( SCHEDULER_DEV_ERROR_DETECT == STD_ON )
         if ( SchedulerCtrl_Ptr->SchedulerInit  == FALSE ) { //Scheduler not initialized.
-            Det_ReportError( SCHEDULER_MODULE_ID, SCHEDULER_INSTANCE_ID, SCHEDULER_GETSTATUSQUEUE_ID, SCHEDULER_E_UNINIT );
+            Det_ReportError( SCHEDULER_MODULE_ID, SCHEDULER_INSTANCE_ID, SCHEDULER_STARTTIMER_ID, SCHEDULER_E_UNINIT );
             status = E_NOT_OK;
         }
 
         if ( Timer > SchedulerConfig_Ptr->Timers - 1 ) {    //Invalid timer id.
-            Det_ReportError( SCHEDULER_MODULE_ID, SCHEDULER_INSTANCE_ID, SCHEDULER_GETSTATUSQUEUE_ID, SCHEDULER_E_TIMER_ID );
+            Det_ReportError( SCHEDULER_MODULE_ID, SCHEDULER_INSTANCE_ID, SCHEDULER_STARTTIMER_ID, SCHEDULER_E_TIMER_ID );
             status = E_NOT_OK;
         }
     #endif
@@ -488,12 +488,12 @@ Std_ReturnType Scheduler_StopTimer( TimerType Timer ) {
 
     #if ( SCHEDULER_DEV_ERROR_DETECT == STD_ON )
         if ( SchedulerCtrl_Ptr->SchedulerInit  == FALSE ) { //Scheduler not initialized.
-            Det_ReportError( SCHEDULER_MODULE_ID, SCHEDULER_INSTANCE_ID, SCHEDULER_GETSTATUSQUEUE_ID, SCHEDULER_E_UNINIT );
+            Det_ReportError( SCHEDULER_MODULE_ID, SCHEDULER_INSTANCE_ID, SCHEDULER_STOPTIMER_ID, SCHEDULER_E_UNINIT );
             status = E_NOT_OK;
         }
 
         if ( Timer > SchedulerConfig_Ptr->Timers - 1 ) {    //Invalid timer id.
-            Det_ReportError( SCHEDULER_MODULE_ID, SCHEDULER_INSTANCE_ID, SCHEDULER_GETSTATUSQUEUE_ID, SCHEDULER_E_TIMER_ID );
+            Det_ReportError( SCHEDULER_MODULE_ID, SCHEDULER_INSTANCE_ID, SCHEDULER_STOPTIMER_ID, SCHEDULER_E_TIMER_ID );
             status = E_NOT_OK;
         }
     #endif
@@ -524,13 +524,13 @@ uint32 Scheduler_GetTimer( TimerType Timer ) {
 
     #if ( SCHEDULER_DEV_ERROR_DETECT == STD_ON )
         if ( SchedulerCtrl_Ptr->SchedulerInit  == FALSE ) { //Scheduler not initialized.
-            Det_ReportError( SCHEDULER_MODULE_ID, SCHEDULER_INSTANCE_ID, SCHEDULER_GETSTATUSQUEUE_ID, SCHEDULER_E_UNINIT );
+            Det_ReportError( SCHEDULER_MODULE_ID, SCHEDULER_INSTANCE_ID, SCHEDULER_GETTIMER_ID, SCHEDULER_E_UNINIT );
             status = E_NOT_OK;
             counter_value = E_NOT_OK;
         }
 
         if ( Timer > SchedulerConfig_Ptr->Timers - 1 ) {    //Invalid timer id.
-            Det_ReportError( SCHEDULER_MODULE_ID, SCHEDULER_INSTANCE_ID, SCHEDULER_GETSTATUSQUEUE_ID, SCHEDULER_E_TIMER_ID );
+            Det_ReportError( SCHEDULER_MODULE_ID, SCHEDULER_INSTANCE_ID, SCHEDULER_GETTIMER_ID, SCHEDULER_E_TIMER_ID );
             status = E_NOT_OK;
             counter_value = E_NOT_OK;
         }
@@ -565,17 +565,17 @@ Std_ReturnType Scheduler_ReloadTimer( TimerType Timer, uint32 NewTimeout ) {
 
     #if ( SCHEDULER_DEV_ERROR_DETECT == STD_ON )
         if ( SchedulerCtrl_Ptr->SchedulerInit  == FALSE ) { //Scheduler not initialized.
-            Det_ReportError( SCHEDULER_MODULE_ID, SCHEDULER_INSTANCE_ID, SCHEDULER_GETSTATUSQUEUE_ID, SCHEDULER_E_UNINIT );
+            Det_ReportError( SCHEDULER_MODULE_ID, SCHEDULER_INSTANCE_ID, SCHEDULER_RELOADTIMER_ID, SCHEDULER_E_UNINIT );
             status = E_NOT_OK;
         }
 
         if ( Timer > SchedulerConfig_Ptr->Timers - 1 ) {    //Invalid timer id.
-            Det_ReportError( SCHEDULER_MODULE_ID, SCHEDULER_INSTANCE_ID, SCHEDULER_GETSTATUSQUEUE_ID, SCHEDULER_E_TIMER_ID );
+            Det_ReportError( SCHEDULER_MODULE_ID, SCHEDULER_INSTANCE_ID, SCHEDULER_RELOADTIMER_ID, SCHEDULER_E_TIMER_ID );
             status = E_NOT_OK;
         }
 
         if ( ( NewTimeout < SchedulerConfig_Ptr->Tick ) || ( NewTimeout % SchedulerConfig_Ptr->Tick != 0 ) ) {    //Invalid periodicity
-            Det_ReportError( SCHEDULER_MODULE_ID, SCHEDULER_INSTANCE_ID, SCHEDULER_PERIODTASK_ID, SCHEDULER_E_PERIODICITY );
+            Det_ReportError( SCHEDULER_MODULE_ID, SCHEDULER_INSTANCE_ID, SCHEDULER_RELOADTIMER_ID, SCHEDULER_E_PERIODICITY );
             status = E_NOT_OK;
         }
     #endif
@@ -611,7 +611,7 @@ void Scheduler_MainFunction( void ) {
 
     #if ( SCHEDULER_DEV_ERROR_DETECT == STD_ON )
         if ( SchedulerCtrl_Ptr->SchedulerInit  == FALSE ) { //Scheduler not initialized.
-            Det_ReportError( SCHEDULER_MODULE_ID, SCHEDULER_INSTANCE_ID, SCHEDULER_GETSTATUSQUEUE_ID, SCHEDULER_E_UNINIT );
+            Det_ReportError( SCHEDULER_MODULE_ID, SCHEDULER_INSTANCE_ID, SCHEDULER_MAINFUNCTION_ID, SCHEDULER_E_UNINIT );
             status = E_NOT_OK;
         }
     #endif

@@ -379,7 +379,7 @@ Port_Ipw_SetPinMode (Port_PinType PinIndex, Port_PinModeType PinMode, const stru
   Port_PinModeType PinCfgRegValue;
   uint16 PinPad;
   Std_ReturnType PinModeError;
-  Std_ReturnType D.5837;
+  Std_ReturnType D.5882;
   const struct Port_PinConfigType * _1;
   long unsigned int _2;
   const struct Port_PinConfigType * _3;
@@ -581,7 +581,7 @@ Port_Ipw_SetPinDirection (Port_PinType PinIndex, Port_PinDirectionType eDirectio
   uint8 CoreId;
   Std_ReturnType PinDirError;
   uint16 Pin;
-  Std_ReturnType D.5816;
+  Std_ReturnType D.5861;
   const struct Port_PinConfigType * _1;
   long unsigned int _2;
   const struct Port_PinConfigType * _3;

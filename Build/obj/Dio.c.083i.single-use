@@ -22,7 +22,7 @@ Dio_ReadChannelGroup (const struct Dio_ChannelGroupType * ChannelGroupIdPtr)
 {
   Std_ReturnType Valid;
   Dio_PortLevelType PortLevel;
-  Dio_PortLevelType D.5650;
+  Dio_PortLevelType D.5695;
   Dio_PortLevelType _10;
 
   <bb 2> :
@@ -71,7 +71,7 @@ Dio_ReadPort (Dio_PortType PortId)
 {
   Std_ReturnType Valid;
   Dio_PortLevelType PortLevel;
-  Dio_PortLevelType D.5626;
+  Dio_PortLevelType D.5671;
   Dio_PortLevelType _10;
 
   <bb 2> :
@@ -100,7 +100,7 @@ Dio_FlipChannel (Dio_ChannelType ChannelId)
 {
   Std_ReturnType Valid;
   Dio_LevelType ChannelLevel;
-  Dio_LevelType D.5622;
+  Dio_LevelType D.5667;
   Dio_LevelType _10;
 
   <bb 2> :
@@ -156,7 +156,7 @@ Dio_ReadChannel (Dio_ChannelType ChannelId)
 {
   Std_ReturnType Valid;
   Dio_LevelType ChannelLevel;
-  Dio_LevelType D.5590;
+  Dio_LevelType D.5635;
   Dio_LevelType _10;
 
   <bb 2> :
@@ -210,7 +210,7 @@ Dio_ValidateChannelGroupForRead (const struct Dio_ChannelGroupType * pChannelGro
 {
   uint8 u8ChannelGroup;
   Std_ReturnType Valid;
-  Std_ReturnType D.5659;
+  Std_ReturnType D.5704;
   const struct Dio_ChannelGroupType * _1;
   long unsigned int _2;
   long unsigned int pChannelGroup.0_3;
@@ -295,7 +295,7 @@ Dio_ValidateChannelGroupForWrite (const struct Dio_ChannelGroupType * pChannelGr
 {
   uint8 u8ChannelGroup;
   Std_ReturnType Valid;
-  Std_ReturnType D.5670;
+  Std_ReturnType D.5715;
   const struct Dio_ChannelGroupType * _1;
   long unsigned int _2;
   long unsigned int pChannelGroup.2_3;
@@ -380,7 +380,7 @@ Dio_ValidatePortForRead (Dio_PortType PortId, uint8 u8ServiceId)
 {
   uint8 CoreId;
   Std_ReturnType Valid;
-  Std_ReturnType D.5635;
+  Std_ReturnType D.5680;
   int _1;
   long unsigned int _2;
   const uint32 * _3;
@@ -456,7 +456,7 @@ Dio_ValidatePortForWrite (Dio_PortType PortId, uint8 u8ServiceId)
 {
   uint8 CoreId;
   Std_ReturnType Valid;
-  Std_ReturnType D.5646;
+  Std_ReturnType D.5691;
   int _1;
   long unsigned int _2;
   const uint32 * _3;
@@ -534,7 +534,7 @@ Dio_ValidateChannelForRead (Dio_ChannelType ChannelId, uint8 u8ServiceId)
   Dio_ChannelType maxChannelId;
   uint8 CoreId;
   Std_ReturnType Valid;
-  Std_ReturnType D.5599;
+  Std_ReturnType D.5644;
   short unsigned int _1;
   int _2;
   long unsigned int _3;
@@ -622,7 +622,7 @@ Dio_ValidateChannelForWrite (Dio_ChannelType ChannelId, uint8 u8ServiceId)
   Dio_ChannelType maxChannelId;
   uint8 CoreId;
   Std_ReturnType Valid;
-  Std_ReturnType D.5612;
+  Std_ReturnType D.5657;
   short unsigned int _1;
   int _2;
   long unsigned int _3;
@@ -707,7 +707,7 @@ Dio_ValidateChannelForWrite (Dio_ChannelType ChannelId, uint8 u8ServiceId)
 Dio_ValidateChannelLevel (Dio_LevelType Level)
 {
   Std_ReturnType Valid;
-  Std_ReturnType D.5618;
+  Std_ReturnType D.5663;
   Std_ReturnType _8;
 
   <bb 2> :

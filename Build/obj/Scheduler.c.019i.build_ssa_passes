@@ -5,7 +5,7 @@ Scheduler_MainFunction ()
   uint32 elapsed_time;
   uint32 count_value;
   uint32 tick_value;
-  long unsigned int D.6020;
+  long unsigned int D.6065;
 
   <bb 2> :
   SchedulerConfig_Ptr.78_1 = SchedulerConfig_Ptr;
@@ -26,7 +26,7 @@ Scheduler_MainFunction ()
     goto <bb 4>; [INV]
 
   <bb 3> :
-  Det_ReportError (300, 0, 2, 6);
+  Det_ReportError (300, 0, 13, 6);
   status = 1;
 
   <bb 4> :
@@ -36,8 +36,8 @@ Scheduler_MainFunction ()
     goto <bb 20>; [INV]
 
   <bb 5> :
-  D.6020 = OsIf_GetElapsed (&count_value, 1);
-  elapsed_time = D.6020 + elapsed_time;
+  D.6065 = OsIf_GetElapsed (&count_value, 1);
+  elapsed_time = D.6065 + elapsed_time;
   if (elapsed_time >= tick_value)
     goto <bb 6>; [INV]
   else
@@ -167,7 +167,7 @@ Scheduler_MainFunction ()
 Scheduler_ReloadTimer (TimerType Timer, uint32 NewTimeout)
 {
   Std_ReturnType status;
-  Std_ReturnType D.6014;
+  Std_ReturnType D.6059;
 
   <bb 2> :
   status = 0;
@@ -180,7 +180,7 @@ Scheduler_ReloadTimer (TimerType Timer, uint32 NewTimeout)
     goto <bb 4>; [INV]
 
   <bb 3> :
-  Det_ReportError (300, 0, 2, 6);
+  Det_ReportError (300, 0, 12, 6);
   status = 1;
 
   <bb 4> :
@@ -192,7 +192,7 @@ Scheduler_ReloadTimer (TimerType Timer, uint32 NewTimeout)
     goto <bb 6>; [INV]
 
   <bb 5> :
-  Det_ReportError (300, 0, 2, 5);
+  Det_ReportError (300, 0, 12, 5);
   status = 1;
 
   <bb 6> :
@@ -213,7 +213,7 @@ Scheduler_ReloadTimer (TimerType Timer, uint32 NewTimeout)
     goto <bb 9>; [INV]
 
   <bb 8> :
-  Det_ReportError (300, 0, 8, 4);
+  Det_ReportError (300, 0, 12, 4);
   status = 1;
 
   <bb 9> :
@@ -233,11 +233,11 @@ Scheduler_ReloadTimer (TimerType Timer, uint32 NewTimeout)
   status = 0;
 
   <bb 11> :
-  D.6014 = status;
+  D.6059 = status;
 
   <bb 12> :
 <L9>:
-  return D.6014;
+  return D.6059;
 
 }
 
@@ -246,7 +246,7 @@ Scheduler_GetTimer (TimerType Timer)
 {
   uint8 status;
   uint32 counter_value;
-  uint32 D.6003;
+  uint32 D.6048;
 
   <bb 2> :
   counter_value = 0;
@@ -260,7 +260,7 @@ Scheduler_GetTimer (TimerType Timer)
     goto <bb 4>; [INV]
 
   <bb 3> :
-  Det_ReportError (300, 0, 2, 6);
+  Det_ReportError (300, 0, 11, 6);
   status = 1;
   counter_value = 1;
 
@@ -273,7 +273,7 @@ Scheduler_GetTimer (TimerType Timer)
     goto <bb 6>; [INV]
 
   <bb 5> :
-  Det_ReportError (300, 0, 2, 5);
+  Det_ReportError (300, 0, 11, 5);
   status = 1;
   counter_value = 1;
 
@@ -289,11 +289,11 @@ Scheduler_GetTimer (TimerType Timer)
   counter_value = SchedulerCtrl_Ptr.71_6->TimerCount[_7];
 
   <bb 8> :
-  D.6003 = counter_value;
+  D.6048 = counter_value;
 
   <bb 9> :
 <L6>:
-  return D.6003;
+  return D.6048;
 
 }
 
@@ -301,7 +301,7 @@ Scheduler_GetTimer (TimerType Timer)
 Scheduler_StopTimer (TimerType Timer)
 {
   Std_ReturnType status;
-  Std_ReturnType D.5995;
+  Std_ReturnType D.6040;
 
   <bb 2> :
   status = 0;
@@ -314,7 +314,7 @@ Scheduler_StopTimer (TimerType Timer)
     goto <bb 4>; [INV]
 
   <bb 3> :
-  Det_ReportError (300, 0, 2, 6);
+  Det_ReportError (300, 0, 10, 6);
   status = 1;
 
   <bb 4> :
@@ -326,7 +326,7 @@ Scheduler_StopTimer (TimerType Timer)
     goto <bb 6>; [INV]
 
   <bb 5> :
-  Det_ReportError (300, 0, 2, 5);
+  Det_ReportError (300, 0, 10, 5);
   status = 1;
 
   <bb 6> :
@@ -342,11 +342,11 @@ Scheduler_StopTimer (TimerType Timer)
   status = 0;
 
   <bb 8> :
-  D.5995 = status;
+  D.6040 = status;
 
   <bb 9> :
 <L6>:
-  return D.5995;
+  return D.6040;
 
 }
 
@@ -354,7 +354,7 @@ Scheduler_StopTimer (TimerType Timer)
 Scheduler_StartTimer (TimerType Timer)
 {
   Std_ReturnType status;
-  Std_ReturnType D.5987;
+  Std_ReturnType D.6032;
 
   <bb 2> :
   status = 0;
@@ -367,7 +367,7 @@ Scheduler_StartTimer (TimerType Timer)
     goto <bb 4>; [INV]
 
   <bb 3> :
-  Det_ReportError (300, 0, 2, 6);
+  Det_ReportError (300, 0, 9, 6);
   status = 1;
 
   <bb 4> :
@@ -379,7 +379,7 @@ Scheduler_StartTimer (TimerType Timer)
     goto <bb 6>; [INV]
 
   <bb 5> :
-  Det_ReportError (300, 0, 2, 5);
+  Det_ReportError (300, 0, 9, 5);
   status = 1;
 
   <bb 6> :
@@ -412,11 +412,11 @@ Scheduler_StartTimer (TimerType Timer)
   status = 0;
 
   <bb 10> :
-  D.5987 = status;
+  D.6032 = status;
 
   <bb 11> :
 <L8>:
-  return D.5987;
+  return D.6032;
 
 }
 
@@ -424,7 +424,7 @@ Scheduler_StartTimer (TimerType Timer)
 Scheduler_PeriodTask (TaskType Task, uint32 NewPeriod)
 {
   Std_ReturnType status;
-  Std_ReturnType D.5977;
+  Std_ReturnType D.6022;
 
   <bb 2> :
   status = 0;
@@ -437,7 +437,7 @@ Scheduler_PeriodTask (TaskType Task, uint32 NewPeriod)
     goto <bb 4>; [INV]
 
   <bb 3> :
-  Det_ReportError (300, 0, 2, 6);
+  Det_ReportError (300, 0, 8, 6);
   status = 1;
 
   <bb 4> :
@@ -449,7 +449,7 @@ Scheduler_PeriodTask (TaskType Task, uint32 NewPeriod)
     goto <bb 6>; [INV]
 
   <bb 5> :
-  Det_ReportError (300, 0, 2, 3);
+  Det_ReportError (300, 0, 8, 3);
   status = 1;
 
   <bb 6> :
@@ -486,11 +486,11 @@ Scheduler_PeriodTask (TaskType Task, uint32 NewPeriod)
   status = 0;
 
   <bb 11> :
-  D.5977 = status;
+  D.6022 = status;
 
   <bb 12> :
 <L9>:
-  return D.5977;
+  return D.6022;
 
 }
 
@@ -498,7 +498,7 @@ Scheduler_PeriodTask (TaskType Task, uint32 NewPeriod)
 Scheduler_StartTask (TaskType Task)
 {
   Std_ReturnType status;
-  Std_ReturnType D.5966;
+  Std_ReturnType D.6011;
 
   <bb 2> :
   status = 0;
@@ -511,7 +511,7 @@ Scheduler_StartTask (TaskType Task)
     goto <bb 4>; [INV]
 
   <bb 3> :
-  Det_ReportError (300, 0, 2, 6);
+  Det_ReportError (300, 0, 6, 6);
   status = 1;
 
   <bb 4> :
@@ -523,7 +523,7 @@ Scheduler_StartTask (TaskType Task)
     goto <bb 6>; [INV]
 
   <bb 5> :
-  Det_ReportError (300, 0, 2, 3);
+  Det_ReportError (300, 0, 6, 3);
   status = 1;
 
   <bb 6> :
@@ -539,11 +539,11 @@ Scheduler_StartTask (TaskType Task)
   status = 0;
 
   <bb 8> :
-  D.5966 = status;
+  D.6011 = status;
 
   <bb 9> :
 <L6>:
-  return D.5966;
+  return D.6011;
 
 }
 
@@ -551,7 +551,7 @@ Scheduler_StartTask (TaskType Task)
 Scheduler_StopTask (TaskType Task)
 {
   Std_ReturnType status;
-  Std_ReturnType D.5958;
+  Std_ReturnType D.6003;
 
   <bb 2> :
   status = 0;
@@ -564,7 +564,7 @@ Scheduler_StopTask (TaskType Task)
     goto <bb 4>; [INV]
 
   <bb 3> :
-  Det_ReportError (300, 0, 2, 6);
+  Det_ReportError (300, 0, 7, 6);
   status = 1;
 
   <bb 4> :
@@ -576,7 +576,7 @@ Scheduler_StopTask (TaskType Task)
     goto <bb 6>; [INV]
 
   <bb 5> :
-  Det_ReportError (300, 0, 2, 3);
+  Det_ReportError (300, 0, 7, 3);
   status = 1;
 
   <bb 6> :
@@ -592,11 +592,11 @@ Scheduler_StopTask (TaskType Task)
   status = 0;
 
   <bb 8> :
-  D.5958 = status;
+  D.6003 = status;
 
   <bb 9> :
 <L6>:
-  return D.5958;
+  return D.6003;
 
 }
 
@@ -605,7 +605,7 @@ Scheduler_Init (struct Scheduler_CtrlType * SchedulerPtr)
 {
   uint8 i;
   Std_ReturnType status;
-  Std_ReturnType D.5947;
+  Std_ReturnType D.5992;
 
   <bb 2> :
   status = 0;
@@ -702,11 +702,11 @@ Scheduler_Init (struct Scheduler_CtrlType * SchedulerPtr)
   SchedulerPtr->SchedulerInit = 1;
 
   <bb 12> :
-  D.5947 = status;
+  D.5992 = status;
 
   <bb 13> :
 <L10>:
-  return D.5947;
+  return D.5992;
 
 }
 
@@ -716,7 +716,7 @@ Scheduler_ReadQueue (QueueType Queue, void * Data)
   uint32 actual_add;
   uint32 base_add;
   Std_ReturnType status;
-  Std_ReturnType D.5941;
+  Std_ReturnType D.5986;
 
   <bb 2> :
   status = 0;
@@ -729,7 +729,7 @@ Scheduler_ReadQueue (QueueType Queue, void * Data)
     goto <bb 4>; [INV]
 
   <bb 3> :
-  Det_ReportError (300, 0, 2, 6);
+  Det_ReportError (300, 0, 5, 6);
   status = 1;
 
   <bb 4> :
@@ -741,7 +741,7 @@ Scheduler_ReadQueue (QueueType Queue, void * Data)
     goto <bb 6>; [INV]
 
   <bb 5> :
-  Det_ReportError (300, 0, 2, 1);
+  Det_ReportError (300, 0, 5, 1);
   status = 1;
 
   <bb 6> :
@@ -845,11 +845,11 @@ Scheduler_ReadQueue (QueueType Queue, void * Data)
   status = 0;
 
   <bb 15> :
-  D.5941 = status;
+  D.5986 = status;
 
   <bb 16> :
 <L14>:
-  return D.5941;
+  return D.5986;
 
 }
 
@@ -859,7 +859,7 @@ Scheduler_WriteQueue (QueueType Queue, void * Data)
   uint32 actual_add;
   uint32 base_add;
   Std_ReturnType status;
-  Std_ReturnType D.5925;
+  Std_ReturnType D.5970;
 
   <bb 2> :
   status = 0;
@@ -872,7 +872,7 @@ Scheduler_WriteQueue (QueueType Queue, void * Data)
     goto <bb 4>; [INV]
 
   <bb 3> :
-  Det_ReportError (300, 0, 2, 6);
+  Det_ReportError (300, 0, 4, 6);
   status = 1;
 
   <bb 4> :
@@ -884,7 +884,7 @@ Scheduler_WriteQueue (QueueType Queue, void * Data)
     goto <bb 6>; [INV]
 
   <bb 5> :
-  Det_ReportError (300, 0, 2, 1);
+  Det_ReportError (300, 0, 4, 1);
   status = 1;
 
   <bb 6> :
@@ -988,11 +988,11 @@ Scheduler_WriteQueue (QueueType Queue, void * Data)
   status = 0;
 
   <bb 15> :
-  D.5925 = status;
+  D.5970 = status;
 
   <bb 16> :
 <L14>:
-  return D.5925;
+  return D.5970;
 
 }
 
@@ -1000,7 +1000,7 @@ Scheduler_WriteQueue (QueueType Queue, void * Data)
 Scheduler_FlushQueue (QueueType Queue)
 {
   Std_ReturnType status;
-  Std_ReturnType D.5909;
+  Std_ReturnType D.5954;
 
   <bb 2> :
   status = 0;
@@ -1013,7 +1013,7 @@ Scheduler_FlushQueue (QueueType Queue)
     goto <bb 4>; [INV]
 
   <bb 3> :
-  Det_ReportError (300, 0, 2, 6);
+  Det_ReportError (300, 0, 3, 6);
   status = 1;
 
   <bb 4> :
@@ -1025,7 +1025,7 @@ Scheduler_FlushQueue (QueueType Queue)
     goto <bb 6>; [INV]
 
   <bb 5> :
-  Det_ReportError (300, 0, 2, 1);
+  Det_ReportError (300, 0, 3, 1);
   status = 1;
 
   <bb 6> :
@@ -1050,11 +1050,11 @@ Scheduler_FlushQueue (QueueType Queue)
   status = 0;
 
   <bb 8> :
-  D.5909 = status;
+  D.5954 = status;
 
   <bb 9> :
 <L6>:
-  return D.5909;
+  return D.5954;
 
 }
 
@@ -1062,7 +1062,7 @@ Scheduler_FlushQueue (QueueType Queue)
 Scheduler_GetStatusQueue (QueueType Queue, uint8 Status)
 {
   uint8 status;
-  uint8 D.5899;
+  uint8 D.5944;
 
   <bb 2> :
   status = 0;
@@ -1122,11 +1122,11 @@ Scheduler_GetStatusQueue (QueueType Queue, uint8 Status)
   status = 1;
 
   <bb 11> :
-  D.5899 = status;
+  D.5944 = status;
 
   <bb 12> :
 <L10>:
-  return D.5899;
+  return D.5944;
 
 }
 
@@ -1235,7 +1235,7 @@ Bfx_PutBit_u32u8u8 (uint32 * Data, uint8 BitPn, boolean Status)
 Bfx_GetBit_u32u8_u8 (uint32 Data, uint8 BitPn)
 {
   boolean Result;
-  boolean D.5901;
+  boolean D.5946;
 
   <bb 2> :
   Result = 0;
@@ -1244,11 +1244,11 @@ Bfx_GetBit_u32u8_u8 (uint32 Data, uint8 BitPn)
   _3 = (long unsigned int) _2;
   _4 = Data & _3;
   Result = _4 != 0;
-  D.5901 = Result;
+  D.5946 = Result;
 
   <bb 3> :
 <L0>:
-  return D.5901;
+  return D.5946;
 
 }
 

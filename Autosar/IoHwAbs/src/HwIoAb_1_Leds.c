@@ -73,12 +73,12 @@ void HwIoAb_Leds_TurnOff( uint8 Led ) {
     
     #if ( HWIOAB_LEDS_DEV_ERROR_DETECT == STD_ON )
         if ( LedsControl_Ptr->Leds_init == FALSE ) {
-            Det_ReportError( HWIOAB_LEDS_MODULE_ID, HWIOAB_LEDS_INSTANCE_ID, HWIOAB_LEDS_TURNON_ID, HWIOAB_LEDS_E_UNINIT );
+            Det_ReportError( HWIOAB_LEDS_MODULE_ID, HWIOAB_LEDS_INSTANCE_ID, HWIOAB_LEDS_TURNOFF_ID, HWIOAB_LEDS_E_UNINIT );
             status = E_NOT_OK;
         }
 
         if ( Led > LedsControl_Ptr->Leds - 1 ) {
-            Det_ReportError( HWIOAB_LEDS_MODULE_ID, HWIOAB_LEDS_INSTANCE_ID, HWIOAB_LEDS_TURNON_ID, HWIOAB_LEDS_E_LED_ID );
+            Det_ReportError( HWIOAB_LEDS_MODULE_ID, HWIOAB_LEDS_INSTANCE_ID, HWIOAB_LEDS_TURNOFF_ID, HWIOAB_LEDS_E_LED_ID );
             status = E_NOT_OK;
         }
     #endif
@@ -101,12 +101,12 @@ void HwIoAb_Leds_TurnToggle( uint8 Led ) {
 
     #if ( HWIOAB_LEDS_DEV_ERROR_DETECT == STD_ON )
         if ( LedsControl_Ptr->Leds_init == FALSE ) {
-            Det_ReportError( HWIOAB_LEDS_MODULE_ID, HWIOAB_LEDS_INSTANCE_ID, HWIOAB_LEDS_TURNON_ID, HWIOAB_LEDS_E_UNINIT );
+            Det_ReportError( HWIOAB_LEDS_MODULE_ID, HWIOAB_LEDS_INSTANCE_ID, HWIOAB_LEDS_TURNTOGGLE_ID, HWIOAB_LEDS_E_UNINIT );
             status = E_NOT_OK;
         }
 
         if ( Led > LedsControl_Ptr->Leds - 1 ) {
-            Det_ReportError( HWIOAB_LEDS_MODULE_ID, HWIOAB_LEDS_INSTANCE_ID, HWIOAB_LEDS_TURNON_ID, HWIOAB_LEDS_E_LED_ID );
+            Det_ReportError( HWIOAB_LEDS_MODULE_ID, HWIOAB_LEDS_INSTANCE_ID, HWIOAB_LEDS_TURNTOGGLE_ID, HWIOAB_LEDS_E_LED_ID );
             status = E_NOT_OK;
         }
     #endif

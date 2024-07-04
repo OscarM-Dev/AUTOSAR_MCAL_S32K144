@@ -105,7 +105,7 @@ Adc_GetStreamLastPointer (Adc_GroupType Group, Adc_ValueGroupType * * PtrToSampl
   Adc_StreamNumSampleType NumberOfResults;
   Adc_GroupType GroupIndex;
   volatile uint8 CoreId;
-  Adc_StreamNumSampleType D.7043;
+  Adc_StreamNumSampleType D.7088;
   unsigned char _1;
   unsigned char CoreId.44_2;
   unsigned char CoreId.45_3;
@@ -265,7 +265,7 @@ Adc_GetGroupStatus (Adc_GroupType Group)
 {
   Adc_StatusType TempReturn;
   volatile uint8 CoreId;
-  Adc_StatusType D.7028;
+  Adc_StatusType D.7073;
   unsigned char _1;
   unsigned char CoreId.43_2;
   unsigned char _3;
@@ -303,7 +303,7 @@ Adc_ReadGroup (Adc_GroupType Group, Adc_ValueGroupType * DataBufferPtr)
   boolean Flag;
   Std_ReturnType GroupRet;
   volatile uint8 CoreId;
-  Std_ReturnType D.6991;
+  Std_ReturnType D.7036;
   unsigned char _1;
   unsigned char CoreId.36_2;
   unsigned char _3;
@@ -662,7 +662,7 @@ Adc_SetupResultBuffer (Adc_GroupType Group, Adc_ValueGroupType * const DataBuffe
 {
   volatile uint8 CoreId;
   Std_ReturnType TempReturn;
-  Std_ReturnType D.6831;
+  Std_ReturnType D.6876;
   unsigned char _1;
   unsigned char CoreId.11_2;
   unsigned char _3;
@@ -1505,7 +1505,7 @@ Adc_StopSwGroupConversion (Adc_QueueIndexType * RemovedPos, Adc_GroupType Group,
   Adc_QueueIndexType NumOfSwNormalQueue;
   Adc_QueueIndexType SwNormalQueueIndex;
   Std_ReturnType TimeOutStatus;
-  Std_ReturnType D.6980;
+  Std_ReturnType D.7025;
   int _1;
   short unsigned int _2;
   int _3;
@@ -1674,7 +1674,7 @@ Adc_CheckCurrentCoreId (const struct Adc_ConfigType * CfgPtr, uint8 CoreId)
 {
   Std_ReturnType ValidCoreId;
   uint8 Index;
-  Std_ReturnType D.6816;
+  Std_ReturnType D.6861;
   unsigned char _1;
   const uint8 * _2;
   sizetype _3;
@@ -1875,7 +1875,7 @@ Adc_ValidateCallAndUnit (uint8 ServiceId, Adc_HwUnitType Unit, uint8 CoreId)
 {
   Std_ReturnType ValidCoreId;
   Std_ReturnType ValidCallAndUnit;
-  Std_ReturnType D.7083;
+  Std_ReturnType D.7128;
   int _1;
   const struct Adc_ConfigType * _2;
   int _3;
@@ -1957,7 +1957,7 @@ Adc_ValidateCallAndGroup (uint8 ServiceId, Adc_GroupType Group, uint8 CoreId)
   Adc_GroupType GroupIndex;
   Std_ReturnType ValidCoreId;
   Std_ReturnType ValidCallAndGroup;
-  Std_ReturnType D.6845;
+  Std_ReturnType D.6890;
   int _1;
   const struct Adc_ConfigType * _2;
   int _3;
@@ -2056,7 +2056,7 @@ Adc_ValidateCallAndGroup (uint8 ServiceId, Adc_GroupType Group, uint8 CoreId)
 Adc_ValidateStateNotIdle (uint8 ServiceId, Adc_GroupType Group, uint8 CoreId)
 {
   Std_ReturnType ValidState;
-  Std_ReturnType D.6962;
+  Std_ReturnType D.7007;
   int _1;
   int _2;
   <unnamed type> _3;
@@ -2151,7 +2151,7 @@ Adc_ValidateStateStartGroupConvNotBusy (Adc_GroupType Group, uint8 CoreId)
   boolean Implicitly;
   Std_ReturnType ValidState;
   Adc_GroupType GroupIndex;
-  Std_ReturnType D.6901;
+  Std_ReturnType D.6946;
   int _1;
   const struct Adc_ConfigType * _2;
   const uint16 * _3;
@@ -2280,7 +2280,7 @@ Adc_ValidateStateStartGroupConvNotBusy (Adc_GroupType Group, uint8 CoreId)
 Adc_ValidateSetupBufferNotBusy (Adc_GroupType Group)
 {
   Std_ReturnType ValidState;
-  Std_ReturnType D.6854;
+  Std_ReturnType D.6899;
   int _1;
   <unnamed type> _2;
   Std_ReturnType _10;
@@ -2317,7 +2317,7 @@ Adc_ValidateDeInitNotBusy (uint8 CoreId)
   Adc_HwUnitType LogicalHwUnitId;
   Std_ReturnType ValidState;
   Std_ReturnType ErrorFound;
-  Std_ReturnType D.6875;
+  Std_ReturnType D.6920;
   int _1;
   const struct Adc_ConfigType * _2;
   const struct Adc_Ipw_Config * _3;
@@ -2402,7 +2402,7 @@ Adc_ValidateCheckGroupNotConversion (uint8 ServiceId, uint8 CoreId)
   Adc_GroupType GroupId;
   Adc_GroupType GroupIter;
   Adc_StatusType Conversion;
-  Std_ReturnType D.6885;
+  Std_ReturnType D.6930;
   int _1;
   const struct Adc_ConfigType * _2;
   const struct Adc_GroupConfigurationType * _3;
@@ -2476,7 +2476,7 @@ Adc_ValidateNotBusyNoPrio (Adc_GroupType Group, boolean Implicitly, uint8 CoreId
 {
   Adc_StatusType Conversion;
   Std_ReturnType ValidState;
-  Std_ReturnType D.6912;
+  Std_ReturnType D.6957;
   int _1;
   _Bool _2;
   Std_ReturnType _13;
@@ -2541,7 +2541,7 @@ Adc_ValidateNotBusyNoQueue (Adc_HwUnitType Unit, uint8 ServiceId)
 {
   const Adc_QueueIndexType NoGroupsInSwNormalQueue;
   Std_ReturnType ErrorFound;
-  Std_ReturnType D.6879;
+  Std_ReturnType D.6924;
   int _1;
   Std_ReturnType _11;
 
@@ -2604,7 +2604,7 @@ Adc_EndValidateGloballCall (Std_ReturnType ValidCall, uint8 ServiceId, uint8 Cor
 Adc_ValidateExtraParams (uint8 ServiceId, uint32 ErrorIdList, Adc_GroupType Group, uint8 CoreId)
 {
   struct Adc_ValidationResultType ValidationStatus;
-  Std_ReturnType D.6926;
+  Std_ReturnType D.6971;
   long unsigned int _1;
   _Bool _2;
   _Bool _3;
@@ -2771,8 +2771,8 @@ Adc_ValidateQueueNotFull (struct Adc_ValidationResultType * ReturnValue, uint8 S
 
 Adc_ValidateTriggerSrc (struct Adc_ValidationResultType * ReturnValue, uint8 ServiceId, Adc_GroupType Group, uint8 CoreId)
 {
-  unsigned int D.6934;
-  unsigned int D.6933;
+  unsigned int D.6979;
+  unsigned int D.6978;
   Adc_GroupType GroupIndex;
   int _1;
   const struct Adc_ConfigType * _2;
@@ -2876,7 +2876,7 @@ Adc_ValidateBufferUninit (struct Adc_ValidationResultType * ReturnValue, uint8 S
 Adc_ValidatePtr (uint8 ServiceId, const void * PtrVal)
 {
   Std_ReturnType ValidPtr;
-  Std_ReturnType D.6849;
+  Std_ReturnType D.6894;
   Std_ReturnType _9;
 
   <bb 2> :
@@ -2904,7 +2904,7 @@ Adc_ValidatePtr (uint8 ServiceId, const void * PtrVal)
 Adc_ValidatePtrInit (const struct Adc_ConfigType * ConfigPtr)
 {
   Std_ReturnType ValidPtr;
-  Std_ReturnType D.6810;
+  Std_ReturnType D.6855;
   Std_ReturnType _8;
 
   <bb 2> :
@@ -2932,7 +2932,7 @@ Adc_ValidatePtrInit (const struct Adc_ConfigType * ConfigPtr)
 Adc_ValidateGloballCall (uint8 ServiceId, uint8 CoreId)
 {
   Std_ReturnType ValidState;
-  Std_ReturnType D.6806;
+  Std_ReturnType D.6851;
   int _1;
   <unnamed type> _2;
   Std_ReturnType _13;

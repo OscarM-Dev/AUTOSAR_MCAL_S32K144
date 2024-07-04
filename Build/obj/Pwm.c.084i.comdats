@@ -405,7 +405,7 @@ Pwm_Init (const struct Pwm_ConfigType * ConfigPtr)
 Pwm_ValidateSetOutPutToIdle (uint32 CoreId, Pwm_ChannelType ChannelNumber)
 {
   Std_ReturnType RetVal;
-  Std_ReturnType D.6217;
+  Std_ReturnType D.6262;
   const struct Pwm_ChannelConfigType * _1;
   unsigned int _2;
   unsigned int _3;
@@ -443,7 +443,7 @@ Pwm_ValidateParamsPeriodClass (uint32 CoreId, Pwm_ChannelType ChannelNumber, Pwm
 {
   uint32 PeriodMaxValue;
   Std_ReturnType RetVal;
-  Std_ReturnType D.6209;
+  Std_ReturnType D.6254;
   const struct Pwm_ChannelConfigType * _1;
   unsigned int _2;
   unsigned int _3;
@@ -496,7 +496,7 @@ Pwm_ValidateParamsPeriodClass (uint32 CoreId, Pwm_ChannelType ChannelNumber, Pwm
 Pwm_ValidateParamDuty (uint16 DutyCycle, uint8 ServiceId)
 {
   Std_ReturnType RetVal;
-  Std_ReturnType D.6195;
+  Std_ReturnType D.6240;
   Std_ReturnType _9;
 
   <bb 2> :
@@ -524,7 +524,7 @@ Pwm_ValidateParamDuty (uint16 DutyCycle, uint8 ServiceId)
 Pwm_ValidateParamPtrInit (uint32 CoreId, const struct Pwm_ConfigType * ConfigPtr)
 {
   Std_ReturnType RetVal;
-  Std_ReturnType D.6165;
+  Std_ReturnType D.6210;
   Std_ReturnType _8;
 
   <bb 2> :
@@ -561,7 +561,7 @@ Pwm_ValidateChannelConfigCall (uint32 CoreId, Pwm_ChannelType ChannelNumber, uin
 {
   Pwm_ChannelType PartitionChannelIdx;
   Std_ReturnType RetVal;
-  Std_ReturnType D.6189;
+  Std_ReturnType D.6234;
   <unnamed type> _1;
   const struct Pwm_ConfigType * _2;
   unsigned char _3;
@@ -645,7 +645,7 @@ Pwm_EndValidateGlobalConfigCall (uint32 CoreId, Std_ReturnType ValidCall, uint8 
 Pwm_ValidateGlobalConfigCall (uint32 CoreId, uint8 ServiceId)
 {
   Std_ReturnType RetVal;
-  Std_ReturnType D.6156;
+  Std_ReturnType D.6201;
   <unnamed type> _1;
   Std_ReturnType _12;
 
@@ -691,7 +691,7 @@ Pwm_ValidateGlobalConfigCall (uint32 CoreId, uint8 ServiceId)
 
 Pwm_GetPartitionChannelIdx (uint32 CoreId, Pwm_ChannelType ChannelNumber)
 {
-  uint8 D.6191;
+  uint8 D.6236;
   uint8 _2;
 
   <bb 2> :

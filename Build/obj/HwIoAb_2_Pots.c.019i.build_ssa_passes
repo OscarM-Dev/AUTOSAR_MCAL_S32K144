@@ -15,7 +15,7 @@ HwIoAb_Pots_GetAltValue (uint16 * AltPots)
     goto <bb 4>; [INV]
 
   <bb 3> :
-  Det_ReportError (303, 0, 1, 1);
+  Det_ReportError (303, 0, 2, 1);
   status = 1;
 
   <bb 4> :
@@ -25,7 +25,7 @@ HwIoAb_Pots_GetAltValue (uint16 * AltPots)
     goto <bb 6>; [INV]
 
   <bb 5> :
-  Det_ReportError (303, 0, 1, 0);
+  Det_ReportError (303, 0, 2, 0);
   status = 1;
 
   <bb 6> :

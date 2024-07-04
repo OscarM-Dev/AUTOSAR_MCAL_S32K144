@@ -16,7 +16,7 @@ HwIoAb_Buttons_MainFunction ()
     goto <bb 4>; [INV]
 
   <bb 3> :
-  Det_ReportError (301, 0, 1, 3);
+  Det_ReportError (301, 0, 2, 3);
   status = 1;
 
   <bb 4> :
@@ -299,7 +299,7 @@ HwIoAb_Buttons_GetEvent (uint8 Button)
 {
   uint8 event;
   uint8 status;
-  uint8 D.5522;
+  uint8 D.5567;
 
   <bb 2> :
   status = 0;
@@ -345,11 +345,11 @@ HwIoAb_Buttons_GetEvent (uint8 Button)
   ButtonsControl_Ptr.10_8->Events[_9] = 0;
 
   <bb 8> :
-  D.5522 = event;
+  D.5567 = event;
 
   <bb 9> :
 <L6>:
-  return D.5522;
+  return D.5567;
 
 }
 

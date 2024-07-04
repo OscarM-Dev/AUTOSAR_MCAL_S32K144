@@ -73,6 +73,7 @@
     "port_cfg.h": "c",
     "hwioab_0_buttons.h": "c",
     "hwioab_3_buzzer.h": "c",
-    "bfx.h": "c"
+    "bfx.h": "c",
+    "det_memmap.h": "c"
   }
 }

@@ -22,7 +22,7 @@ IPA summary for HwIoAb_Buzzer_Beep/2 is missing.
 IPA summary for HwIoAb_Buzzer_Init/1 is missing.
 Symbol table:
 
-Pwm_SetOutputToIdle/6 (Pwm_SetOutputToIdle) @05dca1c0
+Pwm_SetOutputToIdle/6 (Pwm_SetOutputToIdle) @05e7b7e0
   Type: function
   Visibility: external public
   References: 
@@ -31,7 +31,7 @@ Pwm_SetOutputToIdle/6 (Pwm_SetOutputToIdle) @05dca1c0
   Function flags:
   Called by: HwIoAb_Buzzer_Stop/3 
   Calls: 
-Det_ReportError/5 (Det_ReportError) @05dca000
+Det_ReportError/5 (Det_ReportError) @05e7b2a0
   Type: function
   Visibility: external public
   References: 
@@ -40,7 +40,7 @@ Det_ReportError/5 (Det_ReportError) @05dca000
   Function flags:
   Called by: HwIoAb_Buzzer_Beep/2 
   Calls: 
-Pwm_SetPeriodAndDuty/4 (Pwm_SetPeriodAndDuty) @05dc9a80
+Pwm_SetPeriodAndDuty/4 (Pwm_SetPeriodAndDuty) @05e7bee0
   Type: function
   Visibility: external public
   References: 
@@ -49,7 +49,7 @@ Pwm_SetPeriodAndDuty/4 (Pwm_SetPeriodAndDuty) @05dc9a80
   Function flags:
   Called by: HwIoAb_Buzzer_Beep/2 HwIoAb_Buzzer_Beep/2 HwIoAb_Buzzer_Beep/2 
   Calls: 
-HwIoAb_Buzzer_Stop/3 (HwIoAb_Buzzer_Stop) @05dc9c40
+HwIoAb_Buzzer_Stop/3 (HwIoAb_Buzzer_Stop) @05e7b9a0
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: 
@@ -58,7 +58,7 @@ HwIoAb_Buzzer_Stop/3 (HwIoAb_Buzzer_Stop) @05dc9c40
   Function flags: body
   Called by: 
   Calls: Pwm_SetOutputToIdle/6 
-HwIoAb_Buzzer_Beep/2 (HwIoAb_Buzzer_Beep) @05dc99a0
+HwIoAb_Buzzer_Beep/2 (HwIoAb_Buzzer_Beep) @05e7b700
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: 
@@ -67,7 +67,7 @@ HwIoAb_Buzzer_Beep/2 (HwIoAb_Buzzer_Beep) @05dc99a0
   Function flags: body
   Called by: 
   Calls: Det_ReportError/5 Pwm_SetPeriodAndDuty/4 Pwm_SetPeriodAndDuty/4 Pwm_SetPeriodAndDuty/4 
-HwIoAb_Buzzer_Init/1 (HwIoAb_Buzzer_Init) @05dc9700
+HwIoAb_Buzzer_Init/1 (HwIoAb_Buzzer_Init) @05e7b460
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: 
@@ -77,7 +77,7 @@ HwIoAb_Buzzer_Init/1 (HwIoAb_Buzzer_Init) @05dc9700
   Called by: 
   Calls: 
 
-;; Function HwIoAb_Buzzer_Init (HwIoAb_Buzzer_Init, funcdef_no=1, decl_uid=5849, cgraph_uid=2, symbol_order=1)
+;; Function HwIoAb_Buzzer_Init (HwIoAb_Buzzer_Init, funcdef_no=1, decl_uid=5894, cgraph_uid=2, symbol_order=1)
 
 HwIoAb_Buzzer_Init (const struct HwIoAb_Buzzer_Config * Buzzer_Config)
 {
@@ -88,7 +88,7 @@ HwIoAb_Buzzer_Init (const struct HwIoAb_Buzzer_Config * Buzzer_Config)
 
 
 
-;; Function HwIoAb_Buzzer_Beep (HwIoAb_Buzzer_Beep, funcdef_no=2, decl_uid=5851, cgraph_uid=3, symbol_order=2)
+;; Function HwIoAb_Buzzer_Beep (HwIoAb_Buzzer_Beep, funcdef_no=2, decl_uid=5896, cgraph_uid=3, symbol_order=2)
 
 HwIoAb_Buzzer_Beep (uint8 Tone)
 {
@@ -124,7 +124,7 @@ HwIoAb_Buzzer_Beep (uint8 Tone)
 
 
 
-;; Function HwIoAb_Buzzer_Stop (HwIoAb_Buzzer_Stop, funcdef_no=3, decl_uid=5853, cgraph_uid=4, symbol_order=3)
+;; Function HwIoAb_Buzzer_Stop (HwIoAb_Buzzer_Stop, funcdef_no=3, decl_uid=5898, cgraph_uid=4, symbol_order=3)
 
 HwIoAb_Buzzer_Stop ()
 {

@@ -10,6 +10,7 @@ EcuM_Init ()
   Port_Ci_Port_Ip_SetMuxModeSel (1074044928B, 1, 8);
   Port_Ci_Port_Ip_SetMuxModeSel (1074044928B, 13, 8);
   IoHwAb_Init0 (0B);
+  Det_Init ();
   return;
 
 }

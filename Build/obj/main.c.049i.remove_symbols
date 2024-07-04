@@ -4,7 +4,7 @@ Reclaiming variables:
 Clearing address taken flags:
 Symbol table:
 
-Scheduler_MainFunction/61 (Scheduler_MainFunction) @0730ae00
+Scheduler_MainFunction/60 (Scheduler_MainFunction) @073749a0
   Type: function
   Visibility: external public
   References: 
@@ -13,7 +13,7 @@ Scheduler_MainFunction/61 (Scheduler_MainFunction) @0730ae00
   Function flags:
   Called by: main/56 
   Calls: 
-Scheduler_Control/60 (Scheduler_Control) @0730c000
+Scheduler_Control/59 (Scheduler_Control) @07376120
   Type: variable
   Body removed by symtab_remove_unreachable_nodes
   Visibility: external public
@@ -21,7 +21,7 @@ Scheduler_Control/60 (Scheduler_Control) @0730c000
   Referring: main/56 (addr) 
   Availability: not_available
   Varpool flags:
-Scheduler_Init/59 (Scheduler_Init) @0730ad20
+Scheduler_Init/58 (Scheduler_Init) @073748c0
   Type: function
   Visibility: external public
   References: 
@@ -30,7 +30,7 @@ Scheduler_Init/59 (Scheduler_Init) @0730ad20
   Function flags:
   Called by: main/56 
   Calls: 
-SEGGER_RTT_Init/58 (SEGGER_RTT_Init) @0730ac40
+EcuM_Init/57 (EcuM_Init) @073747e0
   Type: function
   Visibility: external public
   References: 
@@ -39,25 +39,16 @@ SEGGER_RTT_Init/58 (SEGGER_RTT_Init) @0730ac40
   Function flags:
   Called by: main/56 
   Calls: 
-EcuM_Init/57 (EcuM_Init) @0730ab60
-  Type: function
-  Visibility: external public
-  References: 
-  Referring: 
-  Availability: not_available
-  Function flags:
-  Called by: main/56 
-  Calls: 
-main/56 (main) @0730a700
+main/56 (main) @07374380
   Type: function definition analyzed
   Visibility: force_output externally_visible no_reorder public
-  References: Scheduler_Control/60 (addr) 
+  References: Scheduler_Control/59 (addr) 
   Referring: 
   Availability: available
   Function flags: body
   Called by: 
-  Calls: Scheduler_MainFunction/61 Scheduler_Init/59 SEGGER_RTT_Init/58 EcuM_Init/57 
-Queue1/55 (Queue1) @073079d8
+  Calls: Scheduler_MainFunction/60 Scheduler_Init/58 EcuM_Init/57 
+Queue1/55 (Queue1) @0736eb88
   Type: variable definition analyzed
   Visibility: force_output externally_visible no_reorder public
   References: 
@@ -66,11 +57,10 @@ Queue1/55 (Queue1) @073079d8
   Varpool flags:
 main ()
 {
-  int D.8650;
+  int D.8695;
 
   <bb 2> :
   EcuM_Init ();
-  SEGGER_RTT_Init ();
   Scheduler_Init (&Scheduler_Control);
 
   <bb 3> :

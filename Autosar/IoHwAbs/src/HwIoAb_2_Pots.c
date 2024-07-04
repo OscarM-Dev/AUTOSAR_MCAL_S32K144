@@ -95,12 +95,12 @@ void HwIoAb_Pots_GetAltValue( uint16 *AltPots ) {
 
     #if ( HWIOAB_POTS_DEV_ERROR_DETECT == STD_ON )
         if ( PotsControl_Ptr->Pots_init == FALSE ) {
-            Det_ReportError( HWIOAB_POTS_MODULE_ID, HWIOAB_POTS_INSTANCE_ID, HWIOAB_POTS_GETVALUE_ID, HWIOAB_POTS_E_UNINIT );
+            Det_ReportError( HWIOAB_POTS_MODULE_ID, HWIOAB_POTS_INSTANCE_ID, HWIOAB_POTS_GETALTVALUE_ID, HWIOAB_POTS_E_UNINIT );
             status = E_NOT_OK;
         }
 
         if ( AltPots == NULL_PTR ) {
-            Det_ReportError( HWIOAB_POTS_MODULE_ID, HWIOAB_POTS_INSTANCE_ID, HWIOAB_POTS_GETVALUE_ID, HWIOAB_POTS_E_PARAM );
+            Det_ReportError( HWIOAB_POTS_MODULE_ID, HWIOAB_POTS_INSTANCE_ID, HWIOAB_POTS_GETALTVALUE_ID, HWIOAB_POTS_E_PARAM );
             status = E_NOT_OK;
         }
     #endif
